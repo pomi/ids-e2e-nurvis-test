@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Tim Davies (Thomas Cook) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.opentravel.org/OTA/2003/05" targetNamespace="http://www.opentravel.org/OTA/2003/05"
+	elementFormDefault="qualified" version="3.000" id="OTA2010B">
+	<xs:include schemaLocation="OTA_TC_PkgCommonTypes.xsd" />
+	<xs:annotation>
+		<xs:documentation xml:lang="en">All Schema files in the OpenTravel Alliance specification are made available according to the terms defined by the
+			OpenTravel License Agreement at http://www.opentravel.org/Specifications/Default.aspx.
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OTA_PkgSearchRQ">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">This message identifies the initial request for package property data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="POS" type="POS_Type" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Point of sale information about the message initiator. Currently not used by the search solution.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Service" type="ServiceType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Optional element indicating that the request should not be interpreted as normal main search request but a special service but as a
+							special service like alternative scoring. If this element is missing simple main search will be executed.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="FilterResults" type="FilterResults_Type" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used to specify desired subset of total results, used to support pagination. If this element is missing first
+							10 elements will be displayed.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SortResults" type="SortResults_Type" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used to specify criteria for sorting results. If this element is missing, then default ordering is used:
+							descending by Bestseller then ascending by Price.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ReturnContent" type="ReturnContent_Type" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used to specify what elements the response should contain (result list of matching packages, calculated
+							facets, etc.). If this element is missing, then result list will be included in the response and facets will be calculated and returned for all possible
+							fields.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Criteria" type="PkgSearchCriteriaType">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used to specify filtering criteria on the search.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="OTA_PayloadStdAttributes" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
