@@ -11,7 +11,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.opentravel.ota._2003._05.request.*;
-import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
+import org.opentravel.ota._2003._05.request.DepartureAirportListType;
+import org.opentravel.ota._2003._05.request.FilterResultsType;
+import org.opentravel.ota._2003._05.response.HotelOfferType;
+import org.opentravel.ota._2003._05.request.LocationType;
+import org.opentravel.ota._2003._05.request.PkgGuestCountType;
+import org.opentravel.ota._2003._05.request.PkgSearchCriteriaType;
+import org.opentravel.ota._2003._05.request.RoomStayCandidatesType;
+import org.opentravel.ota._2003._05.response.*;
 
 import javax.xml.bind.*;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -30,6 +37,7 @@ public class CreateBooking {
 
     static String solr;
     static String nurvis;
+    static
 
     public void loadProperties(String region, String environment) throws IOException {
         Properties properties = new Properties();
@@ -41,7 +49,7 @@ public class CreateBooking {
 
     //private static final Logger LOGGER = Logger.getLogger( CreateBooking.class.getName() );
 
-    public void getSOLRPackages() throws IOException, JAXBException, DatatypeConfigurationException {
+    public OTAPkgSearchRS getSOLRPackages(String fromAirport, String destination, int numberOfAdults) throws IOException, JAXBException, DatatypeConfigurationException {
         //load properties
         loadProperties(System.getenv("region"),System.getenv("env"));
         assertNotNull(solr);
@@ -49,26 +57,26 @@ public class CreateBooking {
 
         //solr request
         HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://ppt.api.thomascook.com/solr-nvn/main");
-        post.setEntity(new ByteArrayEntity(test().getBytes("UTF-8")));
+        HttpPost post = new HttpPost(solr);
+        post.setEntity(new ByteArrayEntity(createSolrRequest(fromAirport, destination, numberOfAdults).getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
-        OTAPkgSearchRS otaPkgSearchRS;
+        OTAPkgSearchRS otaPkgSearchRS = new OTAPkgSearchRS();
         if (entity != null) {
             InputStream instream = entity.getContent();
             try {
                 JAXBContext jc = JAXBContext.newInstance(OTAPkgSearchRS.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
                 otaPkgSearchRS = (OTAPkgSearchRS) unmarshaller.unmarshal(instream);
-                assertNotEquals (otaPkgSearchRS.getHotelOffers().getStartIndex(),otaPkgSearchRS.getHotelOffers().getEndIndex());
             } finally {
                 instream.close();
             }
         }
-        createNurvisRequest();
+        return otaPkgSearchRS;
+        //createNurvisRequest();
     }
 
-    static public String test() throws JAXBException, DatatypeConfigurationException {
+    static public String createSolrRequest(String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
         org.opentravel.ota._2003._05.request.ObjectFactory factory = new org.opentravel.ota._2003._05.request.ObjectFactory();
         OTAPkgSearchRQ otaPkgSearchRQ = factory.createOTAPkgSearchRQ();
 
@@ -82,7 +90,7 @@ public class CreateBooking {
 
         LocationType locationType = factory.createLocationType();
         List<LocationType> locationTypes = new ArrayList<>();
-        locationType.setValue("AMS");
+        locationType.setValue(fromAirport);
         locationTypes.add(locationType);
         DepartureAirportListType departureAirportListType = factory.createDepartureAirportListType();
         departureAirportListType.setDepartureAirport(locationTypes);
@@ -102,12 +110,7 @@ public class CreateBooking {
         //set Destination categories
         pkgSearchCriteriaType.getPkgCriterion().setDestinationCategories(new PkgSearchCriteriaType.PkgCriterion.DestinationCategories());
         List<String> destinationCategory = new ArrayList<>();
-        Map<String, String> countries = new HashMap<>();
-        for(String iso2 : Locale.getISOCountries()){
-            Locale locale = new Locale("", iso2);
-            countries.put(locale.getDisplayCountry(),iso2);
-        }
-        destinationCategory.add("Spanje");
+        destinationCategory.add(destination);
         pkgSearchCriteriaType.getPkgCriterion().getDestinationCategories().setDestinationCategory(destinationCategory);
 
         //set Room Stay Candidates
@@ -117,7 +120,7 @@ public class CreateBooking {
         PkgGuestCountType guestCountType = factory.createPkgGuestCountType();
         PkgGuestCountType.GuestCount guestCount = factory.createPkgGuestCountTypeGuestCount();
         guestCount.setAgeQualifyingCode("10");
-        guestCount.setCount(2);
+        guestCount.setCount(numberOfAdults);
         guestCountType.setGuestCount(Arrays.asList(guestCount));
         roomStayCandidate.setGuestCounts(guestCountType);
         roomStayCandidatesType.setRoomStayCandidate(Arrays.asList(roomStayCandidate));
@@ -136,7 +139,16 @@ public class CreateBooking {
         return sw.toString();
     }
 
-    public static void createNurvisRequest() throws JAXBException, IOException {
+    public static HotelOfferType checkPackageAvailability(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException, IOException {
+        HotelOfferType hotel = new HotelOfferType();
+
+        for(HotelOfferType h : otaPkgSearchRS.getHotelOffers().getHotelOffer()){
+            createNurvisRequest(h);
+        }
+        return hotel;
+    }
+
+    public static void createNurvisRequest(HotelOfferType packageHoliday) throws JAXBException, IOException {
         com.thomascook.nurvisAdapter.request.ObjectFactory factory = new com.thomascook.nurvisAdapter.request.ObjectFactory();
         ReservationRequestTypeRequest request = factory.createReservationRequestTypeRequest();
         request.setAgent("000500");

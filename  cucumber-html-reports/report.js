@@ -16,29 +16,64 @@ formatter.scenario({
 });
 formatter.step({
   "line": 4,
-  "name": "I have a list of packages from SOLR and want to book one of them in Nurvis",
+  "name": "SOLR is requested for packages from AMS airport to Spanje for 2 adults",
   "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "I request SOLR for existing packages",
-  "keyword": "When "
+  "name": "SOLR response has available packages",
+  "keyword": "And "
 });
 formatter.step({
   "line": 6,
-  "name": "make price request to nurvis NL endpoint",
-  "keyword": "And "
+  "name": "NURVIS is requested for booking",
+  "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "request extras to package",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "booking created",
+  "name": "NURVIS returns booking ID",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Steps.java:31"
+  "arguments": [
+    {
+      "val": "AMS",
+      "offset": 36
+    },
+    {
+      "val": "Spanje",
+      "offset": 51
+    },
+    {
+      "val": "2",
+      "offset": 62
+    }
+  ],
+  "location": "Steps.java:21"
+});
+formatter.result({
+  "duration": 858530378036,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps.java:34"
+});
+formatter.result({
+  "duration": 82109,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps.java:39"
+});
+formatter.result({
+  "duration": 34524,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Steps.java:45"
+});
+formatter.result({
+  "duration": 40122,
+  "status": "passed"
+});
 });

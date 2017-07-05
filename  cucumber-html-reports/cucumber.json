@@ -1,0 +1,84 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Create booking",
+        "description": "",
+        "id": "create-booking;create-booking",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 858530378036,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "SOLR is requested for packages from AMS airport to Spanje for 2 adults",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AMS",
+                  "offset": 36
+                },
+                {
+                  "val": "Spanje",
+                  "offset": 51
+                },
+                {
+                  "val": "2",
+                  "offset": 62
+                }
+              ],
+              "location": "Steps.java:21"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 82109,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "SOLR response has available packages",
+            "match": {
+              "location": "Steps.java:34"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34524,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "NURVIS is requested for booking",
+            "match": {
+              "location": "Steps.java:39"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40122,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "NURVIS returns booking ID",
+            "match": {
+              "location": "Steps.java:45"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Create Booking",
+    "description": "",
+    "id": "create-booking",
+    "keyword": "Feature",
+    "uri": "createBooking.feature"
+  }
+]
