@@ -51,29 +51,3 @@ formatter.match({
   ],
   "location": "Steps.java:21"
 });
-formatter.result({
-  "duration": 858530378036,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.java:34"
-});
-formatter.result({
-  "duration": 82109,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.java:39"
-});
-formatter.result({
-  "duration": 34524,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.java:45"
-});
-formatter.result({
-  "duration": 40122,
-  "status": "passed"
-});
-});

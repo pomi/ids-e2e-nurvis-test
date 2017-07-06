@@ -200,7 +200,21 @@ public class CreateBooking {
         request.getFab().getFap().get(1).setName("Doe");
         request.getFab().getFap().get(1).setFirstName("John");
 
-        //add Hotel
+        //add Hotel from solr
+        /*request.getFab().getFah().add(factory.createReservationFahTypeRequest());
+        request.getFab().getFah().get(0).setServiceType("H");
+        request.getFab().getFah().get(0).setSegRef("001");
+        request.getFab().getFah().get(0).setPersons(factory.createReservationPersonsTypeRequest());
+        request.getFab().getFah().get(0).getPersons().getIdRef().add("001");
+        request.getFab().getFah().get(0).getPersons().getIdRef().add("002");
+        request.getFab().getFah().get(0).setStartDate(packageHoliday.getDate().toString());
+        request.getFab().getFah().get(0).setDuration(Integer.toString(packageHoliday.getPkgDuration()));
+        request.getFab().getFah().get(0).setProduct(packageHoliday.getHotelCode());
+        request.getFab().getFah().get(0).setRoom(packageHoliday.getRooms().getRoom().get(0).getRoomType());
+        request.getFab().getFah().get(0).setMeal(packageHoliday.getM);
+        request.getFab().getFah().get(0).setAdults("2");*/
+
+        //add Hotel todo delete after creating solr
         request.getFab().getFah().add(factory.createReservationFahTypeRequest());
         request.getFab().getFah().get(0).setServiceType("H");
         request.getFab().getFah().get(0).setSegRef("001");
