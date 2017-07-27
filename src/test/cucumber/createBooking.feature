@@ -5,3 +5,9 @@ Feature: Create Booking
     And SOLR response has available packages
     When NURVIS is requested for booking
     Then NURVIS returns booking ID
+
+  Scenario:
+    Given Nurvis booking
+    When ontour xml is created
+    And ontour xml is put on sftp
+    Then booking is processed

@@ -1,9 +1,11 @@
 package com.thomascook.ids.e2e.tests;
 
 import com.thomascook.nurvisAdapter.request.*;
+
 import static org.junit.Assert.*;
 
-import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
+import com.thomascook.nurvisAdapter.response.*;
+import com.thomascook.ontour.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -23,10 +25,13 @@ import org.opentravel.ota._2003._05.response.*;
 import javax.xml.bind.*;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 
@@ -37,9 +42,8 @@ public class CreateBooking {
 
     static String solr;
     static String nurvis;
-    static
 
-    public void loadProperties(String region, String environment) throws IOException {
+    private void loadProperties(String region, String environment) throws IOException {
         Properties properties = new Properties();
         properties.load(new FileInputStream("src/test/resources/config.properties"));
         Set<Object> keys = properties.keySet();
@@ -58,7 +62,7 @@ public class CreateBooking {
         //solr request
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(solr);
-        post.setEntity(new ByteArrayEntity(createSolrRequest(fromAirport, destination, numberOfAdults).getBytes("UTF-8")));
+        post.setEntity(new ByteArrayEntity(createSolrRequest(0,9,fromAirport, destination, numberOfAdults).getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
         OTAPkgSearchRS otaPkgSearchRS = new OTAPkgSearchRS();
@@ -72,17 +76,26 @@ public class CreateBooking {
                 instream.close();
             }
         }
+        createSolrRSXML(otaPkgSearchRS);
         return otaPkgSearchRS;
-        //createNurvisRequest();
     }
 
-    static public String createSolrRequest(String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
+    static void createSolrRSXML(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance("org.opentravel.ota._2003._05.response");
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(otaPkgSearchRS,sw);
+        //System.out.println(sw.toString());
+    }
+
+    static String createSolrRequest(int startInex, int endIndex, String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
         org.opentravel.ota._2003._05.request.ObjectFactory factory = new org.opentravel.ota._2003._05.request.ObjectFactory();
         OTAPkgSearchRQ otaPkgSearchRQ = factory.createOTAPkgSearchRQ();
 
         FilterResultsType filterResultsType = factory.createFilterResultsType();
-        filterResultsType.setEnd("9");
-        filterResultsType.setStart("0");
+        filterResultsType.setStart(Integer.toString(startInex));
+        filterResultsType.setEnd(Integer.toString(endIndex));
         otaPkgSearchRQ.setFilterResults(filterResultsType);
 
         PkgSearchCriteriaType pkgSearchCriteriaType = factory.createPkgSearchCriteriaType();
@@ -148,19 +161,33 @@ public class CreateBooking {
         return hotel;
     }
 
-    public static void createNurvisRequest(HotelOfferType packageHoliday) throws JAXBException, IOException {
+    static String convertXMLDateToLocalDate(XMLGregorianCalendar xmlDate){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        return LocalDate.of(xmlDate.getYear(),xmlDate.getMonth(),xmlDate.getDay()).format(formatter);
+    }
+
+    static String convertXMLTimeToHHMM(XMLGregorianCalendar xmlDate){
+        SimpleDateFormat time = new SimpleDateFormat("HHmm");
+        return time.format(xmlDate.toGregorianCalendar().getTime());
+    }
+
+    public static ReservationRequestTypeRequest createNurvisRequest(HotelOfferType packageHoliday) throws JAXBException, IOException {
+        int segRef = 1;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        LocalDate today = LocalDate.now();
+        today.format(formatter);
         com.thomascook.nurvisAdapter.request.ObjectFactory factory = new com.thomascook.nurvisAdapter.request.ObjectFactory();
         ReservationRequestTypeRequest request = factory.createReservationRequestTypeRequest();
         request.setAgent("000500");
-        request.setEducBook("Y");
+        request.setEducBook("N");
         request.setUserCode("Neckermann");
-        request.setMode("Prod");
+        request.setMode("IMSQ");
         request.setLang("NL");
         request.setConfirm("Y");
         request.setSubType("PRICE");
         request.setType("BOOK");
-        request.setTime("26062017");
-        request.setDate("26062017");
+        request.setTime(today.toString());
+        request.setDate(today.toString());
         request.setUnit("001");
         request.setSTermId("707");
         request.setTo("NURVIS");
@@ -170,14 +197,15 @@ public class CreateBooking {
         //create Customer
         request.setFab(factory.createReservationFabTypeRequest());
         request.getFab().setCustomer(factory.createReservationCustomerTypeRequest());
-        request.getFab().getCustomer().setCName("Doe");
-        request.getFab().getCustomer().setCFirstName("John");
+        request.getFab().getCustomer().setCName("Dmitry");
+        request.getFab().getCustomer().setCFirstName("Pilvinskiy");
         request.getFab().getCustomer().setCLanguage("H");
-        request.getFab().getCustomer().setCStreet("Strasse 1");
+        request.getFab().getCustomer().setCStreet("Institutska 25");
         request.getFab().getCustomer().setCPOCode("12345");
-        request.getFab().getCustomer().setCCity("Stadt");
-        request.getFab().getCustomer().setCEMailUser("finsupport");
+        request.getFab().getCustomer().setCCity("Kyiv");
+        request.getFab().getCustomer().setCEMailUser("d.pilvinskyiy");
         request.getFab().getCustomer().setCEMailDomain("thomascook.nl");
+        request.getFab().getCustomer().setCTitle("Mr");
 
         //add booking data
         request.getFab().setSellAgent("NL4200");
@@ -200,97 +228,85 @@ public class CreateBooking {
         request.getFab().getFap().get(1).setName("Doe");
         request.getFab().getFap().get(1).setFirstName("John");
 
-        //add Hotel from solr
-        /*request.getFab().getFah().add(factory.createReservationFahTypeRequest());
-        request.getFab().getFah().get(0).setServiceType("H");
-        request.getFab().getFah().get(0).setSegRef("001");
-        request.getFab().getFah().get(0).setPersons(factory.createReservationPersonsTypeRequest());
-        request.getFab().getFah().get(0).getPersons().getIdRef().add("001");
-        request.getFab().getFah().get(0).getPersons().getIdRef().add("002");
-        request.getFab().getFah().get(0).setStartDate(packageHoliday.getDate().toString());
-        request.getFab().getFah().get(0).setDuration(Integer.toString(packageHoliday.getPkgDuration()));
-        request.getFab().getFah().get(0).setProduct(packageHoliday.getHotelCode());
-        request.getFab().getFah().get(0).setRoom(packageHoliday.getRooms().getRoom().get(0).getRoomType());
-        request.getFab().getFah().get(0).setMeal(packageHoliday.getM);
-        request.getFab().getFah().get(0).setAdults("2");*/
-
-        //add Hotel todo delete after creating solr
-        request.getFab().getFah().add(factory.createReservationFahTypeRequest());
-        request.getFab().getFah().get(0).setServiceType("H");
-        request.getFab().getFah().get(0).setSegRef("001");
-        request.getFab().getFah().get(0).setPersons(factory.createReservationPersonsTypeRequest());
-        request.getFab().getFah().get(0).getPersons().getIdRef().add("001");
-        request.getFab().getFah().get(0).getPersons().getIdRef().add("002");
-        request.getFab().getFah().get(0).setStartDate("29072017");
-        request.getFab().getFah().get(0).setDuration("7");
-        request.getFab().getFah().get(0).setProduct("11785A");
-        request.getFab().getFah().get(0).setRoom("2A");
-        request.getFab().getFah().get(0).setMeal("LO");
-        request.getFab().getFah().get(0).setAdults("2");
-
         //create flight
         request.getFab().getFat().add(factory.createReservationFatTypeRequest());
         ReservationFatTypeRequest fat1 = request.getFab().getFat().get(0);
-        fat1.setDirection("H");
-        fat1.setSegRef("002");
+        fat1.setDirection("H"); //OUTBOUND
+        fat1.setSegRef(Integer.toString(segRef++));
         fat1.setServiceType("F");
-        fat1.setStartDate("29072017");
-        fat1.setDuration("7");
-        fat1.setDep("AMS");
-        fat1.setArr("PMI");
-        fat1.setClazz("2");
-        fat1.setCarrier("HV");
-        fat1.setFlightNr("5627");
-        fat1.setDepTime("1310");
-        fat1.setArrTime("1535");
-        fat1.setProvider("HV");
+        fat1.setStartDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getOutboundFlight().getDepartureTime()));
+        fat1.setDuration(Integer.toString(packageHoliday.getPkgDuration()));
+        fat1.setDep(packageHoliday.getFlights().getOutboundFlight().getDepartureAirport().getLocationCode());
+        fat1.setArr(packageHoliday.getFlights().getOutboundFlight().getArrivalAirport().getLocationCode());
+        fat1.setClazz(packageHoliday.getFlights().getOutboundFlight().getServiceClass());
+        fat1.setCarrier(packageHoliday.getFlights().getOutboundFlight().getAirline());
+        fat1.setFlightNr(packageHoliday.getFlights().getOutboundFlight().getFlightCode());
+        fat1.setDepTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getOutboundFlight().getDepartureTime()));
+        fat1.setArrTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getOutboundFlight().getArrivalTime()));
         fat1.setAdults("2");
         fat1.setPersons(factory.createReservationPersonsTypeRequest());
         fat1.getPersons().getIdRef().add("001");
         fat1.getPersons().getIdRef().add("002");
         fat1.getLeg().add(factory.createReservationLegTypeRequest());
         ReservationLegTypeRequest leg1 = fat1.getLeg().get(0);
-        leg1.setDepDate("29072017");
-        leg1.setArrDate("29072017");
-        leg1.setDep("AMS");
-        leg1.setClazz("2");
-        leg1.setArr("PMI");
-        leg1.setCarrier("HV");
-        leg1.setFlightNr("5627");
-        leg1.setDepTime("1310");
-        leg1.setArrTime("1535");
+        leg1.setDepDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getOutboundFlight().getDepartureTime()));
+        leg1.setArrDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getOutboundFlight().getArrivalTime()));
+        leg1.setDep(packageHoliday.getFlights().getOutboundFlight().getDepartureAirport().getLocationCode());
+        leg1.setClazz(packageHoliday.getFlights().getOutboundFlight().getServiceClass());
+        leg1.setArr(packageHoliday.getFlights().getOutboundFlight().getArrivalAirport().getLocationCode());
+        leg1.setCarrier(packageHoliday.getFlights().getOutboundFlight().getAirline());
+        leg1.setFlightNr(packageHoliday.getFlights().getOutboundFlight().getFlightCode());
+        leg1.setDepTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getOutboundFlight().getDepartureTime()));
+        leg1.setArrTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getOutboundFlight().getArrivalTime()));
 
         //create flight
         request.getFab().getFat().add(factory.createReservationFatTypeRequest());
         ReservationFatTypeRequest fat2 = request.getFab().getFat().get(1);
-        fat2.setDirection("R");
-        fat2.setSegRef("003");
+        fat2.setDirection("R"); //INBOUND
+        fat2.setSegRef(Integer.toString(segRef++));
         fat2.setServiceType("F");
-        fat2.setStartDate("05082017");
-        fat2.setDep("PMI");
-        fat2.setArr("AMS");
-        fat2.setClazz("2");
-        fat2.setCarrier("HV");
-        fat2.setFlightNr("5628");
-        fat2.setDepTime("2235");
-        fat2.setArrTime("0105");
-        fat2.setProvider("HV");
+        fat2.setStartDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getInboundFlight().getDepartureTime()));
+        fat2.setDep(packageHoliday.getFlights().getInboundFlight().getDepartureAirport().getLocationCode());
+        fat2.setArr(packageHoliday.getFlights().getInboundFlight().getArrivalAirport().getLocationCode());
+        fat2.setClazz(packageHoliday.getFlights().getInboundFlight().getServiceClass());
+        fat2.setCarrier(packageHoliday.getFlights().getInboundFlight().getAirline());
+        fat2.setFlightNr(packageHoliday.getFlights().getInboundFlight().getFlightCode());
+        fat2.setDepTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getInboundFlight().getDepartureTime()));
+        fat2.setArrTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getInboundFlight().getArrivalTime()));
         fat2.setAdults("2");
         fat2.setPersons(factory.createReservationPersonsTypeRequest());
         fat2.getPersons().getIdRef().add("001");
         fat2.getPersons().getIdRef().add("002");
         fat2.getLeg().add(factory.createReservationLegTypeRequest());
         ReservationLegTypeRequest leg2 = fat2.getLeg().get(0);
-        leg2.setDepDate("05082017");
-        leg2.setArrDate("05082017");
-        leg2.setDep("PMI");
-        leg2.setClazz("2");
-        leg2.setArr("AMS");
-        leg2.setCarrier("HV");
-        leg2.setFlightNr("5628");
-        leg2.setDepTime("2235");
-        leg2.setArrTime("0105");
+        leg2.setDepDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getInboundFlight().getDepartureTime()));
+        leg2.setArrDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getInboundFlight().getArrivalTime()));
+        leg2.setDep(packageHoliday.getFlights().getInboundFlight().getDepartureAirport().getLocationCode());
+        leg2.setArr(packageHoliday.getFlights().getInboundFlight().getArrivalAirport().getLocationCode());
+        leg2.setClazz(packageHoliday.getFlights().getInboundFlight().getServiceClass());
+        leg2.setCarrier(packageHoliday.getFlights().getInboundFlight().getAirline());
+        leg2.setFlightNr(packageHoliday.getFlights().getInboundFlight().getFlightCode());
+        leg2.setDepTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getInboundFlight().getDepartureTime()));
+        leg2.setArrTime(convertXMLTimeToHHMM(packageHoliday.getFlights().getInboundFlight().getArrivalTime()));
 
+        //add Hotel from Solr
+        request.getFab().getFah().add(factory.createReservationFahTypeRequest());
+        request.getFab().getFah().get(0).setServiceType("H");
+        request.getFab().getFah().get(0).setSegRef(Integer.toString(segRef++));
+        request.getFab().getFah().get(0).setPersons(factory.createReservationPersonsTypeRequest());
+        request.getFab().getFah().get(0).getPersons().getIdRef().add("001");
+        request.getFab().getFah().get(0).getPersons().getIdRef().add("002");
+        request.getFab().getFah().get(0).setStartDate(convertXMLDateToLocalDate(packageHoliday.getFlights().getOutboundFlight().getArrivalTime()));
+        request.getFab().getFah().get(0).setDuration(Integer.toString(packageHoliday.getPkgDuration()));
+        request.getFab().getFah().get(0).setProduct(packageHoliday.getRooms().getRoom().get(0).getRoomType().split("\\.")[0]);
+        request.getFab().getFah().get(0).setRoom(packageHoliday.getRooms().getRoom().get(0).getRoomType().split("\\.")[1]);
+        request.getFab().getFah().get(0).setMeal("AI");
+        request.getFab().getFah().get(0).setAdults("2");
+
+        return request;
+    }
+
+    public static ReservationResponseTypeResponse getNurvisInquiryResponse(ReservationRequestTypeRequest request) throws IOException, JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.thomascook.nurvisAdapter.request");
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
@@ -298,7 +314,7 @@ public class CreateBooking {
         marshaller.marshal(request,sw);
 
         HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://int-api.thomascook.com/nurvis-prod/prod/OT/NECN/NeckermannReisen");
+        HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
         post.setEntity(new ByteArrayEntity(sw.toString().getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
@@ -308,17 +324,233 @@ public class CreateBooking {
             try {
                 JAXBContext jc = JAXBContext.newInstance(ReservationResponseTypeResponse.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
-                unmarshaller.setEventHandler(
-                        new ValidationEventHandler() {
-                            public boolean handleEvent(ValidationEvent event ) {
-                                throw new RuntimeException(event.getMessage(),
-                                        event.getLinkedException());
-                            }
-                        });
                 nurvisResponse = (ReservationResponseTypeResponse) unmarshaller.unmarshal(instream);
             } finally {
                 instream.close();
             }
         }
+        return nurvisResponse;
+    }
+
+    public static ReservationResponseTypeResponse createNurvisBooking(ReservationRequestTypeRequest nurvisRequest, ReservationResponseTypeResponse nurvisResponse) throws JAXBException, IOException {
+        nurvisRequest.getFab().setKey(nurvisResponse.getFab().getKey());
+        nurvisRequest.setSubType("FIX");
+        for(ReservationFatTypeRequest requestFat : nurvisRequest.getFab().getFat()){
+            for(ReservationFatTypeResponse responseFat : nurvisResponse.getFab().getFat()){
+                if(Objects.equals(requestFat.getSegRef(), responseFat.getSegRef())){
+                    requestFat.setKey(responseFat.getKey());
+                    requestFat.getLeg().get(0).setKey(responseFat.getLeg().get(0).getKey());
+                    requestFat.getLeg().get(0).setExternal(responseFat.getLeg().get(0).getExternal());
+                }
+            }
+        }
+        nurvisRequest.getFab().getFah().get(0).setKey(nurvisResponse.getFab().getFah().get(0).getKey());
+
+        JAXBContext context = JAXBContext.newInstance("com.thomascook.nurvisAdapter.request");
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(nurvisRequest,sw);
+
+        HttpClient client = HttpClients.createDefault();
+        HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
+        post.setEntity(new ByteArrayEntity(sw.toString().getBytes("UTF-8")));
+        HttpResponse response = client.execute(post);
+        HttpEntity entity = response.getEntity();
+        ReservationResponseTypeResponse nurvisBooking = new ReservationResponseTypeResponse();
+        if (entity != null) {
+            InputStream instream = entity.getContent();
+            try {
+                JAXBContext jc = JAXBContext.newInstance(ReservationResponseTypeResponse.class);
+                Unmarshaller unmarshaller = jc.createUnmarshaller();
+                nurvisBooking = (ReservationResponseTypeResponse) unmarshaller.unmarshal(instream);
+            } finally {
+                instream.close();
+            }
+        }
+
+        return nurvisBooking;
+    }
+
+    public static String generateOntourXML(ReservationResponseTypeResponse nurvisBooking) throws JAXBException {
+        Shipment shipment = new Shipment();
+        shipment.setIdentifier(1);
+        shipment.setEmitter_code("03");
+        shipment.setOffice_code(nurvisBooking.getFab().getDestination());
+        shipment.setNumber_booking(1);
+        shipment.setVersion("01.00.09");
+
+        //Create booking
+        shipment.setBooking(Arrays.asList(new Booking()));
+        Booking booking = shipment.getBooking().get(0);
+        booking.setStatus("A");
+        booking.setLocalizer(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]);
+        booking.setPnr_version(1);
+        booking.setExt_pnr_version(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        LocalDate today = LocalDate.now();
+
+        booking.setDate(today.format(formatter));
+        booking.setAmendment_date(today.format(formatter));
+        booking.setExt_amendment_date(today.format(formatter));
+        booking.setBeginning_date(nurvisBooking.getFab().getStartDate());
+        booking.setEnd_date(nurvisBooking.getFab().getEndDate());
+        booking.setDestination(nurvisBooking.getFab().getDestination());
+        booking.setProduct_code(nurvisBooking.getFab().getSaison());
+        booking.setTo_code(nurvisBooking.getFab().getTouroperator());
+        booking.setBrand(nurvisBooking.getFab().getTOCode());
+        booking.setBrand(nurvisBooking.getFab().getTOCodeVT());
+        booking.setLatebooking("N");
+
+        List<Pax> paxes = new ArrayList<>();
+        for(ReservationFapTypeResponse fap : nurvisBooking.getFab().getFap()){
+            Pax pax = new Pax();
+            pax.setName(fap.getFirstName());
+            pax.setSurname(fap.getName());
+            pax.setAge(Integer.parseInt(fap.getAge()));
+            pax.setSex(fap.getSex());
+            pax.setIdentifier(Integer.parseInt(fap.getID()));
+            pax.getBirth_date();
+            pax.getLanguage();
+            paxes.add(pax);
+        }
+        booking.setPax(paxes);
+
+        List<Service> services = new ArrayList<>();
+        booking.setService(services);
+        for(ReservationFatTypeResponse fat : nurvisBooking.getFab().getFat()){
+            if(fat.getServiceType().equals("F")) {
+                Service service = new Service();
+                service.setCode(fat.getCarrier() + fat.getFlightNr());
+                service.setType("FL");
+                service.setName(service.getCode());
+                service.setOrder(Integer.parseInt(fat.getSegRef()));
+                switch(fat.getDirection()){
+                    case "H": service.setTransfer_type("IN");
+                        break;
+                    case "R": service.setTransfer_type("OUT");
+                }
+                service.setOrigin(fat.getDep());
+                service.setDestination(fat.getArr());
+                service.setCarrier_code(fat.getCarrier());
+                service.setCarrier_flight_code(fat.getFlightNr());
+                service.setIdentifier(fat.getCarrier() + fat.getFlightNr()+fat.getDep()+fat.getArr());
+                service.setNumberofunits(Integer.parseInt(fat.getAdults()));
+
+                List<Pax_service> pax_services = new ArrayList<>();
+                service.setPax_service(pax_services);
+                for(String person : fat.getPersons().getIdRef()){
+                    Pax_service pax_service = new Pax_service();
+                    List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
+                    pax_service.setPax_service_assignment(pax_service_assignments);
+                    Pax_service_assignment pax_service_assignment = new Pax_service_assignment();
+                    pax_service_assignment.setPax_identifier(Integer.parseInt(person));
+                    pax_service.getPax_service_assignment().add(pax_service_assignment);
+                    service.getPax_service().add(pax_service);
+                }
+                booking.getService().add(service);
+            }
+        }
+
+        for(ReservationFahTypeResponse fah : nurvisBooking.getFab().getFah()){
+            Service service = new Service();
+            if(fah.getServiceType().equals("F")){
+                service.setCode(fah.getProduct());
+                service.setType("RM");
+                service.setName(fah.getProductName());
+                service.setOrder(Integer.parseInt(fah.getSegRef()));
+                service.setBeginning_date(fah.getStartDate());
+                service.setBeginning_time("0000");
+                DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("ddMMyyyy");
+                LocalDate endDate = LocalDate.parse(fah.getStartDate(),formatter2);
+                endDate.plus(Integer.parseInt(fah.getDuration()),ChronoUnit.DAYS);
+                endDate.format(formatter2);
+                service.setEnd_date(endDate.toString());
+                service.setEnd_time("0000");
+                service.setAccomodation(fah.getRoom());
+                service.setBoard(fah.getMeal());
+                service.setShared_room_type("N");
+                service.setStatus(fah.getStatus());
+                service.setOccupancy(fah.getAdults());
+                service.setNumberofunits(1);
+                service.setTransfer_code("G");
+                service.setExternal_service_flag("I");
+
+                List<Pax_service> pax_services = new ArrayList<>();
+                service.setPax_service(pax_services);
+                for(String person : fah.getPersons().getIdRef()){
+                    Pax_service pax_service = new Pax_service();
+                    List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
+                    pax_service.setPax_service_assignment(pax_service_assignments);
+                    Pax_service_assignment pax_service_assignment = new Pax_service_assignment();
+                    pax_service_assignment.setPax_identifier(Integer.parseInt(person));
+                    pax_service.getPax_service_assignment().add(pax_service_assignment);
+                    service.getPax_service().add(pax_service);
+                }
+                booking.getService().add(service);
+            }
+        }
+
+        for(ReservationFacTypeResponse fac : nurvisBooking.getFab().getFac()){
+            Service service = new Service();
+            service.setCode(fac.getCode());
+            service.setType("MI");
+            if(fac.getServiceType().equals("I")) {
+                service.setName("Insurance");
+            }
+            service.setOrder(Integer.parseInt(fac.getSegRef()));
+            service.setBeginning_date(fac.getStartDate());
+            service.setBeginning_time("0000");
+            DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("ddMMyyyy");
+            LocalDate endDate = LocalDate.parse(fac.getStartDate(),formatter2);
+            endDate.plus(Integer.parseInt(fac.getDuration()),ChronoUnit.DAYS);
+            endDate.format(formatter2);
+            service.setEnd_date(endDate.toString());
+            service.setEnd_time("0000");
+
+            List<Pax_service> pax_services = new ArrayList<>();
+            service.setPax_service(pax_services);
+            for(String person : fac.getPersons().getIdRef()){
+                Pax_service pax_service = new Pax_service();
+                List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
+                pax_service.setPax_service_assignment(pax_service_assignments);
+                Pax_service_assignment pax_service_assignment = new Pax_service_assignment();
+                pax_service_assignment.setPax_identifier(Integer.parseInt(person));
+                pax_service.getPax_service_assignment().add(pax_service_assignment);
+                service.getPax_service().add(pax_service);
+            }
+            booking.getService().add(service);
+        }
+
+        JAXBContext context = JAXBContext.newInstance(Shipment.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(shipment,sw);
+
+        return sw.toString();
+    }
+
+    //ReservationRequestTypeRequest
+    public static HashMap<String, Object> getValidPackage(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException, IOException {
+        //createNurvisRequest(otaPkgSearchRS.getHotelOffers().getHotelOffer().get(0));
+        HashMap<String, Object> result = new HashMap<>();
+        ReservationRequestTypeRequest request;
+        ReservationResponseTypeResponse response;
+        outerloop:
+        for(HotelOfferType hotelOfferType : otaPkgSearchRS.getHotelOffers().getHotelOffer()){
+            request = createNurvisRequest(hotelOfferType);
+            response = getNurvisInquiryResponse(request);
+            List<ReservationWarningTypeResponse> warnings = response.getFab().getWarning();
+            for(ReservationWarningTypeResponse warning : warnings){
+                if(warning.getText().equals("BOEKEN IS MOGELIJK")){
+                    result.put("request", request);
+                    result.put("response", response);
+                    break outerloop;
+                }
+            }
+        }
+        return result;
     }
 }
