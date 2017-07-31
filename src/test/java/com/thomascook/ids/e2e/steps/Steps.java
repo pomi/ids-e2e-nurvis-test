@@ -6,7 +6,6 @@ import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.PendingException;
 import cucumber.api.java8.En;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
-import org.opentravel.ota._2003._05.response.ObjectFactory;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -16,7 +15,6 @@ import java.util.HashMap;
 import static com.thomascook.ids.e2e.tests.CreateBooking.*;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 /**
  * Created by omm on 6/26/2017.
@@ -28,6 +26,8 @@ public class Steps implements En{
     ReservationRequestTypeRequest nurvisRequest;
     ReservationResponseTypeResponse nurvisInquiryResponse;
     static ReservationResponseTypeResponse nurvisBooking;
+    static String onTourXML;
+    static String destinationAirport;
     public Steps() {
 
         Given("^SOLR is requested for packages from (.*) airport to (.*) for (\\d+) adults$", (String fromAirport, String destination, Integer numberOfAdults) -> {
@@ -51,7 +51,6 @@ public class Steps implements En{
         When("^NURVIS is requested for booking$", () -> {
             // Write code here that turns the phrase above into concrete actions
             try {
-                //todo write loop o check validity
                 //getValidPackage();
                 HashMap<String, Object> results =  getValidPackage(otaPkgSearchRS);
                 assertNotNull(results);
@@ -73,6 +72,7 @@ public class Steps implements En{
             try {
                 nurvisBooking = createNurvisBooking(nurvisRequest,nurvisInquiryResponse);
                 assert(nurvisBooking.getFab().getWarning().get(0).getResultCode().equals("200"));
+                destinationAirport = nurvisBooking.getFab().getDestination();
                 System.out.println(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]);
             } catch (JAXBException e) {
                 e.printStackTrace();
@@ -86,7 +86,7 @@ public class Steps implements En{
             // Write code here that turns the phrase above into concrete actions
             assertNotNull(nurvisBooking.getFab());
             try {
-                generateOntourXML(nurvisBooking);
+                onTourXML = generateOntourXML(nurvisBooking);
             } catch (JAXBException e) {
                 e.printStackTrace();
             }
@@ -94,17 +94,17 @@ public class Steps implements En{
 
         When("^ontour xml is created$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assertNotNull(onTourXML.isEmpty());
         });
 
         When("^ontour xml is put on sftp$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            putOnTourXmlOnSftp(onTourXML, destinationAirport);
         });
 
         Then("^booking is processed$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assert(true);
         });
 
     }

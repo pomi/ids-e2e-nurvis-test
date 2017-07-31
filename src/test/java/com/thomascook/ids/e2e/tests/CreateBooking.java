@@ -1,5 +1,9 @@
 package com.thomascook.ids.e2e.tests;
 
+import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelSftp;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
 import com.thomascook.nurvisAdapter.request.*;
 
 import static org.junit.Assert.*;
@@ -31,9 +35,13 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 /**
  * Created by omm on 6/27/2017.
@@ -455,7 +463,7 @@ public class CreateBooking {
 
         for(ReservationFahTypeResponse fah : nurvisBooking.getFab().getFah()){
             Service service = new Service();
-            if(fah.getServiceType().equals("F")){
+            if(fah.getServiceType().equals("H")){
                 service.setCode(fah.getProduct());
                 service.setType("RM");
                 service.setName(fah.getProductName());
@@ -525,7 +533,7 @@ public class CreateBooking {
 
         JAXBContext context = JAXBContext.newInstance(Shipment.class);
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        //marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
         StringWriter sw = new StringWriter();
         marshaller.marshal(shipment,sw);
 
@@ -552,5 +560,93 @@ public class CreateBooking {
             }
         }
         return result;
+    }
+
+    public static void putOnTourXmlOnSftp(String onTourXML, String destinationAirport){
+        try {
+            JSch jsch = new JSch();
+
+            String user = "ontour-stg";
+            String host = "492565-srv29.eceit.net";
+            int port = 22;
+            String privateKey = "C:\\Users\\omm\\SFTP3.ppk";
+
+            jsch.addIdentity(privateKey);
+            System.out.println("identity added ");
+
+            Session session = jsch.getSession(user, host, port);
+            java.util.Properties config = new java.util.Properties();
+            config.put("StrictHostKeyChecking", "no");
+            session.setConfig(config);
+            System.out.println("session created.");
+
+            session.connect();
+            System.out.println("session connected.....");
+
+            Channel channel = session.openChannel("sftp");
+            channel.setInputStream(System.in);
+            channel.setOutputStream(System.out);
+            channel.connect();
+            System.out.println("shell channel connected....");
+
+            ChannelSftp c = (ChannelSftp) channel;
+
+            LocalDate date = LocalDate.now();
+            LocalTime time = LocalTime.now();
+            //String fileName = "OBES_" + destinationAirport + "_" + date.getYear() + "_" + date.getMonth().getLong(ChronoField.MONTH_OF_YEAR) + "_" + date.getDayOfMonth() +
+            //        "_" + date.getDayOfMonth() + "_" + date.getMonth().getLong(ChronoField.MONTH_OF_YEAR) + "_" + date.getYear() + time.getHour() + "_" +
+            //        time.getMinute() + "_" + time.getSecond() + ".xml";
+
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_dd_MM_yyyy");
+            LocalDate today = LocalDate.now();
+            DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss");
+            LocalTime now = LocalTime.now();
+
+            String fileName = "OBES_" + today.format(dateFormatter) + now.format(timeFormatter) + ".xml";
+
+            File file = new File(fileName);
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(onTourXML);
+            fileWriter.flush();
+            fileWriter.close();
+
+            createZipFile(file, fileName);
+
+            c.put(String.valueOf(new File(fileName + ".zip")), "/ontour-stg/export");
+            c.exit();
+            System.out.println("done");
+
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+    }
+
+    static void createZipFile(File onTourXML, String fileName) throws IOException {
+
+        FileOutputStream fos = new FileOutputStream(fileName + ".zip");
+        ZipOutputStream zos = new ZipOutputStream(fos);
+
+        addToZipFile(onTourXML.getName(), zos);
+        zos.close();
+        fos.close();
+    }
+
+    public static void addToZipFile(String fileName, ZipOutputStream zos) throws FileNotFoundException, IOException {
+
+        System.out.println("Writing '" + fileName + "' to zip file");
+
+        File file = new File(fileName);
+        FileInputStream fis = new FileInputStream(file);
+        ZipEntry zipEntry = new ZipEntry(fileName);
+        zos.putNextEntry(zipEntry);
+
+        byte[] bytes = new byte[1024];
+        int length;
+        while ((length = fis.read(bytes)) >= 0) {
+            zos.write(bytes, 0, length);
+        }
+
+        zos.closeEntry();
+        fis.close();
     }
 }

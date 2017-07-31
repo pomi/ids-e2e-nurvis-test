@@ -1,14 +1,46 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.jcraft.jsch.*;
 
 /**
  * Created by omm on 6/23/2017.
  */
 public class SeleniumTest {
-    static String url = "https://nl.integration.thomascook.io/search?resortCode=spanje-mallorca-alle&goingTo=Mallorca%2C%20Spanje&depAirport=0&sbDepAirport=0&origin=Alle%20luchthavens&flexible=true&when=20170716&duration=15&occupation=2&departureDate=20170713%2C20170719&start=0&end=9&sort=recommendation_asc&brochureName=1";
 
-    public static void main(String[] args){
-        WebDriver driver = new ChromeDriver();
-        driver.get(url);
+    public static void main(String[] args) throws JSchException, SftpException {
+        try {
+            JSch jsch = new JSch();
+
+            String user = "ontour-stg";
+            String host = "492565-srv29.eceit.net";
+            int port = 22;
+            String privateKey = "C:\\Users\\omm\\SFTP3.ppk";
+
+            jsch.addIdentity(privateKey);
+            System.out.println("identity added ");
+
+            Session session = jsch.getSession(user, host, port);
+            java.util.Properties config = new java.util.Properties();
+            config.put("StrictHostKeyChecking", "no");
+            session.setConfig(config);
+            System.out.println("session created.");
+
+            session.connect();
+            System.out.println("session connected.....");
+
+            Channel channel = session.openChannel("sftp");
+            channel.setInputStream(System.in);
+            channel.setOutputStream(System.out);
+            channel.connect();
+            System.out.println("shell channel connected....");
+
+            ChannelSftp c = (ChannelSftp) channel;
+
+            String fileName = "test.txt";
+            c.put(fileName, "/ontour-stg/export");
+            c.exit();
+            System.out.println("done");
+
+        } catch (Exception e) {
+            System.err.println(e);
+        }
     }
 }

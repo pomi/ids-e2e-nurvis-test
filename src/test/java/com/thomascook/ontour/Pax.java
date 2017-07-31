@@ -16,14 +16,14 @@ import java.util.List;
         "pax_remark"
 })
 public class Pax{
-    private String name; //NAME C 15 Name
-    private String surname; //SURNAME C 30 Surname
-    private int age; //AGE N Age
-    private String sex; //SEX C 1 M, F, C, I Passenger type: M -Male, F - Female, C -Child, I – Infant
-    private String just_married; //JUST_MARRIED C 1 Y, N Just married: Y - Yes N - no
-    private int identifier; //IDENTIFIER N Passenger unique identifier within the booking.
-    private String language; //LANGUAGE C 6 Language of the passenger
-    private String birth_date; //BIRTH_DATE C 8 DDMMYYYY Birth date
+    private String name = ""; //NAME C 15 Name
+    private String surname = ""; //SURNAME C 30 Surname
+    private int age = 0; //AGE N Age
+    private String sex = ""; //SEX C 1 M, F, C, I Passenger type: M -Male, F - Female, C -Child, I – Infant
+    private String just_married = ""; //JUST_MARRIED C 1 Y, N Just married: Y - Yes N - no
+    private int identifier = 0; //IDENTIFIER N Passenger unique identifier within the booking.
+    private String language = ""; //LANGUAGE C 6 Language of the passenger
+    private String birth_date = ""; //BIRTH_DATE C 8 DDMMYYYY Birth date
     private List<Pax_remark> Pax_remark; //PAX_REMARK (0..X) See corresponding tag
 
     @XmlElement(name="NAME")
