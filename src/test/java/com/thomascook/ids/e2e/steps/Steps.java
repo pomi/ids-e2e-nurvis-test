@@ -99,6 +99,13 @@ public class Steps implements En{
 
         When("^ontour xml is put on sftp$", () -> {
             // Write code here that turns the phrase above into concrete actions
+            try {
+                assert(checkSFWForCustomer(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             putOnTourXmlOnSftp(onTourXML, destinationAirport);
         });
 

@@ -16,6 +16,9 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.opentravel.ota._2003._05.request.*;
 import org.opentravel.ota._2003._05.request.DepartureAirportListType;
 import org.opentravel.ota._2003._05.request.FilterResultsType;
@@ -36,6 +39,7 @@ import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.chrono.ChronoPeriod;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
@@ -50,6 +54,9 @@ public class CreateBooking {
 
     static String solr;
     static String nurvis;
+    static String sfwUrl;
+    static String customerRetrieveTimeout;
+    static String sfwRequestBody;
 
     private void loadProperties(String region, String environment) throws IOException {
         Properties properties = new Properties();
@@ -57,6 +64,9 @@ public class CreateBooking {
         Set<Object> keys = properties.keySet();
         solr = properties.getProperty(environment + "." + region + "." + "solr");
         nurvis = properties.getProperty(environment + "." + region + "." + "nurvis");
+        sfwUrl = properties.getProperty("sfw.url");
+        customerRetrieveTimeout = properties.getProperty("customerRetrieveTimeoutMin");
+        sfwRequestBody = properties.getProperty("sfw.request.body");
     }
 
     //private static final Logger LOGGER = Logger.getLogger( CreateBooking.class.getName() );
@@ -569,7 +579,7 @@ public class CreateBooking {
             String user = "ontour-stg";
             String host = "492565-srv29.eceit.net";
             int port = 22;
-            String privateKey = "C:\\Users\\omm\\SFTP3.ppk";
+            String privateKey = "C:\\Users\\omm\\WorkingFiles\\SFTP3.ppk";
 
             jsch.addIdentity(privateKey);
             System.out.println("identity added ");
@@ -648,5 +658,37 @@ public class CreateBooking {
 
         zos.closeEntry();
         fis.close();
+    }
+
+    public static boolean checkSFWForCustomer(String bookingId) throws InterruptedException, IOException {
+        LocalTime end = LocalTime.now().plus(Long.parseLong(customerRetrieveTimeout), ChronoUnit.MINUTES);
+        boolean result = false;
+        while(!result) {
+            HttpClient client = HttpClients.createDefault();
+            HttpPost post = new HttpPost(sfwUrl);
+            post.setEntity(new ByteArrayEntity(sfwRequestBody.replace("SFW_BOOKING_NUMBER", bookingId).getBytes()));
+            HttpResponse response = client.execute(post);
+            HttpEntity entity = response.getEntity();
+            if (response.getStatusLine().getStatusCode() != 200) {
+                result = false;
+            } else {
+                JSONObject myObject = new JSONObject(EntityUtils.toString(entity));
+                JSONArray array = (JSONArray) myObject.get("l_records");
+                JSONObject record = (JSONObject) array.get(0);
+                JSONObject booking = (JSONObject) record.get("booking");
+                JSONObject account = (JSONObject) record.get("account");
+                assert (booking.get("Total_Amount") != null);
+                assert (account.get("Name") != null);
+                result = true;
+                break;
+            }
+            if(end.isBefore(LocalTime.now())){
+                result = false;
+                break;
+            }
+            System.out.println("SFW customer is not present yet!");
+            Thread.sleep(30*1000);
+        }
+        return result;
     }
 }
