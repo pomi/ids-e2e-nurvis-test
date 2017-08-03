@@ -74,6 +74,8 @@ public class CreateBooking {
     public OTAPkgSearchRS getSOLRPackages(String fromAirport, String destination, int numberOfAdults) throws IOException, JAXBException, DatatypeConfigurationException {
         //load properties
         loadProperties(System.getenv("region"),System.getenv("env"));
+        System.out.println(solr);
+        System.out.println(nurvis);
         assertNotNull(solr);
         assertNotNull(nurvis);
 
