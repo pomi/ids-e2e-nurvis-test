@@ -10,13 +10,20 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <staging.be.solr>http://ppt.api.thomascook.com/solr-nvb/main</staging.be.solr>
+        <staging.nl.solr>http://ppt.api.thomascook.com/solr-nvn/main</staging.nl.solr>
+        <staging.nl.nurvis>http://int-api.thomascook.com/nurvis-prod/prod/OT/NECN/NeckermannReisen</staging.nl.nurvis>
+        <staging.be.nurvis>http://int-api.thomascook.com/nurvis-prod/prod/OT/NECB/NeckermannReisen</staging.be.nurvis>
+        <sfw.url>https://uat-thomascook.cs81.force.com/service/services/apexrest/BookingCustomerData</sfw.url>
+        <customerRetrieveTimeoutMin>10</customerRetrieveTimeoutMin>
+        <sfw.request.body>{"token":"B5FCAD8188B9C1954E4C817C117A6","l_records":[{"bookingNumber":"SFW_BOOKING_NUMBER","sourceSystem":"Nurvis"}]}</sfw.request.body>
     </properties>
 
 <dependencies>
     <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-server</artifactId>
-        <version>3.4.0</version>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>1.3.2</version>
     </dependency>
     <dependency>
         <groupId>com.jcraft</groupId>
@@ -69,6 +76,34 @@
             <configuration>
                 <source>1.8</source>
                 <target>1.8</target>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>properties-maven-plugin</artifactId>
+            <version>1.0-alpha-2</version>
+            <executions>
+                <execution>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>write-project-properties</goal>
+                    </goals>
+                    <configuration>
+                        <outputFile>${project.build.outputDirectory}/my.properties</outputFile>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20</version>
+            <configuration>
+                <forkCount>0</forkCount>
+                <systemPropertyVariables>
+                    <region>nl</region>
+                    <env>staging</env>
+                </systemPropertyVariables>
             </configuration>
         </plugin>
     </plugins>

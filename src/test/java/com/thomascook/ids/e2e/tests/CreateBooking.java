@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 
 import com.thomascook.nurvisAdapter.response.*;
 import com.thomascook.ontour.*;
+import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -59,9 +60,9 @@ public class CreateBooking {
     static String sfwRequestBody;
 
     private void loadProperties(String region, String environment) throws IOException {
+        InputStream is = this.getClass().getResourceAsStream("/my.properties");
         Properties properties = new Properties();
-        properties.load(new FileInputStream("src/test/resources/config.properties"));
-        Set<Object> keys = properties.keySet();
+        properties.load(is);
         solr = properties.getProperty(environment + "." + region + "." + "solr");
         nurvis = properties.getProperty(environment + "." + region + "." + "nurvis");
         sfwUrl = properties.getProperty("sfw.url");
@@ -73,11 +74,11 @@ public class CreateBooking {
 
     public OTAPkgSearchRS getSOLRPackages(String fromAirport, String destination, int numberOfAdults) throws IOException, JAXBException, DatatypeConfigurationException {
         //load properties
-        loadProperties(System.getenv("region"),System.getenv("env"));
+        loadProperties(System.getProperty("region"),System.getProperty("env"));
         System.out.println(solr);
         System.out.println(nurvis);
-        assertNotNull(solr);
-        assertNotNull(nurvis);
+        //assertNotNull(solr);
+        //assertNotNull(nurvis);
 
         //solr request
         HttpClient client = HttpClients.createDefault();
@@ -96,7 +97,7 @@ public class CreateBooking {
                 instream.close();
             }
         }
-        createSolrRSXML(otaPkgSearchRS);
+        //createSolrRSXML(otaPkgSearchRS);
         return otaPkgSearchRS;
     }
 
@@ -614,7 +615,7 @@ public class CreateBooking {
             DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss");
             LocalTime now = LocalTime.now();
 
-            String fileName = "OBES_" + today.format(dateFormatter) + now.format(timeFormatter) + ".xml";
+            String fileName = "OBES_" + destinationAirport + "_" + today.format(dateFormatter) + now.format(timeFormatter) + ".xml";
 
             File file = new File(fileName);
             FileWriter fileWriter = new FileWriter(file);

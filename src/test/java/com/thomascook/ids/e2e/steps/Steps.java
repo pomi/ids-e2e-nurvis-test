@@ -3,7 +3,6 @@ package com.thomascook.ids.e2e.steps;
 import com.thomascook.ids.e2e.tests.CreateBooking;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
-import cucumber.api.PendingException;
 import cucumber.api.java8.En;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
 
@@ -21,13 +20,13 @@ import static org.junit.Assert.assertNotNull;
  */
 public class Steps implements En{
 
-    private OTAPkgSearchRS otaPkgSearchRS;
-    private CreateBooking createBooking = new CreateBooking();
-    private ReservationRequestTypeRequest nurvisRequest;
-    private ReservationResponseTypeResponse nurvisInquiryResponse;
-    private static ReservationResponseTypeResponse nurvisBooking;
-    private static String onTourXML;
-    private static String destinationAirport;
+    OTAPkgSearchRS otaPkgSearchRS;
+    CreateBooking createBooking = new CreateBooking();
+    ReservationRequestTypeRequest nurvisRequest;
+    ReservationResponseTypeResponse nurvisInquiryResponse;
+    static ReservationResponseTypeResponse nurvisBooking;
+    static String onTourXML;
+    static String destinationAirport;
     public Steps() {
 
         Given("^SOLR is requested for packages from (.*) airport to (.*) for (\\d+) adults$", (String fromAirport, String destination, Integer numberOfAdults) -> {
@@ -93,9 +92,7 @@ public class Steps implements En{
             // Write code here that turns the phrase above into concrete actions
             try {
                 assert(checkSFWForCustomer(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
+            } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }
             putOnTourXmlOnSftp(onTourXML, destinationAirport);
