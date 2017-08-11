@@ -6,11 +6,8 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.thomascook.nurvisAdapter.request.*;
 
-import static org.junit.Assert.*;
-
 import com.thomascook.nurvisAdapter.response.*;
 import com.thomascook.ontour.*;
-import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -40,9 +37,7 @@ import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.chrono.ChronoPeriod;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.zip.ZipEntry;
@@ -110,12 +105,12 @@ public class CreateBooking {
         //System.out.println(sw.toString());
     }
 
-    static String createSolrRequest(int startInex, int endIndex, String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
+    static String createSolrRequest(int startIndex, int endIndex, String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
         org.opentravel.ota._2003._05.request.ObjectFactory factory = new org.opentravel.ota._2003._05.request.ObjectFactory();
         OTAPkgSearchRQ otaPkgSearchRQ = factory.createOTAPkgSearchRQ();
 
         FilterResultsType filterResultsType = factory.createFilterResultsType();
-        filterResultsType.setStart(Integer.toString(startInex));
+        filterResultsType.setStart(Integer.toString(startIndex));
         filterResultsType.setEnd(Integer.toString(endIndex));
         otaPkgSearchRQ.setFilterResults(filterResultsType);
 

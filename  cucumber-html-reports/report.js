@@ -1,53 +1,55 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("createBooking.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
 formatter.feature({
-  "line": 1,
-  "name": "Create Booking",
+  "line": 2,
+  "name": "Test",
   "description": "",
-  "id": "create-booking",
-  "keyword": "Feature"
+  "id": "test",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Test"
+    }
+  ]
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Create booking",
+  "line": 4,
+  "name": "Test1",
   "description": "",
-  "id": "create-booking;create-booking",
+  "id": "test;test1",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 4,
-  "name": "SOLR is requested for packages from AMS airport to Spanje for 2 adults",
+  "line": 5,
+  "name": "fff",
   "keyword": "Given "
 });
-formatter.step({
-  "line": 5,
-  "name": "SOLR response has available packages",
-  "keyword": "And "
+formatter.match({
+  "location": "fff.java:18"
 });
-formatter.step({
-  "line": 6,
-  "name": "NURVIS is requested for booking",
-  "keyword": "When "
+formatter.result({
+  "duration": 118447187,
+  "status": "passed"
 });
-formatter.step({
+formatter.scenario({
   "line": 7,
-  "name": "NURVIS returns booking ID",
-  "keyword": "Then "
+  "name": "Test2",
+  "description": "",
+  "id": "test;test2",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 8,
+  "name": "ggg",
+  "keyword": "Given "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "AMS",
-      "offset": 36
-    },
-    {
-      "val": "Spanje",
-      "offset": 51
-    },
-    {
-      "val": "2",
-      "offset": 62
-    }
-  ],
-  "location": "Steps.java:21"
+  "location": "ggg.java:18"
+});
+formatter.result({
+  "duration": 150845,
+  "status": "passed"
+});
 });
