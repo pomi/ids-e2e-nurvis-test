@@ -1,10 +1,12 @@
 package com.thomascook.ids.e2e.steps;
 
+import com.thomascook.ids.e2e.Context;
 import com.thomascook.ids.e2e.tests.CreateBooking;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.java8.En;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
+import org.springframework.test.context.ContextConfiguration;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;

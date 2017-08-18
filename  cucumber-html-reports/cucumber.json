@@ -1,0 +1,62 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Test1",
+        "description": "",
+        "id": "test;test1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 118447187,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "fff",
+            "match": {
+              "location": "fff.java:18"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Test2",
+        "description": "",
+        "id": "test;test2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 150845,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "ggg",
+            "match": {
+              "location": "ggg.java:18"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Test",
+    "description": "",
+    "id": "test",
+    "keyword": "Feature",
+    "uri": "test.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Test"
+      }
+    ]
+  }
+]

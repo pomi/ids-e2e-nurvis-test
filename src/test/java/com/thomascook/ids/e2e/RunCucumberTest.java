@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(  monochrome = true,
+@CucumberOptions(  tags = {"@Tosca"},
+        monochrome = true,
         features = "src/test/cucumber/",
         format = { "pretty","html: cucumber-html-reports",
                 "json: cucumber-html-reports/cucumber.json" },
