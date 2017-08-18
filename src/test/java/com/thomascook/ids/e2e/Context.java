@@ -1,5 +1,8 @@
 package com.thomascook.ids.e2e;
 
+import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
+import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
+import cucumber.api.DataTable;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +19,33 @@ public class Context {
         OTAPkgSearchRS otaPkgSearchRS;
         String placeholder;
         static Properties properties;
+        DataTable passengers;
+        OTAPkgAvailRS toscaAvailabilityResponse;
+        OTAPkgAvailRQ toscaAvailabiltyRequest;
+
+        public OTAPkgAvailRS getToscaAvailabilityResponse() {
+            return toscaAvailabilityResponse;
+        }
+
+        public void setToscaAvailabilityResponse(OTAPkgAvailRS toscaAvailabilityResponse) {
+            this.toscaAvailabilityResponse = toscaAvailabilityResponse;
+        }
+
+        public OTAPkgAvailRQ getToscaAvailabiltyRequest() {
+            return toscaAvailabiltyRequest;
+        }
+
+        public void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
+            this.toscaAvailabiltyRequest = toscaAvailabiltyRequest;
+        }
+
+        public DataTable getPassengers() {
+            return passengers;
+        }
+
+        public void setPassengers(DataTable passengers) {
+            this.passengers = passengers;
+        }
 
         public OTAPkgSearchRS getOtaPkgSearchRS() {
             return otaPkgSearchRS;

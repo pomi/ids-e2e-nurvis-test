@@ -12,9 +12,11 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <staging.be.solr>http://ppt.api.thomascook.com/solr-nvb/main</staging.be.solr>
         <staging.nl.solr>http://ppt.api.thomascook.com/solr-nvn/main</staging.nl.solr>
+        <staging.uk.solr>http://ppt.api.thomascook.com/solr/main</staging.uk.solr>
         <staging.nl.nurvis>http://int-api.thomascook.com/nurvis-prod/prod/OT/NECN/NeckermannReisen</staging.nl.nurvis>
         <staging.be.nurvis>http://int-api.thomascook.com/nurvis-prod/prod/OT/NECB/NeckermannReisen</staging.be.nurvis>
         <sfw.url>https://uat-thomascook.cs81.force.com/service/services/apexrest/BookingCustomerData</sfw.url>
+        <staging.uk.tosca>http://api.thomascook.com/toscaOTA</staging.uk.tosca>
         <customerRetrieveTimeoutMin>10</customerRetrieveTimeoutMin>
         <sfw.request.body>{"token":"B5FCAD8188B9C1954E4C817C117A6","l_records":[{"bookingNumber":"SFW_BOOKING_NUMBER","sourceSystem":"Nurvis"}]}</sfw.request.body>
     </properties>

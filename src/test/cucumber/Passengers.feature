@@ -2,12 +2,10 @@
 Feature: Create booking for NL, BE markets and put it on OnTour sftp
 
   Scenario: Create package holiday
-    Given I request packages in SOLR with parameters
-      | DepartureAirport | LGW   |
-      | Destination      | Spain |
-      | Adults           | 2     |
-      | Children         | 0     |
-      | Infants          | 0     |
+    Given I request packages in SOLR from LGW to Spain with passengers
+      | Room | Adults | Children | Infants |
+      | 1    | 2      | 0        | 0       |
+      | 2    | 2      | 2        | 1       |
     When I check availability in Tosca
     And add extras
     And confirm package
