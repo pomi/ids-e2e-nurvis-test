@@ -36,3 +36,11 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
+/.idea/
+/src/test/resources/credentials.properties
+/src/test/resources/config.properties
+/reports/
+/cucumber-html-reports/
+/target/
+SeleniumTest.iml
+cucumber-html-reports/
