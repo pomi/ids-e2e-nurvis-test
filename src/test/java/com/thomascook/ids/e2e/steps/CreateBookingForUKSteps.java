@@ -1,6 +1,7 @@
 package com.thomascook.ids.e2e.steps;
 
-import com.thomascook.ids.e2e.Context;
+import com.thomascook.Context;
+import com.thomascook.ids.e2e.Holder;
 import com.thomascook.ids.e2e.tests.CreateBookingUK;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 public class CreateBookingForUKSteps implements En {
 
     @Autowired
-    private Context.Holder holder;
+    private Holder holder;
 
     @Value("${staging.uk.solr}")
     String solrStaging;
