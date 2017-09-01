@@ -1,14 +1,12 @@
 @Tosca
-Feature: Create booking for NL, BE markets and put it on OnTour sftp
+Feature: Create booking for UK market and put it on OnTour sftp
 
   Scenario: Create package holiday
     Given I request packages in SOLR from LGW to Spain with passengers
       | Room | Adults | Children | Infants |
       | 1    | 2      | 0        | 0       |
       | 2    | 2      | 2        | 1       |
-    When I check availability in Tosca
-    And add extras
-    And confirm package
+    When I check availability in Tosca, and add extras, and check costs, and confirm package
     Then booking is created
 
   Scenario: Send booking to WebRio and OnTour

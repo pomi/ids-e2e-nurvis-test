@@ -1,3 +1,4 @@
+@msd
 Feature: Check msD booking passengers
 
   Scenario: Check that passenger list is as expected

@@ -4,58 +4,235 @@
     "elements": [
       {
         "line": 4,
-        "name": "Test1",
+        "name": "Create package holiday",
         "description": "",
-        "id": "test;test1",
+        "id": "create-booking-for-nl,-be-markets-and-put-it-on-ontour-sftp;create-package-holiday",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 118447187,
+              "duration": 2858724841,
               "status": "passed"
             },
             "line": 5,
-            "name": "fff",
+            "name": "I request packages in SOLR from LGW to Spain with passengers",
             "match": {
-              "location": "fff.java:18"
+              "arguments": [
+                {
+                  "val": "LGW",
+                  "offset": 32
+                },
+                {
+                  "val": "Spain",
+                  "offset": 39
+                }
+              ],
+              "location": "CreateBookingForUKSteps.java:34"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Room",
+                  "Adults",
+                  "Children",
+                  "Infants"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "1",
+                  "2",
+                  "0",
+                  "0"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "2",
+                  "2",
+                  "2",
+                  "1"
+                ],
+                "line": 8
+              }
+            ],
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1570226255,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I check availability in Tosca",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:47"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 668723175258,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "add extras",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:56"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1508760,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.thomascook.ids.e2e.steps.CreateBookingForUKSteps.lambda$new$3(CreateBookingForUKSteps.java:72)\r\n\tat ✽.And confirm package(Passengers.feature:11)\r\n",
+              "status": "pending"
+            },
+            "line": 11,
+            "name": "confirm package",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:70"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "booking is created",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:75"
+            },
+            "keyword": "Then "
           }
         ]
       },
       {
-        "line": 7,
-        "name": "Test2",
+        "line": 14,
+        "name": "Send booking to WebRio and OnTour",
         "description": "",
-        "id": "test;test2",
+        "id": "create-booking-for-nl,-be-markets-and-put-it-on-ontour-sftp;send-booking-to-webrio-and-ontour",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 150845,
-              "status": "passed"
+              "duration": 229533,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.thomascook.ids.e2e.steps.CreateBookingForUKSteps.lambda$new$5(CreateBookingForUKSteps.java:82)\r\n\tat ✽.Given I have Tosca booking(Passengers.feature:15)\r\n",
+              "status": "pending"
             },
-            "line": 8,
-            "name": "ggg",
+            "line": 15,
+            "name": "I have Tosca booking",
             "match": {
-              "location": "ggg.java:18"
+              "location": "CreateBookingForUKSteps.java:80"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "I create XML for Webrio",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:85"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "send it to WebRio",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:90"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "WebRio answered without errors",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:95"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Put booking on OnTour sftp",
+        "description": "",
+        "id": "create-booking-for-nl,-be-markets-and-put-it-on-ontour-sftp;put-booking-on-ontour-sftp",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 187545,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.thomascook.ids.e2e.steps.CreateBookingForUKSteps.lambda$new$5(CreateBookingForUKSteps.java:82)\r\n\tat ✽.Given I have Tosca booking(Passengers.feature:21)\r\n",
+              "status": "pending"
+            },
+            "line": 21,
+            "name": "I have Tosca booking",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:80"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "I create OnTour xml",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:100"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "put it on OnTour sftp",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:105"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "OnTour processed XML without errors",
+            "match": {
+              "location": "CreateBookingForUKSteps.java:110"
+            },
+            "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Test",
+    "name": "Create booking for NL, BE markets and put it on OnTour sftp",
     "description": "",
-    "id": "test",
+    "id": "create-booking-for-nl,-be-markets-and-put-it-on-ontour-sftp",
     "keyword": "Feature",
-    "uri": "test.feature",
+    "uri": "Passengers.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Test"
+        "name": "@Tosca"
       }
     ]
   }
