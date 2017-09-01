@@ -40,7 +40,4 @@ buildNumber.properties
 /src/test/resources/credentials.properties
 /src/test/resources/config.properties
 /reports/
-/cucumber-html-reports/
-/target/
 SeleniumTest.iml
-cucumber-html-reports/
