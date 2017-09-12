@@ -1,6 +1,6 @@
 package com.thomascook.ids.e2e.steps;
 
-import com.thomascook.ids.e2e.tests.CreateBooking;
+import com.thomascook.ids.e2e.tests.CreateBookingNurvis;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.java8.En;
@@ -11,28 +11,26 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.IOException;
 import java.util.HashMap;
 
-import static com.thomascook.ids.e2e.tests.CreateBooking.*;
+import static com.thomascook.ids.e2e.tests.CreateBookingNurvis.*;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
-/**
- * Created by omm on 6/26/2017.
- */
-public class Steps implements En {
+class Steps implements En {
 
-    OTAPkgSearchRS otaPkgSearchRS;
-    CreateBooking createBooking = new CreateBooking();
-    ReservationRequestTypeRequest nurvisRequest;
-    ReservationResponseTypeResponse nurvisInquiryResponse;
-    static ReservationResponseTypeResponse nurvisBooking;
-    static String onTourXML;
-    static String destinationAirport;
+    private static ReservationResponseTypeResponse nurvisBooking;
+    private static String onTourXML;
+    private static String destinationAirport;
+    private OTAPkgSearchRS otaPkgSearchRS;
+    private CreateBookingNurvis createBooking;
+    private ReservationRequestTypeRequest nurvisRequest;
+    private ReservationResponseTypeResponse nurvisInquiryResponse;
 
     public Steps() {
 
         Given("^SOLR is requested for packages from (.*) airport to (.*) for (\\d+) adults$", (String fromAirport, String destination, Integer numberOfAdults) -> {
             // Write code here that turns the phrase above into concrete actions
             try {
+                createBooking = new CreateBookingNurvis("nl");
                 otaPkgSearchRS = createBooking.getSOLRPackages(fromAirport, destination, numberOfAdults);
             } catch (JAXBException | IOException | DatatypeConfigurationException e) {
                 e.printStackTrace();

@@ -8,22 +8,17 @@
 
 package com.thomascook.nurvisAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *                 Warning-, error- or success-message
- *             
- * 
+ * Warning-, error- or success-message
+ * <p>
+ * <p>
  * <p>Java class for Reservation-WarningType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-WarningType-Response">
  *   &lt;complexContent>
@@ -70,35 +65,31 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-WarningType-Response", propOrder = {
-    "code",
-    "resultCode",
-    "text"
+        "code",
+        "resultCode",
+        "text"
 })
 public class ReservationWarningTypeResponse {
 
     @XmlElement(name = "Code")
-    protected String code;
+    private String code;
     @XmlElement(name = "ResultCode")
-    protected String resultCode;
+    private String resultCode;
     @XmlElement(name = "Text", required = true)
-    protected String text;
+    private String text;
     @XmlAttribute(name = "SegRef")
-    protected String segRef;
+    private String segRef;
     @XmlAttribute(name = "Error")
-    protected String error;
+    private String error;
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -106,11 +97,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -118,11 +107,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Gets the value of the resultCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResultCode() {
         return resultCode;
@@ -130,11 +117,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Sets the value of the resultCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResultCode(String value) {
         this.resultCode = value;
@@ -142,11 +127,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Gets the value of the text property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getText() {
         return text;
@@ -154,11 +137,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Sets the value of the text property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setText(String value) {
         this.text = value;
@@ -166,11 +147,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Gets the value of the segRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSegRef() {
         return segRef;
@@ -178,11 +157,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Sets the value of the segRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSegRef(String value) {
         this.segRef = value;
@@ -190,11 +167,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Gets the value of the error property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getError() {
         return error;
@@ -202,11 +177,9 @@ public class ReservationWarningTypeResponse {
 
     /**
      * Sets the value of the error property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setError(String value) {
         this.error = value;

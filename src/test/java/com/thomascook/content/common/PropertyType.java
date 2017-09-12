@@ -8,27 +8,22 @@
 
 package com.thomascook.content.common;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import com.thomascook.content.concept.Concept;
 import com.thomascook.content.highlightedfeature.HighlightedFeature;
 import com.thomascook.content.hotellabel.HotelLabelType;
 import com.thomascook.content.soa.srpcontent.SrpContentItemType;
 import com.thomascook.content.theme.Theme;
 
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * <p>Java class for PropertyType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PropertyType">
  *   &lt;complexContent>
@@ -246,81 +241,77 @@ import com.thomascook.content.theme.Theme;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PropertyType", propOrder = {
-    "hotelName",
-    "address",
-    "geoLocation",
-    "distances",
-    "geoPath",
-    "starRating",
-    "tourOperator",
-    "mediaItems",
-    "descriptions",
-    "usps",
-    "facilities",
-    "concepts",
-    "highlightedFeatures",
-    "themes",
-    "labels",
-    "catalogInfo",
-    "domainId",
-    "accoType"
+        "hotelName",
+        "address",
+        "geoLocation",
+        "distances",
+        "geoPath",
+        "starRating",
+        "tourOperator",
+        "mediaItems",
+        "descriptions",
+        "usps",
+        "facilities",
+        "concepts",
+        "highlightedFeatures",
+        "themes",
+        "labels",
+        "catalogInfo",
+        "domainId",
+        "accoType"
 })
 @XmlSeeAlso({
-    SrpContentItemType.class
+        SrpContentItemType.class
 })
 public class PropertyType {
 
     @XmlElement(name = "HotelName", required = true)
-    protected HotelName hotelName;
+    private HotelName hotelName;
     @XmlElement(name = "Address")
-    protected Address address;
+    private Address address;
     @XmlElement(name = "GeoLocation")
-    protected GeoLocation geoLocation;
+    private GeoLocation geoLocation;
     @XmlElement(name = "Distances")
-    protected Distances distances;
+    private Distances distances;
     @XmlElement(name = "GeoPath")
-    protected GeoPath geoPath;
+    private GeoPath geoPath;
     @XmlElement(name = "StarRating")
-    protected String starRating;
+    private String starRating;
     @XmlElement(name = "TourOperator")
-    protected TourOperator tourOperator;
+    private TourOperator tourOperator;
     @XmlElement(name = "MediaItems", required = true)
-    protected MediaItems mediaItems;
+    private MediaItems mediaItems;
     @XmlElement(name = "Descriptions", required = true)
-    protected Descriptions descriptions;
+    private Descriptions descriptions;
     @XmlElement(name = "Usps")
-    protected Usps usps;
+    private Usps usps;
     @XmlElement(name = "Facilities")
-    protected Facilities facilities;
+    private Facilities facilities;
     @XmlElement(name = "Concepts")
-    protected Concepts concepts;
+    private Concepts concepts;
     @XmlElement(name = "HighlightedFeatures")
-    protected HighlightedFeatures highlightedFeatures;
+    private HighlightedFeatures highlightedFeatures;
     @XmlElement(name = "Themes")
-    protected Themes themes;
+    private Themes themes;
     @XmlElement(name = "Labels")
-    protected Labels labels;
+    private Labels labels;
     @XmlElement(name = "CatalogInfo")
-    protected CatalogInfo catalogInfo;
+    private CatalogInfo catalogInfo;
     @XmlElement(name = "DomainId")
-    protected String domainId;
+    private String domainId;
     @XmlElement(name = "AccoType")
-    protected AccoType accoType;
+    private AccoType accoType;
     @XmlAttribute(name = "URI")
-    protected String uri;
+    private String uri;
 
     /**
      * Gets the value of the hotelName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HotelName }
-     *     
+     *
+     * @return possible object is
+     * {@link HotelName }
      */
     public HotelName getHotelName() {
         return hotelName;
@@ -328,11 +319,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the hotelName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HotelName }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link HotelName }
      */
     public void setHotelName(HotelName value) {
         this.hotelName = value;
@@ -340,11 +329,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the address property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Address }
-     *     
+     *
+     * @return possible object is
+     * {@link Address }
      */
     public Address getAddress() {
         return address;
@@ -352,11 +339,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the address property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Address }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Address }
      */
     public void setAddress(Address value) {
         this.address = value;
@@ -364,11 +349,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the geoLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoLocation }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoLocation }
      */
     public GeoLocation getGeoLocation() {
         return geoLocation;
@@ -376,11 +359,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the geoLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoLocation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoLocation }
      */
     public void setGeoLocation(GeoLocation value) {
         this.geoLocation = value;
@@ -388,11 +369,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the distances property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Distances }
-     *     
+     *
+     * @return possible object is
+     * {@link Distances }
      */
     public Distances getDistances() {
         return distances;
@@ -400,11 +379,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the distances property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Distances }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Distances }
      */
     public void setDistances(Distances value) {
         this.distances = value;
@@ -412,11 +389,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the geoPath property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoPath }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoPath }
      */
     public GeoPath getGeoPath() {
         return geoPath;
@@ -424,11 +399,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the geoPath property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoPath }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoPath }
      */
     public void setGeoPath(GeoPath value) {
         this.geoPath = value;
@@ -436,11 +409,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the starRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStarRating() {
         return starRating;
@@ -448,11 +419,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the starRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStarRating(String value) {
         this.starRating = value;
@@ -460,11 +429,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the tourOperator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TourOperator }
-     *     
+     *
+     * @return possible object is
+     * {@link TourOperator }
      */
     public TourOperator getTourOperator() {
         return tourOperator;
@@ -472,11 +439,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the tourOperator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TourOperator }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TourOperator }
      */
     public void setTourOperator(TourOperator value) {
         this.tourOperator = value;
@@ -484,11 +449,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the mediaItems property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MediaItems }
-     *     
+     *
+     * @return possible object is
+     * {@link MediaItems }
      */
     public MediaItems getMediaItems() {
         return mediaItems;
@@ -496,11 +459,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the mediaItems property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MediaItems }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MediaItems }
      */
     public void setMediaItems(MediaItems value) {
         this.mediaItems = value;
@@ -508,11 +469,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the descriptions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Descriptions }
-     *     
+     *
+     * @return possible object is
+     * {@link Descriptions }
      */
     public Descriptions getDescriptions() {
         return descriptions;
@@ -520,11 +479,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the descriptions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Descriptions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Descriptions }
      */
     public void setDescriptions(Descriptions value) {
         this.descriptions = value;
@@ -532,11 +489,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the usps property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Usps }
-     *     
+     *
+     * @return possible object is
+     * {@link Usps }
      */
     public Usps getUsps() {
         return usps;
@@ -544,11 +499,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the usps property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Usps }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Usps }
      */
     public void setUsps(Usps value) {
         this.usps = value;
@@ -556,11 +509,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the facilities property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Facilities }
-     *     
+     *
+     * @return possible object is
+     * {@link Facilities }
      */
     public Facilities getFacilities() {
         return facilities;
@@ -568,11 +519,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the facilities property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Facilities }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Facilities }
      */
     public void setFacilities(Facilities value) {
         this.facilities = value;
@@ -580,11 +529,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the concepts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Concepts }
-     *     
+     *
+     * @return possible object is
+     * {@link Concepts }
      */
     public Concepts getConcepts() {
         return concepts;
@@ -592,11 +539,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the concepts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Concepts }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Concepts }
      */
     public void setConcepts(Concepts value) {
         this.concepts = value;
@@ -604,11 +549,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the highlightedFeatures property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HighlightedFeatures }
-     *     
+     *
+     * @return possible object is
+     * {@link HighlightedFeatures }
      */
     public HighlightedFeatures getHighlightedFeatures() {
         return highlightedFeatures;
@@ -616,11 +559,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the highlightedFeatures property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HighlightedFeatures }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link HighlightedFeatures }
      */
     public void setHighlightedFeatures(HighlightedFeatures value) {
         this.highlightedFeatures = value;
@@ -628,11 +569,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the themes property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Themes }
-     *     
+     *
+     * @return possible object is
+     * {@link Themes }
      */
     public Themes getThemes() {
         return themes;
@@ -640,11 +579,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the themes property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Themes }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Themes }
      */
     public void setThemes(Themes value) {
         this.themes = value;
@@ -652,11 +589,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the labels property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Labels }
-     *     
+     *
+     * @return possible object is
+     * {@link Labels }
      */
     public Labels getLabels() {
         return labels;
@@ -664,11 +599,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the labels property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Labels }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Labels }
      */
     public void setLabels(Labels value) {
         this.labels = value;
@@ -676,11 +609,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the catalogInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CatalogInfo }
-     *     
+     *
+     * @return possible object is
+     * {@link CatalogInfo }
      */
     public CatalogInfo getCatalogInfo() {
         return catalogInfo;
@@ -688,11 +619,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the catalogInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CatalogInfo }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CatalogInfo }
      */
     public void setCatalogInfo(CatalogInfo value) {
         this.catalogInfo = value;
@@ -700,11 +629,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the domainId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDomainId() {
         return domainId;
@@ -712,11 +639,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the domainId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDomainId(String value) {
         this.domainId = value;
@@ -724,11 +649,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the accoType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AccoType }
-     *     
+     *
+     * @return possible object is
+     * {@link AccoType }
      */
     public AccoType getAccoType() {
         return accoType;
@@ -736,11 +659,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the accoType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AccoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AccoType }
      */
     public void setAccoType(AccoType value) {
         this.accoType = value;
@@ -748,11 +669,9 @@ public class PropertyType {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -760,11 +679,9 @@ public class PropertyType {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;
@@ -773,9 +690,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -785,27 +702,23 @@ public class PropertyType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class AccoType {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -813,11 +726,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -825,11 +736,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -837,11 +746,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;
@@ -852,9 +759,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -866,43 +773,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "addressLine"
+            "addressLine"
     })
     public static class Address {
 
         @XmlElement(name = "AddressLine", required = true)
-        protected List<AddressLineType> addressLine;
+        List<AddressLineType> addressLine;
 
         /**
          * Gets the value of the addressLine property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the addressLine property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAddressLine().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AddressLineType }
-         * 
-         * 
          */
         public List<AddressLineType> getAddressLine() {
             if (addressLine == null) {
-                addressLine = new ArrayList<AddressLineType>();
+                addressLine = new ArrayList<>();
             }
             return this.addressLine;
         }
@@ -912,9 +815,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -926,31 +829,27 @@ public class PropertyType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class CatalogInfo {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "Id")
-        protected String id;
+        String id;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
         @XmlAttribute(name = "Season")
-        protected String season;
+        String season;
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -958,11 +857,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -970,11 +867,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getId() {
             return id;
@@ -982,11 +877,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setId(String value) {
             this.id = value;
@@ -994,11 +887,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -1006,11 +897,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -1018,11 +907,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the season property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSeason() {
             return season;
@@ -1030,11 +917,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the season property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSeason(String value) {
             this.season = value;
@@ -1045,9 +930,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1059,43 +944,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "concept"
+            "concept"
     })
     public static class Concepts {
 
         @XmlElement(name = "Concept", namespace = "http://www.thomascook.com/content/concept")
-        protected List<Concept> concept;
+        List<Concept> concept;
 
         /**
          * Gets the value of the concept property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the concept property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getConcept().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Concept }
-         * 
-         * 
          */
         public List<Concept> getConcept() {
             if (concept == null) {
-                concept = new ArrayList<Concept>();
+                concept = new ArrayList<>();
             }
             return this.concept;
         }
@@ -1105,9 +986,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1119,43 +1000,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "description"
+            "description"
     })
     public static class Descriptions {
 
         @XmlElement(name = "Description")
-        protected List<ParagraphType> description;
+        List<ParagraphType> description;
 
         /**
          * Gets the value of the description property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the description property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDescription().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ParagraphType }
-         * 
-         * 
          */
         public List<ParagraphType> getDescription() {
             if (description == null) {
-                description = new ArrayList<ParagraphType>();
+                description = new ArrayList<>();
             }
             return this.description;
         }
@@ -1165,9 +1042,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1180,56 +1057,50 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "distance"
+            "distance"
     })
     public static class Distances {
 
         @XmlElement(name = "Distance", required = true)
-        protected List<DistanceType> distance;
+        List<DistanceType> distance;
         @XmlAttribute(name = "BestMatchingAirport")
-        protected String bestMatchingAirport;
+        String bestMatchingAirport;
 
         /**
          * Gets the value of the distance property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the distance property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDistance().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DistanceType }
-         * 
-         * 
          */
         public List<DistanceType> getDistance() {
             if (distance == null) {
-                distance = new ArrayList<DistanceType>();
+                distance = new ArrayList<>();
             }
             return this.distance;
         }
 
         /**
          * Gets the value of the bestMatchingAirport property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBestMatchingAirport() {
             return bestMatchingAirport;
@@ -1237,11 +1108,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the bestMatchingAirport property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBestMatchingAirport(String value) {
             this.bestMatchingAirport = value;
@@ -1252,9 +1121,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1294,43 +1163,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "facility"
+            "facility"
     })
     public static class Facilities {
 
         @XmlElement(name = "Facility", required = true)
-        protected List<Facility> facility;
+        List<Facility> facility;
 
         /**
          * Gets the value of the facility property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the facility property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFacility().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Facility }
-         * 
-         * 
          */
         public List<Facility> getFacility() {
             if (facility == null) {
-                facility = new ArrayList<Facility>();
+                facility = new ArrayList<>();
             }
             return this.facility;
         }
@@ -1338,9 +1203,9 @@ public class PropertyType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1370,27 +1235,23 @@ public class PropertyType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "facilityDetails"
+                "facilityDetails"
         })
         public static class Facility {
 
             @XmlElement(name = "FacilityDetails", required = true)
-            protected FacilityDetails facilityDetails;
+            FacilityDetails facilityDetails;
             @XmlAttribute(name = "Title")
-            protected String title;
+            String title;
 
             /**
              * Gets the value of the facilityDetails property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link FacilityDetails }
-             *     
+             *
+             * @return possible object is
+             * {@link FacilityDetails }
              */
             public FacilityDetails getFacilityDetails() {
                 return facilityDetails;
@@ -1398,11 +1259,9 @@ public class PropertyType {
 
             /**
              * Sets the value of the facilityDetails property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link FacilityDetails }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link FacilityDetails }
              */
             public void setFacilityDetails(FacilityDetails value) {
                 this.facilityDetails = value;
@@ -1410,11 +1269,9 @@ public class PropertyType {
 
             /**
              * Gets the value of the title property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getTitle() {
                 return title;
@@ -1422,11 +1279,9 @@ public class PropertyType {
 
             /**
              * Sets the value of the title property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setTitle(String value) {
                 this.title = value;
@@ -1435,9 +1290,9 @@ public class PropertyType {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1456,43 +1311,39 @@ public class PropertyType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "facilityDetail"
+                    "facilityDetail"
             })
             public static class FacilityDetails {
 
                 @XmlElement(name = "FacilityDetail", required = true)
-                protected List<FacilityDetail> facilityDetail;
+                List<FacilityDetail> facilityDetail;
 
                 /**
                  * Gets the value of the facilityDetail property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the facilityDetail property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getFacilityDetail().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link FacilityDetail }
-                 * 
-                 * 
                  */
                 public List<FacilityDetail> getFacilityDetail() {
                     if (facilityDetail == null) {
-                        facilityDetail = new ArrayList<FacilityDetail>();
+                        facilityDetail = new ArrayList<>();
                     }
                     return this.facilityDetail;
                 }
@@ -1500,9 +1351,9 @@ public class PropertyType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;simpleContent>
@@ -1511,25 +1362,21 @@ public class PropertyType {
                  *   &lt;/simpleContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "value"
+                        "value"
                 })
                 public static class FacilityDetail {
 
                     @XmlValue
-                    protected String value;
+                    String value;
 
                     /**
                      * Gets the value of the value property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getValue() {
                         return value;
@@ -1537,11 +1384,9 @@ public class PropertyType {
 
                     /**
                      * Sets the value of the value property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setValue(String value) {
                         this.value = value;
@@ -1558,9 +1403,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1571,25 +1416,21 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class GeoLocation {
 
         @XmlAttribute(name = "Latitude", required = true)
-        protected String latitude;
+        String latitude;
         @XmlAttribute(name = "Longitude", required = true)
-        protected String longitude;
+        String longitude;
 
         /**
          * Gets the value of the latitude property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLatitude() {
             return latitude;
@@ -1597,11 +1438,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the latitude property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLatitude(String value) {
             this.latitude = value;
@@ -1609,11 +1448,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the longitude property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLongitude() {
             return longitude;
@@ -1621,11 +1458,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the longitude property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLongitude(String value) {
             this.longitude = value;
@@ -1636,9 +1471,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -1648,27 +1483,23 @@ public class PropertyType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class GeoPath {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -1676,11 +1507,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -1688,11 +1517,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -1700,11 +1527,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;
@@ -1715,9 +1540,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1729,43 +1554,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "highlightedFeature"
+            "highlightedFeature"
     })
     public static class HighlightedFeatures {
 
         @XmlElement(name = "HighlightedFeature", namespace = "http://www.thomascook.com/content/highlightedfeature")
-        protected List<HighlightedFeature> highlightedFeature;
+        List<HighlightedFeature> highlightedFeature;
 
         /**
          * Gets the value of the highlightedFeature property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the highlightedFeature property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getHighlightedFeature().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HighlightedFeature }
-         * 
-         * 
          */
         public List<HighlightedFeature> getHighlightedFeature() {
             if (highlightedFeature == null) {
-                highlightedFeature = new ArrayList<HighlightedFeature>();
+                highlightedFeature = new ArrayList<>();
             }
             return this.highlightedFeature;
         }
@@ -1775,9 +1596,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -1787,27 +1608,23 @@ public class PropertyType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class HotelName {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "UriFriendlyName")
-        protected String uriFriendlyName;
+        String uriFriendlyName;
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -1815,11 +1632,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -1827,11 +1642,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the uriFriendlyName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getUriFriendlyName() {
             return uriFriendlyName;
@@ -1839,11 +1652,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the uriFriendlyName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setUriFriendlyName(String value) {
             this.uriFriendlyName = value;
@@ -1854,9 +1665,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1868,43 +1679,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "label"
+            "label"
     })
     public static class Labels {
 
         @XmlElement(name = "Label", namespace = "http://www.thomascook.com/content/hotelLabel")
-        protected List<HotelLabelType> label;
+        List<HotelLabelType> label;
 
         /**
          * Gets the value of the label property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the label property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getLabel().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelLabelType }
-         * 
-         * 
          */
         public List<HotelLabelType> getLabel() {
             if (label == null) {
-                label = new ArrayList<HotelLabelType>();
+                label = new ArrayList<>();
             }
             return this.label;
         }
@@ -1914,9 +1721,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1928,43 +1735,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "mediaItem"
+            "mediaItem"
     })
     public static class MediaItems {
 
         @XmlElement(name = "MediaItem")
-        protected List<MediaType> mediaItem;
+        List<MediaType> mediaItem;
 
         /**
          * Gets the value of the mediaItem property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the mediaItem property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMediaItem().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link MediaType }
-         * 
-         * 
          */
         public List<MediaType> getMediaItem() {
             if (mediaItem == null) {
-                mediaItem = new ArrayList<MediaType>();
+                mediaItem = new ArrayList<>();
             }
             return this.mediaItem;
         }
@@ -1974,9 +1777,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1988,43 +1791,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "theme"
+            "theme"
     })
     public static class Themes {
 
         @XmlElement(name = "Theme", namespace = "http://www.thomascook.com/content/theme")
-        protected List<Theme> theme;
+        List<Theme> theme;
 
         /**
          * Gets the value of the theme property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the theme property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTheme().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Theme }
-         * 
-         * 
          */
         public List<Theme> getTheme() {
             if (theme == null) {
-                theme = new ArrayList<Theme>();
+                theme = new ArrayList<>();
             }
             return this.theme;
         }
@@ -2034,9 +1833,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -2047,29 +1846,25 @@ public class PropertyType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class TourOperator {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "URI", required = true)
-        protected String uri;
+        String uri;
         @XmlAttribute(name = "Name", required = true)
-        protected String name;
+        String name;
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -2077,11 +1872,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -2089,11 +1882,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the uri property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getURI() {
             return uri;
@@ -2101,11 +1892,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the uri property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setURI(String value) {
             this.uri = value;
@@ -2113,11 +1902,9 @@ public class PropertyType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -2125,11 +1912,9 @@ public class PropertyType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -2140,9 +1925,9 @@ public class PropertyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2161,43 +1946,39 @@ public class PropertyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "usp"
+            "usp"
     })
     public static class Usps {
 
         @XmlElement(name = "Usp")
-        protected List<Usp> usp;
+        List<Usp> usp;
 
         /**
          * Gets the value of the usp property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the usp property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getUsp().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Usp }
-         * 
-         * 
          */
         public List<Usp> getUsp() {
             if (usp == null) {
-                usp = new ArrayList<Usp>();
+                usp = new ArrayList<>();
             }
             return this.usp;
         }
@@ -2205,9 +1986,9 @@ public class PropertyType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -2216,25 +1997,21 @@ public class PropertyType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class Usp {
 
             @XmlValue
-            protected String value;
+            String value;
 
             /**
              * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getValue() {
                 return value;
@@ -2242,11 +2019,9 @@ public class PropertyType {
 
             /**
              * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setValue(String value) {
                 this.value = value;

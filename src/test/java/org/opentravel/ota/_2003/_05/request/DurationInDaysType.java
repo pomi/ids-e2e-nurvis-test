@@ -8,24 +8,20 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines a group of
- *                 durations expressed as the exact number of days.
- *             
- * 
+ * durations expressed as the exact number of days.
+ * <p>
+ * <p>
  * <p>Java class for DurationInDaysType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DurationInDaysType">
  *   &lt;complexContent>
@@ -37,44 +33,40 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DurationInDaysType", propOrder = {
-    "durationInDay"
+        "durationInDay"
 })
 public class DurationInDaysType {
 
     @XmlElement(name = "DurationInDay", type = Integer.class)
     @XmlSchemaType(name = "integer")
-    protected List<Integer> durationInDay;
+    private List<Integer> durationInDay;
 
     /**
      * Gets the value of the durationInDay property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the durationInDay property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDurationInDay().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * 
-     * 
      */
     public List<Integer> getDurationInDay() {
         if (durationInDay == null) {
-            durationInDay = new ArrayList<Integer>();
+            durationInDay = new ArrayList<>();
         }
         return this.durationInDay;
     }

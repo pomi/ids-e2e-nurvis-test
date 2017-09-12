@@ -8,22 +8,17 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
  * Indicates preferences for hotel room amenities.
- * 
+ * <p>
  * <p>Java class for RoomAmenityPrefType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomAmenityPrefType">
  *   &lt;simpleContent>
@@ -37,36 +32,32 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomAmenityPrefType", propOrder = {
-    "value"
+        "value"
 })
 public class RoomAmenityPrefType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "RoomAmenity")
-    protected String roomAmenity;
+    private String roomAmenity;
     @XmlAttribute(name = "ExistsCode")
-    protected String existsCode;
+    private String existsCode;
     @XmlAttribute(name = "QualityLevel")
-    protected String qualityLevel;
+    private String qualityLevel;
     @XmlAttribute(name = "Quantity")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger quantity;
+    private BigInteger quantity;
     @XmlAttribute(name = "PreferLevel")
-    protected PreferLevelType preferLevel;
+    private PreferLevelType preferLevel;
 
     /**
      * Used for Character Strings, length 0 to 128
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -74,11 +65,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -86,11 +75,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Gets the value of the roomAmenity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomAmenity() {
         return roomAmenity;
@@ -98,11 +85,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the roomAmenity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomAmenity(String value) {
         this.roomAmenity = value;
@@ -110,11 +95,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Gets the value of the existsCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExistsCode() {
         return existsCode;
@@ -122,11 +105,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the existsCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExistsCode(String value) {
         this.existsCode = value;
@@ -134,11 +115,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Gets the value of the qualityLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getQualityLevel() {
         return qualityLevel;
@@ -146,11 +125,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the qualityLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setQualityLevel(String value) {
         this.qualityLevel = value;
@@ -158,11 +135,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -170,11 +145,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
@@ -182,11 +155,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Gets the value of the preferLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PreferLevelType }
-     *     
+     *
+     * @return possible object is
+     * {@link PreferLevelType }
      */
     public PreferLevelType getPreferLevel() {
         if (preferLevel == null) {
@@ -198,11 +169,9 @@ public class RoomAmenityPrefType {
 
     /**
      * Sets the value of the preferLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PreferLevelType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PreferLevelType }
      */
     public void setPreferLevel(PreferLevelType value) {
         this.preferLevel = value;

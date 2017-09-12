@@ -8,22 +8,17 @@
 
 package com.thomascook.nurvisAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *                 Detailed information, e.g. confirmed errata
- *             
- * 
+ * Detailed information, e.g. confirmed errata
+ * <p>
+ * <p>
  * <p>Java class for Reservation-DetailType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-DetailType-Response">
  *   &lt;complexContent>
@@ -48,27 +43,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-DetailType-Response", propOrder = {
-    "text"
+        "text"
 })
 public class ReservationDetailTypeResponse {
 
     @XmlElement(name = "Text", required = true)
-    protected String text;
+    private String text;
     @XmlAttribute(name = "Apply", required = true)
-    protected String apply;
+    private String apply;
 
     /**
      * Gets the value of the text property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getText() {
         return text;
@@ -76,11 +67,9 @@ public class ReservationDetailTypeResponse {
 
     /**
      * Sets the value of the text property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setText(String value) {
         this.text = value;
@@ -88,11 +77,9 @@ public class ReservationDetailTypeResponse {
 
     /**
      * Gets the value of the apply property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getApply() {
         return apply;
@@ -100,11 +87,9 @@ public class ReservationDetailTypeResponse {
 
     /**
      * Sets the value of the apply property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setApply(String value) {
         this.apply = value;

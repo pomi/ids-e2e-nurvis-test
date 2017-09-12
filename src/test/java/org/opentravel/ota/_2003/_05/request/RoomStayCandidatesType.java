@@ -8,27 +8,23 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Specifies filter on the
- *                 required rooms. It contains a list of rooms. Multiple rooms mean
- *                 that a match should be
- *                 found for each room in a specific hotel to
- *                 satisfy this criterion.
- *             
- * 
+ * required rooms. It contains a list of rooms. Multiple rooms mean
+ * that a match should be
+ * found for each room in a specific hotel to
+ * satisfy this criterion.
+ * <p>
+ * <p>
  * <p>Java class for RoomStayCandidatesType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomStayCandidatesType">
  *   &lt;complexContent>
@@ -50,82 +46,77 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomStayCandidatesType", propOrder = {
-    "roomStayCandidate"
+        "roomStayCandidate"
 })
 public class RoomStayCandidatesType {
 
     @XmlElement(name = "RoomStayCandidate", required = true)
-    protected List<RoomStayCandidate> roomStayCandidate;
+    private List<RoomStayCandidate> roomStayCandidate;
 
     /**
      * Gets the value of the roomStayCandidate property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomStayCandidate property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomStayCandidate().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomStayCandidate }
-     * 
-     * 
      */
     public List<RoomStayCandidate> getRoomStayCandidate() {
         if (roomStayCandidate == null) {
-            roomStayCandidate = new ArrayList<RoomStayCandidate>();
+            roomStayCandidate = new ArrayList<>();
         }
         return this.roomStayCandidate;
     }
 
     /**
-     *
      * {@link RoomStayCandidate }
      */
-    public void setRoomStayCandidate(List<RoomStayCandidate> roomStayCandidate){
+    public void setRoomStayCandidate(List<RoomStayCandidate> roomStayCandidate) {
         this.roomStayCandidate = roomStayCandidate;
     }
 
 
     /**
      * Specified a single
-     *                             required room.
-     *                         
-     * 
+     * required room.
+     * <p>
+     * <p>
      * Used to specify
-     *                                     filter on the number of adults, children and infants in the
-     *                                     room. For each age group
-     *                                     inlucing at least one person, there
-     *                                     should be a GuestCount element containing the AgeQualifyingCode
-     *                                     for that group (10 for adults, 8 for children, 7
-     *                                     for infants)
-     *                                     and number of person in that group in the Count attribute. For
-     *                                     children the Age attribute (in years) is also required. (It
-     *                                     will be used to
-     *                                     determine whether that the child will be
-     *                                     considered as child or adult for pricing purposes based on the
-     *                                     package age limit). For children with different
-     *                                     ages multiple
-     *                                     GuestCount elements should be added.
-     *                                 
-     * 
+     * filter on the number of adults, children and infants in the
+     * room. For each age group
+     * inlucing at least one person, there
+     * should be a GuestCount element containing the AgeQualifyingCode
+     * for that group (10 for adults, 8 for children, 7
+     * for infants)
+     * and number of person in that group in the Count attribute. For
+     * children the Age attribute (in years) is also required. (It
+     * will be used to
+     * determine whether that the child will be
+     * considered as child or adult for pricing purposes based on the
+     * package age limit). For children with different
+     * ages multiple
+     * GuestCount elements should be added.
+     * <p>
+     * <p>
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -137,29 +128,24 @@ public class RoomStayCandidatesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class RoomStayCandidate
-        extends PkgRoomStayCandidateType
-    {
+            extends PkgRoomStayCandidateType {
 
         @XmlAttribute(name = "RoomType")
-        protected String roomType;
+        String roomType;
         @XmlAttribute(name = "BoardType")
-        protected Integer boardType;
+        Integer boardType;
         @XmlAttribute(name = "PackageID")
-        protected String packageID;
+        String packageID;
 
         /**
          * Gets the value of the roomType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRoomType() {
             return roomType;
@@ -167,11 +153,9 @@ public class RoomStayCandidatesType {
 
         /**
          * Sets the value of the roomType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRoomType(String value) {
             this.roomType = value;
@@ -179,11 +163,9 @@ public class RoomStayCandidatesType {
 
         /**
          * Gets the value of the boardType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getBoardType() {
             return boardType;
@@ -191,11 +173,9 @@ public class RoomStayCandidatesType {
 
         /**
          * Sets the value of the boardType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setBoardType(Integer value) {
             this.boardType = value;
@@ -203,11 +183,9 @@ public class RoomStayCandidatesType {
 
         /**
          * Gets the value of the packageID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPackageID() {
             return packageID;
@@ -215,11 +193,9 @@ public class RoomStayCandidatesType {
 
         /**
          * Sets the value of the packageID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPackageID(String value) {
             this.packageID = value;

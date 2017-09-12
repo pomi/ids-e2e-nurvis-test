@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * State, province, or region name or code needed to identify location.
- * 
+ * <p>
  * <p>Java class for StateProvType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StateProvType">
  *   &lt;simpleContent>
@@ -31,27 +27,23 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StateProvType", propOrder = {
-    "value"
+        "value"
 })
 public class StateProvType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "StateCode")
-    protected String stateCode;
+    private String stateCode;
 
     /**
      * Used for Character Strings, length 0 to 64
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -59,11 +51,9 @@ public class StateProvType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -71,11 +61,9 @@ public class StateProvType {
 
     /**
      * Gets the value of the stateCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStateCode() {
         return stateCode;
@@ -83,11 +71,9 @@ public class StateProvType {
 
     /**
      * Sets the value of the stateCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStateCode(String value) {
         this.stateCode = value;

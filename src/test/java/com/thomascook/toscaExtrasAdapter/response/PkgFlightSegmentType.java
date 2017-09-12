@@ -8,25 +8,20 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Provides details for an air segment in a response message.
- * 
+ * <p>
  * <p>Java class for PkgFlightSegmentType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgFlightSegmentType">
  *   &lt;complexContent>
@@ -54,75 +49,68 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgFlightSegmentType", propOrder = {
-    "cabinAvailability"
+        "cabinAvailability"
 })
 public class PkgFlightSegmentType
-    extends PkgFlightSegmentBaseType
-{
+        extends PkgFlightSegmentBaseType {
 
     @XmlElement(name = "CabinAvailability")
-    protected List<CabinAvailType> cabinAvailability;
+    private List<CabinAvailType> cabinAvailability;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "DepartureDay")
-    protected DayOfWeekType departureDay;
+    private DayOfWeekType departureDay;
     @XmlAttribute(name = "TravelCode")
-    protected String travelCode;
+    private String travelCode;
     @XmlAttribute(name = "Duration")
-    protected Duration duration;
+    private Duration duration;
     @XmlAttribute(name = "DirectionInd")
-    protected AirTripType directionInd;
+    private AirTripType directionInd;
     @XmlAttribute(name = "CheckInDate")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar checkInDate;
+    private XMLGregorianCalendar checkInDate;
     @XmlAttribute(name = "CheckInDesk")
-    protected String checkInDesk;
+    private String checkInDesk;
     @XmlAttribute(name = "TOD_Indicator")
-    protected Boolean todIndicator;
+    private Boolean todIndicator;
     @XmlAttribute(name = "TicketType")
-    protected TicketType ticketType;
+    private TicketType ticketType;
 
     /**
      * Gets the value of the cabinAvailability property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the cabinAvailability property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCabinAvailability().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CabinAvailType }
-     * 
-     * 
      */
     public List<CabinAvailType> getCabinAvailability() {
         if (cabinAvailability == null) {
-            cabinAvailability = new ArrayList<CabinAvailType>();
+            cabinAvailability = new ArrayList<>();
         }
         return this.cabinAvailability;
     }
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -130,11 +118,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -142,11 +128,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the departureDay property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DayOfWeekType }
-     *     
+     *
+     * @return possible object is
+     * {@link DayOfWeekType }
      */
     public DayOfWeekType getDepartureDay() {
         return departureDay;
@@ -154,11 +138,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the departureDay property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DayOfWeekType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DayOfWeekType }
      */
     public void setDepartureDay(DayOfWeekType value) {
         this.departureDay = value;
@@ -166,11 +148,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the travelCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelCode() {
         return travelCode;
@@ -178,11 +158,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the travelCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelCode(String value) {
         this.travelCode = value;
@@ -190,11 +168,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Duration }
-     *     
+     *
+     * @return possible object is
+     * {@link Duration }
      */
     public Duration getDuration() {
         return duration;
@@ -202,11 +178,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Duration }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Duration }
      */
     public void setDuration(Duration value) {
         this.duration = value;
@@ -214,11 +188,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the directionInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AirTripType }
-     *     
+     *
+     * @return possible object is
+     * {@link AirTripType }
      */
     public AirTripType getDirectionInd() {
         return directionInd;
@@ -226,11 +198,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the directionInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AirTripType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AirTripType }
      */
     public void setDirectionInd(AirTripType value) {
         this.directionInd = value;
@@ -238,11 +208,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the checkInDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getCheckInDate() {
         return checkInDate;
@@ -250,11 +218,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the checkInDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setCheckInDate(XMLGregorianCalendar value) {
         this.checkInDate = value;
@@ -262,11 +228,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the checkInDesk property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCheckInDesk() {
         return checkInDesk;
@@ -274,11 +238,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the checkInDesk property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCheckInDesk(String value) {
         this.checkInDesk = value;
@@ -286,11 +248,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the todIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isTODIndicator() {
         return todIndicator;
@@ -298,11 +258,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the todIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setTODIndicator(Boolean value) {
         this.todIndicator = value;
@@ -310,11 +268,9 @@ public class PkgFlightSegmentType
 
     /**
      * Gets the value of the ticketType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TicketType }
-     *     
+     *
+     * @return possible object is
+     * {@link TicketType }
      */
     public TicketType getTicketType() {
         return ticketType;
@@ -322,11 +278,9 @@ public class PkgFlightSegmentType
 
     /**
      * Sets the value of the ticketType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TicketType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TicketType }
      */
     public void setTicketType(TicketType value) {
         this.ticketType = value;

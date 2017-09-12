@@ -8,26 +8,20 @@
 
 package com.thomascook.toscaBookAdapter.request;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Provides address information.
- * 
+ * <p>
  * <p>Java class for AddressType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AddressType">
  *   &lt;complexContent>
@@ -67,59 +61,55 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressType", propOrder = {
-    "streetNmbr",
-    "bldgRoom",
-    "addressLine",
-    "cityName",
-    "postalCode",
-    "county",
-    "stateProv",
-    "countryName"
+        "streetNmbr",
+        "bldgRoom",
+        "addressLine",
+        "cityName",
+        "postalCode",
+        "county",
+        "stateProv",
+        "countryName"
 })
 @XmlSeeAlso({
-    AddressInfoType.class
+        AddressInfoType.class
 })
 public class AddressType {
 
     @XmlElement(name = "StreetNmbr")
-    protected StreetNmbr streetNmbr;
+    private StreetNmbr streetNmbr;
     @XmlElement(name = "BldgRoom")
-    protected List<BldgRoom> bldgRoom;
+    private List<BldgRoom> bldgRoom;
     @XmlElement(name = "AddressLine", required = true)
-    protected List<String> addressLine;
+    private List<String> addressLine;
     @XmlElement(name = "CityName")
-    protected String cityName;
+    private String cityName;
     @XmlElement(name = "PostalCode")
-    protected String postalCode;
+    private String postalCode;
     @XmlElement(name = "County")
-    protected String county;
+    private String county;
     @XmlElement(name = "StateProv")
-    protected StateProvType stateProv;
+    private StateProvType stateProv;
     @XmlElement(name = "CountryName")
-    protected CountryNameType countryName;
+    private CountryNameType countryName;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
     @XmlAttribute(name = "FormattedInd")
-    protected Boolean formattedInd;
+    private Boolean formattedInd;
 
     /**
      * Gets the value of the streetNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StreetNmbr }
-     *     
+     *
+     * @return possible object is
+     * {@link StreetNmbr }
      */
     public StreetNmbr getStreetNmbr() {
         return streetNmbr;
@@ -127,11 +117,9 @@ public class AddressType {
 
     /**
      * Sets the value of the streetNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StreetNmbr }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StreetNmbr }
      */
     public void setStreetNmbr(StreetNmbr value) {
         this.streetNmbr = value;
@@ -139,69 +127,63 @@ public class AddressType {
 
     /**
      * Gets the value of the bldgRoom property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bldgRoom property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBldgRoom().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BldgRoom }
-     * 
-     * 
      */
     public List<BldgRoom> getBldgRoom() {
         if (bldgRoom == null) {
-            bldgRoom = new ArrayList<BldgRoom>();
+            bldgRoom = new ArrayList<>();
         }
         return this.bldgRoom;
     }
 
     /**
      * Gets the value of the addressLine property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the addressLine property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddressLine().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getAddressLine() {
         if (addressLine == null) {
-            addressLine = new ArrayList<String>();
+            addressLine = new ArrayList<>();
         }
         return this.addressLine;
     }
 
     /**
      * Gets the value of the cityName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCityName() {
         return cityName;
@@ -209,11 +191,9 @@ public class AddressType {
 
     /**
      * Sets the value of the cityName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCityName(String value) {
         this.cityName = value;
@@ -221,11 +201,9 @@ public class AddressType {
 
     /**
      * Gets the value of the postalCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPostalCode() {
         return postalCode;
@@ -233,11 +211,9 @@ public class AddressType {
 
     /**
      * Sets the value of the postalCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPostalCode(String value) {
         this.postalCode = value;
@@ -245,11 +221,9 @@ public class AddressType {
 
     /**
      * Gets the value of the county property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCounty() {
         return county;
@@ -257,11 +231,9 @@ public class AddressType {
 
     /**
      * Sets the value of the county property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCounty(String value) {
         this.county = value;
@@ -269,11 +241,9 @@ public class AddressType {
 
     /**
      * Gets the value of the stateProv property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StateProvType }
-     *     
+     *
+     * @return possible object is
+     * {@link StateProvType }
      */
     public StateProvType getStateProv() {
         return stateProv;
@@ -281,11 +251,9 @@ public class AddressType {
 
     /**
      * Sets the value of the stateProv property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StateProvType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StateProvType }
      */
     public void setStateProv(StateProvType value) {
         this.stateProv = value;
@@ -293,11 +261,9 @@ public class AddressType {
 
     /**
      * Gets the value of the countryName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CountryNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link CountryNameType }
      */
     public CountryNameType getCountryName() {
         return countryName;
@@ -305,11 +271,9 @@ public class AddressType {
 
     /**
      * Sets the value of the countryName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CountryNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CountryNameType }
      */
     public void setCountryName(CountryNameType value) {
         this.countryName = value;
@@ -317,11 +281,9 @@ public class AddressType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -329,11 +291,9 @@ public class AddressType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -341,11 +301,9 @@ public class AddressType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -353,11 +311,9 @@ public class AddressType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -365,11 +321,9 @@ public class AddressType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -377,11 +331,9 @@ public class AddressType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -389,11 +341,9 @@ public class AddressType {
 
     /**
      * Gets the value of the formattedInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isFormattedInd() {
         if (formattedInd == null) {
@@ -405,11 +355,9 @@ public class AddressType {
 
     /**
      * Sets the value of the formattedInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setFormattedInd(Boolean value) {
         this.formattedInd = value;
@@ -418,9 +366,9 @@ public class AddressType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -430,27 +378,23 @@ public class AddressType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class BldgRoom {
 
         @XmlValue
-        protected String value;
+        String value;
         @XmlAttribute(name = "BldgNameIndicator")
-        protected Boolean bldgNameIndicator;
+        Boolean bldgNameIndicator;
 
         /**
          * Used for Character Strings, length 0 to 64
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -458,11 +402,9 @@ public class AddressType {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -470,11 +412,9 @@ public class AddressType {
 
         /**
          * Gets the value of the bldgNameIndicator property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isBldgNameIndicator() {
             return bldgNameIndicator;
@@ -482,11 +422,9 @@ public class AddressType {
 
         /**
          * Sets the value of the bldgNameIndicator property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setBldgNameIndicator(Boolean value) {
             this.bldgNameIndicator = value;
@@ -497,9 +435,9 @@ public class AddressType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -511,29 +449,24 @@ public class AddressType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class StreetNmbr
-        extends StreetNmbrType
-    {
+            extends StreetNmbrType {
 
         @XmlAttribute(name = "StreetNmbrSuffix")
-        protected String streetNmbrSuffix;
+        String streetNmbrSuffix;
         @XmlAttribute(name = "StreetDirection")
-        protected String streetDirection;
+        String streetDirection;
         @XmlAttribute(name = "RuralRouteNmbr")
-        protected String ruralRouteNmbr;
+        String ruralRouteNmbr;
 
         /**
          * Gets the value of the streetNmbrSuffix property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getStreetNmbrSuffix() {
             return streetNmbrSuffix;
@@ -541,11 +474,9 @@ public class AddressType {
 
         /**
          * Sets the value of the streetNmbrSuffix property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setStreetNmbrSuffix(String value) {
             this.streetNmbrSuffix = value;
@@ -553,11 +484,9 @@ public class AddressType {
 
         /**
          * Gets the value of the streetDirection property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getStreetDirection() {
             return streetDirection;
@@ -565,11 +494,9 @@ public class AddressType {
 
         /**
          * Sets the value of the streetDirection property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setStreetDirection(String value) {
             this.streetDirection = value;
@@ -577,11 +504,9 @@ public class AddressType {
 
         /**
          * Gets the value of the ruralRouteNmbr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRuralRouteNmbr() {
             return ruralRouteNmbr;
@@ -589,11 +514,9 @@ public class AddressType {
 
         /**
          * Sets the value of the ruralRouteNmbr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRuralRouteNmbr(String value) {
             this.ruralRouteNmbr = value;

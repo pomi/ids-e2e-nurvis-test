@@ -8,26 +8,21 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Used to specify which
- *                 elements are expected in the response for this request.
- *             
- * 
+ * elements are expected in the response for this request.
+ * <p>
+ * <p>
  * <p>Java class for ReturnContent_Type complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ReturnContent_Type">
  *   &lt;complexContent>
@@ -126,35 +121,31 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReturnContent_Type", propOrder = {
-    "facetFieldList",
-    "availabilityFieldList",
-    "availableDate"
+        "facetFieldList",
+        "availabilityFieldList",
+        "availableDate"
 })
 public class ReturnContentType {
 
     @XmlElement(name = "FacetFieldList")
-    protected FacetFieldList facetFieldList;
+    private FacetFieldList facetFieldList;
     @XmlElement(name = "AvailabilityFieldList")
-    protected AvailabilityFieldList availabilityFieldList;
+    private AvailabilityFieldList availabilityFieldList;
     @XmlElement(name = "AvailableDate")
-    protected AvailableDate availableDate;
+    private AvailableDate availableDate;
     @XmlAttribute(name = "returnHotelList")
-    protected Boolean returnHotelList;
+    private Boolean returnHotelList;
     @XmlAttribute(name = "returnRankScores")
-    protected Boolean returnRankScores;
+    private Boolean returnRankScores;
 
     /**
      * Gets the value of the facetFieldList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FacetFieldList }
-     *     
+     *
+     * @return possible object is
+     * {@link FacetFieldList }
      */
     public FacetFieldList getFacetFieldList() {
         return facetFieldList;
@@ -162,11 +153,9 @@ public class ReturnContentType {
 
     /**
      * Sets the value of the facetFieldList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FacetFieldList }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link FacetFieldList }
      */
     public void setFacetFieldList(FacetFieldList value) {
         this.facetFieldList = value;
@@ -174,11 +163,9 @@ public class ReturnContentType {
 
     /**
      * Gets the value of the availabilityFieldList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailabilityFieldList }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailabilityFieldList }
      */
     public AvailabilityFieldList getAvailabilityFieldList() {
         return availabilityFieldList;
@@ -186,11 +173,9 @@ public class ReturnContentType {
 
     /**
      * Sets the value of the availabilityFieldList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailabilityFieldList }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailabilityFieldList }
      */
     public void setAvailabilityFieldList(AvailabilityFieldList value) {
         this.availabilityFieldList = value;
@@ -198,11 +183,9 @@ public class ReturnContentType {
 
     /**
      * Gets the value of the availableDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailableDate }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailableDate }
      */
     public AvailableDate getAvailableDate() {
         return availableDate;
@@ -210,11 +193,9 @@ public class ReturnContentType {
 
     /**
      * Sets the value of the availableDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailableDate }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailableDate }
      */
     public void setAvailableDate(AvailableDate value) {
         this.availableDate = value;
@@ -222,11 +203,9 @@ public class ReturnContentType {
 
     /**
      * Gets the value of the returnHotelList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isReturnHotelList() {
         return returnHotelList;
@@ -234,11 +213,9 @@ public class ReturnContentType {
 
     /**
      * Sets the value of the returnHotelList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setReturnHotelList(Boolean value) {
         this.returnHotelList = value;
@@ -246,11 +223,9 @@ public class ReturnContentType {
 
     /**
      * Gets the value of the returnRankScores property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isReturnRankScores() {
         return returnRankScores;
@@ -258,11 +233,9 @@ public class ReturnContentType {
 
     /**
      * Sets the value of the returnRankScores property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setReturnRankScores(Boolean value) {
         this.returnRankScores = value;
@@ -271,17 +244,17 @@ public class ReturnContentType {
 
     /**
      * The list of fields for
-     *                             which availability calculation is required. If this element is
-     *                             left out, availability
-     *                             will be calculated for all possible fields.
-     *                             If is is an empty list then no availability calculation will be
-     *                             executed for any of the fields.
-     *                         
-     * 
+     * which availability calculation is required. If this element is
+     * left out, availability
+     * will be calculated for all possible fields.
+     * If is is an empty list then no availability calculation will be
+     * executed for any of the fields.
+     * <p>
+     * <p>
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -300,43 +273,39 @@ public class ReturnContentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "availabilityField"
+            "availabilityField"
     })
     public static class AvailabilityFieldList {
 
         @XmlElement(name = "AvailabilityField")
-        protected List<FieldName> availabilityField;
+        List<FieldName> availabilityField;
 
         /**
          * Gets the value of the availabilityField property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the availabilityField property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAvailabilityField().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FieldName }
-         * 
-         * 
          */
         public List<FieldName> getAvailabilityField() {
             if (availabilityField == null) {
-                availabilityField = new ArrayList<FieldName>();
+                availabilityField = new ArrayList<>();
             }
             return this.availabilityField;
         }
@@ -346,9 +315,9 @@ public class ReturnContentType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -359,26 +328,22 @@ public class ReturnContentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class AvailableDate {
 
         @XmlAttribute(name = "unit", required = true)
-        protected AvailableDateUnit unit;
+        AvailableDateUnit unit;
         @XmlAttribute(name = "inMonth")
         @XmlSchemaType(name = "gYearMonth")
-        protected XMLGregorianCalendar inMonth;
+        XMLGregorianCalendar inMonth;
 
         /**
          * Gets the value of the unit property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AvailableDateUnit }
-         *     
+         *
+         * @return possible object is
+         * {@link AvailableDateUnit }
          */
         public AvailableDateUnit getUnit() {
             return unit;
@@ -386,11 +351,9 @@ public class ReturnContentType {
 
         /**
          * Sets the value of the unit property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AvailableDateUnit }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AvailableDateUnit }
          */
         public void setUnit(AvailableDateUnit value) {
             this.unit = value;
@@ -398,11 +361,9 @@ public class ReturnContentType {
 
         /**
          * Gets the value of the inMonth property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getInMonth() {
             return inMonth;
@@ -410,11 +371,9 @@ public class ReturnContentType {
 
         /**
          * Sets the value of the inMonth property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setInMonth(XMLGregorianCalendar value) {
             this.inMonth = value;
@@ -425,16 +384,16 @@ public class ReturnContentType {
 
     /**
      * The list of fields for
-     *                             which facet calculation is required. If this element is missing,
-     *                             facets will be
-     *                             calculated for all fields. If it is an empty list
-     *                             then no facets will be calculated for any of the fields.
-     *                         
-     * 
+     * which facet calculation is required. If this element is missing,
+     * facets will be
+     * calculated for all fields. If it is an empty list
+     * then no facets will be calculated for any of the fields.
+     * <p>
+     * <p>
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -493,43 +452,39 @@ public class ReturnContentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "facetField"
+            "facetField"
     })
     public static class FacetFieldList {
 
         @XmlElement(name = "FacetField")
-        protected List<FieldName> facetField;
+        List<FieldName> facetField;
 
         /**
          * Gets the value of the facetField property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the facetField property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFacetField().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FieldName }
-         * 
-         * 
          */
         public List<FieldName> getFacetField() {
             if (facetField == null) {
-                facetField = new ArrayList<FieldName>();
+                facetField = new ArrayList<>();
             }
             return this.facetField;
         }

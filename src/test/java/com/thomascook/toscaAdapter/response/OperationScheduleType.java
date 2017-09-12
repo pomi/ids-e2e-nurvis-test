@@ -8,23 +8,18 @@
 
 package com.thomascook.toscaAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Details of an operating schedule (e.g. a golf tee time may be more expensive during peak hours v. off peak hours).
- * 
+ * <p>
  * <p>Java class for OperationScheduleType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="OperationScheduleType">
  *   &lt;complexContent>
@@ -59,34 +54,30 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OperationScheduleType", propOrder = {
-    "operationTimes"
+        "operationTimes"
 })
 @XmlSeeAlso({
-    PeriodPriceType.class
+        PeriodPriceType.class
 })
 public class OperationScheduleType {
 
     @XmlElement(name = "OperationTimes")
-    protected OperationTimes operationTimes;
+    private OperationTimes operationTimes;
     @XmlAttribute(name = "Start")
-    protected String start;
+    private String start;
     @XmlAttribute(name = "Duration")
-    protected String duration;
+    private String duration;
     @XmlAttribute(name = "End")
-    protected String end;
+    private String end;
 
     /**
      * Gets the value of the operationTimes property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OperationTimes }
-     *     
+     *
+     * @return possible object is
+     * {@link OperationTimes }
      */
     public OperationTimes getOperationTimes() {
         return operationTimes;
@@ -94,11 +85,9 @@ public class OperationScheduleType {
 
     /**
      * Sets the value of the operationTimes property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OperationTimes }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link OperationTimes }
      */
     public void setOperationTimes(OperationTimes value) {
         this.operationTimes = value;
@@ -106,11 +95,9 @@ public class OperationScheduleType {
 
     /**
      * Gets the value of the start property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStart() {
         return start;
@@ -118,11 +105,9 @@ public class OperationScheduleType {
 
     /**
      * Sets the value of the start property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStart(String value) {
         this.start = value;
@@ -130,11 +115,9 @@ public class OperationScheduleType {
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDuration() {
         return duration;
@@ -142,11 +125,9 @@ public class OperationScheduleType {
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -154,11 +135,9 @@ public class OperationScheduleType {
 
     /**
      * Gets the value of the end property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnd() {
         return end;
@@ -166,11 +145,9 @@ public class OperationScheduleType {
 
     /**
      * Sets the value of the end property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnd(String value) {
         this.end = value;
@@ -179,9 +156,9 @@ public class OperationScheduleType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -205,43 +182,39 @@ public class OperationScheduleType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "operationTime"
+            "operationTime"
     })
     public static class OperationTimes {
 
         @XmlElement(name = "OperationTime", required = true)
-        protected List<OperationTime> operationTime;
+        List<OperationTime> operationTime;
 
         /**
          * Gets the value of the operationTime property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the operationTime property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getOperationTime().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link OperationTime }
-         * 
-         * 
          */
         public List<OperationTime> getOperationTime() {
             if (operationTime == null) {
-                operationTime = new ArrayList<OperationTime>();
+                operationTime = new ArrayList<>();
             }
             return this.operationTime;
         }
@@ -249,9 +222,9 @@ public class OperationScheduleType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -265,47 +238,43 @@ public class OperationScheduleType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class OperationTime {
 
             @XmlAttribute(name = "AdditionalOperationInfoCode")
-            protected String additionalOperationInfoCode;
+            String additionalOperationInfoCode;
             @XmlAttribute(name = "Frequency")
-            protected String frequency;
+            String frequency;
             @XmlAttribute(name = "Text")
-            protected String text;
+            String text;
             @XmlAttribute(name = "Start")
-            protected String start;
+            String start;
             @XmlAttribute(name = "Duration")
-            protected String duration;
+            String duration;
             @XmlAttribute(name = "End")
-            protected String end;
+            String end;
             @XmlAttribute(name = "Mon")
-            protected Boolean mon;
+            Boolean mon;
             @XmlAttribute(name = "Tue")
-            protected Boolean tue;
+            Boolean tue;
             @XmlAttribute(name = "Weds")
-            protected Boolean weds;
+            Boolean weds;
             @XmlAttribute(name = "Thur")
-            protected Boolean thur;
+            Boolean thur;
             @XmlAttribute(name = "Fri")
-            protected Boolean fri;
+            Boolean fri;
             @XmlAttribute(name = "Sat")
-            protected Boolean sat;
+            Boolean sat;
             @XmlAttribute(name = "Sun")
-            protected Boolean sun;
+            Boolean sun;
 
             /**
              * Gets the value of the additionalOperationInfoCode property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getAdditionalOperationInfoCode() {
                 return additionalOperationInfoCode;
@@ -313,11 +282,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the additionalOperationInfoCode property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setAdditionalOperationInfoCode(String value) {
                 this.additionalOperationInfoCode = value;
@@ -325,11 +292,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the frequency property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getFrequency() {
                 return frequency;
@@ -337,11 +302,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the frequency property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setFrequency(String value) {
                 this.frequency = value;
@@ -349,11 +312,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the text property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getText() {
                 return text;
@@ -361,11 +322,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the text property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setText(String value) {
                 this.text = value;
@@ -373,11 +332,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the start property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getStart() {
                 return start;
@@ -385,11 +342,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the start property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setStart(String value) {
                 this.start = value;
@@ -397,11 +352,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the duration property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getDuration() {
                 return duration;
@@ -409,11 +362,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the duration property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setDuration(String value) {
                 this.duration = value;
@@ -421,11 +372,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the end property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getEnd() {
                 return end;
@@ -433,11 +382,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the end property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setEnd(String value) {
                 this.end = value;
@@ -445,11 +392,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the mon property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isMon() {
                 return mon;
@@ -457,11 +402,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the mon property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setMon(Boolean value) {
                 this.mon = value;
@@ -469,11 +412,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the tue property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isTue() {
                 return tue;
@@ -481,11 +422,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the tue property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setTue(Boolean value) {
                 this.tue = value;
@@ -493,11 +432,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the weds property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isWeds() {
                 return weds;
@@ -505,11 +442,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the weds property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setWeds(Boolean value) {
                 this.weds = value;
@@ -517,11 +452,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the thur property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isThur() {
                 return thur;
@@ -529,11 +462,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the thur property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setThur(Boolean value) {
                 this.thur = value;
@@ -541,11 +472,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the fri property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isFri() {
                 return fri;
@@ -553,11 +482,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the fri property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setFri(Boolean value) {
                 this.fri = value;
@@ -565,11 +492,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the sat property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isSat() {
                 return sat;
@@ -577,11 +502,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the sat property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setSat(Boolean value) {
                 this.sat = value;
@@ -589,11 +512,9 @@ public class OperationScheduleType {
 
             /**
              * Gets the value of the sun property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isSun() {
                 return sun;
@@ -601,11 +522,9 @@ public class OperationScheduleType {
 
             /**
              * Sets the value of the sun property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setSun(Boolean value) {
                 this.sun = value;

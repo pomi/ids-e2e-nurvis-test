@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Where details of the package can be found.
- * 
+ * <p>
  * <p>Java class for SourceIdentificationType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SourceIdentificationType">
  *   &lt;simpleContent>
@@ -33,31 +29,27 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SourceIdentificationType", propOrder = {
-    "value"
+        "value"
 })
 public class SourceIdentificationType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "Issue")
-    protected String issue;
+    private String issue;
     @XmlAttribute(name = "Page")
-    protected Integer page;
+    private Integer page;
 
     /**
      * Used for Character Strings, length 0 to 64
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -65,11 +57,9 @@ public class SourceIdentificationType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -77,11 +67,9 @@ public class SourceIdentificationType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -89,11 +77,9 @@ public class SourceIdentificationType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -101,11 +87,9 @@ public class SourceIdentificationType {
 
     /**
      * Gets the value of the issue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIssue() {
         return issue;
@@ -113,11 +97,9 @@ public class SourceIdentificationType {
 
     /**
      * Sets the value of the issue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIssue(String value) {
         this.issue = value;
@@ -125,11 +107,9 @@ public class SourceIdentificationType {
 
     /**
      * Gets the value of the page property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getPage() {
         return page;
@@ -137,11 +117,9 @@ public class SourceIdentificationType {
 
     /**
      * Sets the value of the page property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setPage(Integer value) {
         this.page = value;

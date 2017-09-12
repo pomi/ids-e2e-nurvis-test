@@ -8,22 +8,17 @@
 
 package com.thomascook.nurvisAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *                 Leg-Information
- *             
- * 
+ * Leg-Information
+ * <p>
+ * <p>
  * <p>Java class for Reservation-LegType-Request complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-LegType-Request">
  *   &lt;complexContent>
@@ -93,53 +88,49 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-LegType-Request", propOrder = {
-    "depDate",
-    "arrDate",
-    "dep",
-    "arr",
-    "clazz",
-    "carrier",
-    "flightNr",
-    "depTime",
-    "arrTime"
+        "depDate",
+        "arrDate",
+        "dep",
+        "arr",
+        "clazz",
+        "carrier",
+        "flightNr",
+        "depTime",
+        "arrTime"
 })
 public class ReservationLegTypeRequest {
 
     @XmlElement(name = "DepDate")
-    protected String depDate;
+    private String depDate;
     @XmlElement(name = "ArrDate")
-    protected String arrDate;
+    private String arrDate;
     @XmlElement(name = "Dep")
-    protected String dep;
+    private String dep;
     @XmlElement(name = "Arr")
-    protected String arr;
+    private String arr;
     @XmlElement(name = "Class")
-    protected String clazz;
+    private String clazz;
     @XmlElement(name = "Carrier")
-    protected String carrier;
+    private String carrier;
     @XmlElement(name = "FlightNr")
-    protected String flightNr;
+    private String flightNr;
     @XmlElement(name = "DepTime")
-    protected String depTime;
+    private String depTime;
     @XmlElement(name = "ArrTime")
-    protected String arrTime;
+    private String arrTime;
     @XmlAttribute(name = "Key")
-    protected String key;
+    private String key;
     @XmlAttribute(name = "External")
-    protected String external;
+    private String external;
 
     /**
      * Gets the value of the depDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDepDate() {
         return depDate;
@@ -147,11 +138,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the depDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDepDate(String value) {
         this.depDate = value;
@@ -159,11 +148,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the arrDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getArrDate() {
         return arrDate;
@@ -171,11 +158,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the arrDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setArrDate(String value) {
         this.arrDate = value;
@@ -183,11 +168,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the dep property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDep() {
         return dep;
@@ -195,11 +178,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the dep property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDep(String value) {
         this.dep = value;
@@ -207,11 +188,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the arr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getArr() {
         return arr;
@@ -219,11 +198,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the arr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setArr(String value) {
         this.arr = value;
@@ -231,11 +208,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the clazz property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getClazz() {
         return clazz;
@@ -243,11 +218,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the clazz property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setClazz(String value) {
         this.clazz = value;
@@ -255,11 +228,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the carrier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCarrier() {
         return carrier;
@@ -267,11 +238,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the carrier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCarrier(String value) {
         this.carrier = value;
@@ -279,11 +248,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the flightNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightNr() {
         return flightNr;
@@ -291,11 +258,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the flightNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightNr(String value) {
         this.flightNr = value;
@@ -303,11 +268,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the depTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDepTime() {
         return depTime;
@@ -315,11 +278,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the depTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDepTime(String value) {
         this.depTime = value;
@@ -327,11 +288,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the arrTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getArrTime() {
         return arrTime;
@@ -339,11 +298,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the arrTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setArrTime(String value) {
         this.arrTime = value;
@@ -351,11 +308,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the key property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getKey() {
         return key;
@@ -363,11 +318,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the key property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setKey(String value) {
         this.key = value;
@@ -375,11 +328,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Gets the value of the external property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExternal() {
         return external;
@@ -387,11 +338,9 @@ public class ReservationLegTypeRequest {
 
     /**
      * Sets the value of the external property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExternal(String value) {
         this.external = value;

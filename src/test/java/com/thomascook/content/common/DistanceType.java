@@ -8,20 +8,15 @@
 
 package com.thomascook.content.common;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
  * <p>Java class for DistanceType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DistanceType">
  *   &lt;simpleContent>
@@ -34,34 +29,30 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DistanceType", propOrder = {
-    "value"
+        "value"
 })
 public class DistanceType {
 
     @XmlValue
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger value;
+    private BigInteger value;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "Unit")
-    protected String unit;
+    private String unit;
     @XmlAttribute(name = "Accuracy")
-    protected String accuracy;
+    private String accuracy;
     @XmlAttribute(name = "Vehicle")
-    protected String vehicle;
+    private String vehicle;
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getValue() {
         return value;
@@ -69,11 +60,9 @@ public class DistanceType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setValue(BigInteger value) {
         this.value = value;
@@ -81,11 +70,9 @@ public class DistanceType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -93,11 +80,9 @@ public class DistanceType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -105,11 +90,9 @@ public class DistanceType {
 
     /**
      * Gets the value of the unit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUnit() {
         return unit;
@@ -117,11 +100,9 @@ public class DistanceType {
 
     /**
      * Sets the value of the unit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUnit(String value) {
         this.unit = value;
@@ -129,11 +110,9 @@ public class DistanceType {
 
     /**
      * Gets the value of the accuracy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAccuracy() {
         return accuracy;
@@ -141,11 +120,9 @@ public class DistanceType {
 
     /**
      * Sets the value of the accuracy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAccuracy(String value) {
         this.accuracy = value;
@@ -153,11 +130,9 @@ public class DistanceType {
 
     /**
      * Gets the value of the vehicle property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicle() {
         return vehicle;
@@ -165,11 +140,9 @@ public class DistanceType {
 
     /**
      * Sets the value of the vehicle property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicle(String value) {
         this.vehicle = value;

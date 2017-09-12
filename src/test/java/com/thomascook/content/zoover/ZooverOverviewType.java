@@ -8,20 +8,16 @@
 
 package com.thomascook.content.zoover;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * A zoover overview snippet
- * 
+ * <p>
  * <p>Java class for ZooverOverviewType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ZooverOverviewType">
  *   &lt;complexContent>
@@ -49,27 +45,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ZooverOverviewType", propOrder = {
-    "properties"
+        "properties"
 })
 public class ZooverOverviewType {
 
     @XmlElement(name = "Properties")
-    protected Properties properties;
+    private Properties properties;
     @XmlAttribute(name = "Id", required = true)
-    protected String id;
+    private String id;
 
     /**
      * Gets the value of the properties property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Properties }
-     *     
+     *
+     * @return possible object is
+     * {@link Properties }
      */
     public Properties getProperties() {
         return properties;
@@ -77,11 +69,9 @@ public class ZooverOverviewType {
 
     /**
      * Sets the value of the properties property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Properties }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Properties }
      */
     public void setProperties(Properties value) {
         this.properties = value;
@@ -89,11 +79,9 @@ public class ZooverOverviewType {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -101,11 +89,9 @@ public class ZooverOverviewType {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -114,9 +100,9 @@ public class ZooverOverviewType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -133,37 +119,33 @@ public class ZooverOverviewType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Properties {
 
         @XmlAttribute(name = "type")
-        protected String type;
+        String type;
         @XmlAttribute(name = "zooverGeo")
-        protected String zooverGeo;
+        String zooverGeo;
         @XmlAttribute(name = "zooverName")
-        protected String zooverName;
+        String zooverName;
         @XmlAttribute(name = "reviewUrl")
-        protected String reviewUrl;
+        String reviewUrl;
         @XmlAttribute(name = "addUrl")
-        protected String addUrl;
+        String addUrl;
         @XmlAttribute(name = "addUrlIframe")
-        protected String addUrlIframe;
+        String addUrlIframe;
         @XmlAttribute(name = "reviewCount")
-        protected String reviewCount;
+        String reviewCount;
         @XmlAttribute(name = "averageRating")
-        protected String averageRating;
+        String averageRating;
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -171,11 +153,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -183,11 +163,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the zooverGeo property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getZooverGeo() {
             return zooverGeo;
@@ -195,11 +173,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the zooverGeo property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setZooverGeo(String value) {
             this.zooverGeo = value;
@@ -207,11 +183,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the zooverName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getZooverName() {
             return zooverName;
@@ -219,11 +193,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the zooverName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setZooverName(String value) {
             this.zooverName = value;
@@ -231,11 +203,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the reviewUrl property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getReviewUrl() {
             return reviewUrl;
@@ -243,11 +213,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the reviewUrl property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setReviewUrl(String value) {
             this.reviewUrl = value;
@@ -255,11 +223,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the addUrl property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAddUrl() {
             return addUrl;
@@ -267,11 +233,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the addUrl property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAddUrl(String value) {
             this.addUrl = value;
@@ -279,11 +243,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the addUrlIframe property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAddUrlIframe() {
             return addUrlIframe;
@@ -291,11 +253,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the addUrlIframe property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAddUrlIframe(String value) {
             this.addUrlIframe = value;
@@ -303,11 +263,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the reviewCount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getReviewCount() {
             return reviewCount;
@@ -315,11 +273,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the reviewCount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setReviewCount(String value) {
             this.reviewCount = value;
@@ -327,11 +283,9 @@ public class ZooverOverviewType {
 
         /**
          * Gets the value of the averageRating property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAverageRating() {
             return averageRating;
@@ -339,11 +293,9 @@ public class ZooverOverviewType {
 
         /**
          * Sets the value of the averageRating property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAverageRating(String value) {
             this.averageRating = value;

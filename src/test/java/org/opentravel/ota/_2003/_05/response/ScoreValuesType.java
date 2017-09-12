@@ -8,26 +8,22 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * The list of calculated
- *                 score values. Score values are calculated by the
- *                 Solr ScoreCalculator
- *                 project.
- *             
- * 
+ * score values. Score values are calculated by the
+ * Solr ScoreCalculator
+ * project.
+ * <p>
+ * <p>
  * <p>Java class for ScoreValuesType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ScoreValuesType">
  *   &lt;complexContent>
@@ -49,43 +45,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ScoreValuesType", propOrder = {
-    "scoreValue"
+        "scoreValue"
 })
 public class ScoreValuesType {
 
     @XmlElement(name = "ScoreValue", required = true)
-    protected List<ScoreValue> scoreValue;
+    private List<ScoreValue> scoreValue;
 
     /**
      * Gets the value of the scoreValue property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the scoreValue property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getScoreValue().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ScoreValue }
-     * 
-     * 
      */
     public List<ScoreValue> getScoreValue() {
         if (scoreValue == null) {
-            scoreValue = new ArrayList<ScoreValue>();
+            scoreValue = new ArrayList<>();
         }
         return this.scoreValue;
     }
@@ -93,9 +85,9 @@ public class ScoreValuesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -107,27 +99,23 @@ public class ScoreValuesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ScoreValue {
 
         @XmlAttribute(name = "SegmentName", required = true)
-        protected String segmentName;
+        String segmentName;
         @XmlAttribute(name = "Value", required = true)
-        protected int value;
+        int value;
         @XmlAttribute(name = "Sortfield")
-        protected Boolean sortfield;
+        Boolean sortfield;
 
         /**
          * Gets the value of the segmentName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSegmentName() {
             return segmentName;
@@ -135,11 +123,9 @@ public class ScoreValuesType {
 
         /**
          * Sets the value of the segmentName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSegmentName(String value) {
             this.segmentName = value;
@@ -147,7 +133,6 @@ public class ScoreValuesType {
 
         /**
          * Gets the value of the value property.
-         * 
          */
         public int getValue() {
             return value;
@@ -155,7 +140,6 @@ public class ScoreValuesType {
 
         /**
          * Sets the value of the value property.
-         * 
          */
         public void setValue(int value) {
             this.value = value;
@@ -163,11 +147,9 @@ public class ScoreValuesType {
 
         /**
          * Gets the value of the sortfield property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isSortfield() {
             return sortfield;
@@ -175,11 +157,9 @@ public class ScoreValuesType {
 
         /**
          * Sets the value of the sortfield property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setSortfield(Boolean value) {
             this.sortfield = value;

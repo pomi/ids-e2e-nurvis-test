@@ -8,19 +8,14 @@
 
 package com.thomascook.content.common;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for MediaType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="MediaType">
  *   &lt;complexContent>
@@ -50,42 +45,38 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MediaType", propOrder = {
-    "uri",
-    "title",
-    "altText"
+        "uri",
+        "title",
+        "altText"
 })
 public class MediaType {
 
     @XmlElement(name = "URI", required = true)
     @XmlSchemaType(name = "anyURI")
-    protected String uri;
+    private String uri;
     @XmlElement(name = "Title")
-    protected String title;
+    private String title;
     @XmlElement(name = "AltText")
-    protected String altText;
+    private String altText;
     @XmlAttribute(name = "Type", required = true)
-    protected String type;
+    private String type;
     @XmlAttribute(name = "DisplaySequence")
-    protected Integer displaySequence;
+    private Integer displaySequence;
     @XmlAttribute(name = "Primary")
-    protected Boolean primary;
+    private Boolean primary;
     @XmlAttribute(name = "DisplayInMainViewer")
-    protected Boolean displayInMainViewer;
+    private Boolean displayInMainViewer;
     @XmlAttribute(name = "ImageType")
-    protected String imageType;
+    private String imageType;
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -93,11 +84,9 @@ public class MediaType {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;
@@ -105,11 +94,9 @@ public class MediaType {
 
     /**
      * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTitle() {
         return title;
@@ -117,11 +104,9 @@ public class MediaType {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTitle(String value) {
         this.title = value;
@@ -129,11 +114,9 @@ public class MediaType {
 
     /**
      * Gets the value of the altText property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltText() {
         return altText;
@@ -141,11 +124,9 @@ public class MediaType {
 
     /**
      * Sets the value of the altText property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltText(String value) {
         this.altText = value;
@@ -153,11 +134,9 @@ public class MediaType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -165,11 +144,9 @@ public class MediaType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -177,11 +154,9 @@ public class MediaType {
 
     /**
      * Gets the value of the displaySequence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getDisplaySequence() {
         return displaySequence;
@@ -189,11 +164,9 @@ public class MediaType {
 
     /**
      * Sets the value of the displaySequence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setDisplaySequence(Integer value) {
         this.displaySequence = value;
@@ -201,11 +174,9 @@ public class MediaType {
 
     /**
      * Gets the value of the primary property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isPrimary() {
         return primary;
@@ -213,11 +184,9 @@ public class MediaType {
 
     /**
      * Sets the value of the primary property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setPrimary(Boolean value) {
         this.primary = value;
@@ -225,11 +194,9 @@ public class MediaType {
 
     /**
      * Gets the value of the displayInMainViewer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isDisplayInMainViewer() {
         return displayInMainViewer;
@@ -237,11 +204,9 @@ public class MediaType {
 
     /**
      * Sets the value of the displayInMainViewer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setDisplayInMainViewer(Boolean value) {
         this.displayInMainViewer = value;
@@ -249,11 +214,9 @@ public class MediaType {
 
     /**
      * Gets the value of the imageType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getImageType() {
         return imageType;
@@ -261,11 +224,9 @@ public class MediaType {
 
     /**
      * Sets the value of the imageType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setImageType(String value) {
         this.imageType = value;

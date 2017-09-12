@@ -8,26 +8,21 @@
 
 package com.thomascook.toscaBookAdapter.request;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * CustomerCounts- Categorization of all Customers in a reservation or request. The total number of Customers will equal the sum of the Count attribute of all CustomerCount objects in this collection and assumes that the AgeQualifyingCode will be used to determine how each Customer should be billed. Each booking segment has its own CustomerCount attribute to help determine billing, headcount, etc. The CustomerCount collection cannot be modified
- *         using a delta. It must be resent in its entirety if modified.
- * 
+ * using a delta. It must be resent in its entirety if modified.
+ * <p>
  * <p>Java class for CustomerCountsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CustomerCountsType">
  *   &lt;complexContent>
@@ -48,43 +43,39 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CustomerCountsType", propOrder = {
-    "customerCount"
+        "customerCount"
 })
 public class CustomerCountsType {
 
     @XmlElement(name = "CustomerCount", required = true)
-    protected List<CustomerCount> customerCount;
+    private List<CustomerCount> customerCount;
 
     /**
      * Gets the value of the customerCount property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the customerCount property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCustomerCount().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CustomerCount }
-     * 
-     * 
      */
     public List<CustomerCount> getCustomerCount() {
         if (customerCount == null) {
-            customerCount = new ArrayList<CustomerCount>();
+            customerCount = new ArrayList<>();
         }
         return this.customerCount;
     }
@@ -92,9 +83,9 @@ public class CustomerCountsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -105,8 +96,6 @@ public class CustomerCountsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -114,27 +103,25 @@ public class CustomerCountsType {
 
         @XmlAttribute(name = "BirthDate")
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar birthDate;
+        XMLGregorianCalendar birthDate;
         @XmlAttribute(name = "Age")
-        protected Integer age;
+        Integer age;
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
         @XmlAttribute(name = "CodeContext")
-        protected String codeContext;
+        String codeContext;
         @XmlAttribute(name = "URI")
         @XmlSchemaType(name = "anyURI")
-        protected String uri;
+        String uri;
         @XmlAttribute(name = "Quantity")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger quantity;
+        BigInteger quantity;
 
         /**
          * Gets the value of the birthDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getBirthDate() {
             return birthDate;
@@ -142,11 +129,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the birthDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setBirthDate(XMLGregorianCalendar value) {
             this.birthDate = value;
@@ -154,11 +139,9 @@ public class CustomerCountsType {
 
         /**
          * Gets the value of the age property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getAge() {
             return age;
@@ -166,11 +149,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the age property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setAge(Integer value) {
             this.age = value;
@@ -178,11 +159,9 @@ public class CustomerCountsType {
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -190,11 +169,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;
@@ -202,11 +179,9 @@ public class CustomerCountsType {
 
         /**
          * Gets the value of the codeContext property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCodeContext() {
             return codeContext;
@@ -214,11 +189,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the codeContext property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -226,11 +199,9 @@ public class CustomerCountsType {
 
         /**
          * Gets the value of the uri property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getURI() {
             return uri;
@@ -238,11 +209,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the uri property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setURI(String value) {
             this.uri = value;
@@ -250,11 +219,9 @@ public class CustomerCountsType {
 
         /**
          * Gets the value of the quantity property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getQuantity() {
             return quantity;
@@ -262,11 +229,9 @@ public class CustomerCountsType {
 
         /**
          * Sets the value of the quantity property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;

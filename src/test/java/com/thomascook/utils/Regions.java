@@ -1,4 +1,4 @@
-package com.thomascook;
+package com.thomascook.utils;
 
 public class Regions {
     public static final String BE = "BE";

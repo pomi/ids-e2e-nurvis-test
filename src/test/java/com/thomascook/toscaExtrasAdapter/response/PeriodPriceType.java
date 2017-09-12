@@ -8,24 +8,20 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Provides dates and times of availability together with duration and prices. The Duration attribite defines the period for which a charge applies, e.g. P1D = per day, P1N = per night, P7D = per week etc. If this attribute is not present, the period is assumed to be the duration of the booking.
- * 
+ * <p>
  * <p>Java class for PeriodPriceType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PeriodPriceType">
  *   &lt;complexContent>
@@ -63,74 +59,67 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PeriodPriceType", propOrder = {
-    "price"
+        "price"
 })
 public class PeriodPriceType
-    extends OperationScheduleType
-{
+        extends OperationScheduleType {
 
     @XmlElement(name = "Price")
-    protected List<PkgPriceType> price;
+    private List<PkgPriceType> price;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "Category")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String category;
+    private String category;
     @XmlAttribute(name = "Type")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String type;
+    private String type;
     @XmlAttribute(name = "DurationPeriod")
-    protected String durationPeriod;
+    private String durationPeriod;
     @XmlAttribute(name = "PriceBasis")
-    protected PricingType priceBasis;
+    private PricingType priceBasis;
     @XmlAttribute(name = "BasePeriodRPHs")
-    protected List<String> basePeriodRPHs;
+    private List<String> basePeriodRPHs;
     @XmlAttribute(name = "GuidePriceIndicator")
-    protected Boolean guidePriceIndicator;
+    private Boolean guidePriceIndicator;
     @XmlAttribute(name = "MaximumPeriod")
-    protected String maximumPeriod;
+    private String maximumPeriod;
 
     /**
      * Gets the value of the price property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the price property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPrice().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PkgPriceType }
-     * 
-     * 
      */
     public List<PkgPriceType> getPrice() {
         if (price == null) {
-            price = new ArrayList<PkgPriceType>();
+            price = new ArrayList<>();
         }
         return this.price;
     }
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -138,11 +127,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -150,11 +137,9 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the category property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCategory() {
         return category;
@@ -162,11 +147,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the category property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCategory(String value) {
         this.category = value;
@@ -174,11 +157,9 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -186,11 +167,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -198,11 +177,9 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the durationPeriod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDurationPeriod() {
         return durationPeriod;
@@ -210,11 +187,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the durationPeriod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDurationPeriod(String value) {
         this.durationPeriod = value;
@@ -222,11 +197,9 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the priceBasis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PricingType }
-     *     
+     *
+     * @return possible object is
+     * {@link PricingType }
      */
     public PricingType getPriceBasis() {
         return priceBasis;
@@ -234,11 +207,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the priceBasis property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PricingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PricingType }
      */
     public void setPriceBasis(PricingType value) {
         this.priceBasis = value;
@@ -246,40 +217,36 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the basePeriodRPHs property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the basePeriodRPHs property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBasePeriodRPHs().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getBasePeriodRPHs() {
         if (basePeriodRPHs == null) {
-            basePeriodRPHs = new ArrayList<String>();
+            basePeriodRPHs = new ArrayList<>();
         }
         return this.basePeriodRPHs;
     }
 
     /**
      * Gets the value of the guidePriceIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isGuidePriceIndicator() {
         return guidePriceIndicator;
@@ -287,11 +254,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the guidePriceIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setGuidePriceIndicator(Boolean value) {
         this.guidePriceIndicator = value;
@@ -299,11 +264,9 @@ public class PeriodPriceType
 
     /**
      * Gets the value of the maximumPeriod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMaximumPeriod() {
         return maximumPeriod;
@@ -311,11 +274,9 @@ public class PeriodPriceType
 
     /**
      * Sets the value of the maximumPeriod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMaximumPeriod(String value) {
         this.maximumPeriod = value;

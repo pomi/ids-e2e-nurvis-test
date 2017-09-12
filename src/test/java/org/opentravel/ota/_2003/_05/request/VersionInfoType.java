@@ -8,22 +8,18 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Holds version informations about the search system's components, dependencies and resources.
- *             
- * 
+ * <p>
+ * <p>
  * <p>Java class for VersionInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="VersionInfoType">
  *   &lt;complexContent>
@@ -37,33 +33,29 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VersionInfoType")
 public class VersionInfoType {
 
     @XmlAttribute(name = "SolrPluginVersion")
-    protected String solrPluginVersion;
+    private String solrPluginVersion;
     @XmlAttribute(name = "SolrIndexModificationDate")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar solrIndexModificationDate;
+    private XMLGregorianCalendar solrIndexModificationDate;
     @XmlAttribute(name = "MulePackageVersion")
-    protected String mulePackageVersion;
+    private String mulePackageVersion;
     @XmlAttribute(name = "SapiVersion")
-    protected String sapiVersion;
+    private String sapiVersion;
     @XmlAttribute(name = "ContentApiUrl")
     @XmlSchemaType(name = "anyURI")
-    protected String contentApiUrl;
+    private String contentApiUrl;
 
     /**
      * Gets the value of the solrPluginVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSolrPluginVersion() {
         return solrPluginVersion;
@@ -71,11 +63,9 @@ public class VersionInfoType {
 
     /**
      * Sets the value of the solrPluginVersion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSolrPluginVersion(String value) {
         this.solrPluginVersion = value;
@@ -83,11 +73,9 @@ public class VersionInfoType {
 
     /**
      * Gets the value of the solrIndexModificationDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getSolrIndexModificationDate() {
         return solrIndexModificationDate;
@@ -95,11 +83,9 @@ public class VersionInfoType {
 
     /**
      * Sets the value of the solrIndexModificationDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setSolrIndexModificationDate(XMLGregorianCalendar value) {
         this.solrIndexModificationDate = value;
@@ -107,11 +93,9 @@ public class VersionInfoType {
 
     /**
      * Gets the value of the mulePackageVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMulePackageVersion() {
         return mulePackageVersion;
@@ -119,11 +103,9 @@ public class VersionInfoType {
 
     /**
      * Sets the value of the mulePackageVersion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMulePackageVersion(String value) {
         this.mulePackageVersion = value;
@@ -131,11 +113,9 @@ public class VersionInfoType {
 
     /**
      * Gets the value of the sapiVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSapiVersion() {
         return sapiVersion;
@@ -143,11 +123,9 @@ public class VersionInfoType {
 
     /**
      * Sets the value of the sapiVersion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSapiVersion(String value) {
         this.sapiVersion = value;
@@ -155,11 +133,9 @@ public class VersionInfoType {
 
     /**
      * Gets the value of the contentApiUrl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getContentApiUrl() {
         return contentApiUrl;
@@ -167,11 +143,9 @@ public class VersionInfoType {
 
     /**
      * Sets the value of the contentApiUrl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setContentApiUrl(String value) {
         this.contentApiUrl = value;

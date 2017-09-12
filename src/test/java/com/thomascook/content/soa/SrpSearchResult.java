@@ -8,20 +8,17 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import com.thomascook.content.roomcontent.RoomsType;
 import com.thomascook.content.soa.srpcontent.SrpContentItemType;
+
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -33,28 +30,23 @@ import com.thomascook.content.soa.srpcontent.SrpContentItemType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "rooms"
+        "rooms"
 })
 @XmlRootElement(name = "SrpSearchResult")
 public class SrpSearchResult
-    extends SrpContentItemType
-{
+        extends SrpContentItemType {
 
     @XmlElement(name = "Rooms", namespace = "http://www.thomascook.com/content/roomContent")
-    protected RoomsType rooms;
+    private RoomsType rooms;
 
     /**
      * Gets the value of the rooms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RoomsType }
-     *     
+     *
+     * @return possible object is
+     * {@link RoomsType }
      */
     public RoomsType getRooms() {
         return rooms;
@@ -62,11 +54,9 @@ public class SrpSearchResult
 
     /**
      * Sets the value of the rooms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RoomsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RoomsType }
      */
     public void setRooms(RoomsType value) {
         this.rooms = value;

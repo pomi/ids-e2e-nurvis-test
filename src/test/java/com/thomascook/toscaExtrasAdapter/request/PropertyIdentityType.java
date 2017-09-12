@@ -8,21 +8,16 @@
 
 package com.thomascook.toscaExtrasAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Full name or description plus codes for a property.
- * 
+ * <p>
  * <p>Java class for PropertyIdentityType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PropertyIdentityType">
  *   &lt;simpleContent>
@@ -34,48 +29,44 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PropertyIdentityType", propOrder = {
-    "value"
+        "value"
 })
 public class PropertyIdentityType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "PropertyClassType")
-    protected String propertyClassType;
+    private String propertyClassType;
     @XmlAttribute(name = "ContentURL")
     @XmlSchemaType(name = "anyURI")
-    protected String contentURL;
+    private String contentURL;
     @XmlAttribute(name = "ChainCode")
-    protected String chainCode;
+    private String chainCode;
     @XmlAttribute(name = "BrandCode")
-    protected String brandCode;
+    private String brandCode;
     @XmlAttribute(name = "HotelCode")
-    protected String hotelCode;
+    private String hotelCode;
     @XmlAttribute(name = "HotelCityCode")
-    protected String hotelCityCode;
+    private String hotelCityCode;
     @XmlAttribute(name = "HotelName")
-    protected String hotelName;
+    private String hotelName;
     @XmlAttribute(name = "HotelCodeContext")
-    protected String hotelCodeContext;
+    private String hotelCodeContext;
     @XmlAttribute(name = "ChainName")
-    protected String chainName;
+    private String chainName;
     @XmlAttribute(name = "BrandName")
-    protected String brandName;
+    private String brandName;
     @XmlAttribute(name = "AreaID")
-    protected String areaID;
+    private String areaID;
 
     /**
      * Used for Character Strings, length 0 to 128
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -83,11 +74,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -95,11 +84,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the propertyClassType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPropertyClassType() {
         return propertyClassType;
@@ -107,11 +94,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the propertyClassType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPropertyClassType(String value) {
         this.propertyClassType = value;
@@ -119,11 +104,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the contentURL property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getContentURL() {
         return contentURL;
@@ -131,11 +114,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the contentURL property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setContentURL(String value) {
         this.contentURL = value;
@@ -143,11 +124,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the chainCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChainCode() {
         return chainCode;
@@ -155,11 +134,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the chainCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChainCode(String value) {
         this.chainCode = value;
@@ -167,11 +144,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the brandCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandCode() {
         return brandCode;
@@ -179,11 +154,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the brandCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -191,11 +164,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the hotelCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelCode() {
         return hotelCode;
@@ -203,11 +174,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the hotelCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelCode(String value) {
         this.hotelCode = value;
@@ -215,11 +184,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the hotelCityCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelCityCode() {
         return hotelCityCode;
@@ -227,11 +194,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the hotelCityCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelCityCode(String value) {
         this.hotelCityCode = value;
@@ -239,11 +204,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the hotelName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelName() {
         return hotelName;
@@ -251,11 +214,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the hotelName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelName(String value) {
         this.hotelName = value;
@@ -263,11 +224,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the hotelCodeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelCodeContext() {
         return hotelCodeContext;
@@ -275,11 +234,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the hotelCodeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelCodeContext(String value) {
         this.hotelCodeContext = value;
@@ -287,11 +244,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the chainName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChainName() {
         return chainName;
@@ -299,11 +254,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the chainName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChainName(String value) {
         this.chainName = value;
@@ -311,11 +264,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the brandName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandName() {
         return brandName;
@@ -323,11 +274,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the brandName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandName(String value) {
         this.brandName = value;
@@ -335,11 +284,9 @@ public class PropertyIdentityType {
 
     /**
      * Gets the value of the areaID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAreaID() {
         return areaID;
@@ -347,11 +294,9 @@ public class PropertyIdentityType {
 
     /**
      * Sets the value of the areaID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAreaID(String value) {
         this.areaID = value;

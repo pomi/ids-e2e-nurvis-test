@@ -8,26 +8,21 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Applicable tax element.  This element allows for both percentages and flat amounts. If one field is used, the other should be zero since logically, taxes should be calculated in only one of the two ways.
- * 
+ * <p>
  * <p>Java class for TaxType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TaxType">
  *   &lt;complexContent>
@@ -42,89 +37,83 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TaxType", propOrder = {
-    "taxDescription"
+        "taxDescription"
 })
 public class TaxType {
 
     @XmlElement(name = "TaxDescription")
-    protected List<ParagraphType> taxDescription;
+    private List<ParagraphType> taxDescription;
     @XmlAttribute(name = "Type")
-    protected AmountDeterminationType type;
+    private AmountDeterminationType type;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "Percent")
-    protected BigDecimal percent;
+    private BigDecimal percent;
     @XmlAttribute(name = "Amount")
-    protected BigDecimal amount;
+    private BigDecimal amount;
     @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
+    private String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    private BigInteger decimalPlaces;
     @XmlAttribute(name = "ChargeUnit")
-    protected String chargeUnit;
+    private String chargeUnit;
     @XmlAttribute(name = "ChargeFrequency")
-    protected String chargeFrequency;
+    private String chargeFrequency;
     @XmlAttribute(name = "ChargeUnitExempt")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger chargeUnitExempt;
+    private BigInteger chargeUnitExempt;
     @XmlAttribute(name = "ChargeFrequencyExempt")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger chargeFrequencyExempt;
+    private BigInteger chargeFrequencyExempt;
     @XmlAttribute(name = "MaxChargeUnitApplies")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger maxChargeUnitApplies;
+    private BigInteger maxChargeUnitApplies;
     @XmlAttribute(name = "MaxChargeFrequencyApplies")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger maxChargeFrequencyApplies;
+    private BigInteger maxChargeFrequencyApplies;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
+    private XMLGregorianCalendar effectiveDate;
     @XmlAttribute(name = "ExpireDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
+    private XMLGregorianCalendar expireDate;
 
     /**
      * Gets the value of the taxDescription property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the taxDescription property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTaxDescription().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ParagraphType }
-     * 
-     * 
      */
     public List<ParagraphType> getTaxDescription() {
         if (taxDescription == null) {
-            taxDescription = new ArrayList<ParagraphType>();
+            taxDescription = new ArrayList<>();
         }
         return this.taxDescription;
     }
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AmountDeterminationType }
-     *     
+     *
+     * @return possible object is
+     * {@link AmountDeterminationType }
      */
     public AmountDeterminationType getType() {
         return type;
@@ -132,11 +121,9 @@ public class TaxType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AmountDeterminationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AmountDeterminationType }
      */
     public void setType(AmountDeterminationType value) {
         this.type = value;
@@ -144,11 +131,9 @@ public class TaxType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -156,11 +141,9 @@ public class TaxType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -168,11 +151,9 @@ public class TaxType {
 
     /**
      * Gets the value of the percent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getPercent() {
         return percent;
@@ -180,11 +161,9 @@ public class TaxType {
 
     /**
      * Sets the value of the percent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setPercent(BigDecimal value) {
         this.percent = value;
@@ -192,11 +171,9 @@ public class TaxType {
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getAmount() {
         return amount;
@@ -204,11 +181,9 @@ public class TaxType {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setAmount(BigDecimal value) {
         this.amount = value;
@@ -216,11 +191,9 @@ public class TaxType {
 
     /**
      * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -228,11 +201,9 @@ public class TaxType {
 
     /**
      * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -240,11 +211,9 @@ public class TaxType {
 
     /**
      * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -252,11 +221,9 @@ public class TaxType {
 
     /**
      * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
@@ -264,11 +231,9 @@ public class TaxType {
 
     /**
      * Gets the value of the chargeUnit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChargeUnit() {
         return chargeUnit;
@@ -276,11 +241,9 @@ public class TaxType {
 
     /**
      * Sets the value of the chargeUnit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChargeUnit(String value) {
         this.chargeUnit = value;
@@ -288,11 +251,9 @@ public class TaxType {
 
     /**
      * Gets the value of the chargeFrequency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChargeFrequency() {
         return chargeFrequency;
@@ -300,11 +261,9 @@ public class TaxType {
 
     /**
      * Sets the value of the chargeFrequency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChargeFrequency(String value) {
         this.chargeFrequency = value;
@@ -312,11 +271,9 @@ public class TaxType {
 
     /**
      * Gets the value of the chargeUnitExempt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getChargeUnitExempt() {
         return chargeUnitExempt;
@@ -324,11 +281,9 @@ public class TaxType {
 
     /**
      * Sets the value of the chargeUnitExempt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setChargeUnitExempt(BigInteger value) {
         this.chargeUnitExempt = value;
@@ -336,11 +291,9 @@ public class TaxType {
 
     /**
      * Gets the value of the chargeFrequencyExempt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getChargeFrequencyExempt() {
         return chargeFrequencyExempt;
@@ -348,11 +301,9 @@ public class TaxType {
 
     /**
      * Sets the value of the chargeFrequencyExempt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setChargeFrequencyExempt(BigInteger value) {
         this.chargeFrequencyExempt = value;
@@ -360,11 +311,9 @@ public class TaxType {
 
     /**
      * Gets the value of the maxChargeUnitApplies property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMaxChargeUnitApplies() {
         return maxChargeUnitApplies;
@@ -372,11 +321,9 @@ public class TaxType {
 
     /**
      * Sets the value of the maxChargeUnitApplies property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMaxChargeUnitApplies(BigInteger value) {
         this.maxChargeUnitApplies = value;
@@ -384,11 +331,9 @@ public class TaxType {
 
     /**
      * Gets the value of the maxChargeFrequencyApplies property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMaxChargeFrequencyApplies() {
         return maxChargeFrequencyApplies;
@@ -396,11 +341,9 @@ public class TaxType {
 
     /**
      * Sets the value of the maxChargeFrequencyApplies property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMaxChargeFrequencyApplies(BigInteger value) {
         this.maxChargeFrequencyApplies = value;
@@ -408,11 +351,9 @@ public class TaxType {
 
     /**
      * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getEffectiveDate() {
         return effectiveDate;
@@ -420,11 +361,9 @@ public class TaxType {
 
     /**
      * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setEffectiveDate(XMLGregorianCalendar value) {
         this.effectiveDate = value;
@@ -432,11 +371,9 @@ public class TaxType {
 
     /**
      * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getExpireDate() {
         return expireDate;
@@ -444,11 +381,9 @@ public class TaxType {
 
     /**
      * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setExpireDate(XMLGregorianCalendar value) {
         this.expireDate = value;

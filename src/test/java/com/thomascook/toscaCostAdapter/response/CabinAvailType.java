@@ -8,23 +8,19 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Identifies a section of an aircraft, possibly providing extra services.
- * 
+ * <p>
  * <p>Java class for CabinAvailType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CabinAvailType">
  *   &lt;complexContent>
@@ -47,63 +43,57 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CabinAvailType", propOrder = {
-    "seat",
-    "baggageAllowance"
+        "seat",
+        "baggageAllowance"
 })
 public class CabinAvailType {
 
     @XmlElement(name = "Seat", required = true)
-    protected List<SeatAvailabilityType> seat;
+    private List<SeatAvailabilityType> seat;
     @XmlElement(name = "BaggageAllowance")
-    protected BaggageAllowance baggageAllowance;
+    private BaggageAllowance baggageAllowance;
     @XmlAttribute(name = "Meal")
-    protected String meal;
+    private String meal;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "Name")
-    protected String name;
+    private String name;
 
     /**
      * Gets the value of the seat property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the seat property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSeat().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SeatAvailabilityType }
-     * 
-     * 
      */
     public List<SeatAvailabilityType> getSeat() {
         if (seat == null) {
-            seat = new ArrayList<SeatAvailabilityType>();
+            seat = new ArrayList<>();
         }
         return this.seat;
     }
 
     /**
      * Gets the value of the baggageAllowance property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BaggageAllowance }
-     *     
+     *
+     * @return possible object is
+     * {@link BaggageAllowance }
      */
     public BaggageAllowance getBaggageAllowance() {
         return baggageAllowance;
@@ -111,11 +101,9 @@ public class CabinAvailType {
 
     /**
      * Sets the value of the baggageAllowance property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BaggageAllowance }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BaggageAllowance }
      */
     public void setBaggageAllowance(BaggageAllowance value) {
         this.baggageAllowance = value;
@@ -123,11 +111,9 @@ public class CabinAvailType {
 
     /**
      * Gets the value of the meal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMeal() {
         return meal;
@@ -135,11 +121,9 @@ public class CabinAvailType {
 
     /**
      * Sets the value of the meal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMeal(String value) {
         this.meal = value;
@@ -147,11 +131,9 @@ public class CabinAvailType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -159,11 +141,9 @@ public class CabinAvailType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -171,11 +151,9 @@ public class CabinAvailType {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -183,11 +161,9 @@ public class CabinAvailType {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -196,9 +172,9 @@ public class CabinAvailType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -208,27 +184,23 @@ public class CabinAvailType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class BaggageAllowance {
 
         @XmlAttribute(name = "UnitOfMeasureQuantity")
-        protected BigDecimal unitOfMeasureQuantity;
+        BigDecimal unitOfMeasureQuantity;
         @XmlAttribute(name = "UnitOfMeasure")
-        protected String unitOfMeasure;
+        String unitOfMeasure;
         @XmlAttribute(name = "UnitOfMeasureCode")
-        protected String unitOfMeasureCode;
+        String unitOfMeasureCode;
 
         /**
          * Gets the value of the unitOfMeasureQuantity property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getUnitOfMeasureQuantity() {
             return unitOfMeasureQuantity;
@@ -236,11 +208,9 @@ public class CabinAvailType {
 
         /**
          * Sets the value of the unitOfMeasureQuantity property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setUnitOfMeasureQuantity(BigDecimal value) {
             this.unitOfMeasureQuantity = value;
@@ -248,11 +218,9 @@ public class CabinAvailType {
 
         /**
          * Gets the value of the unitOfMeasure property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getUnitOfMeasure() {
             return unitOfMeasure;
@@ -260,11 +228,9 @@ public class CabinAvailType {
 
         /**
          * Sets the value of the unitOfMeasure property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setUnitOfMeasure(String value) {
             this.unitOfMeasure = value;
@@ -272,11 +238,9 @@ public class CabinAvailType {
 
         /**
          * Gets the value of the unitOfMeasureCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getUnitOfMeasureCode() {
             return unitOfMeasureCode;
@@ -284,11 +248,9 @@ public class CabinAvailType {
 
         /**
          * Sets the value of the unitOfMeasureCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setUnitOfMeasureCode(String value) {
             this.unitOfMeasureCode = value;

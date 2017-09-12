@@ -1,7 +1,6 @@
 package com.thomascook.ids.e2e.steps;
 
-import com.thomascook.Context;
-import com.thomascook.ids.e2e.Holder;
+import com.thomascook.Config;
 import com.thomascook.ids.e2e.tests.CreateBookingUK;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
@@ -11,64 +10,52 @@ import com.thomascook.toscaCostAdapter.request.OTAPkgCostRQ;
 import com.thomascook.toscaCostAdapter.response.OTAPkgCostRS;
 import com.thomascook.toscaExtrasAdapter.request.OTAPkgExtrasInfoRQ;
 import com.thomascook.toscaExtrasAdapter.response.OTAPkgExtrasInfoRS;
+import com.thomascook.utils.Holder;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java8.En;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.test.context.ContextConfiguration;
+import org.opentravel.ota._2003._05.response.HotelOfferType;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.IOException;
 
-@ContextConfiguration(classes = Context.class)
-public class CreateBookingForUKSteps implements En {
+class CreateBookingForUKSteps implements En {
 
-    @Autowired
-    private Holder holder;
-
-    @Value("${staging.uk.solr}")
-    String solrStaging;
-
-    @Value("${staging.uk.tosca}")
-    String toscaStaging;
+    private String toscaStaging;
 
     public CreateBookingForUKSteps() {
 
         Given("^I request packages in SOLR from (.*?) to (.*?) with passengers$", (String departureAirport, String destination, DataTable dataTable) -> {
-            String solr = "";
-            if (System.getProperty("env").equals("staging")) solr = solrStaging;
+            String solr = Config.get().getSolrUk();
             assert !solr.isEmpty() : "Solr endpoint is not set";
             try {
-                holder.setPassengers(dataTable);
-                holder.setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
-                assert !holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer().isEmpty() : "Hotel offers list is empty";
+                Holder.setPassengers(dataTable);
+                Holder.setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
+                assert !Holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer().isEmpty() : "Hotel offers list is empty";
             } catch (IOException | JAXBException | DatatypeConfigurationException e) {
                 e.printStackTrace();
             }
         });
 
         When("^I check availability in Tosca, and add extras, and check costs, and confirm package$", () -> {
-            String tosca = "";
-            if (System.getProperty("env").equals("staging")) tosca = toscaStaging;
+            String tosca = Config.get().getTosca();
             assert !tosca.isEmpty() : "Tosca endpoint is not set";
 
             int iteration = 1;
-            for (org.opentravel.ota._2003._05.response.HotelOfferType hotelOffer : holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer()) {
+            for (HotelOfferType hotelOffer : Holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer()) {
                 System.out.println("Iteration number " + iteration++);
                 try {
-                    OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, holder.getPassengers());
+                    OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, Holder.getPassengers());
                     String toscaAvailabilityRequestXML = CreateBookingUK.createToscaAvailabilityRequestXML(toscaAvailabilityRequest);
-                    assert !toscaAvailabilityRequestXML.equals("") : "Tosca availabilirty Request XML is empty";
-                    OTAPkgAvailRS toscaAvailabilityResponse = null;
-                    toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(toscaStaging, toscaAvailabilityRequestXML);
+                    assert !toscaAvailabilityRequestXML.equals("") : "Tosca availability Request XML is empty";
+                    OTAPkgAvailRS toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(toscaStaging, toscaAvailabilityRequestXML);
 
                     if (toscaAvailabilityResponse.getSuccess() == null && toscaAvailabilityResponse.getErrors() != null)
                         continue;
 
                     String toscaAvailabilityResponseXML = CreateBookingUK.createToscaAvailabilityResponseXML(toscaAvailabilityResponse);
-                    OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, holder.getPassengers());
+                    OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, Holder.getPassengers());
                     String toscaExtrasRequestXML = CreateBookingUK.createToscaExtrasRequestXML(toscaExtrasRequest);
                     OTAPkgExtrasInfoRS toscaExtrasResponse = CreateBookingUK.getToscaExtrasResponse(toscaExtrasRequestXML, tosca);
 
@@ -90,7 +77,7 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgBookRQ toscaBookCommitRequest = CreateBookingUK.createToscaBookCommitRequest(toscaBookRequest, toscaBookResponse);
                     String toscaBookCommitRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookCommitRequest);
                     OTAPkgBookRS toscaBookCommitResponse = CreateBookingUK.getToscaBookResponse(toscaBookCommitRequestXML, tosca);
-                    if(toscaBookCommitResponse.getSuccess() == null) continue;
+                    if (toscaBookCommitResponse.getSuccess() == null) continue;
                     System.out.println(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
                 } catch (JAXBException | IOException | DatatypeConfigurationException e) {
                     e.printStackTrace();

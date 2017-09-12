@@ -8,18 +8,14 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for BasePackage complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="BasePackage">
  *   &lt;complexContent>
@@ -29,30 +25,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BasePackage")
 @XmlSeeAlso({
-    EcwNurvis.class,
-    H4UHotel.class,
-    FlexiTripHotel.class,
-    TOSPackage.class,
-    GIATAPackage.class
+        EcwNurvis.class,
+        H4UHotel.class,
+        FlexiTripHotel.class,
+        TOSPackage.class,
+        GIATAPackage.class
 })
 public class BasePackage {
 
     @XmlAttribute(name = "CorrelationId", required = true)
-    protected String correlationId;
+    private String correlationId;
 
     /**
      * Gets the value of the correlationId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCorrelationId() {
         return correlationId;
@@ -60,11 +52,9 @@ public class BasePackage {
 
     /**
      * Sets the value of the correlationId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCorrelationId(String value) {
         this.correlationId = value;

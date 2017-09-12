@@ -16,22 +16,22 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the desired
- *                 subset of the package result list. Used primarily to support
- *                 pagination. It is specified as
- *                 a range within the result list with
- *                 the index of the first and last package that should be included in
- *                 the response. Packages in the result list are ordered
- *                 based on
- *                 SortResults element and are indexed from 0. This filtering will not
- *                 affect facet calculation (packages filtered out are still considered
- *                 in the
- *                 facet counts).
- *             
- * 
+ * subset of the package result list. Used primarily to support
+ * pagination. It is specified as
+ * a range within the result list with
+ * the index of the first and last package that should be included in
+ * the response. Packages in the result list are ordered
+ * based on
+ * SortResults element and are indexed from 0. This filtering will not
+ * affect facet calculation (packages filtered out are still considered
+ * in the
+ * facet counts).
+ * <p>
+ * <p>
  * <p>Java class for FilterResults_Type complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="FilterResults_Type">
  *   &lt;complexContent>
@@ -42,25 +42,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FilterResults_Type")
 public class FilterResultsType {
 
     @XmlAttribute(name = "start", required = true)
-    protected String start;
+    private String start;
     @XmlAttribute(name = "end")
-    protected String end;
+    private String end;
 
     /**
      * Gets the value of the start property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStart() {
         return start;
@@ -68,11 +64,9 @@ public class FilterResultsType {
 
     /**
      * Sets the value of the start property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStart(String value) {
         this.start = value;
@@ -80,11 +74,9 @@ public class FilterResultsType {
 
     /**
      * Gets the value of the end property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnd() {
         return end;
@@ -92,11 +84,9 @@ public class FilterResultsType {
 
     /**
      * Sets the value of the end property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnd(String value) {
         this.end = value;

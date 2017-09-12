@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DateTimeStatus.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "DateTimeStatus")
 @XmlEnum
@@ -34,29 +33,27 @@ public enum DateTimeStatus {
 
     /**
      * Date with missing time
-     *                         value.
-     *                     
-     * 
+     * value.
      */
     @XmlEnumValue("TimeMissing")
-    TIME_MISSING("TimeMissing");
+    TIME_MISSING();
     private final String value;
 
-    DateTimeStatus(String v) {
-        value = v;
-    }
-
-    public String value() {
-        return value;
+    DateTimeStatus() {
+        value = "TimeMissing";
     }
 
     public static DateTimeStatus fromValue(String v) {
-        for (DateTimeStatus c: DateTimeStatus.values()) {
+        for (DateTimeStatus c : DateTimeStatus.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

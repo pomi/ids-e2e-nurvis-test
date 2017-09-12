@@ -8,22 +8,17 @@
 
 package com.thomascook.toscaExtrasAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Details of seat availability by class with optional charge information.
- * 
+ * <p>
  * <p>Java class for SeatAvailabilityType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SeatAvailabilityType">
  *   &lt;complexContent>
@@ -36,35 +31,31 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SeatAvailabilityType", propOrder = {
-    "charges"
+        "charges"
 })
 public class SeatAvailabilityType {
 
     @XmlElement(name = "Charges")
-    protected ChargesType charges;
+    private ChargesType charges;
     @XmlAttribute(name = "URI")
     @XmlSchemaType(name = "anyURI")
-    protected String uri;
+    private String uri;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
+    private String codeContext;
     @XmlAttribute(name = "Quantity")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger quantity;
+    private BigInteger quantity;
 
     /**
      * Gets the value of the charges property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChargesType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChargesType }
      */
     public ChargesType getCharges() {
         return charges;
@@ -72,11 +63,9 @@ public class SeatAvailabilityType {
 
     /**
      * Sets the value of the charges property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChargesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChargesType }
      */
     public void setCharges(ChargesType value) {
         this.charges = value;
@@ -84,11 +73,9 @@ public class SeatAvailabilityType {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -96,11 +83,9 @@ public class SeatAvailabilityType {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;
@@ -108,11 +93,9 @@ public class SeatAvailabilityType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -120,11 +103,9 @@ public class SeatAvailabilityType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -132,11 +113,9 @@ public class SeatAvailabilityType {
 
     /**
      * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodeContext() {
         return codeContext;
@@ -144,11 +123,9 @@ public class SeatAvailabilityType {
 
     /**
      * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodeContext(String value) {
         this.codeContext = value;
@@ -156,11 +133,9 @@ public class SeatAvailabilityType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -168,11 +143,9 @@ public class SeatAvailabilityType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;

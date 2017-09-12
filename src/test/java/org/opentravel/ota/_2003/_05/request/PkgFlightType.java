@@ -8,23 +8,18 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Details of a flight.
- *             
- * 
+ * <p>
+ * <p>
  * <p>Java class for PkgFlightType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgFlightType">
  *   &lt;complexContent>
@@ -46,48 +41,44 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgFlightType", propOrder = {
-    "departureAirport",
-    "arrivalAirport"
+        "departureAirport",
+        "arrivalAirport"
 })
 public class PkgFlightType {
 
     @XmlElement(name = "DepartureAirport", required = true)
-    protected LocationType departureAirport;
+    private LocationType departureAirport;
     @XmlElement(name = "ArrivalAirport", required = true)
-    protected LocationType arrivalAirport;
+    private LocationType arrivalAirport;
     @XmlAttribute(name = "FlightCode")
-    protected String flightCode;
+    private String flightCode;
     @XmlAttribute(name = "AirplaneCode")
-    protected String airplaneCode;
+    private String airplaneCode;
     @XmlAttribute(name = "Airline")
-    protected String airline;
+    private String airline;
     @XmlAttribute(name = "ServiceClass")
-    protected String serviceClass;
+    private String serviceClass;
     @XmlAttribute(name = "DepartureTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departureTime;
+    private XMLGregorianCalendar departureTime;
     @XmlAttribute(name = "DepartureTimeStatus")
-    protected DateTimeStatus departureTimeStatus;
+    private DateTimeStatus departureTimeStatus;
     @XmlAttribute(name = "ArrivalTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrivalTime;
+    private XMLGregorianCalendar arrivalTime;
     @XmlAttribute(name = "ArrivalTimeStatus")
-    protected DateTimeStatus arrivalTimeStatus;
+    private DateTimeStatus arrivalTimeStatus;
     @XmlAttribute(name = "FlightConnection")
-    protected String flightConnection;
+    private String flightConnection;
 
     /**
      * Gets the value of the departureAirport property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link LocationType }
-     *     
+     *
+     * @return possible object is
+     * {@link LocationType }
      */
     public LocationType getDepartureAirport() {
         return departureAirport;
@@ -95,11 +86,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the departureAirport property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link LocationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link LocationType }
      */
     public void setDepartureAirport(LocationType value) {
         this.departureAirport = value;
@@ -107,11 +96,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the arrivalAirport property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link LocationType }
-     *     
+     *
+     * @return possible object is
+     * {@link LocationType }
      */
     public LocationType getArrivalAirport() {
         return arrivalAirport;
@@ -119,11 +106,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the arrivalAirport property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link LocationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link LocationType }
      */
     public void setArrivalAirport(LocationType value) {
         this.arrivalAirport = value;
@@ -131,11 +116,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the flightCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightCode() {
         return flightCode;
@@ -143,11 +126,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the flightCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightCode(String value) {
         this.flightCode = value;
@@ -155,11 +136,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the airplaneCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAirplaneCode() {
         return airplaneCode;
@@ -167,11 +146,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the airplaneCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAirplaneCode(String value) {
         this.airplaneCode = value;
@@ -179,11 +156,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the airline property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAirline() {
         return airline;
@@ -191,11 +166,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the airline property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAirline(String value) {
         this.airline = value;
@@ -203,11 +176,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the serviceClass property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getServiceClass() {
         return serviceClass;
@@ -215,11 +186,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the serviceClass property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setServiceClass(String value) {
         this.serviceClass = value;
@@ -227,11 +196,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the departureTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDepartureTime() {
         return departureTime;
@@ -239,11 +206,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the departureTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDepartureTime(XMLGregorianCalendar value) {
         this.departureTime = value;
@@ -251,11 +216,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the departureTimeStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DateTimeStatus }
-     *     
+     *
+     * @return possible object is
+     * {@link DateTimeStatus }
      */
     public DateTimeStatus getDepartureTimeStatus() {
         return departureTimeStatus;
@@ -263,11 +226,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the departureTimeStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DateTimeStatus }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DateTimeStatus }
      */
     public void setDepartureTimeStatus(DateTimeStatus value) {
         this.departureTimeStatus = value;
@@ -275,11 +236,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the arrivalTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getArrivalTime() {
         return arrivalTime;
@@ -287,11 +246,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the arrivalTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setArrivalTime(XMLGregorianCalendar value) {
         this.arrivalTime = value;
@@ -299,11 +256,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the arrivalTimeStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DateTimeStatus }
-     *     
+     *
+     * @return possible object is
+     * {@link DateTimeStatus }
      */
     public DateTimeStatus getArrivalTimeStatus() {
         return arrivalTimeStatus;
@@ -311,11 +266,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the arrivalTimeStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DateTimeStatus }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DateTimeStatus }
      */
     public void setArrivalTimeStatus(DateTimeStatus value) {
         this.arrivalTimeStatus = value;
@@ -323,11 +276,9 @@ public class PkgFlightType {
 
     /**
      * Gets the value of the flightConnection property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightConnection() {
         return flightConnection;
@@ -335,11 +286,9 @@ public class PkgFlightType {
 
     /**
      * Sets the value of the flightConnection property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightConnection(String value) {
         this.flightConnection = value;

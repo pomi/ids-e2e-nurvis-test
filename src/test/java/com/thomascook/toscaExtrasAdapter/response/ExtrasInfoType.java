@@ -8,26 +8,21 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * Describes an optional service which is not included in the standard package but may be booked in addition.
- * 
+ * <p>
  * <p>Java class for ExtrasInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ExtrasInfoType">
  *   &lt;complexContent>
@@ -113,48 +108,43 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtrasInfoType", propOrder = {
-    "criteria",
-    "periods",
-    "additionalInfoPrompt",
-    "parentExtras",
-    "extraLocationInfo"
+        "criteria",
+        "periods",
+        "additionalInfoPrompt",
+        "parentExtras",
+        "extraLocationInfo"
 })
 public class ExtrasInfoType
-    extends ExtrasCoreType
-{
+        extends ExtrasCoreType {
 
     @XmlElement(name = "Criteria")
-    protected Criteria criteria;
+    private Criteria criteria;
     @XmlElement(name = "Periods")
-    protected Periods periods;
+    private Periods periods;
     @XmlElement(name = "AdditionalInfoPrompt")
-    protected List<AdditionalInfoPrompt> additionalInfoPrompt;
+    private List<AdditionalInfoPrompt> additionalInfoPrompt;
     @XmlElement(name = "ParentExtras")
-    protected ParentExtras parentExtras;
+    private ParentExtras parentExtras;
     @XmlElement(name = "ExtraLocationInfo")
-    protected List<ExtraLocationInfo> extraLocationInfo;
+    private List<ExtraLocationInfo> extraLocationInfo;
     @XmlAttribute(name = "ApplyTo")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String applyTo;
+    private String applyTo;
     @XmlAttribute(name = "SelectionType")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String selectionType;
+    private String selectionType;
     @XmlAttribute(name = "RuleCode")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String ruleCode;
+    private String ruleCode;
 
     /**
      * Gets the value of the criteria property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Criteria }
-     *     
+     *
+     * @return possible object is
+     * {@link Criteria }
      */
     public Criteria getCriteria() {
         return criteria;
@@ -162,11 +152,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the criteria property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Criteria }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Criteria }
      */
     public void setCriteria(Criteria value) {
         this.criteria = value;
@@ -174,11 +162,9 @@ public class ExtrasInfoType
 
     /**
      * Gets the value of the periods property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Periods }
-     *     
+     *
+     * @return possible object is
+     * {@link Periods }
      */
     public Periods getPeriods() {
         return periods;
@@ -186,11 +172,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the periods property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Periods }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Periods }
      */
     public void setPeriods(Periods value) {
         this.periods = value;
@@ -198,40 +182,36 @@ public class ExtrasInfoType
 
     /**
      * Gets the value of the additionalInfoPrompt property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the additionalInfoPrompt property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAdditionalInfoPrompt().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AdditionalInfoPrompt }
-     * 
-     * 
      */
     public List<AdditionalInfoPrompt> getAdditionalInfoPrompt() {
         if (additionalInfoPrompt == null) {
-            additionalInfoPrompt = new ArrayList<AdditionalInfoPrompt>();
+            additionalInfoPrompt = new ArrayList<>();
         }
         return this.additionalInfoPrompt;
     }
 
     /**
      * Gets the value of the parentExtras property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ParentExtras }
-     *     
+     *
+     * @return possible object is
+     * {@link ParentExtras }
      */
     public ParentExtras getParentExtras() {
         return parentExtras;
@@ -239,11 +219,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the parentExtras property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ParentExtras }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ParentExtras }
      */
     public void setParentExtras(ParentExtras value) {
         this.parentExtras = value;
@@ -251,40 +229,36 @@ public class ExtrasInfoType
 
     /**
      * Gets the value of the extraLocationInfo property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the extraLocationInfo property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getExtraLocationInfo().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ExtraLocationInfo }
-     * 
-     * 
      */
     public List<ExtraLocationInfo> getExtraLocationInfo() {
         if (extraLocationInfo == null) {
-            extraLocationInfo = new ArrayList<ExtraLocationInfo>();
+            extraLocationInfo = new ArrayList<>();
         }
         return this.extraLocationInfo;
     }
 
     /**
      * Gets the value of the applyTo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getApplyTo() {
         return applyTo;
@@ -292,11 +266,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the applyTo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setApplyTo(String value) {
         this.applyTo = value;
@@ -304,11 +276,9 @@ public class ExtrasInfoType
 
     /**
      * Gets the value of the selectionType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSelectionType() {
         return selectionType;
@@ -316,11 +286,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the selectionType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSelectionType(String value) {
         this.selectionType = value;
@@ -328,11 +296,9 @@ public class ExtrasInfoType
 
     /**
      * Gets the value of the ruleCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRuleCode() {
         return ruleCode;
@@ -340,11 +306,9 @@ public class ExtrasInfoType
 
     /**
      * Sets the value of the ruleCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRuleCode(String value) {
         this.ruleCode = value;
@@ -353,9 +317,9 @@ public class ExtrasInfoType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -366,25 +330,21 @@ public class ExtrasInfoType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class AdditionalInfoPrompt {
 
         @XmlAttribute(name = "Line1")
-        protected String line1;
+        String line1;
         @XmlAttribute(name = "Line2")
-        protected String line2;
+        String line2;
 
         /**
          * Gets the value of the line1 property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLine1() {
             return line1;
@@ -392,11 +352,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the line1 property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLine1(String value) {
             this.line1 = value;
@@ -404,11 +362,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the line2 property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLine2() {
             return line2;
@@ -416,11 +372,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the line2 property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLine2(String value) {
             this.line2 = value;
@@ -431,9 +385,9 @@ public class ExtrasInfoType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -450,8 +404,6 @@ public class ExtrasInfoType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -459,31 +411,29 @@ public class ExtrasInfoType
 
         @XmlAttribute(name = "MinimumAge")
         @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger minimumAge;
+        BigInteger minimumAge;
         @XmlAttribute(name = "MaximumAge")
         @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger maximumAge;
+        BigInteger maximumAge;
         @XmlAttribute(name = "YearsExperience")
         @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger yearsExperience;
+        BigInteger yearsExperience;
         @XmlAttribute(name = "DateRequired")
-        protected Boolean dateRequired;
+        Boolean dateRequired;
         @XmlAttribute(name = "DurationRequiredInd")
-        protected Boolean durationRequiredInd;
+        Boolean durationRequiredInd;
         @XmlAttribute(name = "StockControlledInd")
-        protected Boolean stockControlledInd;
+        Boolean stockControlledInd;
         @XmlAttribute(name = "MinimumOccupancy")
-        protected Integer minimumOccupancy;
+        Integer minimumOccupancy;
         @XmlAttribute(name = "MaximumOccupancy")
-        protected Integer maximumOccupancy;
+        Integer maximumOccupancy;
 
         /**
          * Gets the value of the minimumAge property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getMinimumAge() {
             return minimumAge;
@@ -491,11 +441,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the minimumAge property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setMinimumAge(BigInteger value) {
             this.minimumAge = value;
@@ -503,11 +451,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the maximumAge property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getMaximumAge() {
             return maximumAge;
@@ -515,11 +461,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the maximumAge property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setMaximumAge(BigInteger value) {
             this.maximumAge = value;
@@ -527,11 +471,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the yearsExperience property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getYearsExperience() {
             return yearsExperience;
@@ -539,11 +481,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the yearsExperience property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setYearsExperience(BigInteger value) {
             this.yearsExperience = value;
@@ -551,11 +491,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the dateRequired property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isDateRequired() {
             return dateRequired;
@@ -563,11 +501,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the dateRequired property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setDateRequired(Boolean value) {
             this.dateRequired = value;
@@ -575,11 +511,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the durationRequiredInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isDurationRequiredInd() {
             return durationRequiredInd;
@@ -587,11 +521,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the durationRequiredInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setDurationRequiredInd(Boolean value) {
             this.durationRequiredInd = value;
@@ -599,11 +531,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the stockControlledInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isStockControlledInd() {
             return stockControlledInd;
@@ -611,11 +541,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the stockControlledInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setStockControlledInd(Boolean value) {
             this.stockControlledInd = value;
@@ -623,11 +551,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the minimumOccupancy property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getMinimumOccupancy() {
             return minimumOccupancy;
@@ -635,11 +561,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the minimumOccupancy property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setMinimumOccupancy(Integer value) {
             this.minimumOccupancy = value;
@@ -647,11 +571,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the maximumOccupancy property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getMaximumOccupancy() {
             return maximumOccupancy;
@@ -659,11 +581,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the maximumOccupancy property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setMaximumOccupancy(Integer value) {
             this.maximumOccupancy = value;
@@ -674,9 +594,9 @@ public class ExtrasInfoType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -695,26 +615,22 @@ public class ExtrasInfoType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ExtraLocationInfo {
 
         @XmlAttribute(name = "Location")
-        protected String location;
+        String location;
         @XmlAttribute(name = "Type")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String type;
+        String type;
 
         /**
          * Gets the value of the location property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLocation() {
             return location;
@@ -722,11 +638,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the location property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLocation(String value) {
             this.location = value;
@@ -734,11 +648,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -746,11 +658,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -761,9 +671,9 @@ public class ExtrasInfoType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -774,58 +684,52 @@ public class ExtrasInfoType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ParentExtras {
 
         @XmlAttribute(name = "ListOfParentRPH")
-        protected List<String> listOfParentRPH;
+        List<String> listOfParentRPH;
         @XmlAttribute(name = "SelectionType")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String selectionType;
+        String selectionType;
         @XmlAttribute(name = "RuleCode")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String ruleCode;
+        String ruleCode;
 
         /**
          * Gets the value of the listOfParentRPH property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the listOfParentRPH property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getListOfParentRPH().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         * 
-         * 
          */
         public List<String> getListOfParentRPH() {
             if (listOfParentRPH == null) {
-                listOfParentRPH = new ArrayList<String>();
+                listOfParentRPH = new ArrayList<>();
             }
             return this.listOfParentRPH;
         }
 
         /**
          * Gets the value of the selectionType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSelectionType() {
             return selectionType;
@@ -833,11 +737,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the selectionType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSelectionType(String value) {
             this.selectionType = value;
@@ -845,11 +747,9 @@ public class ExtrasInfoType
 
         /**
          * Gets the value of the ruleCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRuleCode() {
             return ruleCode;
@@ -857,11 +757,9 @@ public class ExtrasInfoType
 
         /**
          * Sets the value of the ruleCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRuleCode(String value) {
             this.ruleCode = value;
@@ -872,9 +770,9 @@ public class ExtrasInfoType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -886,43 +784,39 @@ public class ExtrasInfoType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "period"
+            "period"
     })
     public static class Periods {
 
         @XmlElement(name = "Period", required = true)
-        protected List<PeriodPriceType> period;
+        List<PeriodPriceType> period;
 
         /**
          * Gets the value of the period property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the period property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPeriod().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PeriodPriceType }
-         * 
-         * 
          */
         public List<PeriodPriceType> getPeriod() {
             if (period == null) {
-                period = new ArrayList<PeriodPriceType>();
+                period = new ArrayList<>();
             }
             return this.period;
         }

@@ -15,34 +15,31 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.content.bazaarvoice package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.content.bazaarvoice package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _BazaarvoiceOverview_QNAME = new QName("http://www.thomascook.com/content/bazaarvoice", "BazaarvoiceOverview");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.content.bazaarvoice
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link BazaarvoiceOverviewType }
-     * 
      */
     public BazaarvoiceOverviewType createBazaarvoiceOverviewType() {
         return new BazaarvoiceOverviewType();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BazaarVoice }
-     * 
      */
     public BazaarVoice createBazaarVoice() {
         return new BazaarVoice();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BazaarvoiceOverviewType.Properties }
-     * 
      */
     public BazaarvoiceOverviewType.Properties createBazaarvoiceOverviewTypeProperties() {
         return new BazaarvoiceOverviewType.Properties();
@@ -66,11 +61,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BazaarvoiceOverviewType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/bazaarvoice", name = "BazaarvoiceOverview")
     public JAXBElement<BazaarvoiceOverviewType> createBazaarvoiceOverview(BazaarvoiceOverviewType value) {
-        return new JAXBElement<BazaarvoiceOverviewType>(_BazaarvoiceOverview_QNAME, BazaarvoiceOverviewType.class, null, value);
+        return new JAXBElement<>(_BazaarvoiceOverview_QNAME, BazaarvoiceOverviewType.class, null, value);
     }
 
 }

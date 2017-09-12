@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * A full definition of a travel segment including supplemental price and facilities.
- * 
+ * <p>
  * <p>Java class for PkgTravelSegment complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgTravelSegment">
  *   &lt;complexContent>
@@ -32,25 +32,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgTravelSegment", propOrder = {
-    "airSegment"
+        "airSegment"
 })
 public class PkgTravelSegment {
 
     @XmlElement(name = "AirSegment", required = true)
-    protected PkgAirSegmentType airSegment;
+    private PkgAirSegmentType airSegment;
 
     /**
      * Gets the value of the airSegment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgAirSegmentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgAirSegmentType }
      */
     public PkgAirSegmentType getAirSegment() {
         return airSegment;
@@ -58,11 +54,9 @@ public class PkgTravelSegment {
 
     /**
      * Sets the value of the airSegment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgAirSegmentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgAirSegmentType }
      */
     public void setAirSegment(PkgAirSegmentType value) {
         this.airSegment = value;

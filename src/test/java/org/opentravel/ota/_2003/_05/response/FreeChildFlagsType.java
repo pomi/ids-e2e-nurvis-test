@@ -8,25 +8,21 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines group of free
- *                 child flags. Free child defines how the price of the child is
- *                 calculated for the package.
- *             
- * 
+ * child flags. Free child defines how the price of the child is
+ * calculated for the package.
+ * <p>
+ * <p>
  * <p>Java class for FreeChildFlagsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="FreeChildFlagsType">
  *   &lt;complexContent>
@@ -38,44 +34,40 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FreeChildFlagsType", propOrder = {
-    "freeChildFlag"
+        "freeChildFlag"
 })
 public class FreeChildFlagsType {
 
     @XmlElement(name = "FreeChildFlag", required = true)
     @XmlSchemaType(name = "string")
-    protected List<FreeChildFlagType> freeChildFlag;
+    private List<FreeChildFlagType> freeChildFlag;
 
     /**
      * Gets the value of the freeChildFlag property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the freeChildFlag property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFreeChildFlag().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FreeChildFlagType }
-     * 
-     * 
      */
     public List<FreeChildFlagType> getFreeChildFlag() {
         if (freeChildFlag == null) {
-            freeChildFlag = new ArrayList<FreeChildFlagType>();
+            freeChildFlag = new ArrayList<>();
         }
         return this.freeChildFlag;
     }

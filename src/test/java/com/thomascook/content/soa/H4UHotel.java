@@ -8,18 +8,14 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for H4UHotel complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="H4UHotel">
  *   &lt;complexContent>
@@ -30,30 +26,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "H4UHotel")
 @XmlSeeAlso({
-    Request.H4U.Hotel.class
+        Request.H4U.Hotel.class
 })
 public class H4UHotel
-    extends BasePackage
-{
+        extends BasePackage {
 
     @XmlAttribute(name = "Chain", required = true)
-    protected String chain;
+    private String chain;
     @XmlAttribute(name = "HotelID", required = true)
-    protected String hotelID;
+    private String hotelID;
 
     /**
      * Gets the value of the chain property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChain() {
         return chain;
@@ -61,11 +52,9 @@ public class H4UHotel
 
     /**
      * Sets the value of the chain property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChain(String value) {
         this.chain = value;
@@ -73,11 +62,9 @@ public class H4UHotel
 
     /**
      * Gets the value of the hotelID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelID() {
         return hotelID;
@@ -85,11 +72,9 @@ public class H4UHotel
 
     /**
      * Sets the value of the hotelID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelID(String value) {
         this.hotelID = value;

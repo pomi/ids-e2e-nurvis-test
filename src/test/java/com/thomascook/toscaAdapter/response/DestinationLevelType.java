@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DestinationLevelType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "DestinationLevelType")
 @XmlEnum
@@ -60,17 +59,17 @@ public enum DestinationLevelType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static DestinationLevelType fromValue(String v) {
-        for (DestinationLevelType c: DestinationLevelType.values()) {
+        for (DestinationLevelType c : DestinationLevelType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

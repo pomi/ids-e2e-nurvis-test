@@ -16,13 +16,13 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines a single
- *                 geographical position.
- *             
- * 
+ * geographical position.
+ * <p>
+ * <p>
  * <p>Java class for GeoLocationCoordinateType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GeoLocationCoordinateType">
  *   &lt;complexContent>
@@ -32,29 +32,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GeoLocationCoordinateType")
 public class GeoLocationCoordinateType {
 
     @XmlAttribute(name = "Latitude")
-    protected String latitude;
+    private String latitude;
     @XmlAttribute(name = "Longitude")
-    protected String longitude;
+    private String longitude;
     @XmlAttribute(name = "Altitude")
-    protected String altitude;
+    private String altitude;
     @XmlAttribute(name = "AltitudeUnitOfMeasureCode")
-    protected String altitudeUnitOfMeasureCode;
+    private String altitudeUnitOfMeasureCode;
 
     /**
      * Gets the value of the latitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLatitude() {
         return latitude;
@@ -62,11 +58,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Sets the value of the latitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLatitude(String value) {
         this.latitude = value;
@@ -74,11 +68,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Gets the value of the longitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLongitude() {
         return longitude;
@@ -86,11 +78,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Sets the value of the longitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLongitude(String value) {
         this.longitude = value;
@@ -98,11 +88,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Gets the value of the altitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltitude() {
         return altitude;
@@ -110,11 +98,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Sets the value of the altitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltitude(String value) {
         this.altitude = value;
@@ -122,11 +108,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Gets the value of the altitudeUnitOfMeasureCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltitudeUnitOfMeasureCode() {
         return altitudeUnitOfMeasureCode;
@@ -134,11 +118,9 @@ public class GeoLocationCoordinateType {
 
     /**
      * Sets the value of the altitudeUnitOfMeasureCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltitudeUnitOfMeasureCode(String value) {
         this.altitudeUnitOfMeasureCode = value;

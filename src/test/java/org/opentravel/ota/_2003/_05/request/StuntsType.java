@@ -8,24 +8,20 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines a group of stunt
- *                 flags.
- *             
- * 
+ * flags.
+ * <p>
+ * <p>
  * <p>Java class for StuntsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StuntsType">
  *   &lt;complexContent>
@@ -37,44 +33,40 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StuntsType", propOrder = {
-    "stunt"
+        "stunt"
 })
 public class StuntsType {
 
     @XmlElement(name = "Stunt", required = true)
     @XmlSchemaType(name = "string")
-    protected List<StuntFlag> stunt;
+    private List<StuntFlag> stunt;
 
     /**
      * Gets the value of the stunt property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the stunt property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStunt().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StuntFlag }
-     * 
-     * 
      */
     public List<StuntFlag> getStunt() {
         if (stunt == null) {
-            stunt = new ArrayList<StuntFlag>();
+            stunt = new ArrayList<>();
         }
         return this.stunt;
     }

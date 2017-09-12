@@ -8,23 +8,23 @@
 
 package org.opentravel.ota._2003._05.response;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Defines a list of concept
- *                 values.
- *             
- * 
+ * values.
+ * <p>
+ * <p>
  * <p>Java class for ConceptsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ConceptsType">
  *   &lt;complexContent>
@@ -36,43 +36,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConceptsType", propOrder = {
-    "concept"
+        "concept"
 })
 public class ConceptsType {
 
     @XmlElement(name = "Concept")
-    protected List<ConceptType> concept;
+    private List<ConceptType> concept;
 
     /**
      * Gets the value of the concept property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the concept property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getConcept().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ConceptType }
-     * 
-     * 
      */
     public List<ConceptType> getConcept() {
         if (concept == null) {
-            concept = new ArrayList<ConceptType>();
+            concept = new ArrayList<>();
         }
         return this.concept;
     }

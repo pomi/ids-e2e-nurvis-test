@@ -8,19 +8,14 @@
 
 package com.thomascook.content.zoover;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -33,28 +28,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "zooverOverview"
+        "zooverOverview"
 })
 @XmlRootElement(name = "Zoover")
 public class Zoover {
 
     @XmlElement(name = "ZooverOverview")
-    protected ZooverOverviewType zooverOverview;
+    private ZooverOverviewType zooverOverview;
     @XmlAttribute(name = "URI")
-    protected String uri;
+    private String uri;
 
     /**
      * Gets the value of the zooverOverview property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ZooverOverviewType }
-     *     
+     *
+     * @return possible object is
+     * {@link ZooverOverviewType }
      */
     public ZooverOverviewType getZooverOverview() {
         return zooverOverview;
@@ -62,11 +53,9 @@ public class Zoover {
 
     /**
      * Sets the value of the zooverOverview property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ZooverOverviewType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ZooverOverviewType }
      */
     public void setZooverOverview(ZooverOverviewType value) {
         this.zooverOverview = value;
@@ -74,11 +63,9 @@ public class Zoover {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -86,11 +73,9 @@ public class Zoover {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;

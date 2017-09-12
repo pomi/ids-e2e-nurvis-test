@@ -8,20 +8,16 @@
 
 package com.thomascook.content.highlightedfeature;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import com.thomascook.content.generichighlight.GenericHighlightType;
+
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -44,28 +40,24 @@ import com.thomascook.content.generichighlight.GenericHighlightType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "value"
+        "value"
 })
 @XmlRootElement(name = "HighlightedFeature")
 public class HighlightedFeature {
 
     @XmlElement(name = "Value")
-    protected Value value;
+    private Value value;
     @XmlAttribute(name = "URI")
-    protected String uri;
+    private String uri;
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Value }
-     *     
+     *
+     * @return possible object is
+     * {@link Value }
      */
     public Value getValue() {
         return value;
@@ -73,11 +65,9 @@ public class HighlightedFeature {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Value }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Value }
      */
     public void setValue(Value value) {
         this.value = value;
@@ -85,11 +75,9 @@ public class HighlightedFeature {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -97,11 +85,9 @@ public class HighlightedFeature {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;
@@ -110,9 +96,9 @@ public class HighlightedFeature {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -124,27 +110,22 @@ public class HighlightedFeature {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "description"
+            "description"
     })
     public static class Value
-        extends GenericHighlightType
-    {
+            extends GenericHighlightType {
 
         @XmlElement(name = "Description", required = true)
-        protected String description;
+        String description;
 
         /**
          * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDescription() {
             return description;
@@ -152,11 +133,9 @@ public class HighlightedFeature {
 
         /**
          * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDescription(String value) {
             this.description = value;

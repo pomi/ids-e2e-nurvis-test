@@ -8,21 +8,17 @@
 
 package com.thomascook.toscaAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.Duration;
 
 
 /**
  * Specifies a time window.
- * 
+ * <p>
  * <p>Java class for TimeInstantType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TimeInstantType">
  *   &lt;simpleContent>
@@ -34,31 +30,27 @@ import javax.xml.datatype.Duration;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TimeInstantType", propOrder = {
-    "value"
+        "value"
 })
 public class TimeInstantType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "WindowBefore")
-    protected Duration windowBefore;
+    private Duration windowBefore;
     @XmlAttribute(name = "WindowAfter")
-    protected Duration windowAfter;
+    private Duration windowAfter;
     @XmlAttribute(name = "CrossDateAllowedIndicator")
-    protected Boolean crossDateAllowedIndicator;
+    private Boolean crossDateAllowedIndicator;
 
     /**
      * A construct to validate either a date or a dateTime value.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -66,11 +58,9 @@ public class TimeInstantType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -78,11 +68,9 @@ public class TimeInstantType {
 
     /**
      * Gets the value of the windowBefore property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Duration }
-     *     
+     *
+     * @return possible object is
+     * {@link Duration }
      */
     public Duration getWindowBefore() {
         return windowBefore;
@@ -90,11 +78,9 @@ public class TimeInstantType {
 
     /**
      * Sets the value of the windowBefore property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Duration }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Duration }
      */
     public void setWindowBefore(Duration value) {
         this.windowBefore = value;
@@ -102,11 +88,9 @@ public class TimeInstantType {
 
     /**
      * Gets the value of the windowAfter property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Duration }
-     *     
+     *
+     * @return possible object is
+     * {@link Duration }
      */
     public Duration getWindowAfter() {
         return windowAfter;
@@ -114,11 +98,9 @@ public class TimeInstantType {
 
     /**
      * Sets the value of the windowAfter property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Duration }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Duration }
      */
     public void setWindowAfter(Duration value) {
         this.windowAfter = value;
@@ -126,11 +108,9 @@ public class TimeInstantType {
 
     /**
      * Gets the value of the crossDateAllowedIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isCrossDateAllowedIndicator() {
         return crossDateAllowedIndicator;
@@ -138,11 +118,9 @@ public class TimeInstantType {
 
     /**
      * Sets the value of the crossDateAllowedIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setCrossDateAllowedIndicator(Boolean value) {
         this.crossDateAllowedIndicator = value;

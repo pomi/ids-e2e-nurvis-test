@@ -8,24 +8,19 @@
 
 package com.thomascook.nurvisAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 To store or to show all bookable information
- *             
- * 
+ * To store or to show all bookable information
+ * <p>
+ * <p>
  * <p>Java class for Reservation-FabType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-FabType-Response">
  *   &lt;complexContent>
@@ -227,155 +222,151 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-FabType-Response", propOrder = {
-    "touroperator",
-    "touroperatorVT",
-    "toCode",
-    "toCodeVT",
-    "catalog",
-    "catalogVT",
-    "saison",
-    "agencyCashing",
-    "persNr",
-    "accountNr",
-    "versionNr",
-    "creator",
-    "creationDate",
-    "lastModDate",
-    "lastModTime",
-    "status",
-    "statusTech",
-    "statusHinw",
-    "statusZwinfo",
-    "statusBem",
-    "optionDate",
-    "startDate",
-    "endDate",
-    "destination",
-    "payDate",
-    "extPortal",
-    "extPortalRef",
-    "sales",
-    "mandatoryCosts",
-    "aggregatedCosts",
-    "purchase",
-    "downPay",
-    "fee",
-    "accBalance",
-    "fat",
-    "fah",
-    "fac",
-    "fap",
-    "pdet",
-    "textC",
-    "textI",
-    "customer",
-    "warning"
+        "touroperator",
+        "touroperatorVT",
+        "toCode",
+        "toCodeVT",
+        "catalog",
+        "catalogVT",
+        "saison",
+        "agencyCashing",
+        "persNr",
+        "accountNr",
+        "versionNr",
+        "creator",
+        "creationDate",
+        "lastModDate",
+        "lastModTime",
+        "status",
+        "statusTech",
+        "statusHinw",
+        "statusZwinfo",
+        "statusBem",
+        "optionDate",
+        "startDate",
+        "endDate",
+        "destination",
+        "payDate",
+        "extPortal",
+        "extPortalRef",
+        "sales",
+        "mandatoryCosts",
+        "aggregatedCosts",
+        "purchase",
+        "downPay",
+        "fee",
+        "accBalance",
+        "fat",
+        "fah",
+        "fac",
+        "fap",
+        "pdet",
+        "textC",
+        "textI",
+        "customer",
+        "warning"
 })
 public class ReservationFabTypeResponse {
 
     @XmlElement(name = "Touroperator")
-    protected String touroperator;
+    private String touroperator;
     @XmlElement(name = "TouroperatorVT")
-    protected String touroperatorVT;
+    private String touroperatorVT;
     @XmlElement(name = "TOCode")
-    protected String toCode;
+    private String toCode;
     @XmlElement(name = "TOCodeVT")
-    protected String toCodeVT;
+    private String toCodeVT;
     @XmlElement(name = "Catalog")
-    protected String catalog;
+    private String catalog;
     @XmlElement(name = "CatalogVT")
-    protected String catalogVT;
+    private String catalogVT;
     @XmlElement(name = "Saison")
-    protected String saison;
+    private String saison;
     @XmlElement(name = "AgencyCashing")
-    protected String agencyCashing;
+    private String agencyCashing;
     @XmlElement(name = "Pers_Nr")
-    protected String persNr;
+    private String persNr;
     @XmlElement(name = "AccountNr")
-    protected String accountNr;
+    private String accountNr;
     @XmlElement(name = "VersionNr")
-    protected String versionNr;
+    private String versionNr;
     @XmlElement(name = "Creator")
-    protected String creator;
+    private String creator;
     @XmlElement(name = "CreationDate")
-    protected String creationDate;
+    private String creationDate;
     @XmlElement(name = "LastModDate")
-    protected String lastModDate;
+    private String lastModDate;
     @XmlElement(name = "LastModTime")
-    protected String lastModTime;
+    private String lastModTime;
     @XmlElement(name = "Status")
-    protected String status;
+    private String status;
     @XmlElement(name = "StatusTech")
-    protected String statusTech;
+    private String statusTech;
     @XmlElement(name = "StatusHinw")
-    protected String statusHinw;
+    private String statusHinw;
     @XmlElement(name = "StatusZwinfo")
-    protected String statusZwinfo;
+    private String statusZwinfo;
     @XmlElement(name = "StatusBem")
-    protected String statusBem;
+    private String statusBem;
     @XmlElement(name = "OptionDate")
-    protected String optionDate;
+    private String optionDate;
     @XmlElement(name = "StartDate")
-    protected String startDate;
+    private String startDate;
     @XmlElement(name = "EndDate")
-    protected String endDate;
+    private String endDate;
     @XmlElement(name = "Destination")
-    protected String destination;
+    private String destination;
     @XmlElement(name = "PayDate")
-    protected String payDate;
+    private String payDate;
     @XmlElement(name = "ExtPortal")
-    protected String extPortal;
+    private String extPortal;
     @XmlElement(name = "ExtPortalRef")
-    protected String extPortalRef;
+    private String extPortalRef;
     @XmlElement(name = "Sales")
-    protected ReservationSalesTypeResponse sales;
+    private ReservationSalesTypeResponse sales;
     @XmlElement(name = "MandatoryCosts")
-    protected ReservationMandatoryCostsTypeResponse mandatoryCosts;
+    private ReservationMandatoryCostsTypeResponse mandatoryCosts;
     @XmlElement(name = "AggregatedCosts")
-    protected ReservationAggregatedCostsTypeResponse aggregatedCosts;
+    private ReservationAggregatedCostsTypeResponse aggregatedCosts;
     @XmlElement(name = "Purchase")
-    protected ReservationPurchaseTypeResponse purchase;
+    private ReservationPurchaseTypeResponse purchase;
     @XmlElement(name = "DownPay")
-    protected ReservationDownPayTypeResponse downPay;
+    private ReservationDownPayTypeResponse downPay;
     @XmlElement(name = "Fee")
-    protected ReservationFeeTypeResponse fee;
+    private ReservationFeeTypeResponse fee;
     @XmlElement(name = "AccBalance")
-    protected ReservationAccBalanceTypeResponse accBalance;
+    private ReservationAccBalanceTypeResponse accBalance;
     @XmlElement(name = "Fat")
-    protected List<ReservationFatTypeResponse> fat;
+    private List<ReservationFatTypeResponse> fat;
     @XmlElement(name = "Fah")
-    protected List<ReservationFahTypeResponse> fah;
+    private List<ReservationFahTypeResponse> fah;
     @XmlElement(name = "Fac")
-    protected List<ReservationFacTypeResponse> fac;
+    private List<ReservationFacTypeResponse> fac;
     @XmlElement(name = "Fap")
-    protected List<ReservationFapTypeResponse> fap;
+    private List<ReservationFapTypeResponse> fap;
     @XmlElement(name = "Pdet")
-    protected List<ReservationPdetTypeResponse> pdet;
+    private List<ReservationPdetTypeResponse> pdet;
     @XmlElement(name = "TextC")
-    protected List<String> textC;
+    private List<String> textC;
     @XmlElement(name = "TextI")
-    protected List<String> textI;
+    private List<String> textI;
     @XmlElement(name = "Customer")
-    protected ReservationCustomerTypeResponse customer;
+    private ReservationCustomerTypeResponse customer;
     @XmlElement(name = "Warning")
-    protected List<ReservationWarningTypeResponse> warning;
+    private List<ReservationWarningTypeResponse> warning;
     @XmlAttribute(name = "Key")
-    protected String key;
+    private String key;
     @XmlAttribute(name = "SellAgent")
-    protected String sellAgent;
+    private String sellAgent;
 
     /**
      * Gets the value of the touroperator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTouroperator() {
         return touroperator;
@@ -383,11 +374,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the touroperator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTouroperator(String value) {
         this.touroperator = value;
@@ -395,11 +384,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the touroperatorVT property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTouroperatorVT() {
         return touroperatorVT;
@@ -407,11 +394,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the touroperatorVT property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTouroperatorVT(String value) {
         this.touroperatorVT = value;
@@ -419,11 +404,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the toCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTOCode() {
         return toCode;
@@ -431,11 +414,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the toCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTOCode(String value) {
         this.toCode = value;
@@ -443,11 +424,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the toCodeVT property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTOCodeVT() {
         return toCodeVT;
@@ -455,11 +434,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the toCodeVT property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTOCodeVT(String value) {
         this.toCodeVT = value;
@@ -467,11 +444,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the catalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCatalog() {
         return catalog;
@@ -479,11 +454,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the catalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCatalog(String value) {
         this.catalog = value;
@@ -491,11 +464,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the catalogVT property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCatalogVT() {
         return catalogVT;
@@ -503,11 +474,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the catalogVT property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCatalogVT(String value) {
         this.catalogVT = value;
@@ -515,11 +484,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the saison property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSaison() {
         return saison;
@@ -527,11 +494,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the saison property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSaison(String value) {
         this.saison = value;
@@ -539,11 +504,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the agencyCashing property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAgencyCashing() {
         return agencyCashing;
@@ -551,11 +514,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the agencyCashing property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAgencyCashing(String value) {
         this.agencyCashing = value;
@@ -563,11 +524,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the persNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPersNr() {
         return persNr;
@@ -575,11 +534,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the persNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPersNr(String value) {
         this.persNr = value;
@@ -587,11 +544,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the accountNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAccountNr() {
         return accountNr;
@@ -599,11 +554,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the accountNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAccountNr(String value) {
         this.accountNr = value;
@@ -611,11 +564,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the versionNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVersionNr() {
         return versionNr;
@@ -623,11 +574,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the versionNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVersionNr(String value) {
         this.versionNr = value;
@@ -635,11 +584,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the creator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCreator() {
         return creator;
@@ -647,11 +594,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the creator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCreator(String value) {
         this.creator = value;
@@ -659,11 +604,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the creationDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCreationDate() {
         return creationDate;
@@ -671,11 +614,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the creationDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCreationDate(String value) {
         this.creationDate = value;
@@ -683,11 +624,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the lastModDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLastModDate() {
         return lastModDate;
@@ -695,11 +634,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the lastModDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLastModDate(String value) {
         this.lastModDate = value;
@@ -707,11 +644,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the lastModTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLastModTime() {
         return lastModTime;
@@ -719,11 +654,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the lastModTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLastModTime(String value) {
         this.lastModTime = value;
@@ -731,11 +664,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the status property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatus() {
         return status;
@@ -743,11 +674,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the status property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatus(String value) {
         this.status = value;
@@ -755,11 +684,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the statusTech property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatusTech() {
         return statusTech;
@@ -767,11 +694,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the statusTech property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatusTech(String value) {
         this.statusTech = value;
@@ -779,11 +704,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the statusHinw property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatusHinw() {
         return statusHinw;
@@ -791,11 +714,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the statusHinw property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatusHinw(String value) {
         this.statusHinw = value;
@@ -803,11 +724,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the statusZwinfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatusZwinfo() {
         return statusZwinfo;
@@ -815,11 +734,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the statusZwinfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatusZwinfo(String value) {
         this.statusZwinfo = value;
@@ -827,11 +744,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the statusBem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatusBem() {
         return statusBem;
@@ -839,11 +754,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the statusBem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatusBem(String value) {
         this.statusBem = value;
@@ -851,11 +764,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the optionDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOptionDate() {
         return optionDate;
@@ -863,11 +774,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the optionDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOptionDate(String value) {
         this.optionDate = value;
@@ -875,11 +784,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the startDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStartDate() {
         return startDate;
@@ -887,11 +794,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the startDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStartDate(String value) {
         this.startDate = value;
@@ -899,11 +804,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the endDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEndDate() {
         return endDate;
@@ -911,11 +814,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the endDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEndDate(String value) {
         this.endDate = value;
@@ -923,11 +824,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the destination property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDestination() {
         return destination;
@@ -935,11 +834,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the destination property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDestination(String value) {
         this.destination = value;
@@ -947,11 +844,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the payDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPayDate() {
         return payDate;
@@ -959,11 +854,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the payDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPayDate(String value) {
         this.payDate = value;
@@ -971,11 +864,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the extPortal property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExtPortal() {
         return extPortal;
@@ -983,11 +874,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the extPortal property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExtPortal(String value) {
         this.extPortal = value;
@@ -995,11 +884,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the extPortalRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExtPortalRef() {
         return extPortalRef;
@@ -1007,11 +894,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the extPortalRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExtPortalRef(String value) {
         this.extPortalRef = value;
@@ -1019,11 +904,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the sales property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationSalesTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationSalesTypeResponse }
      */
     public ReservationSalesTypeResponse getSales() {
         return sales;
@@ -1031,11 +914,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the sales property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationSalesTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationSalesTypeResponse }
      */
     public void setSales(ReservationSalesTypeResponse value) {
         this.sales = value;
@@ -1043,11 +924,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the mandatoryCosts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationMandatoryCostsTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationMandatoryCostsTypeResponse }
      */
     public ReservationMandatoryCostsTypeResponse getMandatoryCosts() {
         return mandatoryCosts;
@@ -1055,11 +934,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the mandatoryCosts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationMandatoryCostsTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationMandatoryCostsTypeResponse }
      */
     public void setMandatoryCosts(ReservationMandatoryCostsTypeResponse value) {
         this.mandatoryCosts = value;
@@ -1067,11 +944,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the aggregatedCosts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationAggregatedCostsTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationAggregatedCostsTypeResponse }
      */
     public ReservationAggregatedCostsTypeResponse getAggregatedCosts() {
         return aggregatedCosts;
@@ -1079,11 +954,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the aggregatedCosts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationAggregatedCostsTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationAggregatedCostsTypeResponse }
      */
     public void setAggregatedCosts(ReservationAggregatedCostsTypeResponse value) {
         this.aggregatedCosts = value;
@@ -1091,11 +964,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the purchase property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationPurchaseTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationPurchaseTypeResponse }
      */
     public ReservationPurchaseTypeResponse getPurchase() {
         return purchase;
@@ -1103,11 +974,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the purchase property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationPurchaseTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationPurchaseTypeResponse }
      */
     public void setPurchase(ReservationPurchaseTypeResponse value) {
         this.purchase = value;
@@ -1115,11 +984,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the downPay property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationDownPayTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationDownPayTypeResponse }
      */
     public ReservationDownPayTypeResponse getDownPay() {
         return downPay;
@@ -1127,11 +994,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the downPay property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationDownPayTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationDownPayTypeResponse }
      */
     public void setDownPay(ReservationDownPayTypeResponse value) {
         this.downPay = value;
@@ -1139,11 +1004,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the fee property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationFeeTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationFeeTypeResponse }
      */
     public ReservationFeeTypeResponse getFee() {
         return fee;
@@ -1151,11 +1014,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the fee property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationFeeTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationFeeTypeResponse }
      */
     public void setFee(ReservationFeeTypeResponse value) {
         this.fee = value;
@@ -1163,11 +1024,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the accBalance property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationAccBalanceTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationAccBalanceTypeResponse }
      */
     public ReservationAccBalanceTypeResponse getAccBalance() {
         return accBalance;
@@ -1175,11 +1034,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the accBalance property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationAccBalanceTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationAccBalanceTypeResponse }
      */
     public void setAccBalance(ReservationAccBalanceTypeResponse value) {
         this.accBalance = value;
@@ -1187,214 +1044,198 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the fat property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fat property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFat().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFatTypeResponse }
-     * 
-     * 
      */
     public List<ReservationFatTypeResponse> getFat() {
         if (fat == null) {
-            fat = new ArrayList<ReservationFatTypeResponse>();
+            fat = new ArrayList<>();
         }
         return this.fat;
     }
 
     /**
      * Gets the value of the fah property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fah property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFah().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFahTypeResponse }
-     * 
-     * 
      */
     public List<ReservationFahTypeResponse> getFah() {
         if (fah == null) {
-            fah = new ArrayList<ReservationFahTypeResponse>();
+            fah = new ArrayList<>();
         }
         return this.fah;
     }
 
     /**
      * Gets the value of the fac property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fac property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFac().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFacTypeResponse }
-     * 
-     * 
      */
     public List<ReservationFacTypeResponse> getFac() {
         if (fac == null) {
-            fac = new ArrayList<ReservationFacTypeResponse>();
+            fac = new ArrayList<>();
         }
         return this.fac;
     }
 
     /**
      * Gets the value of the fap property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fap property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFap().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFapTypeResponse }
-     * 
-     * 
      */
     public List<ReservationFapTypeResponse> getFap() {
         if (fap == null) {
-            fap = new ArrayList<ReservationFapTypeResponse>();
+            fap = new ArrayList<>();
         }
         return this.fap;
     }
 
     /**
      * Gets the value of the pdet property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pdet property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPdet().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationPdetTypeResponse }
-     * 
-     * 
      */
     public List<ReservationPdetTypeResponse> getPdet() {
         if (pdet == null) {
-            pdet = new ArrayList<ReservationPdetTypeResponse>();
+            pdet = new ArrayList<>();
         }
         return this.pdet;
     }
 
     /**
      * Gets the value of the textC property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the textC property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTextC().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getTextC() {
         if (textC == null) {
-            textC = new ArrayList<String>();
+            textC = new ArrayList<>();
         }
         return this.textC;
     }
 
     /**
      * Gets the value of the textI property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the textI property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTextI().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getTextI() {
         if (textI == null) {
-            textI = new ArrayList<String>();
+            textI = new ArrayList<>();
         }
         return this.textI;
     }
 
     /**
      * Gets the value of the customer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationCustomerTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationCustomerTypeResponse }
      */
     public ReservationCustomerTypeResponse getCustomer() {
         return customer;
@@ -1402,11 +1243,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the customer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationCustomerTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationCustomerTypeResponse }
      */
     public void setCustomer(ReservationCustomerTypeResponse value) {
         this.customer = value;
@@ -1414,40 +1253,36 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the warning property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the warning property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getWarning().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationWarningTypeResponse }
-     * 
-     * 
      */
     public List<ReservationWarningTypeResponse> getWarning() {
         if (warning == null) {
-            warning = new ArrayList<ReservationWarningTypeResponse>();
+            warning = new ArrayList<>();
         }
         return this.warning;
     }
 
     /**
      * Gets the value of the key property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getKey() {
         return key;
@@ -1455,11 +1290,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the key property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setKey(String value) {
         this.key = value;
@@ -1467,11 +1300,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Gets the value of the sellAgent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSellAgent() {
         return sellAgent;
@@ -1479,11 +1310,9 @@ public class ReservationFabTypeResponse {
 
     /**
      * Sets the value of the sellAgent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSellAgent(String value) {
         this.sellAgent = value;

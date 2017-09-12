@@ -8,25 +8,20 @@
 
 package com.thomascook.toscaAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Response data for any valid item of inventory.
- * 
+ * <p>
  * <p>Java class for ItineraryItemResponseType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ItineraryItemResponseType">
  *   &lt;complexContent>
@@ -129,39 +124,35 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItineraryItemResponseType", propOrder = {
-    "accommodation",
-    "flight",
-    "rentalCar"
+        "accommodation",
+        "flight",
+        "rentalCar"
 })
 public class ItineraryItemResponseType {
 
     @XmlElement(name = "Accommodation")
-    protected Accommodation accommodation;
+    private Accommodation accommodation;
     @XmlElement(name = "Flight")
-    protected PkgFlightSegmentType flight;
+    private PkgFlightSegmentType flight;
     @XmlElement(name = "RentalCar")
-    protected RentalCar rentalCar;
+    private RentalCar rentalCar;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "ItinerarySequence")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger itinerarySequence;
+    private BigInteger itinerarySequence;
     @XmlAttribute(name = "ChronologicalSequence")
     @XmlSchemaType(name = "positiveInteger")
-    protected BigInteger chronologicalSequence;
+    private BigInteger chronologicalSequence;
 
     /**
      * Gets the value of the accommodation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Accommodation }
-     *     
+     *
+     * @return possible object is
+     * {@link Accommodation }
      */
     public Accommodation getAccommodation() {
         return accommodation;
@@ -169,11 +160,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the accommodation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Accommodation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Accommodation }
      */
     public void setAccommodation(Accommodation value) {
         this.accommodation = value;
@@ -181,11 +170,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Gets the value of the flight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgFlightSegmentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgFlightSegmentType }
      */
     public PkgFlightSegmentType getFlight() {
         return flight;
@@ -193,11 +180,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the flight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgFlightSegmentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgFlightSegmentType }
      */
     public void setFlight(PkgFlightSegmentType value) {
         this.flight = value;
@@ -205,11 +190,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Gets the value of the rentalCar property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RentalCar }
-     *     
+     *
+     * @return possible object is
+     * {@link RentalCar }
      */
     public RentalCar getRentalCar() {
         return rentalCar;
@@ -217,11 +200,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the rentalCar property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RentalCar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RentalCar }
      */
     public void setRentalCar(RentalCar value) {
         this.rentalCar = value;
@@ -229,11 +210,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -241,11 +220,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -253,11 +230,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Gets the value of the itinerarySequence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getItinerarySequence() {
         return itinerarySequence;
@@ -265,11 +240,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the itinerarySequence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setItinerarySequence(BigInteger value) {
         this.itinerarySequence = value;
@@ -277,11 +250,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Gets the value of the chronologicalSequence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getChronologicalSequence() {
         return chronologicalSequence;
@@ -289,11 +260,9 @@ public class ItineraryItemResponseType {
 
     /**
      * Sets the value of the chronologicalSequence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setChronologicalSequence(BigInteger value) {
         this.chronologicalSequence = value;
@@ -302,9 +271,9 @@ public class ItineraryItemResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -383,51 +352,47 @@ public class ItineraryItemResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "identity",
-        "accommodationClass",
-        "dateRange",
-        "roomProfiles",
-        "mealPlans"
+            "identity",
+            "accommodationClass",
+            "dateRange",
+            "roomProfiles",
+            "mealPlans"
     })
     public static class Accommodation {
 
         @XmlElement(name = "Identity")
-        protected PropertyIdentityType identity;
+        PropertyIdentityType identity;
         @XmlElement(name = "AccommodationClass")
-        protected AccommodationClass accommodationClass;
+        AccommodationClass accommodationClass;
         @XmlElement(name = "DateRange", required = true)
-        protected DateTimeSpanType dateRange;
+        DateTimeSpanType dateRange;
         @XmlElement(name = "RoomProfiles")
-        protected RoomProfiles roomProfiles;
+        RoomProfiles roomProfiles;
         @XmlElement(name = "MealPlans")
-        protected MealPlans mealPlans;
+        MealPlans mealPlans;
         @XmlAttribute(name = "RPH")
-        protected String rph;
+        String rph;
         @XmlAttribute(name = "ResortName")
-        protected String resortName;
+        String resortName;
         @XmlAttribute(name = "ResortCode")
-        protected String resortCode;
+        String resortCode;
         @XmlAttribute(name = "MaxChildAge")
-        protected Integer maxChildAge;
+        Integer maxChildAge;
         @XmlAttribute(name = "DestinationCode")
-        protected String destinationCode;
+        String destinationCode;
         @XmlAttribute(name = "DestinationLevel")
-        protected DestinationLevelType destinationLevel;
+        DestinationLevelType destinationLevel;
         @XmlAttribute(name = "DestinationName")
-        protected String destinationName;
+        String destinationName;
 
         /**
          * Gets the value of the identity property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link PropertyIdentityType }
-         *     
+         *
+         * @return possible object is
+         * {@link PropertyIdentityType }
          */
         public PropertyIdentityType getIdentity() {
             return identity;
@@ -435,11 +400,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the identity property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link PropertyIdentityType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link PropertyIdentityType }
          */
         public void setIdentity(PropertyIdentityType value) {
             this.identity = value;
@@ -447,11 +410,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the accommodationClass property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AccommodationClass }
-         *     
+         *
+         * @return possible object is
+         * {@link AccommodationClass }
          */
         public AccommodationClass getAccommodationClass() {
             return accommodationClass;
@@ -459,11 +420,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the accommodationClass property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AccommodationClass }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AccommodationClass }
          */
         public void setAccommodationClass(AccommodationClass value) {
             this.accommodationClass = value;
@@ -471,11 +430,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the dateRange property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DateTimeSpanType }
-         *     
+         *
+         * @return possible object is
+         * {@link DateTimeSpanType }
          */
         public DateTimeSpanType getDateRange() {
             return dateRange;
@@ -483,11 +440,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the dateRange property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DateTimeSpanType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DateTimeSpanType }
          */
         public void setDateRange(DateTimeSpanType value) {
             this.dateRange = value;
@@ -495,11 +450,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the roomProfiles property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link RoomProfiles }
-         *     
+         *
+         * @return possible object is
+         * {@link RoomProfiles }
          */
         public RoomProfiles getRoomProfiles() {
             return roomProfiles;
@@ -507,11 +460,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the roomProfiles property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link RoomProfiles }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link RoomProfiles }
          */
         public void setRoomProfiles(RoomProfiles value) {
             this.roomProfiles = value;
@@ -519,11 +470,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the mealPlans property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link MealPlans }
-         *     
+         *
+         * @return possible object is
+         * {@link MealPlans }
          */
         public MealPlans getMealPlans() {
             return mealPlans;
@@ -531,11 +480,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the mealPlans property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link MealPlans }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link MealPlans }
          */
         public void setMealPlans(MealPlans value) {
             this.mealPlans = value;
@@ -543,11 +490,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the rph property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRPH() {
             return rph;
@@ -555,11 +500,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the rph property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -567,11 +510,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the resortName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getResortName() {
             return resortName;
@@ -579,11 +520,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the resortName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setResortName(String value) {
             this.resortName = value;
@@ -591,11 +530,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the resortCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getResortCode() {
             return resortCode;
@@ -603,11 +540,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the resortCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setResortCode(String value) {
             this.resortCode = value;
@@ -615,11 +550,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the maxChildAge property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getMaxChildAge() {
             return maxChildAge;
@@ -627,11 +560,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the maxChildAge property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setMaxChildAge(Integer value) {
             this.maxChildAge = value;
@@ -639,11 +570,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the destinationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDestinationCode() {
             return destinationCode;
@@ -651,11 +580,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the destinationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDestinationCode(String value) {
             this.destinationCode = value;
@@ -663,11 +590,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the destinationLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DestinationLevelType }
-         *     
+         *
+         * @return possible object is
+         * {@link DestinationLevelType }
          */
         public DestinationLevelType getDestinationLevel() {
             return destinationLevel;
@@ -675,11 +600,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the destinationLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DestinationLevelType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DestinationLevelType }
          */
         public void setDestinationLevel(DestinationLevelType value) {
             this.destinationLevel = value;
@@ -687,11 +610,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the destinationName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDestinationName() {
             return destinationName;
@@ -699,11 +620,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the destinationName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDestinationName(String value) {
             this.destinationName = value;
@@ -712,9 +631,9 @@ public class ItineraryItemResponseType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -724,29 +643,25 @@ public class ItineraryItemResponseType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class AccommodationClass {
 
             @XmlAttribute(name = "Code")
-            protected String code;
+            String code;
             @XmlAttribute(name = "Name")
-            protected String name;
+            String name;
             @XmlAttribute(name = "NationalCode")
-            protected String nationalCode;
+            String nationalCode;
             @XmlAttribute(name = "OfficialName")
-            protected String officialName;
+            String officialName;
 
             /**
              * Gets the value of the code property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCode() {
                 return code;
@@ -754,11 +669,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Sets the value of the code property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCode(String value) {
                 this.code = value;
@@ -766,11 +679,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Gets the value of the name property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getName() {
                 return name;
@@ -778,11 +689,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Sets the value of the name property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setName(String value) {
                 this.name = value;
@@ -790,11 +699,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Gets the value of the nationalCode property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getNationalCode() {
                 return nationalCode;
@@ -802,11 +709,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Sets the value of the nationalCode property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setNationalCode(String value) {
                 this.nationalCode = value;
@@ -814,11 +719,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Gets the value of the officialName property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getOfficialName() {
                 return officialName;
@@ -826,11 +729,9 @@ public class ItineraryItemResponseType {
 
             /**
              * Sets the value of the officialName property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setOfficialName(String value) {
                 this.officialName = value;
@@ -841,9 +742,9 @@ public class ItineraryItemResponseType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -855,43 +756,39 @@ public class ItineraryItemResponseType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "mealPlan"
+                "mealPlan"
         })
         public static class MealPlans {
 
             @XmlElement(name = "MealPlan", required = true)
-            protected List<MealPlanType> mealPlan;
+            List<MealPlanType> mealPlan;
 
             /**
              * Gets the value of the mealPlan property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the mealPlan property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getMealPlan().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link MealPlanType }
-             * 
-             * 
              */
             public List<MealPlanType> getMealPlan() {
                 if (mealPlan == null) {
-                    mealPlan = new ArrayList<MealPlanType>();
+                    mealPlan = new ArrayList<>();
                 }
                 return this.mealPlan;
             }
@@ -901,9 +798,9 @@ public class ItineraryItemResponseType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -945,43 +842,39 @@ public class ItineraryItemResponseType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "roomProfile"
+                "roomProfile"
         })
         public static class RoomProfiles {
 
             @XmlElement(name = "RoomProfile", required = true)
-            protected List<RoomProfile> roomProfile;
+            List<RoomProfile> roomProfile;
 
             /**
              * Gets the value of the roomProfile property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the roomProfile property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoomProfile().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomProfile }
-             * 
-             * 
              */
             public List<RoomProfile> getRoomProfile() {
                 if (roomProfile == null) {
-                    roomProfile = new ArrayList<RoomProfile>();
+                    roomProfile = new ArrayList<>();
                 }
                 return this.roomProfile;
             }
@@ -989,9 +882,9 @@ public class ItineraryItemResponseType {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1023,45 +916,40 @@ public class ItineraryItemResponseType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "prices"
+                    "prices"
             })
             public static class RoomProfile
-                extends RoomProfileType
-            {
+                    extends RoomProfileType {
 
                 @XmlElement(name = "Prices")
-                protected List<Prices> prices;
+                List<Prices> prices;
 
                 /**
                  * Gets the value of the prices property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the prices property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getPrices().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Prices }
-                 * 
-                 * 
                  */
                 public List<Prices> getPrices() {
                     if (prices == null) {
-                        prices = new ArrayList<Prices>();
+                        prices = new ArrayList<>();
                     }
                     return this.prices;
                 }
@@ -1069,9 +957,9 @@ public class ItineraryItemResponseType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1093,58 +981,52 @@ public class ItineraryItemResponseType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "price"
+                        "price"
                 })
                 public static class Prices {
 
                     @XmlElement(name = "Price", required = true)
-                    protected List<Price> price;
+                    List<Price> price;
                     @XmlAttribute(name = "SupplementIndicator")
-                    protected Boolean supplementIndicator;
+                    Boolean supplementIndicator;
                     @XmlAttribute(name = "MealPlanRPH")
-                    protected String mealPlanRPH;
+                    String mealPlanRPH;
 
                     /**
                      * Gets the value of the price property.
-                     * 
+                     * <p>
                      * <p>
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
                      * This is why there is not a <CODE>set</CODE> method for the price property.
-                     * 
+                     * <p>
                      * <p>
                      * For example, to add a new item, do as follows:
                      * <pre>
                      *    getPrice().add(newItem);
                      * </pre>
-                     * 
-                     * 
+                     * <p>
+                     * <p>
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link Price }
-                     * 
-                     * 
                      */
                     public List<Price> getPrice() {
                         if (price == null) {
-                            price = new ArrayList<Price>();
+                            price = new ArrayList<>();
                         }
                         return this.price;
                     }
 
                     /**
                      * Gets the value of the supplementIndicator property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link Boolean }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link Boolean }
                      */
                     public Boolean isSupplementIndicator() {
                         return supplementIndicator;
@@ -1152,11 +1034,9 @@ public class ItineraryItemResponseType {
 
                     /**
                      * Sets the value of the supplementIndicator property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link Boolean }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link Boolean }
                      */
                     public void setSupplementIndicator(Boolean value) {
                         this.supplementIndicator = value;
@@ -1164,11 +1044,9 @@ public class ItineraryItemResponseType {
 
                     /**
                      * Gets the value of the mealPlanRPH property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getMealPlanRPH() {
                         return mealPlanRPH;
@@ -1176,11 +1054,9 @@ public class ItineraryItemResponseType {
 
                     /**
                      * Sets the value of the mealPlanRPH property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setMealPlanRPH(String value) {
                         this.mealPlanRPH = value;
@@ -1189,9 +1065,9 @@ public class ItineraryItemResponseType {
 
                     /**
                      * <p>Java class for anonymous complex type.
-                     * 
+                     * <p>
                      * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
+                     * <p>
                      * <pre>
                      * &lt;complexType>
                      *   &lt;complexContent>
@@ -1201,38 +1077,34 @@ public class ItineraryItemResponseType {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
-                     * 
-                     * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "")
                     public static class Price {
 
                         @XmlAttribute(name = "PriceQualifier")
-                        protected Integer priceQualifier;
+                        Integer priceQualifier;
                         @XmlAttribute(name = "PriceBasis")
-                        protected PricingType priceBasis;
+                        PricingType priceBasis;
                         @XmlAttribute(name = "Amount")
-                        protected BigDecimal amount;
+                        BigDecimal amount;
                         @XmlAttribute(name = "CurrencyCode")
-                        protected String currencyCode;
+                        String currencyCode;
                         @XmlAttribute(name = "DecimalPlaces")
                         @XmlSchemaType(name = "nonNegativeInteger")
-                        protected BigInteger decimalPlaces;
+                        BigInteger decimalPlaces;
                         @XmlAttribute(name = "AgeQualifyingCode")
-                        protected String ageQualifyingCode;
+                        String ageQualifyingCode;
                         @XmlAttribute(name = "Age")
-                        protected Integer age;
+                        Integer age;
                         @XmlAttribute(name = "Count")
-                        protected Integer count;
+                        Integer count;
 
                         /**
                          * Gets the value of the priceQualifier property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link Integer }
                          */
                         public Integer getPriceQualifier() {
                             return priceQualifier;
@@ -1240,11 +1112,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the priceQualifier property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link Integer }
                          */
                         public void setPriceQualifier(Integer value) {
                             this.priceQualifier = value;
@@ -1252,11 +1122,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the priceBasis property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link PricingType }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link PricingType }
                          */
                         public PricingType getPriceBasis() {
                             return priceBasis;
@@ -1264,11 +1132,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the priceBasis property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link PricingType }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link PricingType }
                          */
                         public void setPriceBasis(PricingType value) {
                             this.priceBasis = value;
@@ -1276,11 +1142,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the amount property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link BigDecimal }
                          */
                         public BigDecimal getAmount() {
                             return amount;
@@ -1288,11 +1152,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the amount property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link BigDecimal }
                          */
                         public void setAmount(BigDecimal value) {
                             this.amount = value;
@@ -1300,11 +1162,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the currencyCode property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getCurrencyCode() {
                             return currencyCode;
@@ -1312,11 +1172,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the currencyCode property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setCurrencyCode(String value) {
                             this.currencyCode = value;
@@ -1324,11 +1182,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the decimalPlaces property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigInteger }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link BigInteger }
                          */
                         public BigInteger getDecimalPlaces() {
                             return decimalPlaces;
@@ -1336,11 +1192,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the decimalPlaces property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigInteger }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link BigInteger }
                          */
                         public void setDecimalPlaces(BigInteger value) {
                             this.decimalPlaces = value;
@@ -1348,11 +1202,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the ageQualifyingCode property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getAgeQualifyingCode() {
                             return ageQualifyingCode;
@@ -1360,11 +1212,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the ageQualifyingCode property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setAgeQualifyingCode(String value) {
                             this.ageQualifyingCode = value;
@@ -1372,11 +1222,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the age property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link Integer }
                          */
                         public Integer getAge() {
                             return age;
@@ -1384,11 +1232,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the age property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link Integer }
                          */
                         public void setAge(Integer value) {
                             this.age = value;
@@ -1396,11 +1242,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Gets the value of the count property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link Integer }
                          */
                         public Integer getCount() {
                             return count;
@@ -1408,11 +1252,9 @@ public class ItineraryItemResponseType {
 
                         /**
                          * Sets the value of the count property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link Integer }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link Integer }
                          */
                         public void setCount(Integer value) {
                             this.count = value;
@@ -1431,9 +1273,9 @@ public class ItineraryItemResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1445,29 +1287,24 @@ public class ItineraryItemResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class RentalCar
-        extends VehicleRentalCoreType
-    {
+            extends VehicleRentalCoreType {
 
         @XmlAttribute(name = "RPH")
-        protected String rph;
+        String rph;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
 
         /**
          * Gets the value of the rph property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRPH() {
             return rph;
@@ -1475,11 +1312,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the rph property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -1487,11 +1322,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -1499,11 +1332,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -1511,11 +1342,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -1523,11 +1352,9 @@ public class ItineraryItemResponseType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;

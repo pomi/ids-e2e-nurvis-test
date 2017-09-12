@@ -8,24 +8,19 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * A monetary transaction (credit or debit) against a reservation
- * 
+ * <p>
  * <p>Java class for TransactionType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TransactionType">
  *   &lt;complexContent>
@@ -64,36 +59,32 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TransactionType", propOrder = {
-    "amount"
+        "amount"
 })
 public class TransactionType {
 
     @XmlElement(name = "Amount", required = true)
-    protected Amount amount;
+    private Amount amount;
     @XmlAttribute(name = "Type", required = true)
-    protected String type;
+    private String type;
     @XmlAttribute(name = "CreditDebitInd")
-    protected String creditDebitInd;
+    private String creditDebitInd;
     @XmlAttribute(name = "PostingDateTime", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar postingDateTime;
+    private XMLGregorianCalendar postingDateTime;
     @XmlAttribute(name = "BatchNmbr")
-    protected String batchNmbr;
+    private String batchNmbr;
     @XmlAttribute(name = "Comment")
-    protected String comment;
+    private String comment;
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Amount }
-     *     
+     *
+     * @return possible object is
+     * {@link Amount }
      */
     public Amount getAmount() {
         return amount;
@@ -101,11 +92,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Amount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Amount }
      */
     public void setAmount(Amount value) {
         this.amount = value;
@@ -113,11 +102,9 @@ public class TransactionType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -125,11 +112,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -137,11 +122,9 @@ public class TransactionType {
 
     /**
      * Gets the value of the creditDebitInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCreditDebitInd() {
         if (creditDebitInd == null) {
@@ -153,11 +136,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the creditDebitInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCreditDebitInd(String value) {
         this.creditDebitInd = value;
@@ -165,11 +146,9 @@ public class TransactionType {
 
     /**
      * Gets the value of the postingDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getPostingDateTime() {
         return postingDateTime;
@@ -177,11 +156,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the postingDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setPostingDateTime(XMLGregorianCalendar value) {
         this.postingDateTime = value;
@@ -189,11 +166,9 @@ public class TransactionType {
 
     /**
      * Gets the value of the batchNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBatchNmbr() {
         return batchNmbr;
@@ -201,11 +176,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the batchNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBatchNmbr(String value) {
         this.batchNmbr = value;
@@ -213,11 +186,9 @@ public class TransactionType {
 
     /**
      * Gets the value of the comment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getComment() {
         return comment;
@@ -225,11 +196,9 @@ public class TransactionType {
 
     /**
      * Sets the value of the comment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setComment(String value) {
         this.comment = value;
@@ -238,9 +207,9 @@ public class TransactionType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -250,28 +219,24 @@ public class TransactionType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Amount {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -279,11 +244,9 @@ public class TransactionType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -291,11 +254,9 @@ public class TransactionType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -303,11 +264,9 @@ public class TransactionType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -315,11 +274,9 @@ public class TransactionType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -327,11 +284,9 @@ public class TransactionType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;

@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for FieldName.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -74,7 +74,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "FieldName")
 @XmlEnum
@@ -101,8 +100,6 @@ public enum FieldName {
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("ScoreZoover")
     SCORE_ZOOVER("ScoreZoover"),
@@ -113,52 +110,40 @@ public enum FieldName {
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("AccommodationType")
     ACCOMMODATION_TYPE("AccommodationType"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("ProductBookingsCode")
     PRODUCT_BOOKINGS_CODE("ProductBookingsCode"),
 
     /**
      * Resort coming from
-     *                         Product Catalog Extract.
-     *                     
-     * 
+     * Product Catalog Extract.
      */
     @XmlEnumValue("ResortCategory")
     RESORT_CATEGORY("ResortCategory"),
 
     /**
      * Region coming from
-     *                         Product Catalog Extract.
-     *                     
-     * 
+     * Product Catalog Extract.
      */
     @XmlEnumValue("RegionCategory")
     REGION_CATEGORY("RegionCategory"),
 
     /**
      * Destination coming from
-     *                         Product Catalog Extract.
-     *                     
-     * 
+     * Product Catalog Extract.
      */
     @XmlEnumValue("DestinationCategory")
     DESTINATION_CATEGORY("DestinationCategory"),
 
     /**
      * Destination coming from
-     *                         Commercial mapping file.
-     *                     
-     * 
+     * Commercial mapping file.
      */
     @XmlEnumValue("CommercialDestination")
     COMMERCIAL_DESTINATION("CommercialDestination"),
@@ -167,16 +152,12 @@ public enum FieldName {
 
     /**
      * AICP Field
-     *                     
-     * 
      */
     @XmlEnumValue("SellThroughWeb")
     SELL_THROUGH_WEB("SellThroughWeb"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("HolidayPeriod")
     HOLIDAY_PERIOD("HolidayPeriod"),
@@ -185,8 +166,6 @@ public enum FieldName {
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("Facilities2")
     FACILITIES_2("Facilities2"),
@@ -199,24 +178,18 @@ public enum FieldName {
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("MarketingLogos1")
     MARKETING_LOGOS_1("MarketingLogos1"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("MarketingLogos2")
     MARKETING_LOGOS_2("MarketingLogos2"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("MarketingLogos3")
     MARKETING_LOGOS_3("MarketingLogos3"),
@@ -239,80 +212,60 @@ public enum FieldName {
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("Stunt")
     STUNT("Stunt"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("BrochureName")
     BROCHURE_NAME("BrochureName"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("SkiRegion")
     SKI_REGION("SkiRegion"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("DurationInDays")
     DURATION_IN_DAYS("DurationInDays"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("HotelChain")
     HOTEL_CHAIN("HotelChain"),
 
     /**
      * AICP field.
-     *                     
-     * 
      */
     @XmlEnumValue("OfficialRating")
     OFFICIAL_RATING("OfficialRating"),
 
     /**
      * Name of the Hotel
-     *                     
-     * 
      */
     @XmlEnumValue("HotelName")
     HOTEL_NAME("HotelName"),
 
     /**
      * AccomCode of the Hotel
-     *                     
-     * 
      */
     @XmlEnumValue("HotelCode")
     HOTEL_CODE("HotelCode"),
 
     /**
      * AverageFlightTime of the Hotel
-     *                     
-     * 
      */
     @XmlEnumValue("AverageFlightTime")
     AVERAGE_FLIGHT_TIME("AverageFlightTime"),
 
     /**
      * BusTransferTime of the Hotel
-     *                     
-     * 
      */
     @XmlEnumValue("BusTransferTime")
     BUS_TRANSFER_TIME("BusTransferTime"),
@@ -328,17 +281,17 @@ public enum FieldName {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static FieldName fromValue(String v) {
-        for (FieldName c: FieldName.values()) {
+        for (FieldName c : FieldName.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

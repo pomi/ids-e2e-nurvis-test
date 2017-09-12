@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 Customer must pay this cost in destination - not to tour operator
- *             
- * 
+ * Customer must pay this cost in destination - not to tour operator
+ * <p>
+ * <p>
  * <p>Java class for Reservation-MandatoryCostsType-Request complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-MandatoryCostsType-Request">
  *   &lt;complexContent>
@@ -48,28 +47,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-MandatoryCostsType-Request", propOrder = {
-    "amount",
-    "currency"
+        "amount",
+        "currency"
 })
 public class ReservationMandatoryCostsTypeRequest {
 
     @XmlElement(name = "Amount")
-    protected String amount;
+    private String amount;
     @XmlElement(name = "Currency")
-    protected String currency;
+    private String currency;
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAmount() {
         return amount;
@@ -77,11 +72,9 @@ public class ReservationMandatoryCostsTypeRequest {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAmount(String value) {
         this.amount = value;
@@ -89,11 +82,9 @@ public class ReservationMandatoryCostsTypeRequest {
 
     /**
      * Gets the value of the currency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrency() {
         return currency;
@@ -101,11 +92,9 @@ public class ReservationMandatoryCostsTypeRequest {
 
     /**
      * Sets the value of the currency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrency(String value) {
         this.currency = value;

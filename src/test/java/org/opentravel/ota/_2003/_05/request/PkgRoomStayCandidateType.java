@@ -8,20 +8,16 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Used to identify available room products.
- * 
+ * <p>
  * <p>Java class for PkgRoomStayCandidateType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgRoomStayCandidateType">
  *   &lt;complexContent>
@@ -33,28 +29,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgRoomStayCandidateType", propOrder = {
-    "guestCounts"
+        "guestCounts"
 })
 @XmlSeeAlso({
-    RoomStayCandidatesType.RoomStayCandidate.class
+        RoomStayCandidatesType.RoomStayCandidate.class
 })
 public class PkgRoomStayCandidateType {
 
     @XmlElement(name = "GuestCounts", required = true)
-    protected PkgGuestCountType guestCounts;
+    private PkgGuestCountType guestCounts;
 
     /**
      * Gets the value of the guestCounts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgGuestCountType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgGuestCountType }
      */
     public PkgGuestCountType getGuestCounts() {
         return guestCounts;
@@ -62,11 +54,9 @@ public class PkgRoomStayCandidateType {
 
     /**
      * Sets the value of the guestCounts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgGuestCountType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgGuestCountType }
      */
     public void setGuestCounts(PkgGuestCountType value) {
         this.guestCounts = value;

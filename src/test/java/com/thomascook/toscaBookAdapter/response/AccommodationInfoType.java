@@ -8,21 +8,16 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Provides accommodation location, dates and classifications
- * 
+ * <p>
  * <p>Java class for AccommodationInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AccommodationInfoType">
  *   &lt;complexContent>
@@ -59,48 +54,44 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AccommodationInfoType", propOrder = {
-    "property",
-    "resort",
-    "accommodationClass",
-    "sourceIdentification",
-    "contentInfo"
+        "property",
+        "resort",
+        "accommodationClass",
+        "sourceIdentification",
+        "contentInfo"
 })
 @XmlSeeAlso({
-    AccommodationDetailType.class
+        AccommodationDetailType.class
 })
 public class AccommodationInfoType {
 
     @XmlElement(name = "Property", required = true)
-    protected PropertyIdentityType property;
+    private PropertyIdentityType property;
     @XmlElement(name = "Resort")
-    protected Resort resort;
+    private Resort resort;
     @XmlElement(name = "AccommodationClass")
-    protected AccommodationClass accommodationClass;
+    private AccommodationClass accommodationClass;
     @XmlElement(name = "SourceIdentification")
-    protected SourceIdentificationType sourceIdentification;
+    private SourceIdentificationType sourceIdentification;
     @XmlElement(name = "ContentInfo")
-    protected URLType contentInfo;
+    private URLType contentInfo;
     @XmlAttribute(name = "PackageID")
-    protected String packageID;
+    private String packageID;
     @XmlAttribute(name = "MinChildAge")
-    protected Integer minChildAge;
+    private Integer minChildAge;
     @XmlAttribute(name = "MaxChildAge")
-    protected Integer maxChildAge;
+    private Integer maxChildAge;
     @XmlAttribute(name = "BaseMealPlan")
-    protected String baseMealPlan;
+    private String baseMealPlan;
 
     /**
      * Gets the value of the property property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PropertyIdentityType }
-     *     
+     *
+     * @return possible object is
+     * {@link PropertyIdentityType }
      */
     public PropertyIdentityType getProperty() {
         return property;
@@ -108,11 +99,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the property property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PropertyIdentityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PropertyIdentityType }
      */
     public void setProperty(PropertyIdentityType value) {
         this.property = value;
@@ -120,11 +109,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the resort property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Resort }
-     *     
+     *
+     * @return possible object is
+     * {@link Resort }
      */
     public Resort getResort() {
         return resort;
@@ -132,11 +119,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the resort property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Resort }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Resort }
      */
     public void setResort(Resort value) {
         this.resort = value;
@@ -144,11 +129,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the accommodationClass property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AccommodationClass }
-     *     
+     *
+     * @return possible object is
+     * {@link AccommodationClass }
      */
     public AccommodationClass getAccommodationClass() {
         return accommodationClass;
@@ -156,11 +139,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the accommodationClass property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AccommodationClass }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AccommodationClass }
      */
     public void setAccommodationClass(AccommodationClass value) {
         this.accommodationClass = value;
@@ -168,11 +149,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the sourceIdentification property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SourceIdentificationType }
-     *     
+     *
+     * @return possible object is
+     * {@link SourceIdentificationType }
      */
     public SourceIdentificationType getSourceIdentification() {
         return sourceIdentification;
@@ -180,11 +159,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the sourceIdentification property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SourceIdentificationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SourceIdentificationType }
      */
     public void setSourceIdentification(SourceIdentificationType value) {
         this.sourceIdentification = value;
@@ -192,11 +169,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the contentInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link URLType }
-     *     
+     *
+     * @return possible object is
+     * {@link URLType }
      */
     public URLType getContentInfo() {
         return contentInfo;
@@ -204,11 +179,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the contentInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link URLType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link URLType }
      */
     public void setContentInfo(URLType value) {
         this.contentInfo = value;
@@ -216,11 +189,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the packageID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPackageID() {
         return packageID;
@@ -228,11 +199,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the packageID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPackageID(String value) {
         this.packageID = value;
@@ -240,11 +209,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the minChildAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinChildAge() {
         return minChildAge;
@@ -252,11 +219,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the minChildAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinChildAge(Integer value) {
         this.minChildAge = value;
@@ -264,11 +229,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the maxChildAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxChildAge() {
         return maxChildAge;
@@ -276,11 +239,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the maxChildAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxChildAge(Integer value) {
         this.maxChildAge = value;
@@ -288,11 +249,9 @@ public class AccommodationInfoType {
 
     /**
      * Gets the value of the baseMealPlan property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBaseMealPlan() {
         return baseMealPlan;
@@ -300,11 +259,9 @@ public class AccommodationInfoType {
 
     /**
      * Sets the value of the baseMealPlan property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBaseMealPlan(String value) {
         this.baseMealPlan = value;
@@ -313,9 +270,9 @@ public class AccommodationInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -325,29 +282,25 @@ public class AccommodationInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class AccommodationClass {
 
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
         @XmlAttribute(name = "NationalCode")
-        protected String nationalCode;
+        String nationalCode;
         @XmlAttribute(name = "OfficialName")
-        protected String officialName;
+        String officialName;
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -355,11 +308,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;
@@ -367,11 +318,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -379,11 +328,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -391,11 +338,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the nationalCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getNationalCode() {
             return nationalCode;
@@ -403,11 +348,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the nationalCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setNationalCode(String value) {
             this.nationalCode = value;
@@ -415,11 +358,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the officialName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOfficialName() {
             return officialName;
@@ -427,11 +368,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the officialName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOfficialName(String value) {
             this.officialName = value;
@@ -442,9 +381,9 @@ public class AccommodationInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -455,31 +394,27 @@ public class AccommodationInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Resort {
 
         @XmlAttribute(name = "DestinationCode")
-        protected String destinationCode;
+        String destinationCode;
         @XmlAttribute(name = "DestinationLevel")
-        protected DestinationLevelType destinationLevel;
+        DestinationLevelType destinationLevel;
         @XmlAttribute(name = "DestinationName")
-        protected String destinationName;
+        String destinationName;
         @XmlAttribute(name = "ResortCode")
-        protected String resortCode;
+        String resortCode;
         @XmlAttribute(name = "ResortName")
-        protected String resortName;
+        String resortName;
 
         /**
          * Gets the value of the destinationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDestinationCode() {
             return destinationCode;
@@ -487,11 +422,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the destinationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDestinationCode(String value) {
             this.destinationCode = value;
@@ -499,11 +432,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the destinationLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DestinationLevelType }
-         *     
+         *
+         * @return possible object is
+         * {@link DestinationLevelType }
          */
         public DestinationLevelType getDestinationLevel() {
             return destinationLevel;
@@ -511,11 +442,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the destinationLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DestinationLevelType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DestinationLevelType }
          */
         public void setDestinationLevel(DestinationLevelType value) {
             this.destinationLevel = value;
@@ -523,11 +452,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the destinationName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDestinationName() {
             return destinationName;
@@ -535,11 +462,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the destinationName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDestinationName(String value) {
             this.destinationName = value;
@@ -547,11 +472,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the resortCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getResortCode() {
             return resortCode;
@@ -559,11 +482,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the resortCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setResortCode(String value) {
             this.resortCode = value;
@@ -571,11 +492,9 @@ public class AccommodationInfoType {
 
         /**
          * Gets the value of the resortName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getResortName() {
             return resortName;
@@ -583,11 +502,9 @@ public class AccommodationInfoType {
 
         /**
          * Sets the value of the resortName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setResortName(String value) {
             this.resortName = value;
