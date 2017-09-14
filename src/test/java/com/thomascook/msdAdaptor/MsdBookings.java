@@ -1,6 +1,7 @@
 package com.thomascook.msdAdaptor;
 
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Response;
 import com.sun.nio.sctp.IllegalReceiveException;
 import com.thomascook.Config;
@@ -36,11 +37,12 @@ public class MsdBookings {
     private static final String CUSTOMER_GUID_KEY_IN_CUSTOMER_ROLES = "_tc_customer_value";
     private static final String CUSTOMER_BOOKING_ROLES_SERVICE_TITLE = "tc_customerbookingroles";
     private static final String TC_BOOKING_ID_VALUE_KEY = "_tc_bookingid_value";
+    private static final Header FF_HEADER = new Header("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0");
     private static Map<String, String> COOKIES_MAP = new HashMap<>();
 
     private static Logger logger = LoggerFactory.getLogger(MsdBookings.class);
 
-    private MsdBookings() {
+    public MsdBookings() {
         String msdBaseUrl = Config.get().getMsdBaseUrl();
         String msdUserName = Config.get().getMsdLogin();
         String msdUserPassword = Config.get().getMsdPassword();

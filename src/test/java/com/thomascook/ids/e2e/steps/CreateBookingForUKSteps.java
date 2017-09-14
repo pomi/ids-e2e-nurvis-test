@@ -20,9 +20,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.IOException;
 
-class CreateBookingForUKSteps implements En {
+public class CreateBookingForUKSteps implements En {
 
-    private String toscaStaging;
+    private static final String tosca = Config.get().getTosca();
 
     public CreateBookingForUKSteps() {
 
@@ -49,7 +49,7 @@ class CreateBookingForUKSteps implements En {
                     OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, Holder.getPassengers());
                     String toscaAvailabilityRequestXML = CreateBookingUK.createToscaAvailabilityRequestXML(toscaAvailabilityRequest);
                     assert !toscaAvailabilityRequestXML.equals("") : "Tosca availability Request XML is empty";
-                    OTAPkgAvailRS toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(toscaStaging, toscaAvailabilityRequestXML);
+                    OTAPkgAvailRS toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(tosca, toscaAvailabilityRequestXML);
 
                     if (toscaAvailabilityResponse.getSuccess() == null && toscaAvailabilityResponse.getErrors() != null)
                         continue;
