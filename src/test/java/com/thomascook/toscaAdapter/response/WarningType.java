@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Standard way to indicate successful processing of an OTA message, but one in which warnings are generated
- * 
+ * <p>
  * <p>Java class for WarningType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="WarningType">
  *   &lt;simpleContent>
@@ -32,38 +28,33 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WarningType")
 public class WarningType
-    extends FreeTextType
-{
+        extends FreeTextType {
 
     @XmlAttribute(name = "Type", required = true)
-    protected String type;
+    private String type;
     @XmlAttribute(name = "ShortText")
-    protected String shortText;
+    private String shortText;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "DocURL")
     @XmlSchemaType(name = "anyURI")
-    protected String docURL;
+    private String docURL;
     @XmlAttribute(name = "Status")
-    protected String status;
+    private String status;
     @XmlAttribute(name = "Tag")
-    protected String tag;
+    private String tag;
     @XmlAttribute(name = "RecordID")
-    protected String recordID;
+    private String recordID;
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -71,11 +62,9 @@ public class WarningType
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -83,11 +72,9 @@ public class WarningType
 
     /**
      * Gets the value of the shortText property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShortText() {
         return shortText;
@@ -95,11 +82,9 @@ public class WarningType
 
     /**
      * Sets the value of the shortText property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShortText(String value) {
         this.shortText = value;
@@ -107,11 +92,9 @@ public class WarningType
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -119,11 +102,9 @@ public class WarningType
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -131,11 +112,9 @@ public class WarningType
 
     /**
      * Gets the value of the docURL property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocURL() {
         return docURL;
@@ -143,11 +122,9 @@ public class WarningType
 
     /**
      * Sets the value of the docURL property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocURL(String value) {
         this.docURL = value;
@@ -155,11 +132,9 @@ public class WarningType
 
     /**
      * Gets the value of the status property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatus() {
         return status;
@@ -167,11 +142,9 @@ public class WarningType
 
     /**
      * Sets the value of the status property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatus(String value) {
         this.status = value;
@@ -179,11 +152,9 @@ public class WarningType
 
     /**
      * Gets the value of the tag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTag() {
         return tag;
@@ -191,11 +162,9 @@ public class WarningType
 
     /**
      * Sets the value of the tag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTag(String value) {
         this.tag = value;
@@ -203,11 +172,9 @@ public class WarningType
 
     /**
      * Gets the value of the recordID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRecordID() {
         return recordID;
@@ -215,11 +182,9 @@ public class WarningType
 
     /**
      * Sets the value of the recordID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRecordID(String value) {
         this.recordID = value;

@@ -8,21 +8,17 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Object to hold a passengers' seat request
- * 
+ * <p>
  * <p>Java class for SeatRequestType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SeatRequestType">
  *   &lt;complexContent>
@@ -57,38 +53,34 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SeatRequestType", propOrder = {
-    "airline",
-    "tpaExtensions"
+        "airline",
+        "tpaExtensions"
 })
 public class SeatRequestType {
 
     @XmlElement(name = "Airline", required = true)
-    protected CompanyNameType airline;
+    private CompanyNameType airline;
     @XmlElement(name = "TPA_Extensions", required = true)
-    protected TPAExtensions tpaExtensions;
+    private TPAExtensions tpaExtensions;
     @XmlAttribute(name = "FlightNumber")
-    protected String flightNumber;
+    private String flightNumber;
     @XmlAttribute(name = "RowNumber")
-    protected Integer rowNumber;
+    private Integer rowNumber;
     @XmlAttribute(name = "SeatInRow")
-    protected String seatInRow;
+    private String seatInRow;
     @XmlAttribute(name = "FlightRefNumberRPHList")
-    protected String flightRefNumberRPHList;
+    private String flightRefNumberRPHList;
     @XmlAttribute(name = "TravellerRefNumberRPHList")
-    protected String travellerRefNumberRPHList;
+    private String travellerRefNumberRPHList;
 
     /**
      * Gets the value of the airline property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CompanyNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link CompanyNameType }
      */
     public CompanyNameType getAirline() {
         return airline;
@@ -96,11 +88,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the airline property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CompanyNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CompanyNameType }
      */
     public void setAirline(CompanyNameType value) {
         this.airline = value;
@@ -108,11 +98,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TPAExtensions }
-     *     
+     *
+     * @return possible object is
+     * {@link TPAExtensions }
      */
     public TPAExtensions getTPAExtensions() {
         return tpaExtensions;
@@ -120,11 +108,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TPAExtensions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TPAExtensions }
      */
     public void setTPAExtensions(TPAExtensions value) {
         this.tpaExtensions = value;
@@ -132,11 +118,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the flightNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightNumber() {
         return flightNumber;
@@ -144,11 +128,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the flightNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightNumber(String value) {
         this.flightNumber = value;
@@ -156,11 +138,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the rowNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getRowNumber() {
         return rowNumber;
@@ -168,11 +148,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the rowNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setRowNumber(Integer value) {
         this.rowNumber = value;
@@ -180,11 +158,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the seatInRow property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSeatInRow() {
         return seatInRow;
@@ -192,11 +168,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the seatInRow property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSeatInRow(String value) {
         this.seatInRow = value;
@@ -204,11 +178,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the flightRefNumberRPHList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightRefNumberRPHList() {
         return flightRefNumberRPHList;
@@ -216,11 +188,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the flightRefNumberRPHList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightRefNumberRPHList(String value) {
         this.flightRefNumberRPHList = value;
@@ -228,11 +198,9 @@ public class SeatRequestType {
 
     /**
      * Gets the value of the travellerRefNumberRPHList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravellerRefNumberRPHList() {
         return travellerRefNumberRPHList;
@@ -240,11 +208,9 @@ public class SeatRequestType {
 
     /**
      * Sets the value of the travellerRefNumberRPHList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravellerRefNumberRPHList(String value) {
         this.travellerRefNumberRPHList = value;
@@ -253,9 +219,9 @@ public class SeatRequestType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -277,25 +243,21 @@ public class SeatRequestType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "seatInfo"
+            "seatInfo"
     })
     public static class TPAExtensions {
 
         @XmlElement(name = "SeatInfo", required = true)
-        protected SeatInfo seatInfo;
+        SeatInfo seatInfo;
 
         /**
          * Gets the value of the seatInfo property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link SeatInfo }
-         *     
+         *
+         * @return possible object is
+         * {@link SeatInfo }
          */
         public SeatInfo getSeatInfo() {
             return seatInfo;
@@ -303,11 +265,9 @@ public class SeatRequestType {
 
         /**
          * Sets the value of the seatInfo property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link SeatInfo }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link SeatInfo }
          */
         public void setSeatInfo(SeatInfo value) {
             this.seatInfo = value;
@@ -316,9 +276,9 @@ public class SeatRequestType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -330,27 +290,23 @@ public class SeatRequestType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class SeatInfo {
 
             @XmlAttribute(name = "Name")
-            protected String name;
+            String name;
             @XmlAttribute(name = "Amount")
-            protected BigDecimal amount;
+            BigDecimal amount;
             @XmlAttribute(name = "InfoSource")
-            protected String infoSource;
+            String infoSource;
 
             /**
              * Gets the value of the name property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getName() {
                 return name;
@@ -358,11 +314,9 @@ public class SeatRequestType {
 
             /**
              * Sets the value of the name property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setName(String value) {
                 this.name = value;
@@ -370,11 +324,9 @@ public class SeatRequestType {
 
             /**
              * Gets the value of the amount property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -382,11 +334,9 @@ public class SeatRequestType {
 
             /**
              * Sets the value of the amount property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -394,11 +344,9 @@ public class SeatRequestType {
 
             /**
              * Gets the value of the infoSource property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getInfoSource() {
                 return infoSource;
@@ -406,11 +354,9 @@ public class SeatRequestType {
 
             /**
              * Sets the value of the infoSource property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setInfoSource(String value) {
                 this.infoSource = value;

@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaExtrasAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Specifies the aircraft equipment type.
- * 
+ * <p>
  * <p>Java class for EquipmentType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="EquipmentType">
  *   &lt;simpleContent>
@@ -32,29 +28,25 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EquipmentType", propOrder = {
-    "value"
+        "value"
 })
 public class EquipmentType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "AirEquipType", required = true)
-    protected String airEquipType;
+    private String airEquipType;
     @XmlAttribute(name = "ChangeofGauge")
-    protected Boolean changeofGauge;
+    private Boolean changeofGauge;
 
     /**
      * Used for Character Strings, length 0 to 64
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -62,11 +54,9 @@ public class EquipmentType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -74,11 +64,9 @@ public class EquipmentType {
 
     /**
      * Gets the value of the airEquipType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAirEquipType() {
         return airEquipType;
@@ -86,11 +74,9 @@ public class EquipmentType {
 
     /**
      * Sets the value of the airEquipType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAirEquipType(String value) {
         this.airEquipType = value;
@@ -98,11 +84,9 @@ public class EquipmentType {
 
     /**
      * Gets the value of the changeofGauge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isChangeofGauge() {
         if (changeofGauge == null) {
@@ -114,11 +98,9 @@ public class EquipmentType {
 
     /**
      * Sets the value of the changeofGauge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setChangeofGauge(Boolean value) {
         this.changeofGauge = value;

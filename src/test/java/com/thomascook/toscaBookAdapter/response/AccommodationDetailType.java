@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Provides accommodation location, dates and classifications
- * 
+ * <p>
  * <p>Java class for AccommodationDetailType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AccommodationDetailType">
  *   &lt;complexContent>
@@ -36,37 +32,32 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AccommodationDetailType", propOrder = {
-    "facilityChoices"
+        "facilityChoices"
 })
 public class AccommodationDetailType
-    extends AccommodationInfoType
-{
+        extends AccommodationInfoType {
 
     @XmlElement(name = "FacilityChoices")
-    protected FacilityChoicesType facilityChoices;
+    private FacilityChoicesType facilityChoices;
     @XmlAttribute(name = "BedQuantity")
-    protected Integer bedQuantity;
+    private Integer bedQuantity;
     @XmlAttribute(name = "TravelOKFlag")
-    protected Boolean travelOKFlag;
+    private Boolean travelOKFlag;
     @XmlAttribute(name = "Start")
-    protected String start;
+    private String start;
     @XmlAttribute(name = "Duration")
-    protected String duration;
+    private String duration;
     @XmlAttribute(name = "End")
-    protected String end;
+    private String end;
 
     /**
      * Gets the value of the facilityChoices property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FacilityChoicesType }
-     *     
+     *
+     * @return possible object is
+     * {@link FacilityChoicesType }
      */
     public FacilityChoicesType getFacilityChoices() {
         return facilityChoices;
@@ -74,11 +65,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the facilityChoices property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FacilityChoicesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link FacilityChoicesType }
      */
     public void setFacilityChoices(FacilityChoicesType value) {
         this.facilityChoices = value;
@@ -86,11 +75,9 @@ public class AccommodationDetailType
 
     /**
      * Gets the value of the bedQuantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getBedQuantity() {
         return bedQuantity;
@@ -98,11 +85,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the bedQuantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setBedQuantity(Integer value) {
         this.bedQuantity = value;
@@ -110,11 +95,9 @@ public class AccommodationDetailType
 
     /**
      * Gets the value of the travelOKFlag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isTravelOKFlag() {
         return travelOKFlag;
@@ -122,11 +105,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the travelOKFlag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setTravelOKFlag(Boolean value) {
         this.travelOKFlag = value;
@@ -134,11 +115,9 @@ public class AccommodationDetailType
 
     /**
      * Gets the value of the start property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStart() {
         return start;
@@ -146,11 +125,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the start property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStart(String value) {
         this.start = value;
@@ -158,11 +135,9 @@ public class AccommodationDetailType
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDuration() {
         return duration;
@@ -170,11 +145,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -182,11 +155,9 @@ public class AccommodationDetailType
 
     /**
      * Gets the value of the end property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnd() {
         return end;
@@ -194,11 +165,9 @@ public class AccommodationDetailType
 
     /**
      * Sets the value of the end property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnd(String value) {
         this.end = value;

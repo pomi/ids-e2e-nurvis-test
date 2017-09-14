@@ -15,11 +15,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Returning an empty element of this type indicates the successful processing of an OpenTravel message. This is used in conjunction with the Warning Type to report any warnings or business errors.
- * 
+ * <p>
  * <p>Java class for SuccessType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SuccessType">
  *   &lt;complexContent>
@@ -28,8 +28,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SuccessType")

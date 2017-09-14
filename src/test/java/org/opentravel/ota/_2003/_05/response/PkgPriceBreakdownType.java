@@ -8,20 +8,16 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for PkgPriceBreakdownType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgPriceBreakdownType">
  *   &lt;complexContent>
@@ -31,30 +27,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgPriceBreakdownType")
 public class PkgPriceBreakdownType {
 
     @XmlAttribute(name = "Amount", required = true)
-    protected BigDecimal amount;
+    private BigDecimal amount;
     @XmlAttribute(name = "OriginalPrice")
-    protected BigDecimal originalPrice;
+    private BigDecimal originalPrice;
     @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
+    private String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    private BigInteger decimalPlaces;
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getAmount() {
         return amount;
@@ -62,11 +54,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setAmount(BigDecimal value) {
         this.amount = value;
@@ -74,11 +64,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Gets the value of the originalPrice property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getOriginalPrice() {
         return originalPrice;
@@ -86,11 +74,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Sets the value of the originalPrice property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setOriginalPrice(BigDecimal value) {
         this.originalPrice = value;
@@ -98,11 +84,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -110,11 +94,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -122,11 +104,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -134,11 +114,9 @@ public class PkgPriceBreakdownType {
 
     /**
      * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;

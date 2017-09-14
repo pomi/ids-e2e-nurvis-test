@@ -8,22 +8,18 @@
 
 package org.opentravel.ota._2003._05.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * The Concept for the
- *                 package.
- *             
- * 
+ * package.
+ * <p>
+ * <p>
  * <p>Java class for ConceptType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ConceptType">
  *   &lt;complexContent>
@@ -37,29 +33,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConceptType", propOrder = {
-    "description"
+        "description"
 })
 public class ConceptType {
 
     @XmlElement(name = "Description", required = true)
-    protected String description;
+    private String description;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "Logo")
-    protected String logo;
+    private String logo;
 
     /**
      * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -67,11 +59,9 @@ public class ConceptType {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -79,11 +69,9 @@ public class ConceptType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -91,11 +79,9 @@ public class ConceptType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -103,11 +89,9 @@ public class ConceptType {
 
     /**
      * Gets the value of the logo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLogo() {
         return logo;
@@ -115,11 +99,9 @@ public class ConceptType {
 
     /**
      * Sets the value of the logo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLogo(String value) {
         this.logo = value;

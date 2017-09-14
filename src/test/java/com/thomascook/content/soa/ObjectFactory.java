@@ -15,34 +15,31 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.content.soa package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.content.soa package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _Contents_QNAME = new QName("http://www.thomascook.com/content/soa", "Contents");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.content.soa
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link Request }
-     * 
      */
     public Request createRequest() {
         return new Request();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.EcwNurvis }
-     * 
      */
     public Request.EcwNurvis createRequestEcwNurvis() {
         return new Request.EcwNurvis();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.Flexitrips }
-     * 
      */
     public Request.Flexitrips createRequestFlexitrips() {
         return new Request.Flexitrips();
@@ -66,7 +61,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.GIATA }
-     * 
      */
     public Request.GIATA createRequestGIATA() {
         return new Request.GIATA();
@@ -74,7 +68,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.TOS }
-     * 
      */
     public Request.TOS createRequestTOS() {
         return new Request.TOS();
@@ -82,7 +75,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.H4U }
-     * 
      */
     public Request.H4U createRequestH4U() {
         return new Request.H4U();
@@ -90,7 +82,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContentsType }
-     * 
      */
     public ContentsType createContentsType() {
         return new ContentsType();
@@ -98,7 +89,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SrpSearchResult }
-     * 
      */
     public SrpSearchResult createSrpSearchResult() {
         return new SrpSearchResult();
@@ -106,7 +96,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EcwNurvis }
-     * 
      */
     public EcwNurvis createEcwNurvis() {
         return new EcwNurvis();
@@ -114,7 +103,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RoomType }
-     * 
      */
     public RoomType createRoomType() {
         return new RoomType();
@@ -122,7 +110,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link H4UHotel }
-     * 
      */
     public H4UHotel createH4UHotel() {
         return new H4UHotel();
@@ -130,7 +117,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContentType }
-     * 
      */
     public ContentType createContentType() {
         return new ContentType();
@@ -138,7 +124,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FlexiTripHotel }
-     * 
      */
     public FlexiTripHotel createFlexiTripHotel() {
         return new FlexiTripHotel();
@@ -146,7 +131,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TOSPackage }
-     * 
      */
     public TOSPackage createTOSPackage() {
         return new TOSPackage();
@@ -154,7 +138,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BasePackage }
-     * 
      */
     public BasePackage createBasePackage() {
         return new BasePackage();
@@ -162,7 +145,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GIATAPackage }
-     * 
      */
     public GIATAPackage createGIATAPackage() {
         return new GIATAPackage();
@@ -170,7 +152,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.EcwNurvis.Package }
-     * 
      */
     public Request.EcwNurvis.Package createRequestEcwNurvisPackage() {
         return new Request.EcwNurvis.Package();
@@ -178,7 +159,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.Flexitrips.Hotel }
-     * 
      */
     public Request.Flexitrips.Hotel createRequestFlexitripsHotel() {
         return new Request.Flexitrips.Hotel();
@@ -186,7 +166,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.GIATA.Package }
-     * 
      */
     public Request.GIATA.Package createRequestGIATAPackage() {
         return new Request.GIATA.Package();
@@ -194,7 +173,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.TOS.Package }
-     * 
      */
     public Request.TOS.Package createRequestTOSPackage() {
         return new Request.TOS.Package();
@@ -202,7 +180,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Request.H4U.Hotel }
-     * 
      */
     public Request.H4U.Hotel createRequestH4UHotel() {
         return new Request.H4U.Hotel();
@@ -210,7 +187,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContentsType.Content }
-     * 
      */
     public ContentsType.Content createContentsTypeContent() {
         return new ContentsType.Content();
@@ -218,11 +194,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ContentsType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/soa", name = "Contents")
     public JAXBElement<ContentsType> createContents(ContentsType value) {
-        return new JAXBElement<ContentsType>(_Contents_QNAME, ContentsType.class, null, value);
+        return new JAXBElement<>(_Contents_QNAME, ContentsType.class, null, value);
     }
 
 }

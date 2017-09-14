@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * This is an extension of CompanyNameType to include a FlightNumber.
- * 
+ * <p>
  * <p>Java class for OperatingAirlineType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="OperatingAirlineType">
  *   &lt;simpleContent>
@@ -30,25 +30,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OperatingAirlineType")
 public class OperatingAirlineType
-    extends CompanyNameType
-{
+        extends CompanyNameType {
 
     @XmlAttribute(name = "FlightNumber")
-    protected String flightNumber;
+    private String flightNumber;
 
     /**
      * Gets the value of the flightNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFlightNumber() {
         return flightNumber;
@@ -56,11 +51,9 @@ public class OperatingAirlineType
 
     /**
      * Sets the value of the flightNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFlightNumber(String value) {
         this.flightNumber = value;

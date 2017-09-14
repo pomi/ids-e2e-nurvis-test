@@ -8,18 +8,14 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for GIATAPackage complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GIATAPackage">
  *   &lt;complexContent>
@@ -32,34 +28,29 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GIATAPackage")
 @XmlSeeAlso({
-    Request.GIATA.Package.class
+        Request.GIATA.Package.class
 })
 public class GIATAPackage
-    extends BasePackage
-{
+        extends BasePackage {
 
     @XmlAttribute(name = "GIATAID")
-    protected String giataid;
+    private String giataid;
     @XmlAttribute(name = "IffCode")
-    protected String iffCode;
+    private String iffCode;
     @XmlAttribute(name = "productType")
-    protected String productType;
+    private String productType;
     @XmlAttribute(name = "brand", required = true)
-    protected String brand;
+    private String brand;
 
     /**
      * Gets the value of the giataid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getGIATAID() {
         return giataid;
@@ -67,11 +58,9 @@ public class GIATAPackage
 
     /**
      * Sets the value of the giataid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setGIATAID(String value) {
         this.giataid = value;
@@ -79,11 +68,9 @@ public class GIATAPackage
 
     /**
      * Gets the value of the iffCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIffCode() {
         return iffCode;
@@ -91,11 +78,9 @@ public class GIATAPackage
 
     /**
      * Sets the value of the iffCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIffCode(String value) {
         this.iffCode = value;
@@ -103,11 +88,9 @@ public class GIATAPackage
 
     /**
      * Gets the value of the productType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProductType() {
         return productType;
@@ -115,11 +98,9 @@ public class GIATAPackage
 
     /**
      * Sets the value of the productType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProductType(String value) {
         this.productType = value;
@@ -127,11 +108,9 @@ public class GIATAPackage
 
     /**
      * Gets the value of the brand property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrand() {
         return brand;
@@ -139,11 +118,9 @@ public class GIATAPackage
 
     /**
      * Sets the value of the brand property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrand(String value) {
         this.brand = value;

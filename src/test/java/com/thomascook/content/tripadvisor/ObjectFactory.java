@@ -15,34 +15,31 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.content.tripadvisor package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.content.tripadvisor package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _TripadvisorOverview_QNAME = new QName("http://www.thomascook.com/content/tripadvisor", "TripadvisorOverview");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.content.tripadvisor
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link TripadvisorOverviewType }
-     * 
      */
     public TripadvisorOverviewType createTripadvisorOverviewType() {
         return new TripadvisorOverviewType();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Tripadvisor }
-     * 
      */
     public Tripadvisor createTripadvisor() {
         return new Tripadvisor();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TripadvisorOverviewType.Properties }
-     * 
      */
     public TripadvisorOverviewType.Properties createTripadvisorOverviewTypeProperties() {
         return new TripadvisorOverviewType.Properties();
@@ -66,11 +61,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link TripadvisorOverviewType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/tripadvisor", name = "TripadvisorOverview")
     public JAXBElement<TripadvisorOverviewType> createTripadvisorOverview(TripadvisorOverviewType value) {
-        return new JAXBElement<TripadvisorOverviewType>(_TripadvisorOverview_QNAME, TripadvisorOverviewType.class, null, value);
+        return new JAXBElement<>(_TripadvisorOverview_QNAME, TripadvisorOverviewType.class, null, value);
     }
 
 }

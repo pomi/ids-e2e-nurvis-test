@@ -8,25 +8,20 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Gives a total price and prices by traveler type for a room occupancy combination e.g. 2 adults and 2 children
- * 
+ * <p>
  * <p>Java class for RoomPriceType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomPriceType">
  *   &lt;complexContent>
@@ -50,93 +45,85 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomPriceType", propOrder = {
-    "guestCounts",
-    "itemPrice",
-    "profilePrice"
+        "guestCounts",
+        "itemPrice",
+        "profilePrice"
 })
 public class RoomPriceType {
 
     @XmlElement(name = "GuestCounts")
-    protected List<GuestCountType> guestCounts;
+    private List<GuestCountType> guestCounts;
     @XmlElement(name = "ItemPrice")
-    protected List<CostingItemType> itemPrice;
+    private List<CostingItemType> itemPrice;
     @XmlElement(name = "ProfilePrice")
-    protected ProfilePrice profilePrice;
+    private ProfilePrice profilePrice;
     @XmlAttribute(name = "RoomRPH")
-    protected String roomRPH;
+    private String roomRPH;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
 
     /**
      * Gets the value of the guestCounts property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the guestCounts property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGuestCounts().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GuestCountType }
-     * 
-     * 
      */
     public List<GuestCountType> getGuestCounts() {
         if (guestCounts == null) {
-            guestCounts = new ArrayList<GuestCountType>();
+            guestCounts = new ArrayList<>();
         }
         return this.guestCounts;
     }
 
     /**
      * Gets the value of the itemPrice property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the itemPrice property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getItemPrice().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CostingItemType }
-     * 
-     * 
      */
     public List<CostingItemType> getItemPrice() {
         if (itemPrice == null) {
-            itemPrice = new ArrayList<CostingItemType>();
+            itemPrice = new ArrayList<>();
         }
         return this.itemPrice;
     }
 
     /**
      * Gets the value of the profilePrice property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ProfilePrice }
-     *     
+     *
+     * @return possible object is
+     * {@link ProfilePrice }
      */
     public ProfilePrice getProfilePrice() {
         return profilePrice;
@@ -144,11 +131,9 @@ public class RoomPriceType {
 
     /**
      * Sets the value of the profilePrice property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ProfilePrice }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ProfilePrice }
      */
     public void setProfilePrice(ProfilePrice value) {
         this.profilePrice = value;
@@ -156,11 +141,9 @@ public class RoomPriceType {
 
     /**
      * Gets the value of the roomRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomRPH() {
         return roomRPH;
@@ -168,11 +151,9 @@ public class RoomPriceType {
 
     /**
      * Sets the value of the roomRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomRPH(String value) {
         this.roomRPH = value;
@@ -180,11 +161,9 @@ public class RoomPriceType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -192,11 +171,9 @@ public class RoomPriceType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -205,9 +182,9 @@ public class RoomPriceType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -217,28 +194,24 @@ public class RoomPriceType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ProfilePrice {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -246,11 +219,9 @@ public class RoomPriceType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -258,11 +229,9 @@ public class RoomPriceType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -270,11 +239,9 @@ public class RoomPriceType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -282,11 +249,9 @@ public class RoomPriceType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -294,11 +259,9 @@ public class RoomPriceType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;

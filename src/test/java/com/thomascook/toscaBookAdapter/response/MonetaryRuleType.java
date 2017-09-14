@@ -8,24 +8,19 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * This defines the information pertaining to rules and amounts associated with these rules.
- * 
+ * <p>
  * <p>Java class for MonetaryRuleType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="MonetaryRuleType">
  *   &lt;simpleContent>
@@ -39,41 +34,37 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MonetaryRuleType", propOrder = {
-    "value"
+        "value"
 })
 public class MonetaryRuleType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "RuleType", required = true)
-    protected String ruleType;
+    private String ruleType;
     @XmlAttribute(name = "Percent")
-    protected BigDecimal percent;
+    private BigDecimal percent;
     @XmlAttribute(name = "DateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dateTime;
+    private XMLGregorianCalendar dateTime;
     @XmlAttribute(name = "PaymentType")
-    protected String paymentType;
+    private String paymentType;
     @XmlAttribute(name = "Amount")
-    protected BigDecimal amount;
+    private BigDecimal amount;
     @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
+    private String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    private BigInteger decimalPlaces;
 
     /**
      * Used for Character Strings, length 0 to 255
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -81,11 +72,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -93,11 +82,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the ruleType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRuleType() {
         return ruleType;
@@ -105,11 +92,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the ruleType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRuleType(String value) {
         this.ruleType = value;
@@ -117,11 +102,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the percent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getPercent() {
         return percent;
@@ -129,11 +112,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the percent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setPercent(BigDecimal value) {
         this.percent = value;
@@ -141,11 +122,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the dateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDateTime() {
         return dateTime;
@@ -153,11 +132,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the dateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDateTime(XMLGregorianCalendar value) {
         this.dateTime = value;
@@ -165,11 +142,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the paymentType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPaymentType() {
         return paymentType;
@@ -177,11 +152,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the paymentType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPaymentType(String value) {
         this.paymentType = value;
@@ -189,11 +162,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getAmount() {
         return amount;
@@ -201,11 +172,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setAmount(BigDecimal value) {
         this.amount = value;
@@ -213,11 +182,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -225,11 +192,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -237,11 +202,9 @@ public class MonetaryRuleType {
 
     /**
      * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -249,11 +212,9 @@ public class MonetaryRuleType {
 
     /**
      * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;

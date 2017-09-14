@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 Contains 1 room-facility with code and description
- *             
- * 
+ * Contains 1 room-facility with code and description
+ * <p>
+ * <p>
  * <p>Java class for Reservation-RoomFacilType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-RoomFacilType-Response">
  *   &lt;complexContent>
@@ -47,28 +46,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-RoomFacilType-Response", propOrder = {
-    "facilCode",
-    "facilDesc"
+        "facilCode",
+        "facilDesc"
 })
 public class ReservationRoomFacilTypeResponse {
 
     @XmlElement(name = "FacilCode", required = true)
-    protected String facilCode;
+    private String facilCode;
     @XmlElement(name = "FacilDesc")
-    protected String facilDesc;
+    private String facilDesc;
 
     /**
      * Gets the value of the facilCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFacilCode() {
         return facilCode;
@@ -76,11 +71,9 @@ public class ReservationRoomFacilTypeResponse {
 
     /**
      * Sets the value of the facilCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFacilCode(String value) {
         this.facilCode = value;
@@ -88,11 +81,9 @@ public class ReservationRoomFacilTypeResponse {
 
     /**
      * Gets the value of the facilDesc property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFacilDesc() {
         return facilDesc;
@@ -100,11 +91,9 @@ public class ReservationRoomFacilTypeResponse {
 
     /**
      * Sets the value of the facilDesc property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFacilDesc(String value) {
         this.facilDesc = value;

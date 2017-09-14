@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for RoomType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomType">
  *   &lt;complexContent>
@@ -28,23 +28,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomType")
 public class RoomType {
 
     @XmlAttribute(name = "RoomCode", required = true)
-    protected String roomCode;
+    private String roomCode;
 
     /**
      * Gets the value of the roomCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomCode() {
         return roomCode;
@@ -52,11 +48,9 @@ public class RoomType {
 
     /**
      * Sets the value of the roomCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomCode(String value) {
         this.roomCode = value;

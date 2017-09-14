@@ -8,28 +8,23 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * A list of all the items making up a costed booking
- * 
+ * <p>
  * <p>Java class for PkgInvoiceDetail complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgInvoiceDetail">
  *   &lt;complexContent>
@@ -136,52 +131,48 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgInvoiceDetail", propOrder = {
-    "costingItems",
-    "grossAmount",
-    "depositAmount",
-    "discountAmount",
-    "agentCommission",
-    "netAmount",
-    "depositAmounts",
-    "taxItems",
-    "balanceDueAmount",
-    "amountReceived"
+        "costingItems",
+        "grossAmount",
+        "depositAmount",
+        "discountAmount",
+        "agentCommission",
+        "netAmount",
+        "depositAmounts",
+        "taxItems",
+        "balanceDueAmount",
+        "amountReceived"
 })
 public class PkgInvoiceDetail {
 
     @XmlElement(name = "CostingItems")
-    protected CostingItems costingItems;
+    private CostingItems costingItems;
     @XmlElement(name = "GrossAmount")
-    protected GrossAmount grossAmount;
+    private GrossAmount grossAmount;
     @XmlElement(name = "DepositAmount")
-    protected DepositAmount depositAmount;
+    private DepositAmount depositAmount;
     @XmlElement(name = "DiscountAmount")
-    protected DiscountAmount discountAmount;
+    private DiscountAmount discountAmount;
     @XmlElement(name = "AgentCommission")
-    protected List<AgentCommission> agentCommission;
+    private List<AgentCommission> agentCommission;
     @XmlElement(name = "NetAmount")
-    protected NetAmount netAmount;
+    private NetAmount netAmount;
     @XmlElement(name = "DepositAmounts")
-    protected DepositAmounts depositAmounts;
+    private DepositAmounts depositAmounts;
     @XmlElement(name = "TaxItems")
-    protected TaxesType taxItems;
+    private TaxesType taxItems;
     @XmlElement(name = "BalanceDueAmount")
-    protected BalanceDueAmount balanceDueAmount;
+    private BalanceDueAmount balanceDueAmount;
     @XmlElement(name = "AmountReceived")
-    protected AmountReceived amountReceived;
+    private AmountReceived amountReceived;
 
     /**
      * Gets the value of the costingItems property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CostingItems }
-     *     
+     *
+     * @return possible object is
+     * {@link CostingItems }
      */
     public CostingItems getCostingItems() {
         return costingItems;
@@ -189,11 +180,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the costingItems property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CostingItems }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CostingItems }
      */
     public void setCostingItems(CostingItems value) {
         this.costingItems = value;
@@ -201,11 +190,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the grossAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GrossAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link GrossAmount }
      */
     public GrossAmount getGrossAmount() {
         return grossAmount;
@@ -213,11 +200,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the grossAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GrossAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GrossAmount }
      */
     public void setGrossAmount(GrossAmount value) {
         this.grossAmount = value;
@@ -225,11 +210,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the depositAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DepositAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link DepositAmount }
      */
     public DepositAmount getDepositAmount() {
         return depositAmount;
@@ -237,11 +220,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the depositAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DepositAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DepositAmount }
      */
     public void setDepositAmount(DepositAmount value) {
         this.depositAmount = value;
@@ -249,11 +230,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the discountAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiscountAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link DiscountAmount }
      */
     public DiscountAmount getDiscountAmount() {
         return discountAmount;
@@ -261,11 +240,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the discountAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiscountAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiscountAmount }
      */
     public void setDiscountAmount(DiscountAmount value) {
         this.discountAmount = value;
@@ -273,40 +250,36 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the agentCommission property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the agentCommission property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAgentCommission().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AgentCommission }
-     * 
-     * 
      */
     public List<AgentCommission> getAgentCommission() {
         if (agentCommission == null) {
-            agentCommission = new ArrayList<AgentCommission>();
+            agentCommission = new ArrayList<>();
         }
         return this.agentCommission;
     }
 
     /**
      * Gets the value of the netAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NetAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link NetAmount }
      */
     public NetAmount getNetAmount() {
         return netAmount;
@@ -314,11 +287,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the netAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NetAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NetAmount }
      */
     public void setNetAmount(NetAmount value) {
         this.netAmount = value;
@@ -326,11 +297,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the depositAmounts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DepositAmounts }
-     *     
+     *
+     * @return possible object is
+     * {@link DepositAmounts }
      */
     public DepositAmounts getDepositAmounts() {
         return depositAmounts;
@@ -338,11 +307,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the depositAmounts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DepositAmounts }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DepositAmounts }
      */
     public void setDepositAmounts(DepositAmounts value) {
         this.depositAmounts = value;
@@ -350,11 +317,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the taxItems property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TaxesType }
-     *     
+     *
+     * @return possible object is
+     * {@link TaxesType }
      */
     public TaxesType getTaxItems() {
         return taxItems;
@@ -362,11 +327,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the taxItems property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TaxesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TaxesType }
      */
     public void setTaxItems(TaxesType value) {
         this.taxItems = value;
@@ -374,11 +337,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the balanceDueAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BalanceDueAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link BalanceDueAmount }
      */
     public BalanceDueAmount getBalanceDueAmount() {
         return balanceDueAmount;
@@ -386,11 +347,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the balanceDueAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BalanceDueAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BalanceDueAmount }
      */
     public void setBalanceDueAmount(BalanceDueAmount value) {
         this.balanceDueAmount = value;
@@ -398,11 +357,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Gets the value of the amountReceived property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AmountReceived }
-     *     
+     *
+     * @return possible object is
+     * {@link AmountReceived }
      */
     public AmountReceived getAmountReceived() {
         return amountReceived;
@@ -410,11 +367,9 @@ public class PkgInvoiceDetail {
 
     /**
      * Sets the value of the amountReceived property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AmountReceived }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AmountReceived }
      */
     public void setAmountReceived(AmountReceived value) {
         this.amountReceived = value;
@@ -423,9 +378,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -435,35 +390,31 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class AgentCommission {
 
         @XmlAttribute(name = "Description")
-        protected String description;
+        String description;
         @XmlAttribute(name = "Rate")
-        protected BigDecimal rate;
+        BigDecimal rate;
         @XmlAttribute(name = "CommissionType")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String commissionType;
+        String commissionType;
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDescription() {
             return description;
@@ -471,11 +422,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDescription(String value) {
             this.description = value;
@@ -483,11 +432,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the rate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getRate() {
             return rate;
@@ -495,11 +442,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the rate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setRate(BigDecimal value) {
             this.rate = value;
@@ -507,11 +452,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the commissionType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCommissionType() {
             return commissionType;
@@ -519,11 +462,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the commissionType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCommissionType(String value) {
             this.commissionType = value;
@@ -531,11 +472,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -543,11 +482,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -555,11 +492,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -567,11 +502,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -579,11 +512,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -591,11 +522,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -606,9 +535,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -618,28 +547,24 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class AmountReceived {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -647,11 +572,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -659,11 +582,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -671,11 +592,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -683,11 +602,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -695,11 +612,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -710,9 +625,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -723,8 +638,6 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -732,22 +645,20 @@ public class PkgInvoiceDetail {
 
         @XmlAttribute(name = "PaymentDueDate")
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar paymentDueDate;
+        XMLGregorianCalendar paymentDueDate;
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the paymentDueDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getPaymentDueDate() {
             return paymentDueDate;
@@ -755,11 +666,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the paymentDueDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setPaymentDueDate(XMLGregorianCalendar value) {
             this.paymentDueDate = value;
@@ -767,11 +676,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -779,11 +686,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -791,11 +696,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -803,11 +706,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -815,11 +716,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -827,11 +726,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -842,9 +739,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -856,43 +753,39 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "costingItem"
+            "costingItem"
     })
     public static class CostingItems {
 
         @XmlElement(name = "CostingItem", required = true)
-        protected List<CostingItemType> costingItem;
+        List<CostingItemType> costingItem;
 
         /**
          * Gets the value of the costingItem property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the costingItem property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCostingItem().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link CostingItemType }
-         * 
-         * 
          */
         public List<CostingItemType> getCostingItem() {
             if (costingItem == null) {
-                costingItem = new ArrayList<CostingItemType>();
+                costingItem = new ArrayList<>();
             }
             return this.costingItem;
         }
@@ -902,9 +795,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -914,28 +807,24 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class DepositAmount {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -943,11 +832,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -955,11 +842,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -967,11 +852,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -979,11 +862,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -991,11 +872,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -1006,9 +885,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1028,43 +907,39 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "depositAmount"
+            "depositAmount"
     })
     public static class DepositAmounts {
 
         @XmlElement(name = "DepositAmount", required = true)
-        protected List<DepositAmount> depositAmount;
+        List<DepositAmount> depositAmount;
 
         /**
          * Gets the value of the depositAmount property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the depositAmount property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDepositAmount().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DepositAmount }
-         * 
-         * 
          */
         public List<DepositAmount> getDepositAmount() {
             if (depositAmount == null) {
-                depositAmount = new ArrayList<DepositAmount>();
+                depositAmount = new ArrayList<>();
             }
             return this.depositAmount;
         }
@@ -1072,9 +947,9 @@ public class PkgInvoiceDetail {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1084,28 +959,24 @@ public class PkgInvoiceDetail {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class DepositAmount {
 
             @XmlAttribute(name = "Amount")
-            protected BigDecimal amount;
+            BigDecimal amount;
             @XmlAttribute(name = "CurrencyCode")
-            protected String currencyCode;
+            String currencyCode;
             @XmlAttribute(name = "DecimalPlaces")
             @XmlSchemaType(name = "nonNegativeInteger")
-            protected BigInteger decimalPlaces;
+            BigInteger decimalPlaces;
 
             /**
              * Gets the value of the amount property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -1113,11 +984,9 @@ public class PkgInvoiceDetail {
 
             /**
              * Sets the value of the amount property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -1125,11 +994,9 @@ public class PkgInvoiceDetail {
 
             /**
              * Gets the value of the currencyCode property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -1137,11 +1004,9 @@ public class PkgInvoiceDetail {
 
             /**
              * Sets the value of the currencyCode property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -1149,11 +1014,9 @@ public class PkgInvoiceDetail {
 
             /**
              * Gets the value of the decimalPlaces property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @return possible object is
+             * {@link BigInteger }
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1161,11 +1024,9 @@ public class PkgInvoiceDetail {
 
             /**
              * Sets the value of the decimalPlaces property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigInteger }
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1178,9 +1039,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1190,28 +1051,24 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class DiscountAmount {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -1219,11 +1076,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -1231,11 +1086,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -1243,11 +1096,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -1255,11 +1106,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -1267,11 +1116,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -1282,9 +1129,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1294,28 +1141,24 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class GrossAmount {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -1323,11 +1166,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -1335,11 +1176,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -1347,11 +1186,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -1359,11 +1196,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -1371,11 +1206,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -1386,9 +1219,9 @@ public class PkgInvoiceDetail {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1399,8 +1232,6 @@ public class PkgInvoiceDetail {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1408,22 +1239,20 @@ public class PkgInvoiceDetail {
 
         @XmlAttribute(name = "PaymentDueDate")
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar paymentDueDate;
+        XMLGregorianCalendar paymentDueDate;
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the paymentDueDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getPaymentDueDate() {
             return paymentDueDate;
@@ -1431,11 +1260,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the paymentDueDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setPaymentDueDate(XMLGregorianCalendar value) {
             this.paymentDueDate = value;
@@ -1443,11 +1270,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -1455,11 +1280,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -1467,11 +1290,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -1479,11 +1300,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -1491,11 +1310,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -1503,11 +1320,9 @@ public class PkgInvoiceDetail {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;

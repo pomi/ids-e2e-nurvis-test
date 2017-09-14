@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for AirTripType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -35,7 +35,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "AirTripType")
 @XmlEnum
@@ -44,77 +43,66 @@ public enum AirTripType {
 
     /**
      * Identifies a one way trip type.
-     * 
      */
     @XmlEnumValue("OneWay")
     ONE_WAY("OneWay"),
 
     /**
      * Cannot be doubled to create a roundtrip.
-     * 
      */
     @XmlEnumValue("OneWayOnly")
     ONE_WAY_ONLY("OneWayOnly"),
 
     /**
      * Identifies a return trip type.
-     * 
      */
     @XmlEnumValue("Return")
     RETURN("Return"),
 
     /**
-     *  Identifies a circle trip type.
-     * 
+     * Identifies a circle trip type.
      */
     @XmlEnumValue("Circle")
     CIRCLE("Circle"),
 
     /**
-     *  Identifies an open jaw trip type.
-     * 
+     * Identifies an open jaw trip type.
      */
     @XmlEnumValue("OpenJaw")
     OPEN_JAW("OpenJaw"),
 
     /**
-     *  Identifies an other trip type.
-     * 
+     * Identifies an other trip type.
      */
     @XmlEnumValue("Other")
     OTHER("Other"),
 
     /**
      * The direction for the fare is outbound.
-     * 
      */
     @XmlEnumValue("Outbound")
     OUTBOUND("Outbound"),
 
     /**
      * The direction for the fare is outbound seasonal roundtrip.
-     * 
      */
     @XmlEnumValue("OutboundSeasonRoundtrip")
     OUTBOUND_SEASON_ROUNDTRIP("OutboundSeasonRoundtrip"),
 
     /**
      * There is no direction specified for the fare.
-     * 
      */
     @XmlEnumValue("Non-directional")
     NON_DIRECTIONAL("Non-directional"),
 
     /**
      * The direction for the fare is inbound.
-     * 
      */
     @XmlEnumValue("Inbound")
     INBOUND("Inbound"),
 
     /**
      * Identifies travel from one point to another point and return to the original point. (The outbound fare shall be used also for the inbound fare component for the purpose of determing if the pricing unit is a round trip).
-     * 
      */
     @XmlEnumValue("Roundtrip")
     ROUNDTRIP("Roundtrip");
@@ -124,17 +112,17 @@ public enum AirTripType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static AirTripType fromValue(String v) {
-        for (AirTripType c: AirTripType.values()) {
+        for (AirTripType c : AirTripType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

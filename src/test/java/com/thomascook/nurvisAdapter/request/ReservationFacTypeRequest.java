@@ -8,24 +8,19 @@
 
 package com.thomascook.nurvisAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 To store bookable information about insurance or extra-service
- *             
- * 
+ * To store bookable information about insurance or extra-service
+ * <p>
+ * <p>
  * <p>Java class for Reservation-FacType-Request complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-FacType-Request">
  *   &lt;complexContent>
@@ -101,54 +96,50 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-FacType-Request", propOrder = {
-    "startDate",
-    "duration",
-    "code",
-    "adults",
-    "children",
-    "infants",
-    "persons",
-    "faq"
+        "startDate",
+        "duration",
+        "code",
+        "adults",
+        "children",
+        "infants",
+        "persons",
+        "faq"
 })
 public class ReservationFacTypeRequest {
 
     @XmlElement(name = "StartDate", required = true)
-    protected String startDate;
+    private String startDate;
     @XmlElement(name = "Duration", required = true)
-    protected String duration;
+    private String duration;
     @XmlElement(name = "Code", required = true)
-    protected String code;
+    private String code;
     @XmlElement(name = "Adults")
-    protected String adults;
+    private String adults;
     @XmlElement(name = "Children")
-    protected String children;
+    private String children;
     @XmlElement(name = "Infants")
-    protected String infants;
+    private String infants;
     @XmlElement(name = "Persons")
-    protected ReservationPersonsTypeRequest persons;
+    private ReservationPersonsTypeRequest persons;
     @XmlElement(name = "Faq")
-    protected List<ReservationFaqTypeRequest> faq;
+    private List<ReservationFaqTypeRequest> faq;
     @XmlAttribute(name = "ServiceType", required = true)
-    protected String serviceType;
+    private String serviceType;
     @XmlAttribute(name = "Key")
-    protected String key;
+    private String key;
     @XmlAttribute(name = "SegRef", required = true)
-    protected String segRef;
+    private String segRef;
     @XmlAttribute(name = "ConfirmRQ")
-    protected String confirmRQ;
+    private String confirmRQ;
 
     /**
      * Gets the value of the startDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStartDate() {
         return startDate;
@@ -156,11 +147,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the startDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStartDate(String value) {
         this.startDate = value;
@@ -168,11 +157,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDuration() {
         return duration;
@@ -180,11 +167,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -192,11 +177,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -204,11 +187,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -216,11 +197,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the adults property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAdults() {
         return adults;
@@ -228,11 +207,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the adults property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAdults(String value) {
         this.adults = value;
@@ -240,11 +217,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the children property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getChildren() {
         return children;
@@ -252,11 +227,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the children property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setChildren(String value) {
         this.children = value;
@@ -264,11 +237,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the infants property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInfants() {
         return infants;
@@ -276,11 +247,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the infants property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInfants(String value) {
         this.infants = value;
@@ -288,11 +257,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the persons property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationPersonsTypeRequest }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationPersonsTypeRequest }
      */
     public ReservationPersonsTypeRequest getPersons() {
         return persons;
@@ -300,11 +267,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the persons property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationPersonsTypeRequest }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationPersonsTypeRequest }
      */
     public void setPersons(ReservationPersonsTypeRequest value) {
         this.persons = value;
@@ -312,40 +277,36 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the faq property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the faq property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFaq().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFaqTypeRequest }
-     * 
-     * 
      */
     public List<ReservationFaqTypeRequest> getFaq() {
         if (faq == null) {
-            faq = new ArrayList<ReservationFaqTypeRequest>();
+            faq = new ArrayList<>();
         }
         return this.faq;
     }
 
     /**
      * Gets the value of the serviceType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getServiceType() {
         return serviceType;
@@ -353,11 +314,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the serviceType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setServiceType(String value) {
         this.serviceType = value;
@@ -365,11 +324,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the key property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getKey() {
         return key;
@@ -377,11 +334,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the key property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setKey(String value) {
         this.key = value;
@@ -389,11 +344,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the segRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSegRef() {
         return segRef;
@@ -401,11 +354,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the segRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSegRef(String value) {
         this.segRef = value;
@@ -413,11 +364,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Gets the value of the confirmRQ property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConfirmRQ() {
         return confirmRQ;
@@ -425,11 +374,9 @@ public class ReservationFacTypeRequest {
 
     /**
      * Sets the value of the confirmRQ property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConfirmRQ(String value) {
         this.confirmRQ = value;

@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Defines a
- *                 rectangle-shaped, geographical area with the coordinates of its
- *                 topleft and bottomright
- *                 coordinates.
- *             
- * 
+ * rectangle-shaped, geographical area with the coordinates of its
+ * topleft and bottomright
+ * coordinates.
+ * <p>
+ * <p>
  * <p>Java class for GeoLocationRectangleType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GeoLocationRectangleType">
  *   &lt;complexContent>
@@ -37,28 +37,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GeoLocationRectangleType", propOrder = {
-    "topLeft",
-    "bottomRight"
+        "topLeft",
+        "bottomRight"
 })
 public class GeoLocationRectangleType {
 
     @XmlElement(name = "TopLeft", required = true)
-    protected GeoLocationCoordinateType topLeft;
+    private GeoLocationCoordinateType topLeft;
     @XmlElement(name = "BottomRight", required = true)
-    protected GeoLocationCoordinateType bottomRight;
+    private GeoLocationCoordinateType bottomRight;
 
     /**
      * Gets the value of the topLeft property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoLocationCoordinateType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoLocationCoordinateType }
      */
     public GeoLocationCoordinateType getTopLeft() {
         return topLeft;
@@ -66,11 +62,9 @@ public class GeoLocationRectangleType {
 
     /**
      * Sets the value of the topLeft property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoLocationCoordinateType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoLocationCoordinateType }
      */
     public void setTopLeft(GeoLocationCoordinateType value) {
         this.topLeft = value;
@@ -78,11 +72,9 @@ public class GeoLocationRectangleType {
 
     /**
      * Gets the value of the bottomRight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeoLocationCoordinateType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeoLocationCoordinateType }
      */
     public GeoLocationCoordinateType getBottomRight() {
         return bottomRight;
@@ -90,11 +82,9 @@ public class GeoLocationRectangleType {
 
     /**
      * Sets the value of the bottomRight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeoLocationCoordinateType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeoLocationCoordinateType }
      */
     public void setBottomRight(GeoLocationCoordinateType value) {
         this.bottomRight = value;

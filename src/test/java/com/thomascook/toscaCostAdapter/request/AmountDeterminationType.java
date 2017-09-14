@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for AmountDeterminationType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "AmountDeterminationType")
 @XmlEnum
@@ -45,17 +44,17 @@ public enum AmountDeterminationType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static AmountDeterminationType fromValue(String v) {
-        for (AmountDeterminationType c: AmountDeterminationType.values()) {
+        for (AmountDeterminationType c : AmountDeterminationType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

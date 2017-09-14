@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for FreeChildFlagType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "FreeChildFlagType")
 @XmlEnum
@@ -36,28 +35,22 @@ public enum FreeChildFlagType {
 
     /**
      * Represents 'Y' free
-     *                         child flag, it means that child price is 0.
-     *                     
-     * 
+     * child flag, it means that child price is 0.
      */
     @XmlEnumValue("Yes")
     YES("Yes"),
 
     /**
      * Represents 'N' free
-     *                         child flag, it means that child passanger cannot travel for free.
-     *                     
-     * 
+     * child flag, it means that child passanger cannot travel for free.
      */
     @XmlEnumValue("No")
     NO("No"),
 
     /**
      * Represents 'F' free
-     *                         child flag, it means that child price is fixed to a value, like
-     *                         100 GBP
-     *                     
-     * 
+     * child flag, it means that child price is fixed to a value, like
+     * 100 GBP
      */
     @XmlEnumValue("Fixed")
     FIXED("Fixed");
@@ -67,17 +60,17 @@ public enum FreeChildFlagType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static FreeChildFlagType fromValue(String v) {
-        for (FreeChildFlagType c: FreeChildFlagType.values()) {
+        for (FreeChildFlagType c : FreeChildFlagType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

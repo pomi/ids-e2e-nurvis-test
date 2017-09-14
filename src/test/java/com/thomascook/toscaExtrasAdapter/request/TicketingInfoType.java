@@ -8,25 +8,19 @@
 
 package com.thomascook.toscaExtrasAdapter.request;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Minimum information about ticketing required to complete the booking transaction.
- * 
+ * <p>
  * <p>Java class for TicketingInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TicketingInfoType">
  *   &lt;complexContent>
@@ -45,72 +39,66 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TicketingInfoType", propOrder = {
-    "ticketAdvisory"
+        "ticketAdvisory"
 })
 @XmlSeeAlso({
-    TicketingInfoRSType.class
+        TicketingInfoRSType.class
 })
 public class TicketingInfoType {
 
     @XmlElement(name = "TicketAdvisory")
-    protected List<FreeTextType> ticketAdvisory;
+    private List<FreeTextType> ticketAdvisory;
     @XmlAttribute(name = "TicketTimeLimit")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar ticketTimeLimit;
+    private XMLGregorianCalendar ticketTimeLimit;
     @XmlAttribute(name = "TicketType")
-    protected TicketType ticketType;
+    private TicketType ticketType;
     @XmlAttribute(name = "TicketingStatus")
-    protected String ticketingStatus;
+    private String ticketingStatus;
     @XmlAttribute(name = "FlightSegmentRefNumber")
-    protected List<String> flightSegmentRefNumber;
+    private List<String> flightSegmentRefNumber;
     @XmlAttribute(name = "TravelerRefNumber")
-    protected List<String> travelerRefNumber;
+    private List<String> travelerRefNumber;
     @XmlAttribute(name = "ReverseTktgSegmentsInd")
-    protected Boolean reverseTktgSegmentsInd;
+    private Boolean reverseTktgSegmentsInd;
     @XmlAttribute(name = "PseudoCityCode")
-    protected String pseudoCityCode;
+    private String pseudoCityCode;
 
     /**
      * Gets the value of the ticketAdvisory property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ticketAdvisory property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTicketAdvisory().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FreeTextType }
-     * 
-     * 
      */
     public List<FreeTextType> getTicketAdvisory() {
         if (ticketAdvisory == null) {
-            ticketAdvisory = new ArrayList<FreeTextType>();
+            ticketAdvisory = new ArrayList<>();
         }
         return this.ticketAdvisory;
     }
 
     /**
      * Gets the value of the ticketTimeLimit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTicketTimeLimit() {
         return ticketTimeLimit;
@@ -118,11 +106,9 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the ticketTimeLimit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setTicketTimeLimit(XMLGregorianCalendar value) {
         this.ticketTimeLimit = value;
@@ -130,11 +116,9 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the ticketType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TicketType }
-     *     
+     *
+     * @return possible object is
+     * {@link TicketType }
      */
     public TicketType getTicketType() {
         return ticketType;
@@ -142,11 +126,9 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the ticketType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TicketType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TicketType }
      */
     public void setTicketType(TicketType value) {
         this.ticketType = value;
@@ -154,11 +136,9 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the ticketingStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTicketingStatus() {
         return ticketingStatus;
@@ -166,11 +146,9 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the ticketingStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTicketingStatus(String value) {
         this.ticketingStatus = value;
@@ -178,69 +156,63 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the flightSegmentRefNumber property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the flightSegmentRefNumber property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFlightSegmentRefNumber().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getFlightSegmentRefNumber() {
         if (flightSegmentRefNumber == null) {
-            flightSegmentRefNumber = new ArrayList<String>();
+            flightSegmentRefNumber = new ArrayList<>();
         }
         return this.flightSegmentRefNumber;
     }
 
     /**
      * Gets the value of the travelerRefNumber property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the travelerRefNumber property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTravelerRefNumber().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getTravelerRefNumber() {
         if (travelerRefNumber == null) {
-            travelerRefNumber = new ArrayList<String>();
+            travelerRefNumber = new ArrayList<>();
         }
         return this.travelerRefNumber;
     }
 
     /**
      * Gets the value of the reverseTktgSegmentsInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isReverseTktgSegmentsInd() {
         return reverseTktgSegmentsInd;
@@ -248,11 +220,9 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the reverseTktgSegmentsInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setReverseTktgSegmentsInd(Boolean value) {
         this.reverseTktgSegmentsInd = value;
@@ -260,11 +230,9 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the pseudoCityCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPseudoCityCode() {
         return pseudoCityCode;
@@ -272,11 +240,9 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the pseudoCityCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPseudoCityCode(String value) {
         this.pseudoCityCode = value;

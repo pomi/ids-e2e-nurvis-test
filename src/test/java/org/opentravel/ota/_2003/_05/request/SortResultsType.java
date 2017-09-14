@@ -8,28 +8,24 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Used to specify criteria
- *                 to sort the result set. It can have multiple children and then the
- *                 result will be sorted
- *                 by all of these fields in the order of their
- *                 occurrence (so the first is the most significant, then the second,
- *                 etc.).
- *             
- * 
+ * to sort the result set. It can have multiple children and then the
+ * result will be sorted
+ * by all of these fields in the order of their
+ * occurrence (so the first is the most significant, then the second,
+ * etc.).
+ * <p>
+ * <p>
  * <p>Java class for SortResults_Type complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SortResults_Type">
  *   &lt;complexContent>
@@ -72,43 +68,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SortResults_Type", propOrder = {
-    "sortResult"
+        "sortResult"
 })
 public class SortResultsType {
 
     @XmlElement(name = "SortResult", required = true)
-    protected List<SortResult> sortResult;
+    private List<SortResult> sortResult;
 
     /**
      * Gets the value of the sortResult property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the sortResult property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSortResult().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SortResult }
-     * 
-     * 
      */
     public List<SortResult> getSortResult() {
         if (sortResult == null) {
-            sortResult = new ArrayList<SortResult>();
+            sortResult = new ArrayList<>();
         }
         return this.sortResult;
     }
@@ -116,9 +108,9 @@ public class SortResultsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -151,27 +143,23 @@ public class SortResultsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class SortResult {
 
         @XmlAttribute(name = "axis", required = true)
-        protected FieldName axis;
+        FieldName axis;
         @XmlAttribute(name = "order", required = true)
-        protected String order;
+        String order;
         @XmlAttribute(name = "segment")
-        protected String segment;
+        String segment;
 
         /**
          * Gets the value of the axis property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link FieldName }
-         *     
+         *
+         * @return possible object is
+         * {@link FieldName }
          */
         public FieldName getAxis() {
             return axis;
@@ -179,11 +167,9 @@ public class SortResultsType {
 
         /**
          * Sets the value of the axis property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link FieldName }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link FieldName }
          */
         public void setAxis(FieldName value) {
             this.axis = value;
@@ -191,11 +177,9 @@ public class SortResultsType {
 
         /**
          * Gets the value of the order property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrder() {
             return order;
@@ -203,11 +187,9 @@ public class SortResultsType {
 
         /**
          * Sets the value of the order property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrder(String value) {
             this.order = value;
@@ -215,11 +197,9 @@ public class SortResultsType {
 
         /**
          * Gets the value of the segment property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSegment() {
             return segment;
@@ -227,11 +207,9 @@ public class SortResultsType {
 
         /**
          * Sets the value of the segment property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSegment(String value) {
             this.segment = value;

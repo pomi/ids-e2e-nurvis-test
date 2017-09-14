@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for Reservation-ResponseType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-ResponseType-Response">
  *   &lt;complexContent>
@@ -130,66 +130,62 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-ResponseType-Response", propOrder = {
-    "fab",
-    "warning",
-    "err"
+        "fab",
+        "warning",
+        "err"
 })
-@XmlRootElement(name="Response")
+@XmlRootElement(name = "Response")
 public class ReservationResponseTypeResponse {
 
     @XmlElement(name = "Fab")
-    protected ReservationFabTypeResponse fab;
+    private ReservationFabTypeResponse fab;
     @XmlElement(name = "Warning")
-    protected ReservationWarningTypeResponse warning;
+    private ReservationWarningTypeResponse warning;
     @XmlElement(name = "Err")
-    protected ReservationErrTypeResponse err;
+    private ReservationErrTypeResponse err;
     @XmlAttribute(name = "Version")
-    protected String version;
+    private String version;
     @XmlAttribute(name = "From")
-    protected String from;
+    private String from;
     @XmlAttribute(name = "To")
-    protected String to;
+    private String to;
     @XmlAttribute(name = "STermId")
-    protected String sTermId;
+    private String sTermId;
     @XmlAttribute(name = "Unit")
-    protected String unit;
+    private String unit;
     @XmlAttribute(name = "Date")
-    protected String date;
+    private String date;
     @XmlAttribute(name = "Time")
-    protected String time;
+    private String time;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "SubType")
-    protected String subType;
+    private String subType;
     @XmlAttribute(name = "Agent")
-    protected String agent;
+    private String agent;
     @XmlAttribute(name = "RSystem")
-    protected String rSystem;
+    private String rSystem;
     @XmlAttribute(name = "Rsystem_Create")
-    protected String rsystemCreate;
+    private String rsystemCreate;
     @XmlAttribute(name = "Lang")
-    protected String lang;
+    private String lang;
     @XmlAttribute(name = "Mode")
-    protected String mode;
+    private String mode;
     @XmlAttribute(name = "UserCode")
-    protected String userCode;
+    private String userCode;
     @XmlAttribute(name = "EducBook")
-    protected String educBook;
+    private String educBook;
     @XmlAttribute(name = "IComClient")
-    protected String iComClient;
+    private String iComClient;
 
     /**
      * Gets the value of the fab property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationFabTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationFabTypeResponse }
      */
     public ReservationFabTypeResponse getFab() {
         return fab;
@@ -197,11 +193,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the fab property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationFabTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationFabTypeResponse }
      */
     public void setFab(ReservationFabTypeResponse value) {
         this.fab = value;
@@ -209,11 +203,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the warning property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationWarningTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationWarningTypeResponse }
      */
     public ReservationWarningTypeResponse getWarning() {
         return warning;
@@ -221,11 +213,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the warning property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationWarningTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationWarningTypeResponse }
      */
     public void setWarning(ReservationWarningTypeResponse value) {
         this.warning = value;
@@ -233,11 +223,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the err property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationErrTypeResponse }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationErrTypeResponse }
      */
     public ReservationErrTypeResponse getErr() {
         return err;
@@ -245,11 +233,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the err property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationErrTypeResponse }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationErrTypeResponse }
      */
     public void setErr(ReservationErrTypeResponse value) {
         this.err = value;
@@ -257,11 +243,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVersion() {
         return version;
@@ -269,11 +253,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVersion(String value) {
         this.version = value;
@@ -281,11 +263,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the from property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFrom() {
         return from;
@@ -293,11 +273,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the from property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFrom(String value) {
         this.from = value;
@@ -305,11 +283,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the to property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTo() {
         return to;
@@ -317,11 +293,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the to property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTo(String value) {
         this.to = value;
@@ -329,11 +303,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the sTermId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSTermId() {
         return sTermId;
@@ -341,11 +313,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the sTermId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSTermId(String value) {
         this.sTermId = value;
@@ -353,11 +323,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the unit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUnit() {
         return unit;
@@ -365,11 +333,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the unit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUnit(String value) {
         this.unit = value;
@@ -377,11 +343,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDate() {
         return date;
@@ -389,11 +353,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDate(String value) {
         this.date = value;
@@ -401,11 +363,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the time property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTime() {
         return time;
@@ -413,11 +373,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the time property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTime(String value) {
         this.time = value;
@@ -425,11 +383,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -437,11 +393,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -449,11 +403,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the subType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSubType() {
         return subType;
@@ -461,11 +413,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the subType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSubType(String value) {
         this.subType = value;
@@ -473,11 +423,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the agent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAgent() {
         return agent;
@@ -485,11 +433,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the agent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAgent(String value) {
         this.agent = value;
@@ -497,11 +443,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the rSystem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRSystem() {
         return rSystem;
@@ -509,11 +453,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the rSystem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRSystem(String value) {
         this.rSystem = value;
@@ -521,11 +463,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the rsystemCreate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRsystemCreate() {
         return rsystemCreate;
@@ -533,11 +473,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the rsystemCreate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRsystemCreate(String value) {
         this.rsystemCreate = value;
@@ -545,11 +483,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the lang property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLang() {
         return lang;
@@ -557,11 +493,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLang(String value) {
         this.lang = value;
@@ -569,11 +503,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the mode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMode() {
         return mode;
@@ -581,11 +513,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the mode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMode(String value) {
         this.mode = value;
@@ -593,11 +523,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the userCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUserCode() {
         return userCode;
@@ -605,11 +533,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the userCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUserCode(String value) {
         this.userCode = value;
@@ -617,11 +543,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the educBook property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEducBook() {
         return educBook;
@@ -629,11 +553,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the educBook property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEducBook(String value) {
         this.educBook = value;
@@ -641,11 +563,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Gets the value of the iComClient property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIComClient() {
         return iComClient;
@@ -653,11 +573,9 @@ public class ReservationResponseTypeResponse {
 
     /**
      * Sets the value of the iComClient property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIComClient(String value) {
         this.iComClient = value;

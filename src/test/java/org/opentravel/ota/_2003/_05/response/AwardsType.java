@@ -8,25 +8,21 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines a group of hotel
- *                 ratings.
- *             
- * 
+ * ratings.
+ * <p>
+ * <p>
  * <p>Java class for AwardsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AwardsType">
  *   &lt;complexContent>
@@ -53,43 +49,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AwardsType", propOrder = {
-    "award"
+        "award"
 })
 public class AwardsType {
 
     @XmlElement(name = "Award")
-    protected List<Award> award;
+    private List<Award> award;
 
     /**
      * Gets the value of the award property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the award property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAward().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Award }
-     * 
-     * 
      */
     public List<Award> getAward() {
         if (award == null) {
-            award = new ArrayList<Award>();
+            award = new ArrayList<>();
         }
         return this.award;
     }
@@ -97,9 +89,9 @@ public class AwardsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -116,25 +108,21 @@ public class AwardsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Award {
 
         @XmlAttribute(name = "Type")
-        protected String type;
+        String type;
         @XmlAttribute(name = "Rating")
-        protected BigDecimal rating;
+        BigDecimal rating;
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -142,11 +130,9 @@ public class AwardsType {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -154,11 +140,9 @@ public class AwardsType {
 
         /**
          * Gets the value of the rating property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getRating() {
             return rating;
@@ -166,11 +150,9 @@ public class AwardsType {
 
         /**
          * Sets the value of the rating property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setRating(BigDecimal value) {
             this.rating = value;

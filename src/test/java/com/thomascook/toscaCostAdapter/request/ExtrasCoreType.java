@@ -8,23 +8,18 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Describes an optional service which is not included in the standard package but may be booked in addition.
- * 
+ * <p>
  * <p>Java class for ExtrasCoreType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ExtrasCoreType">
  *   &lt;complexContent>
@@ -53,76 +48,70 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtrasCoreType", propOrder = {
-    "subCategory"
+        "subCategory"
 })
 @XmlSeeAlso({
-    ExtrasType.class,
-    ExtrasInfoType.class
+        ExtrasType.class,
+        ExtrasInfoType.class
 })
 public class ExtrasCoreType {
 
     @XmlElement(name = "SubCategory")
-    protected List<SubCategory> subCategory;
+    private List<SubCategory> subCategory;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "SubType")
-    protected String subType;
+    private String subType;
     @XmlAttribute(name = "Quantity")
-    protected Integer quantity;
+    private Integer quantity;
     @XmlAttribute(name = "GroupCode")
-    protected String groupCode;
+    private String groupCode;
     @XmlAttribute(name = "Name")
-    protected String name;
+    private String name;
     @XmlAttribute(name = "ListOfInventoryItemRPH")
-    protected List<String> listOfInventoryItemRPH;
+    private List<String> listOfInventoryItemRPH;
     @XmlAttribute(name = "ListofRoomRPH")
-    protected List<String> listofRoomRPH;
+    private List<String> listofRoomRPH;
 
     /**
      * Gets the value of the subCategory property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the subCategory property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSubCategory().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SubCategory }
-     * 
-     * 
      */
     public List<SubCategory> getSubCategory() {
         if (subCategory == null) {
-            subCategory = new ArrayList<SubCategory>();
+            subCategory = new ArrayList<>();
         }
         return this.subCategory;
     }
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -130,11 +119,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -142,11 +129,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -154,11 +139,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -166,11 +149,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -178,11 +159,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -190,11 +169,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the subType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSubType() {
         return subType;
@@ -202,11 +179,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the subType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSubType(String value) {
         this.subType = value;
@@ -214,11 +189,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getQuantity() {
         return quantity;
@@ -226,11 +199,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setQuantity(Integer value) {
         this.quantity = value;
@@ -238,11 +209,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the groupCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getGroupCode() {
         return groupCode;
@@ -250,11 +219,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the groupCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setGroupCode(String value) {
         this.groupCode = value;
@@ -262,11 +229,9 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -274,11 +239,9 @@ public class ExtrasCoreType {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -286,58 +249,54 @@ public class ExtrasCoreType {
 
     /**
      * Gets the value of the listOfInventoryItemRPH property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the listOfInventoryItemRPH property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getListOfInventoryItemRPH().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getListOfInventoryItemRPH() {
         if (listOfInventoryItemRPH == null) {
-            listOfInventoryItemRPH = new ArrayList<String>();
+            listOfInventoryItemRPH = new ArrayList<>();
         }
         return this.listOfInventoryItemRPH;
     }
 
     /**
      * Gets the value of the listofRoomRPH property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the listofRoomRPH property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getListofRoomRPH().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getListofRoomRPH() {
         if (listofRoomRPH == null) {
-            listofRoomRPH = new ArrayList<String>();
+            listofRoomRPH = new ArrayList<>();
         }
         return this.listofRoomRPH;
     }
@@ -345,9 +304,9 @@ public class ExtrasCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -357,25 +316,21 @@ public class ExtrasCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class SubCategory {
 
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -383,11 +338,9 @@ public class ExtrasCoreType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;
@@ -395,11 +348,9 @@ public class ExtrasCoreType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -407,11 +358,9 @@ public class ExtrasCoreType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;

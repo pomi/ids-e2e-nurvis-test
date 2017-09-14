@@ -8,20 +8,16 @@
 
 package com.thomascook.content.holidaycheck;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * A holidaycheck overview snippet
- * 
+ * <p>
  * <p>Java class for HolidaycheckOverviewType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="HolidaycheckOverviewType">
  *   &lt;complexContent>
@@ -45,27 +41,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HolidaycheckOverviewType", propOrder = {
-    "properties"
+        "properties"
 })
 public class HolidaycheckOverviewType {
 
     @XmlElement(name = "Properties")
-    protected Properties properties;
+    private Properties properties;
     @XmlAttribute(name = "Id", required = true)
-    protected String id;
+    private String id;
 
     /**
      * Gets the value of the properties property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Properties }
-     *     
+     *
+     * @return possible object is
+     * {@link Properties }
      */
     public Properties getProperties() {
         return properties;
@@ -73,11 +65,9 @@ public class HolidaycheckOverviewType {
 
     /**
      * Sets the value of the properties property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Properties }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Properties }
      */
     public void setProperties(Properties value) {
         this.properties = value;
@@ -85,11 +75,9 @@ public class HolidaycheckOverviewType {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -97,11 +85,9 @@ public class HolidaycheckOverviewType {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -110,9 +96,9 @@ public class HolidaycheckOverviewType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -125,29 +111,25 @@ public class HolidaycheckOverviewType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Properties {
 
         @XmlAttribute(name = "AverageRating")
-        protected String averageRating;
+        String averageRating;
         @XmlAttribute(name = "CountReviews")
-        protected String countReviews;
+        String countReviews;
         @XmlAttribute(name = "Recommendation")
-        protected String recommendation;
+        String recommendation;
         @XmlAttribute(name = "HcReviewsUrl")
-        protected String hcReviewsUrl;
+        String hcReviewsUrl;
 
         /**
          * Gets the value of the averageRating property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAverageRating() {
             return averageRating;
@@ -155,11 +137,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Sets the value of the averageRating property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAverageRating(String value) {
             this.averageRating = value;
@@ -167,11 +147,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Gets the value of the countReviews property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCountReviews() {
             return countReviews;
@@ -179,11 +157,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Sets the value of the countReviews property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCountReviews(String value) {
             this.countReviews = value;
@@ -191,11 +167,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Gets the value of the recommendation property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRecommendation() {
             return recommendation;
@@ -203,11 +177,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Sets the value of the recommendation property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRecommendation(String value) {
             this.recommendation = value;
@@ -215,11 +187,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Gets the value of the hcReviewsUrl property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getHcReviewsUrl() {
             return hcReviewsUrl;
@@ -227,11 +197,9 @@ public class HolidaycheckOverviewType {
 
         /**
          * Sets the value of the hcReviewsUrl property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setHcReviewsUrl(String value) {
             this.hcReviewsUrl = value;

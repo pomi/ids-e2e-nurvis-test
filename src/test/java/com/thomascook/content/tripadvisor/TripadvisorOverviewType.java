@@ -8,20 +8,16 @@
 
 package com.thomascook.content.tripadvisor;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * A tripadvisor overview snippet
- * 
+ * <p>
  * <p>Java class for TripadvisorOverviewType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TripadvisorOverviewType">
  *   &lt;complexContent>
@@ -48,27 +44,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TripadvisorOverviewType", propOrder = {
-    "properties"
+        "properties"
 })
 public class TripadvisorOverviewType {
 
     @XmlElement(name = "Properties")
-    protected Properties properties;
+    private Properties properties;
     @XmlAttribute(name = "Id", required = true)
-    protected String id;
+    private String id;
 
     /**
      * Gets the value of the properties property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Properties }
-     *     
+     *
+     * @return possible object is
+     * {@link Properties }
      */
     public Properties getProperties() {
         return properties;
@@ -76,11 +68,9 @@ public class TripadvisorOverviewType {
 
     /**
      * Sets the value of the properties property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Properties }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Properties }
      */
     public void setProperties(Properties value) {
         this.properties = value;
@@ -88,11 +78,9 @@ public class TripadvisorOverviewType {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -100,11 +88,9 @@ public class TripadvisorOverviewType {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -113,9 +99,9 @@ public class TripadvisorOverviewType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -131,35 +117,31 @@ public class TripadvisorOverviewType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Properties {
 
         @XmlAttribute(name = "type")
-        protected String type;
+        String type;
         @XmlAttribute(name = "geoid")
-        protected String geoid;
+        String geoid;
         @XmlAttribute(name = "name")
-        protected String name;
+        String name;
         @XmlAttribute(name = "reviewUrl")
-        protected String reviewUrl;
+        String reviewUrl;
         @XmlAttribute(name = "reviewCount")
-        protected String reviewCount;
+        String reviewCount;
         @XmlAttribute(name = "averageRating")
-        protected String averageRating;
+        String averageRating;
         @XmlAttribute(name = "imageUrl")
-        protected String imageUrl;
+        String imageUrl;
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -167,11 +149,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -179,11 +159,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the geoid property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getGeoid() {
             return geoid;
@@ -191,11 +169,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the geoid property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setGeoid(String value) {
             this.geoid = value;
@@ -203,11 +179,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -215,11 +189,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -227,11 +199,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the reviewUrl property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getReviewUrl() {
             return reviewUrl;
@@ -239,11 +209,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the reviewUrl property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setReviewUrl(String value) {
             this.reviewUrl = value;
@@ -251,11 +219,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the reviewCount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getReviewCount() {
             return reviewCount;
@@ -263,11 +229,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the reviewCount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setReviewCount(String value) {
             this.reviewCount = value;
@@ -275,11 +239,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the averageRating property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAverageRating() {
             return averageRating;
@@ -287,11 +249,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the averageRating property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAverageRating(String value) {
             this.averageRating = value;
@@ -299,11 +259,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Gets the value of the imageUrl property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getImageUrl() {
             return imageUrl;
@@ -311,11 +269,9 @@ public class TripadvisorOverviewType {
 
         /**
          * Sets the value of the imageUrl property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setImageUrl(String value) {
             this.imageUrl = value;

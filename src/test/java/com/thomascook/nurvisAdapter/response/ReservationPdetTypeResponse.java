@@ -8,24 +8,19 @@
 
 package com.thomascook.nurvisAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 Price-details
- *             
- * 
+ * Price-details
+ * <p>
+ * <p>
  * <p>Java class for Reservation-PdetType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-PdetType-Response">
  *   &lt;complexContent>
@@ -99,48 +94,44 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-PdetType-Response", propOrder = {
-    "text",
-    "baseAmount",
-    "qty",
-    "amount",
-    "mandatoryAmount",
-    "currency",
-    "startDate",
-    "duration"
+        "text",
+        "baseAmount",
+        "qty",
+        "amount",
+        "mandatoryAmount",
+        "currency",
+        "startDate",
+        "duration"
 })
 public class ReservationPdetTypeResponse {
 
     @XmlElement(name = "Text")
-    protected String text;
+    private String text;
     @XmlElement(name = "BaseAmount")
-    protected String baseAmount;
+    private String baseAmount;
     @XmlElement(name = "Qty")
-    protected List<String> qty;
+    private List<String> qty;
     @XmlElement(name = "Amount")
-    protected String amount;
+    private String amount;
     @XmlElement(name = "MandatoryAmount")
-    protected String mandatoryAmount;
+    private String mandatoryAmount;
     @XmlElement(name = "Currency")
-    protected String currency;
+    private String currency;
     @XmlElement(name = "StartDate")
-    protected String startDate;
+    private String startDate;
     @XmlElement(name = "Duration")
-    protected String duration;
+    private String duration;
     @XmlAttribute(name = "SegRef")
-    protected String segRef;
+    private String segRef;
 
     /**
      * Gets the value of the text property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getText() {
         return text;
@@ -148,11 +139,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the text property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setText(String value) {
         this.text = value;
@@ -160,11 +149,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the baseAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBaseAmount() {
         return baseAmount;
@@ -172,11 +159,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the baseAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBaseAmount(String value) {
         this.baseAmount = value;
@@ -184,40 +169,36 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the qty property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the qty property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getQty().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getQty() {
         if (qty == null) {
-            qty = new ArrayList<String>();
+            qty = new ArrayList<>();
         }
         return this.qty;
     }
 
     /**
      * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAmount() {
         return amount;
@@ -225,11 +206,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAmount(String value) {
         this.amount = value;
@@ -237,11 +216,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the mandatoryAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMandatoryAmount() {
         return mandatoryAmount;
@@ -249,11 +226,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the mandatoryAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMandatoryAmount(String value) {
         this.mandatoryAmount = value;
@@ -261,11 +236,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the currency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrency() {
         return currency;
@@ -273,11 +246,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the currency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrency(String value) {
         this.currency = value;
@@ -285,11 +256,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the startDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStartDate() {
         return startDate;
@@ -297,11 +266,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the startDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStartDate(String value) {
         this.startDate = value;
@@ -309,11 +276,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDuration() {
         return duration;
@@ -321,11 +286,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -333,11 +296,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Gets the value of the segRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSegRef() {
         return segRef;
@@ -345,11 +306,9 @@ public class ReservationPdetTypeResponse {
 
     /**
      * Sets the value of the segRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSegRef(String value) {
         this.segRef = value;

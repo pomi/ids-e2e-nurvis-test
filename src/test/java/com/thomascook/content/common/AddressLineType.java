@@ -8,18 +8,14 @@
 
 package com.thomascook.content.common;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for AddressLineType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AddressLineType">
  *   &lt;simpleContent>
@@ -29,27 +25,23 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressLineType", propOrder = {
-    "value"
+        "value"
 })
 public class AddressLineType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "AddressLineNumber")
-    protected Integer addressLineNumber;
+    private Integer addressLineNumber;
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -57,11 +49,9 @@ public class AddressLineType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -69,11 +59,9 @@ public class AddressLineType {
 
     /**
      * Gets the value of the addressLineNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getAddressLineNumber() {
         return addressLineNumber;
@@ -81,11 +69,9 @@ public class AddressLineType {
 
     /**
      * Sets the value of the addressLineNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setAddressLineNumber(Integer value) {
         this.addressLineNumber = value;

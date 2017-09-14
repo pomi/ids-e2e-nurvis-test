@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Collection of warnings.
- * 
+ * <p>
  * <p>Java class for WarningsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="WarningsType">
  *   &lt;complexContent>
@@ -32,27 +32,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WarningsType")
 public class WarningsType {
 
     @XmlAttribute(name = "correlatonId", required = true)
-    protected String correlatonId;
+    private String correlatonId;
     @XmlAttribute(name = "code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "warningText")
-    protected String warningText;
+    private String warningText;
 
     /**
      * Gets the value of the correlatonId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCorrelatonId() {
         return correlatonId;
@@ -60,11 +56,9 @@ public class WarningsType {
 
     /**
      * Sets the value of the correlatonId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCorrelatonId(String value) {
         this.correlatonId = value;
@@ -72,11 +66,9 @@ public class WarningsType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -84,11 +76,9 @@ public class WarningsType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -96,11 +86,9 @@ public class WarningsType {
 
     /**
      * Gets the value of the warningText property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getWarningText() {
         return warningText;
@@ -108,11 +96,9 @@ public class WarningsType {
 
     /**
      * Sets the value of the warningText property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setWarningText(String value) {
         this.warningText = value;

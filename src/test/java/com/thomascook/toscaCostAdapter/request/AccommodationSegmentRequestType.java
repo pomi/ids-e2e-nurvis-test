@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines the required accommodation component of a package holiday.
- * 
+ * <p>
  * <p>Java class for AccommodationSegmentRequestType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AccommodationSegmentRequestType">
  *   &lt;complexContent>
@@ -61,46 +57,42 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AccommodationSegmentRequestType", propOrder = {
-    "identity",
-    "dateRange",
-    "roomProfiles",
-    "mealPlans"
+        "identity",
+        "dateRange",
+        "roomProfiles",
+        "mealPlans"
 })
 public class AccommodationSegmentRequestType {
 
     @XmlElement(name = "Identity")
-    protected PropertyIdentityType identity;
+    private PropertyIdentityType identity;
     @XmlElement(name = "DateRange", required = true)
-    protected DateTimeSpanType dateRange;
+    private DateTimeSpanType dateRange;
     @XmlElement(name = "RoomProfiles")
-    protected RoomProfiles roomProfiles;
+    private RoomProfiles roomProfiles;
     @XmlElement(name = "MealPlans")
-    protected MealPlans mealPlans;
+    private MealPlans mealPlans;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "ResortCode")
-    protected String resortCode;
+    private String resortCode;
     @XmlAttribute(name = "ResortName")
-    protected String resortName;
+    private String resortName;
     @XmlAttribute(name = "DestinationCode")
-    protected String destinationCode;
+    private String destinationCode;
     @XmlAttribute(name = "DestinationLevel")
-    protected DestinationLevelType destinationLevel;
+    private DestinationLevelType destinationLevel;
     @XmlAttribute(name = "DestinationName")
-    protected String destinationName;
+    private String destinationName;
 
     /**
      * Gets the value of the identity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PropertyIdentityType }
-     *     
+     *
+     * @return possible object is
+     * {@link PropertyIdentityType }
      */
     public PropertyIdentityType getIdentity() {
         return identity;
@@ -108,11 +100,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the identity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PropertyIdentityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PropertyIdentityType }
      */
     public void setIdentity(PropertyIdentityType value) {
         this.identity = value;
@@ -120,11 +110,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the dateRange property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DateTimeSpanType }
-     *     
+     *
+     * @return possible object is
+     * {@link DateTimeSpanType }
      */
     public DateTimeSpanType getDateRange() {
         return dateRange;
@@ -132,11 +120,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the dateRange property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DateTimeSpanType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DateTimeSpanType }
      */
     public void setDateRange(DateTimeSpanType value) {
         this.dateRange = value;
@@ -144,11 +130,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the roomProfiles property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RoomProfiles }
-     *     
+     *
+     * @return possible object is
+     * {@link RoomProfiles }
      */
     public RoomProfiles getRoomProfiles() {
         return roomProfiles;
@@ -156,11 +140,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the roomProfiles property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RoomProfiles }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RoomProfiles }
      */
     public void setRoomProfiles(RoomProfiles value) {
         this.roomProfiles = value;
@@ -168,11 +150,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the mealPlans property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MealPlans }
-     *     
+     *
+     * @return possible object is
+     * {@link MealPlans }
      */
     public MealPlans getMealPlans() {
         return mealPlans;
@@ -180,11 +160,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the mealPlans property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MealPlans }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MealPlans }
      */
     public void setMealPlans(MealPlans value) {
         this.mealPlans = value;
@@ -192,11 +170,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -204,11 +180,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -216,11 +190,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the resortCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResortCode() {
         return resortCode;
@@ -228,11 +200,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the resortCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResortCode(String value) {
         this.resortCode = value;
@@ -240,11 +210,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the resortName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResortName() {
         return resortName;
@@ -252,11 +220,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the resortName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResortName(String value) {
         this.resortName = value;
@@ -264,11 +230,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the destinationCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDestinationCode() {
         return destinationCode;
@@ -276,11 +240,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the destinationCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDestinationCode(String value) {
         this.destinationCode = value;
@@ -288,11 +250,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the destinationLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DestinationLevelType }
-     *     
+     *
+     * @return possible object is
+     * {@link DestinationLevelType }
      */
     public DestinationLevelType getDestinationLevel() {
         return destinationLevel;
@@ -300,11 +260,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the destinationLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DestinationLevelType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DestinationLevelType }
      */
     public void setDestinationLevel(DestinationLevelType value) {
         this.destinationLevel = value;
@@ -312,11 +270,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Gets the value of the destinationName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDestinationName() {
         return destinationName;
@@ -324,11 +280,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * Sets the value of the destinationName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDestinationName(String value) {
         this.destinationName = value;
@@ -337,9 +291,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -351,43 +305,39 @@ public class AccommodationSegmentRequestType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "mealPlan"
+            "mealPlan"
     })
     public static class MealPlans {
 
         @XmlElement(name = "MealPlan", required = true)
-        protected List<MealPlanType> mealPlan;
+        List<MealPlanType> mealPlan;
 
         /**
          * Gets the value of the mealPlan property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the mealPlan property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMealPlan().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link MealPlanType }
-         * 
-         * 
          */
         public List<MealPlanType> getMealPlan() {
             if (mealPlan == null) {
-                mealPlan = new ArrayList<MealPlanType>();
+                mealPlan = new ArrayList<>();
             }
             return this.mealPlan;
         }
@@ -397,9 +347,9 @@ public class AccommodationSegmentRequestType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -411,43 +361,39 @@ public class AccommodationSegmentRequestType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "roomProfile"
+            "roomProfile"
     })
     public static class RoomProfiles {
 
         @XmlElement(name = "RoomProfile", required = true)
-        protected List<RoomProfileType> roomProfile;
+        List<RoomProfileType> roomProfile;
 
         /**
          * Gets the value of the roomProfile property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the roomProfile property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoomProfile().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RoomProfileType }
-         * 
-         * 
          */
         public List<RoomProfileType> getRoomProfile() {
             if (roomProfile == null) {
-                roomProfile = new ArrayList<RoomProfileType>();
+                roomProfile = new ArrayList<>();
             }
             return this.roomProfile;
         }

@@ -8,20 +8,16 @@
 
 package org.opentravel.ota._2003._05.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Code and optional string to describe a location point.
- * 
+ * <p>
  * <p>Java class for LocationType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="LocationType">
  *   &lt;simpleContent>
@@ -31,29 +27,25 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LocationType", propOrder = {
-    "value"
+        "value"
 })
 public class LocationType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "LocationCode")
-    protected String locationCode;
+    private String locationCode;
     @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
+    private String codeContext;
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -61,11 +53,9 @@ public class LocationType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -73,11 +63,9 @@ public class LocationType {
 
     /**
      * Gets the value of the locationCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLocationCode() {
         return locationCode;
@@ -85,11 +73,9 @@ public class LocationType {
 
     /**
      * Sets the value of the locationCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLocationCode(String value) {
         this.locationCode = value;
@@ -97,11 +83,9 @@ public class LocationType {
 
     /**
      * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodeContext() {
         return codeContext;
@@ -109,11 +93,9 @@ public class LocationType {
 
     /**
      * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodeContext(String value) {
         this.codeContext = value;

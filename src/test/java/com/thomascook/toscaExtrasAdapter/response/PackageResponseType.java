@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines a complete package holiday response.
- * 
+ * <p>
  * <p>Java class for PackageResponseType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PackageResponseType">
  *   &lt;complexContent>
@@ -97,59 +93,55 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PackageResponseType", propOrder = {
-    "url",
-    "companyName",
-    "dateRange",
-    "itineraryItems",
-    "extras",
-    "seatRequests",
-    "cautions"
+        "url",
+        "companyName",
+        "dateRange",
+        "itineraryItems",
+        "extras",
+        "seatRequests",
+        "cautions"
 })
 public class PackageResponseType {
 
     @XmlElement(name = "URL")
-    protected URLType url;
+    private URLType url;
     @XmlElement(name = "CompanyName")
-    protected CompanyNameType companyName;
+    private CompanyNameType companyName;
     @XmlElement(name = "DateRange")
-    protected DateRange dateRange;
+    private DateRange dateRange;
     @XmlElement(name = "ItineraryItems")
-    protected ItineraryItems itineraryItems;
+    private ItineraryItems itineraryItems;
     @XmlElement(name = "Extras")
-    protected Extras extras;
+    private Extras extras;
     @XmlElement(name = "SeatRequests")
-    protected SeatRequests seatRequests;
+    private SeatRequests seatRequests;
     @XmlElement(name = "Cautions")
-    protected Cautions cautions;
+    private Cautions cautions;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "TravelCode")
-    protected String travelCode;
+    private String travelCode;
     @XmlAttribute(name = "TourCode")
-    protected String tourCode;
+    private String tourCode;
     @XmlAttribute(name = "BoardCode")
-    protected String boardCode;
+    private String boardCode;
     @XmlAttribute(name = "PromotionCode")
-    protected String promotionCode;
+    private String promotionCode;
     @XmlAttribute(name = "BrandCode")
-    protected String brandCode;
+    private String brandCode;
     @XmlAttribute(name = "ProductCode")
-    protected String productCode;
+    private String productCode;
     @XmlAttribute(name = "ID")
-    protected String id;
+    private String id;
 
     /**
      * Gets the value of the url property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link URLType }
-     *     
+     *
+     * @return possible object is
+     * {@link URLType }
      */
     public URLType getURL() {
         return url;
@@ -157,11 +149,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the url property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link URLType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link URLType }
      */
     public void setURL(URLType value) {
         this.url = value;
@@ -169,11 +159,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the companyName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CompanyNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link CompanyNameType }
      */
     public CompanyNameType getCompanyName() {
         return companyName;
@@ -181,11 +169,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the companyName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CompanyNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CompanyNameType }
      */
     public void setCompanyName(CompanyNameType value) {
         this.companyName = value;
@@ -193,11 +179,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the dateRange property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DateRange }
-     *     
+     *
+     * @return possible object is
+     * {@link DateRange }
      */
     public DateRange getDateRange() {
         return dateRange;
@@ -205,11 +189,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the dateRange property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DateRange }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DateRange }
      */
     public void setDateRange(DateRange value) {
         this.dateRange = value;
@@ -217,11 +199,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the itineraryItems property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ItineraryItems }
-     *     
+     *
+     * @return possible object is
+     * {@link ItineraryItems }
      */
     public ItineraryItems getItineraryItems() {
         return itineraryItems;
@@ -229,11 +209,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the itineraryItems property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ItineraryItems }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ItineraryItems }
      */
     public void setItineraryItems(ItineraryItems value) {
         this.itineraryItems = value;
@@ -241,11 +219,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the extras property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extras }
-     *     
+     *
+     * @return possible object is
+     * {@link Extras }
      */
     public Extras getExtras() {
         return extras;
@@ -253,11 +229,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the extras property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extras }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extras }
      */
     public void setExtras(Extras value) {
         this.extras = value;
@@ -265,11 +239,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the seatRequests property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SeatRequests }
-     *     
+     *
+     * @return possible object is
+     * {@link SeatRequests }
      */
     public SeatRequests getSeatRequests() {
         return seatRequests;
@@ -277,11 +249,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the seatRequests property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SeatRequests }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SeatRequests }
      */
     public void setSeatRequests(SeatRequests value) {
         this.seatRequests = value;
@@ -289,11 +259,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the cautions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Cautions }
-     *     
+     *
+     * @return possible object is
+     * {@link Cautions }
      */
     public Cautions getCautions() {
         return cautions;
@@ -301,11 +269,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the cautions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Cautions }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Cautions }
      */
     public void setCautions(Cautions value) {
         this.cautions = value;
@@ -313,11 +279,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -325,11 +289,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -337,11 +299,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the travelCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelCode() {
         return travelCode;
@@ -349,11 +309,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the travelCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelCode(String value) {
         this.travelCode = value;
@@ -361,11 +319,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the tourCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTourCode() {
         return tourCode;
@@ -373,11 +329,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the tourCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTourCode(String value) {
         this.tourCode = value;
@@ -385,11 +339,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the boardCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBoardCode() {
         return boardCode;
@@ -397,11 +349,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the boardCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBoardCode(String value) {
         this.boardCode = value;
@@ -409,11 +359,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the promotionCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromotionCode() {
         return promotionCode;
@@ -421,11 +369,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the promotionCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromotionCode(String value) {
         this.promotionCode = value;
@@ -433,11 +379,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the brandCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandCode() {
         return brandCode;
@@ -445,11 +389,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the brandCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -457,11 +399,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the productCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProductCode() {
         return productCode;
@@ -469,11 +409,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the productCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProductCode(String value) {
         this.productCode = value;
@@ -481,11 +419,9 @@ public class PackageResponseType {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getID() {
         return id;
@@ -493,11 +429,9 @@ public class PackageResponseType {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setID(String value) {
         this.id = value;
@@ -506,9 +440,9 @@ public class PackageResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -520,43 +454,39 @@ public class PackageResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "caution"
+            "caution"
     })
     public static class Cautions {
 
         @XmlElement(name = "Caution", required = true)
-        protected List<PkgCautionType> caution;
+        List<PkgCautionType> caution;
 
         /**
          * Gets the value of the caution property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the caution property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCaution().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PkgCautionType }
-         * 
-         * 
          */
         public List<PkgCautionType> getCaution() {
             if (caution == null) {
-                caution = new ArrayList<PkgCautionType>();
+                caution = new ArrayList<>();
             }
             return this.caution;
         }
@@ -566,9 +496,9 @@ public class PackageResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -578,27 +508,23 @@ public class PackageResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class DateRange {
 
         @XmlAttribute(name = "Start")
-        protected String start;
+        String start;
         @XmlAttribute(name = "Duration")
-        protected String duration;
+        String duration;
         @XmlAttribute(name = "End")
-        protected String end;
+        String end;
 
         /**
          * Gets the value of the start property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getStart() {
             return start;
@@ -606,11 +532,9 @@ public class PackageResponseType {
 
         /**
          * Sets the value of the start property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setStart(String value) {
             this.start = value;
@@ -618,11 +542,9 @@ public class PackageResponseType {
 
         /**
          * Gets the value of the duration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDuration() {
             return duration;
@@ -630,11 +552,9 @@ public class PackageResponseType {
 
         /**
          * Sets the value of the duration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -642,11 +562,9 @@ public class PackageResponseType {
 
         /**
          * Gets the value of the end property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getEnd() {
             return end;
@@ -654,11 +572,9 @@ public class PackageResponseType {
 
         /**
          * Sets the value of the end property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setEnd(String value) {
             this.end = value;
@@ -669,9 +585,9 @@ public class PackageResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -683,43 +599,39 @@ public class PackageResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "extra"
+            "extra"
     })
     public static class Extras {
 
         @XmlElement(name = "Extra", required = true)
-        protected List<ExtrasType> extra;
+        List<ExtrasType> extra;
 
         /**
          * Gets the value of the extra property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the extra property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getExtra().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ExtrasType }
-         * 
-         * 
          */
         public List<ExtrasType> getExtra() {
             if (extra == null) {
-                extra = new ArrayList<ExtrasType>();
+                extra = new ArrayList<>();
             }
             return this.extra;
         }
@@ -729,9 +641,9 @@ public class PackageResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -743,43 +655,39 @@ public class PackageResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "itineraryItem"
+            "itineraryItem"
     })
     public static class ItineraryItems {
 
         @XmlElement(name = "ItineraryItem", required = true)
-        protected List<ItineraryItemResponseType> itineraryItem;
+        List<ItineraryItemResponseType> itineraryItem;
 
         /**
          * Gets the value of the itineraryItem property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the itineraryItem property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getItineraryItem().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ItineraryItemResponseType }
-         * 
-         * 
          */
         public List<ItineraryItemResponseType> getItineraryItem() {
             if (itineraryItem == null) {
-                itineraryItem = new ArrayList<ItineraryItemResponseType>();
+                itineraryItem = new ArrayList<>();
             }
             return this.itineraryItem;
         }
@@ -789,9 +697,9 @@ public class PackageResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -803,43 +711,39 @@ public class PackageResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "seatRequest"
+            "seatRequest"
     })
     public static class SeatRequests {
 
         @XmlElement(name = "SeatRequest", required = true)
-        protected List<SeatRequestType> seatRequest;
+        List<SeatRequestType> seatRequest;
 
         /**
          * Gets the value of the seatRequest property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the seatRequest property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSeatRequest().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SeatRequestType }
-         * 
-         * 
          */
         public List<SeatRequestType> getSeatRequest() {
             if (seatRequest == null) {
-                seatRequest = new ArrayList<SeatRequestType>();
+                seatRequest = new ArrayList<>();
             }
             return this.seatRequest;
         }

@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * Customer bank accounts for payments, either for paper checks or electronic funds transfer.
- * 
+ * <p>
  * <p>Java class for BankAcctType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="BankAcctType">
  *   &lt;complexContent>
@@ -40,39 +36,35 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BankAcctType", propOrder = {
-    "bankAcctName"
+        "bankAcctName"
 })
 public class BankAcctType {
 
     @XmlElement(name = "BankAcctName")
-    protected String bankAcctName;
+    private String bankAcctName;
     @XmlAttribute(name = "BankID")
-    protected String bankID;
+    private String bankID;
     @XmlAttribute(name = "AcctType")
-    protected String acctType;
+    private String acctType;
     @XmlAttribute(name = "BankAcctNumber")
-    protected String bankAcctNumber;
+    private String bankAcctNumber;
     @XmlAttribute(name = "ChecksAcceptedInd")
-    protected Boolean checksAcceptedInd;
+    private Boolean checksAcceptedInd;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the bankAcctName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBankAcctName() {
         return bankAcctName;
@@ -80,11 +72,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the bankAcctName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBankAcctName(String value) {
         this.bankAcctName = value;
@@ -92,11 +82,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the bankID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBankID() {
         return bankID;
@@ -104,11 +92,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the bankID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBankID(String value) {
         this.bankID = value;
@@ -116,11 +102,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the acctType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAcctType() {
         return acctType;
@@ -128,11 +112,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the acctType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAcctType(String value) {
         this.acctType = value;
@@ -140,11 +122,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the bankAcctNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBankAcctNumber() {
         return bankAcctNumber;
@@ -152,11 +132,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the bankAcctNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBankAcctNumber(String value) {
         this.bankAcctNumber = value;
@@ -164,11 +142,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the checksAcceptedInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isChecksAcceptedInd() {
         return checksAcceptedInd;
@@ -176,11 +152,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the checksAcceptedInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setChecksAcceptedInd(Boolean value) {
         this.checksAcceptedInd = value;
@@ -188,11 +162,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -200,11 +172,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -212,11 +182,9 @@ public class BankAcctType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -224,11 +192,9 @@ public class BankAcctType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;

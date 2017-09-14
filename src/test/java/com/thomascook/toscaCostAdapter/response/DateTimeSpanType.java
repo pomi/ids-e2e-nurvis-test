@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Used to specify a time window range by either specifying an earliest and latest date for the start date and end date or by giving a date with a time period that can be applied before and/or after the start date.
- * 
+ * <p>
  * <p>Java class for DateTimeSpanType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DateTimeSpanType">
  *   &lt;complexContent>
@@ -54,37 +50,33 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DateTimeSpanType", propOrder = {
-    "dateWindowRange",
-    "startDateWindow",
-    "endDateWindow"
+        "dateWindowRange",
+        "startDateWindow",
+        "endDateWindow"
 })
 public class DateTimeSpanType {
 
     @XmlElement(name = "DateWindowRange")
-    protected TimeInstantType dateWindowRange;
+    private TimeInstantType dateWindowRange;
     @XmlElement(name = "StartDateWindow")
-    protected StartDateWindow startDateWindow;
+    private StartDateWindow startDateWindow;
     @XmlElement(name = "EndDateWindow")
-    protected EndDateWindow endDateWindow;
+    private EndDateWindow endDateWindow;
     @XmlAttribute(name = "Start")
-    protected String start;
+    private String start;
     @XmlAttribute(name = "Duration")
-    protected String duration;
+    private String duration;
     @XmlAttribute(name = "End")
-    protected String end;
+    private String end;
 
     /**
      * Gets the value of the dateWindowRange property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TimeInstantType }
-     *     
+     *
+     * @return possible object is
+     * {@link TimeInstantType }
      */
     public TimeInstantType getDateWindowRange() {
         return dateWindowRange;
@@ -92,11 +84,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the dateWindowRange property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TimeInstantType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TimeInstantType }
      */
     public void setDateWindowRange(TimeInstantType value) {
         this.dateWindowRange = value;
@@ -104,11 +94,9 @@ public class DateTimeSpanType {
 
     /**
      * Gets the value of the startDateWindow property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StartDateWindow }
-     *     
+     *
+     * @return possible object is
+     * {@link StartDateWindow }
      */
     public StartDateWindow getStartDateWindow() {
         return startDateWindow;
@@ -116,11 +104,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the startDateWindow property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StartDateWindow }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StartDateWindow }
      */
     public void setStartDateWindow(StartDateWindow value) {
         this.startDateWindow = value;
@@ -128,11 +114,9 @@ public class DateTimeSpanType {
 
     /**
      * Gets the value of the endDateWindow property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EndDateWindow }
-     *     
+     *
+     * @return possible object is
+     * {@link EndDateWindow }
      */
     public EndDateWindow getEndDateWindow() {
         return endDateWindow;
@@ -140,11 +124,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the endDateWindow property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EndDateWindow }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EndDateWindow }
      */
     public void setEndDateWindow(EndDateWindow value) {
         this.endDateWindow = value;
@@ -152,11 +134,9 @@ public class DateTimeSpanType {
 
     /**
      * Gets the value of the start property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStart() {
         return start;
@@ -164,11 +144,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the start property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStart(String value) {
         this.start = value;
@@ -176,11 +154,9 @@ public class DateTimeSpanType {
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDuration() {
         return duration;
@@ -188,11 +164,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -200,11 +174,9 @@ public class DateTimeSpanType {
 
     /**
      * Gets the value of the end property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnd() {
         return end;
@@ -212,11 +184,9 @@ public class DateTimeSpanType {
 
     /**
      * Sets the value of the end property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnd(String value) {
         this.end = value;
@@ -225,9 +195,9 @@ public class DateTimeSpanType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -237,27 +207,23 @@ public class DateTimeSpanType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class EndDateWindow {
 
         @XmlAttribute(name = "EarliestDate")
-        protected String earliestDate;
+        String earliestDate;
         @XmlAttribute(name = "LatestDate")
-        protected String latestDate;
+        String latestDate;
         @XmlAttribute(name = "DOW")
-        protected DayOfWeekType dow;
+        DayOfWeekType dow;
 
         /**
          * Gets the value of the earliestDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getEarliestDate() {
             return earliestDate;
@@ -265,11 +231,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the earliestDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setEarliestDate(String value) {
             this.earliestDate = value;
@@ -277,11 +241,9 @@ public class DateTimeSpanType {
 
         /**
          * Gets the value of the latestDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLatestDate() {
             return latestDate;
@@ -289,11 +251,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the latestDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLatestDate(String value) {
             this.latestDate = value;
@@ -301,11 +261,9 @@ public class DateTimeSpanType {
 
         /**
          * Gets the value of the dow property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DayOfWeekType }
-         *     
+         *
+         * @return possible object is
+         * {@link DayOfWeekType }
          */
         public DayOfWeekType getDOW() {
             return dow;
@@ -313,11 +271,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the dow property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DayOfWeekType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DayOfWeekType }
          */
         public void setDOW(DayOfWeekType value) {
             this.dow = value;
@@ -328,9 +284,9 @@ public class DateTimeSpanType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -340,27 +296,23 @@ public class DateTimeSpanType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class StartDateWindow {
 
         @XmlAttribute(name = "EarliestDate")
-        protected String earliestDate;
+        String earliestDate;
         @XmlAttribute(name = "LatestDate")
-        protected String latestDate;
+        String latestDate;
         @XmlAttribute(name = "DOW")
-        protected DayOfWeekType dow;
+        DayOfWeekType dow;
 
         /**
          * Gets the value of the earliestDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getEarliestDate() {
             return earliestDate;
@@ -368,11 +320,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the earliestDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setEarliestDate(String value) {
             this.earliestDate = value;
@@ -380,11 +330,9 @@ public class DateTimeSpanType {
 
         /**
          * Gets the value of the latestDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLatestDate() {
             return latestDate;
@@ -392,11 +340,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the latestDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLatestDate(String value) {
             this.latestDate = value;
@@ -404,11 +350,9 @@ public class DateTimeSpanType {
 
         /**
          * Gets the value of the dow property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DayOfWeekType }
-         *     
+         *
+         * @return possible object is
+         * {@link DayOfWeekType }
          */
         public DayOfWeekType getDOW() {
             return dow;
@@ -416,11 +360,9 @@ public class DateTimeSpanType {
 
         /**
          * Sets the value of the dow property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DayOfWeekType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DayOfWeekType }
          */
         public void setDOW(DayOfWeekType value) {
             this.dow = value;

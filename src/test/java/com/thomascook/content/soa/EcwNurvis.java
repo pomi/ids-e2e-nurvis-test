@@ -8,18 +8,14 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for EcwNurvis complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="EcwNurvis">
  *   &lt;complexContent>
@@ -33,36 +29,31 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EcwNurvis")
 @XmlSeeAlso({
-    Request.EcwNurvis.Package.class
+        Request.EcwNurvis.Package.class
 })
 public class EcwNurvis
-    extends BasePackage
-{
+        extends BasePackage {
 
     @XmlAttribute(name = "Brand", required = true)
-    protected String brand;
+    private String brand;
     @XmlAttribute(name = "Season", required = true)
-    protected String season;
+    private String season;
     @XmlAttribute(name = "ProductBookingCode")
-    protected String productBookingCode;
+    private String productBookingCode;
     @XmlAttribute(name = "Ekms")
-    protected String ekms;
+    private String ekms;
     @XmlAttribute(name = "Catalog", required = true)
-    protected String catalog;
+    private String catalog;
 
     /**
      * Gets the value of the brand property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrand() {
         return brand;
@@ -70,11 +61,9 @@ public class EcwNurvis
 
     /**
      * Sets the value of the brand property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrand(String value) {
         this.brand = value;
@@ -82,11 +71,9 @@ public class EcwNurvis
 
     /**
      * Gets the value of the season property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSeason() {
         return season;
@@ -94,11 +81,9 @@ public class EcwNurvis
 
     /**
      * Sets the value of the season property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSeason(String value) {
         this.season = value;
@@ -106,11 +91,9 @@ public class EcwNurvis
 
     /**
      * Gets the value of the productBookingCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProductBookingCode() {
         return productBookingCode;
@@ -118,11 +101,9 @@ public class EcwNurvis
 
     /**
      * Sets the value of the productBookingCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProductBookingCode(String value) {
         this.productBookingCode = value;
@@ -130,11 +111,9 @@ public class EcwNurvis
 
     /**
      * Gets the value of the ekms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEkms() {
         return ekms;
@@ -142,11 +121,9 @@ public class EcwNurvis
 
     /**
      * Sets the value of the ekms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEkms(String value) {
         this.ekms = value;
@@ -154,11 +131,9 @@ public class EcwNurvis
 
     /**
      * Gets the value of the catalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCatalog() {
         return catalog;
@@ -166,11 +141,9 @@ public class EcwNurvis
 
     /**
      * Sets the value of the catalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCatalog(String value) {
         this.catalog = value;

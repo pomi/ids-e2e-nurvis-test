@@ -8,24 +8,20 @@
 
 package com.thomascook.toscaAdapter.response;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Name of an individual and appropriate contact information.  May be contact information for the customer or someone affiliated with the customer.
- * 
+ * <p>
  * <p>Java class for ContactPersonType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ContactPersonType">
  *   &lt;complexContent>
@@ -57,59 +53,55 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ContactPersonType", propOrder = {
-    "personName",
-    "telephone",
-    "address",
-    "email",
-    "url",
-    "companyName",
-    "employeeInfo"
+        "personName",
+        "telephone",
+        "address",
+        "email",
+        "url",
+        "companyName",
+        "employeeInfo"
 })
 public class ContactPersonType {
 
     @XmlElement(name = "PersonName")
-    protected PersonNameType personName;
+    private PersonNameType personName;
     @XmlElement(name = "Telephone", required = true)
-    protected List<Telephone> telephone;
+    private List<Telephone> telephone;
     @XmlElement(name = "Address")
-    protected List<AddressInfoType> address;
+    private List<AddressInfoType> address;
     @XmlElement(name = "Email")
-    protected List<EmailType> email;
+    private List<EmailType> email;
     @XmlElement(name = "URL")
-    protected List<URLType> url;
+    private List<URLType> url;
     @XmlElement(name = "CompanyName")
-    protected List<CompanyNameType> companyName;
+    private List<CompanyNameType> companyName;
     @XmlElement(name = "EmployeeInfo")
-    protected List<EmployeeInfoType> employeeInfo;
+    private List<EmployeeInfoType> employeeInfo;
     @XmlAttribute(name = "ContactType")
-    protected String contactType;
+    private String contactType;
     @XmlAttribute(name = "Relation")
-    protected String relation;
+    private String relation;
     @XmlAttribute(name = "EmergencyFlag")
-    protected Boolean emergencyFlag;
+    private Boolean emergencyFlag;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "DefaultInd")
-    protected Boolean defaultInd;
+    private Boolean defaultInd;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the personName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link PersonNameType }
      */
     public PersonNameType getPersonName() {
         return personName;
@@ -117,11 +109,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the personName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PersonNameType }
      */
     public void setPersonName(PersonNameType value) {
         this.personName = value;
@@ -129,185 +119,171 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the telephone property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Telephone }
-     * 
-     * 
      */
     public List<Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<>();
         }
         return this.telephone;
     }
 
     /**
      * Gets the value of the address property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the address property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddress().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressInfoType }
-     * 
-     * 
      */
     public List<AddressInfoType> getAddress() {
         if (address == null) {
-            address = new ArrayList<AddressInfoType>();
+            address = new ArrayList<>();
         }
         return this.address;
     }
 
     /**
      * Gets the value of the email property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the email property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEmail().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EmailType }
-     * 
-     * 
      */
     public List<EmailType> getEmail() {
         if (email == null) {
-            email = new ArrayList<EmailType>();
+            email = new ArrayList<>();
         }
         return this.email;
     }
 
     /**
      * Gets the value of the url property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the url property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getURL().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link URLType }
-     * 
-     * 
      */
     public List<URLType> getURL() {
         if (url == null) {
-            url = new ArrayList<URLType>();
+            url = new ArrayList<>();
         }
         return this.url;
     }
 
     /**
      * Gets the value of the companyName property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the companyName property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCompanyName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CompanyNameType }
-     * 
-     * 
      */
     public List<CompanyNameType> getCompanyName() {
         if (companyName == null) {
-            companyName = new ArrayList<CompanyNameType>();
+            companyName = new ArrayList<>();
         }
         return this.companyName;
     }
 
     /**
      * Gets the value of the employeeInfo property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the employeeInfo property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEmployeeInfo().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EmployeeInfoType }
-     * 
-     * 
      */
     public List<EmployeeInfoType> getEmployeeInfo() {
         if (employeeInfo == null) {
-            employeeInfo = new ArrayList<EmployeeInfoType>();
+            employeeInfo = new ArrayList<>();
         }
         return this.employeeInfo;
     }
 
     /**
      * Gets the value of the contactType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getContactType() {
         return contactType;
@@ -315,11 +291,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the contactType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setContactType(String value) {
         this.contactType = value;
@@ -327,11 +301,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the relation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRelation() {
         return relation;
@@ -339,11 +311,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the relation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRelation(String value) {
         this.relation = value;
@@ -351,11 +321,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the emergencyFlag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isEmergencyFlag() {
         if (emergencyFlag == null) {
@@ -367,11 +335,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the emergencyFlag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setEmergencyFlag(Boolean value) {
         this.emergencyFlag = value;
@@ -379,11 +345,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -391,11 +355,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -403,11 +365,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the defaultInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isDefaultInd() {
         if (defaultInd == null) {
@@ -419,11 +379,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the defaultInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setDefaultInd(Boolean value) {
         this.defaultInd = value;
@@ -431,11 +389,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -443,11 +399,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -455,11 +409,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -467,11 +419,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -480,9 +430,9 @@ public class ContactPersonType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -492,51 +442,47 @@ public class ContactPersonType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Telephone {
 
         @XmlAttribute(name = "RPH")
-        protected String rph;
+        String rph;
         @XmlAttribute(name = "DefaultInd")
-        protected Boolean defaultInd;
+        Boolean defaultInd;
         @XmlAttribute(name = "ShareSynchInd")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String shareSynchInd;
+        String shareSynchInd;
         @XmlAttribute(name = "ShareMarketInd")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String shareMarketInd;
+        String shareMarketInd;
         @XmlAttribute(name = "FormattedInd")
-        protected Boolean formattedInd;
+        Boolean formattedInd;
         @XmlAttribute(name = "PhoneLocationType")
-        protected String phoneLocationType;
+        String phoneLocationType;
         @XmlAttribute(name = "PhoneTechType")
-        protected String phoneTechType;
+        String phoneTechType;
         @XmlAttribute(name = "PhoneUseType")
-        protected String phoneUseType;
+        String phoneUseType;
         @XmlAttribute(name = "CountryAccessCode")
-        protected String countryAccessCode;
+        String countryAccessCode;
         @XmlAttribute(name = "AreaCityCode")
-        protected String areaCityCode;
+        String areaCityCode;
         @XmlAttribute(name = "PhoneNumber", required = true)
-        protected String phoneNumber;
+        String phoneNumber;
         @XmlAttribute(name = "Extension")
-        protected String extension;
+        String extension;
         @XmlAttribute(name = "PIN")
-        protected String pin;
+        String pin;
         @XmlAttribute(name = "Remark")
-        protected String remark;
+        String remark;
 
         /**
          * Gets the value of the rph property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRPH() {
             return rph;
@@ -544,11 +490,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the rph property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -556,11 +500,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the defaultInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public boolean isDefaultInd() {
             if (defaultInd == null) {
@@ -572,11 +514,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the defaultInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setDefaultInd(Boolean value) {
             this.defaultInd = value;
@@ -584,11 +524,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the shareSynchInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getShareSynchInd() {
             return shareSynchInd;
@@ -596,11 +534,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the shareSynchInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setShareSynchInd(String value) {
             this.shareSynchInd = value;
@@ -608,11 +544,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the shareMarketInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getShareMarketInd() {
             return shareMarketInd;
@@ -620,11 +554,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the shareMarketInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setShareMarketInd(String value) {
             this.shareMarketInd = value;
@@ -632,11 +564,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the formattedInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public boolean isFormattedInd() {
             if (formattedInd == null) {
@@ -648,11 +578,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the formattedInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setFormattedInd(Boolean value) {
             this.formattedInd = value;
@@ -660,11 +588,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneLocationType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneLocationType() {
             return phoneLocationType;
@@ -672,11 +598,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneLocationType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneLocationType(String value) {
             this.phoneLocationType = value;
@@ -684,11 +608,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneTechType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneTechType() {
             return phoneTechType;
@@ -696,11 +618,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneTechType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneTechType(String value) {
             this.phoneTechType = value;
@@ -708,11 +628,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneUseType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneUseType() {
             return phoneUseType;
@@ -720,11 +638,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneUseType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneUseType(String value) {
             this.phoneUseType = value;
@@ -732,11 +648,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the countryAccessCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCountryAccessCode() {
             return countryAccessCode;
@@ -744,11 +658,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the countryAccessCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCountryAccessCode(String value) {
             this.countryAccessCode = value;
@@ -756,11 +668,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the areaCityCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAreaCityCode() {
             return areaCityCode;
@@ -768,11 +678,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the areaCityCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAreaCityCode(String value) {
             this.areaCityCode = value;
@@ -780,11 +688,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneNumber() {
             return phoneNumber;
@@ -792,11 +698,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneNumber(String value) {
             this.phoneNumber = value;
@@ -804,11 +708,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the extension property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExtension() {
             return extension;
@@ -816,11 +718,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the extension property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExtension(String value) {
             this.extension = value;
@@ -828,11 +728,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the pin property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPIN() {
             return pin;
@@ -840,11 +738,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the pin property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPIN(String value) {
             this.pin = value;
@@ -852,11 +748,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the remark property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRemark() {
             return remark;
@@ -864,11 +758,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the remark property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRemark(String value) {
             this.remark = value;

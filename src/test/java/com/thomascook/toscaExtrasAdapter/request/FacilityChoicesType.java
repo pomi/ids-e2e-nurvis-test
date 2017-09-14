@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaExtrasAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Provides the available facilities for the enquiror's chosen property and stay.
- * 
+ * <p>
  * <p>Java class for FacilityChoicesType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="FacilityChoicesType">
  *   &lt;complexContent>
@@ -69,35 +65,31 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FacilityChoicesType", propOrder = {
-    "availableRooms",
-    "availableMealPlans",
-    "roomPrices"
+        "availableRooms",
+        "availableMealPlans",
+        "roomPrices"
 })
 public class FacilityChoicesType {
 
     @XmlElement(name = "AvailableRooms")
-    protected AvailableRooms availableRooms;
+    private AvailableRooms availableRooms;
     @XmlElement(name = "AvailableMealPlans")
-    protected AvailableMealPlans availableMealPlans;
+    private AvailableMealPlans availableMealPlans;
     @XmlElement(name = "RoomPrices")
-    protected List<RoomPrices> roomPrices;
+    private List<RoomPrices> roomPrices;
     @XmlAttribute(name = "MinOccupancy")
-    protected Integer minOccupancy;
+    private Integer minOccupancy;
     @XmlAttribute(name = "MaxOccupancy")
-    protected Integer maxOccupancy;
+    private Integer maxOccupancy;
 
     /**
      * Gets the value of the availableRooms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailableRooms }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailableRooms }
      */
     public AvailableRooms getAvailableRooms() {
         return availableRooms;
@@ -105,11 +97,9 @@ public class FacilityChoicesType {
 
     /**
      * Sets the value of the availableRooms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailableRooms }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailableRooms }
      */
     public void setAvailableRooms(AvailableRooms value) {
         this.availableRooms = value;
@@ -117,11 +107,9 @@ public class FacilityChoicesType {
 
     /**
      * Gets the value of the availableMealPlans property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailableMealPlans }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailableMealPlans }
      */
     public AvailableMealPlans getAvailableMealPlans() {
         return availableMealPlans;
@@ -129,11 +117,9 @@ public class FacilityChoicesType {
 
     /**
      * Sets the value of the availableMealPlans property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailableMealPlans }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailableMealPlans }
      */
     public void setAvailableMealPlans(AvailableMealPlans value) {
         this.availableMealPlans = value;
@@ -141,40 +127,36 @@ public class FacilityChoicesType {
 
     /**
      * Gets the value of the roomPrices property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomPrices property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomPrices().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomPrices }
-     * 
-     * 
      */
     public List<RoomPrices> getRoomPrices() {
         if (roomPrices == null) {
-            roomPrices = new ArrayList<RoomPrices>();
+            roomPrices = new ArrayList<>();
         }
         return this.roomPrices;
     }
 
     /**
      * Gets the value of the minOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinOccupancy() {
         return minOccupancy;
@@ -182,11 +164,9 @@ public class FacilityChoicesType {
 
     /**
      * Sets the value of the minOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinOccupancy(Integer value) {
         this.minOccupancy = value;
@@ -194,11 +174,9 @@ public class FacilityChoicesType {
 
     /**
      * Gets the value of the maxOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxOccupancy() {
         return maxOccupancy;
@@ -206,11 +184,9 @@ public class FacilityChoicesType {
 
     /**
      * Sets the value of the maxOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxOccupancy(Integer value) {
         this.maxOccupancy = value;
@@ -219,9 +195,9 @@ public class FacilityChoicesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -233,43 +209,39 @@ public class FacilityChoicesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "mealPlan"
+            "mealPlan"
     })
     public static class AvailableMealPlans {
 
         @XmlElement(name = "MealPlan", required = true)
-        protected List<MealPlanType> mealPlan;
+        List<MealPlanType> mealPlan;
 
         /**
          * Gets the value of the mealPlan property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the mealPlan property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMealPlan().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link MealPlanType }
-         * 
-         * 
          */
         public List<MealPlanType> getMealPlan() {
             if (mealPlan == null) {
-                mealPlan = new ArrayList<MealPlanType>();
+                mealPlan = new ArrayList<>();
             }
             return this.mealPlan;
         }
@@ -279,9 +251,9 @@ public class FacilityChoicesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -293,43 +265,39 @@ public class FacilityChoicesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "room"
+            "room"
     })
     public static class AvailableRooms {
 
         @XmlElement(name = "Room", required = true)
-        protected List<PkgRoomInventoryType> room;
+        List<PkgRoomInventoryType> room;
 
         /**
          * Gets the value of the room property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the room property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoom().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PkgRoomInventoryType }
-         * 
-         * 
          */
         public List<PkgRoomInventoryType> getRoom() {
             if (room == null) {
-                room = new ArrayList<PkgRoomInventoryType>();
+                room = new ArrayList<>();
             }
             return this.room;
         }
@@ -339,9 +307,9 @@ public class FacilityChoicesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -354,56 +322,50 @@ public class FacilityChoicesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "roomPrice"
+            "roomPrice"
     })
     public static class RoomPrices {
 
         @XmlElement(name = "RoomPrice", required = true)
-        protected List<RoomPriceType> roomPrice;
+        List<RoomPriceType> roomPrice;
         @XmlAttribute(name = "MealPlan")
-        protected String mealPlan;
+        String mealPlan;
 
         /**
          * Gets the value of the roomPrice property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the roomPrice property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoomPrice().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RoomPriceType }
-         * 
-         * 
          */
         public List<RoomPriceType> getRoomPrice() {
             if (roomPrice == null) {
-                roomPrice = new ArrayList<RoomPriceType>();
+                roomPrice = new ArrayList<>();
             }
             return this.roomPrice;
         }
 
         /**
          * Gets the value of the mealPlan property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getMealPlan() {
             return mealPlan;
@@ -411,11 +373,9 @@ public class FacilityChoicesType {
 
         /**
          * Sets the value of the mealPlan property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setMealPlan(String value) {
             this.mealPlan = value;

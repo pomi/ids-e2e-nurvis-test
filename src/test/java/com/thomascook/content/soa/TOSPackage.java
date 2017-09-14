@@ -8,18 +8,14 @@
 
 package com.thomascook.content.soa;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for TOSPackage complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TOSPackage">
  *   &lt;complexContent>
@@ -31,32 +27,27 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TOSPackage")
 @XmlSeeAlso({
-    Request.TOS.Package.class
+        Request.TOS.Package.class
 })
 public class TOSPackage
-    extends BasePackage
-{
+        extends BasePackage {
 
     @XmlAttribute(name = "TOSCode", required = true)
-    protected String tosCode;
+    private String tosCode;
     @XmlAttribute(name = "Season", required = true)
-    protected String season;
+    private String season;
     @XmlAttribute(name = "Brand", required = true)
-    protected String brand;
+    private String brand;
 
     /**
      * Gets the value of the tosCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTOSCode() {
         return tosCode;
@@ -64,11 +55,9 @@ public class TOSPackage
 
     /**
      * Sets the value of the tosCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTOSCode(String value) {
         this.tosCode = value;
@@ -76,11 +65,9 @@ public class TOSPackage
 
     /**
      * Gets the value of the season property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSeason() {
         return season;
@@ -88,11 +75,9 @@ public class TOSPackage
 
     /**
      * Sets the value of the season property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSeason(String value) {
         this.season = value;
@@ -100,11 +85,9 @@ public class TOSPackage
 
     /**
      * Gets the value of the brand property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrand() {
         return brand;
@@ -112,11 +95,9 @@ public class TOSPackage
 
     /**
      * Sets the value of the brand property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrand(String value) {
         this.brand = value;

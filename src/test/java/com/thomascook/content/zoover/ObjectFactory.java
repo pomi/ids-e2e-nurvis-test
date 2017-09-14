@@ -15,34 +15,31 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.content.zoover package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.content.zoover package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _ZooverOverview_QNAME = new QName("http://www.thomascook.com/content/zoover", "ZooverOverview");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.content.zoover
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link ZooverOverviewType }
-     * 
      */
     public ZooverOverviewType createZooverOverviewType() {
         return new ZooverOverviewType();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Zoover }
-     * 
      */
     public Zoover createZoover() {
         return new Zoover();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ZooverOverviewType.Properties }
-     * 
      */
     public ZooverOverviewType.Properties createZooverOverviewTypeProperties() {
         return new ZooverOverviewType.Properties();
@@ -66,11 +61,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ZooverOverviewType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/zoover", name = "ZooverOverview")
     public JAXBElement<ZooverOverviewType> createZooverOverview(ZooverOverviewType value) {
-        return new JAXBElement<ZooverOverviewType>(_ZooverOverview_QNAME, ZooverOverviewType.class, null, value);
+        return new JAXBElement<>(_ZooverOverview_QNAME, ZooverOverviewType.class, null, value);
     }
 
 }

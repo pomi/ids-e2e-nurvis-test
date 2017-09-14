@@ -8,18 +8,14 @@
 
 package com.thomascook.content.generichighlight;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for GenericHighlightType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GenericHighlightType">
  *   &lt;complexContent>
@@ -31,32 +27,28 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GenericHighlightType")
 @XmlSeeAlso({
-    com.thomascook.content.concept.Concept.Value.class,
-    com.thomascook.content.highlightedfeature.HighlightedFeature.Value.class,
-    com.thomascook.content.theme.Theme.Value.class
+        com.thomascook.content.concept.Concept.Value.class,
+        com.thomascook.content.highlightedfeature.HighlightedFeature.Value.class,
+        com.thomascook.content.theme.Theme.Value.class
 })
 public class GenericHighlightType {
 
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "Logo")
-    protected String logo;
+    private String logo;
     @XmlAttribute(name = "Sequence")
-    protected Integer sequence;
+    private Integer sequence;
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -64,11 +56,9 @@ public class GenericHighlightType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -76,11 +66,9 @@ public class GenericHighlightType {
 
     /**
      * Gets the value of the logo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLogo() {
         return logo;
@@ -88,11 +76,9 @@ public class GenericHighlightType {
 
     /**
      * Sets the value of the logo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLogo(String value) {
         this.logo = value;
@@ -100,11 +86,9 @@ public class GenericHighlightType {
 
     /**
      * Gets the value of the sequence property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getSequence() {
         return sequence;
@@ -112,11 +96,9 @@ public class GenericHighlightType {
 
     /**
      * Sets the value of the sequence property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setSequence(Integer value) {
         this.sequence = value;

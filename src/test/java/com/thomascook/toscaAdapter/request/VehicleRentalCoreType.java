@@ -8,26 +8,20 @@
 
 package com.thomascook.toscaAdapter.request;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * The VehicleRentalCoreType complex type identifies the data that is common, or core, to almost every transaction associated with the rental of a vehicle.
- * 
+ * <p>
  * <p>Java class for VehicleRentalCoreType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="VehicleRentalCoreType">
  *   &lt;complexContent>
@@ -64,82 +58,76 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VehicleRentalCoreType", propOrder = {
-    "pickUpLocation",
-    "returnLocation"
+        "pickUpLocation",
+        "returnLocation"
 })
 @XmlSeeAlso({
-    com.thomascook.toscaAdapter.request.ItineraryItemRequestType.RentalCar.class,
-    com.thomascook.toscaAdapter.request.ItineraryItemResponseType.RentalCar.class
+        com.thomascook.toscaAdapter.request.ItineraryItemRequestType.RentalCar.class,
+        com.thomascook.toscaAdapter.request.ItineraryItemResponseType.RentalCar.class
 })
 public class VehicleRentalCoreType {
 
     @XmlElement(name = "PickUpLocation")
-    protected List<PickUpLocation> pickUpLocation;
+    private List<PickUpLocation> pickUpLocation;
     @XmlElement(name = "ReturnLocation")
-    protected ReturnLocation returnLocation;
+    private ReturnLocation returnLocation;
     @XmlAttribute(name = "PickUpDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar pickUpDateTime;
+    private XMLGregorianCalendar pickUpDateTime;
     @XmlAttribute(name = "ReturnDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar returnDateTime;
+    private XMLGregorianCalendar returnDateTime;
     @XmlAttribute(name = "StartChargesDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar startChargesDateTime;
+    private XMLGregorianCalendar startChargesDateTime;
     @XmlAttribute(name = "StopChargesDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar stopChargesDateTime;
+    private XMLGregorianCalendar stopChargesDateTime;
     @XmlAttribute(name = "OneWayIndicator")
-    protected Boolean oneWayIndicator;
+    private Boolean oneWayIndicator;
     @XmlAttribute(name = "MultiIslandRentalDays")
-    protected Integer multiIslandRentalDays;
+    private Integer multiIslandRentalDays;
     @XmlAttribute(name = "Quantity")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger quantity;
+    private BigInteger quantity;
     @XmlAttribute(name = "DistUnitName")
-    protected DistanceUnitNameType distUnitName;
+    private DistanceUnitNameType distUnitName;
 
     /**
      * Gets the value of the pickUpLocation property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pickUpLocation property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPickUpLocation().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PickUpLocation }
-     * 
-     * 
      */
     public List<PickUpLocation> getPickUpLocation() {
         if (pickUpLocation == null) {
-            pickUpLocation = new ArrayList<PickUpLocation>();
+            pickUpLocation = new ArrayList<>();
         }
         return this.pickUpLocation;
     }
 
     /**
      * Gets the value of the returnLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReturnLocation }
-     *     
+     *
+     * @return possible object is
+     * {@link ReturnLocation }
      */
     public ReturnLocation getReturnLocation() {
         return returnLocation;
@@ -147,11 +135,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the returnLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReturnLocation }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReturnLocation }
      */
     public void setReturnLocation(ReturnLocation value) {
         this.returnLocation = value;
@@ -159,11 +145,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the pickUpDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getPickUpDateTime() {
         return pickUpDateTime;
@@ -171,11 +155,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the pickUpDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setPickUpDateTime(XMLGregorianCalendar value) {
         this.pickUpDateTime = value;
@@ -183,11 +165,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the returnDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getReturnDateTime() {
         return returnDateTime;
@@ -195,11 +175,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the returnDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setReturnDateTime(XMLGregorianCalendar value) {
         this.returnDateTime = value;
@@ -207,11 +185,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the startChargesDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getStartChargesDateTime() {
         return startChargesDateTime;
@@ -219,11 +195,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the startChargesDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setStartChargesDateTime(XMLGregorianCalendar value) {
         this.startChargesDateTime = value;
@@ -231,11 +205,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the stopChargesDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getStopChargesDateTime() {
         return stopChargesDateTime;
@@ -243,11 +215,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the stopChargesDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setStopChargesDateTime(XMLGregorianCalendar value) {
         this.stopChargesDateTime = value;
@@ -255,11 +225,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the oneWayIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isOneWayIndicator() {
         return oneWayIndicator;
@@ -267,11 +235,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the oneWayIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setOneWayIndicator(Boolean value) {
         this.oneWayIndicator = value;
@@ -279,11 +245,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the multiIslandRentalDays property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMultiIslandRentalDays() {
         return multiIslandRentalDays;
@@ -291,11 +255,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the multiIslandRentalDays property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMultiIslandRentalDays(Integer value) {
         this.multiIslandRentalDays = value;
@@ -303,11 +265,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -315,11 +275,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
@@ -327,11 +285,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Gets the value of the distUnitName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DistanceUnitNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link DistanceUnitNameType }
      */
     public DistanceUnitNameType getDistUnitName() {
         return distUnitName;
@@ -339,11 +295,9 @@ public class VehicleRentalCoreType {
 
     /**
      * Sets the value of the distUnitName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DistanceUnitNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DistanceUnitNameType }
      */
     public void setDistUnitName(DistanceUnitNameType value) {
         this.distUnitName = value;
@@ -352,9 +306,9 @@ public class VehicleRentalCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -364,25 +318,20 @@ public class VehicleRentalCoreType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class PickUpLocation
-        extends LocationType
-    {
+            extends LocationType {
 
         @XmlAttribute(name = "ExtendedLocationCode")
-        protected String extendedLocationCode;
+        String extendedLocationCode;
 
         /**
          * Gets the value of the extendedLocationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExtendedLocationCode() {
             return extendedLocationCode;
@@ -390,11 +339,9 @@ public class VehicleRentalCoreType {
 
         /**
          * Sets the value of the extendedLocationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExtendedLocationCode(String value) {
             this.extendedLocationCode = value;
@@ -405,9 +352,9 @@ public class VehicleRentalCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -417,25 +364,20 @@ public class VehicleRentalCoreType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ReturnLocation
-        extends LocationType
-    {
+            extends LocationType {
 
         @XmlAttribute(name = "ExtendedLocationCode")
-        protected String extendedLocationCode;
+        String extendedLocationCode;
 
         /**
          * Gets the value of the extendedLocationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExtendedLocationCode() {
             return extendedLocationCode;
@@ -443,11 +385,9 @@ public class VehicleRentalCoreType {
 
         /**
          * Sets the value of the extendedLocationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExtendedLocationCode(String value) {
             this.extendedLocationCode = value;

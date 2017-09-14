@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- *  Minimum information about ticketing required to complete the booking transaction plus eTicket number.
- * 
+ * Minimum information about ticketing required to complete the booking transaction plus eTicket number.
+ * <p>
  * <p>Java class for TicketingInfoRS_Type complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TicketingInfoRS_Type">
  *   &lt;complexContent>
@@ -31,28 +27,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TicketingInfoRS_Type")
 @XmlSeeAlso({
-    PkgReservation.TicketingInfo.class
+        PkgReservation.TicketingInfo.class
 })
 public class TicketingInfoRSType
-    extends TicketingInfoType
-{
+        extends TicketingInfoType {
 
     @XmlAttribute(name = "eTicketNumber")
-    protected String eTicketNumber;
+    private String eTicketNumber;
 
     /**
      * Gets the value of the eTicketNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getETicketNumber() {
         return eTicketNumber;
@@ -60,11 +51,9 @@ public class TicketingInfoRSType
 
     /**
      * Sets the value of the eTicketNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setETicketNumber(String value) {
         this.eTicketNumber = value;

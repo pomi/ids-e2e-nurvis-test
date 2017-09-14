@@ -8,35 +8,31 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import com.thomascook.content.soa.SrpSearchResult;
+
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
-import com.thomascook.content.soa.SrpSearchResult;
 
 
 /**
  * A single hotel offer.
- *                 Contains a information about the offer including hotel and flight
- *                 details and the list of
- *                 rooms satisfying the requested criteria.
- *                 These data are commonly contained by all kind of hotel offer
- *                 responses, additional custom information can be stored
- *                 in extended
- *                 types.
- *             
- * 
+ * Contains a information about the offer including hotel and flight
+ * details and the list of
+ * rooms satisfying the requested criteria.
+ * These data are commonly contained by all kind of hotel offer
+ * responses, additional custom information can be stored
+ * in extended
+ * types.
+ * <p>
+ * <p>
  * <p>Java class for HotelOfferType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="HotelOfferType">
  *   &lt;complexContent>
@@ -80,105 +76,101 @@ import com.thomascook.content.soa.SrpSearchResult;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HotelOfferType", propOrder = {
-    "flights",
-    "concepts",
-    "rooms",
-    "srpSearchResult"
+        "flights",
+        "concepts",
+        "rooms",
+        "srpSearchResult"
 })
 public class HotelOfferType {
 
     @XmlElement(name = "Flights")
-    protected InAndOutBoundFlightsType flights;
+    private InAndOutBoundFlightsType flights;
     @XmlElement(name = "Concepts")
-    protected ConceptsType concepts;
+    private ConceptsType concepts;
     @XmlElement(name = "Rooms", required = true)
-    protected Rooms rooms;
+    private Rooms rooms;
     @XmlElement(name = "SrpSearchResult", namespace = "http://www.thomascook.com/content/soa")
-    protected SrpSearchResult srpSearchResult;
+    private SrpSearchResult srpSearchResult;
     @XmlAttribute(name = "Date")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar date;
+    private XMLGregorianCalendar date;
     @XmlAttribute(name = "ResortCatalog")
-    protected String resortCatalog;
+    private String resortCatalog;
     @XmlAttribute(name = "RegionCatalog")
-    protected String regionCatalog;
+    private String regionCatalog;
     @XmlAttribute(name = "DestinationCatalog")
-    protected String destinationCatalog;
+    private String destinationCatalog;
     @XmlAttribute(name = "ProductId")
-    protected String productId;
+    private String productId;
     @XmlAttribute(name = "ProductBookingsCode")
-    protected String productBookingsCode;
+    private String productBookingsCode;
     @XmlAttribute(name = "EKMS")
-    protected String ekms;
+    private String ekms;
     @XmlAttribute(name = "SellThroughWeb")
-    protected Boolean sellThroughWeb;
+    private Boolean sellThroughWeb;
     @XmlAttribute(name = "PromoOfferCodeAndType")
-    protected String promoOfferCodeAndType;
+    private String promoOfferCodeAndType;
     @XmlAttribute(name = "PromoBrand")
-    protected String promoBrand;
+    private String promoBrand;
     @XmlAttribute(name = "PromoCatalog")
-    protected String promoCatalog;
+    private String promoCatalog;
     @XmlAttribute(name = "DiscountPercentage")
-    protected Integer discountPercentage;
+    private Integer discountPercentage;
     @XmlAttribute(name = "StartDate")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar startDate;
+    private XMLGregorianCalendar startDate;
     @XmlAttribute(name = "EndDate")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    private XMLGregorianCalendar endDate;
     @XmlAttribute(name = "TransferIndication")
-    protected String transferIndication;
+    private String transferIndication;
     @XmlAttribute(name = "HotelChain")
-    protected String hotelChain;
+    private String hotelChain;
     @XmlAttribute(name = "OfficialRating")
-    protected String officialRating;
+    private String officialRating;
     @XmlAttribute(name = "PkgDuration", required = true)
-    protected int pkgDuration;
+    private int pkgDuration;
     @XmlAttribute(name = "PkgDurationInDays")
-    protected Integer pkgDurationInDays;
+    private Integer pkgDurationInDays;
     @XmlAttribute(name = "BoardCode")
-    protected Integer boardCode;
+    private Integer boardCode;
     @XmlAttribute(name = "HotelCode")
-    protected String hotelCode;
+    private String hotelCode;
     @XmlAttribute(name = "BrandCode")
-    protected String brandCode;
+    private String brandCode;
     @XmlAttribute(name = "BrochureName")
-    protected String brochureName;
+    private String brochureName;
     @XmlAttribute(name = "SeasonCode")
-    protected String seasonCode;
+    private String seasonCode;
     @XmlAttribute(name = "StarRating")
-    protected Integer starRating;
+    private Integer starRating;
     @XmlAttribute(name = "ZooverRating")
-    protected BigDecimal zooverRating;
+    private BigDecimal zooverRating;
     @XmlAttribute(name = "Relevancy")
-    protected Integer relevancy;
+    private Integer relevancy;
     @XmlAttribute(name = "SkiRegion")
-    protected String skiRegion;
+    private String skiRegion;
     @XmlAttribute(name = "AverageFlightTime")
-    protected BigInteger averageFlightTime;
+    private BigInteger averageFlightTime;
     @XmlAttribute(name = "BusTransferTime")
-    protected BigInteger busTransferTime;
+    private BigInteger busTransferTime;
     @XmlAttribute(name = "Latitude")
-    protected String latitude;
+    private String latitude;
     @XmlAttribute(name = "Longitude")
-    protected String longitude;
+    private String longitude;
     @XmlAttribute(name = "Altitude")
-    protected String altitude;
+    private String altitude;
     @XmlAttribute(name = "AltitudeUnitOfMeasureCode")
-    protected String altitudeUnitOfMeasureCode;
+    private String altitudeUnitOfMeasureCode;
 
     /**
      * Gets the value of the flights property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InAndOutBoundFlightsType }
-     *     
+     *
+     * @return possible object is
+     * {@link InAndOutBoundFlightsType }
      */
     public InAndOutBoundFlightsType getFlights() {
         return flights;
@@ -186,11 +178,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the flights property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InAndOutBoundFlightsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link InAndOutBoundFlightsType }
      */
     public void setFlights(InAndOutBoundFlightsType value) {
         this.flights = value;
@@ -198,11 +188,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the concepts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ConceptsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ConceptsType }
      */
     public ConceptsType getConcepts() {
         return concepts;
@@ -210,11 +198,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the concepts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ConceptsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ConceptsType }
      */
     public void setConcepts(ConceptsType value) {
         this.concepts = value;
@@ -222,11 +208,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the rooms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Rooms }
-     *     
+     *
+     * @return possible object is
+     * {@link Rooms }
      */
     public Rooms getRooms() {
         return rooms;
@@ -234,11 +218,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the rooms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Rooms }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Rooms }
      */
     public void setRooms(Rooms value) {
         this.rooms = value;
@@ -246,11 +228,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the srpSearchResult property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SrpSearchResult }
-     *     
+     *
+     * @return possible object is
+     * {@link SrpSearchResult }
      */
     public SrpSearchResult getSrpSearchResult() {
         return srpSearchResult;
@@ -258,11 +238,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the srpSearchResult property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SrpSearchResult }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SrpSearchResult }
      */
     public void setSrpSearchResult(SrpSearchResult value) {
         this.srpSearchResult = value;
@@ -270,11 +248,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDate() {
         return date;
@@ -282,11 +258,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDate(XMLGregorianCalendar value) {
         this.date = value;
@@ -294,11 +268,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the resortCatalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResortCatalog() {
         return resortCatalog;
@@ -306,11 +278,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the resortCatalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResortCatalog(String value) {
         this.resortCatalog = value;
@@ -318,11 +288,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the regionCatalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRegionCatalog() {
         return regionCatalog;
@@ -330,11 +298,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the regionCatalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRegionCatalog(String value) {
         this.regionCatalog = value;
@@ -342,11 +308,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the destinationCatalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDestinationCatalog() {
         return destinationCatalog;
@@ -354,11 +318,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the destinationCatalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDestinationCatalog(String value) {
         this.destinationCatalog = value;
@@ -366,11 +328,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the productId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProductId() {
         return productId;
@@ -378,11 +338,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the productId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProductId(String value) {
         this.productId = value;
@@ -390,11 +348,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the productBookingsCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProductBookingsCode() {
         return productBookingsCode;
@@ -402,11 +358,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the productBookingsCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProductBookingsCode(String value) {
         this.productBookingsCode = value;
@@ -414,11 +368,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the ekms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEKMS() {
         return ekms;
@@ -426,11 +378,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the ekms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEKMS(String value) {
         this.ekms = value;
@@ -438,11 +388,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the sellThroughWeb property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isSellThroughWeb() {
         return sellThroughWeb;
@@ -450,11 +398,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the sellThroughWeb property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setSellThroughWeb(Boolean value) {
         this.sellThroughWeb = value;
@@ -462,11 +408,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the promoOfferCodeAndType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromoOfferCodeAndType() {
         return promoOfferCodeAndType;
@@ -474,11 +418,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the promoOfferCodeAndType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromoOfferCodeAndType(String value) {
         this.promoOfferCodeAndType = value;
@@ -486,11 +428,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the promoBrand property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromoBrand() {
         return promoBrand;
@@ -498,11 +438,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the promoBrand property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromoBrand(String value) {
         this.promoBrand = value;
@@ -510,11 +448,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the promoCatalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromoCatalog() {
         return promoCatalog;
@@ -522,11 +458,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the promoCatalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromoCatalog(String value) {
         this.promoCatalog = value;
@@ -534,11 +468,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the discountPercentage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getDiscountPercentage() {
         return discountPercentage;
@@ -546,11 +478,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the discountPercentage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setDiscountPercentage(Integer value) {
         this.discountPercentage = value;
@@ -558,11 +488,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the startDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getStartDate() {
         return startDate;
@@ -570,11 +498,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the startDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setStartDate(XMLGregorianCalendar value) {
         this.startDate = value;
@@ -582,11 +508,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the endDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getEndDate() {
         return endDate;
@@ -594,11 +518,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the endDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setEndDate(XMLGregorianCalendar value) {
         this.endDate = value;
@@ -606,11 +528,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the transferIndication property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransferIndication() {
         return transferIndication;
@@ -618,11 +538,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the transferIndication property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransferIndication(String value) {
         this.transferIndication = value;
@@ -630,11 +548,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the hotelChain property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelChain() {
         return hotelChain;
@@ -642,11 +558,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the hotelChain property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelChain(String value) {
         this.hotelChain = value;
@@ -654,11 +568,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the officialRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOfficialRating() {
         return officialRating;
@@ -666,11 +578,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the officialRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOfficialRating(String value) {
         this.officialRating = value;
@@ -678,7 +588,6 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the pkgDuration property.
-     * 
      */
     public int getPkgDuration() {
         return pkgDuration;
@@ -686,7 +595,6 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the pkgDuration property.
-     * 
      */
     public void setPkgDuration(int value) {
         this.pkgDuration = value;
@@ -694,11 +602,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the pkgDurationInDays property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getPkgDurationInDays() {
         return pkgDurationInDays;
@@ -706,11 +612,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the pkgDurationInDays property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setPkgDurationInDays(Integer value) {
         this.pkgDurationInDays = value;
@@ -718,11 +622,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the boardCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getBoardCode() {
         return boardCode;
@@ -730,11 +632,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the boardCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setBoardCode(Integer value) {
         this.boardCode = value;
@@ -742,11 +642,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the hotelCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHotelCode() {
         return hotelCode;
@@ -754,11 +652,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the hotelCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHotelCode(String value) {
         this.hotelCode = value;
@@ -766,11 +662,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the brandCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandCode() {
         return brandCode;
@@ -778,11 +672,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the brandCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -790,11 +682,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the brochureName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrochureName() {
         return brochureName;
@@ -802,11 +692,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the brochureName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrochureName(String value) {
         this.brochureName = value;
@@ -814,11 +702,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the seasonCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSeasonCode() {
         return seasonCode;
@@ -826,11 +712,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the seasonCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSeasonCode(String value) {
         this.seasonCode = value;
@@ -838,11 +722,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the starRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getStarRating() {
         return starRating;
@@ -850,11 +732,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the starRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setStarRating(Integer value) {
         this.starRating = value;
@@ -862,11 +742,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the zooverRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getZooverRating() {
         return zooverRating;
@@ -874,11 +752,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the zooverRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setZooverRating(BigDecimal value) {
         this.zooverRating = value;
@@ -886,11 +762,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the relevancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getRelevancy() {
         return relevancy;
@@ -898,11 +772,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the relevancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setRelevancy(Integer value) {
         this.relevancy = value;
@@ -910,11 +782,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the skiRegion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSkiRegion() {
         return skiRegion;
@@ -922,11 +792,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the skiRegion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSkiRegion(String value) {
         this.skiRegion = value;
@@ -934,11 +802,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the averageFlightTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getAverageFlightTime() {
         return averageFlightTime;
@@ -946,11 +812,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the averageFlightTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setAverageFlightTime(BigInteger value) {
         this.averageFlightTime = value;
@@ -958,11 +822,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the busTransferTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getBusTransferTime() {
         return busTransferTime;
@@ -970,11 +832,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the busTransferTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setBusTransferTime(BigInteger value) {
         this.busTransferTime = value;
@@ -982,11 +842,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the latitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLatitude() {
         return latitude;
@@ -994,11 +852,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the latitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLatitude(String value) {
         this.latitude = value;
@@ -1006,11 +862,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the longitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLongitude() {
         return longitude;
@@ -1018,11 +872,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the longitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLongitude(String value) {
         this.longitude = value;
@@ -1030,11 +882,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the altitude property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltitude() {
         return altitude;
@@ -1042,11 +892,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the altitude property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltitude(String value) {
         this.altitude = value;
@@ -1054,11 +902,9 @@ public class HotelOfferType {
 
     /**
      * Gets the value of the altitudeUnitOfMeasureCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltitudeUnitOfMeasureCode() {
         return altitudeUnitOfMeasureCode;
@@ -1066,11 +912,9 @@ public class HotelOfferType {
 
     /**
      * Sets the value of the altitudeUnitOfMeasureCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltitudeUnitOfMeasureCode(String value) {
         this.altitudeUnitOfMeasureCode = value;
@@ -1079,9 +923,9 @@ public class HotelOfferType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1093,43 +937,39 @@ public class HotelOfferType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "room"
+            "room"
     })
     public static class Rooms {
 
         @XmlElement(name = "Room", required = true)
-        protected List<PkgValueMatchType> room;
+        List<PkgValueMatchType> room;
 
         /**
          * Gets the value of the room property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the room property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoom().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PkgValueMatchType }
-         * 
-         * 
          */
         public List<PkgValueMatchType> getRoom() {
             if (room == null) {
-                room = new ArrayList<PkgValueMatchType>();
+                room = new ArrayList<>();
             }
             return this.room;
         }
