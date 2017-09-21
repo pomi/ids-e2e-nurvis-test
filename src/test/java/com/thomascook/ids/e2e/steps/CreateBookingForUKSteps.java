@@ -30,9 +30,9 @@ public class CreateBookingForUKSteps implements En {
             String solr = Config.get().getSolrUk();
             assert !solr.isEmpty() : "Solr endpoint is not set";
             try {
-                Holder.setPassengers(dataTable);
-                Holder.setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
-                assert !Holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer().isEmpty() : "Hotel offers list is empty";
+                Holder.get().setPassengers(dataTable);
+                Holder.get().setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
+                assert !Holder.get().getOtaPkgSearchRS().getHotelOffers().getHotelOffer().isEmpty() : "Hotel offers list is empty";
             } catch (IOException | JAXBException | DatatypeConfigurationException e) {
                 e.printStackTrace();
             }
@@ -43,10 +43,10 @@ public class CreateBookingForUKSteps implements En {
             assert !tosca.isEmpty() : "Tosca endpoint is not set";
 
             int iteration = 1;
-            for (HotelOfferType hotelOffer : Holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer()) {
+            for (HotelOfferType hotelOffer : Holder.get().getOtaPkgSearchRS().getHotelOffers().getHotelOffer()) {
                 System.out.println("Iteration number " + iteration++);
                 try {
-                    OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, Holder.getPassengers());
+                    OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, Holder.get().getPassengers());
                     String toscaAvailabilityRequestXML = CreateBookingUK.createToscaAvailabilityRequestXML(toscaAvailabilityRequest);
                     assert !toscaAvailabilityRequestXML.equals("") : "Tosca availability Request XML is empty";
                     OTAPkgAvailRS toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(tosca, toscaAvailabilityRequestXML);
@@ -55,7 +55,7 @@ public class CreateBookingForUKSteps implements En {
                         continue;
 
                     String toscaAvailabilityResponseXML = CreateBookingUK.createToscaAvailabilityResponseXML(toscaAvailabilityResponse);
-                    OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, Holder.getPassengers());
+                    OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, Holder.get().getPassengers());
                     String toscaExtrasRequestXML = CreateBookingUK.createToscaExtrasRequestXML(toscaExtrasRequest);
                     OTAPkgExtrasInfoRS toscaExtrasResponse = CreateBookingUK.getToscaExtrasResponse(toscaExtrasRequestXML, tosca);
 

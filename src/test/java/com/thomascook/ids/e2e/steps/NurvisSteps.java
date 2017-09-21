@@ -5,6 +5,8 @@ import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.java8.En;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -23,6 +25,8 @@ public class NurvisSteps implements En {
     private CreateBookingNurvis createBooking;
     private ReservationRequestTypeRequest nurvisRequest;
     private ReservationResponseTypeResponse nurvisInquiryResponse;
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(NurvisSteps.class);
 
     public NurvisSteps() {
 
@@ -55,7 +59,7 @@ public class NurvisSteps implements En {
                 nurvisBooking = createNurvisBooking(nurvisRequest, nurvisInquiryResponse);
                 assert (nurvisBooking.getFab().getWarning().get(0).getResultCode().equals("200"));
                 destinationAirport = nurvisBooking.getFab().getDestination();
-                System.out.println(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]);
+                LOGGER.info(nurvisBooking.getBookingNumber());
             } catch (JAXBException | IOException e) {
                 e.printStackTrace();
             }

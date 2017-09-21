@@ -581,4 +581,8 @@ public class ReservationResponseTypeResponse {
         this.iComClient = value;
     }
 
+    public String getBookingNumber() {
+        return this.getFab().getWarning().get(0).getText().split(" ")[1];
+    }
+
 }

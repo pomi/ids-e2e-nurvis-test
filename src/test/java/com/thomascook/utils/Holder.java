@@ -1,5 +1,6 @@
 package com.thomascook.utils;
 
+import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
 import com.thomascook.toscaExtrasAdapter.request.OTAPkgExtrasInfoRQ;
@@ -21,6 +22,8 @@ public class Holder {
     private static OTAPkgExtrasInfoRQ toscaExtrasRequest;
     private static OTAPkgExtrasInfoRS toscaExtrasResponse;
     private static Map<String, Object> globalMap = new HashMap<>();
+    private static String bookingNumber;
+    private static ReservationRequestTypeRequest bookingDetails = new ReservationRequestTypeRequest();
 
 
     private Holder() {
@@ -33,51 +36,67 @@ public class Holder {
         return instance;
     }
 
-    public static OTAPkgSearchRS getOtaPkgSearchRS() {
+    public String getBookingNumber() {
+        return bookingNumber;
+    }
+
+    public ReservationRequestTypeRequest getBookingDetails() {
+        return bookingDetails;
+    }
+
+    public void setBookingDetails(ReservationRequestTypeRequest bookingDetails) {
+        Holder.bookingDetails = bookingDetails;
+    }
+
+    public void setBookingNumber(String bookingNumber) {
+        Holder.bookingNumber = bookingNumber;
+    }
+
+    public OTAPkgSearchRS getOtaPkgSearchRS() {
         return otaPkgSearchRS;
     }
 
-    public static void setOtaPkgSearchRS(OTAPkgSearchRS otaPkgSearchRS) {
+    public void setOtaPkgSearchRS(OTAPkgSearchRS otaPkgSearchRS) {
         Holder.otaPkgSearchRS = otaPkgSearchRS;
     }
 
-    public static DataTable getPassengers() {
+    public DataTable getPassengers() {
         return passengers;
     }
 
-    public static void setPassengers(DataTable passengers) {
+    public void setPassengers(DataTable passengers) {
         Holder.passengers = passengers;
     }
 
-    public static OTAPkgAvailRS getToscaAvailabilityResponse() {
+    public OTAPkgAvailRS getToscaAvailabilityResponse() {
         return toscaAvailabilityResponse;
     }
 
-    public static void setToscaAvailabilityResponse(OTAPkgAvailRS toscaAvailabilityResponse) {
+    public void setToscaAvailabilityResponse(OTAPkgAvailRS toscaAvailabilityResponse) {
         Holder.toscaAvailabilityResponse = toscaAvailabilityResponse;
     }
 
-    public static OTAPkgAvailRQ getToscaAvailabiltyRequest() {
+    public OTAPkgAvailRQ getToscaAvailabiltyRequest() {
         return toscaAvailabiltyRequest;
     }
 
-    public static void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
+    public void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
         Holder.toscaAvailabiltyRequest = toscaAvailabiltyRequest;
     }
 
-    public static OTAPkgExtrasInfoRQ getToscaExtrasRequest() {
+    public OTAPkgExtrasInfoRQ getToscaExtrasRequest() {
         return toscaExtrasRequest;
     }
 
-    public static void setToscaExtrasRequest(OTAPkgExtrasInfoRQ toscaExtrasRequest) {
+    public void setToscaExtrasRequest(OTAPkgExtrasInfoRQ toscaExtrasRequest) {
         Holder.toscaExtrasRequest = toscaExtrasRequest;
     }
 
-    public static OTAPkgExtrasInfoRS getToscaExtrasResponse() {
+    public OTAPkgExtrasInfoRS getToscaExtrasResponse() {
         return toscaExtrasResponse;
     }
 
-    public static void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
+    public void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
         Holder.toscaExtrasResponse = toscaExtrasResponse;
     }
 

@@ -20,8 +20,9 @@ import java.util.*;
 
 import static com.jayway.restassured.RestAssured.given;
 
-public class MsdBookings {
+public class MsdSession {
 
+    //region Constants
     private static final String TC_BOOKINGS_CONTEXT_FOLDER = "tc_bookings";
     private static final String TC_BOOKING_ACCOMMODATION_CONTEXT_FOLDER = "tc_bookingaccommodations";
     private static final String TC_BOOKING_EXTRA_SERVICES_CONTEXT_FOLDER = "tc_bookingextraservices";
@@ -30,7 +31,7 @@ public class MsdBookings {
     private static final String CONTACTS_SERVICE_CONTEXT_FOLDER = "contacts";
     private static final String MSIS_AUTH_COOKIE_NAME = "MSISAuth";
     private static final String MSIS_AUTH1_COOKIE_NAME = "MSISAuth1";
-    private static final String VALUE_TC_BOOKING_ID_JSONPATH = "value.tc_bookingid";
+    private static final String VALUE_TC_BOOKING_ID_JSONPATH = "tc_bookingid";
     private static final String TC_ACCOMMODATION_PAX_JSONPATH = "value[0].tc_participants";
     private static final String PAX_DELIMITER_REGEX = ",*\\r\\n";
     private static final String BASE_PATH_PREFIX = "/api/data/v8.2/";
@@ -38,11 +39,13 @@ public class MsdBookings {
     private static final String CUSTOMER_BOOKING_ROLES_SERVICE_TITLE = "tc_customerbookingroles";
     private static final String TC_BOOKING_ID_VALUE_KEY = "_tc_bookingid_value";
     private static final Header FF_HEADER = new Header("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0");
+    //endregion
+
     private static Map<String, String> COOKIES_MAP = new HashMap<>();
 
-    private static Logger logger = LoggerFactory.getLogger(MsdBookings.class);
+    private static Logger logger = LoggerFactory.getLogger(MsdSession.class);
 
-    public MsdBookings() {
+    public MsdSession() {
         String msdBaseUrl = Config.get().getMsdBaseUrl();
         String msdUserName = Config.get().getMsdLogin();
         String msdUserPassword = Config.get().getMsdPassword();
@@ -58,18 +61,28 @@ public class MsdBookings {
      * @return
      */
     public String getBookingGuidByMsdId(String msdId) {
+        return (String) (
+                (Map) (
+                        (ArrayList) getBookingGeneralDetailsByBookingId(msdId).getBody().jsonPath().get("value"))
+                        .get(0))
+                .get(VALUE_TC_BOOKING_ID_JSONPATH);
+    }
+
+    public Response getBookingGeneralDetailsByBookingId(String msdId) {
         int responseSize;
         String request;
-        Response guid;
+        Response bookingGeneralInfoObject;
 
-        request = String.format("?$filter=(tc_name eq \'%s\')&$select=tc_bookingid", msdId);
+        assert null != msdId;
+
+        request = String.format("?$filter=(tc_name eq '%s')", msdId);
 
         RestAssured.basePath = String.format(BASE_PATH_PREFIX + "%s", TC_BOOKINGS_CONTEXT_FOLDER.toLowerCase());
-        guid = given().cookies(COOKIES_MAP).get(request);
-        responseSize = guid.jsonPath().getList("value").size();
+        bookingGeneralInfoObject = given().cookies(COOKIES_MAP).get(request);
+        responseSize = bookingGeneralInfoObject.jsonPath().getList("value").size();
 
         if (responseSize == 1) {
-            return guid.jsonPath().getList(VALUE_TC_BOOKING_ID_JSONPATH).get(0).toString();
+            return bookingGeneralInfoObject;
         } else if (responseSize < 1) {
             throw new IllegalReceiveException(String.format("No one booking with %s number was found", msdId));
         } else
@@ -85,20 +98,18 @@ public class MsdBookings {
      * @return
      */
     private Response getServiceObjectByNameAndTcBookingGuid(String serviceName, String filteredKey, String bookingGuid) {
-        int responseSize;
         String request;
+        Response response;
 
         request = String.format("?$filter=%s eq %s", filteredKey, bookingGuid);
         RestAssured.basePath = BASE_PATH_PREFIX + serviceName;
 
-        Response response = given().cookies(COOKIES_MAP).get(request);
-        responseSize = response.jsonPath().getList("value").size();
-        if (responseSize == 1) {
-            return response;
-        } else if (responseSize < 1) {
-            throw new IllegalReceiveException(String.format("No one booking with %s tc_booking_id was found", bookingGuid));
-        } else
-            throw new IllegalReceiveException(String.format("%d bookings were found instead of one. tc_booking_id = %s", responseSize, bookingGuid));
+        response = given().cookies(COOKIES_MAP).get(request);
+        if (response.getStatusCode() == 400) {
+            throw new IllegalReceiveException(String.format("'%s' response on '%s' request\n%s", response.getStatusLine(), request, response.prettyPrint()));
+        }
+
+        return response;
     }
 
     /**
@@ -107,7 +118,7 @@ public class MsdBookings {
      * @param bookingGuid
      * @return
      */
-    private Response getAccommodationServiceByBookingGuid(String bookingGuid) {
+    public Response getAccommodationServiceByBookingGuid(String bookingGuid) {
         return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_ACCOMMODATION_CONTEXT_FOLDER, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
     }
 
@@ -191,7 +202,7 @@ public class MsdBookings {
         PhantomJsDriverManager.getInstance().setup();
         driver = new PhantomJSDriver(capabilities);
         try {
-
+            logger.info("Getting cookies with WebDriver");
             driver.get(String.format("https://%s", baseUrl));
             driver.findElement(By.id("cred_userid_inputtext")).sendKeys(userName + Keys.TAB);
             (new WebDriverWait(driver, 50)).until(ExpectedConditions.elementToBeClickable(By.id("passwordInput"))).sendKeys(userPassword);
@@ -199,10 +210,10 @@ public class MsdBookings {
 
             cookiesMap.put(MSIS_AUTH_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH_COOKIE_NAME).getValue());
             cookiesMap.put(MSIS_AUTH1_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH1_COOKIE_NAME).getValue());
+            logger.info("Cookies were recorded");
 
             return cookiesMap;
         } finally {
-            logger.info("Access to msD is allowed");
             driver.close();
         }
     }

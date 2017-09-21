@@ -10,6 +10,7 @@ import com.thomascook.nurvisAdapter.request.ReservationLegTypeRequest;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.*;
 import com.thomascook.ontour.*;
+import com.thomascook.utils.Holder;
 import com.thomascook.utils.Regions;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -280,6 +281,7 @@ public class CreateBookingNurvis {
         request.getFab().getFah().get(0).setMeal("AI");
         request.getFab().getFah().get(0).setAdults("2");
 
+        Holder.get().setBookingDetails(request);
         return request;
     }
 
@@ -340,6 +342,7 @@ public class CreateBookingNurvis {
             }
         }
 
+        Holder.get().setBookingNumber(nurvisBooking.getBookingNumber());
         return nurvisBooking;
     }
 
@@ -652,7 +655,7 @@ public class CreateBookingNurvis {
         customerRetrieveTimeout = Config.get().getCustomerRetrieveTimeout();
         sfwRequestBody = Config.get().getSfwRequestBody();
 
-        switch (region.toLowerCase()) {
+        switch (region.toUpperCase()) {
             case Regions.BE:
                 nurvis = Config.get().getNurvisBe();
                 solr = Config.get().getSolrBe();
