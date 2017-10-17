@@ -1,5 +1,6 @@
 package com.thomascook.ids.e2e.tests;
 
+import com.thomascook.ontour.*;
 import com.thomascook.toscaAdapter.request.CustomerCountsType;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
@@ -13,12 +14,18 @@ import com.thomascook.toscaCostAdapter.request.SourceType;
 import com.thomascook.toscaCostAdapter.response.OTAPkgCostRS;
 import com.thomascook.toscaExtrasAdapter.request.*;
 import com.thomascook.toscaExtrasAdapter.response.OTAPkgExtrasInfoRS;
+import com.thomascook.wrAdapter.request.CompanyNameType;
+import com.thomascook.wrAdapter.request.DealType;
+import com.thomascook.wrAdapter.request.FullRetailDownload;
+import com.thomascook.wrAdapter.request.Passenger;
+import com.thomascook.wrAdapter.response.FullRetailDownloadResponse;
 import cucumber.api.DataTable;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.opentravel.ota._2003._05.request.*;
@@ -35,10 +42,7 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -53,7 +57,7 @@ public class CreateBookingUK {
         //solr request
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(solr);
-        String solrRequest = createSolrRequestUK(10,29,departureAirport, destination, listOfMaps);
+        String solrRequest = createSolrRequestUK(0,49,departureAirport, destination, listOfMaps);
         post.setEntity(new ByteArrayEntity(solrRequest.getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
@@ -515,7 +519,8 @@ public class CreateBookingUK {
                 listOfPassengersRPHs.add(pkgPassengerListItem.getRPH());
             }
         }
-        for(OTAPkgExtrasInfoRS.ExtraGroups.ExtraGroup extraGroup : toscaExtrasResponse.getExtraGroups().getExtraGroup()){
+        //todo uncomment after extras fix
+        /*for(OTAPkgExtrasInfoRS.ExtraGroups.ExtraGroup extraGroup : toscaExtrasResponse.getExtraGroups().getExtraGroup()){
             if(extraGroup.getRuleCode().equals("OneOf")){
                 for(com.thomascook.toscaExtrasAdapter.response.ExtrasInfoType extrasInfoType : toscaExtrasResponse.getExtras().getExtra()){
                     if(extrasInfoType.getRPH().equals(extraGroup.getListOfExtrasRPH().get(0))){
@@ -528,16 +533,6 @@ public class CreateBookingUK {
                     }
                 }
             }
-        }
-        /*try {
-            JAXBContext context = JAXBContext.newInstance("com.thomascook.toscaCostAdapter.request");
-            Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
-            StringWriter sw = new StringWriter();
-            marshaller.marshal(toscaCostRequest, sw);
-            System.out.println(sw);
-        } catch (JAXBException e) {
-            e.printStackTrace();
         }*/
         return toscaCostRequest;
     }
@@ -674,9 +669,9 @@ public class CreateBookingUK {
                 passengerListItem.setLeadCustomerInd(true);
                 com.thomascook.toscaBookAdapter.request.PersonNameType personNameType = factory.createPersonNameType();
                 passengerListItem.setName(personNameType);
-                String lastName = generateAZSequence(true);
+                String lastName = generateAZSequence("lastname");
                 personNameType.setSurname(lastName);
-                String firstName = generateAZSequence(false);
+                String firstName = generateAZSequence("firstname");
                 personNameType.getGivenName().add(firstName);
                 //if person code = 10 set name prefix to Mr or Mrs
                 if(extrasPkgPassengerListItem.getCode().equals("10")) {
@@ -706,11 +701,15 @@ public class CreateBookingUK {
                 contactPersonType.getEmail().add(emailType);
                 com.thomascook.toscaBookAdapter.request.AddressInfoType addressInfoType = factory.createAddressInfoType();
                 addressInfoType.getAddressLine().add("East");
+                addressInfoType.getAddressLine().add("The Piazza");
                 com.thomascook.toscaBookAdapter.request.AddressType.StreetNmbr streetNmbr = factory.createAddressTypeStreetNmbr();
-                streetNmbr.setValue("16 The Piazza");
+                streetNmbr.setValue("16");
                 addressInfoType.setStreetNmbr(streetNmbr);
                 addressInfoType.setPostalCode("WC2E8HD");
                 addressInfoType.setCityName("London");
+                com.thomascook.toscaBookAdapter.request.AddressType.BldgRoom bldgRoom = factory.createAddressTypeBldgRoom();
+                bldgRoom.setValue("16");
+                addressInfoType.getBldgRoom().add(bldgRoom);
                 com.thomascook.toscaBookAdapter.request.CountryNameType countryNameType = factory.createCountryNameType();
                 countryNameType.setCode("UK");
                 countryNameType.setValue("UK");
@@ -721,8 +720,8 @@ public class CreateBookingUK {
                 passengerListItem.setLeadCustomerInd(false);
                 com.thomascook.toscaBookAdapter.request.PersonNameType personNameType = factory.createPersonNameType();
                 passengerListItem.setName(personNameType);
-                personNameType.setSurname(generateAZSequence(true));
-                personNameType.getGivenName().add(generateAZSequence(false));
+                personNameType.setSurname(generateAZSequence("firstname"));
+                personNameType.getGivenName().add(generateAZSequence("firstname"));
                 //if person code = 10 set name prefix to Mr or Mrs
                 if(extrasPkgPassengerListItem.getCode().equals("10")) {
                     if(namePrefix) {
@@ -734,11 +733,12 @@ public class CreateBookingUK {
                     }
                 }
                 if(extrasPkgPassengerListItem.getCode().equals("8")){
-                    personNameType.getNamePrefix().add("Child");
+                    //miss or master
+                    personNameType.getNamePrefix().add(returnRandomKidsSalutation());
                     passengerListItem.setBirthDate(generateBirthDate(true));
                 }
                 if(extrasPkgPassengerListItem.getCode().equals("7")){
-                    personNameType.getNamePrefix().add("Infant");
+                    personNameType.getNamePrefix().add(returnRandomKidsSalutation());
                     passengerListItem.setBirthDate(generateBirthDate(false));
                 }
             }
@@ -759,6 +759,197 @@ public class CreateBookingUK {
         return toscaBookRequest;
     }
 
+    private static String returnRandomKidsSalutation(){
+        String salutation = "";
+        Random r = new Random();
+        if(r.nextInt(2) == 1){
+            salutation = "Miss";
+        } else {
+            salutation = "Master";
+        }
+        return salutation;
+    }
+
+    public static String createToscaExtrasResponseXML(OTAPkgExtrasInfoRS toscaExtrasResponse) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance("com.thomascook.toscaExtrasAdapter.response");
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(toscaExtrasResponse, sw);
+        return sw.toString();
+    }
+
+    public static void createOnTourXML(OTAPkgBookRS toscaBookingResponse, OTAPkgBookRQ toscaBookingRequest, String bookingReference) throws JAXBException {
+        Shipment shipment = new Shipment();
+        shipment.setIdentifier(1);
+        shipment.setEmitter_code("");
+        shipment.setOffice_code("23");
+        shipment.setNumber_booking(1);
+        shipment.setVersion("01.00.09");
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        shipment.setShipment_date(today.format(formatter));
+        Booking booking = new Booking();
+        shipment.setBooking(Arrays.asList(booking));
+        booking.setStatus("A");
+        booking.setLocalizer(bookingReference);
+        booking.setPnr_version(1);
+        booking.setExt_pnr_version(1);
+        booking.setDate(today.format(formatter));
+        booking.setAmendment_date(today.format(formatter));
+        booking.setExt_amendment_date(today.format(formatter));
+        String beginning_dateSTR = toscaBookingResponse.getPackageReservation().getPackage().getDateRange().getStart();
+        String durationSTR = toscaBookingResponse.getPackageReservation().getPackage().getDateRange().getDuration();
+        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        LocalDate biginningDate = LocalDate.parse(beginning_dateSTR, inputFormatter);
+        int duration = Integer.parseInt(durationSTR.replace("P", "").replace("D", ""));
+        LocalDate endDate = biginningDate.plus(duration,ChronoUnit.DAYS);
+        booking.setBeginning_date(biginningDate.format(outputFormatter));
+        booking.setEnd_date(endDate.format(outputFormatter));
+        booking.setProduct_code("S17");
+        booking.setTo_code("TCUK");
+        booking.setBrand("TCU1");
+        booking.setBrochure_code("TGS1");
+        booking.setLatebooking("N");
+        booking.setDestination(toscaBookingResponse.getPackageReservation().getPackage().getTravelCode().substring(0,3));
+
+        List<Pax> paxes = new ArrayList<>();
+        for(com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem : toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()){
+            Pax pax = new Pax();
+            pax.setName(passengerListItem.getName().getGivenName().get(0));
+            pax.setSurname(passengerListItem.getName().getSurname());
+            LocalDate birthDate;
+            DateTimeFormatter birthDateFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+            if(Integer.parseInt(passengerListItem.getCode()) == 10){
+                birthDate = LocalDate.now().minus(35, ChronoUnit.YEARS);
+                pax.setAge(Period.between(birthDate,LocalDate.now()).getYears());
+                pax.setBirth_date(birthDate.format(birthDateFormatter));
+            }else{
+                birthDate = passengerListItem.getBirthDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
+                pax.setBirth_date(birthDate.format(birthDateFormatter));
+                pax.setAge(Period.between(birthDate,LocalDate.now()).getYears());
+            }
+            if(pax.getAge()<2){
+                pax.setSex("I");
+            } else if(pax.getAge()>2 && pax.getAge()<16){
+                pax.setSex("C");
+            }else{
+                if (passengerListItem.getGender().equals("Female")){
+                    pax.setSex("F");
+                }else if(passengerListItem.getGender().equals("Male")){
+                    pax.setSex("M");
+                }
+            }
+            //pax.setSex(passengerListItem.getGender());
+            pax.setJust_married("N");
+            pax.setIdentifier(Integer.parseInt(passengerListItem.getRPH()));
+            pax.setLanguage("");
+            paxes.add(pax);
+        }
+        booking.setPax(paxes);
+
+        List<Service> services = new ArrayList<>();
+        booking.setService(services);
+        int order = 1;
+        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
+            if(!(itineraryItemRequestType.getFlight()==null)) {
+                com.thomascook.toscaBookAdapter.response.PkgFlightSegmentType flightSegmentType = itineraryItemRequestType.getFlight();
+                Service service = new Service();
+                service.setCode(flightSegmentType.getOperatingAirline().getCode() + flightSegmentType.getOperatingAirline().getFlightNumber());
+                service.setType("FL");
+                service.setName(service.getCode());
+                service.setOrder(order++);
+                if(itineraryItemRequestType.getItinerarySequence().intValue()==1){
+                    service.setTransfer_type("IN");
+                }else{
+                    service.setTransfer_type("OUT");
+                }
+                service.setOrigin(flightSegmentType.getDepartureAirport().getLocationCode());
+                service.setDestination(flightSegmentType.getArrivalAirport().getLocationCode());
+                service.setCarrier_code(flightSegmentType.getOperatingAirline().getCode());
+                service.setCarrier_flight_code(flightSegmentType.getOperatingAirline().getFlightNumber());
+                service.setIdentifier(flightSegmentType.getOperatingAirline().getCode() + flightSegmentType.getOperatingAirline().getFlightNumber()+
+                        flightSegmentType.getDepartureAirport().getLocationCode()+flightSegmentType.getArrivalAirport().getLocationCode());
+                service.setNumberofunits(booking.getPax().size());
+
+                List<Pax_service> pax_services = new ArrayList<>();
+                service.setPax_service(pax_services);
+                for(Pax pax : booking.getPax()){
+                    Pax_service pax_service = new Pax_service();
+                    List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
+                    pax_service.setPax_service_assignment(pax_service_assignments);
+                    Pax_service_assignment pax_service_assignment = new Pax_service_assignment();
+                    pax_service_assignment.setPax_identifier(pax.getIdentifier());
+                    pax_service.getPax_service_assignment().add(pax_service_assignment);
+                    service.getPax_service().add(pax_service);
+                }
+                booking.getService().add(service);
+            }
+        }
+        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
+            if(!(itineraryItemRequestType.getAccommodation()==null)){
+                com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation accommodation = itineraryItemRequestType.getAccommodation();
+                int roomProfileIndex = 1;
+                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : accommodation.getRoomProfiles().getRoomProfile()) {
+                    Service service = new Service();
+                    service.setCode(accommodation.getIdentity().getHotelCode());
+                    service.setType("RM");
+                    service.setName(accommodation.getIdentity().getHotelName());
+                    service.setOrder(order++);
+
+                    LocalDate beginningDate = LocalDate.parse(accommodation.getDateRange().getStart(), inputFormatter);
+                    service.setBeginning_date(beginningDate.format(outputFormatter));
+                    service.setBeginning_time("0000");
+                    LocalDate end_Date = LocalDate.parse(accommodation.getDateRange().getEnd(), inputFormatter);
+                    service.setEnd_date(end_Date.format(outputFormatter));
+                    service.setEnd_time("0000");
+                    service.setAccomodation(roomProfile.getRoomTypeCode());
+                    for(com.thomascook.toscaBookAdapter.response.MealPlanType mealPlanType: accommodation.getMealPlans().getMealPlan()){
+                        if(mealPlanType.getListOfRoomRPH().contains(String.valueOf(roomProfileIndex))){
+                            service.setBoard(mealPlanType.getCode());
+                        }
+                    }
+                    service.setShared_room_type("N");
+                    service.setStatus("OK");
+                    service.setOccupancy(String.valueOf(roomProfile.getGuestCounts().getGuestCount().size()));
+                    service.setNumberofunits(1);
+                    service.setTransfer_code("G");
+                    service.setExternal_service_flag("I");
+
+                    List<Pax_service> pax_services = new ArrayList<>();
+                    service.setPax_service(pax_services);
+
+                    for (com.thomascook.toscaBookAdapter.request.ItineraryItemRequestType itineraryItemRequestTypePassengers : toscaBookingRequest.getPackageRequest().getItineraryItems().getItineraryItem()) {
+                        if(!(itineraryItemRequestTypePassengers.getAccommodation()==null)){
+                            for(com.thomascook.toscaBookAdapter.request.RoomProfileType roomProfileType : itineraryItemRequestTypePassengers.getAccommodation().getRoomProfiles().getRoomProfile()){
+                                if(roomProfileType.getRoomTypeCode().equals(roomProfile.getRoomTypeCode()) && roomProfileType.getPassengerRPHs().getListOfPassengerRPH().size()==roomProfile.getGuestCounts().getGuestCount().size()){
+                                    for(String serviceAssignment : roomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
+                                        Pax_service pax_service = new Pax_service();
+                                        List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
+                                        pax_service.setPax_service_assignment(pax_service_assignments);
+                                        Pax_service_assignment pax_service_assignment = new Pax_service_assignment();
+                                        pax_service_assignment.setPax_identifier(Integer.parseInt(serviceAssignment));
+                                        pax_service.getPax_service_assignment().add(pax_service_assignment);
+                                        service.getPax_service().add(pax_service);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    roomProfileIndex++;
+                    booking.getService().add(service);
+                }
+            }
+        }
+        JAXBContext context = JAXBContext.newInstance(Shipment.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(shipment, sw);
+        System.out.println(sw);
+    }
+
     public static String createToscaBookRequestXML(OTAPkgBookRQ toscaBookRequest) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.thomascook.toscaBookAdapter.request");
         Marshaller marshaller = context.createMarshaller();
@@ -768,12 +959,16 @@ public class CreateBookingUK {
         return sw.toString();
     }
 
-    private static String generateAZSequence(boolean isLastName){
-        String sequence;
-        if(isLastName){
+    private static String generateAZSequence(String string){
+        String sequence = "";
+        if(string.equals("lastname")){
             sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(6)+6);
-        }else {
+        }
+        if(string.equals("firstname")){
             sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(3)+6);
+        }
+        if(string.equals("transactionId")){
+            sequence = RandomStringUtils.randomAlphabetic(29);
         }
         return sequence;
     }
@@ -838,4 +1033,262 @@ public class CreateBookingUK {
         toscaBookCommitRequest.setUniqueID(uniqueIDType);
         return toscaBookCommitRequest;
     }
+
+    public static String createWebRioRequest(OTAPkgBookRQ toscaBookingRequest, OTAPkgBookRS toscaBookingResponse, org.opentravel.ota._2003._05.response.HotelOfferType hotelOffer, String bookingReference) throws JAXBException {
+        com.thomascook.wrAdapter.request.ObjectFactory factory = new com.thomascook.wrAdapter.request.ObjectFactory();
+        FullRetailDownload wrRequest = factory.createFullRetailDownload();
+        wrRequest.setActionType(com.thomascook.wrAdapter.request.TransactionActionType.COMMIT);
+        wrRequest.setRequestedCurrency("GBP");
+        wrRequest.setExpectedGrossAmount(toscaBookingResponse.getPackageReservation().getInvoiceDetail().getGrossAmount().getAmount());
+        wrRequest.setTarget("Test");
+        wrRequest.setVersion(BigDecimal.valueOf(0.0));
+        com.thomascook.wrAdapter.request.POSType pos = factory.createPOSType();
+        wrRequest.setPOS(pos);
+        wrRequest.setTransactionIdentifier(generateAZSequence("transactionId"));
+        for(com.thomascook.toscaBookAdapter.request.SourceType sourceType :toscaBookingRequest.getPOS().getSource()){
+            com.thomascook.wrAdapter.request.SourceType sourceTypeWR = factory.createSourceType();
+            sourceTypeWR.setISOCountry(sourceType.getISOCountry());
+            sourceTypeWR.setISOCurrency(sourceType.getISOCurrency());
+            sourceTypeWR.setERSPUserID("100");
+            pos.getSource().add(sourceTypeWR);
+            com.thomascook.wrAdapter.request.SourceType.RequestorID requestorID = factory.createSourceTypeRequestorID();
+            requestorID.setType("23");
+            requestorID.setID(sourceType.getRequestorID().getID());
+            requestorID.setMessagePassword("TCWEBHANDOFF");
+            sourceTypeWR.setRequestorID(requestorID);
+            CompanyNameType companyNameType = factory.createCompanyNameType();
+            companyNameType.setCode("TC");
+            companyNameType.setCodeContext("TC");
+            requestorID.setCompanyName(companyNameType);
+        }
+        com.thomascook.wrAdapter.request.ContactPersonType contactPersonType = factory.createContactPersonType();
+        wrRequest.setCustomerDetails(contactPersonType);
+        contactPersonType.setEmailOptIn(false);
+        contactPersonType.setSMSOptIn(false);
+        com.thomascook.wrAdapter.request.PersonNameType personNameType = factory.createPersonNameType();
+        contactPersonType.setPersonName(personNameType);
+        for(String namePrefix : toscaBookingRequest.getContactDetail().getPersonName().getNamePrefix()){
+            personNameType.getNamePrefix().add(namePrefix);
+        }
+        for(String givenName : toscaBookingRequest.getContactDetail().getPersonName().getGivenName()){
+            personNameType.getGivenName().add(givenName);
+        }
+        personNameType.setSurname(toscaBookingRequest.getContactDetail().getPersonName().getSurname());
+        for(com.thomascook.toscaBookAdapter.request.ContactPersonType.Telephone telephoneTosca : toscaBookingRequest.getContactDetail().getTelephone()){
+            com.thomascook.wrAdapter.request.ContactPersonType.Telephone telephone = factory.createContactPersonTypeTelephone();
+            telephone.setAreaCityCode(telephoneTosca.getAreaCityCode());
+            telephone.setPhoneNumber(telephoneTosca.getPhoneNumber());
+            telephone.setPhoneTechType(telephoneTosca.getPhoneTechType());
+            telephone.setPhoneUseType(telephoneTosca.getPhoneUseType());
+            contactPersonType.getTelephone().add(telephone);
+        }
+        for(com.thomascook.toscaBookAdapter.request.EmailType emailTypeTosca : toscaBookingRequest.getContactDetail().getEmail()){
+            contactPersonType.getEmail().add(emailTypeTosca.getValue());
+        }
+        for(com.thomascook.toscaBookAdapter.request.AddressInfoType addressInfoTypeTosca : toscaBookingRequest.getContactDetail().getAddress()){
+            com.thomascook.wrAdapter.request.AddressInfoType addressInfoType = factory.createAddressInfoType();
+            addressInfoType.setCityName(addressInfoTypeTosca.getCityName());
+            addressInfoType.setPostalCode(addressInfoTypeTosca.getPostalCode());
+            for(com.thomascook.toscaBookAdapter.request.AddressType.BldgRoom bldgRoomTosca :addressInfoTypeTosca.getBldgRoom()){
+                addressInfoType.getBldgRoom().add(bldgRoomTosca.getValue());
+            }
+            for(String addressLine : addressInfoTypeTosca.getAddressLine()){
+                addressInfoType.getAddressLine().add(addressLine);
+            }
+            contactPersonType.getAddress().add(addressInfoType);
+        }
+        FullRetailDownload.PaymentDetails paymentDetails = factory.createFullRetailDownloadPaymentDetails();
+        wrRequest.setPaymentDetails(paymentDetails);
+        FullRetailDownload.PaymentDetails.PaymentDetail paymentDetail = factory.createFullRetailDownloadPaymentDetailsPaymentDetail();
+        paymentDetails.getPaymentDetail().add(paymentDetail);
+        com.thomascook.wrAdapter.request.PaymentCardType paymentCardType = factory.createPaymentCardType();
+        paymentDetail.setPaymentCard(paymentCardType);
+        paymentCardType.setCardCode("MC");
+        paymentCardType.setCardNumber("2222222222222222");
+        LocalDate localDate = LocalDate.now();
+        LocalDate future = localDate.plus(1, ChronoUnit.YEARS);
+        int year = future.getYear();
+        paymentCardType.setExpireDate("02" + String.valueOf(year).substring(2,4));
+        paymentCardType.setCardHolderName("test test");
+        paymentCardType.setAddress(wrRequest.getCustomerDetails().getAddress().get(0));
+        com.thomascook.wrAdapter.request.PaymentDetailType.PaymentAmount paymentAmount = factory.createPaymentDetailTypePaymentAmount();
+        paymentDetail.getPaymentAmount().add(paymentAmount);
+        paymentAmount.setAmount(wrRequest.getExpectedGrossAmount());
+        paymentAmount.setApprovalCode("12345");
+        paymentAmount.setAuthenticationCAVV("");
+        paymentAmount.setCCCharge(BigDecimal.valueOf(0.0));
+        paymentAmount.setCurrencyCode(wrRequest.getRequestedCurrency());
+        DealType dealType = factory.createDealType();
+        wrRequest.setDealDetails(dealType);
+        DealType.BookingWebRequest bookingWebRequest = factory.createDealTypeBookingWebRequest();
+        dealType.setBookingWebRequest(bookingWebRequest);
+        DealType.BookingWebRequest.XMLFileDefinition xmlFileDefinition = factory.createDealTypeBookingWebRequestXMLFileDefinition();
+        bookingWebRequest.setXMLFileDefinition(xmlFileDefinition);
+        xmlFileDefinition.setFileCode("10");
+        xmlFileDefinition.setFileDescription("FileDescription");
+        xmlFileDefinition.setFileSupplier("TCCOM");
+        /*			<AssociatedRequest>
+				<BranchBudgetCtr>5300</BranchBudgetCtr>
+				<AbtaNumber>J9375</AbtaNumber>
+			</AssociatedRequest>
+			*/
+        DealType.BookingWebRequest.AssociatedRequest associatedRequest = factory.createDealTypeBookingWebRequestAssociatedRequest();
+        bookingWebRequest.setAssociatedRequest(associatedRequest);
+        associatedRequest.setBranchBudgetCtr(BigInteger.valueOf(5300));
+        associatedRequest.setAbtaNumber(wrRequest.getPOS().getSource().get(0).getRequestorID().getID());
+        DealType.BookingWebRequest.BookingResponse bookingResponse = factory.createDealTypeBookingWebRequestBookingResponse();
+        bookingWebRequest.setBookingResponse(bookingResponse);
+        DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday chosenPackageHoliday = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHoliday();
+        bookingResponse.setChosenPackageHoliday(chosenPackageHoliday);
+        //DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit accommodationUnit = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodationAccommodationUnit();
+        //DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment travelSegment = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegment();
+        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
+            if(!(itineraryItemRequestType.getFlight() == null)){
+                DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment travelSegment = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegment();
+                XMLGregorianCalendar departureDateTime = itineraryItemRequestType.getFlight().getDepartureDateTime();
+                XMLGregorianCalendar arrivalDateTime = itineraryItemRequestType.getFlight().getArrivalDateTime();
+                LocalDateTime localDepartureDateTime = departureDateTime.toGregorianCalendar().toZonedDateTime().toLocalDateTime();
+                LocalDateTime localArrivalDateTime = arrivalDateTime.toGregorianCalendar().toZonedDateTime().toLocalDateTime();
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmm");
+                travelSegment.setArrivalDate(dateFormatter.format(localArrivalDateTime));
+                travelSegment.setArrivalPoint(itineraryItemRequestType.getFlight().getArrivalAirport().getLocationCode());
+                travelSegment.setArrivalTime(timeFormatter.format(localArrivalDateTime));
+
+                travelSegment.setDepartureDate(dateFormatter.format(localDepartureDateTime));
+                travelSegment.setDeparturePoint(itineraryItemRequestType.getFlight().getDepartureAirport().getLocationCode());
+                travelSegment.setDepartureTime(timeFormatter.format(localDepartureDateTime));
+                travelSegment.setFlightNumber(itineraryItemRequestType.getFlight().getOperatingAirline().getCode() + itineraryItemRequestType.getFlight().getOperatingAirline().getFlightNumber());
+                travelSegment.setStatus("confirmed");
+                travelSegment.setTransportMode("FC");
+
+                //travelSegment.setClazz();
+                if(travelSegment.getDeparturePoint().equals(hotelOffer.getFlights().getInboundFlight().getDepartureAirport().getLocationCode())){
+                    String clazz = "";
+                    if(hotelOffer.getFlights().getInboundFlight().getServiceClass().equals("Y")){
+                        travelSegment.setClazz("Economy");
+                    }else{
+                        travelSegment.setClazz("Business");
+                    }
+                }else{
+                    String clazz = "";
+                    if(hotelOffer.getFlights().getOutboundFlight().getServiceClass().equals("Y")){
+                        travelSegment.setClazz("Economy");
+                    }else{
+                        travelSegment.setClazz("Business");
+                    }
+                }
+                hotelOffer.getFlights().getInboundFlight().getServiceClass();
+                chosenPackageHoliday.getTravelSegment().add(travelSegment);
+            }
+            if(!(itineraryItemRequestType.getAccommodation() == null)){
+                DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation accommodation = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodation();
+                //accommodation.setDeparturePoint();
+                accommodation.setAccommodationCode(itineraryItemRequestType.getAccommodation().getIdentity().getHotelCode());
+                accommodation.setProductName("A");
+                accommodation.setAccommodationName(itineraryItemRequestType.getAccommodation().getIdentity().getHotelName());
+                accommodation.setResortName(itineraryItemRequestType.getAccommodation().getResortName());
+                accommodation.setStartDate(itineraryItemRequestType.getAccommodation().getDateRange().getStart().replace("-", ""));
+                accommodation.setEndDate(itineraryItemRequestType.getAccommodation().getDateRange().getEnd().replace("-", ""));
+                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : itineraryItemRequestType.getAccommodation().getRoomProfiles().getRoomProfile()){
+                    DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit accommodationUnit = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodationAccommodationUnit();
+                    accommodationUnit.setName(roomProfile.getDescription().split(",")[0]);
+                    accommodationUnit.setNumRooms(BigInteger.valueOf(roomProfile.getQuantity()));
+                    accommodation.getAccommodationUnit().add(accommodationUnit);
+                }
+
+                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType1 :toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
+                    if(!(itineraryItemRequestType1.getAccommodation() == null)){
+                        accommodation.setBoardCode(itineraryItemRequestType1.getAccommodation().getMealPlans().getMealPlan().get(0).getCode());
+                    }
+                }
+
+                accommodation.setNumNights(BigInteger.valueOf(Integer.parseInt(toscaBookingResponse.getPackageReservation().getPackage().getDateRange().getDuration().replace("P", "").replace("D", ""))));
+                chosenPackageHoliday.getAccommodation().add(accommodation);
+            }
+        }
+        DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.BookingInfo bookingInfo = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayBookingInfo();
+        chosenPackageHoliday.setBookingInfo(bookingInfo);
+        bookingInfo.setBookingReference(bookingReference);
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd HHmm");
+        String bookingDateTime = dtf.format(now);
+        bookingInfo.setBookingDateTime(bookingDateTime);
+        DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.AtolCertificate atolCertificate = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAtolCertificate();
+        atolCertificate.setAtolType("1");
+        chosenPackageHoliday.getAtolCertificate().add(atolCertificate);
+        String leadPassenger = "";
+        boolean missOrMaster = true;
+        for(com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem :toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()){
+            Passenger passenger = factory.createPassenger();
+            if(leadPassenger.equals("")){
+                passenger.setLeadPassenger(true);
+                leadPassenger = "no";
+            }
+            if(passengerListItem.getCode().equals("10")){
+                LocalDate dob = LocalDate.now().minus(30,ChronoUnit.YEARS);
+                DateTimeFormatter dtfDOB = DateTimeFormatter.ofPattern("yyyyMMdd");
+                passenger.setDOB(dtfDOB.format(dob));
+                if(passengerListItem.getName().getNamePrefix().get(0).equals("MR")){
+                    passenger.setTitle("Mr");
+                }
+                if (passengerListItem.getName().getNamePrefix().get(0).equals("MRS")){
+                    passenger.setTitle("Mrs");
+                }
+            }else{
+                LocalDate dob = passengerListItem.getBirthDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
+                DateTimeFormatter dtfDOB = DateTimeFormatter.ofPattern("yyyyMMdd");
+                passenger.setDOB(dtfDOB.format(dob));
+                if(missOrMaster) {
+                    passenger.setTitle("Miss");
+                    missOrMaster = !missOrMaster;
+                } else {
+                    passenger.setTitle("Master");
+                    missOrMaster = !missOrMaster;
+                }
+            }
+            passenger.setFirstname(passengerListItem.getName().getGivenName().get(0));
+            passenger.setSurname(passengerListItem.getName().getSurname());
+            chosenPackageHoliday.getPassenger().add(passenger);
+        }
+        chosenPackageHoliday.setBrochureCode(toscaBookingResponse.getPackageReservation().getPackage().getProductCode());
+        chosenPackageHoliday.setCurrentBookingStage("confirmed");
+        chosenPackageHoliday.setProductType("PH");
+        chosenPackageHoliday.setProductCode(toscaBookingResponse.getPackageReservation().getPackage().getBrandCode());
+        chosenPackageHoliday.setOperatorCode(toscaBookingResponse.getPackageReservation().getPackage().getBrandCode());
+
+        DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Cost cost = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayCost();
+        cost.setCurrency(toscaBookingResponse.getCurrencyCode());
+        cost.setTotalOperatorCost(toscaBookingResponse.getPackageReservation().getInvoiceDetail().getGrossAmount().getAmount());
+        chosenPackageHoliday.setCost(cost);
+
+        JAXBContext context = JAXBContext.newInstance("com.thomascook.wrAdapter.request");
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
+        StringWriter sw = new StringWriter();
+        marshaller.marshal(wrRequest, sw);
+        System.out.println(sw);
+        return sw.toString();
+    }
+
+    public static FullRetailDownloadResponse sendWebrioHandoff(String retailinterfaceXML, String retailinterface) throws IOException {
+        HttpClient client = HttpClients.createDefault();
+        HttpPut put = new HttpPut(retailinterface);
+        put.addHeader("Content-Type", "text/xml");
+        put.setEntity(new ByteArrayEntity(retailinterfaceXML.getBytes("UTF-8")));
+        HttpResponse response = client.execute(put);
+        HttpEntity entity = response.getEntity();
+        FullRetailDownloadResponse webrioResponse = new FullRetailDownloadResponse();
+        if (entity != null) {
+            try (InputStream instream = entity.getContent()) {
+                JAXBContext jc = JAXBContext.newInstance(FullRetailDownloadResponse.class);
+                Unmarshaller unmarshaller = jc.createUnmarshaller();
+                webrioResponse = (FullRetailDownloadResponse) unmarshaller.unmarshal(instream);
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
+        }
+        return webrioResponse;
+    }
+
 }

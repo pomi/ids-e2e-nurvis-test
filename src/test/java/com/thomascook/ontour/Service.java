@@ -66,7 +66,7 @@ public class Service{
     private String destination = "";
     private String carrier_code = "";
     private String carrier_flight_code = "";
-    private int allotment = 0;
+    private String allotment = "";
     private String identifier = "";
     private String occupancy = "";
     private int numberofunits = 0;
@@ -180,7 +180,7 @@ public class Service{
     }
 
     @XmlElement(name="ALLOTMENT")
-    public void setAllotment(int allotment) {
+    public void setAllotment(String allotment) {
         this.allotment = allotment;
     }
 
@@ -344,7 +344,7 @@ public class Service{
         return carrier_flight_code;
     }
 
-    public int getAllotment() {
+    public String getAllotment() {
         return allotment;
     }
 

@@ -34,6 +34,9 @@ public class CreateBookingForUKSteps implements En {
     @Value("${staging.uk.tosca}")
     String toscaStaging;
 
+    @Value("${staging.uk.retailinterface}")
+    String retailinterfaceStaging;
+
     public CreateBookingForUKSteps() {
 
         Given("^I request packages in SOLR from (.*?) to (.*?) with passengers$", (String departureAirport, String destination, DataTable dataTable) -> {
@@ -61,8 +64,7 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgAvailRQ toscaAvailabilityRequest = CreateBookingUK.createToscaAvailabilityRequest(hotelOffer, holder.getPassengers());
                     String toscaAvailabilityRequestXML = CreateBookingUK.createToscaAvailabilityRequestXML(toscaAvailabilityRequest);
                     assert !toscaAvailabilityRequestXML.equals("") : "Tosca availabilirty Request XML is empty";
-                    OTAPkgAvailRS toscaAvailabilityResponse = null;
-                    toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(toscaStaging, toscaAvailabilityRequestXML);
+                    OTAPkgAvailRS toscaAvailabilityResponse = CreateBookingUK.getToscaResponse(toscaStaging, toscaAvailabilityRequestXML);
 
                     if (toscaAvailabilityResponse.getSuccess() == null && toscaAvailabilityResponse.getErrors() != null)
                         continue;
@@ -71,6 +73,7 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, holder.getPassengers());
                     String toscaExtrasRequestXML = CreateBookingUK.createToscaExtrasRequestXML(toscaExtrasRequest);
                     OTAPkgExtrasInfoRS toscaExtrasResponse = CreateBookingUK.getToscaExtrasResponse(toscaExtrasRequestXML, tosca);
+                    String toscaExtrasResponseXML = CreateBookingUK.createToscaExtrasResponseXML(toscaExtrasResponse);
 
                     if (toscaExtrasResponse.getSuccess() == null && toscaExtrasResponse.getErrors() != null)
                         continue;
@@ -78,22 +81,29 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgCostRQ toscaCostRequest = CreateBookingUK.createToscaCostRequest(toscaExtrasResponse, toscaExtrasRequest);
                     String toscaCostRequestXML = CreateBookingUK.createToscaCostRequestXML(toscaCostRequest);
                     OTAPkgCostRS toscaCostResponse = CreateBookingUK.getToscaCostResponse(toscaCostRequestXML, tosca);
+                    String toscaCostResponseXML = CreateBookingUK.createToscaCostResponseXML(toscaCostResponse);
 
                     if (toscaCostResponse.getSuccess() == null && toscaCostResponse.getErrors() != null)
                         continue;
 
-                    String toscaCostResponseXML = CreateBookingUK.createToscaCostResponseXML(toscaCostResponse);
                     OTAPkgBookRQ toscaBookRequest = CreateBookingUK.createToscaBookRequest(toscaCostRequest);
+                    holder.setToscaBookingRequest(toscaBookRequest);
                     String toscaBookRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookRequest);
                     OTAPkgBookRS toscaBookResponse = CreateBookingUK.getToscaBookResponse(toscaBookRequestXML, tosca);
+                    holder.setToscaBookingResponse(toscaBookResponse);
                     String toscaBookResponseXML = CreateBookingUK.createToscaBookResponseXML(toscaBookResponse);
+                    System.out.println(toscaBookResponseXML);
                     OTAPkgBookRQ toscaBookCommitRequest = CreateBookingUK.createToscaBookCommitRequest(toscaBookRequest, toscaBookResponse);
                     String toscaBookCommitRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookCommitRequest);
                     OTAPkgBookRS toscaBookCommitResponse = CreateBookingUK.getToscaBookResponse(toscaBookCommitRequestXML, tosca);
-                    if(toscaBookCommitResponse.getSuccess() == null) continue;
+                    if (toscaBookCommitResponse.getSuccess() == null) continue;
+                    holder.setHotelOffer(hotelOffer);
+                    holder.setBookingReference(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
                     System.out.println(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
+                    break;
                 } catch (JAXBException | IOException | DatatypeConfigurationException e) {
                     e.printStackTrace();
+                    continue;
                 }
             }
 
@@ -114,29 +124,39 @@ public class CreateBookingForUKSteps implements En {
             CreateBookingUK.createToscaCostRequest(holder.getToscaExtrasResponse(), holder.getToscaExtrasRequest());*/
         });
 
-        When("^confirm package$", () -> {
-            // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
-        });
-
         Then("^booking is created$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assert true;
+            //throw new PendingException();
         });
 
         Given("^I have Tosca booking$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assert true;
+            //throw new PendingException();
         });
 
         When("^I create XML for Webrio$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                //if(holder.getToscaBookingRequest() != null && holder.getToscaBookingResponse() != null && holder.getHotelOffer() != null && holder.getBookingReference() != null)
+                holder.setRetailinterfaceXML(CreateBookingUK.createWebRioRequest(holder.getToscaBookingRequest(), holder.getToscaBookingResponse(), holder.getHotelOffer(), holder.getBookingReference()));
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
         });
 
         When("^send it to WebRio$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                String retailinterface = "";
+                if (System.getProperty("env").equals("staging")) retailinterface = retailinterfaceStaging;
+                assert !retailinterface.isEmpty() : "retailinterface endpoint is not set";
+                holder.setRetailDownloadResponse(CreateBookingUK.sendWebrioHandoff(holder.getRetailinterfaceXML(), retailinterface));
+                System.out.println();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         Then("^WebRio answered without errors$", () -> {
@@ -146,7 +166,11 @@ public class CreateBookingForUKSteps implements En {
 
         When("^I create OnTour xml$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                CreateBookingUK.createOnTourXML(holder.getToscaBookingResponse(), holder.getToscaBookingRequest(), holder.getBookingReference());
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
         });
 
         When("^put it on OnTour sftp$", () -> {

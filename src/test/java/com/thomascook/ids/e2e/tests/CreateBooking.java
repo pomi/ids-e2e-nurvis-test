@@ -55,7 +55,7 @@ public class CreateBooking {
     static String sfwRequestBody;
 
     private void loadProperties(String region, String environment) throws IOException {
-        InputStream is = this.getClass().getResourceAsStream("/my.properties");
+        InputStream is = this.getClass().getResourceAsStream("/config.properties");
         Properties properties = new Properties();
         properties.load(is);
         solr = properties.getProperty(environment + "." + region + "." + "solr");

@@ -22,8 +22,8 @@ import java.util.*;
 
 import static com.jayway.restassured.RestAssured.given;
 
-@ContextConfiguration(classes = Context.class)
-@Component
+//@ContextConfiguration(classes = Context.class)
+//@Component
 public class MsdBookings {
 
     private static final String TC_BOOKINGS_CONTEXT_FOLDER = "tc_bookings";
@@ -47,12 +47,12 @@ public class MsdBookings {
 
     private static Logger logger = LoggerFactory.getLogger(MsdBookings.class);
 
-    public MsdBookings(@Value("${staging.msd.baseUrl}") String msdBaseUrl,
+    /*public MsdBookings(@Value("${staging.msd.baseUrl}") String msdBaseUrl,
                        @Value("${staging.msd.user.name}") String msdUserName,
                        @Value("${staging.msd.user.password}") String msdUserPassword) {
         COOKIES_MAP = getCookiesMap(msdBaseUrl, msdUserName, msdUserPassword);
         RestAssured.baseURI = String.format("https://%s", msdBaseUrl);
-    }
+    }*/
 
     /**
      * Return booking guid by msD id.

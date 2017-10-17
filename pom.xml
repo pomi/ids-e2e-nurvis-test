@@ -18,6 +18,7 @@
         <sfw.url>https://uat-thomascook.cs81.force.com/service/services/apexrest/BookingCustomerData</sfw.url>
         <staging.uk.tosca>http://api.thomascook.com/toscaOTADEV2</staging.uk.tosca>
         <customerRetrieveTimeoutMin>10</customerRetrieveTimeoutMin>
+        <staging.uk.retailinterface>http://ppt.int-api.thomascook.com/rtlinterface-test/rest/interface/booking</staging.uk.retailinterface>
         <sfw.request.body>
             {"token":"B5FCAD8188B9C1954E4C817C117A6","l_records":[{"bookingNumber":"SFW_BOOKING_NUMBER","sourceSystem":"Nurvis"}]}
         </sfw.request.body>
@@ -104,6 +105,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>4.3.10.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.18</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

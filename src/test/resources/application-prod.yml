@@ -1,6 +1,14 @@
 spring:
-    profiles: prod
-name: prod-YAML
+    profiles: uk
+name: prod-uk
+environment: production
+servers:
+    - www.abc.com
+    - www.xyz.com
+---
+spring:
+    profiles: nl
+name: prod-nl
 environment: production
 servers:
     - www.abc.com

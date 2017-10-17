@@ -1,8 +1,30 @@
 package com.thomascook.ontour;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.List;
 
+@XmlType(propOrder = {
+        "status",
+        "localizer",
+        "pnr_version",
+        "ext_pnr_version",
+        "date",
+        "amendment_date",
+        "ext_amendment_date",
+        "beginning_date",
+        "end_date",
+        "destination",
+        "product_code",
+        "to_code",
+        "brand",
+        "brochure_code",
+        "latebooking",
+        "pax",
+        "service",
+        "booking_remark",
+        "receipt"
+})
 public class Booking{
     private String status; // C 1
     private String localizer; // C 20
