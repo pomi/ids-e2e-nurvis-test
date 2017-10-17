@@ -8,32 +8,28 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * The list of available
- *                 values of fields. It is similar to facet calculation but no actual
- *                 counts are calculated
- *                 only the fact whether there are any packages
- *                 left where the field contains a specific value. In other words it
- *                 gives the list of values a field can be
- *                 filtered for (in addition to
- *                 the actual filtering) to get at least one matching package in the
- *                 response. (Same as facets with count > 0.)
- *             
- * 
+ * values of fields. It is similar to facet calculation but no actual
+ * counts are calculated
+ * only the fact whether there are any packages
+ * left where the field contains a specific value. In other words it
+ * gives the list of values a field can be
+ * filtered for (in addition to
+ * the actual filtering) to get at least one matching package in the
+ * response. (Same as facets with count > 0.)
+ * <p>
+ * <p>
  * <p>Java class for AvailabilitySearchResponseType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AvailabilitySearchResponseType">
  *   &lt;complexContent>
@@ -77,43 +73,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AvailabilitySearchResponseType", propOrder = {
-    "availability"
+        "availability"
 })
 public class AvailabilitySearchResponseType {
 
     @XmlElement(name = "Availability")
-    protected List<Availability> availability;
+    private List<Availability> availability;
 
     /**
      * Gets the value of the availability property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the availability property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAvailability().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Availability }
-     * 
-     * 
      */
     public List<Availability> getAvailability() {
         if (availability == null) {
-            availability = new ArrayList<Availability>();
+            availability = new ArrayList<>();
         }
         return this.availability;
     }
@@ -121,9 +113,9 @@ public class AvailabilitySearchResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -157,56 +149,50 @@ public class AvailabilitySearchResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "availableValue"
+            "availableValue"
     })
     public static class Availability {
 
         @XmlElement(name = "AvailableValue", required = true)
-        protected List<AvailableValue> availableValue;
+        List<AvailableValue> availableValue;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
 
         /**
          * Gets the value of the availableValue property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the availableValue property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAvailableValue().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AvailableValue }
-         * 
-         * 
          */
         public List<AvailableValue> getAvailableValue() {
             if (availableValue == null) {
-                availableValue = new ArrayList<AvailableValue>();
+                availableValue = new ArrayList<>();
             }
             return this.availableValue;
         }
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -214,11 +200,9 @@ public class AvailabilitySearchResponseType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -227,9 +211,9 @@ public class AvailabilitySearchResponseType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -252,49 +236,45 @@ public class AvailabilitySearchResponseType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class AvailableValue {
 
             @XmlAttribute(name = "Value")
-            protected String value;
+            String value;
             @XmlAttribute(name = "RoomType")
-            protected String roomType;
+            String roomType;
             @XmlAttribute(name = "BoardBasis")
-            protected Integer boardBasis;
+            Integer boardBasis;
             @XmlAttribute(name = "PkgId")
-            protected String pkgId;
+            String pkgId;
             @XmlAttribute(name = "FreeChildFlag")
-            protected FreeChildFlagType freeChildFlag;
+            FreeChildFlagType freeChildFlag;
             @XmlAttribute(name = "Price")
-            protected BigDecimal price;
+            BigDecimal price;
             @XmlAttribute(name = "AdultPrice")
-            protected BigDecimal adultPrice;
+            BigDecimal adultPrice;
             @XmlAttribute(name = "OriginalPrice")
-            protected BigDecimal originalPrice;
+            BigDecimal originalPrice;
             @XmlAttribute(name = "MaxAdults")
-            protected Integer maxAdults;
+            Integer maxAdults;
             @XmlAttribute(name = "MinAdults")
-            protected Integer minAdults;
+            Integer minAdults;
             @XmlAttribute(name = "MaxChildren")
-            protected Integer maxChildren;
+            Integer maxChildren;
             @XmlAttribute(name = "MinChildren")
-            protected Integer minChildren;
+            Integer minChildren;
             @XmlAttribute(name = "AvailableRooms")
-            protected Integer availableRooms;
+            Integer availableRooms;
             @XmlAttribute(name = "PriceTypeIndicator")
-            protected String priceTypeIndicator;
+            String priceTypeIndicator;
 
             /**
              * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getValue() {
                 return value;
@@ -302,11 +282,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setValue(String value) {
                 this.value = value;
@@ -314,11 +292,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the roomType property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getRoomType() {
                 return roomType;
@@ -326,11 +302,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the roomType property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setRoomType(String value) {
                 this.roomType = value;
@@ -338,11 +312,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the boardBasis property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getBoardBasis() {
                 return boardBasis;
@@ -350,11 +322,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the boardBasis property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setBoardBasis(Integer value) {
                 this.boardBasis = value;
@@ -362,11 +332,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the pkgId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getPkgId() {
                 return pkgId;
@@ -374,11 +342,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the pkgId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setPkgId(String value) {
                 this.pkgId = value;
@@ -386,11 +352,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the freeChildFlag property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link FreeChildFlagType }
-             *     
+             *
+             * @return possible object is
+             * {@link FreeChildFlagType }
              */
             public FreeChildFlagType getFreeChildFlag() {
                 return freeChildFlag;
@@ -398,11 +362,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the freeChildFlag property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link FreeChildFlagType }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link FreeChildFlagType }
              */
             public void setFreeChildFlag(FreeChildFlagType value) {
                 this.freeChildFlag = value;
@@ -410,11 +372,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the price property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getPrice() {
                 return price;
@@ -422,11 +382,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the price property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setPrice(BigDecimal value) {
                 this.price = value;
@@ -434,11 +392,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the adultPrice property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getAdultPrice() {
                 return adultPrice;
@@ -446,11 +402,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the adultPrice property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setAdultPrice(BigDecimal value) {
                 this.adultPrice = value;
@@ -458,11 +412,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the originalPrice property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getOriginalPrice() {
                 return originalPrice;
@@ -470,11 +422,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the originalPrice property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setOriginalPrice(BigDecimal value) {
                 this.originalPrice = value;
@@ -482,11 +432,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the maxAdults property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getMaxAdults() {
                 return maxAdults;
@@ -494,11 +442,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the maxAdults property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setMaxAdults(Integer value) {
                 this.maxAdults = value;
@@ -506,11 +452,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the minAdults property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getMinAdults() {
                 return minAdults;
@@ -518,11 +462,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the minAdults property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setMinAdults(Integer value) {
                 this.minAdults = value;
@@ -530,11 +472,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the maxChildren property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getMaxChildren() {
                 return maxChildren;
@@ -542,11 +482,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the maxChildren property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setMaxChildren(Integer value) {
                 this.maxChildren = value;
@@ -554,11 +492,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the minChildren property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getMinChildren() {
                 return minChildren;
@@ -566,11 +502,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the minChildren property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setMinChildren(Integer value) {
                 this.minChildren = value;
@@ -578,11 +512,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the availableRooms property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Integer }
-             *     
+             *
+             * @return possible object is
+             * {@link Integer }
              */
             public Integer getAvailableRooms() {
                 return availableRooms;
@@ -590,11 +522,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the availableRooms property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Integer }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Integer }
              */
             public void setAvailableRooms(Integer value) {
                 this.availableRooms = value;
@@ -602,11 +532,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Gets the value of the priceTypeIndicator property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getPriceTypeIndicator() {
                 return priceTypeIndicator;
@@ -614,11 +542,9 @@ public class AvailabilitySearchResponseType {
 
             /**
              * Sets the value of the priceTypeIndicator property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setPriceTypeIndicator(String value) {
                 this.priceTypeIndicator = value;

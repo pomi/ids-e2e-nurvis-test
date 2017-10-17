@@ -8,20 +8,16 @@
 
 package com.thomascook.content.bazaarvoice;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * A bazaarvoice overview snippet
- * 
+ * <p>
  * <p>Java class for BazaarvoiceOverviewType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="BazaarvoiceOverviewType">
  *   &lt;complexContent>
@@ -46,27 +42,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BazaarvoiceOverviewType", propOrder = {
-    "properties"
+        "properties"
 })
 public class BazaarvoiceOverviewType {
 
     @XmlElement(name = "Properties")
-    protected Properties properties;
+    private Properties properties;
     @XmlAttribute(name = "Id", required = true)
-    protected String id;
+    private String id;
 
     /**
      * Gets the value of the properties property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Properties }
-     *     
+     *
+     * @return possible object is
+     * {@link Properties }
      */
     public Properties getProperties() {
         return properties;
@@ -74,11 +66,9 @@ public class BazaarvoiceOverviewType {
 
     /**
      * Sets the value of the properties property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Properties }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Properties }
      */
     public void setProperties(Properties value) {
         this.properties = value;
@@ -86,11 +76,9 @@ public class BazaarvoiceOverviewType {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -98,11 +86,9 @@ public class BazaarvoiceOverviewType {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -111,9 +97,9 @@ public class BazaarvoiceOverviewType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -127,31 +113,27 @@ public class BazaarvoiceOverviewType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Properties {
 
         @XmlAttribute(name = "AverageOverallRating")
-        protected String averageOverallRating;
+        String averageOverallRating;
         @XmlAttribute(name = "OverallRatingRange")
-        protected String overallRatingRange;
+        String overallRatingRange;
         @XmlAttribute(name = "TotalReviewCount")
-        protected String totalReviewCount;
+        String totalReviewCount;
         @XmlAttribute(name = "RatingsOnlyReviewCount")
-        protected String ratingsOnlyReviewCount;
+        String ratingsOnlyReviewCount;
         @XmlAttribute(name = "RecommendedCount")
-        protected String recommendedCount;
+        String recommendedCount;
 
         /**
          * Gets the value of the averageOverallRating property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAverageOverallRating() {
             return averageOverallRating;
@@ -159,11 +141,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Sets the value of the averageOverallRating property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAverageOverallRating(String value) {
             this.averageOverallRating = value;
@@ -171,11 +151,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Gets the value of the overallRatingRange property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOverallRatingRange() {
             return overallRatingRange;
@@ -183,11 +161,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Sets the value of the overallRatingRange property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOverallRatingRange(String value) {
             this.overallRatingRange = value;
@@ -195,11 +171,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Gets the value of the totalReviewCount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTotalReviewCount() {
             return totalReviewCount;
@@ -207,11 +181,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Sets the value of the totalReviewCount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTotalReviewCount(String value) {
             this.totalReviewCount = value;
@@ -219,11 +191,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Gets the value of the ratingsOnlyReviewCount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRatingsOnlyReviewCount() {
             return ratingsOnlyReviewCount;
@@ -231,11 +201,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Sets the value of the ratingsOnlyReviewCount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRatingsOnlyReviewCount(String value) {
             this.ratingsOnlyReviewCount = value;
@@ -243,11 +211,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Gets the value of the recommendedCount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRecommendedCount() {
             return recommendedCount;
@@ -255,11 +221,9 @@ public class BazaarvoiceOverviewType {
 
         /**
          * Sets the value of the recommendedCount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRecommendedCount(String value) {
             this.recommendedCount = value;

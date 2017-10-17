@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Request data for any valid item of inventory.
- * 
+ * <p>
  * <p>Java class for ItineraryItemRequestType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ItineraryItemRequestType">
  *   &lt;complexContent>
@@ -46,33 +42,29 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItineraryItemRequestType", propOrder = {
-    "accommodation",
-    "flight",
-    "rentalCar"
+        "accommodation",
+        "flight",
+        "rentalCar"
 })
 public class ItineraryItemRequestType {
 
     @XmlElement(name = "Accommodation")
-    protected AccommodationSegmentRequestType accommodation;
+    private AccommodationSegmentRequestType accommodation;
     @XmlElement(name = "Flight")
-    protected PkgFlightSegmentType flight;
+    private PkgFlightSegmentType flight;
     @XmlElement(name = "RentalCar")
-    protected RentalCar rentalCar;
+    private RentalCar rentalCar;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
 
     /**
      * Gets the value of the accommodation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AccommodationSegmentRequestType }
-     *     
+     *
+     * @return possible object is
+     * {@link AccommodationSegmentRequestType }
      */
     public AccommodationSegmentRequestType getAccommodation() {
         return accommodation;
@@ -80,11 +72,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Sets the value of the accommodation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AccommodationSegmentRequestType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AccommodationSegmentRequestType }
      */
     public void setAccommodation(AccommodationSegmentRequestType value) {
         this.accommodation = value;
@@ -92,11 +82,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Gets the value of the flight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgFlightSegmentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgFlightSegmentType }
      */
     public PkgFlightSegmentType getFlight() {
         return flight;
@@ -104,11 +92,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Sets the value of the flight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgFlightSegmentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgFlightSegmentType }
      */
     public void setFlight(PkgFlightSegmentType value) {
         this.flight = value;
@@ -116,11 +102,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Gets the value of the rentalCar property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RentalCar }
-     *     
+     *
+     * @return possible object is
+     * {@link RentalCar }
      */
     public RentalCar getRentalCar() {
         return rentalCar;
@@ -128,11 +112,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Sets the value of the rentalCar property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RentalCar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RentalCar }
      */
     public void setRentalCar(RentalCar value) {
         this.rentalCar = value;
@@ -140,11 +122,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -152,11 +132,9 @@ public class ItineraryItemRequestType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -165,9 +143,9 @@ public class ItineraryItemRequestType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -179,29 +157,24 @@ public class ItineraryItemRequestType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class RentalCar
-        extends VehicleRentalCoreType
-    {
+            extends VehicleRentalCoreType {
 
         @XmlAttribute(name = "RPH")
-        protected String rph;
+        String rph;
         @XmlAttribute(name = "Name")
-        protected String name;
+        String name;
         @XmlAttribute(name = "Code")
-        protected String code;
+        String code;
 
         /**
          * Gets the value of the rph property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRPH() {
             return rph;
@@ -209,11 +182,9 @@ public class ItineraryItemRequestType {
 
         /**
          * Sets the value of the rph property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -221,11 +192,9 @@ public class ItineraryItemRequestType {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -233,11 +202,9 @@ public class ItineraryItemRequestType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -245,11 +212,9 @@ public class ItineraryItemRequestType {
 
         /**
          * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCode() {
             return code;
@@ -257,11 +222,9 @@ public class ItineraryItemRequestType {
 
         /**
          * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCode(String value) {
             this.code = value;

@@ -8,22 +8,18 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Describes the details
- *                 about the in- and outbounding flights.
- *             
- * 
+ * about the in- and outbounding flights.
+ * <p>
+ * <p>
  * <p>Java class for InAndOutBoundFlightsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="InAndOutBoundFlightsType">
  *   &lt;complexContent>
@@ -37,30 +33,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InAndOutBoundFlightsType", propOrder = {
-    "inboundFlight",
-    "outboundFlight"
+        "inboundFlight",
+        "outboundFlight"
 })
 public class InAndOutBoundFlightsType {
 
     @XmlElement(name = "InboundFlight", required = true)
-    protected PkgFlightType inboundFlight;
+    private PkgFlightType inboundFlight;
     @XmlElement(name = "OutboundFlight", required = true)
-    protected PkgFlightType outboundFlight;
+    private PkgFlightType outboundFlight;
     @XmlAttribute(name = "AvailableSeats")
-    protected Integer availableSeats;
+    private Integer availableSeats;
 
     /**
      * Gets the value of the inboundFlight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgFlightType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgFlightType }
      */
     public PkgFlightType getInboundFlight() {
         return inboundFlight;
@@ -68,11 +60,9 @@ public class InAndOutBoundFlightsType {
 
     /**
      * Sets the value of the inboundFlight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgFlightType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgFlightType }
      */
     public void setInboundFlight(PkgFlightType value) {
         this.inboundFlight = value;
@@ -80,11 +70,9 @@ public class InAndOutBoundFlightsType {
 
     /**
      * Gets the value of the outboundFlight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgFlightType }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgFlightType }
      */
     public PkgFlightType getOutboundFlight() {
         return outboundFlight;
@@ -92,11 +80,9 @@ public class InAndOutBoundFlightsType {
 
     /**
      * Sets the value of the outboundFlight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgFlightType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgFlightType }
      */
     public void setOutboundFlight(PkgFlightType value) {
         this.outboundFlight = value;
@@ -104,11 +90,9 @@ public class InAndOutBoundFlightsType {
 
     /**
      * Gets the value of the availableSeats property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getAvailableSeats() {
         return availableSeats;
@@ -116,11 +100,9 @@ public class InAndOutBoundFlightsType {
 
     /**
      * Sets the value of the availableSeats property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setAvailableSeats(Integer value) {
         this.availableSeats = value;

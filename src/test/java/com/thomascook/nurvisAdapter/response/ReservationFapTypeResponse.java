@@ -8,24 +8,19 @@
 
 package com.thomascook.nurvisAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 To store bookable information about a passenger
- *             
- * 
+ * To store bookable information about a passenger
+ * <p>
+ * <p>
  * <p>Java class for Reservation-FapType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-FapType-Response">
  *   &lt;complexContent>
@@ -104,59 +99,55 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-FapType-Response", propOrder = {
-    "personType",
-    "sex",
-    "title",
-    "name",
-    "firstName",
-    "age",
-    "birth",
-    "pricePerson",
-    "transferArr",
-    "transferDep",
-    "faq"
+        "personType",
+        "sex",
+        "title",
+        "name",
+        "firstName",
+        "age",
+        "birth",
+        "pricePerson",
+        "transferArr",
+        "transferDep",
+        "faq"
 })
 public class ReservationFapTypeResponse {
 
     @XmlElement(name = "TransferDep")
-    protected String transferDep;
+    private String transferDep;
     @XmlElement(name = "TransferArr")
-    protected String transferArr;
+    private String transferArr;
     @XmlElement(name = "PersonType")
-    protected String personType;
+    private String personType;
     @XmlElement(name = "Sex")
-    protected String sex;
+    private String sex;
     @XmlElement(name = "Title")
-    protected String title;
+    private String title;
     @XmlElement(name = "Name", required = true)
-    protected String name;
+    private String name;
     @XmlElement(name = "FirstName")
-    protected String firstName;
+    private String firstName;
     @XmlElement(name = "Age")
-    protected String age;
+    private String age;
     @XmlElement(name = "Birth")
-    protected String birth;
+    private String birth;
     @XmlElement(name = "PricePerson")
-    protected String pricePerson;
+    private String pricePerson;
     @XmlElement(name = "Faq")
-    protected List<ReservationFaqTypeResponse> faq;
+    private List<ReservationFaqTypeResponse> faq;
     @XmlAttribute(name = "ID", required = true)
-    protected String id;
+    private String id;
     @XmlAttribute(name = "Key")
-    protected String key;
+    private String key;
 
     /**
      * Gets the value of the personType property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransferDep() {
         return transferDep;
@@ -165,10 +156,8 @@ public class ReservationFapTypeResponse {
     /**
      * Sets the value of the personType property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransferDep(String value) {
         this.transferDep = value;
@@ -177,10 +166,8 @@ public class ReservationFapTypeResponse {
     /**
      * Gets the value of the personType property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
-     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransferArr() {
         return transferArr;
@@ -189,10 +176,8 @@ public class ReservationFapTypeResponse {
     /**
      * Sets the value of the personType property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransferArr(String value) {
         this.transferArr = value;
@@ -200,11 +185,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the personType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPersonType() {
         return personType;
@@ -212,11 +195,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the personType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPersonType(String value) {
         this.personType = value;
@@ -224,11 +205,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the sex property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSex() {
         return sex;
@@ -236,11 +215,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the sex property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSex(String value) {
         this.sex = value;
@@ -248,11 +225,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTitle() {
         return title;
@@ -260,11 +235,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTitle(String value) {
         this.title = value;
@@ -272,11 +245,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -284,11 +255,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -296,11 +265,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the firstName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFirstName() {
         return firstName;
@@ -308,11 +275,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the firstName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFirstName(String value) {
         this.firstName = value;
@@ -320,11 +285,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the age property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAge() {
         return age;
@@ -332,11 +295,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the age property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAge(String value) {
         this.age = value;
@@ -344,11 +305,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the birth property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBirth() {
         return birth;
@@ -356,11 +315,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the birth property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBirth(String value) {
         this.birth = value;
@@ -368,11 +325,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the pricePerson property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPricePerson() {
         return pricePerson;
@@ -380,11 +335,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the pricePerson property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPricePerson(String value) {
         this.pricePerson = value;
@@ -392,40 +345,36 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the faq property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the faq property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFaq().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFaqTypeResponse }
-     * 
-     * 
      */
     public List<ReservationFaqTypeResponse> getFaq() {
         if (faq == null) {
-            faq = new ArrayList<ReservationFaqTypeResponse>();
+            faq = new ArrayList<>();
         }
         return this.faq;
     }
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getID() {
         return id;
@@ -433,11 +382,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setID(String value) {
         this.id = value;
@@ -445,11 +392,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Gets the value of the key property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getKey() {
         return key;
@@ -457,11 +402,9 @@ public class ReservationFapTypeResponse {
 
     /**
      * Sets the value of the key property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setKey(String value) {
         this.key = value;

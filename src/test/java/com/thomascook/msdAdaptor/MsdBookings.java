@@ -1,9 +1,10 @@
 package com.thomascook.msdAdaptor;
 
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Response;
 import com.sun.nio.sctp.IllegalReceiveException;
-import com.thomascook.Context;
+import com.thomascook.Config;
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,16 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.util.*;
 
 import static com.jayway.restassured.RestAssured.given;
 
-//@ContextConfiguration(classes = Context.class)
-//@Component
 public class MsdBookings {
 
     private static final String TC_BOOKINGS_CONTEXT_FOLDER = "tc_bookings";
@@ -34,25 +30,26 @@ public class MsdBookings {
     private static final String CONTACTS_SERVICE_CONTEXT_FOLDER = "contacts";
     private static final String MSIS_AUTH_COOKIE_NAME = "MSISAuth";
     private static final String MSIS_AUTH1_COOKIE_NAME = "MSISAuth1";
-
-    private static Map<String, String> COOKIES_MAP = new HashMap<>();
-
-    private static final String VALUE_TC_BOOKINGID_JSONPATH = "value.tc_bookingid";
+    private static final String VALUE_TC_BOOKING_ID_JSONPATH = "value.tc_bookingid";
     private static final String TC_ACCOMMODATION_PAX_JSONPATH = "value[0].tc_participants";
     private static final String PAX_DELIMITER_REGEX = ",*\\r\\n";
     private static final String BASE_PATH_PREFIX = "/api/data/v8.2/";
     private static final String CUSTOMER_GUID_KEY_IN_CUSTOMER_ROLES = "_tc_customer_value";
-    private static final String CUSTOMERBOOKINGROLES_SERVICE_TITLE = "tc_customerbookingroles";
-    private static final String TC_BOOKINGID_VALUE_KEY = "_tc_bookingid_value";
+    private static final String CUSTOMER_BOOKING_ROLES_SERVICE_TITLE = "tc_customerbookingroles";
+    private static final String TC_BOOKING_ID_VALUE_KEY = "_tc_bookingid_value";
+    private static final Header FF_HEADER = new Header("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0");
+    private static Map<String, String> COOKIES_MAP = new HashMap<>();
 
     private static Logger logger = LoggerFactory.getLogger(MsdBookings.class);
 
-    /*public MsdBookings(@Value("${staging.msd.baseUrl}") String msdBaseUrl,
-                       @Value("${staging.msd.user.name}") String msdUserName,
-                       @Value("${staging.msd.user.password}") String msdUserPassword) {
+    public MsdBookings() {
+        String msdBaseUrl = Config.get().getMsdBaseUrl();
+        String msdUserName = Config.get().getMsdLogin();
+        String msdUserPassword = Config.get().getMsdPassword();
+
         COOKIES_MAP = getCookiesMap(msdBaseUrl, msdUserName, msdUserPassword);
         RestAssured.baseURI = String.format("https://%s", msdBaseUrl);
-    }*/
+    }
 
     /**
      * Return booking guid by msD id.
@@ -63,16 +60,16 @@ public class MsdBookings {
     public String getBookingGuidByMsdId(String msdId) {
         int responseSize;
         String request;
-        Response idha;
+        Response guid;
 
         request = String.format("?$filter=(tc_name eq \'%s\')&$select=tc_bookingid", msdId);
 
         RestAssured.basePath = String.format(BASE_PATH_PREFIX + "%s", TC_BOOKINGS_CONTEXT_FOLDER.toLowerCase());
-        idha = given().cookies(COOKIES_MAP).get(request);
-        responseSize = idha.jsonPath().getList("value").size();
+        guid = given().cookies(COOKIES_MAP).get(request);
+        responseSize = guid.jsonPath().getList("value").size();
 
         if (responseSize == 1) {
-            return idha.jsonPath().getList(VALUE_TC_BOOKINGID_JSONPATH).get(0).toString();
+            return guid.jsonPath().getList(VALUE_TC_BOOKING_ID_JSONPATH).get(0).toString();
         } else if (responseSize < 1) {
             throw new IllegalReceiveException(String.format("No one booking with %s number was found", msdId));
         } else
@@ -110,21 +107,21 @@ public class MsdBookings {
      * @param bookingGuid
      * @return
      */
-    public Response getAccommodationServiceByBookingGuid(String bookingGuid) {
-        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_ACCOMMODATION_CONTEXT_FOLDER, TC_BOOKINGID_VALUE_KEY, bookingGuid);
+    private Response getAccommodationServiceByBookingGuid(String bookingGuid) {
+        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_ACCOMMODATION_CONTEXT_FOLDER, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
     }
 
 
     public Response getBookingExtraServiceByBookingGuid(String bookingGuid) {
-        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_EXTRA_SERVICES_CONTEXT_FOLDER, TC_BOOKINGID_VALUE_KEY, bookingGuid);
+        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_EXTRA_SERVICES_CONTEXT_FOLDER, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
     }
 
     public Response getBookingTransfersServiceByBookingGuid(String bookingGuid) {
-        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_TRANSFERS_CONTEXT_FOLDER, TC_BOOKINGID_VALUE_KEY, bookingGuid);
+        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_TRANSFERS_CONTEXT_FOLDER, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
     }
 
     public Response getBookingTransportsServiceByBookingGuid(String bookingGuid) {
-        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_TRANSPORTS_CONTEXT_FOLDER, TC_BOOKINGID_VALUE_KEY, bookingGuid);
+        return getServiceObjectByNameAndTcBookingGuid(TC_BOOKING_TRANSPORTS_CONTEXT_FOLDER, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
     }
 
     /**
@@ -141,7 +138,7 @@ public class MsdBookings {
         Response customerRolesResponse;
 
         bookingGuid = getBookingGuidByMsdId(bookingId);
-        customerRolesResponse = getServiceObjectByNameAndTcBookingGuid(CUSTOMERBOOKINGROLES_SERVICE_TITLE, TC_BOOKINGID_VALUE_KEY, bookingGuid);
+        customerRolesResponse = getServiceObjectByNameAndTcBookingGuid(CUSTOMER_BOOKING_ROLES_SERVICE_TITLE, TC_BOOKING_ID_VALUE_KEY, bookingGuid);
         customerGuid = getValueFromResponseByKey(customerRolesResponse, CUSTOMER_GUID_KEY_IN_CUSTOMER_ROLES);
         return getServiceObjectByNameAndTcBookingGuid(CONTACTS_SERVICE_CONTEXT_FOLDER, "contactid", customerGuid);
     }
@@ -180,29 +177,33 @@ public class MsdBookings {
      * @param key            json map Key that points to a desired value.
      * @return String representation of map value.
      */
-    public String getValueFromResponseByKey(Response responseObject, String key) {
+    private String getValueFromResponseByKey(Response responseObject, String key) {
         return (String) responseObject.jsonPath().getList(String.format("value.%s", key)).get(0);
     }
 
-    private Map<String, String> getCookiesMap(String baseUrl, String userName, String userPasswword) {
-
-        Map<String, String> cookiesMap = new HashMap<>();
+    private Map<String, String> getCookiesMap(String baseUrl, String userName, String userPassword) {
+        Map<String, String> cookiesMap;
+        WebDriver driver;
+        cookiesMap = new HashMap<>();
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setJavascriptEnabled(false);
         PhantomJsDriverManager.getInstance().setup();
+        driver = new PhantomJSDriver(capabilities);
+        try {
 
-        WebDriver driver = new PhantomJSDriver(capabilities);
-        driver.get(String.format("https://%s", baseUrl));
-        driver.findElement(By.id("cred_userid_inputtext")).sendKeys(userName + Keys.TAB);
-        (new WebDriverWait(driver, 50)).until(ExpectedConditions.elementToBeClickable(By.id("passwordInput"))).sendKeys(userPasswword);
-        driver.findElement(By.id("submitButton")).click();
+            driver.get(String.format("https://%s", baseUrl));
+            driver.findElement(By.id("cred_userid_inputtext")).sendKeys(userName + Keys.TAB);
+            (new WebDriverWait(driver, 50)).until(ExpectedConditions.elementToBeClickable(By.id("passwordInput"))).sendKeys(userPassword);
+            driver.findElement(By.id("submitButton")).click();
 
-        cookiesMap.put(MSIS_AUTH_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH_COOKIE_NAME).getValue());
-        cookiesMap.put(MSIS_AUTH1_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH1_COOKIE_NAME).getValue());
+            cookiesMap.put(MSIS_AUTH_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH_COOKIE_NAME).getValue());
+            cookiesMap.put(MSIS_AUTH1_COOKIE_NAME, driver.manage().getCookieNamed(MSIS_AUTH1_COOKIE_NAME).getValue());
 
-        driver.close();
-
-        return cookiesMap;
+            return cookiesMap;
+        } finally {
+            logger.info("Access to msD is allowed");
+            driver.close();
+        }
     }
 }

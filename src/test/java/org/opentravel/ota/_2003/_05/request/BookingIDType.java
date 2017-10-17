@@ -8,23 +8,23 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Defines the structure to store all information
- *                 required to price and book the option it refers to.
- *             
- * 
+ * required to price and book the option it refers to.
+ * <p>
+ * <p>
  * <p>Java class for BookingIDType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="BookingIDType">
  *   &lt;complexContent>
@@ -36,43 +36,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BookingIDType", propOrder = {
-    "field"
+        "field"
 })
 public class BookingIDType {
 
     @XmlElement(name = "Field")
-    protected List<SolrFieldType> field;
+    private List<SolrFieldType> field;
 
     /**
      * Gets the value of the field property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the field property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getField().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SolrFieldType }
-     * 
-     * 
      */
     public List<SolrFieldType> getField() {
         if (field == null) {
-            field = new ArrayList<SolrFieldType>();
+            field = new ArrayList<>();
         }
         return this.field;
     }

@@ -8,26 +8,21 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Provides information on a specific documents
- * 
+ * <p>
  * <p>Java class for DocumentType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DocumentType">
  *   &lt;complexContent>
@@ -66,68 +61,64 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DocumentType", propOrder = {
-    "docHolderName",
-    "docHolderFormattedName",
-    "docLimitations",
-    "additionalPersonNames"
+        "docHolderName",
+        "docHolderFormattedName",
+        "docLimitations",
+        "additionalPersonNames"
 })
 public class DocumentType {
 
     @XmlElement(name = "DocHolderName")
-    protected String docHolderName;
+    private String docHolderName;
     @XmlElement(name = "DocHolderFormattedName")
-    protected PersonNameType docHolderFormattedName;
+    private PersonNameType docHolderFormattedName;
     @XmlElement(name = "DocLimitations")
-    protected List<String> docLimitations;
+    private List<String> docLimitations;
     @XmlElement(name = "AdditionalPersonNames")
-    protected AdditionalPersonNames additionalPersonNames;
+    private AdditionalPersonNames additionalPersonNames;
     @XmlAttribute(name = "DocIssueAuthority")
-    protected String docIssueAuthority;
+    private String docIssueAuthority;
     @XmlAttribute(name = "DocIssueLocation")
-    protected String docIssueLocation;
+    private String docIssueLocation;
     @XmlAttribute(name = "DocID")
-    protected String docID;
+    private String docID;
     @XmlAttribute(name = "DocType")
-    protected String docType;
+    private String docType;
     @XmlAttribute(name = "DocIssueStateProv")
-    protected String docIssueStateProv;
+    private String docIssueStateProv;
     @XmlAttribute(name = "DocIssueCountry")
-    protected String docIssueCountry;
+    private String docIssueCountry;
     @XmlAttribute(name = "BirthCountry")
-    protected String birthCountry;
+    private String birthCountry;
     @XmlAttribute(name = "DocHolderNationality")
-    protected String docHolderNationality;
+    private String docHolderNationality;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
+    private XMLGregorianCalendar effectiveDate;
     @XmlAttribute(name = "ExpireDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
+    private XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "Gender")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String gender;
+    private String gender;
     @XmlAttribute(name = "BirthDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDate;
+    private XMLGregorianCalendar birthDate;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the docHolderName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocHolderName() {
         return docHolderName;
@@ -135,11 +126,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docHolderName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocHolderName(String value) {
         this.docHolderName = value;
@@ -147,11 +136,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docHolderFormattedName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link PersonNameType }
      */
     public PersonNameType getDocHolderFormattedName() {
         return docHolderFormattedName;
@@ -159,11 +146,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docHolderFormattedName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PersonNameType }
      */
     public void setDocHolderFormattedName(PersonNameType value) {
         this.docHolderFormattedName = value;
@@ -171,40 +156,36 @@ public class DocumentType {
 
     /**
      * Gets the value of the docLimitations property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the docLimitations property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDocLimitations().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getDocLimitations() {
         if (docLimitations == null) {
-            docLimitations = new ArrayList<String>();
+            docLimitations = new ArrayList<>();
         }
         return this.docLimitations;
     }
 
     /**
      * Gets the value of the additionalPersonNames property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AdditionalPersonNames }
-     *     
+     *
+     * @return possible object is
+     * {@link AdditionalPersonNames }
      */
     public AdditionalPersonNames getAdditionalPersonNames() {
         return additionalPersonNames;
@@ -212,11 +193,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the additionalPersonNames property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AdditionalPersonNames }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AdditionalPersonNames }
      */
     public void setAdditionalPersonNames(AdditionalPersonNames value) {
         this.additionalPersonNames = value;
@@ -224,11 +203,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docIssueAuthority property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocIssueAuthority() {
         return docIssueAuthority;
@@ -236,11 +213,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docIssueAuthority property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocIssueAuthority(String value) {
         this.docIssueAuthority = value;
@@ -248,11 +223,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docIssueLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocIssueLocation() {
         return docIssueLocation;
@@ -260,11 +233,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docIssueLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocIssueLocation(String value) {
         this.docIssueLocation = value;
@@ -272,11 +243,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocID() {
         return docID;
@@ -284,11 +253,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocID(String value) {
         this.docID = value;
@@ -296,11 +263,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocType() {
         return docType;
@@ -308,11 +273,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocType(String value) {
         this.docType = value;
@@ -320,11 +283,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docIssueStateProv property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocIssueStateProv() {
         return docIssueStateProv;
@@ -332,11 +293,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docIssueStateProv property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocIssueStateProv(String value) {
         this.docIssueStateProv = value;
@@ -344,11 +303,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docIssueCountry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocIssueCountry() {
         return docIssueCountry;
@@ -356,11 +313,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docIssueCountry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocIssueCountry(String value) {
         this.docIssueCountry = value;
@@ -368,11 +323,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the birthCountry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBirthCountry() {
         return birthCountry;
@@ -380,11 +333,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the birthCountry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBirthCountry(String value) {
         this.birthCountry = value;
@@ -392,11 +343,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the docHolderNationality property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDocHolderNationality() {
         return docHolderNationality;
@@ -404,11 +353,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the docHolderNationality property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDocHolderNationality(String value) {
         this.docHolderNationality = value;
@@ -416,11 +363,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getEffectiveDate() {
         return effectiveDate;
@@ -428,11 +373,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setEffectiveDate(XMLGregorianCalendar value) {
         this.effectiveDate = value;
@@ -440,11 +383,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getExpireDate() {
         return expireDate;
@@ -452,11 +393,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setExpireDate(XMLGregorianCalendar value) {
         this.expireDate = value;
@@ -464,11 +403,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getGender() {
         return gender;
@@ -476,11 +413,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setGender(String value) {
         this.gender = value;
@@ -488,11 +423,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the birthDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getBirthDate() {
         return birthDate;
@@ -500,11 +433,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the birthDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setBirthDate(XMLGregorianCalendar value) {
         this.birthDate = value;
@@ -512,11 +443,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -524,11 +453,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -536,11 +463,9 @@ public class DocumentType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -548,11 +473,9 @@ public class DocumentType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -561,9 +484,9 @@ public class DocumentType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -575,43 +498,39 @@ public class DocumentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "additionalPersonName"
+            "additionalPersonName"
     })
     public static class AdditionalPersonNames {
 
         @XmlElement(name = "AdditionalPersonName", required = true)
-        protected List<String> additionalPersonName;
+        List<String> additionalPersonName;
 
         /**
          * Gets the value of the additionalPersonName property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the additionalPersonName property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAdditionalPersonName().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         * 
-         * 
          */
         public List<String> getAdditionalPersonName() {
             if (additionalPersonName == null) {
-                additionalPersonName = new ArrayList<String>();
+                additionalPersonName = new ArrayList<>();
             }
             return this.additionalPersonName;
         }

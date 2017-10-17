@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an address that identifies a location for a specific purposes.
- * 
+ * <p>
  * <p>Java class for AddressInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AddressInfoType">
  *   &lt;complexContent>
@@ -32,29 +32,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressInfoType")
 public class AddressInfoType
-    extends AddressType
-{
+        extends AddressType {
 
     @XmlAttribute(name = "UseType")
-    protected String useType;
+    private String useType;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "DefaultInd")
-    protected Boolean defaultInd;
+    private Boolean defaultInd;
 
     /**
      * Gets the value of the useType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUseType() {
         return useType;
@@ -62,11 +57,9 @@ public class AddressInfoType
 
     /**
      * Sets the value of the useType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUseType(String value) {
         this.useType = value;
@@ -74,11 +67,9 @@ public class AddressInfoType
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -86,11 +77,9 @@ public class AddressInfoType
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -98,11 +87,9 @@ public class AddressInfoType
 
     /**
      * Gets the value of the defaultInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isDefaultInd() {
         if (defaultInd == null) {
@@ -114,11 +101,9 @@ public class AddressInfoType
 
     /**
      * Sets the value of the defaultInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setDefaultInd(Boolean value) {
         this.defaultInd = value;

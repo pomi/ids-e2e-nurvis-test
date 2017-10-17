@@ -8,30 +8,26 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines the structure of how a single piece of
- *                 information is provided within the booking identifier. This
- *                 information might have
- *                 a
- *                 substructure which is described by underlying
- *                 Field elements. One Field element should contain either a name and
- *                 value pair or a name and sub
- *                 Fields.
- *             
- * 
+ * information is provided within the booking identifier. This
+ * information might have
+ * a
+ * substructure which is described by underlying
+ * Field elements. One Field element should contain either a name and
+ * value pair or a name and sub
+ * Fields.
+ * <p>
+ * <p>
  * <p>Java class for SolrFieldType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SolrFieldType">
  *   &lt;complexContent>
@@ -45,58 +41,52 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SolrFieldType", propOrder = {
-    "field"
+        "field"
 })
 public class SolrFieldType {
 
     @XmlElement(name = "Field")
-    protected List<SolrFieldType> field;
+    private List<SolrFieldType> field;
     @XmlAttribute(name = "Name", required = true)
-    protected String name;
+    private String name;
     @XmlAttribute(name = "Value")
-    protected String value;
+    private String value;
 
     /**
      * Gets the value of the field property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the field property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getField().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SolrFieldType }
-     * 
-     * 
      */
     public List<SolrFieldType> getField() {
         if (field == null) {
-            field = new ArrayList<SolrFieldType>();
+            field = new ArrayList<>();
         }
         return this.field;
     }
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -104,11 +94,9 @@ public class SolrFieldType {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -116,11 +104,9 @@ public class SolrFieldType {
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -128,11 +114,9 @@ public class SolrFieldType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;

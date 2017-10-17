@@ -8,24 +8,20 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Defines a group of board
- *                 codes.
- *             
- * 
+ * codes.
+ * <p>
+ * <p>
  * <p>Java class for BoardCodesType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="BoardCodesType">
  *   &lt;complexContent>
@@ -37,44 +33,40 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BoardCodesType", propOrder = {
-    "boardCode"
+        "boardCode"
 })
 public class BoardCodesType {
 
     @XmlElement(name = "BoardCode", type = Integer.class)
     @XmlSchemaType(name = "integer")
-    protected List<Integer> boardCode;
+    private List<Integer> boardCode;
 
     /**
      * Gets the value of the boardCode property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the boardCode property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBoardCode().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Integer }
-     * 
-     * 
      */
     public List<Integer> getBoardCode() {
         if (boardCode == null) {
-            boardCode = new ArrayList<Integer>();
+            boardCode = new ArrayList<>();
         }
         return this.boardCode;
     }

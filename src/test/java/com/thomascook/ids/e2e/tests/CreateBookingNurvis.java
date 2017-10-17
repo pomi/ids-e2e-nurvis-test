@@ -4,10 +4,13 @@ import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
-import com.thomascook.nurvisAdapter.request.*;
-
+import com.thomascook.Config;
+import com.thomascook.nurvisAdapter.request.ReservationFatTypeRequest;
+import com.thomascook.nurvisAdapter.request.ReservationLegTypeRequest;
+import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.*;
 import com.thomascook.ontour.*;
+import com.thomascook.utils.Regions;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -18,16 +21,13 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.opentravel.ota._2003._05.request.*;
-import org.opentravel.ota._2003._05.request.DepartureAirportListType;
-import org.opentravel.ota._2003._05.request.FilterResultsType;
 import org.opentravel.ota._2003._05.response.HotelOfferType;
-import org.opentravel.ota._2003._05.request.LocationType;
-import org.opentravel.ota._2003._05.request.PkgGuestCountType;
-import org.opentravel.ota._2003._05.request.PkgSearchCriteriaType;
-import org.opentravel.ota._2003._05.request.RoomStayCandidatesType;
-import org.opentravel.ota._2003._05.response.*;
+import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
 
-import javax.xml.bind.*;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -43,75 +43,36 @@ import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-/**
- * Created by omm on 6/27/2017.
- */
-public class CreateBooking {
+public class CreateBookingNurvis {
 
-    static String solr;
-    static String nurvis;
-    static String sfwUrl;
-    static String customerRetrieveTimeout;
-    static String sfwRequestBody;
+    private static String solr;
+    private static String nurvis;
+    private static String sfwUrl;
+    private static Long customerRetrieveTimeout;
+    private static String sfwRequestBody;
 
-    private void loadProperties(String region, String environment) throws IOException {
-        InputStream is = this.getClass().getResourceAsStream("/config.properties");
-        Properties properties = new Properties();
-        properties.load(is);
-        solr = properties.getProperty(environment + "." + region + "." + "solr");
-        nurvis = properties.getProperty(environment + "." + region + "." + "nurvis");
-        sfwUrl = properties.getProperty("sfw.url");
-        customerRetrieveTimeout = properties.getProperty("customerRetrieveTimeoutMin");
-        sfwRequestBody = properties.getProperty("sfw.request.body");
-    }
-
-    //private static final Logger LOGGER = Logger.getLogger( CreateBooking.class.getName() );
-
-    public OTAPkgSearchRS getSOLRPackages(String fromAirport, String destination, int numberOfAdults) throws IOException, JAXBException, DatatypeConfigurationException {
-        //load properties
-        loadProperties(System.getProperty("region"),System.getProperty("env"));
-        System.out.println(solr);
-        System.out.println(nurvis);
-        //assertNotNull(solr);
-        //assertNotNull(nurvis);
-
-        //solr request
-        HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost(solr);
-        post.setEntity(new ByteArrayEntity(createSolrRequest(0,9,fromAirport, destination, numberOfAdults).getBytes("UTF-8")));
-        HttpResponse response = client.execute(post);
-        HttpEntity entity = response.getEntity();
-        OTAPkgSearchRS otaPkgSearchRS = new OTAPkgSearchRS();
-        if (entity != null) {
-            InputStream instream = entity.getContent();
-            try {
-                JAXBContext jc = JAXBContext.newInstance(OTAPkgSearchRS.class);
-                Unmarshaller unmarshaller = jc.createUnmarshaller();
-                otaPkgSearchRS = (OTAPkgSearchRS) unmarshaller.unmarshal(instream);
-            } finally {
-                instream.close();
-            }
-        }
-        //createSolrRSXML(otaPkgSearchRS);
-        return otaPkgSearchRS;
+    public CreateBookingNurvis(String region) {
+        defineFields(region);
     }
 
     static void createSolrRSXML(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance("org.opentravel.ota._2003._05.response");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(otaPkgSearchRS,sw);
+        marshaller.marshal(otaPkgSearchRS, sw);
         //System.out.println(sw.toString());
     }
 
-    static String createSolrRequest(int startIndex, int endIndex, String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
+    //private static final Logger LOGGER = Logger.getLogger( CreateBooking.class.getName() );
+
+    private static String createSolrRequest(String fromAirport, String destination, int numberOfAdults) throws JAXBException, DatatypeConfigurationException {
         org.opentravel.ota._2003._05.request.ObjectFactory factory = new org.opentravel.ota._2003._05.request.ObjectFactory();
         OTAPkgSearchRQ otaPkgSearchRQ = factory.createOTAPkgSearchRQ();
 
         FilterResultsType filterResultsType = factory.createFilterResultsType();
-        filterResultsType.setStart(Integer.toString(startIndex));
-        filterResultsType.setEnd(Integer.toString(endIndex));
+        filterResultsType.setStart(Integer.toString(0));
+        filterResultsType.setEnd(Integer.toString(9));
         otaPkgSearchRQ.setFilterResults(filterResultsType);
 
         PkgSearchCriteriaType pkgSearchCriteriaType = factory.createPkgSearchCriteriaType();
@@ -150,9 +111,9 @@ public class CreateBooking {
         PkgGuestCountType.GuestCount guestCount = factory.createPkgGuestCountTypeGuestCount();
         guestCount.setAgeQualifyingCode("10");
         guestCount.setCount(numberOfAdults);
-        guestCountType.setGuestCount(Arrays.asList(guestCount));
+        guestCountType.setGuestCount(Collections.singletonList(guestCount));
         roomStayCandidate.setGuestCounts(guestCountType);
-        roomStayCandidatesType.setRoomStayCandidate(Arrays.asList(roomStayCandidate));
+        roomStayCandidatesType.setRoomStayCandidate(Collections.singletonList(roomStayCandidate));
 
         //create version
         otaPkgSearchRQ.setVersion(BigDecimal.valueOf(0.0));
@@ -161,9 +122,9 @@ public class CreateBooking {
         //Create XML
         JAXBContext context = JAXBContext.newInstance("org.opentravel.ota._2003._05.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(otaPkgSearchRQ,sw);
+        marshaller.marshal(otaPkgSearchRQ, sw);
 
         return sw.toString();
     }
@@ -171,23 +132,23 @@ public class CreateBooking {
     public static HotelOfferType checkPackageAvailability(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException, IOException {
         HotelOfferType hotel = new HotelOfferType();
 
-        for(HotelOfferType h : otaPkgSearchRS.getHotelOffers().getHotelOffer()){
+        for (HotelOfferType h : otaPkgSearchRS.getHotelOffers().getHotelOffer()) {
             createNurvisRequest(h);
         }
         return hotel;
     }
 
-    static String convertXMLDateToLocalDate(XMLGregorianCalendar xmlDate){
+    private static String convertXMLDateToLocalDate(XMLGregorianCalendar xmlDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
-        return LocalDate.of(xmlDate.getYear(),xmlDate.getMonth(),xmlDate.getDay()).format(formatter);
+        return LocalDate.of(xmlDate.getYear(), xmlDate.getMonth(), xmlDate.getDay()).format(formatter);
     }
 
-    static String convertXMLTimeToHHMM(XMLGregorianCalendar xmlDate){
+    private static String convertXMLTimeToHHMM(XMLGregorianCalendar xmlDate) {
         SimpleDateFormat time = new SimpleDateFormat("HHmm");
         return time.format(xmlDate.toGregorianCalendar().getTime());
     }
 
-    public static ReservationRequestTypeRequest createNurvisRequest(HotelOfferType packageHoliday) throws JAXBException, IOException {
+    private static ReservationRequestTypeRequest createNurvisRequest(HotelOfferType packageHoliday) {
         int segRef = 1;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy");
         LocalDate today = LocalDate.now();
@@ -322,12 +283,12 @@ public class CreateBooking {
         return request;
     }
 
-    public static ReservationResponseTypeResponse getNurvisInquiryResponse(ReservationRequestTypeRequest request) throws IOException, JAXBException {
+    private static ReservationResponseTypeResponse getNurvisInquiryResponse(ReservationRequestTypeRequest request) throws IOException, JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.thomascook.nurvisAdapter.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(request,sw);
+        marshaller.marshal(request, sw);
 
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
@@ -336,13 +297,10 @@ public class CreateBooking {
         HttpEntity entity = response.getEntity();
         ReservationResponseTypeResponse nurvisResponse = new ReservationResponseTypeResponse();
         if (entity != null) {
-            InputStream instream = entity.getContent();
-            try {
+            try (InputStream instream = entity.getContent()) {
                 JAXBContext jc = JAXBContext.newInstance(ReservationResponseTypeResponse.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
                 nurvisResponse = (ReservationResponseTypeResponse) unmarshaller.unmarshal(instream);
-            } finally {
-                instream.close();
             }
         }
         return nurvisResponse;
@@ -351,9 +309,9 @@ public class CreateBooking {
     public static ReservationResponseTypeResponse createNurvisBooking(ReservationRequestTypeRequest nurvisRequest, ReservationResponseTypeResponse nurvisResponse) throws JAXBException, IOException {
         nurvisRequest.getFab().setKey(nurvisResponse.getFab().getKey());
         nurvisRequest.setSubType("FIX");
-        for(ReservationFatTypeRequest requestFat : nurvisRequest.getFab().getFat()){
-            for(ReservationFatTypeResponse responseFat : nurvisResponse.getFab().getFat()){
-                if(Objects.equals(requestFat.getSegRef(), responseFat.getSegRef())){
+        for (ReservationFatTypeRequest requestFat : nurvisRequest.getFab().getFat()) {
+            for (ReservationFatTypeResponse responseFat : nurvisResponse.getFab().getFat()) {
+                if (Objects.equals(requestFat.getSegRef(), responseFat.getSegRef())) {
                     requestFat.setKey(responseFat.getKey());
                     requestFat.getLeg().get(0).setKey(responseFat.getLeg().get(0).getKey());
                     requestFat.getLeg().get(0).setExternal(responseFat.getLeg().get(0).getExternal());
@@ -364,9 +322,9 @@ public class CreateBooking {
 
         JAXBContext context = JAXBContext.newInstance("com.thomascook.nurvisAdapter.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(nurvisRequest,sw);
+        marshaller.marshal(nurvisRequest, sw);
 
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
@@ -375,13 +333,10 @@ public class CreateBooking {
         HttpEntity entity = response.getEntity();
         ReservationResponseTypeResponse nurvisBooking = new ReservationResponseTypeResponse();
         if (entity != null) {
-            InputStream instream = entity.getContent();
-            try {
+            try (InputStream instream = entity.getContent()) {
                 JAXBContext jc = JAXBContext.newInstance(ReservationResponseTypeResponse.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
                 nurvisBooking = (ReservationResponseTypeResponse) unmarshaller.unmarshal(instream);
-            } finally {
-                instream.close();
             }
         }
 
@@ -397,7 +352,7 @@ public class CreateBooking {
         shipment.setVersion("01.00.09");
 
         //Create booking
-        shipment.setBooking(Arrays.asList(new Booking()));
+        shipment.setBooking(Collections.singletonList(new Booking()));
         Booking booking = shipment.getBooking().get(0);
         booking.setStatus("A");
         booking.setLocalizer(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]);
@@ -420,7 +375,7 @@ public class CreateBooking {
         booking.setLatebooking("N");
 
         List<Pax> paxes = new ArrayList<>();
-        for(ReservationFapTypeResponse fap : nurvisBooking.getFab().getFap()){
+        for (ReservationFapTypeResponse fap : nurvisBooking.getFab().getFap()) {
             Pax pax = new Pax();
             pax.setName(fap.getFirstName());
             pax.setSurname(fap.getName());
@@ -435,28 +390,30 @@ public class CreateBooking {
 
         List<Service> services = new ArrayList<>();
         booking.setService(services);
-        for(ReservationFatTypeResponse fat : nurvisBooking.getFab().getFat()){
-            if(fat.getServiceType().equals("F")) {
+        for (ReservationFatTypeResponse fat : nurvisBooking.getFab().getFat()) {
+            if (fat.getServiceType().equals("F")) {
                 Service service = new Service();
                 service.setCode(fat.getCarrier() + fat.getFlightNr());
                 service.setType("FL");
                 service.setName(service.getCode());
                 service.setOrder(Integer.parseInt(fat.getSegRef()));
-                switch(fat.getDirection()){
-                    case "H": service.setTransfer_type("IN");
+                switch (fat.getDirection()) {
+                    case "H":
+                        service.setTransfer_type("IN");
                         break;
-                    case "R": service.setTransfer_type("OUT");
+                    case "R":
+                        service.setTransfer_type("OUT");
                 }
                 service.setOrigin(fat.getDep());
                 service.setDestination(fat.getArr());
                 service.setCarrier_code(fat.getCarrier());
                 service.setCarrier_flight_code(fat.getFlightNr());
-                service.setIdentifier(fat.getCarrier() + fat.getFlightNr()+fat.getDep()+fat.getArr());
+                service.setIdentifier(fat.getCarrier() + fat.getFlightNr() + fat.getDep() + fat.getArr());
                 service.setNumberofunits(Integer.parseInt(fat.getAdults()));
 
                 List<Pax_service> pax_services = new ArrayList<>();
                 service.setPax_service(pax_services);
-                for(String person : fat.getPersons().getIdRef()){
+                for (String person : fat.getPersons().getIdRef()) {
                     Pax_service pax_service = new Pax_service();
                     List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
                     pax_service.setPax_service_assignment(pax_service_assignments);
@@ -469,9 +426,9 @@ public class CreateBooking {
             }
         }
 
-        for(ReservationFahTypeResponse fah : nurvisBooking.getFab().getFah()){
+        for (ReservationFahTypeResponse fah : nurvisBooking.getFab().getFah()) {
             Service service = new Service();
-            if(fah.getServiceType().equals("H")){
+            if (fah.getServiceType().equals("H")) {
                 service.setCode(fah.getProduct());
                 service.setType("RM");
                 service.setName(fah.getProductName());
@@ -479,8 +436,8 @@ public class CreateBooking {
                 service.setBeginning_date(fah.getStartDate());
                 service.setBeginning_time("0000");
                 DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("ddMMyyyy");
-                LocalDate endDate = LocalDate.parse(fah.getStartDate(),formatter2);
-                endDate.plus(Integer.parseInt(fah.getDuration()),ChronoUnit.DAYS);
+                LocalDate endDate = LocalDate.parse(fah.getStartDate(), formatter2);
+                endDate.plus(Integer.parseInt(fah.getDuration()), ChronoUnit.DAYS);
                 endDate.format(formatter2);
                 service.setEnd_date(endDate.toString());
                 service.setEnd_time("0000");
@@ -495,7 +452,7 @@ public class CreateBooking {
 
                 List<Pax_service> pax_services = new ArrayList<>();
                 service.setPax_service(pax_services);
-                for(String person : fah.getPersons().getIdRef()){
+                for (String person : fah.getPersons().getIdRef()) {
                     Pax_service pax_service = new Pax_service();
                     List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
                     pax_service.setPax_service_assignment(pax_service_assignments);
@@ -508,26 +465,26 @@ public class CreateBooking {
             }
         }
 
-        for(ReservationFacTypeResponse fac : nurvisBooking.getFab().getFac()){
+        for (ReservationFacTypeResponse fac : nurvisBooking.getFab().getFac()) {
             Service service = new Service();
             service.setCode(fac.getCode());
             service.setType("MI");
-            if(fac.getServiceType().equals("I")) {
+            if (fac.getServiceType().equals("I")) {
                 service.setName("Insurance");
             }
             service.setOrder(Integer.parseInt(fac.getSegRef()));
             service.setBeginning_date(fac.getStartDate());
             service.setBeginning_time("0000");
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("ddMMyyyy");
-            LocalDate endDate = LocalDate.parse(fac.getStartDate(),formatter2);
-            endDate.plus(Integer.parseInt(fac.getDuration()),ChronoUnit.DAYS);
+            LocalDate endDate = LocalDate.parse(fac.getStartDate(), formatter2);
+            endDate.plus(Integer.parseInt(fac.getDuration()), ChronoUnit.DAYS);
             endDate.format(formatter2);
             service.setEnd_date(endDate.toString());
             service.setEnd_time("0000");
 
             List<Pax_service> pax_services = new ArrayList<>();
             service.setPax_service(pax_services);
-            for(String person : fac.getPersons().getIdRef()){
+            for (String person : fac.getPersons().getIdRef()) {
                 Pax_service pax_service = new Pax_service();
                 List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
                 pax_service.setPax_service_assignment(pax_service_assignments);
@@ -543,7 +500,7 @@ public class CreateBooking {
         Marshaller marshaller = context.createMarshaller();
         //marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(shipment,sw);
+        marshaller.marshal(shipment, sw);
 
         return sw.toString();
     }
@@ -555,12 +512,12 @@ public class CreateBooking {
         ReservationRequestTypeRequest request;
         ReservationResponseTypeResponse response;
         outerloop:
-        for(HotelOfferType hotelOfferType : otaPkgSearchRS.getHotelOffers().getHotelOffer()){
+        for (HotelOfferType hotelOfferType : otaPkgSearchRS.getHotelOffers().getHotelOffer()) {
             request = createNurvisRequest(hotelOfferType);
             response = getNurvisInquiryResponse(request);
             List<ReservationWarningTypeResponse> warnings = response.getFab().getWarning();
-            for(ReservationWarningTypeResponse warning : warnings){
-                if(warning.getText().equals("BOEKEN IS MOGELIJK")){
+            for (ReservationWarningTypeResponse warning : warnings) {
+                if (warning.getText().equals("BOEKEN IS MOGELIJK")) {
                     result.put("request", request);
                     result.put("response", response);
                     break outerloop;
@@ -570,7 +527,7 @@ public class CreateBooking {
         return result;
     }
 
-    public static void putOnTourXmlOnSftp(String onTourXML, String destinationAirport){
+    public static void putOnTourXmlOnSftp(String onTourXML, String destinationAirport) {
         try {
             JSch jsch = new JSch();
 
@@ -629,7 +586,7 @@ public class CreateBooking {
         }
     }
 
-    static void createZipFile(File onTourXML, String fileName) throws IOException {
+    private static void createZipFile(File onTourXML, String fileName) throws IOException {
 
         FileOutputStream fos = new FileOutputStream(fileName + ".zip");
         ZipOutputStream zos = new ZipOutputStream(fos);
@@ -639,7 +596,7 @@ public class CreateBooking {
         fos.close();
     }
 
-    public static void addToZipFile(String fileName, ZipOutputStream zos) throws FileNotFoundException, IOException {
+    private static void addToZipFile(String fileName, ZipOutputStream zos) throws IOException {
 
         System.out.println("Writing '" + fileName + "' to zip file");
 
@@ -659,9 +616,9 @@ public class CreateBooking {
     }
 
     public static boolean checkSFWForCustomer(String bookingId) throws InterruptedException, IOException {
-        LocalTime end = LocalTime.now().plus(Long.parseLong(customerRetrieveTimeout), ChronoUnit.MINUTES);
+        LocalTime end = LocalTime.now().plus(customerRetrieveTimeout, ChronoUnit.MINUTES);
         boolean result = false;
-        while(!result) {
+        while (!result) {
             HttpClient client = HttpClients.createDefault();
             HttpPost post = new HttpPost(sfwUrl);
             post.setEntity(new ByteArrayEntity(sfwRequestBody.replace("SFW_BOOKING_NUMBER", bookingId).getBytes()));
@@ -680,13 +637,64 @@ public class CreateBooking {
                 result = true;
                 break;
             }
-            if(end.isBefore(LocalTime.now())){
+            if (end.isBefore(LocalTime.now())) {
                 result = false;
                 break;
             }
             System.out.println("SFW customer is not present yet!");
-            Thread.sleep(30*1000);
+            Thread.sleep(30 * 1000);
         }
         return result;
+    }
+
+    private void defineFields(String region) {
+        sfwUrl = Config.get().getSfwUrl();
+        customerRetrieveTimeout = Config.get().getCustomerRetrieveTimeout();
+        sfwRequestBody = Config.get().getSfwRequestBody();
+
+        switch (region.toLowerCase()) {
+            case Regions.BE:
+                nurvis = Config.get().getNurvisBe();
+                solr = Config.get().getSolrBe();
+                return;
+            case Regions.NL:
+                nurvis = Config.get().getNurvisNl();
+                solr = Config.get().getSolrNl();
+                return;
+            case Regions.DE:
+                nurvis = Config.get().getNurvisDe();
+                solr = Config.get().getSolrDe();
+                return;
+            case Regions.UK:
+                nurvis = null;
+                solr = Config.get().getSolrUk();
+                return;
+            default:
+                throw new IllegalArgumentException(String.format("Region has invalid value = [%s]", region));
+        }
+    }
+
+    public OTAPkgSearchRS getSOLRPackages(String fromAirport, String destination, int numberOfAdults) throws IOException, JAXBException, DatatypeConfigurationException {
+        System.out.println(solr);
+        System.out.println(nurvis);
+        //assertNotNull(solr);
+        //assertNotNull(nurvis);
+
+        //solr request
+        HttpClient client = HttpClients.createDefault();
+        HttpPost post = new HttpPost(solr);
+        post.setEntity(new ByteArrayEntity(createSolrRequest(fromAirport, destination, numberOfAdults).getBytes("UTF-8")));
+        HttpResponse response = client.execute(post);
+        HttpEntity entity = response.getEntity();
+        OTAPkgSearchRS otaPkgSearchRS = new OTAPkgSearchRS();
+        if (entity != null) {
+            try (InputStream instream = entity.getContent()) {
+                JAXBContext jc = JAXBContext.newInstance(OTAPkgSearchRS.class);
+                Unmarshaller unmarshaller = jc.createUnmarshaller();
+                otaPkgSearchRS = (OTAPkgSearchRS) unmarshaller.unmarshal(instream);
+            }
+        }
+        //createSolrRSXML(otaPkgSearchRS);
+        return otaPkgSearchRS;
     }
 }

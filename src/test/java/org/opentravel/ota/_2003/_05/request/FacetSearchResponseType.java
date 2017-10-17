@@ -8,24 +8,20 @@
 
 package org.opentravel.ota._2003._05.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * The list of calculated
- *                 facet counts.
- *             
- * 
+ * facet counts.
+ * <p>
+ * <p>
  * <p>Java class for FacetSearchResponseType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="FacetSearchResponseType">
  *   &lt;complexContent>
@@ -65,43 +61,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FacetSearchResponseType", propOrder = {
-    "facet"
+        "facet"
 })
 public class FacetSearchResponseType {
 
     @XmlElement(name = "Facet")
-    protected List<Facet> facet;
+    private List<Facet> facet;
 
     /**
      * Gets the value of the facet property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the facet property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFacet().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Facet }
-     * 
-     * 
      */
     public List<Facet> getFacet() {
         if (facet == null) {
-            facet = new ArrayList<Facet>();
+            facet = new ArrayList<>();
         }
         return this.facet;
     }
@@ -109,9 +101,9 @@ public class FacetSearchResponseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -141,58 +133,52 @@ public class FacetSearchResponseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "facetCount"
+            "facetCount"
     })
     public static class Facet {
 
         @XmlElement(name = "FacetCount", required = true)
-        protected List<FacetCount> facetCount;
+        List<FacetCount> facetCount;
         @XmlAttribute(name = "Name", required = true)
-        protected String name;
+        String name;
         @XmlAttribute(name = "Type", required = true)
-        protected String type;
+        String type;
 
         /**
          * Gets the value of the facetCount property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the facetCount property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFacetCount().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FacetCount }
-         * 
-         * 
          */
         public List<FacetCount> getFacetCount() {
             if (facetCount == null) {
-                facetCount = new ArrayList<FacetCount>();
+                facetCount = new ArrayList<>();
             }
             return this.facetCount;
         }
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -200,11 +186,9 @@ public class FacetSearchResponseType {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -212,11 +196,9 @@ public class FacetSearchResponseType {
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -224,11 +206,9 @@ public class FacetSearchResponseType {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -237,9 +217,9 @@ public class FacetSearchResponseType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -250,25 +230,21 @@ public class FacetSearchResponseType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class FacetCount {
 
             @XmlAttribute(name = "Value", required = true)
-            protected String value;
+            String value;
             @XmlAttribute(name = "Count", required = true)
-            protected int count;
+            int count;
 
             /**
              * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getValue() {
                 return value;
@@ -276,11 +252,9 @@ public class FacetSearchResponseType {
 
             /**
              * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setValue(String value) {
                 this.value = value;
@@ -288,7 +262,6 @@ public class FacetSearchResponseType {
 
             /**
              * Gets the value of the count property.
-             * 
              */
             public int getCount() {
                 return count;
@@ -296,7 +269,6 @@ public class FacetSearchResponseType {
 
             /**
              * Sets the value of the count property.
-             * 
              */
             public void setCount(int value) {
                 this.count = value;

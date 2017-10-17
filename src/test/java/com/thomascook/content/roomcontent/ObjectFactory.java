@@ -15,35 +15,32 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.content.roomcontent package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.content.roomcontent package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _Room_QNAME = new QName("http://www.thomascook.com/content/roomContent", "Room");
     private final static QName _Rooms_QNAME = new QName("http://www.thomascook.com/content/roomContent", "Rooms");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.content.roomcontent
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link RoomType }
-     * 
      */
     public RoomType createRoomType() {
         return new RoomType();
@@ -51,7 +48,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RoomsType }
-     * 
      */
     public RoomsType createRoomsType() {
         return new RoomsType();
@@ -59,7 +55,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RoomType.MediaItems }
-     * 
      */
     public RoomType.MediaItems createRoomTypeMediaItems() {
         return new RoomType.MediaItems();
@@ -67,20 +62,18 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RoomType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/roomContent", name = "Room")
     public JAXBElement<RoomType> createRoom(RoomType value) {
-        return new JAXBElement<RoomType>(_Room_QNAME, RoomType.class, null, value);
+        return new JAXBElement<>(_Room_QNAME, RoomType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RoomsType }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.thomascook.com/content/roomContent", name = "Rooms")
     public JAXBElement<RoomsType> createRooms(RoomsType value) {
-        return new JAXBElement<RoomsType>(_Rooms_QNAME, RoomsType.class, null, value);
+        return new JAXBElement<>(_Rooms_QNAME, RoomsType.class, null, value);
     }
 
 }

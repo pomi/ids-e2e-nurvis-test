@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 Customer-data
- *             
- * 
+ * Customer-data
+ * <p>
+ * <p>
  * <p>Java class for Reservation-CustomerType-Request complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-CustomerType-Request">
  *   &lt;complexContent>
@@ -152,73 +151,69 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-CustomerType-Request", propOrder = {
-    "cName",
-    "cFirstName",
-    "cTitle",
-    "cPersonType",
-    "cCountry",
-    "cLanguage",
-    "cStreet",
-    "cHouseNr",
-    "cpoCode",
-    "cCity",
-    "cAdrExtra",
-    "cTelNr",
-    "cMobile",
-    "cHomeContactNr",
-    "cContactChannel",
-    "ceMailUser",
-    "ceMailDomain"
+        "cName",
+        "cFirstName",
+        "cTitle",
+        "cPersonType",
+        "cCountry",
+        "cLanguage",
+        "cStreet",
+        "cHouseNr",
+        "cpoCode",
+        "cCity",
+        "cAdrExtra",
+        "cTelNr",
+        "cMobile",
+        "cHomeContactNr",
+        "cContactChannel",
+        "ceMailUser",
+        "ceMailDomain"
 })
 public class ReservationCustomerTypeRequest {
 
     @XmlElement(name = "C_Name")
-    protected String cName;
+    private String cName;
     @XmlElement(name = "C_FirstName")
-    protected String cFirstName;
+    private String cFirstName;
     @XmlElement(name = "C_Title")
-    protected String cTitle;
+    private String cTitle;
     @XmlElement(name = "C_PersonType")
-    protected String cPersonType;
+    private String cPersonType;
     @XmlElement(name = "C_Country")
-    protected String cCountry;
+    private String cCountry;
     @XmlElement(name = "C_Language")
-    protected String cLanguage;
+    private String cLanguage;
     @XmlElement(name = "C_Street")
-    protected String cStreet;
+    private String cStreet;
     @XmlElement(name = "C_HouseNr")
-    protected String cHouseNr;
+    private String cHouseNr;
     @XmlElement(name = "C_POCode")
-    protected String cpoCode;
+    private String cpoCode;
     @XmlElement(name = "C_City")
-    protected String cCity;
+    private String cCity;
     @XmlElement(name = "C_AdrExtra")
-    protected String cAdrExtra;
+    private String cAdrExtra;
     @XmlElement(name = "C_TelNr")
-    protected String cTelNr;
+    private String cTelNr;
     @XmlElement(name = "C_Mobile")
-    protected String cMobile;
+    private String cMobile;
     @XmlElement(name = "C_HomeContactNr")
-    protected String cHomeContactNr;
+    private String cHomeContactNr;
     @XmlElement(name = "C_ContactChannel")
-    protected String cContactChannel;
+    private String cContactChannel;
     @XmlElement(name = "C_EMailUser")
-    protected String ceMailUser;
+    private String ceMailUser;
     @XmlElement(name = "C_EMailDomain")
-    protected String ceMailDomain;
+    private String ceMailDomain;
 
     /**
      * Gets the value of the cName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCName() {
         return cName;
@@ -226,11 +221,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCName(String value) {
         this.cName = value;
@@ -238,11 +231,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cFirstName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCFirstName() {
         return cFirstName;
@@ -250,11 +241,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cFirstName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCFirstName(String value) {
         this.cFirstName = value;
@@ -262,11 +251,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cTitle property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCTitle() {
         return cTitle;
@@ -274,11 +261,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cTitle property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCTitle(String value) {
         this.cTitle = value;
@@ -286,11 +271,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cPersonType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCPersonType() {
         return cPersonType;
@@ -298,11 +281,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cPersonType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCPersonType(String value) {
         this.cPersonType = value;
@@ -310,11 +291,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cCountry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCCountry() {
         return cCountry;
@@ -322,11 +301,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cCountry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCCountry(String value) {
         this.cCountry = value;
@@ -334,11 +311,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cLanguage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCLanguage() {
         return cLanguage;
@@ -346,11 +321,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cLanguage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCLanguage(String value) {
         this.cLanguage = value;
@@ -358,11 +331,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cStreet property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCStreet() {
         return cStreet;
@@ -370,11 +341,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cStreet property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCStreet(String value) {
         this.cStreet = value;
@@ -382,11 +351,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cHouseNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCHouseNr() {
         return cHouseNr;
@@ -394,11 +361,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cHouseNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCHouseNr(String value) {
         this.cHouseNr = value;
@@ -406,11 +371,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cpoCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCPOCode() {
         return cpoCode;
@@ -418,11 +381,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cpoCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCPOCode(String value) {
         this.cpoCode = value;
@@ -430,11 +391,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cCity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCCity() {
         return cCity;
@@ -442,11 +401,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cCity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCCity(String value) {
         this.cCity = value;
@@ -454,11 +411,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cAdrExtra property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCAdrExtra() {
         return cAdrExtra;
@@ -466,11 +421,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cAdrExtra property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCAdrExtra(String value) {
         this.cAdrExtra = value;
@@ -478,11 +431,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cTelNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCTelNr() {
         return cTelNr;
@@ -490,11 +441,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cTelNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCTelNr(String value) {
         this.cTelNr = value;
@@ -502,11 +451,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cMobile property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCMobile() {
         return cMobile;
@@ -514,11 +461,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cMobile property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCMobile(String value) {
         this.cMobile = value;
@@ -526,11 +471,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cHomeContactNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCHomeContactNr() {
         return cHomeContactNr;
@@ -538,11 +481,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cHomeContactNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCHomeContactNr(String value) {
         this.cHomeContactNr = value;
@@ -550,11 +491,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the cContactChannel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCContactChannel() {
         return cContactChannel;
@@ -562,11 +501,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the cContactChannel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCContactChannel(String value) {
         this.cContactChannel = value;
@@ -574,11 +511,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the ceMailUser property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCEMailUser() {
         return ceMailUser;
@@ -586,11 +521,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the ceMailUser property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCEMailUser(String value) {
         this.ceMailUser = value;
@@ -598,11 +531,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Gets the value of the ceMailDomain property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCEMailDomain() {
         return ceMailDomain;
@@ -610,11 +541,9 @@ public class ReservationCustomerTypeRequest {
 
     /**
      * Sets the value of the ceMailDomain property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCEMailDomain(String value) {
         this.ceMailDomain = value;

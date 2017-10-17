@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * Identification about a specific credit card
- * 
+ * <p>
  * <p>Java class for PaymentCardType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PaymentCardType">
  *   &lt;complexContent>
@@ -54,55 +50,51 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentCardType", propOrder = {
-    "cardHolderName",
-    "cardIssuerName",
-    "address"
+        "cardHolderName",
+        "cardIssuerName",
+        "address"
 })
 public class PaymentCardType {
 
     @XmlElement(name = "CardHolderName")
-    protected String cardHolderName;
+    private String cardHolderName;
     @XmlElement(name = "CardIssuerName")
-    protected CardIssuerName cardIssuerName;
+    private CardIssuerName cardIssuerName;
     @XmlElement(name = "Address")
-    protected AddressType address;
+    private AddressType address;
     @XmlAttribute(name = "CardType")
-    protected String cardType;
+    private String cardType;
     @XmlAttribute(name = "CardCode")
-    protected String cardCode;
+    private String cardCode;
     @XmlAttribute(name = "CardNumber")
-    protected String cardNumber;
+    private String cardNumber;
     @XmlAttribute(name = "SeriesCode")
-    protected String seriesCode;
+    private String seriesCode;
     @XmlAttribute(name = "MaskedCardNumber")
-    protected String maskedCardNumber;
+    private String maskedCardNumber;
     @XmlAttribute(name = "CardHolderRPH")
-    protected String cardHolderRPH;
+    private String cardHolderRPH;
     @XmlAttribute(name = "ExtendPaymentIndicator")
-    protected Boolean extendPaymentIndicator;
+    private Boolean extendPaymentIndicator;
     @XmlAttribute(name = "EffectiveDate")
-    protected String effectiveDate;
+    private String effectiveDate;
     @XmlAttribute(name = "ExpireDate")
-    protected String expireDate;
+    private String expireDate;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the cardHolderName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCardHolderName() {
         return cardHolderName;
@@ -110,11 +102,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardHolderName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCardHolderName(String value) {
         this.cardHolderName = value;
@@ -122,11 +112,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardIssuerName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CardIssuerName }
-     *     
+     *
+     * @return possible object is
+     * {@link CardIssuerName }
      */
     public CardIssuerName getCardIssuerName() {
         return cardIssuerName;
@@ -134,11 +122,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardIssuerName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CardIssuerName }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CardIssuerName }
      */
     public void setCardIssuerName(CardIssuerName value) {
         this.cardIssuerName = value;
@@ -146,11 +132,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the address property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AddressType }
-     *     
+     *
+     * @return possible object is
+     * {@link AddressType }
      */
     public AddressType getAddress() {
         return address;
@@ -158,11 +142,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the address property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AddressType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AddressType }
      */
     public void setAddress(AddressType value) {
         this.address = value;
@@ -170,11 +152,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCardType() {
         return cardType;
@@ -182,11 +162,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCardType(String value) {
         this.cardType = value;
@@ -194,11 +172,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCardCode() {
         return cardCode;
@@ -206,11 +182,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCardCode(String value) {
         this.cardCode = value;
@@ -218,11 +192,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCardNumber() {
         return cardNumber;
@@ -230,11 +202,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCardNumber(String value) {
         this.cardNumber = value;
@@ -242,11 +212,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the seriesCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSeriesCode() {
         return seriesCode;
@@ -254,11 +222,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the seriesCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSeriesCode(String value) {
         this.seriesCode = value;
@@ -266,11 +232,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the maskedCardNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMaskedCardNumber() {
         return maskedCardNumber;
@@ -278,11 +242,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the maskedCardNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMaskedCardNumber(String value) {
         this.maskedCardNumber = value;
@@ -290,11 +252,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardHolderRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCardHolderRPH() {
         return cardHolderRPH;
@@ -302,11 +262,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardHolderRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCardHolderRPH(String value) {
         this.cardHolderRPH = value;
@@ -314,11 +272,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the extendPaymentIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isExtendPaymentIndicator() {
         return extendPaymentIndicator;
@@ -326,11 +282,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the extendPaymentIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setExtendPaymentIndicator(Boolean value) {
         this.extendPaymentIndicator = value;
@@ -338,11 +292,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEffectiveDate() {
         return effectiveDate;
@@ -350,11 +302,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEffectiveDate(String value) {
         this.effectiveDate = value;
@@ -362,11 +312,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExpireDate() {
         return expireDate;
@@ -374,11 +322,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExpireDate(String value) {
         this.expireDate = value;
@@ -386,11 +332,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -398,11 +342,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -410,11 +352,9 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -422,11 +362,9 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -435,9 +373,9 @@ public class PaymentCardType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -447,23 +385,19 @@ public class PaymentCardType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class CardIssuerName {
 
         @XmlAttribute(name = "BankID")
-        protected String bankID;
+        String bankID;
 
         /**
          * Gets the value of the bankID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBankID() {
             return bankID;
@@ -471,11 +405,9 @@ public class PaymentCardType {
 
         /**
          * Sets the value of the bankID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBankID(String value) {
             this.bankID = value;

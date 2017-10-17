@@ -8,20 +8,16 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Details of the customer's own insurance policy.
- * 
+ * <p>
  * <p>Java class for OwnInsuranceChoiceType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="OwnInsuranceChoiceType">
  *   &lt;complexContent>
@@ -36,31 +32,27 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OwnInsuranceChoiceType", propOrder = {
-    "customerCounts"
+        "customerCounts"
 })
 public class OwnInsuranceChoiceType {
 
     @XmlElement(name = "CustomerCounts")
-    protected CustomerCountsType customerCounts;
+    private CustomerCountsType customerCounts;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "InsuranceCompany", required = true)
-    protected String insuranceCompany;
+    private String insuranceCompany;
     @XmlAttribute(name = "PolicyNmbr")
-    protected String policyNmbr;
+    private String policyNmbr;
 
     /**
      * Gets the value of the customerCounts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CustomerCountsType }
-     *     
+     *
+     * @return possible object is
+     * {@link CustomerCountsType }
      */
     public CustomerCountsType getCustomerCounts() {
         return customerCounts;
@@ -68,11 +60,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Sets the value of the customerCounts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CustomerCountsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CustomerCountsType }
      */
     public void setCustomerCounts(CustomerCountsType value) {
         this.customerCounts = value;
@@ -80,11 +70,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -92,11 +80,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -104,11 +90,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Gets the value of the insuranceCompany property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInsuranceCompany() {
         return insuranceCompany;
@@ -116,11 +100,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Sets the value of the insuranceCompany property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInsuranceCompany(String value) {
         this.insuranceCompany = value;
@@ -128,11 +110,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Gets the value of the policyNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPolicyNmbr() {
         return policyNmbr;
@@ -140,11 +120,9 @@ public class OwnInsuranceChoiceType {
 
     /**
      * Sets the value of the policyNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPolicyNmbr(String value) {
         this.policyNmbr = value;

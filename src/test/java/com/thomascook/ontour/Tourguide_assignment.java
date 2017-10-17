@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by omm on 7/26/2017.
  */
-public class Tourguide_assignment{
+class Tourguide_assignment {
     private List<Tourguide> tourguide;
     private List<Brands> brands;
 
@@ -14,7 +14,7 @@ public class Tourguide_assignment{
         return tourguide;
     }
 
-    @XmlElement(name="TOURGUIDE")
+    @XmlElement(name = "TOURGUIDE")
     public void setTourguide(List<Tourguide> tourguide) {
         this.tourguide = tourguide;
     }
@@ -23,7 +23,7 @@ public class Tourguide_assignment{
         return brands;
     }
 
-    @XmlElement(name="BRANDS")
+    @XmlElement(name = "BRANDS")
     public void setBrands(List<Brands> brands) {
         this.brands = brands;
     }

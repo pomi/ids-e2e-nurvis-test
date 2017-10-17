@@ -8,22 +8,17 @@
 
 package com.thomascook.nurvisAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *                 Error from KOMT
- *             
- * 
+ * Error from KOMT
+ * <p>
+ * <p>
  * <p>Java class for Reservation-ErrType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-ErrType-Response">
  *   &lt;complexContent>
@@ -55,30 +50,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-ErrType-Response", propOrder = {
-    "errorNr",
-    "errorText"
+        "errorNr",
+        "errorText"
 })
 public class ReservationErrTypeResponse {
 
     @XmlElement(name = "ErrorNr", required = true)
-    protected String errorNr;
+    private String errorNr;
     @XmlElement(name = "ErrorText", required = true)
-    protected String errorText;
+    private String errorText;
     @XmlAttribute(name = "CommError", required = true)
-    protected String commError;
+    private String commError;
 
     /**
      * Gets the value of the errorNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getErrorNr() {
         return errorNr;
@@ -86,11 +77,9 @@ public class ReservationErrTypeResponse {
 
     /**
      * Sets the value of the errorNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setErrorNr(String value) {
         this.errorNr = value;
@@ -98,11 +87,9 @@ public class ReservationErrTypeResponse {
 
     /**
      * Gets the value of the errorText property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getErrorText() {
         return errorText;
@@ -110,11 +97,9 @@ public class ReservationErrTypeResponse {
 
     /**
      * Sets the value of the errorText property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setErrorText(String value) {
         this.errorText = value;
@@ -122,11 +107,9 @@ public class ReservationErrTypeResponse {
 
     /**
      * Gets the value of the commError property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCommError() {
         return commError;
@@ -134,11 +117,9 @@ public class ReservationErrTypeResponse {
 
     /**
      * Sets the value of the commError property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCommError(String value) {
         this.commError = value;

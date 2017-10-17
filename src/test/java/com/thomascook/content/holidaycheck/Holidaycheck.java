@@ -8,19 +8,14 @@
 
 package com.thomascook.content.holidaycheck;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -33,28 +28,24 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "holidaycheckOverview"
+        "holidaycheckOverview"
 })
 @XmlRootElement(name = "Holidaycheck")
 public class Holidaycheck {
 
     @XmlElement(name = "HolidaycheckOverview")
-    protected HolidaycheckOverviewType holidaycheckOverview;
+    private HolidaycheckOverviewType holidaycheckOverview;
     @XmlAttribute(name = "URI")
-    protected String uri;
+    private String uri;
 
     /**
      * Gets the value of the holidaycheckOverview property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HolidaycheckOverviewType }
-     *     
+     *
+     * @return possible object is
+     * {@link HolidaycheckOverviewType }
      */
     public HolidaycheckOverviewType getHolidaycheckOverview() {
         return holidaycheckOverview;
@@ -62,11 +53,9 @@ public class Holidaycheck {
 
     /**
      * Sets the value of the holidaycheckOverview property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HolidaycheckOverviewType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link HolidaycheckOverviewType }
      */
     public void setHolidaycheckOverview(HolidaycheckOverviewType value) {
         this.holidaycheckOverview = value;
@@ -74,11 +63,9 @@ public class Holidaycheck {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -86,11 +73,9 @@ public class Holidaycheck {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;

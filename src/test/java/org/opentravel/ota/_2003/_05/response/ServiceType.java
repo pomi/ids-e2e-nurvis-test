@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for ServiceType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "ServiceType")
 @XmlEnum
@@ -35,18 +34,14 @@ public enum ServiceType {
 
     /**
      * Search executed against "alternative scoring" rules loaded into Solr to allow experimenting with different
-     *                         scoring parameters and
-     *                         observing their effect on the result list. Sorting on Relevancy is a requirement for these searches.
-     *                     
-     * 
+     * scoring parameters and
+     * observing their effect on the result list. Sorting on Relevancy is a requirement for these searches.
      */
     @XmlEnumValue("AlternativeScore")
     ALTERNATIVE_SCORE("AlternativeScore"),
 
     /**
      * WEB-8257 - Differentiate SEO requests from matrix search with a flag
-     *                     
-     * 
      */
     SEO("SEO");
     private final String value;
@@ -55,17 +50,17 @@ public enum ServiceType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static ServiceType fromValue(String v) {
-        for (ServiceType c: ServiceType.values()) {
+        for (ServiceType c : ServiceType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

@@ -16,12 +16,12 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Holds tracing information about the search system's components.
- *             
- * 
+ * <p>
+ * <p>
  * <p>Java class for TraceDetailType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TraceDetailType">
  *   &lt;complexContent>
@@ -31,23 +31,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TraceDetailType")
 public class TraceDetailType {
 
     @XmlAttribute(name = "Hostname")
-    protected String hostname;
+    private String hostname;
 
     /**
      * Gets the value of the hostname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHostname() {
         return hostname;
@@ -55,11 +51,9 @@ public class TraceDetailType {
 
     /**
      * Sets the value of the hostname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHostname(String value) {
         this.hostname = value;

@@ -8,18 +8,14 @@
 
 package com.thomascook.content.hotellabel;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for HotelLabelType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="HotelLabelType">
  *   &lt;complexContent>
@@ -37,34 +33,30 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HotelLabelType", propOrder = {
-    "description",
-    "lines"
+        "description",
+        "lines"
 })
 public class HotelLabelType {
 
     @XmlElement(name = "Description", required = true)
-    protected String description;
+    private String description;
     @XmlElement(name = "Lines")
-    protected HotelLinesType lines;
+    private HotelLinesType lines;
     @XmlAttribute(name = "Type", required = true)
-    protected String type;
+    private String type;
     @XmlAttribute(name = "Logo", required = true)
-    protected String logo;
+    private String logo;
     @XmlAttribute(name = "URI")
-    protected String uri;
+    private String uri;
 
     /**
      * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -72,11 +64,9 @@ public class HotelLabelType {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -84,11 +74,9 @@ public class HotelLabelType {
 
     /**
      * Gets the value of the lines property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link HotelLinesType }
-     *     
+     *
+     * @return possible object is
+     * {@link HotelLinesType }
      */
     public HotelLinesType getLines() {
         return lines;
@@ -96,11 +84,9 @@ public class HotelLabelType {
 
     /**
      * Sets the value of the lines property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link HotelLinesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link HotelLinesType }
      */
     public void setLines(HotelLinesType value) {
         this.lines = value;
@@ -108,11 +94,9 @@ public class HotelLabelType {
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -120,11 +104,9 @@ public class HotelLabelType {
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -132,11 +114,9 @@ public class HotelLabelType {
 
     /**
      * Gets the value of the logo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLogo() {
         return logo;
@@ -144,11 +124,9 @@ public class HotelLabelType {
 
     /**
      * Sets the value of the logo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLogo(String value) {
         this.logo = value;
@@ -156,11 +134,9 @@ public class HotelLabelType {
 
     /**
      * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -168,11 +144,9 @@ public class HotelLabelType {
 
     /**
      * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;

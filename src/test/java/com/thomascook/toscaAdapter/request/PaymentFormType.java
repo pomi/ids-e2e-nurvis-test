@@ -8,28 +8,22 @@
 
 package com.thomascook.toscaAdapter.request;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Ways of providing funds for travel by the individual.
- * 
+ * <p>
  * <p>Java class for PaymentFormType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PaymentFormType">
  *   &lt;complexContent>
@@ -108,59 +102,55 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentFormType", propOrder = {
-    "paymentCard",
-    "bankAcct",
-    "directBill",
-    "voucher",
-    "loyaltyRedemption",
-    "miscChargeOrder",
-    "cash"
+        "paymentCard",
+        "bankAcct",
+        "directBill",
+        "voucher",
+        "loyaltyRedemption",
+        "miscChargeOrder",
+        "cash"
 })
 @XmlSeeAlso({
-    PaymentDetailType.class
+        PaymentDetailType.class
 })
 public class PaymentFormType {
 
     @XmlElement(name = "PaymentCard")
-    protected PaymentCardType paymentCard;
+    private PaymentCardType paymentCard;
     @XmlElement(name = "BankAcct")
-    protected BankAcctType bankAcct;
+    private BankAcctType bankAcct;
     @XmlElement(name = "DirectBill")
-    protected DirectBillType directBill;
+    private DirectBillType directBill;
     @XmlElement(name = "Voucher")
-    protected Voucher voucher;
+    private Voucher voucher;
     @XmlElement(name = "LoyaltyRedemption")
-    protected LoyaltyRedemption loyaltyRedemption;
+    private LoyaltyRedemption loyaltyRedemption;
     @XmlElement(name = "MiscChargeOrder")
-    protected MiscChargeOrder miscChargeOrder;
+    private MiscChargeOrder miscChargeOrder;
     @XmlElement(name = "Cash")
-    protected Cash cash;
+    private Cash cash;
     @XmlAttribute(name = "CostCenterID")
-    protected String costCenterID;
+    private String costCenterID;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "PaymentTransactionTypeCode")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String paymentTransactionTypeCode;
+    private String paymentTransactionTypeCode;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the paymentCard property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PaymentCardType }
-     *     
+     *
+     * @return possible object is
+     * {@link PaymentCardType }
      */
     public PaymentCardType getPaymentCard() {
         return paymentCard;
@@ -168,11 +158,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the paymentCard property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PaymentCardType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PaymentCardType }
      */
     public void setPaymentCard(PaymentCardType value) {
         this.paymentCard = value;
@@ -180,11 +168,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the bankAcct property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BankAcctType }
-     *     
+     *
+     * @return possible object is
+     * {@link BankAcctType }
      */
     public BankAcctType getBankAcct() {
         return bankAcct;
@@ -192,11 +178,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the bankAcct property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BankAcctType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BankAcctType }
      */
     public void setBankAcct(BankAcctType value) {
         this.bankAcct = value;
@@ -204,11 +188,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the directBill property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DirectBillType }
-     *     
+     *
+     * @return possible object is
+     * {@link DirectBillType }
      */
     public DirectBillType getDirectBill() {
         return directBill;
@@ -216,11 +198,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the directBill property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DirectBillType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DirectBillType }
      */
     public void setDirectBill(DirectBillType value) {
         this.directBill = value;
@@ -228,11 +208,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the voucher property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Voucher }
-     *     
+     *
+     * @return possible object is
+     * {@link Voucher }
      */
     public Voucher getVoucher() {
         return voucher;
@@ -240,11 +218,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the voucher property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Voucher }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Voucher }
      */
     public void setVoucher(Voucher value) {
         this.voucher = value;
@@ -252,11 +228,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the loyaltyRedemption property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link LoyaltyRedemption }
-     *     
+     *
+     * @return possible object is
+     * {@link LoyaltyRedemption }
      */
     public LoyaltyRedemption getLoyaltyRedemption() {
         return loyaltyRedemption;
@@ -264,11 +238,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the loyaltyRedemption property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link LoyaltyRedemption }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link LoyaltyRedemption }
      */
     public void setLoyaltyRedemption(LoyaltyRedemption value) {
         this.loyaltyRedemption = value;
@@ -276,11 +248,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the miscChargeOrder property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MiscChargeOrder }
-     *     
+     *
+     * @return possible object is
+     * {@link MiscChargeOrder }
      */
     public MiscChargeOrder getMiscChargeOrder() {
         return miscChargeOrder;
@@ -288,11 +258,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the miscChargeOrder property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MiscChargeOrder }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MiscChargeOrder }
      */
     public void setMiscChargeOrder(MiscChargeOrder value) {
         this.miscChargeOrder = value;
@@ -300,11 +268,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the cash property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Cash }
-     *     
+     *
+     * @return possible object is
+     * {@link Cash }
      */
     public Cash getCash() {
         return cash;
@@ -312,11 +278,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the cash property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Cash }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Cash }
      */
     public void setCash(Cash value) {
         this.cash = value;
@@ -324,11 +288,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the costCenterID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCostCenterID() {
         return costCenterID;
@@ -336,11 +298,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the costCenterID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCostCenterID(String value) {
         this.costCenterID = value;
@@ -348,11 +308,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -360,11 +318,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -372,11 +328,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the paymentTransactionTypeCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPaymentTransactionTypeCode() {
         return paymentTransactionTypeCode;
@@ -384,11 +338,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the paymentTransactionTypeCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPaymentTransactionTypeCode(String value) {
         this.paymentTransactionTypeCode = value;
@@ -396,11 +348,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -408,11 +358,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -420,11 +368,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -432,11 +378,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -445,9 +389,9 @@ public class PaymentFormType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -457,23 +401,19 @@ public class PaymentFormType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Cash {
 
         @XmlAttribute(name = "CashIndicator")
-        protected Boolean cashIndicator;
+        Boolean cashIndicator;
 
         /**
          * Gets the value of the cashIndicator property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public boolean isCashIndicator() {
             if (cashIndicator == null) {
@@ -485,11 +425,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the cashIndicator property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setCashIndicator(Boolean value) {
             this.cashIndicator = value;
@@ -500,9 +438,9 @@ public class PaymentFormType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -525,67 +463,61 @@ public class PaymentFormType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "loyaltyCertificate"
+            "loyaltyCertificate"
     })
     public static class LoyaltyRedemption {
 
         @XmlElement(name = "LoyaltyCertificate")
-        protected List<LoyaltyCertificate> loyaltyCertificate;
+        List<LoyaltyCertificate> loyaltyCertificate;
         @XmlAttribute(name = "RedemptionQuantity")
         @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger redemptionQuantity;
+        BigInteger redemptionQuantity;
         @XmlAttribute(name = "PromotionCode")
-        protected String promotionCode;
+        String promotionCode;
         @XmlAttribute(name = "PromotionVendorCode")
-        protected List<String> promotionVendorCode;
+        List<String> promotionVendorCode;
         @XmlAttribute(name = "CertificateNumber")
-        protected String certificateNumber;
+        String certificateNumber;
         @XmlAttribute(name = "MemberNumber")
-        protected String memberNumber;
+        String memberNumber;
         @XmlAttribute(name = "ProgramName")
-        protected String programName;
+        String programName;
 
         /**
          * Gets the value of the loyaltyCertificate property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the loyaltyCertificate property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getLoyaltyCertificate().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link LoyaltyCertificate }
-         * 
-         * 
          */
         public List<LoyaltyCertificate> getLoyaltyCertificate() {
             if (loyaltyCertificate == null) {
-                loyaltyCertificate = new ArrayList<LoyaltyCertificate>();
+                loyaltyCertificate = new ArrayList<>();
             }
             return this.loyaltyCertificate;
         }
 
         /**
          * Gets the value of the redemptionQuantity property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getRedemptionQuantity() {
             return redemptionQuantity;
@@ -593,11 +525,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the redemptionQuantity property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setRedemptionQuantity(BigInteger value) {
             this.redemptionQuantity = value;
@@ -605,11 +535,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the promotionCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPromotionCode() {
             return promotionCode;
@@ -617,11 +545,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the promotionCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPromotionCode(String value) {
             this.promotionCode = value;
@@ -629,40 +555,36 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the promotionVendorCode property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPromotionVendorCode().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         * 
-         * 
          */
         public List<String> getPromotionVendorCode() {
             if (promotionVendorCode == null) {
-                promotionVendorCode = new ArrayList<String>();
+                promotionVendorCode = new ArrayList<>();
             }
             return this.promotionVendorCode;
         }
 
         /**
          * Gets the value of the certificateNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCertificateNumber() {
             return certificateNumber;
@@ -670,11 +592,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the certificateNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCertificateNumber(String value) {
             this.certificateNumber = value;
@@ -682,11 +602,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the memberNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getMemberNumber() {
             return memberNumber;
@@ -694,11 +612,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the memberNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setMemberNumber(String value) {
             this.memberNumber = value;
@@ -706,11 +622,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the programName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getProgramName() {
             return programName;
@@ -718,11 +632,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the programName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setProgramName(String value) {
             this.programName = value;
@@ -731,9 +643,9 @@ public class PaymentFormType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -743,45 +655,41 @@ public class PaymentFormType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class LoyaltyCertificate {
 
             @XmlAttribute(name = "ID_Context")
-            protected String idContext;
+            String idContext;
             @XmlAttribute(name = "NmbrOfNights")
             @XmlSchemaType(name = "nonNegativeInteger")
-            protected BigInteger nmbrOfNights;
+            BigInteger nmbrOfNights;
             @XmlAttribute(name = "Format")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String format;
+            String format;
             @XmlAttribute(name = "Status")
-            protected String status;
+            String status;
             @XmlAttribute(name = "ID")
-            protected String id;
+            String id;
             @XmlAttribute(name = "EffectiveDate")
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar effectiveDate;
+            XMLGregorianCalendar effectiveDate;
             @XmlAttribute(name = "ExpireDate")
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar expireDate;
+            XMLGregorianCalendar expireDate;
             @XmlAttribute(name = "CertificateNumber")
-            protected String certificateNumber;
+            String certificateNumber;
             @XmlAttribute(name = "MemberNumber")
-            protected String memberNumber;
+            String memberNumber;
             @XmlAttribute(name = "ProgramName")
-            protected String programName;
+            String programName;
 
             /**
              * Gets the value of the idContext property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getIDContext() {
                 return idContext;
@@ -789,11 +697,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the idContext property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setIDContext(String value) {
                 this.idContext = value;
@@ -801,11 +707,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the nmbrOfNights property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @return possible object is
+             * {@link BigInteger }
              */
             public BigInteger getNmbrOfNights() {
                 return nmbrOfNights;
@@ -813,11 +717,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the nmbrOfNights property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigInteger }
              */
             public void setNmbrOfNights(BigInteger value) {
                 this.nmbrOfNights = value;
@@ -825,11 +727,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the format property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getFormat() {
                 return format;
@@ -837,11 +737,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the format property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setFormat(String value) {
                 this.format = value;
@@ -849,11 +747,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the status property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getStatus() {
                 return status;
@@ -861,11 +757,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the status property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setStatus(String value) {
                 this.status = value;
@@ -873,11 +767,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the id property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getID() {
                 return id;
@@ -885,11 +777,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the id property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setID(String value) {
                 this.id = value;
@@ -897,11 +787,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the effectiveDate property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getEffectiveDate() {
                 return effectiveDate;
@@ -909,11 +797,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the effectiveDate property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setEffectiveDate(XMLGregorianCalendar value) {
                 this.effectiveDate = value;
@@ -921,11 +807,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the expireDate property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getExpireDate() {
                 return expireDate;
@@ -933,11 +817,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the expireDate property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setExpireDate(XMLGregorianCalendar value) {
                 this.expireDate = value;
@@ -945,11 +827,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the certificateNumber property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCertificateNumber() {
                 return certificateNumber;
@@ -957,11 +837,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the certificateNumber property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCertificateNumber(String value) {
                 this.certificateNumber = value;
@@ -969,11 +847,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the memberNumber property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getMemberNumber() {
                 return memberNumber;
@@ -981,11 +857,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the memberNumber property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setMemberNumber(String value) {
                 this.memberNumber = value;
@@ -993,11 +867,9 @@ public class PaymentFormType {
 
             /**
              * Gets the value of the programName property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getProgramName() {
                 return programName;
@@ -1005,11 +877,9 @@ public class PaymentFormType {
 
             /**
              * Sets the value of the programName property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setProgramName(String value) {
                 this.programName = value;
@@ -1022,9 +892,9 @@ public class PaymentFormType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1034,23 +904,19 @@ public class PaymentFormType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class MiscChargeOrder {
 
         @XmlAttribute(name = "TicketNumber")
-        protected String ticketNumber;
+        String ticketNumber;
 
         /**
          * Gets the value of the ticketNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTicketNumber() {
             return ticketNumber;
@@ -1058,11 +924,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the ticketNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTicketNumber(String value) {
             this.ticketNumber = value;
@@ -1073,9 +937,9 @@ public class PaymentFormType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1090,39 +954,35 @@ public class PaymentFormType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Voucher {
 
         @XmlAttribute(name = "BillingNumber")
-        protected String billingNumber;
+        String billingNumber;
         @XmlAttribute(name = "SupplierIdentifier")
-        protected String supplierIdentifier;
+        String supplierIdentifier;
         @XmlAttribute(name = "Identifier")
-        protected String identifier;
+        String identifier;
         @XmlAttribute(name = "ValueType")
-        protected String valueType;
+        String valueType;
         @XmlAttribute(name = "ElectronicIndicator")
-        protected Boolean electronicIndicator;
+        Boolean electronicIndicator;
         @XmlAttribute(name = "SeriesCode")
-        protected String seriesCode;
+        String seriesCode;
         @XmlAttribute(name = "EffectiveDate")
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar effectiveDate;
+        XMLGregorianCalendar effectiveDate;
         @XmlAttribute(name = "ExpireDate")
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar expireDate;
+        XMLGregorianCalendar expireDate;
 
         /**
          * Gets the value of the billingNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBillingNumber() {
             return billingNumber;
@@ -1130,11 +990,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the billingNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBillingNumber(String value) {
             this.billingNumber = value;
@@ -1142,11 +1000,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the supplierIdentifier property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSupplierIdentifier() {
             return supplierIdentifier;
@@ -1154,11 +1010,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the supplierIdentifier property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSupplierIdentifier(String value) {
             this.supplierIdentifier = value;
@@ -1166,11 +1020,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the identifier property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getIdentifier() {
             return identifier;
@@ -1178,11 +1030,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the identifier property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setIdentifier(String value) {
             this.identifier = value;
@@ -1190,11 +1040,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the valueType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValueType() {
             return valueType;
@@ -1202,11 +1050,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the valueType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValueType(String value) {
             this.valueType = value;
@@ -1214,11 +1060,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the electronicIndicator property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isElectronicIndicator() {
             return electronicIndicator;
@@ -1226,11 +1070,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the electronicIndicator property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setElectronicIndicator(Boolean value) {
             this.electronicIndicator = value;
@@ -1238,11 +1080,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the seriesCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getSeriesCode() {
             return seriesCode;
@@ -1250,11 +1090,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the seriesCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setSeriesCode(String value) {
             this.seriesCode = value;
@@ -1262,11 +1100,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the effectiveDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getEffectiveDate() {
             return effectiveDate;
@@ -1274,11 +1110,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the effectiveDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setEffectiveDate(XMLGregorianCalendar value) {
             this.effectiveDate = value;
@@ -1286,11 +1120,9 @@ public class PaymentFormType {
 
         /**
          * Gets the value of the expireDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getExpireDate() {
             return expireDate;
@@ -1298,11 +1130,9 @@ public class PaymentFormType {
 
         /**
          * Sets the value of the expireDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setExpireDate(XMLGregorianCalendar value) {
             this.expireDate = value;

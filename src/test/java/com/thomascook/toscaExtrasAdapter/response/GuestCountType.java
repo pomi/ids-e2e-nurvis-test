@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaExtrasAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * A collection of GuestCount by age group.
- * 
+ * <p>
  * <p>Java class for GuestCountType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="GuestCountType">
  *   &lt;complexContent>
@@ -44,56 +40,50 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GuestCountType", propOrder = {
-    "guestCount"
+        "guestCount"
 })
 public class GuestCountType {
 
     @XmlElement(name = "GuestCount", required = true)
-    protected List<GuestCount> guestCount;
+    private List<GuestCount> guestCount;
     @XmlAttribute(name = "IsPerRoom")
-    protected Boolean isPerRoom;
+    private Boolean isPerRoom;
 
     /**
      * Gets the value of the guestCount property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the guestCount property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGuestCount().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GuestCount }
-     * 
-     * 
      */
     public List<GuestCount> getGuestCount() {
         if (guestCount == null) {
-            guestCount = new ArrayList<GuestCount>();
+            guestCount = new ArrayList<>();
         }
         return this.guestCount;
     }
 
     /**
      * Gets the value of the isPerRoom property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isIsPerRoom() {
         return isPerRoom;
@@ -101,11 +91,9 @@ public class GuestCountType {
 
     /**
      * Sets the value of the isPerRoom property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setIsPerRoom(Boolean value) {
         this.isPerRoom = value;
@@ -114,9 +102,9 @@ public class GuestCountType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -126,27 +114,23 @@ public class GuestCountType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class GuestCount {
 
         @XmlAttribute(name = "AgeQualifyingCode")
-        protected String ageQualifyingCode;
+        String ageQualifyingCode;
         @XmlAttribute(name = "Age")
-        protected Integer age;
+        Integer age;
         @XmlAttribute(name = "Count")
-        protected Integer count;
+        Integer count;
 
         /**
          * Gets the value of the ageQualifyingCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAgeQualifyingCode() {
             return ageQualifyingCode;
@@ -154,11 +138,9 @@ public class GuestCountType {
 
         /**
          * Sets the value of the ageQualifyingCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAgeQualifyingCode(String value) {
             this.ageQualifyingCode = value;
@@ -166,11 +148,9 @@ public class GuestCountType {
 
         /**
          * Gets the value of the age property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getAge() {
             return age;
@@ -178,11 +158,9 @@ public class GuestCountType {
 
         /**
          * Sets the value of the age property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setAge(Integer value) {
             this.age = value;
@@ -190,11 +168,9 @@ public class GuestCountType {
 
         /**
          * Gets the value of the count property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Integer }
-         *     
+         *
+         * @return possible object is
+         * {@link Integer }
          */
         public Integer getCount() {
             return count;
@@ -202,11 +178,9 @@ public class GuestCountType {
 
         /**
          * Sets the value of the count property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Integer }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Integer }
          */
         public void setCount(Integer value) {
             this.count = value;

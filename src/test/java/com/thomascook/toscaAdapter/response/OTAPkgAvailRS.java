@@ -8,27 +8,21 @@
 
 package com.thomascook.toscaAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -190,85 +184,81 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "success",
-    "warnings",
-    "_package",
-    "travelChoices",
-    "accommodationChoices",
-    "tpaExtensions",
-    "errors"
+        "success",
+        "warnings",
+        "_package",
+        "travelChoices",
+        "accommodationChoices",
+        "tpaExtensions",
+        "errors"
 })
 @XmlRootElement(name = "OTA_PkgAvailRS")
 public class OTAPkgAvailRS {
 
     @XmlElement(name = "Success")
-    protected SuccessType success;
+    private SuccessType success;
     @XmlElement(name = "Warnings")
-    protected WarningsType warnings;
+    private WarningsType warnings;
     @XmlElement(name = "Package")
-    protected Package _package;
+    private Package _package;
     @XmlElement(name = "TravelChoices")
-    protected TravelChoices travelChoices;
+    private TravelChoices travelChoices;
     @XmlElement(name = "AccommodationChoices")
-    protected AccommodationChoices accommodationChoices;
+    private AccommodationChoices accommodationChoices;
     @XmlElement(name = "TPA_Extensions")
-    protected TPAExtensionsType tpaExtensions;
+    private TPAExtensionsType tpaExtensions;
     @XmlElement(name = "Errors")
-    protected ErrorsType errors;
+    private ErrorsType errors;
     @XmlAttribute(name = "CompanyShortName")
-    protected String companyShortName;
+    private String companyShortName;
     @XmlAttribute(name = "TravelSector")
-    protected String travelSector;
+    private String travelSector;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
+    private String codeContext;
     @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
+    private String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    private BigInteger decimalPlaces;
     @XmlAttribute(name = "EchoToken")
-    protected String echoToken;
+    private String echoToken;
     @XmlAttribute(name = "TimeStamp")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar timeStamp;
+    private XMLGregorianCalendar timeStamp;
     @XmlAttribute(name = "Target")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String target;
+    private String target;
     @XmlAttribute(name = "Version")
-    protected BigDecimal version;
+    private BigDecimal version;
     @XmlAttribute(name = "TransactionIdentifier")
-    protected String transactionIdentifier;
+    private String transactionIdentifier;
     @XmlAttribute(name = "SequenceNmbr")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger sequenceNmbr;
+    private BigInteger sequenceNmbr;
     @XmlAttribute(name = "TransactionStatusCode")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String transactionStatusCode;
+    private String transactionStatusCode;
     @XmlAttribute(name = "RetransmissionIndicator")
-    protected Boolean retransmissionIndicator;
+    private Boolean retransmissionIndicator;
     @XmlAttribute(name = "AltLangID")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
-    protected String altLangID;
+    private String altLangID;
     @XmlAttribute(name = "PrimaryLangID")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
-    protected String primaryLangID;
+    private String primaryLangID;
 
     /**
      * Gets the value of the success property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SuccessType }
-     *     
+     *
+     * @return possible object is
+     * {@link SuccessType }
      */
     public SuccessType getSuccess() {
         return success;
@@ -276,11 +266,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the success property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SuccessType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SuccessType }
      */
     public void setSuccess(SuccessType value) {
         this.success = value;
@@ -288,11 +276,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the warnings property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link WarningsType }
-     *     
+     *
+     * @return possible object is
+     * {@link WarningsType }
      */
     public WarningsType getWarnings() {
         return warnings;
@@ -300,11 +286,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the warnings property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link WarningsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link WarningsType }
      */
     public void setWarnings(WarningsType value) {
         this.warnings = value;
@@ -312,11 +296,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the package property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Package }
-     *     
+     *
+     * @return possible object is
+     * {@link Package }
      */
     public Package getPackage() {
         return _package;
@@ -324,11 +306,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the package property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Package }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Package }
      */
     public void setPackage(Package value) {
         this._package = value;
@@ -336,11 +316,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the travelChoices property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TravelChoices }
-     *     
+     *
+     * @return possible object is
+     * {@link TravelChoices }
      */
     public TravelChoices getTravelChoices() {
         return travelChoices;
@@ -348,11 +326,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the travelChoices property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TravelChoices }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TravelChoices }
      */
     public void setTravelChoices(TravelChoices value) {
         this.travelChoices = value;
@@ -360,11 +336,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the accommodationChoices property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AccommodationChoices }
-     *     
+     *
+     * @return possible object is
+     * {@link AccommodationChoices }
      */
     public AccommodationChoices getAccommodationChoices() {
         return accommodationChoices;
@@ -372,11 +346,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the accommodationChoices property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AccommodationChoices }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AccommodationChoices }
      */
     public void setAccommodationChoices(AccommodationChoices value) {
         this.accommodationChoices = value;
@@ -384,11 +356,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the tpaExtensions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TPAExtensionsType }
-     *     
+     *
+     * @return possible object is
+     * {@link TPAExtensionsType }
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -396,11 +366,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the tpaExtensions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TPAExtensionsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TPAExtensionsType }
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -408,11 +376,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the errors property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ErrorsType }
      */
     public ErrorsType getErrors() {
         return errors;
@@ -420,11 +386,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the errors property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ErrorsType }
      */
     public void setErrors(ErrorsType value) {
         this.errors = value;
@@ -432,11 +396,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the companyShortName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCompanyShortName() {
         return companyShortName;
@@ -444,11 +406,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the companyShortName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCompanyShortName(String value) {
         this.companyShortName = value;
@@ -456,11 +416,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the travelSector property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelSector() {
         return travelSector;
@@ -468,11 +426,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the travelSector property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelSector(String value) {
         this.travelSector = value;
@@ -480,11 +436,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -492,11 +446,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -504,11 +456,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodeContext() {
         return codeContext;
@@ -516,11 +466,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodeContext(String value) {
         this.codeContext = value;
@@ -528,11 +476,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -540,11 +486,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -552,11 +496,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -564,11 +506,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
@@ -576,11 +516,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the echoToken property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEchoToken() {
         return echoToken;
@@ -588,11 +526,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the echoToken property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -600,11 +536,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the timeStamp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -612,11 +546,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the timeStamp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -624,11 +556,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the target property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTarget() {
         if (target == null) {
@@ -640,11 +570,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the target property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTarget(String value) {
         this.target = value;
@@ -652,11 +580,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getVersion() {
         return version;
@@ -664,11 +590,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -676,11 +600,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -688,11 +610,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -700,11 +620,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -712,11 +630,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -724,11 +640,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -736,11 +650,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -748,11 +660,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -760,11 +670,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -772,11 +680,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the altLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltLangID() {
         return altLangID;
@@ -784,11 +690,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the altLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -796,11 +700,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Gets the value of the primaryLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -808,11 +710,9 @@ public class OTAPkgAvailRS {
 
     /**
      * Sets the value of the primaryLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -821,9 +721,9 @@ public class OTAPkgAvailRS {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -835,43 +735,39 @@ public class OTAPkgAvailRS {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "availableProperty"
+            "availableProperty"
     })
     public static class AccommodationChoices {
 
         @XmlElement(name = "AvailableProperty", required = true)
-        protected List<AccommodationDetailType> availableProperty;
+        List<AccommodationDetailType> availableProperty;
 
         /**
          * Gets the value of the availableProperty property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the availableProperty property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAvailableProperty().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AccommodationDetailType }
-         * 
-         * 
          */
         public List<AccommodationDetailType> getAvailableProperty() {
             if (availableProperty == null) {
-                availableProperty = new ArrayList<AccommodationDetailType>();
+                availableProperty = new ArrayList<>();
             }
             return this.availableProperty;
         }
@@ -881,9 +777,9 @@ public class OTAPkgAvailRS {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -947,60 +843,56 @@ public class OTAPkgAvailRS {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "url",
-        "companyName",
-        "dateRange",
-        "priceInfo",
-        "itineraryItems",
-        "cautions"
+            "url",
+            "companyName",
+            "dateRange",
+            "priceInfo",
+            "itineraryItems",
+            "cautions"
     })
     public static class Package {
 
         @XmlElement(name = "URL")
-        protected URLType url;
+        URLType url;
         @XmlElement(name = "CompanyName")
-        protected CompanyNameType companyName;
+        CompanyNameType companyName;
         @XmlElement(name = "DateRange")
-        protected DateRange dateRange;
+        DateRange dateRange;
         @XmlElement(name = "PriceInfo")
-        protected List<PriceInfo> priceInfo;
+        List<PriceInfo> priceInfo;
         @XmlElement(name = "ItineraryItems")
-        protected ItineraryItems itineraryItems;
+        ItineraryItems itineraryItems;
         @XmlElement(name = "Cautions")
-        protected Cautions cautions;
+        Cautions cautions;
         @XmlAttribute(name = "Type")
-        protected String type;
+        String type;
         @XmlAttribute(name = "TravelCode")
-        protected String travelCode;
+        String travelCode;
         @XmlAttribute(name = "TourCode")
-        protected String tourCode;
+        String tourCode;
         @XmlAttribute(name = "ShortDescription")
-        protected String shortDescription;
+        String shortDescription;
         @XmlAttribute(name = "BoardCode")
-        protected String boardCode;
+        String boardCode;
         @XmlAttribute(name = "PromotionCode")
-        protected String promotionCode;
+        String promotionCode;
         @XmlAttribute(name = "BrandCode")
-        protected String brandCode;
+        String brandCode;
         @XmlAttribute(name = "ProductCode")
-        protected String productCode;
+        String productCode;
         @XmlAttribute(name = "ExtrasInd")
-        protected Boolean extrasInd;
+        Boolean extrasInd;
         @XmlAttribute(name = "ID")
-        protected String id;
+        String id;
 
         /**
          * Gets the value of the url property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link URLType }
-         *     
+         *
+         * @return possible object is
+         * {@link URLType }
          */
         public URLType getURL() {
             return url;
@@ -1008,11 +900,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the url property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link URLType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link URLType }
          */
         public void setURL(URLType value) {
             this.url = value;
@@ -1020,11 +910,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the companyName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CompanyNameType }
-         *     
+         *
+         * @return possible object is
+         * {@link CompanyNameType }
          */
         public CompanyNameType getCompanyName() {
             return companyName;
@@ -1032,11 +920,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the companyName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CompanyNameType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link CompanyNameType }
          */
         public void setCompanyName(CompanyNameType value) {
             this.companyName = value;
@@ -1044,11 +930,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the dateRange property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DateRange }
-         *     
+         *
+         * @return possible object is
+         * {@link DateRange }
          */
         public DateRange getDateRange() {
             return dateRange;
@@ -1056,11 +940,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the dateRange property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DateRange }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DateRange }
          */
         public void setDateRange(DateRange value) {
             this.dateRange = value;
@@ -1068,40 +950,36 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the priceInfo property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the priceInfo property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPriceInfo().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PriceInfo }
-         * 
-         * 
          */
         public List<PriceInfo> getPriceInfo() {
             if (priceInfo == null) {
-                priceInfo = new ArrayList<PriceInfo>();
+                priceInfo = new ArrayList<>();
             }
             return this.priceInfo;
         }
 
         /**
          * Gets the value of the itineraryItems property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link ItineraryItems }
-         *     
+         *
+         * @return possible object is
+         * {@link ItineraryItems }
          */
         public ItineraryItems getItineraryItems() {
             return itineraryItems;
@@ -1109,11 +987,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the itineraryItems property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link ItineraryItems }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link ItineraryItems }
          */
         public void setItineraryItems(ItineraryItems value) {
             this.itineraryItems = value;
@@ -1121,11 +997,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the cautions property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Cautions }
-         *     
+         *
+         * @return possible object is
+         * {@link Cautions }
          */
         public Cautions getCautions() {
             return cautions;
@@ -1133,11 +1007,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the cautions property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Cautions }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Cautions }
          */
         public void setCautions(Cautions value) {
             this.cautions = value;
@@ -1145,11 +1017,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -1157,11 +1027,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -1169,11 +1037,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the travelCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTravelCode() {
             return travelCode;
@@ -1181,11 +1047,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the travelCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTravelCode(String value) {
             this.travelCode = value;
@@ -1193,11 +1057,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the tourCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTourCode() {
             return tourCode;
@@ -1205,11 +1067,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the tourCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTourCode(String value) {
             this.tourCode = value;
@@ -1217,11 +1077,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the shortDescription property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getShortDescription() {
             return shortDescription;
@@ -1229,11 +1087,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the shortDescription property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setShortDescription(String value) {
             this.shortDescription = value;
@@ -1241,11 +1097,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the boardCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBoardCode() {
             return boardCode;
@@ -1253,11 +1107,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the boardCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBoardCode(String value) {
             this.boardCode = value;
@@ -1265,11 +1117,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the promotionCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPromotionCode() {
             return promotionCode;
@@ -1277,11 +1127,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the promotionCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPromotionCode(String value) {
             this.promotionCode = value;
@@ -1289,11 +1137,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the brandCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBrandCode() {
             return brandCode;
@@ -1301,11 +1147,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the brandCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBrandCode(String value) {
             this.brandCode = value;
@@ -1313,11 +1157,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the productCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getProductCode() {
             return productCode;
@@ -1325,11 +1167,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the productCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setProductCode(String value) {
             this.productCode = value;
@@ -1337,11 +1177,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the extrasInd property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isExtrasInd() {
             return extrasInd;
@@ -1349,11 +1187,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the extrasInd property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setExtrasInd(Boolean value) {
             this.extrasInd = value;
@@ -1361,11 +1197,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getID() {
             return id;
@@ -1373,11 +1207,9 @@ public class OTAPkgAvailRS {
 
         /**
          * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setID(String value) {
             this.id = value;
@@ -1386,9 +1218,9 @@ public class OTAPkgAvailRS {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1400,43 +1232,39 @@ public class OTAPkgAvailRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "caution"
+                "caution"
         })
         public static class Cautions {
 
             @XmlElement(name = "Caution", required = true)
-            protected List<PkgCautionType> caution;
+            List<PkgCautionType> caution;
 
             /**
              * Gets the value of the caution property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the caution property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCaution().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PkgCautionType }
-             * 
-             * 
              */
             public List<PkgCautionType> getCaution() {
                 if (caution == null) {
-                    caution = new ArrayList<PkgCautionType>();
+                    caution = new ArrayList<>();
                 }
                 return this.caution;
             }
@@ -1446,9 +1274,9 @@ public class OTAPkgAvailRS {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1458,27 +1286,23 @@ public class OTAPkgAvailRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class DateRange {
 
             @XmlAttribute(name = "Start")
-            protected String start;
+            String start;
             @XmlAttribute(name = "Duration")
-            protected String duration;
+            String duration;
             @XmlAttribute(name = "End")
-            protected String end;
+            String end;
 
             /**
              * Gets the value of the start property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getStart() {
                 return start;
@@ -1486,11 +1310,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the start property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setStart(String value) {
                 this.start = value;
@@ -1498,11 +1320,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the duration property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getDuration() {
                 return duration;
@@ -1510,11 +1330,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the duration property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setDuration(String value) {
                 this.duration = value;
@@ -1522,11 +1340,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the end property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getEnd() {
                 return end;
@@ -1534,11 +1350,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the end property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setEnd(String value) {
                 this.end = value;
@@ -1549,9 +1363,9 @@ public class OTAPkgAvailRS {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1563,43 +1377,39 @@ public class OTAPkgAvailRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "itineraryItem"
+                "itineraryItem"
         })
         public static class ItineraryItems {
 
             @XmlElement(name = "ItineraryItem", required = true)
-            protected List<ItineraryItemResponseType> itineraryItem;
+            List<ItineraryItemResponseType> itineraryItem;
 
             /**
              * Gets the value of the itineraryItem property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the itineraryItem property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getItineraryItem().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ItineraryItemResponseType }
-             * 
-             * 
              */
             public List<ItineraryItemResponseType> getItineraryItem() {
                 if (itineraryItem == null) {
-                    itineraryItem = new ArrayList<ItineraryItemResponseType>();
+                    itineraryItem = new ArrayList<>();
                 }
                 return this.itineraryItem;
             }
@@ -1609,9 +1419,9 @@ public class OTAPkgAvailRS {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1622,27 +1432,22 @@ public class OTAPkgAvailRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class PriceInfo
-            extends PkgPriceType
-        {
+                extends PkgPriceType {
 
             @XmlAttribute(name = "OtherPrice")
-            protected BigDecimal otherPrice;
+            BigDecimal otherPrice;
             @XmlAttribute(name = "OtherPriceDescription")
-            protected String otherPriceDescription;
+            String otherPriceDescription;
 
             /**
              * Gets the value of the otherPrice property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getOtherPrice() {
                 return otherPrice;
@@ -1650,11 +1455,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the otherPrice property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setOtherPrice(BigDecimal value) {
                 this.otherPrice = value;
@@ -1662,11 +1465,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the otherPriceDescription property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getOtherPriceDescription() {
                 return otherPriceDescription;
@@ -1674,11 +1475,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the otherPriceDescription property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setOtherPriceDescription(String value) {
                 this.otherPriceDescription = value;
@@ -1691,9 +1490,9 @@ public class OTAPkgAvailRS {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1762,43 +1561,39 @@ public class OTAPkgAvailRS {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "travelItem"
+            "travelItem"
     })
     public static class TravelChoices {
 
         @XmlElement(name = "TravelItem", required = true)
-        protected List<TravelItem> travelItem;
+        List<TravelItem> travelItem;
 
         /**
          * Gets the value of the travelItem property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the travelItem property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTravelItem().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TravelItem }
-         * 
-         * 
          */
         public List<TravelItem> getTravelItem() {
             if (travelItem == null) {
-                travelItem = new ArrayList<TravelItem>();
+                travelItem = new ArrayList<>();
             }
             return this.travelItem;
         }
@@ -1806,11 +1601,11 @@ public class OTAPkgAvailRS {
 
         /**
          * Details of a travel component e.g. a set of travel legs making up a travel component or a single item defining a round-trip journey.
-         * 
+         * <p>
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1869,65 +1664,59 @@ public class OTAPkgAvailRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "travelDetail",
-            "travelJourney",
-            "supplementCharges",
-            "cautions"
+                "travelDetail",
+                "travelJourney",
+                "supplementCharges",
+                "cautions"
         })
         public static class TravelItem {
 
             @XmlElement(name = "TravelDetail")
-            protected List<TravelDetail> travelDetail;
+            List<TravelDetail> travelDetail;
             @XmlElement(name = "TravelJourney")
-            protected TravelJourney travelJourney;
+            TravelJourney travelJourney;
             @XmlElement(name = "SupplementCharges")
-            protected SupplementCharges supplementCharges;
+            SupplementCharges supplementCharges;
             @XmlElement(name = "Cautions")
-            protected Cautions cautions;
+            Cautions cautions;
             @XmlAttribute(name = "AccomOKFlag")
-            protected Boolean accomOKFlag;
+            Boolean accomOKFlag;
 
             /**
              * Gets the value of the travelDetail property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the travelDetail property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTravelDetail().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link TravelDetail }
-             * 
-             * 
              */
             public List<TravelDetail> getTravelDetail() {
                 if (travelDetail == null) {
-                    travelDetail = new ArrayList<TravelDetail>();
+                    travelDetail = new ArrayList<>();
                 }
                 return this.travelDetail;
             }
 
             /**
              * Gets the value of the travelJourney property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link TravelJourney }
-             *     
+             *
+             * @return possible object is
+             * {@link TravelJourney }
              */
             public TravelJourney getTravelJourney() {
                 return travelJourney;
@@ -1935,11 +1724,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the travelJourney property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link TravelJourney }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link TravelJourney }
              */
             public void setTravelJourney(TravelJourney value) {
                 this.travelJourney = value;
@@ -1947,11 +1734,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the supplementCharges property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link SupplementCharges }
-             *     
+             *
+             * @return possible object is
+             * {@link SupplementCharges }
              */
             public SupplementCharges getSupplementCharges() {
                 return supplementCharges;
@@ -1959,11 +1744,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the supplementCharges property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link SupplementCharges }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link SupplementCharges }
              */
             public void setSupplementCharges(SupplementCharges value) {
                 this.supplementCharges = value;
@@ -1971,11 +1754,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the cautions property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Cautions }
-             *     
+             *
+             * @return possible object is
+             * {@link Cautions }
              */
             public Cautions getCautions() {
                 return cautions;
@@ -1983,11 +1764,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the cautions property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Cautions }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Cautions }
              */
             public void setCautions(Cautions value) {
                 this.cautions = value;
@@ -1995,11 +1774,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Gets the value of the accomOKFlag property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Boolean }
-             *     
+             *
+             * @return possible object is
+             * {@link Boolean }
              */
             public Boolean isAccomOKFlag() {
                 return accomOKFlag;
@@ -2007,11 +1784,9 @@ public class OTAPkgAvailRS {
 
             /**
              * Sets the value of the accomOKFlag property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Boolean }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Boolean }
              */
             public void setAccomOKFlag(Boolean value) {
                 this.accomOKFlag = value;
@@ -2020,9 +1795,9 @@ public class OTAPkgAvailRS {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2034,43 +1809,39 @@ public class OTAPkgAvailRS {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "caution"
+                    "caution"
             })
             public static class Cautions {
 
                 @XmlElement(name = "Caution", required = true)
-                protected List<PkgCautionType> caution;
+                List<PkgCautionType> caution;
 
                 /**
                  * Gets the value of the caution property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the caution property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getCaution().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link PkgCautionType }
-                 * 
-                 * 
                  */
                 public List<PkgCautionType> getCaution() {
                     if (caution == null) {
-                        caution = new ArrayList<PkgCautionType>();
+                        caution = new ArrayList<>();
                     }
                     return this.caution;
                 }
@@ -2080,9 +1851,9 @@ public class OTAPkgAvailRS {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2094,43 +1865,39 @@ public class OTAPkgAvailRS {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "supplementCharge"
+                    "supplementCharge"
             })
             public static class SupplementCharges {
 
                 @XmlElement(name = "SupplementCharge", required = true)
-                protected List<FeeType> supplementCharge;
+                List<FeeType> supplementCharge;
 
                 /**
                  * Gets the value of the supplementCharge property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the supplementCharge property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getSupplementCharge().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link FeeType }
-                 * 
-                 * 
                  */
                 public List<FeeType> getSupplementCharge() {
                     if (supplementCharge == null) {
-                        supplementCharge = new ArrayList<FeeType>();
+                        supplementCharge = new ArrayList<>();
                     }
                     return this.supplementCharge;
                 }
@@ -2140,9 +1907,9 @@ public class OTAPkgAvailRS {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2155,75 +1922,69 @@ public class OTAPkgAvailRS {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "outwardTravel",
-                "returnTravel"
+                    "outwardTravel",
+                    "returnTravel"
             })
             public static class TravelDetail {
 
                 @XmlElement(name = "OutwardTravel", required = true)
-                protected List<PkgTravelSegment> outwardTravel;
+                List<PkgTravelSegment> outwardTravel;
                 @XmlElement(name = "ReturnTravel")
-                protected List<PkgTravelSegment> returnTravel;
+                List<PkgTravelSegment> returnTravel;
 
                 /**
                  * Gets the value of the outwardTravel property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the outwardTravel property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getOutwardTravel().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link PkgTravelSegment }
-                 * 
-                 * 
                  */
                 public List<PkgTravelSegment> getOutwardTravel() {
                     if (outwardTravel == null) {
-                        outwardTravel = new ArrayList<PkgTravelSegment>();
+                        outwardTravel = new ArrayList<>();
                     }
                     return this.outwardTravel;
                 }
 
                 /**
                  * Gets the value of the returnTravel property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the returnTravel property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getReturnTravel().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link PkgTravelSegment }
-                 * 
-                 * 
                  */
                 public List<PkgTravelSegment> getReturnTravel() {
                     if (returnTravel == null) {
-                        returnTravel = new ArrayList<PkgTravelSegment>();
+                        returnTravel = new ArrayList<>();
                     }
                     return this.returnTravel;
                 }
@@ -2233,9 +1994,9 @@ public class OTAPkgAvailRS {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2245,43 +2006,39 @@ public class OTAPkgAvailRS {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
             public static class TravelJourney {
 
                 @XmlAttribute(name = "Type")
-                protected String type;
+                String type;
                 @XmlAttribute(name = "OriginAirportID", required = true)
-                protected String originAirportID;
+                String originAirportID;
                 @XmlAttribute(name = "DestinationAirportID", required = true)
-                protected String destinationAirportID;
+                String destinationAirportID;
                 @XmlAttribute(name = "OutwardDateTime", required = true)
                 @XmlSchemaType(name = "dateTime")
-                protected XMLGregorianCalendar outwardDateTime;
+                XMLGregorianCalendar outwardDateTime;
                 @XmlAttribute(name = "ReturnDateTime")
                 @XmlSchemaType(name = "dateTime")
-                protected XMLGregorianCalendar returnDateTime;
+                XMLGregorianCalendar returnDateTime;
                 @XmlAttribute(name = "TravelCode")
-                protected String travelCode;
+                String travelCode;
                 @XmlAttribute(name = "CompanyShortName")
-                protected String companyShortName;
+                String companyShortName;
                 @XmlAttribute(name = "TravelSector")
-                protected String travelSector;
+                String travelSector;
                 @XmlAttribute(name = "Code")
-                protected String code;
+                String code;
                 @XmlAttribute(name = "CodeContext")
-                protected String codeContext;
+                String codeContext;
 
                 /**
                  * Gets the value of the type property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getType() {
                     return type;
@@ -2289,11 +2046,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the type property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setType(String value) {
                     this.type = value;
@@ -2301,11 +2056,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the originAirportID property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getOriginAirportID() {
                     return originAirportID;
@@ -2313,11 +2066,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the originAirportID property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setOriginAirportID(String value) {
                     this.originAirportID = value;
@@ -2325,11 +2076,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the destinationAirportID property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getDestinationAirportID() {
                     return destinationAirportID;
@@ -2337,11 +2086,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the destinationAirportID property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setDestinationAirportID(String value) {
                     this.destinationAirportID = value;
@@ -2349,11 +2096,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the outwardDateTime property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link XMLGregorianCalendar }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link XMLGregorianCalendar }
                  */
                 public XMLGregorianCalendar getOutwardDateTime() {
                     return outwardDateTime;
@@ -2361,11 +2106,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the outwardDateTime property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link XMLGregorianCalendar }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link XMLGregorianCalendar }
                  */
                 public void setOutwardDateTime(XMLGregorianCalendar value) {
                     this.outwardDateTime = value;
@@ -2373,11 +2116,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the returnDateTime property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link XMLGregorianCalendar }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link XMLGregorianCalendar }
                  */
                 public XMLGregorianCalendar getReturnDateTime() {
                     return returnDateTime;
@@ -2385,11 +2126,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the returnDateTime property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link XMLGregorianCalendar }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link XMLGregorianCalendar }
                  */
                 public void setReturnDateTime(XMLGregorianCalendar value) {
                     this.returnDateTime = value;
@@ -2397,11 +2136,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the travelCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getTravelCode() {
                     return travelCode;
@@ -2409,11 +2146,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the travelCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setTravelCode(String value) {
                     this.travelCode = value;
@@ -2421,11 +2156,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the companyShortName property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getCompanyShortName() {
                     return companyShortName;
@@ -2433,11 +2166,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the companyShortName property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setCompanyShortName(String value) {
                     this.companyShortName = value;
@@ -2445,11 +2176,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the travelSector property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getTravelSector() {
                     return travelSector;
@@ -2457,11 +2186,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the travelSector property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setTravelSector(String value) {
                     this.travelSector = value;
@@ -2469,11 +2196,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the code property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getCode() {
                     return code;
@@ -2481,11 +2206,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the code property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setCode(String value) {
                     this.code = value;
@@ -2493,11 +2216,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Gets the value of the codeContext property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getCodeContext() {
                     return codeContext;
@@ -2505,11 +2226,9 @@ public class OTAPkgAvailRS {
 
                 /**
                  * Sets the value of the codeContext property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setCodeContext(String value) {
                     this.codeContext = value;

@@ -8,26 +8,20 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Construct for holding a flight segment availability object.
- * 
+ * <p>
  * <p>Java class for FlightSegmentBaseType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="FlightSegmentBaseType">
  *   &lt;complexContent>
@@ -63,50 +57,46 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FlightSegmentBaseType", propOrder = {
-    "departureAirport",
-    "arrivalAirport",
-    "operatingAirline",
-    "equipment"
+        "departureAirport",
+        "arrivalAirport",
+        "operatingAirline",
+        "equipment"
 })
 @XmlSeeAlso({
-    PkgAirSegmentType.class
+        PkgAirSegmentType.class
 })
 public class FlightSegmentBaseType {
 
     @XmlElement(name = "DepartureAirport", required = true)
-    protected DepartureAirport departureAirport;
+    private DepartureAirport departureAirport;
     @XmlElement(name = "ArrivalAirport", required = true)
-    protected ArrivalAirport arrivalAirport;
+    private ArrivalAirport arrivalAirport;
     @XmlElement(name = "OperatingAirline")
-    protected OperatingAirlineType operatingAirline;
+    private OperatingAirlineType operatingAirline;
     @XmlElement(name = "Equipment")
-    protected List<EquipmentType> equipment;
+    private List<EquipmentType> equipment;
     @XmlAttribute(name = "DepartureDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departureDateTime;
+    private XMLGregorianCalendar departureDateTime;
     @XmlAttribute(name = "ArrivalDateTime")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrivalDateTime;
+    private XMLGregorianCalendar arrivalDateTime;
     @XmlAttribute(name = "StopQuantity")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger stopQuantity;
+    private BigInteger stopQuantity;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "InfoSource")
-    protected String infoSource;
+    private String infoSource;
 
     /**
      * Gets the value of the departureAirport property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DepartureAirport }
-     *     
+     *
+     * @return possible object is
+     * {@link DepartureAirport }
      */
     public DepartureAirport getDepartureAirport() {
         return departureAirport;
@@ -114,11 +104,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the departureAirport property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DepartureAirport }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DepartureAirport }
      */
     public void setDepartureAirport(DepartureAirport value) {
         this.departureAirport = value;
@@ -126,11 +114,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the arrivalAirport property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ArrivalAirport }
-     *     
+     *
+     * @return possible object is
+     * {@link ArrivalAirport }
      */
     public ArrivalAirport getArrivalAirport() {
         return arrivalAirport;
@@ -138,11 +124,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the arrivalAirport property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ArrivalAirport }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ArrivalAirport }
      */
     public void setArrivalAirport(ArrivalAirport value) {
         this.arrivalAirport = value;
@@ -150,11 +134,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the operatingAirline property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OperatingAirlineType }
-     *     
+     *
+     * @return possible object is
+     * {@link OperatingAirlineType }
      */
     public OperatingAirlineType getOperatingAirline() {
         return operatingAirline;
@@ -162,11 +144,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the operatingAirline property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OperatingAirlineType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link OperatingAirlineType }
      */
     public void setOperatingAirline(OperatingAirlineType value) {
         this.operatingAirline = value;
@@ -174,40 +154,36 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the equipment property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the equipment property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEquipment().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EquipmentType }
-     * 
-     * 
      */
     public List<EquipmentType> getEquipment() {
         if (equipment == null) {
-            equipment = new ArrayList<EquipmentType>();
+            equipment = new ArrayList<>();
         }
         return this.equipment;
     }
 
     /**
      * Gets the value of the departureDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDepartureDateTime() {
         return departureDateTime;
@@ -215,11 +191,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the departureDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDepartureDateTime(XMLGregorianCalendar value) {
         this.departureDateTime = value;
@@ -227,11 +201,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the arrivalDateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getArrivalDateTime() {
         return arrivalDateTime;
@@ -239,11 +211,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the arrivalDateTime property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setArrivalDateTime(XMLGregorianCalendar value) {
         this.arrivalDateTime = value;
@@ -251,11 +221,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the stopQuantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getStopQuantity() {
         return stopQuantity;
@@ -263,11 +231,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the stopQuantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setStopQuantity(BigInteger value) {
         this.stopQuantity = value;
@@ -275,11 +241,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -287,11 +251,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -299,11 +261,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the infoSource property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInfoSource() {
         return infoSource;
@@ -311,11 +271,9 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the infoSource property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInfoSource(String value) {
         this.infoSource = value;
@@ -324,9 +282,9 @@ public class FlightSegmentBaseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -336,29 +294,25 @@ public class FlightSegmentBaseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ArrivalAirport {
 
         @XmlAttribute(name = "LocationCode")
-        protected String locationCode;
+        String locationCode;
         @XmlAttribute(name = "CodeContext")
-        protected String codeContext;
+        String codeContext;
         @XmlAttribute(name = "Terminal")
-        protected String terminal;
+        String terminal;
         @XmlAttribute(name = "Gate")
-        protected String gate;
+        String gate;
 
         /**
          * Gets the value of the locationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLocationCode() {
             return locationCode;
@@ -366,11 +320,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the locationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLocationCode(String value) {
             this.locationCode = value;
@@ -378,11 +330,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the codeContext property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCodeContext() {
             if (codeContext == null) {
@@ -394,11 +344,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the codeContext property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -406,11 +354,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the terminal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTerminal() {
             return terminal;
@@ -418,11 +364,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the terminal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTerminal(String value) {
             this.terminal = value;
@@ -430,11 +374,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the gate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getGate() {
             return gate;
@@ -442,11 +384,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the gate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setGate(String value) {
             this.gate = value;
@@ -457,9 +397,9 @@ public class FlightSegmentBaseType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -469,29 +409,25 @@ public class FlightSegmentBaseType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class DepartureAirport {
 
         @XmlAttribute(name = "LocationCode")
-        protected String locationCode;
+        String locationCode;
         @XmlAttribute(name = "CodeContext")
-        protected String codeContext;
+        String codeContext;
         @XmlAttribute(name = "Terminal")
-        protected String terminal;
+        String terminal;
         @XmlAttribute(name = "Gate")
-        protected String gate;
+        String gate;
 
         /**
          * Gets the value of the locationCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLocationCode() {
             return locationCode;
@@ -499,11 +435,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the locationCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLocationCode(String value) {
             this.locationCode = value;
@@ -511,11 +445,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the codeContext property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCodeContext() {
             if (codeContext == null) {
@@ -527,11 +459,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the codeContext property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -539,11 +469,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the terminal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTerminal() {
             return terminal;
@@ -551,11 +479,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the terminal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTerminal(String value) {
             this.terminal = value;
@@ -563,11 +489,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Gets the value of the gate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getGate() {
             return gate;
@@ -575,11 +499,9 @@ public class FlightSegmentBaseType {
 
         /**
          * Sets the value of the gate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setGate(String value) {
             this.gate = value;

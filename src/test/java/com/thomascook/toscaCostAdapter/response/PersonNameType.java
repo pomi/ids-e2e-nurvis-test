@@ -8,24 +8,20 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * This provides name information for a person.
- * 
+ * <p>
  * <p>Java class for PersonNameType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonNameType">
  *   &lt;complexContent>
@@ -45,138 +41,128 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonNameType", propOrder = {
-    "namePrefix",
-    "givenName",
-    "middleName",
-    "surnamePrefix",
-    "surname",
-    "nameSuffix",
-    "nameTitle"
+        "namePrefix",
+        "givenName",
+        "middleName",
+        "surnamePrefix",
+        "surname",
+        "nameSuffix",
+        "nameTitle"
 })
 public class PersonNameType {
 
     @XmlElement(name = "NamePrefix", required = true)
-    protected List<String> namePrefix;
+    private List<String> namePrefix;
     @XmlElement(name = "GivenName")
-    protected List<String> givenName;
+    private List<String> givenName;
     @XmlElement(name = "MiddleName")
-    protected List<String> middleName;
+    private List<String> middleName;
     @XmlElement(name = "SurnamePrefix")
-    protected String surnamePrefix;
+    private String surnamePrefix;
     @XmlElement(name = "Surname", required = true)
-    protected String surname;
+    private String surname;
     @XmlElement(name = "NameSuffix")
-    protected List<String> nameSuffix;
+    private List<String> nameSuffix;
     @XmlElement(name = "NameTitle")
-    protected List<String> nameTitle;
+    private List<String> nameTitle;
     @XmlAttribute(name = "NameType")
-    protected String nameType;
+    private String nameType;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the namePrefix property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the namePrefix property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNamePrefix().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getNamePrefix() {
         if (namePrefix == null) {
-            namePrefix = new ArrayList<String>();
+            namePrefix = new ArrayList<>();
         }
         return this.namePrefix;
     }
 
     /**
      * Gets the value of the givenName property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the givenName property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGivenName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getGivenName() {
         if (givenName == null) {
-            givenName = new ArrayList<String>();
+            givenName = new ArrayList<>();
         }
         return this.givenName;
     }
 
     /**
      * Gets the value of the middleName property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the middleName property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMiddleName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getMiddleName() {
         if (middleName == null) {
-            middleName = new ArrayList<String>();
+            middleName = new ArrayList<>();
         }
         return this.middleName;
     }
 
     /**
      * Gets the value of the surnamePrefix property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSurnamePrefix() {
         return surnamePrefix;
@@ -184,11 +170,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the surnamePrefix property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSurnamePrefix(String value) {
         this.surnamePrefix = value;
@@ -196,11 +180,9 @@ public class PersonNameType {
 
     /**
      * Gets the value of the surname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSurname() {
         return surname;
@@ -208,11 +190,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the surname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSurname(String value) {
         this.surname = value;
@@ -220,69 +200,63 @@ public class PersonNameType {
 
     /**
      * Gets the value of the nameSuffix property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the nameSuffix property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNameSuffix().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getNameSuffix() {
         if (nameSuffix == null) {
-            nameSuffix = new ArrayList<String>();
+            nameSuffix = new ArrayList<>();
         }
         return this.nameSuffix;
     }
 
     /**
      * Gets the value of the nameTitle property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the nameTitle property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNameTitle().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getNameTitle() {
         if (nameTitle == null) {
-            nameTitle = new ArrayList<String>();
+            nameTitle = new ArrayList<>();
         }
         return this.nameTitle;
     }
 
     /**
      * Gets the value of the nameType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNameType() {
         return nameType;
@@ -290,11 +264,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the nameType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNameType(String value) {
         this.nameType = value;
@@ -302,11 +274,9 @@ public class PersonNameType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -314,11 +284,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -326,11 +294,9 @@ public class PersonNameType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -338,11 +304,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;

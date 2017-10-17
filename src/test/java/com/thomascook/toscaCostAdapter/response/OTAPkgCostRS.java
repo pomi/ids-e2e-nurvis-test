@@ -8,27 +8,21 @@
 
 package com.thomascook.toscaCostAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -89,82 +83,78 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "success",
-    "warnings",
-    "_package",
-    "extras",
-    "tpaExtensions",
-    "errors"
+        "success",
+        "warnings",
+        "_package",
+        "extras",
+        "tpaExtensions",
+        "errors"
 })
 @XmlRootElement(name = "OTA_PkgCostRS")
 public class OTAPkgCostRS {
 
     @XmlElement(name = "Success")
-    protected SuccessType success;
+    private SuccessType success;
     @XmlElement(name = "Warnings")
-    protected WarningsType warnings;
+    private WarningsType warnings;
     @XmlElement(name = "Package")
-    protected Package _package;
+    private Package _package;
     @XmlElement(name = "Extras")
-    protected Extras extras;
+    private Extras extras;
     @XmlElement(name = "TPA_Extensions")
-    protected TPAExtensionsType tpaExtensions;
+    private TPAExtensionsType tpaExtensions;
     @XmlElement(name = "Errors")
-    protected ErrorsType errors;
+    private ErrorsType errors;
     @XmlAttribute(name = "CompanyShortName")
-    protected String companyShortName;
+    private String companyShortName;
     @XmlAttribute(name = "TravelSector")
-    protected String travelSector;
+    private String travelSector;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
+    private String codeContext;
     @XmlAttribute(name = "EchoToken")
-    protected String echoToken;
+    private String echoToken;
     @XmlAttribute(name = "TimeStamp")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar timeStamp;
+    private XMLGregorianCalendar timeStamp;
     @XmlAttribute(name = "Target")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String target;
+    private String target;
     @XmlAttribute(name = "Version")
-    protected BigDecimal version;
+    private BigDecimal version;
     @XmlAttribute(name = "TransactionIdentifier")
-    protected String transactionIdentifier;
+    private String transactionIdentifier;
     @XmlAttribute(name = "SequenceNmbr")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger sequenceNmbr;
+    private BigInteger sequenceNmbr;
     @XmlAttribute(name = "TransactionStatusCode")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String transactionStatusCode;
+    private String transactionStatusCode;
     @XmlAttribute(name = "RetransmissionIndicator")
-    protected Boolean retransmissionIndicator;
+    private Boolean retransmissionIndicator;
     @XmlAttribute(name = "PrimaryLangID")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
-    protected String primaryLangID;
+    private String primaryLangID;
     @XmlAttribute(name = "AltLangID")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
-    protected String altLangID;
+    private String altLangID;
     @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
+    private String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    private BigInteger decimalPlaces;
 
     /**
      * Gets the value of the success property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SuccessType }
-     *     
+     *
+     * @return possible object is
+     * {@link SuccessType }
      */
     public SuccessType getSuccess() {
         return success;
@@ -172,11 +162,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the success property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SuccessType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SuccessType }
      */
     public void setSuccess(SuccessType value) {
         this.success = value;
@@ -184,11 +172,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the warnings property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link WarningsType }
-     *     
+     *
+     * @return possible object is
+     * {@link WarningsType }
      */
     public WarningsType getWarnings() {
         return warnings;
@@ -196,11 +182,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the warnings property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link WarningsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link WarningsType }
      */
     public void setWarnings(WarningsType value) {
         this.warnings = value;
@@ -208,11 +192,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the package property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Package }
-     *     
+     *
+     * @return possible object is
+     * {@link Package }
      */
     public Package getPackage() {
         return _package;
@@ -220,11 +202,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the package property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Package }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Package }
      */
     public void setPackage(Package value) {
         this._package = value;
@@ -232,11 +212,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the extras property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Extras }
-     *     
+     *
+     * @return possible object is
+     * {@link Extras }
      */
     public Extras getExtras() {
         return extras;
@@ -244,11 +222,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the extras property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Extras }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Extras }
      */
     public void setExtras(Extras value) {
         this.extras = value;
@@ -256,11 +232,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the tpaExtensions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TPAExtensionsType }
-     *     
+     *
+     * @return possible object is
+     * {@link TPAExtensionsType }
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -268,11 +242,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the tpaExtensions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TPAExtensionsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TPAExtensionsType }
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -280,11 +252,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the errors property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ErrorsType }
      */
     public ErrorsType getErrors() {
         return errors;
@@ -292,11 +262,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the errors property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ErrorsType }
      */
     public void setErrors(ErrorsType value) {
         this.errors = value;
@@ -304,11 +272,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the companyShortName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCompanyShortName() {
         return companyShortName;
@@ -316,11 +282,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the companyShortName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCompanyShortName(String value) {
         this.companyShortName = value;
@@ -328,11 +292,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the travelSector property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelSector() {
         return travelSector;
@@ -340,11 +302,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the travelSector property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelSector(String value) {
         this.travelSector = value;
@@ -352,11 +312,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -364,11 +322,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -376,11 +332,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodeContext() {
         return codeContext;
@@ -388,11 +342,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodeContext(String value) {
         this.codeContext = value;
@@ -400,11 +352,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the echoToken property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEchoToken() {
         return echoToken;
@@ -412,11 +362,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the echoToken property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -424,11 +372,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the timeStamp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -436,11 +382,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the timeStamp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -448,11 +392,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the target property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTarget() {
         if (target == null) {
@@ -464,11 +406,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the target property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTarget(String value) {
         this.target = value;
@@ -476,11 +416,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getVersion() {
         return version;
@@ -488,11 +426,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -500,11 +436,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -512,11 +446,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -524,11 +456,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -536,11 +466,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -548,11 +476,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -560,11 +486,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -572,11 +496,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -584,11 +506,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -596,11 +516,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the primaryLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -608,11 +526,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the primaryLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -620,11 +536,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the altLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltLangID() {
         return altLangID;
@@ -632,11 +546,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the altLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -644,11 +556,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -656,11 +566,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -668,11 +576,9 @@ public class OTAPkgCostRS {
 
     /**
      * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -680,11 +586,9 @@ public class OTAPkgCostRS {
 
     /**
      * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
@@ -693,9 +597,9 @@ public class OTAPkgCostRS {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -707,43 +611,39 @@ public class OTAPkgCostRS {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "extra"
+            "extra"
     })
     public static class Extras {
 
         @XmlElement(name = "Extra", required = true)
-        protected List<ExtrasInfoType> extra;
+        List<ExtrasInfoType> extra;
 
         /**
          * Gets the value of the extra property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the extra property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getExtra().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ExtrasInfoType }
-         * 
-         * 
          */
         public List<ExtrasInfoType> getExtra() {
             if (extra == null) {
-                extra = new ArrayList<ExtrasInfoType>();
+                extra = new ArrayList<>();
             }
             return this.extra;
         }
@@ -753,9 +653,9 @@ public class OTAPkgCostRS {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -786,30 +686,25 @@ public class OTAPkgCostRS {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "priceSummary",
-        "acceptedPaymtForms"
+            "priceSummary",
+            "acceptedPaymtForms"
     })
     public static class Package
-        extends PackageResponseType
-    {
+            extends PackageResponseType {
 
         @XmlElement(name = "PriceSummary")
-        protected PkgInvoiceDetail priceSummary;
+        PkgInvoiceDetail priceSummary;
         @XmlElement(name = "AcceptedPaymtForms")
-        protected AcceptedPaymtForms acceptedPaymtForms;
+        AcceptedPaymtForms acceptedPaymtForms;
 
         /**
          * Gets the value of the priceSummary property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link PkgInvoiceDetail }
-         *     
+         *
+         * @return possible object is
+         * {@link PkgInvoiceDetail }
          */
         public PkgInvoiceDetail getPriceSummary() {
             return priceSummary;
@@ -817,11 +712,9 @@ public class OTAPkgCostRS {
 
         /**
          * Sets the value of the priceSummary property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link PkgInvoiceDetail }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link PkgInvoiceDetail }
          */
         public void setPriceSummary(PkgInvoiceDetail value) {
             this.priceSummary = value;
@@ -829,11 +722,9 @@ public class OTAPkgCostRS {
 
         /**
          * Gets the value of the acceptedPaymtForms property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AcceptedPaymtForms }
-         *     
+         *
+         * @return possible object is
+         * {@link AcceptedPaymtForms }
          */
         public AcceptedPaymtForms getAcceptedPaymtForms() {
             return acceptedPaymtForms;
@@ -841,11 +732,9 @@ public class OTAPkgCostRS {
 
         /**
          * Sets the value of the acceptedPaymtForms property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AcceptedPaymtForms }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AcceptedPaymtForms }
          */
         public void setAcceptedPaymtForms(AcceptedPaymtForms value) {
             this.acceptedPaymtForms = value;
@@ -854,9 +743,9 @@ public class OTAPkgCostRS {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -876,43 +765,39 @@ public class OTAPkgCostRS {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "acceptedPaymtForm"
+                "acceptedPaymtForm"
         })
         public static class AcceptedPaymtForms {
 
             @XmlElement(name = "AcceptedPaymtForm", required = true)
-            protected List<AcceptedPaymtForm> acceptedPaymtForm;
+            List<AcceptedPaymtForm> acceptedPaymtForm;
 
             /**
              * Gets the value of the acceptedPaymtForm property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the acceptedPaymtForm property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAcceptedPaymtForm().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link AcceptedPaymtForm }
-             * 
-             * 
              */
             public List<AcceptedPaymtForm> getAcceptedPaymtForm() {
                 if (acceptedPaymtForm == null) {
-                    acceptedPaymtForm = new ArrayList<AcceptedPaymtForm>();
+                    acceptedPaymtForm = new ArrayList<>();
                 }
                 return this.acceptedPaymtForm;
             }
@@ -920,9 +805,9 @@ public class OTAPkgCostRS {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
@@ -932,25 +817,20 @@ public class OTAPkgCostRS {
              *   &lt;/simpleContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
             public static class AcceptedPaymtForm
-                extends MonetaryRuleType
-            {
+                    extends MonetaryRuleType {
 
                 @XmlAttribute(name = "IssuerCode")
-                protected String issuerCode;
+                String issuerCode;
 
                 /**
                  * Gets the value of the issuerCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getIssuerCode() {
                     return issuerCode;
@@ -958,11 +838,9 @@ public class OTAPkgCostRS {
 
                 /**
                  * Sets the value of the issuerCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setIssuerCode(String value) {
                     this.issuerCode = value;

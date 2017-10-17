@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for AvailableDateUnit.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "AvailableDateUnit")
 @XmlEnum
@@ -45,17 +44,17 @@ public enum AvailableDateUnit {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static AvailableDateUnit fromValue(String v) {
-        for (AvailableDateUnit c: AvailableDateUnit.values()) {
+        for (AvailableDateUnit c : AvailableDateUnit.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

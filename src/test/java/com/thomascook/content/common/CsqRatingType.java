@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for csqRatingType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="csqRatingType">
  *   &lt;complexContent>
@@ -34,37 +34,33 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "csqRatingType", propOrder = {
-    "overallHolidayRating",
-    "overallAccomRating",
-    "locationRating",
-    "foodAndDrinkRating",
-    "csqNote"
+        "overallHolidayRating",
+        "overallAccomRating",
+        "locationRating",
+        "foodAndDrinkRating",
+        "csqNote"
 })
 public class CsqRatingType {
 
     @XmlElement(name = "OverallHolidayRating")
-    protected String overallHolidayRating;
+    private String overallHolidayRating;
     @XmlElement(name = "OverallAccomRating")
-    protected String overallAccomRating;
+    private String overallAccomRating;
     @XmlElement(name = "LocationRating")
-    protected String locationRating;
+    private String locationRating;
     @XmlElement(name = "FoodAndDrinkRating")
-    protected String foodAndDrinkRating;
+    private String foodAndDrinkRating;
     @XmlElement(name = "CSQNote")
-    protected String csqNote;
+    private String csqNote;
 
     /**
      * Gets the value of the overallHolidayRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOverallHolidayRating() {
         return overallHolidayRating;
@@ -72,11 +68,9 @@ public class CsqRatingType {
 
     /**
      * Sets the value of the overallHolidayRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOverallHolidayRating(String value) {
         this.overallHolidayRating = value;
@@ -84,11 +78,9 @@ public class CsqRatingType {
 
     /**
      * Gets the value of the overallAccomRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOverallAccomRating() {
         return overallAccomRating;
@@ -96,11 +88,9 @@ public class CsqRatingType {
 
     /**
      * Sets the value of the overallAccomRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOverallAccomRating(String value) {
         this.overallAccomRating = value;
@@ -108,11 +98,9 @@ public class CsqRatingType {
 
     /**
      * Gets the value of the locationRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLocationRating() {
         return locationRating;
@@ -120,11 +108,9 @@ public class CsqRatingType {
 
     /**
      * Sets the value of the locationRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLocationRating(String value) {
         this.locationRating = value;
@@ -132,11 +118,9 @@ public class CsqRatingType {
 
     /**
      * Gets the value of the foodAndDrinkRating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFoodAndDrinkRating() {
         return foodAndDrinkRating;
@@ -144,11 +128,9 @@ public class CsqRatingType {
 
     /**
      * Sets the value of the foodAndDrinkRating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFoodAndDrinkRating(String value) {
         this.foodAndDrinkRating = value;
@@ -156,11 +138,9 @@ public class CsqRatingType {
 
     /**
      * Gets the value of the csqNote property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCSQNote() {
         return csqNote;
@@ -168,11 +148,9 @@ public class CsqRatingType {
 
     /**
      * Sets the value of the csqNote property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCSQNote(String value) {
         this.csqNote = value;

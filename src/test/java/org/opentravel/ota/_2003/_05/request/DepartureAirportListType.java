@@ -8,23 +8,23 @@
 
 package org.opentravel.ota._2003._05.request;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Defines a group of
- *                 departure airports.
- *             
- * 
+ * departure airports.
+ * <p>
+ * <p>
  * <p>Java class for DepartureAirportListType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DepartureAirportListType">
  *   &lt;complexContent>
@@ -36,43 +36,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DepartureAirportListType", propOrder = {
-    "departureAirport"
+        "departureAirport"
 })
 public class DepartureAirportListType {
 
     @XmlElement(name = "DepartureAirport", required = true)
-    protected List<LocationType> departureAirport;
+    private List<LocationType> departureAirport;
 
     /**
      * Gets the value of the departureAirport property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the departureAirport property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDepartureAirport().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LocationType }
-     * 
-     * 
      */
     public List<LocationType> getDepartureAirport() {
         if (departureAirport == null) {
-            departureAirport = new ArrayList<LocationType>();
+            departureAirport = new ArrayList<>();
         }
         return this.departureAirport;
     }

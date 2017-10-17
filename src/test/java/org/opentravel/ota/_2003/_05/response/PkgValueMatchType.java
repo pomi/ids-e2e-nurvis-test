@@ -8,28 +8,22 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 A package satisfying a
- *                 single room request.
- *             
- * 
+ * A package satisfying a
+ * single room request.
+ * <p>
+ * <p>
  * <p>Java class for PkgValueMatchType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgValueMatchType">
  *   &lt;complexContent>
@@ -83,65 +77,61 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgValueMatchType", propOrder = {
-    "scoreValues",
-    "priceInfo",
-    "roomAvailabilities",
-    "stunts",
-    "bookingID"
+        "scoreValues",
+        "priceInfo",
+        "roomAvailabilities",
+        "stunts",
+        "bookingID"
 })
 public class PkgValueMatchType {
 
     @XmlElement(name = "ScoreValues")
-    protected ScoreValuesType scoreValues;
+    private ScoreValuesType scoreValues;
     @XmlElement(name = "PriceInfo", required = true)
-    protected PriceInfo priceInfo;
+    private PriceInfo priceInfo;
     @XmlElement(name = "RoomAvailabilities")
-    protected AvailabilitySearchResponseType roomAvailabilities;
+    private AvailabilitySearchResponseType roomAvailabilities;
     @XmlElement(name = "Stunts")
-    protected StuntsType stunts;
+    private StuntsType stunts;
     @XmlElement(name = "BookingID")
-    protected BookingIDType bookingID;
+    private BookingIDType bookingID;
     @XmlAttribute(name = "PkgID", required = true)
-    protected String pkgID;
+    private String pkgID;
     @XmlAttribute(name = "FoundPAX")
-    protected Integer foundPAX;
+    private Integer foundPAX;
     @XmlAttribute(name = "PAX", required = true)
-    protected int pax;
+    private int pax;
     @XmlAttribute(name = "RoomType")
-    protected String roomType;
+    private String roomType;
     @XmlAttribute(name = "BoardType")
-    protected Integer boardType;
+    private Integer boardType;
     @XmlAttribute(name = "MaxChildAge")
-    protected Integer maxChildAge;
+    private Integer maxChildAge;
     @XmlAttribute(name = "MaxAdults")
-    protected Integer maxAdults;
+    private Integer maxAdults;
     @XmlAttribute(name = "MinAdults")
-    protected Integer minAdults;
+    private Integer minAdults;
     @XmlAttribute(name = "MaxChildren")
-    protected Integer maxChildren;
+    private Integer maxChildren;
     @XmlAttribute(name = "MinChildren")
-    protected Integer minChildren;
+    private Integer minChildren;
     @XmlAttribute(name = "OriginCode")
-    protected String originCode;
+    private String originCode;
     @XmlAttribute(name = "AvailableRooms")
-    protected Integer availableRooms;
+    private Integer availableRooms;
     @XmlAttribute(name = "PromoRoomCodeAndType")
-    protected String promoRoomCodeAndType;
+    private String promoRoomCodeAndType;
     @XmlAttribute(name = "FreeChildFlag")
-    protected FreeChildFlagType freeChildFlag;
+    private FreeChildFlagType freeChildFlag;
 
     /**
      * Gets the value of the scoreValues property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ScoreValuesType }
-     *     
+     *
+     * @return possible object is
+     * {@link ScoreValuesType }
      */
     public ScoreValuesType getScoreValues() {
         return scoreValues;
@@ -149,11 +139,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the scoreValues property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ScoreValuesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ScoreValuesType }
      */
     public void setScoreValues(ScoreValuesType value) {
         this.scoreValues = value;
@@ -161,11 +149,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the priceInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PriceInfo }
-     *     
+     *
+     * @return possible object is
+     * {@link PriceInfo }
      */
     public PriceInfo getPriceInfo() {
         return priceInfo;
@@ -173,11 +159,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the priceInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PriceInfo }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PriceInfo }
      */
     public void setPriceInfo(PriceInfo value) {
         this.priceInfo = value;
@@ -185,11 +169,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the roomAvailabilities property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailabilitySearchResponseType }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailabilitySearchResponseType }
      */
     public AvailabilitySearchResponseType getRoomAvailabilities() {
         return roomAvailabilities;
@@ -197,11 +179,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the roomAvailabilities property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailabilitySearchResponseType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailabilitySearchResponseType }
      */
     public void setRoomAvailabilities(AvailabilitySearchResponseType value) {
         this.roomAvailabilities = value;
@@ -209,11 +189,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the stunts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StuntsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StuntsType }
      */
     public StuntsType getStunts() {
         return stunts;
@@ -221,11 +199,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the stunts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StuntsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StuntsType }
      */
     public void setStunts(StuntsType value) {
         this.stunts = value;
@@ -233,11 +209,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the bookingID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BookingIDType }
-     *     
+     *
+     * @return possible object is
+     * {@link BookingIDType }
      */
     public BookingIDType getBookingID() {
         return bookingID;
@@ -245,11 +219,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the bookingID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BookingIDType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BookingIDType }
      */
     public void setBookingID(BookingIDType value) {
         this.bookingID = value;
@@ -257,11 +229,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the pkgID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPkgID() {
         return pkgID;
@@ -269,11 +239,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the pkgID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPkgID(String value) {
         this.pkgID = value;
@@ -281,11 +249,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the foundPAX property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getFoundPAX() {
         return foundPAX;
@@ -293,11 +259,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the foundPAX property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setFoundPAX(Integer value) {
         this.foundPAX = value;
@@ -305,7 +269,6 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the pax property.
-     * 
      */
     public int getPAX() {
         return pax;
@@ -313,7 +276,6 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the pax property.
-     * 
      */
     public void setPAX(int value) {
         this.pax = value;
@@ -321,11 +283,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the roomType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomType() {
         return roomType;
@@ -333,11 +293,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the roomType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomType(String value) {
         this.roomType = value;
@@ -345,11 +303,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the boardType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getBoardType() {
         return boardType;
@@ -357,11 +313,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the boardType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setBoardType(Integer value) {
         this.boardType = value;
@@ -369,11 +323,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the maxChildAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxChildAge() {
         return maxChildAge;
@@ -381,11 +333,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the maxChildAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxChildAge(Integer value) {
         this.maxChildAge = value;
@@ -393,11 +343,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the maxAdults property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxAdults() {
         return maxAdults;
@@ -405,11 +353,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the maxAdults property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxAdults(Integer value) {
         this.maxAdults = value;
@@ -417,11 +363,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the minAdults property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinAdults() {
         return minAdults;
@@ -429,11 +373,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the minAdults property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinAdults(Integer value) {
         this.minAdults = value;
@@ -441,11 +383,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the maxChildren property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxChildren() {
         return maxChildren;
@@ -453,11 +393,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the maxChildren property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxChildren(Integer value) {
         this.maxChildren = value;
@@ -465,11 +403,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the minChildren property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinChildren() {
         return minChildren;
@@ -477,11 +413,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the minChildren property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinChildren(Integer value) {
         this.minChildren = value;
@@ -489,11 +423,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the originCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOriginCode() {
         return originCode;
@@ -501,11 +433,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the originCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOriginCode(String value) {
         this.originCode = value;
@@ -513,11 +443,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the availableRooms property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getAvailableRooms() {
         return availableRooms;
@@ -525,11 +453,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the availableRooms property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setAvailableRooms(Integer value) {
         this.availableRooms = value;
@@ -537,11 +463,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the promoRoomCodeAndType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromoRoomCodeAndType() {
         return promoRoomCodeAndType;
@@ -549,11 +473,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the promoRoomCodeAndType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromoRoomCodeAndType(String value) {
         this.promoRoomCodeAndType = value;
@@ -561,11 +483,9 @@ public class PkgValueMatchType {
 
     /**
      * Gets the value of the freeChildFlag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FreeChildFlagType }
-     *     
+     *
+     * @return possible object is
+     * {@link FreeChildFlagType }
      */
     public FreeChildFlagType getFreeChildFlag() {
         return freeChildFlag;
@@ -573,11 +493,9 @@ public class PkgValueMatchType {
 
     /**
      * Sets the value of the freeChildFlag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link FreeChildFlagType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link FreeChildFlagType }
      */
     public void setFreeChildFlag(FreeChildFlagType value) {
         this.freeChildFlag = value;
@@ -586,9 +504,9 @@ public class PkgValueMatchType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -614,34 +532,30 @@ public class PkgValueMatchType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "priceBreakdown"
+            "priceBreakdown"
     })
     public static class PriceInfo {
 
         @XmlElement(name = "PriceBreakdown")
-        protected PriceBreakdown priceBreakdown;
+        PriceBreakdown priceBreakdown;
         @XmlAttribute(name = "Amount", required = true)
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "OriginalPrice")
-        protected BigDecimal originalPrice;
+        BigDecimal originalPrice;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the priceBreakdown property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link PriceBreakdown }
-         *     
+         *
+         * @return possible object is
+         * {@link PriceBreakdown }
          */
         public PriceBreakdown getPriceBreakdown() {
             return priceBreakdown;
@@ -649,11 +563,9 @@ public class PkgValueMatchType {
 
         /**
          * Sets the value of the priceBreakdown property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link PriceBreakdown }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link PriceBreakdown }
          */
         public void setPriceBreakdown(PriceBreakdown value) {
             this.priceBreakdown = value;
@@ -661,11 +573,9 @@ public class PkgValueMatchType {
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -673,11 +583,9 @@ public class PkgValueMatchType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -685,11 +593,9 @@ public class PkgValueMatchType {
 
         /**
          * Gets the value of the originalPrice property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getOriginalPrice() {
             return originalPrice;
@@ -697,11 +603,9 @@ public class PkgValueMatchType {
 
         /**
          * Sets the value of the originalPrice property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setOriginalPrice(BigDecimal value) {
             this.originalPrice = value;
@@ -709,11 +613,9 @@ public class PkgValueMatchType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -721,11 +623,9 @@ public class PkgValueMatchType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -733,11 +633,9 @@ public class PkgValueMatchType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -745,11 +643,9 @@ public class PkgValueMatchType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -758,9 +654,9 @@ public class PkgValueMatchType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -775,33 +671,29 @@ public class PkgValueMatchType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "adultPrice",
-            "childPrice",
-            "infantPrice"
+                "adultPrice",
+                "childPrice",
+                "infantPrice"
         })
         public static class PriceBreakdown {
 
             @XmlElement(name = "AdultPrice")
-            protected PkgPriceBreakdownType adultPrice;
+            PkgPriceBreakdownType adultPrice;
             @XmlElement(name = "ChildPrice")
-            protected List<PkgPriceBreakdownType> childPrice;
+            List<PkgPriceBreakdownType> childPrice;
             @XmlElement(name = "InfantPrice")
-            protected PkgPriceBreakdownType infantPrice;
+            PkgPriceBreakdownType infantPrice;
             @XmlAttribute(name = "PriceTypeIndicator")
-            protected String priceTypeIndicator;
+            String priceTypeIndicator;
 
             /**
              * Gets the value of the adultPrice property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link PkgPriceBreakdownType }
-             *     
+             *
+             * @return possible object is
+             * {@link PkgPriceBreakdownType }
              */
             public PkgPriceBreakdownType getAdultPrice() {
                 return adultPrice;
@@ -809,11 +701,9 @@ public class PkgValueMatchType {
 
             /**
              * Sets the value of the adultPrice property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link PkgPriceBreakdownType }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link PkgPriceBreakdownType }
              */
             public void setAdultPrice(PkgPriceBreakdownType value) {
                 this.adultPrice = value;
@@ -821,40 +711,36 @@ public class PkgValueMatchType {
 
             /**
              * Gets the value of the childPrice property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the childPrice property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getChildPrice().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PkgPriceBreakdownType }
-             * 
-             * 
              */
             public List<PkgPriceBreakdownType> getChildPrice() {
                 if (childPrice == null) {
-                    childPrice = new ArrayList<PkgPriceBreakdownType>();
+                    childPrice = new ArrayList<>();
                 }
                 return this.childPrice;
             }
 
             /**
              * Gets the value of the infantPrice property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link PkgPriceBreakdownType }
-             *     
+             *
+             * @return possible object is
+             * {@link PkgPriceBreakdownType }
              */
             public PkgPriceBreakdownType getInfantPrice() {
                 return infantPrice;
@@ -862,11 +748,9 @@ public class PkgValueMatchType {
 
             /**
              * Sets the value of the infantPrice property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link PkgPriceBreakdownType }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link PkgPriceBreakdownType }
              */
             public void setInfantPrice(PkgPriceBreakdownType value) {
                 this.infantPrice = value;
@@ -874,11 +758,9 @@ public class PkgValueMatchType {
 
             /**
              * Gets the value of the priceTypeIndicator property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getPriceTypeIndicator() {
                 return priceTypeIndicator;
@@ -886,11 +768,9 @@ public class PkgValueMatchType {
 
             /**
              * Sets the value of the priceTypeIndicator property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setPriceTypeIndicator(String value) {
                 this.priceTypeIndicator = value;

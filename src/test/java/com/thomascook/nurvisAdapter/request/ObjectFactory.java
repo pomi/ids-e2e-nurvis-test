@@ -15,18 +15,17 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the generated package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the generated package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -35,14 +34,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: generated
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link ReservationRequestTypeRequest }
-     * 
      */
     public ReservationRequestTypeRequest createReservationRequestTypeRequest() {
         return new ReservationRequestTypeRequest();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFatTypeRequest }
-     * 
      */
     public ReservationFatTypeRequest createReservationFatTypeRequest() {
         return new ReservationFatTypeRequest();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFacTypeRequest }
-     * 
      */
     public ReservationFacTypeRequest createReservationFacTypeRequest() {
         return new ReservationFacTypeRequest();
@@ -66,7 +61,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationMandatoryCostsTypeRequest }
-     * 
      */
     public ReservationMandatoryCostsTypeRequest createReservationMandatoryCostsTypeRequest() {
         return new ReservationMandatoryCostsTypeRequest();
@@ -74,7 +68,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationDownPayTypeRequest }
-     * 
      */
     public ReservationDownPayTypeRequest createReservationDownPayTypeRequest() {
         return new ReservationDownPayTypeRequest();
@@ -82,7 +75,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationLegTypeRequest }
-     * 
      */
     public ReservationLegTypeRequest createReservationLegTypeRequest() {
         return new ReservationLegTypeRequest();
@@ -90,7 +82,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationAccBalanceTypeRequest }
-     * 
      */
     public ReservationAccBalanceTypeRequest createReservationAccBalanceTypeRequest() {
         return new ReservationAccBalanceTypeRequest();
@@ -98,7 +89,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationAggregatedCostsTypeRequest }
-     * 
      */
     public ReservationAggregatedCostsTypeRequest createReservationAggregatedCostsTypeRequest() {
         return new ReservationAggregatedCostsTypeRequest();
@@ -106,7 +96,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationPersonsTypeRequest }
-     * 
      */
     public ReservationPersonsTypeRequest createReservationPersonsTypeRequest() {
         return new ReservationPersonsTypeRequest();
@@ -114,7 +103,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationCustomerTypeRequest }
-     * 
      */
     public ReservationCustomerTypeRequest createReservationCustomerTypeRequest() {
         return new ReservationCustomerTypeRequest();
@@ -122,7 +110,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFahTypeRequest }
-     * 
      */
     public ReservationFahTypeRequest createReservationFahTypeRequest() {
         return new ReservationFahTypeRequest();
@@ -130,7 +117,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFapTypeRequest }
-     * 
      */
     public ReservationFapTypeRequest createReservationFapTypeRequest() {
         return new ReservationFapTypeRequest();
@@ -138,7 +124,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationSalesTypeRequest }
-     * 
      */
     public ReservationSalesTypeRequest createReservationSalesTypeRequest() {
         return new ReservationSalesTypeRequest();
@@ -146,7 +131,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFabTypeRequest }
-     * 
      */
     public ReservationFabTypeRequest createReservationFabTypeRequest() {
         return new ReservationFabTypeRequest();
@@ -154,7 +138,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFaqTypeRequest }
-     * 
      */
     public ReservationFaqTypeRequest createReservationFaqTypeRequest() {
         return new ReservationFaqTypeRequest();
@@ -162,7 +145,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationPurchaseTypeRequest }
-     * 
      */
     public ReservationPurchaseTypeRequest createReservationPurchaseTypeRequest() {
         return new ReservationPurchaseTypeRequest();
@@ -170,7 +152,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFeeTypeRequest }
-     * 
      */
     public ReservationFeeTypeRequest createReservationFeeTypeRequest() {
         return new ReservationFeeTypeRequest();
@@ -178,11 +159,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReservationRequestTypeRequest }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "", name = "Request")
     public JAXBElement<ReservationRequestTypeRequest> createRequest(ReservationRequestTypeRequest value) {
-        return new JAXBElement<ReservationRequestTypeRequest>(_Request_QNAME, ReservationRequestTypeRequest.class, null, value);
+        return new JAXBElement<>(_Request_QNAME, ReservationRequestTypeRequest.class, null, value);
     }
 
 }

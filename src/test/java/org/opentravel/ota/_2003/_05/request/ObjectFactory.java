@@ -12,18 +12,17 @@ import javax.xml.bind.annotation.XmlRegistry;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the org.opentravel.ota._2003._05 package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the org.opentravel.ota._2003._05 package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -31,14 +30,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.opentravel.ota._2003._05
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link RoomStayCandidatesType }
-     * 
      */
     public RoomStayCandidatesType createRoomStayCandidatesType() {
         return new RoomStayCandidatesType();
@@ -46,7 +43,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgGuestCountType }
-     * 
      */
     public PkgGuestCountType createPkgGuestCountType() {
         return new PkgGuestCountType();
@@ -54,7 +50,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AwardsType }
-     * 
      */
     public AwardsType createAwardsType() {
         return new AwardsType();
@@ -62,7 +57,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AvailabilitySearchResponseType }
-     * 
      */
     public AvailabilitySearchResponseType createAvailabilitySearchResponseType() {
         return new AvailabilitySearchResponseType();
@@ -70,7 +64,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AvailabilitySearchResponseType.Availability }
-     * 
      */
     public AvailabilitySearchResponseType.Availability createAvailabilitySearchResponseTypeAvailability() {
         return new AvailabilitySearchResponseType.Availability();
@@ -78,7 +71,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link HotelOfferType }
-     * 
      */
     public HotelOfferType createHotelOfferType() {
         return new HotelOfferType();
@@ -86,7 +78,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScoreValuesType }
-     * 
      */
     public ScoreValuesType createScoreValuesType() {
         return new ScoreValuesType();
@@ -94,7 +85,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FacetSearchResponseType }
-     * 
      */
     public FacetSearchResponseType createFacetSearchResponseType() {
         return new FacetSearchResponseType();
@@ -102,7 +92,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FacetSearchResponseType.Facet }
-     * 
      */
     public FacetSearchResponseType.Facet createFacetSearchResponseTypeFacet() {
         return new FacetSearchResponseType.Facet();
@@ -110,7 +99,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType }
-     * 
      */
     public SourceType createSourceType() {
         return new SourceType();
@@ -118,7 +106,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgValueMatchType }
-     * 
      */
     public PkgValueMatchType createPkgValueMatchType() {
         return new PkgValueMatchType();
@@ -126,7 +113,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgValueMatchType.PriceInfo }
-     * 
      */
     public PkgValueMatchType.PriceInfo createPkgValueMatchTypePriceInfo() {
         return new PkgValueMatchType.PriceInfo();
@@ -134,7 +120,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType }
-     * 
      */
     public PkgSearchCriteriaType createPkgSearchCriteriaType() {
         return new PkgSearchCriteriaType();
@@ -142,7 +127,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion createPkgSearchCriteriaTypePkgCriterion() {
         return new PkgSearchCriteriaType.PkgCriterion();
@@ -150,7 +134,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria createPkgSearchCriteriaTypePkgCriterionAdditionalCriteria() {
         return new PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria();
@@ -158,7 +141,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion createPkgSearchCriteriaTypePkgCriterionAdditionalCriteriaCriterion() {
         return new PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion();
@@ -166,7 +148,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReturnContentType }
-     * 
      */
     public ReturnContentType createReturnContentType() {
         return new ReturnContentType();
@@ -174,7 +155,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SortResultsType }
-     * 
      */
     public SortResultsType createSortResultsType() {
         return new SortResultsType();
@@ -182,7 +162,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OTAPkgSearchRQ }
-     * 
      */
     public OTAPkgSearchRQ createOTAPkgSearchRQ() {
         return new OTAPkgSearchRQ();
@@ -190,7 +169,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link POSType }
-     * 
      */
     public POSType createPOSType() {
         return new POSType();
@@ -198,7 +176,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FilterResultsType }
-     * 
      */
     public FilterResultsType createFilterResultsType() {
         return new FilterResultsType();
@@ -206,7 +183,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ErrorsType }
-     * 
      */
     public ErrorsType createErrorsType() {
         return new ErrorsType();
@@ -214,7 +190,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OriginCodesType }
-     * 
      */
     public OriginCodesType createOriginCodesType() {
         return new OriginCodesType();
@@ -222,7 +197,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BrandsType }
-     * 
      */
     public BrandsType createBrandsType() {
         return new BrandsType();
@@ -230,7 +204,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConceptType }
-     * 
      */
     public ConceptType createConceptType() {
         return new ConceptType();
@@ -238,7 +211,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ArrivalAirportListType }
-     * 
      */
     public ArrivalAirportListType createArrivalAirportListType() {
         return new ArrivalAirportListType();
@@ -246,7 +218,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DurationsType }
-     * 
      */
     public DurationsType createDurationsType() {
         return new DurationsType();
@@ -254,7 +225,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DurationInDaysType }
-     * 
      */
     public DurationInDaysType createDurationInDaysType() {
         return new DurationInDaysType();
@@ -262,7 +232,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link StuntsType }
-     * 
      */
     public StuntsType createStuntsType() {
         return new StuntsType();
@@ -270,7 +239,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ConceptsType }
-     * 
      */
     public ConceptsType createConceptsType() {
         return new ConceptsType();
@@ -278,7 +246,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DepartureAirportListType }
-     * 
      */
     public DepartureAirportListType createDepartureAirportListType() {
         return new DepartureAirportListType();
@@ -286,7 +253,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link VersionInfoType }
-     * 
      */
     public VersionInfoType createVersionInfoType() {
         return new VersionInfoType();
@@ -294,7 +260,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgFlightType }
-     * 
      */
     public PkgFlightType createPkgFlightType() {
         return new PkgFlightType();
@@ -302,7 +267,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgRoomStayCandidateType }
-     * 
      */
     public PkgRoomStayCandidateType createPkgRoomStayCandidateType() {
         return new PkgRoomStayCandidateType();
@@ -310,7 +274,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UniqueIDType }
-     * 
      */
     public UniqueIDType createUniqueIDType() {
         return new UniqueIDType();
@@ -318,7 +281,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TraceDetailType }
-     * 
      */
     public TraceDetailType createTraceDetailType() {
         return new TraceDetailType();
@@ -326,7 +288,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ErrorType }
-     * 
      */
     public ErrorType createErrorType() {
         return new ErrorType();
@@ -334,7 +295,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompanyNameType }
-     * 
      */
     public CompanyNameType createCompanyNameType() {
         return new CompanyNameType();
@@ -342,7 +302,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FreeTextType }
-     * 
      */
     public FreeTextType createFreeTextType() {
         return new FreeTextType();
@@ -350,7 +309,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GeoLocationCoordinateType }
-     * 
      */
     public GeoLocationCoordinateType createGeoLocationCoordinateType() {
         return new GeoLocationCoordinateType();
@@ -358,7 +316,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link WarningType }
-     * 
      */
     public WarningType createWarningType() {
         return new WarningType();
@@ -366,7 +323,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link InAndOutBoundFlightsType }
-     * 
      */
     public InAndOutBoundFlightsType createInAndOutBoundFlightsType() {
         return new InAndOutBoundFlightsType();
@@ -374,7 +330,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SuccessType }
-     * 
      */
     public SuccessType createSuccessType() {
         return new SuccessType();
@@ -382,7 +337,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link GeoLocationRectangleType }
-     * 
      */
     public GeoLocationRectangleType createGeoLocationRectangleType() {
         return new GeoLocationRectangleType();
@@ -390,7 +344,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FreeChildFlagsType }
-     * 
      */
     public FreeChildFlagsType createFreeChildFlagsType() {
         return new FreeChildFlagsType();
@@ -398,7 +351,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BookingIDType }
-     * 
      */
     public BookingIDType createBookingIDType() {
         return new BookingIDType();
@@ -406,7 +358,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link WarningsType }
-     * 
      */
     public WarningsType createWarningsType() {
         return new WarningsType();
@@ -414,7 +365,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DurationDaysType }
-     * 
      */
     public DurationDaysType createDurationDaysType() {
         return new DurationDaysType();
@@ -422,7 +372,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgPriceBreakdownType }
-     * 
      */
     public PkgPriceBreakdownType createPkgPriceBreakdownType() {
         return new PkgPriceBreakdownType();
@@ -430,7 +379,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LocationType }
-     * 
      */
     public LocationType createLocationType() {
         return new LocationType();
@@ -438,7 +386,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link BoardCodesType }
-     * 
      */
     public BoardCodesType createBoardCodesType() {
         return new BoardCodesType();
@@ -446,7 +393,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SolrFieldType }
-     * 
      */
     public SolrFieldType createSolrFieldType() {
         return new SolrFieldType();
@@ -454,7 +400,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RoomStayCandidatesType.RoomStayCandidate }
-     * 
      */
     public RoomStayCandidatesType.RoomStayCandidate createRoomStayCandidatesTypeRoomStayCandidate() {
         return new RoomStayCandidatesType.RoomStayCandidate();
@@ -462,7 +407,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgGuestCountType.GuestCount }
-     * 
      */
     public PkgGuestCountType.GuestCount createPkgGuestCountTypeGuestCount() {
         return new PkgGuestCountType.GuestCount();
@@ -470,7 +414,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AwardsType.Award }
-     * 
      */
     public AwardsType.Award createAwardsTypeAward() {
         return new AwardsType.Award();
@@ -478,7 +421,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AvailabilitySearchResponseType.Availability.AvailableValue }
-     * 
      */
     public AvailabilitySearchResponseType.Availability.AvailableValue createAvailabilitySearchResponseTypeAvailabilityAvailableValue() {
         return new AvailabilitySearchResponseType.Availability.AvailableValue();
@@ -486,7 +428,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link HotelOfferType.Rooms }
-     * 
      */
     public HotelOfferType.Rooms createHotelOfferTypeRooms() {
         return new HotelOfferType.Rooms();
@@ -494,7 +435,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ScoreValuesType.ScoreValue }
-     * 
      */
     public ScoreValuesType.ScoreValue createScoreValuesTypeScoreValue() {
         return new ScoreValuesType.ScoreValue();
@@ -502,7 +442,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FacetSearchResponseType.Facet.FacetCount }
-     * 
      */
     public FacetSearchResponseType.Facet.FacetCount createFacetSearchResponseTypeFacetFacetCount() {
         return new FacetSearchResponseType.Facet.FacetCount();
@@ -510,7 +449,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.RequestorID }
-     * 
      */
     public SourceType.RequestorID createSourceTypeRequestorID() {
         return new SourceType.RequestorID();
@@ -518,7 +456,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.Position }
-     * 
      */
     public SourceType.Position createSourceTypePosition() {
         return new SourceType.Position();
@@ -526,7 +463,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.BookingChannel }
-     * 
      */
     public SourceType.BookingChannel createSourceTypeBookingChannel() {
         return new SourceType.BookingChannel();
@@ -534,7 +470,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgValueMatchType.PriceInfo.PriceBreakdown }
-     * 
      */
     public PkgValueMatchType.PriceInfo.PriceBreakdown createPkgValueMatchTypePriceInfoPriceBreakdown() {
         return new PkgValueMatchType.PriceInfo.PriceBreakdown();
@@ -542,7 +477,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.AdultGroupAge }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.AdultGroupAge createPkgSearchCriteriaTypePkgCriterionAdultGroupAge() {
         return new PkgSearchCriteriaType.PkgCriterion.AdultGroupAge();
@@ -550,7 +484,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.StayDateRange }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.StayDateRange createPkgSearchCriteriaTypePkgCriterionStayDateRange() {
         return new PkgSearchCriteriaType.PkgCriterion.StayDateRange();
@@ -558,7 +491,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.CommercialDestinations }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.CommercialDestinations createPkgSearchCriteriaTypePkgCriterionCommercialDestinations() {
         return new PkgSearchCriteriaType.PkgCriterion.CommercialDestinations();
@@ -566,7 +498,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.DestinationCategories }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.DestinationCategories createPkgSearchCriteriaTypePkgCriterionDestinationCategories() {
         return new PkgSearchCriteriaType.PkgCriterion.DestinationCategories();
@@ -574,7 +505,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.ResortCategories }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.ResortCategories createPkgSearchCriteriaTypePkgCriterionResortCategories() {
         return new PkgSearchCriteriaType.PkgCriterion.ResortCategories();
@@ -582,7 +512,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.TimeInterval }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.TimeInterval createPkgSearchCriteriaTypePkgCriterionTimeInterval() {
         return new PkgSearchCriteriaType.PkgCriterion.TimeInterval();
@@ -590,7 +519,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion.Option }
-     * 
      */
     public PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion.Option createPkgSearchCriteriaTypePkgCriterionAdditionalCriteriaCriterionOption() {
         return new PkgSearchCriteriaType.PkgCriterion.AdditionalCriteria.Criterion.Option();
@@ -598,7 +526,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReturnContentType.FacetFieldList }
-     * 
      */
     public ReturnContentType.FacetFieldList createReturnContentTypeFacetFieldList() {
         return new ReturnContentType.FacetFieldList();
@@ -606,7 +533,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReturnContentType.AvailabilityFieldList }
-     * 
      */
     public ReturnContentType.AvailabilityFieldList createReturnContentTypeAvailabilityFieldList() {
         return new ReturnContentType.AvailabilityFieldList();
@@ -614,7 +540,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReturnContentType.AvailableDate }
-     * 
      */
     public ReturnContentType.AvailableDate createReturnContentTypeAvailableDate() {
         return new ReturnContentType.AvailableDate();
@@ -622,7 +547,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SortResultsType.SortResult }
-     * 
      */
     public SortResultsType.SortResult createSortResultsTypeSortResult() {
         return new SortResultsType.SortResult();

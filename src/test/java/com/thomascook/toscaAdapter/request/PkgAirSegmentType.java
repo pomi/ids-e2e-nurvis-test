@@ -8,25 +8,20 @@
 
 package com.thomascook.toscaAdapter.request;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Provides details of an air segment
- * 
+ * <p>
  * <p>Java class for PkgAirSegmentType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgAirSegmentType">
  *   &lt;complexContent>
@@ -70,73 +65,66 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgAirSegmentType", propOrder = {
-    "supplementCharges",
-    "availableSeats",
-    "passengers"
+        "supplementCharges",
+        "availableSeats",
+        "passengers"
 })
 public class PkgAirSegmentType
-    extends FlightSegmentBaseType
-{
+        extends FlightSegmentBaseType {
 
     @XmlElement(name = "SupplementCharges")
-    protected List<ChargesType> supplementCharges;
+    private List<ChargesType> supplementCharges;
     @XmlElement(name = "AvailableSeats")
-    protected AvailableSeats availableSeats;
+    private AvailableSeats availableSeats;
     @XmlElement(name = "Passengers")
-    protected Passengers passengers;
+    private Passengers passengers;
     @XmlAttribute(name = "CheckInDate")
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar checkInDate;
+    private XMLGregorianCalendar checkInDate;
     @XmlAttribute(name = "Type")
-    protected String type;
+    private String type;
     @XmlAttribute(name = "DepartureDay")
-    protected DayOfWeekType departureDay;
+    private DayOfWeekType departureDay;
     @XmlAttribute(name = "TravelCode")
-    protected String travelCode;
+    private String travelCode;
     @XmlAttribute(name = "Duration")
-    protected Duration duration;
+    private Duration duration;
 
     /**
      * Gets the value of the supplementCharges property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the supplementCharges property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSupplementCharges().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ChargesType }
-     * 
-     * 
      */
     public List<ChargesType> getSupplementCharges() {
         if (supplementCharges == null) {
-            supplementCharges = new ArrayList<ChargesType>();
+            supplementCharges = new ArrayList<>();
         }
         return this.supplementCharges;
     }
 
     /**
      * Gets the value of the availableSeats property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AvailableSeats }
-     *     
+     *
+     * @return possible object is
+     * {@link AvailableSeats }
      */
     public AvailableSeats getAvailableSeats() {
         return availableSeats;
@@ -144,11 +132,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the availableSeats property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AvailableSeats }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AvailableSeats }
      */
     public void setAvailableSeats(AvailableSeats value) {
         this.availableSeats = value;
@@ -156,11 +142,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the passengers property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Passengers }
-     *     
+     *
+     * @return possible object is
+     * {@link Passengers }
      */
     public Passengers getPassengers() {
         return passengers;
@@ -168,11 +152,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the passengers property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Passengers }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Passengers }
      */
     public void setPassengers(Passengers value) {
         this.passengers = value;
@@ -180,11 +162,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the checkInDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getCheckInDate() {
         return checkInDate;
@@ -192,11 +172,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the checkInDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setCheckInDate(XMLGregorianCalendar value) {
         this.checkInDate = value;
@@ -204,11 +182,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -216,11 +192,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;
@@ -228,11 +202,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the departureDay property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DayOfWeekType }
-     *     
+     *
+     * @return possible object is
+     * {@link DayOfWeekType }
      */
     public DayOfWeekType getDepartureDay() {
         return departureDay;
@@ -240,11 +212,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the departureDay property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DayOfWeekType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DayOfWeekType }
      */
     public void setDepartureDay(DayOfWeekType value) {
         this.departureDay = value;
@@ -252,11 +222,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the travelCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelCode() {
         return travelCode;
@@ -264,11 +232,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the travelCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelCode(String value) {
         this.travelCode = value;
@@ -276,11 +242,9 @@ public class PkgAirSegmentType
 
     /**
      * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Duration }
-     *     
+     *
+     * @return possible object is
+     * {@link Duration }
      */
     public Duration getDuration() {
         return duration;
@@ -288,11 +252,9 @@ public class PkgAirSegmentType
 
     /**
      * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Duration }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Duration }
      */
     public void setDuration(Duration value) {
         this.duration = value;
@@ -301,9 +263,9 @@ public class PkgAirSegmentType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -315,43 +277,39 @@ public class PkgAirSegmentType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "seatAvailability"
+            "seatAvailability"
     })
     public static class AvailableSeats {
 
         @XmlElement(name = "SeatAvailability", required = true)
-        protected List<SeatAvailabilityType> seatAvailability;
+        List<SeatAvailabilityType> seatAvailability;
 
         /**
          * Gets the value of the seatAvailability property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the seatAvailability property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSeatAvailability().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SeatAvailabilityType }
-         * 
-         * 
          */
         public List<SeatAvailabilityType> getSeatAvailability() {
             if (seatAvailability == null) {
-                seatAvailability = new ArrayList<SeatAvailabilityType>();
+                seatAvailability = new ArrayList<>();
             }
             return this.seatAvailability;
         }
@@ -361,9 +319,9 @@ public class PkgAirSegmentType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -373,41 +331,37 @@ public class PkgAirSegmentType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Passengers {
 
         @XmlAttribute(name = "PassengerRPH")
-        protected List<String> passengerRPH;
+        List<String> passengerRPH;
 
         /**
          * Gets the value of the passengerRPH property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the passengerRPH property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPassengerRPH().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         * 
-         * 
          */
         public List<String> getPassengerRPH() {
             if (passengerRPH == null) {
-                passengerRPH = new ArrayList<String>();
+                passengerRPH = new ArrayList<>();
             }
             return this.passengerRPH;
         }

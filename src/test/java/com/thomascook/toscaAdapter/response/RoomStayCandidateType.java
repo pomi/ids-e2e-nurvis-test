@@ -8,25 +8,19 @@
 
 package com.thomascook.toscaAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Used to identify available room products.
- * 
+ * <p>
  * <p>Java class for RoomStayCandidateType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomStayCandidateType">
  *   &lt;complexContent>
@@ -44,80 +38,76 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomStayCandidateType", propOrder = {
-    "guestCounts",
-    "roomAmenity"
+        "guestCounts",
+        "roomAmenity"
 })
 @XmlSeeAlso({
-    PkgRoomInventoryType.class,
-    RoomProfileType.class
+        PkgRoomInventoryType.class,
+        RoomProfileType.class
 })
 public class RoomStayCandidateType {
 
     @XmlElement(name = "GuestCounts")
-    protected GuestCountType guestCounts;
+    private GuestCountType guestCounts;
     @XmlElement(name = "RoomAmenity")
-    protected List<RoomAmenityPrefType> roomAmenity;
+    private List<RoomAmenityPrefType> roomAmenity;
     @XmlAttribute(name = "RPH")
-    protected String rph;
+    private String rph;
     @XmlAttribute(name = "RatePlanCandidateRPH")
-    protected String ratePlanCandidateRPH;
+    private String ratePlanCandidateRPH;
     @XmlAttribute(name = "BookingCode")
-    protected String bookingCode;
+    private String bookingCode;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
+    private XMLGregorianCalendar effectiveDate;
     @XmlAttribute(name = "ExpireDate")
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
+    private XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "RoomType")
-    protected String roomType;
+    private String roomType;
     @XmlAttribute(name = "RoomTypeCode")
-    protected String roomTypeCode;
+    private String roomTypeCode;
     @XmlAttribute(name = "RoomCategory")
-    protected String roomCategory;
+    private String roomCategory;
     @XmlAttribute(name = "RoomID")
-    protected String roomID;
+    private String roomID;
     @XmlAttribute(name = "Floor")
-    protected Integer floor;
+    private Integer floor;
     @XmlAttribute(name = "InvBlockCode")
-    protected String invBlockCode;
+    private String invBlockCode;
     @XmlAttribute(name = "RoomLocationCode")
-    protected String roomLocationCode;
+    private String roomLocationCode;
     @XmlAttribute(name = "RoomViewCode")
-    protected String roomViewCode;
+    private String roomViewCode;
     @XmlAttribute(name = "BedTypeCode")
-    protected String bedTypeCode;
+    private String bedTypeCode;
     @XmlAttribute(name = "NonSmoking")
-    protected Boolean nonSmoking;
+    private Boolean nonSmoking;
     @XmlAttribute(name = "Configuration")
-    protected String configuration;
+    private String configuration;
     @XmlAttribute(name = "SizeMeasurement")
-    protected String sizeMeasurement;
+    private String sizeMeasurement;
     @XmlAttribute(name = "Quantity")
-    protected Integer quantity;
+    private Integer quantity;
     @XmlAttribute(name = "Composite")
-    protected Boolean composite;
+    private Boolean composite;
     @XmlAttribute(name = "RoomClassificationCode")
-    protected String roomClassificationCode;
+    private String roomClassificationCode;
     @XmlAttribute(name = "RoomArchitectureCode")
-    protected String roomArchitectureCode;
+    private String roomArchitectureCode;
     @XmlAttribute(name = "PromotionCode")
-    protected String promotionCode;
+    private String promotionCode;
     @XmlAttribute(name = "PromotionVendorCode")
-    protected List<String> promotionVendorCode;
+    private List<String> promotionVendorCode;
 
     /**
      * Gets the value of the guestCounts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GuestCountType }
-     *     
+     *
+     * @return possible object is
+     * {@link GuestCountType }
      */
     public GuestCountType getGuestCounts() {
         return guestCounts;
@@ -125,11 +115,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the guestCounts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GuestCountType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GuestCountType }
      */
     public void setGuestCounts(GuestCountType value) {
         this.guestCounts = value;
@@ -137,40 +125,36 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomAmenity property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomAmenity property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomAmenity().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomAmenityPrefType }
-     * 
-     * 
      */
     public List<RoomAmenityPrefType> getRoomAmenity() {
         if (roomAmenity == null) {
-            roomAmenity = new ArrayList<RoomAmenityPrefType>();
+            roomAmenity = new ArrayList<>();
         }
         return this.roomAmenity;
     }
 
     /**
      * Gets the value of the rph property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRPH() {
         return rph;
@@ -178,11 +162,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the rph property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -190,11 +172,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the ratePlanCandidateRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRatePlanCandidateRPH() {
         return ratePlanCandidateRPH;
@@ -202,11 +182,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the ratePlanCandidateRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRatePlanCandidateRPH(String value) {
         this.ratePlanCandidateRPH = value;
@@ -214,11 +192,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the bookingCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBookingCode() {
         return bookingCode;
@@ -226,11 +202,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the bookingCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBookingCode(String value) {
         this.bookingCode = value;
@@ -238,11 +212,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getEffectiveDate() {
         return effectiveDate;
@@ -250,11 +222,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setEffectiveDate(XMLGregorianCalendar value) {
         this.effectiveDate = value;
@@ -262,11 +232,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getExpireDate() {
         return expireDate;
@@ -274,11 +242,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setExpireDate(XMLGregorianCalendar value) {
         this.expireDate = value;
@@ -286,11 +252,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomType() {
         return roomType;
@@ -298,11 +262,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomType(String value) {
         this.roomType = value;
@@ -310,11 +272,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomTypeCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomTypeCode() {
         return roomTypeCode;
@@ -322,11 +282,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomTypeCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomTypeCode(String value) {
         this.roomTypeCode = value;
@@ -334,11 +292,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomCategory() {
         return roomCategory;
@@ -346,11 +302,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomCategory(String value) {
         this.roomCategory = value;
@@ -358,11 +312,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomID() {
         return roomID;
@@ -370,11 +322,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomID(String value) {
         this.roomID = value;
@@ -382,11 +332,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the floor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getFloor() {
         return floor;
@@ -394,11 +342,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the floor property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setFloor(Integer value) {
         this.floor = value;
@@ -406,11 +352,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the invBlockCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInvBlockCode() {
         return invBlockCode;
@@ -418,11 +362,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the invBlockCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInvBlockCode(String value) {
         this.invBlockCode = value;
@@ -430,11 +372,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomLocationCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomLocationCode() {
         return roomLocationCode;
@@ -442,11 +382,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomLocationCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomLocationCode(String value) {
         this.roomLocationCode = value;
@@ -454,11 +392,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomViewCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomViewCode() {
         return roomViewCode;
@@ -466,11 +402,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomViewCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomViewCode(String value) {
         this.roomViewCode = value;
@@ -478,11 +412,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the bedTypeCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBedTypeCode() {
         return bedTypeCode;
@@ -490,11 +422,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the bedTypeCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBedTypeCode(String value) {
         this.bedTypeCode = value;
@@ -502,11 +432,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the nonSmoking property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isNonSmoking() {
         return nonSmoking;
@@ -514,11 +442,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the nonSmoking property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setNonSmoking(Boolean value) {
         this.nonSmoking = value;
@@ -526,11 +452,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the configuration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConfiguration() {
         return configuration;
@@ -538,11 +462,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the configuration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConfiguration(String value) {
         this.configuration = value;
@@ -550,11 +472,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the sizeMeasurement property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSizeMeasurement() {
         return sizeMeasurement;
@@ -562,11 +482,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the sizeMeasurement property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSizeMeasurement(String value) {
         this.sizeMeasurement = value;
@@ -574,11 +492,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getQuantity() {
         return quantity;
@@ -586,11 +502,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setQuantity(Integer value) {
         this.quantity = value;
@@ -598,11 +512,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the composite property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isComposite() {
         return composite;
@@ -610,11 +522,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the composite property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setComposite(Boolean value) {
         this.composite = value;
@@ -622,11 +532,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomClassificationCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomClassificationCode() {
         return roomClassificationCode;
@@ -634,11 +542,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomClassificationCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomClassificationCode(String value) {
         this.roomClassificationCode = value;
@@ -646,11 +552,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the roomArchitectureCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomArchitectureCode() {
         return roomArchitectureCode;
@@ -658,11 +562,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the roomArchitectureCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomArchitectureCode(String value) {
         this.roomArchitectureCode = value;
@@ -670,11 +572,9 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the promotionCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPromotionCode() {
         return promotionCode;
@@ -682,11 +582,9 @@ public class RoomStayCandidateType {
 
     /**
      * Sets the value of the promotionCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPromotionCode(String value) {
         this.promotionCode = value;
@@ -694,29 +592,27 @@ public class RoomStayCandidateType {
 
     /**
      * Gets the value of the promotionVendorCode property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPromotionVendorCode().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getPromotionVendorCode() {
         if (promotionVendorCode == null) {
-            promotionVendorCode = new ArrayList<String>();
+            promotionVendorCode = new ArrayList<>();
         }
         return this.promotionVendorCode;
     }

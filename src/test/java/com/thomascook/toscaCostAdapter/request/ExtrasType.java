@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaCostAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Requests an optional service which is not included in the standard package but may be booked in addition.
- * 
+ * <p>
  * <p>Java class for ExtrasType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ExtrasType">
  *   &lt;complexContent>
@@ -38,35 +34,30 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtrasType", propOrder = {
-    "date",
-    "passengerCounts",
-    "additionalInfo"
+        "date",
+        "passengerCounts",
+        "additionalInfo"
 })
 public class ExtrasType
-    extends ExtrasCoreType
-{
+        extends ExtrasCoreType {
 
     @XmlElement(name = "Date")
-    protected DateTimeSpanType date;
+    private DateTimeSpanType date;
     @XmlElement(name = "PassengerCounts")
-    protected CustomerCountsType passengerCounts;
+    private CustomerCountsType passengerCounts;
     @XmlElement(name = "AdditionalInfo")
-    protected String additionalInfo;
+    private String additionalInfo;
     @XmlAttribute(name = "ListOfPassengerRPH")
-    protected List<String> listOfPassengerRPH;
+    private List<String> listOfPassengerRPH;
 
     /**
      * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DateTimeSpanType }
-     *     
+     *
+     * @return possible object is
+     * {@link DateTimeSpanType }
      */
     public DateTimeSpanType getDate() {
         return date;
@@ -74,11 +65,9 @@ public class ExtrasType
 
     /**
      * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DateTimeSpanType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DateTimeSpanType }
      */
     public void setDate(DateTimeSpanType value) {
         this.date = value;
@@ -86,11 +75,9 @@ public class ExtrasType
 
     /**
      * Gets the value of the passengerCounts property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CustomerCountsType }
-     *     
+     *
+     * @return possible object is
+     * {@link CustomerCountsType }
      */
     public CustomerCountsType getPassengerCounts() {
         return passengerCounts;
@@ -98,11 +85,9 @@ public class ExtrasType
 
     /**
      * Sets the value of the passengerCounts property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CustomerCountsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CustomerCountsType }
      */
     public void setPassengerCounts(CustomerCountsType value) {
         this.passengerCounts = value;
@@ -110,11 +95,9 @@ public class ExtrasType
 
     /**
      * Gets the value of the additionalInfo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAdditionalInfo() {
         return additionalInfo;
@@ -122,11 +105,9 @@ public class ExtrasType
 
     /**
      * Sets the value of the additionalInfo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAdditionalInfo(String value) {
         this.additionalInfo = value;
@@ -134,29 +115,27 @@ public class ExtrasType
 
     /**
      * Gets the value of the listOfPassengerRPH property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the listOfPassengerRPH property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getListOfPassengerRPH().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getListOfPassengerRPH() {
         if (listOfPassengerRPH == null) {
-            listOfPassengerRPH = new ArrayList<String>();
+            listOfPassengerRPH = new ArrayList<>();
         }
         return this.listOfPassengerRPH;
     }

@@ -8,21 +8,16 @@
 
 package com.thomascook.content.soa;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -136,40 +131,36 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "h4U",
-    "tos",
-    "giata",
-    "flexitrips",
-    "ecwNurvis"
+        "h4U",
+        "tos",
+        "giata",
+        "flexitrips",
+        "ecwNurvis"
 })
 @XmlRootElement(name = "Request")
 public class Request {
 
     @XmlElement(name = "H4U")
-    protected H4U h4U;
+    private H4U h4U;
     @XmlElement(name = "TOS")
-    protected TOS tos;
+    private TOS tos;
     @XmlElement(name = "GIATA")
-    protected GIATA giata;
+    private GIATA giata;
     @XmlElement(name = "Flexitrips")
-    protected Flexitrips flexitrips;
+    private Flexitrips flexitrips;
     @XmlElement(name = "EcwNurvis")
-    protected EcwNurvis ecwNurvis;
+    private EcwNurvis ecwNurvis;
     @XmlAttribute(name = "Language")
-    protected String language;
+    private String language;
 
     /**
      * Gets the value of the h4U property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link H4U }
-     *     
+     *
+     * @return possible object is
+     * {@link H4U }
      */
     public H4U getH4U() {
         return h4U;
@@ -177,11 +168,9 @@ public class Request {
 
     /**
      * Sets the value of the h4U property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link H4U }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link H4U }
      */
     public void setH4U(H4U value) {
         this.h4U = value;
@@ -189,11 +178,9 @@ public class Request {
 
     /**
      * Gets the value of the tos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TOS }
-     *     
+     *
+     * @return possible object is
+     * {@link TOS }
      */
     public TOS getTOS() {
         return tos;
@@ -201,11 +188,9 @@ public class Request {
 
     /**
      * Sets the value of the tos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TOS }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TOS }
      */
     public void setTOS(TOS value) {
         this.tos = value;
@@ -213,11 +198,9 @@ public class Request {
 
     /**
      * Gets the value of the giata property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GIATA }
-     *     
+     *
+     * @return possible object is
+     * {@link GIATA }
      */
     public GIATA getGIATA() {
         return giata;
@@ -225,11 +208,9 @@ public class Request {
 
     /**
      * Sets the value of the giata property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GIATA }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GIATA }
      */
     public void setGIATA(GIATA value) {
         this.giata = value;
@@ -237,11 +218,9 @@ public class Request {
 
     /**
      * Gets the value of the flexitrips property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Flexitrips }
-     *     
+     *
+     * @return possible object is
+     * {@link Flexitrips }
      */
     public Flexitrips getFlexitrips() {
         return flexitrips;
@@ -249,11 +228,9 @@ public class Request {
 
     /**
      * Sets the value of the flexitrips property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Flexitrips }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Flexitrips }
      */
     public void setFlexitrips(Flexitrips value) {
         this.flexitrips = value;
@@ -261,11 +238,9 @@ public class Request {
 
     /**
      * Gets the value of the ecwNurvis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EcwNurvis }
-     *     
+     *
+     * @return possible object is
+     * {@link EcwNurvis }
      */
     public EcwNurvis getEcwNurvis() {
         return ecwNurvis;
@@ -273,11 +248,9 @@ public class Request {
 
     /**
      * Sets the value of the ecwNurvis property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EcwNurvis }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EcwNurvis }
      */
     public void setEcwNurvis(EcwNurvis value) {
         this.ecwNurvis = value;
@@ -285,11 +258,9 @@ public class Request {
 
     /**
      * Gets the value of the language property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLanguage() {
         if (language == null) {
@@ -301,11 +272,9 @@ public class Request {
 
     /**
      * Sets the value of the language property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLanguage(String value) {
         this.language = value;
@@ -314,9 +283,9 @@ public class Request {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -335,43 +304,39 @@ public class Request {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "_package"
+            "_package"
     })
     public static class EcwNurvis {
 
         @XmlElement(name = "Package")
-        protected List<Package> _package;
+        List<Package> _package;
 
         /**
          * Gets the value of the package property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the package property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPackage().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Package }
-         * 
-         * 
          */
         public List<Package> getPackage() {
             if (_package == null) {
-                _package = new ArrayList<Package>();
+                _package = new ArrayList<>();
             }
             return this._package;
         }
@@ -379,9 +344,9 @@ public class Request {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -390,14 +355,11 @@ public class Request {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class Package
-            extends com.thomascook.content.soa.EcwNurvis
-        {
+                extends com.thomascook.content.soa.EcwNurvis {
 
 
         }
@@ -407,9 +369,9 @@ public class Request {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -431,43 +393,39 @@ public class Request {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "hotel"
+            "hotel"
     })
     public static class Flexitrips {
 
         @XmlElement(name = "Hotel")
-        protected List<Hotel> hotel;
+        List<Hotel> hotel;
 
         /**
          * Gets the value of the hotel property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the hotel property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getHotel().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Hotel }
-         * 
-         * 
          */
         public List<Hotel> getHotel() {
             if (hotel == null) {
-                hotel = new ArrayList<Hotel>();
+                hotel = new ArrayList<>();
             }
             return this.hotel;
         }
@@ -475,9 +433,9 @@ public class Request {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -489,45 +447,40 @@ public class Request {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "room"
+                "room"
         })
         public static class Hotel
-            extends FlexiTripHotel
-        {
+                extends FlexiTripHotel {
 
             @XmlElement(name = "Room")
-            protected List<RoomType> room;
+            List<RoomType> room;
 
             /**
              * Gets the value of the room property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the room property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoom().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomType }
-             * 
-             * 
              */
             public List<RoomType> getRoom() {
                 if (room == null) {
-                    room = new ArrayList<RoomType>();
+                    room = new ArrayList<>();
                 }
                 return this.room;
             }
@@ -539,9 +492,9 @@ public class Request {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -563,43 +516,39 @@ public class Request {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "_package"
+            "_package"
     })
     public static class GIATA {
 
         @XmlElement(name = "Package")
-        protected List<Package> _package;
+        List<Package> _package;
 
         /**
          * Gets the value of the package property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the package property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPackage().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Package }
-         * 
-         * 
          */
         public List<Package> getPackage() {
             if (_package == null) {
-                _package = new ArrayList<Package>();
+                _package = new ArrayList<>();
             }
             return this._package;
         }
@@ -607,9 +556,9 @@ public class Request {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -621,45 +570,40 @@ public class Request {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "room"
+                "room"
         })
         public static class Package
-            extends GIATAPackage
-        {
+                extends GIATAPackage {
 
             @XmlElement(name = "Room")
-            protected List<RoomType> room;
+            List<RoomType> room;
 
             /**
              * Gets the value of the room property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the room property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoom().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomType }
-             * 
-             * 
              */
             public List<RoomType> getRoom() {
                 if (room == null) {
-                    room = new ArrayList<RoomType>();
+                    room = new ArrayList<>();
                 }
                 return this.room;
             }
@@ -671,9 +615,9 @@ public class Request {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -695,43 +639,39 @@ public class Request {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "hotel"
+            "hotel"
     })
     public static class H4U {
 
         @XmlElement(name = "Hotel")
-        protected List<Hotel> hotel;
+        List<Hotel> hotel;
 
         /**
          * Gets the value of the hotel property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the hotel property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getHotel().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Hotel }
-         * 
-         * 
          */
         public List<Hotel> getHotel() {
             if (hotel == null) {
-                hotel = new ArrayList<Hotel>();
+                hotel = new ArrayList<>();
             }
             return this.hotel;
         }
@@ -739,9 +679,9 @@ public class Request {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -753,45 +693,40 @@ public class Request {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "room"
+                "room"
         })
         public static class Hotel
-            extends H4UHotel
-        {
+                extends H4UHotel {
 
             @XmlElement(name = "Room")
-            protected List<RoomType> room;
+            List<RoomType> room;
 
             /**
              * Gets the value of the room property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the room property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoom().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomType }
-             * 
-             * 
              */
             public List<RoomType> getRoom() {
                 if (room == null) {
-                    room = new ArrayList<RoomType>();
+                    room = new ArrayList<>();
                 }
                 return this.room;
             }
@@ -803,9 +738,9 @@ public class Request {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -827,43 +762,39 @@ public class Request {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "_package"
+            "_package"
     })
     public static class TOS {
 
         @XmlElement(name = "Package")
-        protected List<Package> _package;
+        List<Package> _package;
 
         /**
          * Gets the value of the package property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the package property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPackage().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Package }
-         * 
-         * 
          */
         public List<Package> getPackage() {
             if (_package == null) {
-                _package = new ArrayList<Package>();
+                _package = new ArrayList<>();
             }
             return this._package;
         }
@@ -871,9 +802,9 @@ public class Request {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -885,45 +816,40 @@ public class Request {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "room"
+                "room"
         })
         public static class Package
-            extends TOSPackage
-        {
+                extends TOSPackage {
 
             @XmlElement(name = "Room")
-            protected List<RoomType> room;
+            List<RoomType> room;
 
             /**
              * Gets the value of the room property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the room property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoom().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomType }
-             * 
-             * 
              */
             public List<RoomType> getRoom() {
                 if (room == null) {
-                    room = new ArrayList<RoomType>();
+                    room = new ArrayList<>();
                 }
                 return this.room;
             }

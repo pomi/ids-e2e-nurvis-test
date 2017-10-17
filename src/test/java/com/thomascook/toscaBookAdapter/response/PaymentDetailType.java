@@ -8,23 +8,18 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Details of payment.
- * 
+ * <p>
  * <p>Java class for PaymentDetailType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PaymentDetailType">
  *   &lt;complexContent>
@@ -45,27 +40,22 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentDetailType", propOrder = {
-    "paymentAmount"
+        "paymentAmount"
 })
 public class PaymentDetailType
-    extends PaymentFormType
-{
+        extends PaymentFormType {
 
     @XmlElement(name = "PaymentAmount")
-    protected PaymentAmount paymentAmount;
+    private PaymentAmount paymentAmount;
 
     /**
      * Gets the value of the paymentAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PaymentAmount }
-     *     
+     *
+     * @return possible object is
+     * {@link PaymentAmount }
      */
     public PaymentAmount getPaymentAmount() {
         return paymentAmount;
@@ -73,11 +63,9 @@ public class PaymentDetailType
 
     /**
      * Sets the value of the paymentAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PaymentAmount }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PaymentAmount }
      */
     public void setPaymentAmount(PaymentAmount value) {
         this.paymentAmount = value;
@@ -86,9 +74,9 @@ public class PaymentDetailType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -99,30 +87,26 @@ public class PaymentDetailType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class PaymentAmount {
 
         @XmlAttribute(name = "ApprovalCode")
-        protected String approvalCode;
+        String approvalCode;
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the approvalCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getApprovalCode() {
             return approvalCode;
@@ -130,11 +114,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the approvalCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setApprovalCode(String value) {
             this.approvalCode = value;
@@ -142,11 +124,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -154,11 +134,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -166,11 +144,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -178,11 +154,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -190,11 +164,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -202,11 +174,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;

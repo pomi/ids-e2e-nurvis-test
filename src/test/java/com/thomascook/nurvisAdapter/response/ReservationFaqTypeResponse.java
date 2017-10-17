@@ -8,22 +8,17 @@
 
 package com.thomascook.nurvisAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * 
- *                 Preferences
- *             
- * 
+ * Preferences
+ * <p>
+ * <p>
  * <p>Java class for Reservation-FaqType-Response complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-FaqType-Response">
  *   &lt;complexContent>
@@ -69,36 +64,32 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-FaqType-Response", propOrder = {
-    "code",
-    "textQ",
-    "textV",
-    "textVLong"
+        "code",
+        "textQ",
+        "textV",
+        "textVLong"
 })
 public class ReservationFaqTypeResponse {
 
     @XmlElement(name = "Code", required = true)
-    protected String code;
+    private String code;
     @XmlElement(name = "TextQ", required = true)
-    protected String textQ;
+    private String textQ;
     @XmlElement(name = "TextV")
-    protected String textV;
+    private String textV;
     @XmlElement(name = "TextVLong")
-    protected String textVLong;
+    private String textVLong;
     @XmlAttribute(name = "Confirmed")
-    protected String confirmed;
+    private String confirmed;
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -106,11 +97,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -118,11 +107,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Gets the value of the textQ property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTextQ() {
         return textQ;
@@ -130,11 +117,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Sets the value of the textQ property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTextQ(String value) {
         this.textQ = value;
@@ -142,11 +127,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Gets the value of the textV property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTextV() {
         return textV;
@@ -154,11 +137,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Sets the value of the textV property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTextV(String value) {
         this.textV = value;
@@ -166,11 +147,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Gets the value of the textVLong property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTextVLong() {
         return textVLong;
@@ -178,11 +157,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Sets the value of the textVLong property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTextVLong(String value) {
         this.textVLong = value;
@@ -190,11 +167,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Gets the value of the confirmed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConfirmed() {
         return confirmed;
@@ -202,11 +177,9 @@ public class ReservationFaqTypeResponse {
 
     /**
      * Sets the value of the confirmed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConfirmed(String value) {
         this.confirmed = value;

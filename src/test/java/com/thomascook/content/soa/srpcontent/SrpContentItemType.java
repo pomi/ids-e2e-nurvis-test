@@ -8,13 +8,6 @@
 
 package com.thomascook.content.soa.srpcontent;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 import com.thomascook.content.bazaarvoice.BazaarVoice;
 import com.thomascook.content.common.PropertyType;
 import com.thomascook.content.holidaycheck.Holidaycheck;
@@ -22,12 +15,16 @@ import com.thomascook.content.soa.SrpSearchResult;
 import com.thomascook.content.tripadvisor.Tripadvisor;
 import com.thomascook.content.zoover.Zoover;
 
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * <p>Java class for SrpContentItemType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SrpContentItemType">
  *   &lt;complexContent>
@@ -52,30 +49,25 @@ import com.thomascook.content.zoover.Zoover;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SrpContentItemType", propOrder = {
-    "ratings"
+        "ratings"
 })
 @XmlSeeAlso({
-    SrpSearchResult.class
+        SrpSearchResult.class
 })
 public class SrpContentItemType
-    extends PropertyType
-{
+        extends PropertyType {
 
     @XmlElement(name = "Ratings")
-    protected Ratings ratings;
+    private Ratings ratings;
 
     /**
      * Gets the value of the ratings property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Ratings }
-     *     
+     *
+     * @return possible object is
+     * {@link Ratings }
      */
     public Ratings getRatings() {
         return ratings;
@@ -83,11 +75,9 @@ public class SrpContentItemType
 
     /**
      * Sets the value of the ratings property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Ratings }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Ratings }
      */
     public void setRatings(Ratings value) {
         this.ratings = value;
@@ -96,9 +86,9 @@ public class SrpContentItemType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -113,34 +103,30 @@ public class SrpContentItemType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "tripadvisor",
-        "bazaarVoice",
-        "zoover",
-        "holidaycheck"
+            "tripadvisor",
+            "bazaarVoice",
+            "zoover",
+            "holidaycheck"
     })
     public static class Ratings {
 
         @XmlElement(name = "Tripadvisor", namespace = "http://www.thomascook.com/content/tripadvisor")
-        protected Tripadvisor tripadvisor;
+        Tripadvisor tripadvisor;
         @XmlElement(name = "BazaarVoice", namespace = "http://www.thomascook.com/content/bazaarvoice")
-        protected BazaarVoice bazaarVoice;
+        BazaarVoice bazaarVoice;
         @XmlElement(name = "Zoover", namespace = "http://www.thomascook.com/content/zoover")
-        protected List<Zoover> zoover;
+        List<Zoover> zoover;
         @XmlElement(name = "Holidaycheck", namespace = "http://www.thomascook.com/content/holidaycheck")
-        protected Holidaycheck holidaycheck;
+        Holidaycheck holidaycheck;
 
         /**
          * Gets the value of the tripadvisor property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Tripadvisor }
-         *     
+         *
+         * @return possible object is
+         * {@link Tripadvisor }
          */
         public Tripadvisor getTripadvisor() {
             return tripadvisor;
@@ -148,11 +134,9 @@ public class SrpContentItemType
 
         /**
          * Sets the value of the tripadvisor property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Tripadvisor }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Tripadvisor }
          */
         public void setTripadvisor(Tripadvisor value) {
             this.tripadvisor = value;
@@ -160,11 +144,9 @@ public class SrpContentItemType
 
         /**
          * Gets the value of the bazaarVoice property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BazaarVoice }
-         *     
+         *
+         * @return possible object is
+         * {@link BazaarVoice }
          */
         public BazaarVoice getBazaarVoice() {
             return bazaarVoice;
@@ -172,11 +154,9 @@ public class SrpContentItemType
 
         /**
          * Sets the value of the bazaarVoice property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BazaarVoice }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BazaarVoice }
          */
         public void setBazaarVoice(BazaarVoice value) {
             this.bazaarVoice = value;
@@ -184,40 +164,36 @@ public class SrpContentItemType
 
         /**
          * Gets the value of the zoover property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the zoover property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getZoover().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Zoover }
-         * 
-         * 
          */
         public List<Zoover> getZoover() {
             if (zoover == null) {
-                zoover = new ArrayList<Zoover>();
+                zoover = new ArrayList<>();
             }
             return this.zoover;
         }
 
         /**
          * Gets the value of the holidaycheck property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Holidaycheck }
-         *     
+         *
+         * @return possible object is
+         * {@link Holidaycheck }
          */
         public Holidaycheck getHolidaycheck() {
             return holidaycheck;
@@ -225,11 +201,9 @@ public class SrpContentItemType
 
         /**
          * Sets the value of the holidaycheck property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Holidaycheck }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Holidaycheck }
          */
         public void setHolidaycheck(Holidaycheck value) {
             this.holidaycheck = value;

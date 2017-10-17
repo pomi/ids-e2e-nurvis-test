@@ -1,4 +1,4 @@
-@Tosca
+@Ignore
 Feature: Create booking for UK market and put it on OnTour sftp
 
   Scenario: Create package holiday

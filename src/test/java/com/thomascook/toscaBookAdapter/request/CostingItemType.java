@@ -8,25 +8,20 @@
 
 package com.thomascook.toscaBookAdapter.request;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 
 /**
  * Details of an invoice item
- * 
+ * <p>
  * <p>Java class for CostingItemType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CostingItemType">
  *   &lt;complexContent>
@@ -88,50 +83,46 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CostingItemType", propOrder = {
-    "unitCost",
-    "unitPrice",
-    "extendedCost",
-    "extendedPrice",
-    "commission"
+        "unitCost",
+        "unitPrice",
+        "extendedCost",
+        "extendedPrice",
+        "commission"
 })
 public class CostingItemType {
 
     @XmlElement(name = "UnitCost")
-    protected UnitCost unitCost;
+    private UnitCost unitCost;
     @XmlElement(name = "UnitPrice")
-    protected UnitPrice unitPrice;
+    private UnitPrice unitPrice;
     @XmlElement(name = "ExtendedCost")
-    protected ExtendedCost extendedCost;
+    private ExtendedCost extendedCost;
     @XmlElement(name = "ExtendedPrice")
-    protected ExtendedPrice extendedPrice;
+    private ExtendedPrice extendedPrice;
     @XmlElement(name = "Commission")
-    protected Commission commission;
+    private Commission commission;
     @XmlAttribute(name = "Description")
-    protected String description;
+    private String description;
     @XmlAttribute(name = "InventoryItemRPH")
-    protected String inventoryItemRPH;
+    private String inventoryItemRPH;
     @XmlAttribute(name = "PassengerRPH")
-    protected String passengerRPH;
+    private String passengerRPH;
     @XmlAttribute(name = "CostBasis")
-    protected String costBasis;
+    private String costBasis;
     @XmlAttribute(name = "ExtraRPH")
-    protected String extraRPH;
+    private String extraRPH;
     @XmlAttribute(name = "Quantity")
     @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger quantity;
+    private BigInteger quantity;
 
     /**
      * Gets the value of the unitCost property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UnitCost }
-     *     
+     *
+     * @return possible object is
+     * {@link UnitCost }
      */
     public UnitCost getUnitCost() {
         return unitCost;
@@ -139,11 +130,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the unitCost property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UnitCost }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link UnitCost }
      */
     public void setUnitCost(UnitCost value) {
         this.unitCost = value;
@@ -151,11 +140,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the unitPrice property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UnitPrice }
-     *     
+     *
+     * @return possible object is
+     * {@link UnitPrice }
      */
     public UnitPrice getUnitPrice() {
         return unitPrice;
@@ -163,11 +150,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the unitPrice property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UnitPrice }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link UnitPrice }
      */
     public void setUnitPrice(UnitPrice value) {
         this.unitPrice = value;
@@ -175,11 +160,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the extendedCost property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExtendedCost }
-     *     
+     *
+     * @return possible object is
+     * {@link ExtendedCost }
      */
     public ExtendedCost getExtendedCost() {
         return extendedCost;
@@ -187,11 +170,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the extendedCost property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExtendedCost }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExtendedCost }
      */
     public void setExtendedCost(ExtendedCost value) {
         this.extendedCost = value;
@@ -199,11 +180,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the extendedPrice property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExtendedPrice }
-     *     
+     *
+     * @return possible object is
+     * {@link ExtendedPrice }
      */
     public ExtendedPrice getExtendedPrice() {
         return extendedPrice;
@@ -211,11 +190,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the extendedPrice property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExtendedPrice }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExtendedPrice }
      */
     public void setExtendedPrice(ExtendedPrice value) {
         this.extendedPrice = value;
@@ -223,11 +200,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the commission property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Commission }
-     *     
+     *
+     * @return possible object is
+     * {@link Commission }
      */
     public Commission getCommission() {
         return commission;
@@ -235,11 +210,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the commission property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Commission }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Commission }
      */
     public void setCommission(Commission value) {
         this.commission = value;
@@ -247,11 +220,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -259,11 +230,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -271,11 +240,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the inventoryItemRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInventoryItemRPH() {
         return inventoryItemRPH;
@@ -283,11 +250,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the inventoryItemRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInventoryItemRPH(String value) {
         this.inventoryItemRPH = value;
@@ -295,11 +260,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the passengerRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPassengerRPH() {
         return passengerRPH;
@@ -307,11 +270,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the passengerRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPassengerRPH(String value) {
         this.passengerRPH = value;
@@ -319,11 +280,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the costBasis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCostBasis() {
         return costBasis;
@@ -331,11 +290,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the costBasis property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCostBasis(String value) {
         this.costBasis = value;
@@ -343,11 +300,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the extraRPH property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getExtraRPH() {
         return extraRPH;
@@ -355,11 +310,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the extraRPH property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setExtraRPH(String value) {
         this.extraRPH = value;
@@ -367,11 +320,9 @@ public class CostingItemType {
 
     /**
      * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -379,11 +330,9 @@ public class CostingItemType {
 
     /**
      * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
@@ -392,9 +341,9 @@ public class CostingItemType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -404,35 +353,31 @@ public class CostingItemType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class Commission {
 
         @XmlAttribute(name = "Description")
-        protected String description;
+        String description;
         @XmlAttribute(name = "Rate")
-        protected BigDecimal rate;
+        BigDecimal rate;
         @XmlAttribute(name = "CommissionType")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String commissionType;
+        String commissionType;
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDescription() {
             return description;
@@ -440,11 +385,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDescription(String value) {
             this.description = value;
@@ -452,11 +395,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the rate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getRate() {
             return rate;
@@ -464,11 +405,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the rate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setRate(BigDecimal value) {
             this.rate = value;
@@ -476,11 +415,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the commissionType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCommissionType() {
             return commissionType;
@@ -488,11 +425,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the commissionType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCommissionType(String value) {
             this.commissionType = value;
@@ -500,11 +435,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -512,11 +445,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -524,11 +455,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -536,11 +465,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -548,11 +475,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -560,11 +485,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -575,9 +498,9 @@ public class CostingItemType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -587,28 +510,24 @@ public class CostingItemType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ExtendedCost {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -616,11 +535,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -628,11 +545,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -640,11 +555,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -652,11 +565,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -664,11 +575,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -679,9 +588,9 @@ public class CostingItemType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -691,28 +600,24 @@ public class CostingItemType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class ExtendedPrice {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -720,11 +625,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -732,11 +635,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -744,11 +645,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -756,11 +655,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -768,11 +665,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -783,9 +678,9 @@ public class CostingItemType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -795,28 +690,24 @@ public class CostingItemType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class UnitCost {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -824,11 +715,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -836,11 +725,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -848,11 +735,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -860,11 +745,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -872,11 +755,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -887,9 +768,9 @@ public class CostingItemType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -899,28 +780,24 @@ public class CostingItemType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class UnitPrice {
 
         @XmlAttribute(name = "Amount")
-        protected BigDecimal amount;
+        BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
-        protected String currencyCode;
+        String currencyCode;
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
-        protected BigInteger decimalPlaces;
+        BigInteger decimalPlaces;
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -928,11 +805,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -940,11 +815,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -952,11 +825,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -964,11 +835,9 @@ public class CostingItemType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -976,11 +845,9 @@ public class CostingItemType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;

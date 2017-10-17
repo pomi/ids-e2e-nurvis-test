@@ -8,22 +8,18 @@
 
 package com.thomascook.toscaBookAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * Company name and location for sending invoice for remittances for travel services.
- * 
+ * <p>
  * <p>Java class for DirectBillType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DirectBillType">
  *   &lt;complexContent>
@@ -47,38 +43,34 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DirectBillType", propOrder = {
-    "companyName",
-    "address"
+        "companyName",
+        "address"
 })
 public class DirectBillType {
 
     @XmlElement(name = "CompanyName")
-    protected CompanyName companyName;
+    private CompanyName companyName;
     @XmlElement(name = "Address")
-    protected AddressInfoType address;
+    private AddressInfoType address;
     @XmlAttribute(name = "DirectBill_ID")
-    protected String directBillID;
+    private String directBillID;
     @XmlAttribute(name = "BillingNumber")
-    protected String billingNumber;
+    private String billingNumber;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
+    private String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
+    private String shareMarketInd;
 
     /**
      * Gets the value of the companyName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CompanyName }
-     *     
+     *
+     * @return possible object is
+     * {@link CompanyName }
      */
     public CompanyName getCompanyName() {
         return companyName;
@@ -86,11 +78,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the companyName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CompanyName }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CompanyName }
      */
     public void setCompanyName(CompanyName value) {
         this.companyName = value;
@@ -98,11 +88,9 @@ public class DirectBillType {
 
     /**
      * Gets the value of the address property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AddressInfoType }
-     *     
+     *
+     * @return possible object is
+     * {@link AddressInfoType }
      */
     public AddressInfoType getAddress() {
         return address;
@@ -110,11 +98,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the address property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AddressInfoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AddressInfoType }
      */
     public void setAddress(AddressInfoType value) {
         this.address = value;
@@ -122,11 +108,9 @@ public class DirectBillType {
 
     /**
      * Gets the value of the directBillID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDirectBillID() {
         return directBillID;
@@ -134,11 +118,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the directBillID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDirectBillID(String value) {
         this.directBillID = value;
@@ -146,11 +128,9 @@ public class DirectBillType {
 
     /**
      * Gets the value of the billingNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBillingNumber() {
         return billingNumber;
@@ -158,11 +138,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the billingNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBillingNumber(String value) {
         this.billingNumber = value;
@@ -170,11 +148,9 @@ public class DirectBillType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -182,11 +158,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -194,11 +168,9 @@ public class DirectBillType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -206,11 +178,9 @@ public class DirectBillType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -219,9 +189,9 @@ public class DirectBillType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -231,25 +201,20 @@ public class DirectBillType {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class CompanyName
-        extends CompanyNameType
-    {
+            extends CompanyNameType {
 
         @XmlAttribute(name = "ContactName")
-        protected String contactName;
+        String contactName;
 
         /**
          * Gets the value of the contactName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getContactName() {
             return contactName;
@@ -257,11 +222,9 @@ public class DirectBillType {
 
         /**
          * Sets the value of the contactName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setContactName(String value) {
             this.contactName = value;

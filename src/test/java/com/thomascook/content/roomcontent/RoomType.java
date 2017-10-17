@@ -8,21 +8,18 @@
 
 package com.thomascook.content.roomcontent;
 
+import com.thomascook.content.common.MediaType;
+
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import com.thomascook.content.common.MediaType;
 
 
 /**
  * <p>Java class for RoomType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="RoomType">
  *   &lt;complexContent>
@@ -52,48 +49,44 @@ import com.thomascook.content.common.MediaType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomType", propOrder = {
-    "roomDescription",
-    "roomDetails",
-    "roomAmenities",
-    "minAdultOccupancy",
-    "maxAdultOccupancy",
-    "minChildOccupancy",
-    "maxChildOccupancy",
-    "mediaItems"
+        "roomDescription",
+        "roomDetails",
+        "roomAmenities",
+        "minAdultOccupancy",
+        "maxAdultOccupancy",
+        "minChildOccupancy",
+        "maxChildOccupancy",
+        "mediaItems"
 })
 public class RoomType {
 
     @XmlElement(name = "RoomDescription")
-    protected String roomDescription;
+    private String roomDescription;
     @XmlElement(name = "RoomDetails")
-    protected String roomDetails;
+    private String roomDetails;
     @XmlElement(name = "RoomAmenities")
-    protected String roomAmenities;
+    private String roomAmenities;
     @XmlElement(name = "MinAdultOccupancy")
-    protected Integer minAdultOccupancy;
+    private Integer minAdultOccupancy;
     @XmlElement(name = "MaxAdultOccupancy")
-    protected Integer maxAdultOccupancy;
+    private Integer maxAdultOccupancy;
     @XmlElement(name = "MinChildOccupancy")
-    protected Integer minChildOccupancy;
+    private Integer minChildOccupancy;
     @XmlElement(name = "MaxChildOccupancy")
-    protected Integer maxChildOccupancy;
+    private Integer maxChildOccupancy;
     @XmlElement(name = "MediaItems")
-    protected MediaItems mediaItems;
+    private MediaItems mediaItems;
     @XmlAttribute(name = "RoomCode", required = true)
-    protected String roomCode;
+    private String roomCode;
 
     /**
      * Gets the value of the roomDescription property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomDescription() {
         return roomDescription;
@@ -101,11 +94,9 @@ public class RoomType {
 
     /**
      * Sets the value of the roomDescription property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomDescription(String value) {
         this.roomDescription = value;
@@ -113,11 +104,9 @@ public class RoomType {
 
     /**
      * Gets the value of the roomDetails property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomDetails() {
         return roomDetails;
@@ -125,11 +114,9 @@ public class RoomType {
 
     /**
      * Sets the value of the roomDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomDetails(String value) {
         this.roomDetails = value;
@@ -137,11 +124,9 @@ public class RoomType {
 
     /**
      * Gets the value of the roomAmenities property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomAmenities() {
         return roomAmenities;
@@ -149,11 +134,9 @@ public class RoomType {
 
     /**
      * Sets the value of the roomAmenities property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomAmenities(String value) {
         this.roomAmenities = value;
@@ -161,11 +144,9 @@ public class RoomType {
 
     /**
      * Gets the value of the minAdultOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinAdultOccupancy() {
         return minAdultOccupancy;
@@ -173,11 +154,9 @@ public class RoomType {
 
     /**
      * Sets the value of the minAdultOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinAdultOccupancy(Integer value) {
         this.minAdultOccupancy = value;
@@ -185,11 +164,9 @@ public class RoomType {
 
     /**
      * Gets the value of the maxAdultOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxAdultOccupancy() {
         return maxAdultOccupancy;
@@ -197,11 +174,9 @@ public class RoomType {
 
     /**
      * Sets the value of the maxAdultOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxAdultOccupancy(Integer value) {
         this.maxAdultOccupancy = value;
@@ -209,11 +184,9 @@ public class RoomType {
 
     /**
      * Gets the value of the minChildOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinChildOccupancy() {
         return minChildOccupancy;
@@ -221,11 +194,9 @@ public class RoomType {
 
     /**
      * Sets the value of the minChildOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinChildOccupancy(Integer value) {
         this.minChildOccupancy = value;
@@ -233,11 +204,9 @@ public class RoomType {
 
     /**
      * Gets the value of the maxChildOccupancy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxChildOccupancy() {
         return maxChildOccupancy;
@@ -245,11 +214,9 @@ public class RoomType {
 
     /**
      * Sets the value of the maxChildOccupancy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxChildOccupancy(Integer value) {
         this.maxChildOccupancy = value;
@@ -257,11 +224,9 @@ public class RoomType {
 
     /**
      * Gets the value of the mediaItems property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MediaItems }
-     *     
+     *
+     * @return possible object is
+     * {@link MediaItems }
      */
     public MediaItems getMediaItems() {
         return mediaItems;
@@ -269,11 +234,9 @@ public class RoomType {
 
     /**
      * Sets the value of the mediaItems property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MediaItems }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MediaItems }
      */
     public void setMediaItems(MediaItems value) {
         this.mediaItems = value;
@@ -281,11 +244,9 @@ public class RoomType {
 
     /**
      * Gets the value of the roomCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRoomCode() {
         return roomCode;
@@ -293,11 +254,9 @@ public class RoomType {
 
     /**
      * Sets the value of the roomCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRoomCode(String value) {
         this.roomCode = value;
@@ -306,9 +265,9 @@ public class RoomType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -320,43 +279,39 @@ public class RoomType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "mediaItem"
+            "mediaItem"
     })
     public static class MediaItems {
 
         @XmlElement(name = "MediaItem")
-        protected List<MediaType> mediaItem;
+        List<MediaType> mediaItem;
 
         /**
          * Gets the value of the mediaItem property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the mediaItem property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMediaItem().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link MediaType }
-         * 
-         * 
          */
         public List<MediaType> getMediaItem() {
             if (mediaItem == null) {
-                mediaItem = new ArrayList<MediaType>();
+                mediaItem = new ArrayList<>();
             }
             return this.mediaItem;
         }

@@ -8,24 +8,19 @@
 
 package com.thomascook.nurvisAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *                 To store or to show all bookable information
- *             
- * 
+ * To store or to show all bookable information
+ * <p>
+ * <p>
  * <p>Java class for Reservation-FabType-Request complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Reservation-FabType-Request">
  *   &lt;complexContent>
@@ -98,59 +93,55 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Reservation-FabType-Request", propOrder = {
-    "toCode",
-    "catalog",
-    "currency",
-    "price",
-    "accountNr",
-    "addPrice",
-    "fat",
-    "fah",
-    "fac",
-    "fap",
-    "customer"
+        "toCode",
+        "catalog",
+        "currency",
+        "price",
+        "accountNr",
+        "addPrice",
+        "fat",
+        "fah",
+        "fac",
+        "fap",
+        "customer"
 })
 public class ReservationFabTypeRequest {
 
     @XmlElement(name = "TOCode")
-    protected String toCode;
+    private String toCode;
     @XmlElement(name = "Catalog")
-    protected String catalog;
+    private String catalog;
     @XmlElement(name = "Currency")
-    protected String currency;
+    private String currency;
     @XmlElement(name = "Price")
-    protected String price;
+    private String price;
     @XmlElement(name = "AccountNr", required = true)
-    protected String accountNr;
+    private String accountNr;
     @XmlElement(name = "AddPrice")
-    protected String addPrice;
+    private String addPrice;
     @XmlElement(name = "Fat")
-    protected List<ReservationFatTypeRequest> fat;
+    private List<ReservationFatTypeRequest> fat;
     @XmlElement(name = "Fah")
-    protected List<ReservationFahTypeRequest> fah;
+    private List<ReservationFahTypeRequest> fah;
     @XmlElement(name = "Fac")
-    protected List<ReservationFacTypeRequest> fac;
+    private List<ReservationFacTypeRequest> fac;
     @XmlElement(name = "Fap")
-    protected List<ReservationFapTypeRequest> fap;
+    private List<ReservationFapTypeRequest> fap;
     @XmlElement(name = "Customer")
-    protected ReservationCustomerTypeRequest customer;
+    private ReservationCustomerTypeRequest customer;
     @XmlAttribute(name = "Key")
-    protected String key;
+    private String key;
     @XmlAttribute(name = "SellAgent")
-    protected String sellAgent;
+    private String sellAgent;
 
     /**
      * Gets the value of the toCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTOCode() {
         return toCode;
@@ -158,11 +149,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the toCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTOCode(String value) {
         this.toCode = value;
@@ -170,11 +159,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the catalog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCatalog() {
         return catalog;
@@ -182,11 +169,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the catalog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCatalog(String value) {
         this.catalog = value;
@@ -194,11 +179,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the currency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCurrency() {
         return currency;
@@ -206,11 +189,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the currency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCurrency(String value) {
         this.currency = value;
@@ -218,11 +199,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the price property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPrice() {
         return price;
@@ -230,11 +209,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the price property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPrice(String value) {
         this.price = value;
@@ -242,11 +219,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the accountNr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAccountNr() {
         return accountNr;
@@ -254,11 +229,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the accountNr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAccountNr(String value) {
         this.accountNr = value;
@@ -266,11 +239,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the addPrice property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAddPrice() {
         return addPrice;
@@ -278,11 +249,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the addPrice property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAddPrice(String value) {
         this.addPrice = value;
@@ -290,127 +259,117 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the fat property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fat property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFat().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFatTypeRequest }
-     * 
-     * 
      */
     public List<ReservationFatTypeRequest> getFat() {
         if (fat == null) {
-            fat = new ArrayList<ReservationFatTypeRequest>();
+            fat = new ArrayList<>();
         }
         return this.fat;
     }
 
     /**
      * Gets the value of the fah property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fah property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFah().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFahTypeRequest }
-     * 
-     * 
      */
     public List<ReservationFahTypeRequest> getFah() {
         if (fah == null) {
-            fah = new ArrayList<ReservationFahTypeRequest>();
+            fah = new ArrayList<>();
         }
         return this.fah;
     }
 
     /**
      * Gets the value of the fac property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fac property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFac().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFacTypeRequest }
-     * 
-     * 
      */
     public List<ReservationFacTypeRequest> getFac() {
         if (fac == null) {
-            fac = new ArrayList<ReservationFacTypeRequest>();
+            fac = new ArrayList<>();
         }
         return this.fac;
     }
 
     /**
      * Gets the value of the fap property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fap property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFap().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReservationFapTypeRequest }
-     * 
-     * 
      */
     public List<ReservationFapTypeRequest> getFap() {
         if (fap == null) {
-            fap = new ArrayList<ReservationFapTypeRequest>();
+            fap = new ArrayList<>();
         }
         return this.fap;
     }
 
     /**
      * Gets the value of the customer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReservationCustomerTypeRequest }
-     *     
+     *
+     * @return possible object is
+     * {@link ReservationCustomerTypeRequest }
      */
     public ReservationCustomerTypeRequest getCustomer() {
         return customer;
@@ -418,11 +377,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the customer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationCustomerTypeRequest }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReservationCustomerTypeRequest }
      */
     public void setCustomer(ReservationCustomerTypeRequest value) {
         this.customer = value;
@@ -430,11 +387,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the key property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getKey() {
         return key;
@@ -442,11 +397,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the key property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setKey(String value) {
         this.key = value;
@@ -454,11 +407,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Gets the value of the sellAgent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSellAgent() {
         return sellAgent;
@@ -466,11 +417,9 @@ public class ReservationFabTypeRequest {
 
     /**
      * Sets the value of the sellAgent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSellAgent(String value) {
         this.sellAgent = value;

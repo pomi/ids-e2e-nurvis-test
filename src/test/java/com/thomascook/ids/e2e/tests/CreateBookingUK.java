@@ -32,58 +32,66 @@ import org.opentravel.ota._2003._05.request.*;
 import org.opentravel.ota._2003._05.request.LocationType;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
 
-import javax.xml.bind.*;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+import com.thomascook.toscaBookAdapter.request.UniqueIDType;
+import com.thomascook.toscaCostAdapter.request.SourceType;
+import com.thomascook.toscaCostAdapter.request.POSType;
+import com.thomascook.toscaCostAdapter.request.ObjectFactory;
 
 public class CreateBookingUK {
 
     public static OTAPkgSearchRS getSOLRPackagesUK(String solr, String departureAirport, String destination, DataTable dataTable)
             throws IOException, JAXBException, DatatypeConfigurationException {
         //Assign data from dataTable
-        List<Map<String,String>> listOfMaps = dataTable.asMaps(String.class, String.class);
+        List<Map<String, String>> listOfMaps = dataTable.asMaps(String.class, String.class);
 
         //solr request
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost(solr);
-        String solrRequest = createSolrRequestUK(0,49,departureAirport, destination, listOfMaps);
+        String solrRequest = createSolrRequestUK(departureAirport, destination, listOfMaps);
         post.setEntity(new ByteArrayEntity(solrRequest.getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
         OTAPkgSearchRS otaPkgSearchRS = new OTAPkgSearchRS();
         if (entity != null) {
-            InputStream instream = entity.getContent();
-            try {
+            try (InputStream instream = entity.getContent()) {
                 JAXBContext jc = JAXBContext.newInstance(OTAPkgSearchRS.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
                 otaPkgSearchRS = (OTAPkgSearchRS) unmarshaller.unmarshal(instream);
-            } finally {
-                instream.close();
             }
         }
         //createSolrRSXML(otaPkgSearchRS);
         return otaPkgSearchRS;
     }
 
-    static String createSolrRequestUK(int startIndex, int endIndex, String fromAirport, String destination, List<Map<String,String>> listOfMaps)
+    private static String createSolrRequestUK(String fromAirport, String destination, List<Map<String, String>> listOfMaps)
             throws JAXBException, DatatypeConfigurationException {
         org.opentravel.ota._2003._05.request.ObjectFactory factory = new org.opentravel.ota._2003._05.request.ObjectFactory();
         OTAPkgSearchRQ otaPkgSearchRQ = factory.createOTAPkgSearchRQ();
 
         FilterResultsType filterResultsType = factory.createFilterResultsType();
-        filterResultsType.setStart(Integer.toString(startIndex));
-        filterResultsType.setEnd(Integer.toString(endIndex));
+        filterResultsType.setStart(Integer.toString(10));
+        filterResultsType.setEnd(Integer.toString(29));
         otaPkgSearchRQ.setFilterResults(filterResultsType);
 
         PkgSearchCriteriaType pkgSearchCriteriaType = factory.createPkgSearchCriteriaType();
@@ -118,7 +126,7 @@ public class CreateBookingUK {
         pkgSearchCriteriaType.getPkgCriterion().setRoomStayCandidates(roomStayCandidatesType);
         List<RoomStayCandidatesType.RoomStayCandidate> roomStayCandidates = new ArrayList<>();
         //set Room Stay Candidates
-        for(Map<String,String> passengers : listOfMaps){
+        for (Map<String, String> passengers : listOfMaps) {
             String adults = passengers.get("Adults");
             String children = passengers.get("Children");
             String infants = passengers.get("Infants");
@@ -132,26 +140,26 @@ public class CreateBookingUK {
             PkgGuestCountType guestCountType = factory.createPkgGuestCountType();
             List<PkgGuestCountType.GuestCount> guestCounts = new ArrayList();
             int numberOfAdults = Integer.parseInt(adults);
-            if(numberOfAdults>0){
+            if (numberOfAdults > 0) {
                 PkgGuestCountType.GuestCount guestCount = factory.createPkgGuestCountTypeGuestCount();
                 guestCount.setAgeQualifyingCode("10");
                 guestCount.setCount(numberOfAdults);
                 guestCounts.add(guestCount);
             }
             int numberOfInfants = Integer.parseInt(infants);
-            if(numberOfInfants>0){
+            if (numberOfInfants > 0) {
                 PkgGuestCountType.GuestCount guestCount = factory.createPkgGuestCountTypeGuestCount();
                 guestCount.setAgeQualifyingCode("7");
                 guestCount.setCount(numberOfInfants);
                 guestCounts.add(guestCount);
             }
             int numberOfChildren = Integer.parseInt(children);
-            if(numberOfChildren>0){
-                for(int i =0; i < numberOfChildren; i++){
+            if (numberOfChildren > 0) {
+                for (int i = 0; i < numberOfChildren; i++) {
                     PkgGuestCountType.GuestCount guestCount = factory.createPkgGuestCountTypeGuestCount();
                     guestCount.setAgeQualifyingCode("8");
                     guestCount.setCount(numberOfInfants);
-                    int age = 3 + (int)Math.round(Math.random()*14);
+                    int age = 3 + (int) Math.round(Math.random() * 14);
                     guestCount.setAge(age);
                     guestCounts.add(guestCount);
                 }
@@ -172,9 +180,9 @@ public class CreateBookingUK {
         //Create XML
         JAXBContext context = JAXBContext.newInstance("org.opentravel.ota._2003._05.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(otaPkgSearchRQ,sw);
+        marshaller.marshal(otaPkgSearchRQ, sw);
 
         return sw.toString();
         //return "";
@@ -205,9 +213,9 @@ public class CreateBookingUK {
     public static String createToscaAvailabilityRequestXML(OTAPkgAvailRQ toscaRequest) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.thomascook.toscaAdapter.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(toscaRequest,sw);
+        marshaller.marshal(toscaRequest, sw);
         return sw.toString();
     }
 
@@ -220,18 +228,15 @@ public class CreateBookingUK {
         HttpEntity entity = response.getEntity();
         OTAPkgAvailRS toscaAvailabilityResponse = new OTAPkgAvailRS();
         if (entity != null) {
-            try (InputStream instream = entity.getContent()) {
-                JAXBContext jc = JAXBContext.newInstance(OTAPkgAvailRS.class);
-                Unmarshaller unmarshaller = jc.createUnmarshaller();
-                toscaAvailabilityResponse = (OTAPkgAvailRS) unmarshaller.unmarshal(instream);
-            } catch (JAXBException e) {
-                e.printStackTrace();
-            }
+            InputStream instream = entity.getContent();
+            JAXBContext jc = JAXBContext.newInstance(OTAPkgAvailRS.class);
+            Unmarshaller unmarshaller = jc.createUnmarshaller();
+            toscaAvailabilityResponse = (OTAPkgAvailRS) unmarshaller.unmarshal(instream);
         }
         return toscaAvailabilityResponse;
     }
 
-    public static OTAPkgAvailRQ createToscaAvailabilityRequest(org.opentravel.ota._2003._05.response.HotelOfferType hotelOffer, DataTable passengers){
+    public static OTAPkgAvailRQ createToscaAvailabilityRequest(org.opentravel.ota._2003._05.response.HotelOfferType hotelOffer, DataTable passengers) {
         com.thomascook.toscaAdapter.request.ObjectFactory factory = new com.thomascook.toscaAdapter.request.ObjectFactory();
         OTAPkgAvailRQ request = factory.createOTAPkgAvailRQ();
         request.setReqRespVersion("BoardAndSeatUpgradesOnly");
@@ -252,11 +257,11 @@ public class CreateBookingUK {
 
         org.opentravel.ota._2003._05.response.BookingIDType bookingIDType = hotelOffer.getRooms().getRoom().get(0).getBookingID();
         request.setPackageRequest(factory.createOTAPkgAvailRQPackageRequest());
-        for(org.opentravel.ota._2003._05.response.SolrFieldType field : bookingIDType.getField()){
-            if(field.getName().equals("ID")) request.getPackageRequest().setID(field.getValue());
-            if(field.getName().equals("TravelCode")) request.getPackageRequest().setTravelCode(field.getValue());
-            if(field.getName().equals("ProductCode")) request.getPackageRequest().setProductCode(field.getValue());
-            if(field.getName().equals("BrandCode")) request.getPackageRequest().setBrandCode(field.getValue());
+        for (org.opentravel.ota._2003._05.response.SolrFieldType field : bookingIDType.getField()) {
+            if (field.getName().equals("ID")) request.getPackageRequest().setID(field.getValue());
+            if (field.getName().equals("TravelCode")) request.getPackageRequest().setTravelCode(field.getValue());
+            if (field.getName().equals("ProductCode")) request.getPackageRequest().setProductCode(field.getValue());
+            if (field.getName().equals("BrandCode")) request.getPackageRequest().setBrandCode(field.getValue());
         }
         request.getPackageRequest().setSearchDateRange(factory.createDateTimeSpanType());
         request.getPackageRequest().getSearchDateRange().setDuration("P" + hotelOffer.getPkgDuration() + "D");
@@ -273,11 +278,11 @@ public class CreateBookingUK {
         children.setCode("8");
         infants.setCode("7");
 
-        List<Map<String,String>> listOfMaps = passengers.asMaps(String.class,String.class);
+        List<Map<String, String>> listOfMaps = passengers.asMaps(String.class, String.class);
         int numberOfAdults = 0;
         int numberOfChildren = 0;
         int numberOfInfants = 0;
-        for(Map<String,String> map : listOfMaps){
+        for (Map<String, String> map : listOfMaps) {
             numberOfAdults = numberOfAdults + Integer.parseInt(map.get("Adults"));
             numberOfChildren = numberOfChildren + Integer.parseInt(map.get("Children"));
             numberOfInfants = numberOfInfants + Integer.parseInt(map.get("Infants"));
@@ -304,7 +309,7 @@ public class CreateBookingUK {
         OTAPkgExtrasInfoRQ request = factory.createOTAPkgExtrasInfoRQ();
         com.thomascook.toscaExtrasAdapter.request.POSType posType = factory.createPOSType();
         request.setTarget("test");
-        for(com.thomascook.toscaAdapter.request.SourceType source : toscaAvailabilityRequest.getPOS().getSource()){
+        for (com.thomascook.toscaAdapter.request.SourceType source : toscaAvailabilityRequest.getPOS().getSource()) {
             com.thomascook.toscaExtrasAdapter.request.SourceType sourceType = factory.createSourceType();
             sourceType.setAgentSine(source.getAgentDutyCode());
             sourceType.setISOCountry(source.getISOCountry());
@@ -345,28 +350,28 @@ public class CreateBookingUK {
         OTAPkgExtrasInfoRQ.PassengerListItems passengerListItems = factory.createOTAPkgExtrasInfoRQPassengerListItems();
         request.setPassengerListItems(passengerListItems);
 
-        List<Map<String,String>> listOfMaps = passengers.asMaps(String.class,String.class);
+        List<Map<String, String>> listOfMaps = passengers.asMaps(String.class, String.class);
         int numberOfRooms = 1;
         int passengerRPH = 1;
-        for(Map<String,String> map : listOfMaps){
+        for (Map<String, String> map : listOfMaps) {
             int numberOfAdults = Integer.parseInt(map.get("Adults"));
             int numberOfChildren = Integer.parseInt(map.get("Children"));
             int numberOfInfants = Integer.parseInt(map.get("Infants"));
             int numberOfPassengers = numberOfAdults + numberOfChildren;
             String roomTypeCode = "";
             String mealPlanCode = "";
-            for(com.thomascook.toscaAdapter.response.ItineraryItemResponseType itineraryItemResponseType :
-                    toscaAvailabilityResponse.getPackage().getItineraryItems().getItineraryItem()){
-                if(itineraryItemResponseType.getAccommodation() != null){
-                    for(com.thomascook.toscaAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfileResponse :
-                            itineraryItemResponseType.getAccommodation().getRoomProfiles().getRoomProfile()){
-                        if(numberOfPassengers >= roomProfileResponse.getMinOccupancy() && numberOfPassengers <= roomProfileResponse.getMaxOccupancy()){
+            for (com.thomascook.toscaAdapter.response.ItineraryItemResponseType itineraryItemResponseType :
+                    toscaAvailabilityResponse.getPackage().getItineraryItems().getItineraryItem()) {
+                if (itineraryItemResponseType.getAccommodation() != null) {
+                    for (com.thomascook.toscaAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfileResponse :
+                            itineraryItemResponseType.getAccommodation().getRoomProfiles().getRoomProfile()) {
+                        if (numberOfPassengers >= roomProfileResponse.getMinOccupancy() && numberOfPassengers <= roomProfileResponse.getMaxOccupancy()) {
                             roomTypeCode = roomProfileResponse.getRoomTypeCode();
                             break;
                         }
                     }
-                    for(com.thomascook.toscaAdapter.response.MealPlanType mealPlanType : itineraryItemResponseType.getAccommodation().getMealPlans().getMealPlan()){
-                        if(mealPlanType.getListOfRoomRPH().size() == itineraryItemResponseType.getAccommodation().getRoomProfiles().getRoomProfile().size()){
+                    for (com.thomascook.toscaAdapter.response.MealPlanType mealPlanType : itineraryItemResponseType.getAccommodation().getMealPlans().getMealPlan()) {
+                        if (mealPlanType.getListOfRoomRPH().size() == itineraryItemResponseType.getAccommodation().getRoomProfiles().getRoomProfile().size()) {
                             mealPlanCode = mealPlanType.getCode();
                             break;
                         }
@@ -388,7 +393,7 @@ public class CreateBookingUK {
             mealPlans.getMealPlan().add(mealPlanType);
             RoomProfileType.PassengerRPHs passengerRPHs = factory.createRoomProfileTypePassengerRPHs();
             roomProfile.setPassengerRPHs(passengerRPHs);
-            for(int adults = 0; adults < numberOfAdults; adults++){
+            for (int adults = 0; adults < numberOfAdults; adults++) {
                 PkgPassengerListItem passengerListItem = factory.createPkgPassengerListItem();
                 passengerListItem.setQuantity(BigInteger.valueOf(1));
                 passengerListItem.setCode("10");
@@ -396,7 +401,7 @@ public class CreateBookingUK {
                 passengerRPHs.getListOfPassengerRPH().add(passengerListItem.getRPH());
                 passengerListItems.getPassengerListItem().add(passengerListItem);
             }
-            for(int children = 0; children < numberOfChildren; children++){
+            for (int children = 0; children < numberOfChildren; children++) {
                 PkgPassengerListItem passengerListItem = factory.createPkgPassengerListItem();
                 passengerListItem.setQuantity(BigInteger.valueOf(1));
                 passengerListItem.setCode("8");
@@ -404,7 +409,7 @@ public class CreateBookingUK {
                 passengerRPHs.getListOfPassengerRPH().add(passengerListItem.getRPH());
                 passengerListItems.getPassengerListItem().add(passengerListItem);
             }
-            for(int infants = 0; infants < numberOfInfants; infants++){
+            for (int infants = 0; infants < numberOfInfants; infants++) {
                 PkgPassengerListItem passengerListItem = factory.createPkgPassengerListItem();
                 passengerListItem.setQuantity(BigInteger.valueOf(1));
                 passengerListItem.setCode("7");
@@ -425,15 +430,10 @@ public class CreateBookingUK {
         HttpEntity entity = response.getEntity();
         OTAPkgExtrasInfoRS toscaExtrasResponse = new OTAPkgExtrasInfoRS();
         if (entity != null) {
-            InputStream instream = entity.getContent();
-            try {
+            try (InputStream instream = entity.getContent()) {
                 JAXBContext jc = JAXBContext.newInstance(OTAPkgExtrasInfoRS.class);
                 Unmarshaller unmarshaller = jc.createUnmarshaller();
                 toscaExtrasResponse = (OTAPkgExtrasInfoRS) unmarshaller.unmarshal(instream);
-            } catch (JAXBException e) {
-                e.printStackTrace();
-            } finally {
-                instream.close();
             }
         }
         return toscaExtrasResponse;
@@ -444,7 +444,7 @@ public class CreateBookingUK {
         OTAPkgCostRQ toscaCostRequest = factory.createOTAPkgCostRQ();
         toscaCostRequest.setTarget("test");
         POSType posType = factory.createPOSType();
-        for(com.thomascook.toscaExtrasAdapter.request.SourceType extrasSourceType : toscaExtrasRequest.getPOS().getSource()){
+        for (com.thomascook.toscaExtrasAdapter.request.SourceType extrasSourceType : toscaExtrasRequest.getPOS().getSource()) {
             SourceType sourceType = factory.createSourceType();
             //AgentDutyCode="5616" ISOCurrency="GBP" ISOCountry="UK" AgentSine="VTX">
             sourceType.setAgentDutyCode(extrasSourceType.getAgentDutyCode());
@@ -471,30 +471,30 @@ public class CreateBookingUK {
         dateRange.setStart(toscaExtrasRequest.getPackageRequest().getDateRange().getStart());
         com.thomascook.toscaCostAdapter.request.PackageType.ItineraryItems itineraryItems = factory.createPackageTypeItineraryItems();
         packageType.setItineraryItems(itineraryItems);
-        for(ItineraryItemRequestType extrasItineraryItems : toscaExtrasRequest.getPackageRequest().getItineraryItems().getItineraryItem()){
+        for (ItineraryItemRequestType extrasItineraryItems : toscaExtrasRequest.getPackageRequest().getItineraryItems().getItineraryItem()) {
             com.thomascook.toscaCostAdapter.request.ItineraryItemRequestType itineraryItemRequestType = factory.createItineraryItemRequestType();
             itineraryItems.getItineraryItem().add(itineraryItemRequestType);
             com.thomascook.toscaCostAdapter.request.AccommodationSegmentRequestType accommodation = factory.createAccommodationSegmentRequestType();
             itineraryItemRequestType.setAccommodation(accommodation);
             com.thomascook.toscaCostAdapter.request.AccommodationSegmentRequestType.RoomProfiles roomProfiles = factory.createAccommodationSegmentRequestTypeRoomProfiles();
             accommodation.setRoomProfiles(roomProfiles);
-            for(RoomProfileType extrasRoomProfileType : extrasItineraryItems.getAccommodation().getRoomProfiles().getRoomProfile()){
+            for (RoomProfileType extrasRoomProfileType : extrasItineraryItems.getAccommodation().getRoomProfiles().getRoomProfile()) {
                 com.thomascook.toscaCostAdapter.request.RoomProfileType roomProfileType = factory.createRoomProfileType();
                 roomProfiles.getRoomProfile().add(roomProfileType);
                 roomProfileType.setRoomTypeCode(extrasRoomProfileType.getRoomTypeCode());
                 roomProfileType.setRPH(extrasRoomProfileType.getRPH());
                 com.thomascook.toscaCostAdapter.request.RoomProfileType.PassengerRPHs passengerRPHs = factory.createRoomProfileTypePassengerRPHs();
-                for(String listOfPassengersRPHs : extrasRoomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
+                for (String listOfPassengersRPHs : extrasRoomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
                     passengerRPHs.getListOfPassengerRPH().add(listOfPassengersRPHs);
                 }
                 roomProfileType.setPassengerRPHs(passengerRPHs);
             }
             com.thomascook.toscaCostAdapter.request.AccommodationSegmentRequestType.MealPlans mealPlans = factory.createAccommodationSegmentRequestTypeMealPlans();
             accommodation.setMealPlans(mealPlans);
-            for(MealPlanType extrasMealPlanType :extrasItineraryItems.getAccommodation().getMealPlans().getMealPlan()){
+            for (MealPlanType extrasMealPlanType : extrasItineraryItems.getAccommodation().getMealPlans().getMealPlan()) {
                 com.thomascook.toscaCostAdapter.request.MealPlanType mealPlanType = factory.createMealPlanType();
                 mealPlanType.setCode(extrasMealPlanType.getCode());
-                for(String roomRPH : extrasMealPlanType.getListOfRoomRPH()){
+                for (String roomRPH : extrasMealPlanType.getListOfRoomRPH()) {
                     mealPlanType.getListOfRoomRPH().add(roomRPH);
                 }
                 mealPlans.getMealPlan().add(mealPlanType);
@@ -502,7 +502,7 @@ public class CreateBookingUK {
         }
         OTAPkgCostRQ.PassengerListItems passengerListItems = factory.createOTAPkgCostRQPassengerListItems();
         toscaCostRequest.setPassengerListItems(passengerListItems);
-        for(PkgPassengerListItem extrasPkgPassengerListItem : toscaExtrasRequest.getPassengerListItems().getPassengerListItem()){
+        for (PkgPassengerListItem extrasPkgPassengerListItem : toscaExtrasRequest.getPassengerListItems().getPassengerListItem()) {
             com.thomascook.toscaCostAdapter.request.PkgPassengerListItem passengerListItem = factory.createPkgPassengerListItem();
             //<PassengerListItem Quantity="1" Code="10" BirthDate="1986-01-01Z" RPH="1" />
             passengerListItem.setQuantity(extrasPkgPassengerListItem.getQuantity());
@@ -514,8 +514,8 @@ public class CreateBookingUK {
         OTAPkgCostRQ.Extras extras = factory.createOTAPkgCostRQExtras();
         toscaCostRequest.setExtras(extras);
         ArrayList<String> listOfPassengersRPHs = new ArrayList<>();
-        for(com.thomascook.toscaCostAdapter.request.PkgPassengerListItem pkgPassengerListItem : toscaCostRequest.getPassengerListItems().getPassengerListItem()){
-            if(!pkgPassengerListItem.getCode().equals("7")) {
+        for (com.thomascook.toscaCostAdapter.request.PkgPassengerListItem pkgPassengerListItem : toscaCostRequest.getPassengerListItems().getPassengerListItem()) {
+            if (!pkgPassengerListItem.getCode().equals("7")) {
                 listOfPassengersRPHs.add(pkgPassengerListItem.getRPH());
             }
         }
@@ -550,9 +550,9 @@ public class CreateBookingUK {
     public static String createToscaExtrasRequestXML(OTAPkgExtrasInfoRQ toscaExtrasRequest) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance("com.thomascook.toscaExtrasAdapter.request");
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
         StringWriter sw = new StringWriter();
-        marshaller.marshal(toscaExtrasRequest,sw);
+        marshaller.marshal(toscaExtrasRequest, sw);
         return sw.toString();
     }
 
@@ -599,7 +599,7 @@ public class CreateBookingUK {
         toscaBookRequest.setTarget("test");
         toscaBookRequest.setActionType(com.thomascook.toscaBookAdapter.request.TransactionActionType.HOLD);
         com.thomascook.toscaBookAdapter.request.POSType posType = factory.createPOSType();
-        for(SourceType costSourceType : toscaCostRequest.getPOS().getSource()){
+        for (SourceType costSourceType : toscaCostRequest.getPOS().getSource()) {
             com.thomascook.toscaBookAdapter.request.SourceType sourceType = factory.createSourceType();
             //AgentDutyCode="5616" ISOCurrency="GBP" ISOCountry="UK" AgentSine="VTX">
             sourceType.setAgentDutyCode(costSourceType.getAgentDutyCode());
@@ -626,30 +626,30 @@ public class CreateBookingUK {
         dateRange.setStart(toscaCostRequest.getPackageRequest().getDateRange().getStart());
         com.thomascook.toscaBookAdapter.request.PackageType.ItineraryItems itineraryItems = factory.createPackageTypeItineraryItems();
         packageType.setItineraryItems(itineraryItems);
-        for(com.thomascook.toscaCostAdapter.request.ItineraryItemRequestType costItineraryItems : toscaCostRequest.getPackageRequest().getItineraryItems().getItineraryItem()){
+        for (com.thomascook.toscaCostAdapter.request.ItineraryItemRequestType costItineraryItems : toscaCostRequest.getPackageRequest().getItineraryItems().getItineraryItem()) {
             com.thomascook.toscaBookAdapter.request.ItineraryItemRequestType itineraryItemRequestType = factory.createItineraryItemRequestType();
             itineraryItems.getItineraryItem().add(itineraryItemRequestType);
             com.thomascook.toscaBookAdapter.request.AccommodationSegmentRequestType accommodation = factory.createAccommodationSegmentRequestType();
             itineraryItemRequestType.setAccommodation(accommodation);
             com.thomascook.toscaBookAdapter.request.AccommodationSegmentRequestType.RoomProfiles roomProfiles = factory.createAccommodationSegmentRequestTypeRoomProfiles();
             accommodation.setRoomProfiles(roomProfiles);
-            for(com.thomascook.toscaCostAdapter.request.RoomProfileType costRoomProfileType : costItineraryItems.getAccommodation().getRoomProfiles().getRoomProfile()){
+            for (com.thomascook.toscaCostAdapter.request.RoomProfileType costRoomProfileType : costItineraryItems.getAccommodation().getRoomProfiles().getRoomProfile()) {
                 com.thomascook.toscaBookAdapter.request.RoomProfileType roomProfileType = factory.createRoomProfileType();
                 roomProfiles.getRoomProfile().add(roomProfileType);
                 roomProfileType.setRoomTypeCode(costRoomProfileType.getRoomTypeCode());
                 roomProfileType.setRPH(costRoomProfileType.getRPH());
                 com.thomascook.toscaBookAdapter.request.RoomProfileType.PassengerRPHs passengerRPHs = factory.createRoomProfileTypePassengerRPHs();
-                for(String listOfPassengersRPHs : costRoomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
+                for (String listOfPassengersRPHs : costRoomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
                     passengerRPHs.getListOfPassengerRPH().add(listOfPassengersRPHs);
                 }
                 roomProfileType.setPassengerRPHs(passengerRPHs);
             }
             com.thomascook.toscaBookAdapter.request.AccommodationSegmentRequestType.MealPlans mealPlans = factory.createAccommodationSegmentRequestTypeMealPlans();
             accommodation.setMealPlans(mealPlans);
-            for(com.thomascook.toscaCostAdapter.request.MealPlanType extrasMealPlanType : costItineraryItems.getAccommodation().getMealPlans().getMealPlan()){
+            for (com.thomascook.toscaCostAdapter.request.MealPlanType extrasMealPlanType : costItineraryItems.getAccommodation().getMealPlans().getMealPlan()) {
                 com.thomascook.toscaBookAdapter.request.MealPlanType mealPlanType = factory.createMealPlanType();
                 mealPlanType.setCode(extrasMealPlanType.getCode());
-                for(String roomRPH : extrasMealPlanType.getListOfRoomRPH()){
+                for (String roomRPH : extrasMealPlanType.getListOfRoomRPH()) {
                     mealPlanType.getListOfRoomRPH().add(roomRPH);
                 }
                 mealPlans.getMealPlan().add(mealPlanType);
@@ -658,13 +658,13 @@ public class CreateBookingUK {
         OTAPkgBookRQ.PassengerListItems passengerListItems = factory.createOTAPkgBookRQPassengerListItems();
         toscaBookRequest.setPassengerListItems(passengerListItems);
         boolean namePrefix = true;
-        for(com.thomascook.toscaCostAdapter.request.PkgPassengerListItem extrasPkgPassengerListItem : toscaCostRequest.getPassengerListItems().getPassengerListItem()){
+        for (com.thomascook.toscaCostAdapter.request.PkgPassengerListItem extrasPkgPassengerListItem : toscaCostRequest.getPassengerListItems().getPassengerListItem()) {
             com.thomascook.toscaBookAdapter.request.PkgPassengerListItem passengerListItem = factory.createPkgPassengerListItem();
             //<PassengerListItem Quantity="1" Code="10" BirthDate="1986-01-01Z" RPH="1" />
             passengerListItem.setQuantity(extrasPkgPassengerListItem.getQuantity());
             passengerListItem.setCode(extrasPkgPassengerListItem.getCode());
             passengerListItem.setBirthDate(extrasPkgPassengerListItem.getBirthDate());
-            if(extrasPkgPassengerListItem.getRPH().equals("1")){
+            if (extrasPkgPassengerListItem.getRPH().equals("1")) {
                 passengerListItem.setRPH(extrasPkgPassengerListItem.getRPH());
                 passengerListItem.setLeadCustomerInd(true);
                 com.thomascook.toscaBookAdapter.request.PersonNameType personNameType = factory.createPersonNameType();
@@ -674,8 +674,8 @@ public class CreateBookingUK {
                 String firstName = generateAZSequence("firstname");
                 personNameType.getGivenName().add(firstName);
                 //if person code = 10 set name prefix to Mr or Mrs
-                if(extrasPkgPassengerListItem.getCode().equals("10")) {
-                    if(namePrefix) {
+                if (extrasPkgPassengerListItem.getCode().equals("10")) {
+                    if (namePrefix) {
                         personNameType.getNamePrefix().add("Mr");
                         namePrefix = false;
                     } else {
@@ -692,9 +692,9 @@ public class CreateBookingUK {
                 contactPersonType.setPersonName(personNameTypeContactType);
                 com.thomascook.toscaBookAdapter.request.ContactPersonType.Telephone telephone = factory.createContactPersonTypeTelephone();
                 telephone.setCountryAccessCode("+44");
-                telephone.setAreaCityCode("0" + RandomStringUtils.randomNumeric(2,2));
+                telephone.setAreaCityCode("0" + RandomStringUtils.randomNumeric(2, 2));
                 //add phone number
-                telephone.setPhoneNumber(RandomStringUtils.randomNumeric(8,8));
+                telephone.setPhoneNumber(RandomStringUtils.randomNumeric(8, 8));
                 contactPersonType.getTelephone().add(telephone);
                 com.thomascook.toscaBookAdapter.request.EmailType emailType = factory.createEmailType();
                 emailType.setValue(firstName + "." + lastName + "@thomascookonline.com");
@@ -723,8 +723,8 @@ public class CreateBookingUK {
                 personNameType.setSurname(generateAZSequence("firstname"));
                 personNameType.getGivenName().add(generateAZSequence("firstname"));
                 //if person code = 10 set name prefix to Mr or Mrs
-                if(extrasPkgPassengerListItem.getCode().equals("10")) {
-                    if(namePrefix) {
+                if (extrasPkgPassengerListItem.getCode().equals("10")) {
+                    if (namePrefix) {
                         personNameType.getNamePrefix().add("Mr");
                         namePrefix = false;
                     } else {
@@ -747,7 +747,7 @@ public class CreateBookingUK {
 
         com.thomascook.toscaBookAdapter.request.PackageType.Extras extras = factory.createPackageTypeExtras();
         toscaBookRequest.getPackageRequest().setExtras(extras);
-        for(com.thomascook.toscaCostAdapter.request.ExtrasType costExtrasType : toscaCostRequest.getExtras().getExtra()){
+        for (com.thomascook.toscaCostAdapter.request.ExtrasType costExtrasType : toscaCostRequest.getExtras().getExtra()) {
             com.thomascook.toscaBookAdapter.request.ExtrasType extrasType = factory.createExtrasType();
             //<Extra ListOfPassengerRPH="1 2" Quantity="1" Code="MEAL/IFM/MEAL/197295049/Y/F" RPH="38" />
             extrasType.setQuantity(costExtrasType.getQuantity());
@@ -974,14 +974,14 @@ public class CreateBookingUK {
     }
 
     private static XMLGregorianCalendar generateBirthDate(boolean child) throws DatatypeConfigurationException {
-        int daysOfLife = 0;
+        int daysOfLife;
         LocalDate localDate = LocalDate.now();
         LocalDate birthDate;
-        if(child){
-            daysOfLife = new Random().nextInt(365*16-1) + 365*2;
-            birthDate = localDate.minus(daysOfLife,ChronoUnit.DAYS);
-        }else{
-            daysOfLife = new Random().nextInt(365*2-1);
+        if (child) {
+            daysOfLife = new Random().nextInt(365 * 16 - 1) + 365 * 2;
+            birthDate = localDate.minus(daysOfLife, ChronoUnit.DAYS);
+        } else {
+            daysOfLife = new Random().nextInt(365 * 2 - 1);
             birthDate = localDate.minus(daysOfLife, ChronoUnit.DAYS);
         }
 

@@ -8,21 +8,16 @@
 
 package com.thomascook.toscaBookAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Identifies a company by name.
- * 
+ * <p>
  * <p>Java class for CompanyNameType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CompanyNameType">
  *   &lt;simpleContent>
@@ -34,41 +29,37 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CompanyNameType", propOrder = {
-    "value"
+        "value"
 })
 @XmlSeeAlso({
-    OperatingAirlineType.class,
-    DirectBillType.CompanyName.class
+        OperatingAirlineType.class,
+        DirectBillType.CompanyName.class
 })
 public class CompanyNameType {
 
     @XmlValue
-    protected String value;
+    private String value;
     @XmlAttribute(name = "Division")
-    protected String division;
+    private String division;
     @XmlAttribute(name = "Department")
-    protected String department;
+    private String department;
     @XmlAttribute(name = "CompanyShortName")
-    protected String companyShortName;
+    private String companyShortName;
     @XmlAttribute(name = "TravelSector")
-    protected String travelSector;
+    private String travelSector;
     @XmlAttribute(name = "Code")
-    protected String code;
+    private String code;
     @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
+    private String codeContext;
 
     /**
      * Used for Character Strings, length 0 to 128
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -76,11 +67,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -88,11 +77,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the division property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDivision() {
         return division;
@@ -100,11 +87,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the division property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDivision(String value) {
         this.division = value;
@@ -112,11 +97,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the department property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDepartment() {
         return department;
@@ -124,11 +107,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the department property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDepartment(String value) {
         this.department = value;
@@ -136,11 +117,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the companyShortName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCompanyShortName() {
         return companyShortName;
@@ -148,11 +127,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the companyShortName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCompanyShortName(String value) {
         this.companyShortName = value;
@@ -160,11 +137,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the travelSector property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTravelSector() {
         return travelSector;
@@ -172,11 +147,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the travelSector property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTravelSector(String value) {
         this.travelSector = value;
@@ -184,11 +157,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -196,11 +167,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -208,11 +177,9 @@ public class CompanyNameType {
 
     /**
      * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodeContext() {
         return codeContext;
@@ -220,11 +187,9 @@ public class CompanyNameType {
 
     /**
      * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodeContext(String value) {
         this.codeContext = value;

@@ -8,21 +8,22 @@
 
 package com.thomascook.content.soa;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.thomascook.content.common.ErrorsType;
+import com.thomascook.content.common.WarningsType;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import com.thomascook.content.common.ErrorsType;
-import com.thomascook.content.common.WarningsType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * <p>Java class for ContentsType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ContentsType">
  *   &lt;complexContent>
@@ -46,57 +47,51 @@ import com.thomascook.content.common.WarningsType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ContentsType", propOrder = {
-    "content",
-    "error"
+        "content",
+        "error"
 })
 public class ContentsType {
 
     @XmlElement(name = "Content")
-    protected List<Content> content;
+    private List<Content> content;
     @XmlElement(name = "Error")
-    protected ErrorsType error;
+    private ErrorsType error;
 
     /**
      * Gets the value of the content property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the content property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContent().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Content }
-     * 
-     * 
      */
     public List<Content> getContent() {
         if (content == null) {
-            content = new ArrayList<Content>();
+            content = new ArrayList<>();
         }
         return this.content;
     }
 
     /**
      * Gets the value of the error property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ErrorsType }
      */
     public ErrorsType getError() {
         return error;
@@ -104,11 +99,9 @@ public class ContentsType {
 
     /**
      * Sets the value of the error property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ErrorsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ErrorsType }
      */
     public void setError(ErrorsType value) {
         this.error = value;
@@ -117,9 +110,9 @@ public class ContentsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -132,30 +125,25 @@ public class ContentsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "srpSearchResult",
-        "warning"
+            "srpSearchResult",
+            "warning"
     })
     public static class Content
-        extends ContentType
-    {
+            extends ContentType {
 
         @XmlElement(name = "SrpSearchResult")
-        protected SrpSearchResult srpSearchResult;
+        SrpSearchResult srpSearchResult;
         @XmlElement(name = "Warning")
-        protected WarningsType warning;
+        WarningsType warning;
 
         /**
          * Gets the value of the srpSearchResult property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link SrpSearchResult }
-         *     
+         *
+         * @return possible object is
+         * {@link SrpSearchResult }
          */
         public SrpSearchResult getSrpSearchResult() {
             return srpSearchResult;
@@ -163,11 +151,9 @@ public class ContentsType {
 
         /**
          * Sets the value of the srpSearchResult property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link SrpSearchResult }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link SrpSearchResult }
          */
         public void setSrpSearchResult(SrpSearchResult value) {
             this.srpSearchResult = value;
@@ -175,11 +161,9 @@ public class ContentsType {
 
         /**
          * Gets the value of the warning property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link WarningsType }
-         *     
+         *
+         * @return possible object is
+         * {@link WarningsType }
          */
         public WarningsType getWarning() {
             return warning;
@@ -187,11 +171,9 @@ public class ContentsType {
 
         /**
          * Sets the value of the warning property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link WarningsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link WarningsType }
          */
         public void setWarning(WarningsType value) {
             this.warning = value;

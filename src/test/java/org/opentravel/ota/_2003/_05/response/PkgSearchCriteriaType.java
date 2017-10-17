@@ -8,34 +8,29 @@
 
 package org.opentravel.ota._2003._05.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Sequence of the
- *                 individual search criterion items. If any one of these elements is
- *                 missing it means that no
- *                 filtering on that specific aspect will be
- *                 executed. If more than one of these elements are included it means
- *                 that the result list is filtered for all the
- *                 given elements (AND
- *                 relation between the different filter criteria). These criteria will
- *                 be considered both in generating the result list and in facet
- *                 calculation.
- *             
- * 
+ * individual search criterion items. If any one of these elements is
+ * missing it means that no
+ * filtering on that specific aspect will be
+ * executed. If more than one of these elements are included it means
+ * that the result list is filtered for all the
+ * given elements (AND
+ * relation between the different filter criteria). These criteria will
+ * be considered both in generating the result list and in facet
+ * calculation.
+ * <p>
+ * <p>
  * <p>Java class for PkgSearchCriteriaType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PkgSearchCriteriaType">
  *   &lt;complexContent>
@@ -211,25 +206,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PkgSearchCriteriaType", propOrder = {
-    "pkgCriterion"
+        "pkgCriterion"
 })
 public class PkgSearchCriteriaType {
 
     @XmlElement(name = "PkgCriterion", required = true)
-    protected PkgCriterion pkgCriterion;
+    private PkgCriterion pkgCriterion;
 
     /**
      * Gets the value of the pkgCriterion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PkgCriterion }
-     *     
+     *
+     * @return possible object is
+     * {@link PkgCriterion }
      */
     public PkgCriterion getPkgCriterion() {
         return pkgCriterion;
@@ -237,11 +228,9 @@ public class PkgSearchCriteriaType {
 
     /**
      * Sets the value of the pkgCriterion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PkgCriterion }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PkgCriterion }
      */
     public void setPkgCriterion(PkgCriterion value) {
         this.pkgCriterion = value;
@@ -250,9 +239,9 @@ public class PkgSearchCriteriaType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -418,79 +407,75 @@ public class PkgSearchCriteriaType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "adultGroupAge",
-        "departureAirportList",
-        "stayDateRange",
-        "roomStayCandidates",
-        "durations",
-        "durationDays",
-        "durationInDays",
-        "awards",
-        "boardCodes",
-        "geoLocation",
-        "commercialDestinations",
-        "destinationCategories",
-        "resortCategories",
-        "brands",
-        "freeChildFlags",
-        "originCodes",
-        "stunts",
-        "timeInterval",
-        "additionalCriteria"
+            "adultGroupAge",
+            "departureAirportList",
+            "stayDateRange",
+            "roomStayCandidates",
+            "durations",
+            "durationDays",
+            "durationInDays",
+            "awards",
+            "boardCodes",
+            "geoLocation",
+            "commercialDestinations",
+            "destinationCategories",
+            "resortCategories",
+            "brands",
+            "freeChildFlags",
+            "originCodes",
+            "stunts",
+            "timeInterval",
+            "additionalCriteria"
     })
     public static class PkgCriterion {
 
         @XmlElement(name = "AdultGroupAge")
-        protected AdultGroupAge adultGroupAge;
+        AdultGroupAge adultGroupAge;
         @XmlElement(name = "DepartureAirportList")
-        protected DepartureAirportListType departureAirportList;
+        DepartureAirportListType departureAirportList;
         @XmlElement(name = "StayDateRange")
-        protected StayDateRange stayDateRange;
+        StayDateRange stayDateRange;
         @XmlElement(name = "RoomStayCandidates", required = true)
-        protected RoomStayCandidatesType roomStayCandidates;
+        RoomStayCandidatesType roomStayCandidates;
         @XmlElement(name = "Durations")
-        protected DurationsType durations;
+        DurationsType durations;
         @XmlElement(name = "DurationDays")
-        protected DurationDaysType durationDays;
+        DurationDaysType durationDays;
         @XmlElement(name = "DurationInDays")
-        protected DurationInDaysType durationInDays;
+        DurationInDaysType durationInDays;
         @XmlElement(name = "Awards")
-        protected AwardsType awards;
+        AwardsType awards;
         @XmlElement(name = "BoardCodes")
-        protected BoardCodesType boardCodes;
+        BoardCodesType boardCodes;
         @XmlElement(name = "GeoLocation")
-        protected GeoLocationRectangleType geoLocation;
+        GeoLocationRectangleType geoLocation;
         @XmlElement(name = "CommercialDestinations")
-        protected CommercialDestinations commercialDestinations;
+        CommercialDestinations commercialDestinations;
         @XmlElement(name = "DestinationCategories")
-        protected DestinationCategories destinationCategories;
+        DestinationCategories destinationCategories;
         @XmlElement(name = "ResortCategories")
-        protected ResortCategories resortCategories;
+        ResortCategories resortCategories;
         @XmlElement(name = "Brands")
-        protected BrandsType brands;
+        BrandsType brands;
         @XmlElement(name = "FreeChildFlags")
-        protected FreeChildFlagsType freeChildFlags;
+        FreeChildFlagsType freeChildFlags;
         @XmlElement(name = "OriginCodes")
-        protected OriginCodesType originCodes;
+        OriginCodesType originCodes;
         @XmlElement(name = "Stunts")
-        protected StuntsType stunts;
+        StuntsType stunts;
         @XmlElement(name = "TimeInterval")
-        protected TimeInterval timeInterval;
+        TimeInterval timeInterval;
         @XmlElement(name = "AdditionalCriteria")
-        protected AdditionalCriteria additionalCriteria;
+        AdditionalCriteria additionalCriteria;
 
         /**
          * Gets the value of the adultGroupAge property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AdultGroupAge }
-         *     
+         *
+         * @return possible object is
+         * {@link AdultGroupAge }
          */
         public AdultGroupAge getAdultGroupAge() {
             return adultGroupAge;
@@ -498,11 +483,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the adultGroupAge property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AdultGroupAge }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AdultGroupAge }
          */
         public void setAdultGroupAge(AdultGroupAge value) {
             this.adultGroupAge = value;
@@ -510,11 +493,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the departureAirportList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DepartureAirportListType }
-         *     
+         *
+         * @return possible object is
+         * {@link DepartureAirportListType }
          */
         public DepartureAirportListType getDepartureAirportList() {
             return departureAirportList;
@@ -522,11 +503,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the departureAirportList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DepartureAirportListType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DepartureAirportListType }
          */
         public void setDepartureAirportList(DepartureAirportListType value) {
             this.departureAirportList = value;
@@ -534,11 +513,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the stayDateRange property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link StayDateRange }
-         *     
+         *
+         * @return possible object is
+         * {@link StayDateRange }
          */
         public StayDateRange getStayDateRange() {
             return stayDateRange;
@@ -546,11 +523,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the stayDateRange property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link StayDateRange }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link StayDateRange }
          */
         public void setStayDateRange(StayDateRange value) {
             this.stayDateRange = value;
@@ -558,11 +533,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the roomStayCandidates property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link RoomStayCandidatesType }
-         *     
+         *
+         * @return possible object is
+         * {@link RoomStayCandidatesType }
          */
         public RoomStayCandidatesType getRoomStayCandidates() {
             return roomStayCandidates;
@@ -570,11 +543,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the roomStayCandidates property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link RoomStayCandidatesType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link RoomStayCandidatesType }
          */
         public void setRoomStayCandidates(RoomStayCandidatesType value) {
             this.roomStayCandidates = value;
@@ -582,11 +553,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the durations property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DurationsType }
-         *     
+         *
+         * @return possible object is
+         * {@link DurationsType }
          */
         public DurationsType getDurations() {
             return durations;
@@ -594,11 +563,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the durations property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DurationsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DurationsType }
          */
         public void setDurations(DurationsType value) {
             this.durations = value;
@@ -606,11 +573,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the durationDays property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DurationDaysType }
-         *     
+         *
+         * @return possible object is
+         * {@link DurationDaysType }
          */
         public DurationDaysType getDurationDays() {
             return durationDays;
@@ -618,11 +583,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the durationDays property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DurationDaysType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DurationDaysType }
          */
         public void setDurationDays(DurationDaysType value) {
             this.durationDays = value;
@@ -630,11 +593,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the durationInDays property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DurationInDaysType }
-         *     
+         *
+         * @return possible object is
+         * {@link DurationInDaysType }
          */
         public DurationInDaysType getDurationInDays() {
             return durationInDays;
@@ -642,11 +603,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the durationInDays property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DurationInDaysType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DurationInDaysType }
          */
         public void setDurationInDays(DurationInDaysType value) {
             this.durationInDays = value;
@@ -654,11 +613,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the awards property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AwardsType }
-         *     
+         *
+         * @return possible object is
+         * {@link AwardsType }
          */
         public AwardsType getAwards() {
             return awards;
@@ -666,11 +623,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the awards property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AwardsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AwardsType }
          */
         public void setAwards(AwardsType value) {
             this.awards = value;
@@ -678,11 +633,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the boardCodes property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BoardCodesType }
-         *     
+         *
+         * @return possible object is
+         * {@link BoardCodesType }
          */
         public BoardCodesType getBoardCodes() {
             return boardCodes;
@@ -690,11 +643,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the boardCodes property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BoardCodesType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BoardCodesType }
          */
         public void setBoardCodes(BoardCodesType value) {
             this.boardCodes = value;
@@ -702,11 +653,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the geoLocation property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link GeoLocationRectangleType }
-         *     
+         *
+         * @return possible object is
+         * {@link GeoLocationRectangleType }
          */
         public GeoLocationRectangleType getGeoLocation() {
             return geoLocation;
@@ -714,11 +663,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the geoLocation property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link GeoLocationRectangleType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link GeoLocationRectangleType }
          */
         public void setGeoLocation(GeoLocationRectangleType value) {
             this.geoLocation = value;
@@ -726,11 +673,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the commercialDestinations property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CommercialDestinations }
-         *     
+         *
+         * @return possible object is
+         * {@link CommercialDestinations }
          */
         public CommercialDestinations getCommercialDestinations() {
             return commercialDestinations;
@@ -738,11 +683,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the commercialDestinations property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CommercialDestinations }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link CommercialDestinations }
          */
         public void setCommercialDestinations(CommercialDestinations value) {
             this.commercialDestinations = value;
@@ -750,11 +693,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the destinationCategories property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link DestinationCategories }
-         *     
+         *
+         * @return possible object is
+         * {@link DestinationCategories }
          */
         public DestinationCategories getDestinationCategories() {
             return destinationCategories;
@@ -762,11 +703,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the destinationCategories property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link DestinationCategories }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link DestinationCategories }
          */
         public void setDestinationCategories(DestinationCategories value) {
             this.destinationCategories = value;
@@ -774,11 +713,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the resortCategories property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link ResortCategories }
-         *     
+         *
+         * @return possible object is
+         * {@link ResortCategories }
          */
         public ResortCategories getResortCategories() {
             return resortCategories;
@@ -786,11 +723,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the resortCategories property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link ResortCategories }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link ResortCategories }
          */
         public void setResortCategories(ResortCategories value) {
             this.resortCategories = value;
@@ -798,11 +733,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the brands property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BrandsType }
-         *     
+         *
+         * @return possible object is
+         * {@link BrandsType }
          */
         public BrandsType getBrands() {
             return brands;
@@ -810,11 +743,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the brands property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BrandsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BrandsType }
          */
         public void setBrands(BrandsType value) {
             this.brands = value;
@@ -822,11 +753,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the freeChildFlags property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link FreeChildFlagsType }
-         *     
+         *
+         * @return possible object is
+         * {@link FreeChildFlagsType }
          */
         public FreeChildFlagsType getFreeChildFlags() {
             return freeChildFlags;
@@ -834,11 +763,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the freeChildFlags property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link FreeChildFlagsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link FreeChildFlagsType }
          */
         public void setFreeChildFlags(FreeChildFlagsType value) {
             this.freeChildFlags = value;
@@ -846,11 +773,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the originCodes property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link OriginCodesType }
-         *     
+         *
+         * @return possible object is
+         * {@link OriginCodesType }
          */
         public OriginCodesType getOriginCodes() {
             return originCodes;
@@ -858,11 +783,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the originCodes property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link OriginCodesType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link OriginCodesType }
          */
         public void setOriginCodes(OriginCodesType value) {
             this.originCodes = value;
@@ -870,11 +793,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the stunts property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link StuntsType }
-         *     
+         *
+         * @return possible object is
+         * {@link StuntsType }
          */
         public StuntsType getStunts() {
             return stunts;
@@ -882,11 +803,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the stunts property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link StuntsType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link StuntsType }
          */
         public void setStunts(StuntsType value) {
             this.stunts = value;
@@ -894,11 +813,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the timeInterval property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link TimeInterval }
-         *     
+         *
+         * @return possible object is
+         * {@link TimeInterval }
          */
         public TimeInterval getTimeInterval() {
             return timeInterval;
@@ -906,11 +823,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the timeInterval property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link TimeInterval }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link TimeInterval }
          */
         public void setTimeInterval(TimeInterval value) {
             this.timeInterval = value;
@@ -918,11 +833,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Gets the value of the additionalCriteria property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AdditionalCriteria }
-         *     
+         *
+         * @return possible object is
+         * {@link AdditionalCriteria }
          */
         public AdditionalCriteria getAdditionalCriteria() {
             return additionalCriteria;
@@ -930,11 +843,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * Sets the value of the additionalCriteria property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AdditionalCriteria }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AdditionalCriteria }
          */
         public void setAdditionalCriteria(AdditionalCriteria value) {
             this.additionalCriteria = value;
@@ -943,9 +854,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1020,43 +931,39 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "criterion"
+                "criterion"
         })
         public static class AdditionalCriteria {
 
             @XmlElement(name = "Criterion")
-            protected List<Criterion> criterion;
+            List<Criterion> criterion;
 
             /**
              * Gets the value of the criterion property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the criterion property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCriterion().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link Criterion }
-             * 
-             * 
              */
             public List<Criterion> getCriterion() {
                 if (criterion == null) {
-                    criterion = new ArrayList<Criterion>();
+                    criterion = new ArrayList<>();
                 }
                 return this.criterion;
             }
@@ -1064,9 +971,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1131,58 +1038,52 @@ public class PkgSearchCriteriaType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "option"
+                    "option"
             })
             public static class Criterion {
 
                 @XmlElement(name = "Option", required = true)
-                protected List<Option> option;
+                List<Option> option;
                 @XmlAttribute(name = "Name", required = true)
-                protected FieldName name;
+                FieldName name;
                 @XmlAttribute(name = "Required", required = true)
-                protected String required;
+                String required;
 
                 /**
                  * Gets the value of the option property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the option property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getOption().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Option }
-                 * 
-                 * 
                  */
                 public List<Option> getOption() {
                     if (option == null) {
-                        option = new ArrayList<Option>();
+                        option = new ArrayList<>();
                     }
                     return this.option;
                 }
 
                 /**
                  * Gets the value of the name property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link FieldName }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link FieldName }
                  */
                 public FieldName getName() {
                     return name;
@@ -1190,11 +1091,9 @@ public class PkgSearchCriteriaType {
 
                 /**
                  * Sets the value of the name property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link FieldName }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link FieldName }
                  */
                 public void setName(FieldName value) {
                     this.name = value;
@@ -1202,11 +1101,9 @@ public class PkgSearchCriteriaType {
 
                 /**
                  * Gets the value of the required property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getRequired() {
                     return required;
@@ -1214,11 +1111,9 @@ public class PkgSearchCriteriaType {
 
                 /**
                  * Sets the value of the required property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setRequired(String value) {
                     this.required = value;
@@ -1227,9 +1122,9 @@ public class PkgSearchCriteriaType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1239,23 +1134,19 @@ public class PkgSearchCriteriaType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
                 public static class Option {
 
                     @XmlAttribute(name = "Value", required = true)
-                    protected String value;
+                    String value;
 
                     /**
                      * Gets the value of the value property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getValue() {
                         return value;
@@ -1263,11 +1154,9 @@ public class PkgSearchCriteriaType {
 
                     /**
                      * Sets the value of the value property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setValue(String value) {
                         this.value = value;
@@ -1282,9 +1171,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1303,23 +1192,19 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class AdultGroupAge {
 
             @XmlAttribute(name = "groupAge", required = true)
-            protected String groupAge;
+            String groupAge;
 
             /**
              * Gets the value of the groupAge property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getGroupAge() {
                 return groupAge;
@@ -1327,11 +1212,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Sets the value of the groupAge property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setGroupAge(String value) {
                 this.groupAge = value;
@@ -1342,9 +1225,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1356,43 +1239,39 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "commercialDestination"
+                "commercialDestination"
         })
         public static class CommercialDestinations {
 
             @XmlElement(name = "CommercialDestination", required = true)
-            protected List<String> commercialDestination;
+            List<String> commercialDestination;
 
             /**
              * Gets the value of the commercialDestination property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the commercialDestination property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCommercialDestination().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             * 
-             * 
              */
             public List<String> getCommercialDestination() {
                 if (commercialDestination == null) {
-                    commercialDestination = new ArrayList<String>();
+                    commercialDestination = new ArrayList<>();
                 }
                 return this.commercialDestination;
             }
@@ -1402,9 +1281,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1416,43 +1295,39 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "destinationCategory"
+                "destinationCategory"
         })
         public static class DestinationCategories {
 
             @XmlElement(name = "DestinationCategory", required = true)
-            protected List<String> destinationCategory;
+            List<String> destinationCategory;
 
             /**
              * Gets the value of the destinationCategory property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the destinationCategory property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getDestinationCategory().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             * 
-             * 
              */
             public List<String> getDestinationCategory() {
                 if (destinationCategory == null) {
-                    destinationCategory = new ArrayList<String>();
+                    destinationCategory = new ArrayList<>();
                 }
                 return this.destinationCategory;
             }
@@ -1462,9 +1337,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1476,43 +1351,39 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "resortCategory"
+                "resortCategory"
         })
         public static class ResortCategories {
 
             @XmlElement(name = "ResortCategory", required = true)
-            protected List<String> resortCategory;
+            List<String> resortCategory;
 
             /**
              * Gets the value of the resortCategory property.
-             * 
+             * <p>
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the resortCategory property.
-             * 
+             * <p>
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getResortCategory().add(newItem);
              * </pre>
-             * 
-             * 
+             * <p>
+             * <p>
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             * 
-             * 
              */
             public List<String> getResortCategory() {
                 if (resortCategory == null) {
-                    resortCategory = new ArrayList<String>();
+                    resortCategory = new ArrayList<>();
                 }
                 return this.resortCategory;
             }
@@ -1522,9 +1393,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1534,8 +1405,6 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1543,18 +1412,16 @@ public class PkgSearchCriteriaType {
 
             @XmlAttribute(name = "Start", required = true)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar start;
+            XMLGregorianCalendar start;
             @XmlAttribute(name = "End", required = true)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar end;
+            XMLGregorianCalendar end;
 
             /**
              * Gets the value of the start property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getStart() {
                 return start;
@@ -1562,11 +1429,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Sets the value of the start property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setStart(XMLGregorianCalendar value) {
                 this.start = value;
@@ -1574,11 +1439,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Gets the value of the end property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getEnd() {
                 return end;
@@ -1586,11 +1449,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Sets the value of the end property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setEnd(XMLGregorianCalendar value) {
                 this.end = value;
@@ -1601,9 +1462,9 @@ public class PkgSearchCriteriaType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1613,8 +1474,6 @@ public class PkgSearchCriteriaType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1622,18 +1481,16 @@ public class PkgSearchCriteriaType {
 
             @XmlAttribute(name = "Start", required = true)
             @XmlSchemaType(name = "time")
-            protected XMLGregorianCalendar start;
+            XMLGregorianCalendar start;
             @XmlAttribute(name = "End", required = true)
             @XmlSchemaType(name = "time")
-            protected XMLGregorianCalendar end;
+            XMLGregorianCalendar end;
 
             /**
              * Gets the value of the start property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getStart() {
                 return start;
@@ -1641,11 +1498,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Sets the value of the start property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setStart(XMLGregorianCalendar value) {
                 this.start = value;
@@ -1653,11 +1508,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Gets the value of the end property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @return possible object is
+             * {@link XMLGregorianCalendar }
              */
             public XMLGregorianCalendar getEnd() {
                 return end;
@@ -1665,11 +1518,9 @@ public class PkgSearchCriteriaType {
 
             /**
              * Sets the value of the end property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link XMLGregorianCalendar }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link XMLGregorianCalendar }
              */
             public void setEnd(XMLGregorianCalendar value) {
                 this.end = value;

@@ -15,34 +15,31 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the generated package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the generated package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _Response_QNAME = new QName("", "Response");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: generated
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link ReservationResponseTypeResponse }
-     * 
      */
     public ReservationResponseTypeResponse createReservationResponseTypeResponse() {
         return new ReservationResponseTypeResponse();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFahTypeResponse }
-     * 
      */
     public ReservationFahTypeResponse createReservationFahTypeResponse() {
         return new ReservationFahTypeResponse();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationDetailTypeResponse }
-     * 
      */
     public ReservationDetailTypeResponse createReservationDetailTypeResponse() {
         return new ReservationDetailTypeResponse();
@@ -66,7 +61,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationErrTypeResponse }
-     * 
      */
     public ReservationErrTypeResponse createReservationErrTypeResponse() {
         return new ReservationErrTypeResponse();
@@ -74,7 +68,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationWarningTypeResponse }
-     * 
      */
     public ReservationWarningTypeResponse createReservationWarningTypeResponse() {
         return new ReservationWarningTypeResponse();
@@ -82,7 +75,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationAggregatedCostsTypeResponse }
-     * 
      */
     public ReservationAggregatedCostsTypeResponse createReservationAggregatedCostsTypeResponse() {
         return new ReservationAggregatedCostsTypeResponse();
@@ -90,7 +82,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationCustomerTypeResponse }
-     * 
      */
     public ReservationCustomerTypeResponse createReservationCustomerTypeResponse() {
         return new ReservationCustomerTypeResponse();
@@ -98,7 +89,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFaqTypeResponse }
-     * 
      */
     public ReservationFaqTypeResponse createReservationFaqTypeResponse() {
         return new ReservationFaqTypeResponse();
@@ -106,7 +96,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationPersonsTypeResponse }
-     * 
      */
     public ReservationPersonsTypeResponse createReservationPersonsTypeResponse() {
         return new ReservationPersonsTypeResponse();
@@ -114,7 +103,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFatTypeResponse }
-     * 
      */
     public ReservationFatTypeResponse createReservationFatTypeResponse() {
         return new ReservationFatTypeResponse();
@@ -122,7 +110,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationAccBalanceTypeResponse }
-     * 
      */
     public ReservationAccBalanceTypeResponse createReservationAccBalanceTypeResponse() {
         return new ReservationAccBalanceTypeResponse();
@@ -130,7 +117,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFacTypeResponse }
-     * 
      */
     public ReservationFacTypeResponse createReservationFacTypeResponse() {
         return new ReservationFacTypeResponse();
@@ -138,7 +124,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFabTypeResponse }
-     * 
      */
     public ReservationFabTypeResponse createReservationFabTypeResponse() {
         return new ReservationFabTypeResponse();
@@ -146,7 +131,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationRoomFacilTypeResponse }
-     * 
      */
     public ReservationRoomFacilTypeResponse createReservationRoomFacilTypeResponse() {
         return new ReservationRoomFacilTypeResponse();
@@ -154,7 +138,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationLegTypeResponse }
-     * 
      */
     public ReservationLegTypeResponse createReservationLegTypeResponse() {
         return new ReservationLegTypeResponse();
@@ -162,7 +145,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationPurchaseTypeResponse }
-     * 
      */
     public ReservationPurchaseTypeResponse createReservationPurchaseTypeResponse() {
         return new ReservationPurchaseTypeResponse();
@@ -170,7 +152,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFeeTypeResponse }
-     * 
      */
     public ReservationFeeTypeResponse createReservationFeeTypeResponse() {
         return new ReservationFeeTypeResponse();
@@ -178,7 +159,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationDownPayTypeResponse }
-     * 
      */
     public ReservationDownPayTypeResponse createReservationDownPayTypeResponse() {
         return new ReservationDownPayTypeResponse();
@@ -186,7 +166,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationMandatoryCostsTypeResponse }
-     * 
      */
     public ReservationMandatoryCostsTypeResponse createReservationMandatoryCostsTypeResponse() {
         return new ReservationMandatoryCostsTypeResponse();
@@ -194,7 +173,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationFapTypeResponse }
-     * 
      */
     public ReservationFapTypeResponse createReservationFapTypeResponse() {
         return new ReservationFapTypeResponse();
@@ -202,7 +180,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationSalesTypeResponse }
-     * 
      */
     public ReservationSalesTypeResponse createReservationSalesTypeResponse() {
         return new ReservationSalesTypeResponse();
@@ -210,7 +187,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ReservationPdetTypeResponse }
-     * 
      */
     public ReservationPdetTypeResponse createReservationPdetTypeResponse() {
         return new ReservationPdetTypeResponse();
@@ -218,11 +194,10 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReservationResponseTypeResponse }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "", name = "Response")
     public JAXBElement<ReservationResponseTypeResponse> createResponse(ReservationResponseTypeResponse value) {
-        return new JAXBElement<ReservationResponseTypeResponse>(_Response_QNAME, ReservationResponseTypeResponse.class, null, value);
+        return new JAXBElement<>(_Response_QNAME, ReservationResponseTypeResponse.class, null, value);
     }
 
 }
