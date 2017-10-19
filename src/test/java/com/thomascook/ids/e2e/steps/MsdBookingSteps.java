@@ -15,58 +15,54 @@ public class MsdBookingSteps implements En {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MsdBookingSteps.class);
 
-    private MsdSession msdSession;
-
     public MsdBookingSteps() {
         Given("^I should see that booking (\\d+) has passengers list$", (String bookingId, DataTable paxExpectedList) -> {
             String bookingGuid;
             HashSet<String> paxSet;
 
             HashSet<String> paxExpectedSet = new HashSet<>(paxExpectedList.asList(String.class));
-            if (msdSession == null) {
-                msdSession = new MsdSession();
-            }
-
-            bookingGuid = msdSession.getBookingGuidByMsdId(bookingId);
+            bookingGuid = MsdSession.get().getBookingGuidByMsdId(bookingId);
 
 
             MsdBookingDetails booking = new MsdBookingDetails();
-            booking.setTransports(msdSession.getBookingTransportsServiceByBookingGuid(bookingGuid).prettyPrint());
+            booking.setTransports(MsdSession.get().getBookingTransportsServiceByBookingGuid(bookingGuid).prettyPrint());
             booking.getTransports().forEach(it -> LOGGER.info(it.toString()));
 
-            booking.setGeneralDetails(msdSession.getBookingGeneralDetailsByBookingId(bookingId).prettyPrint());
+            booking.setGeneralDetails(MsdSession.get().getBookingGeneralDetailsByBookingId(bookingId).prettyPrint());
             LOGGER.info(booking.getGeneralDetails().toString());
 
-            booking.setAccomodations(msdSession.getAccommodationServiceByBookingGuid(bookingGuid).prettyPrint());
+            booking.setAccommodations(MsdSession.get().getAccommodationServiceByBookingGuid(bookingGuid).prettyPrint());
             booking.getAccommodations().forEach(it -> LOGGER.info(it.toString()));
 
-            booking.setTransfers(msdSession.getBookingTransfersServiceByBookingGuid(bookingGuid).prettyPrint());
+            booking.setTransfers(MsdSession.get().getBookingTransfersServiceByBookingGuid(bookingGuid).prettyPrint());
             booking.getTransfers().forEach(it -> LOGGER.info(it.toString()));
 
-            booking.setExtraServices(msdSession.getBookingExtraServiceByBookingGuid(bookingGuid).prettyPrint());
+            booking.setExtraServices(MsdSession.get().getBookingExtraServiceByBookingGuid(bookingGuid).prettyPrint());
             booking.getExtraServices().forEach(it -> LOGGER.info(it.toString()));
 
-            booking.setCustomer(msdSession.getCustomerObjectByBookingId(bookingId).prettyPrint());
+            booking.setCustomer(MsdSession.get().getCustomerObjectByBookingId(bookingId).prettyPrint());
             LOGGER.info(booking.getCustomer().toString());
 
-            LOGGER.error("====================== annnnnnddd... ========================");
             LOGGER.info(booking.toString());
 
 
-            paxSet = msdSession.getAccommodationPaxByTcBookingGuid(bookingGuid);
+            paxSet = MsdSession.get().getAccommodationPaxByTcBookingGuid(bookingGuid);
             Assert.assertEquals(paxExpectedSet, paxSet);
         });
 
         Then("^I should see a booking with same number exists in msD$", () -> {
             String bookingGuid;
 
-            if (msdSession == null) {
-                msdSession = new MsdSession();
-            }
-
-            bookingGuid = msdSession.getBookingGuidByMsdId(Holder.get().getBookingNumber());
+            bookingGuid = MsdSession.get().getBookingGuidByMsdId(Holder.get().getBookingNumber());
             assert bookingGuid != null;
+        });
 
+        And("^booking in msD should have same details as were set in onTour XML$", () -> {
+            MsdBookingDetails msdBookingDetails = new MsdBookingDetails(Holder.get().getBookingNumber());
+
+            Holder.get().setMsdBookingDetails(msdBookingDetails);
+            LOGGER.info(msdBookingDetails.toString());
+            msdBookingDetails.assertSameAsOnTourBookingInHolder();
         });
     }
 }

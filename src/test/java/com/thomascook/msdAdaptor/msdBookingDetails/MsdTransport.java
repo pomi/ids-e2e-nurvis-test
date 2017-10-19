@@ -2,10 +2,15 @@ package com.thomascook.msdAdaptor.msdBookingDetails;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
+import com.thomascook.ontour.Service;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Map;
 
-public class MsdTransport implements MsdService {
+import static org.junit.Assert.assertEquals;
+
+public class MsdTransport extends MsdService {
 
     //region Fields
     private String tc_name;
@@ -45,7 +50,7 @@ public class MsdTransport implements MsdService {
     //endregion
 
     public MsdTransport(Map<String, Object> jsonMap) {
-        fillInTransportDetailsFromJsonMap(jsonMap);
+        fillInDetailsFromJsonMap(jsonMap);
     }
 
     /**
@@ -53,14 +58,14 @@ public class MsdTransport implements MsdService {
      *
      * @param jsonMap Json Map made basing on {@link com.jayway.restassured.response.Response}. {@code (new JSONObject(jsonObject)).toMap().get("value").get(i)}
      */
-    private void fillInTransportDetailsFromJsonMap(Map<String, Object> jsonMap) {
+    private void fillInDetailsFromJsonMap(Map<String, Object> jsonMap) {
         this.tc_name = String.valueOf(jsonMap.get("tc_name"));
         this._owningbusinessunit_value = String.valueOf(jsonMap.get("_owningbusinessunit_value"));
         this.statuscode = String.valueOf(jsonMap.get("statuscode"));
-        this._tc_arrivalgatewayid_value = String.valueOf(jsonMap.get("_tc_arrivalgatewayid_value"));
+        this._tc_arrivalgatewayid_value = String.valueOf(jsonMap.get("_tc_arrivalgatewayid_value@OData.Community.Display.V1.FormattedValue"));
         this.createdon = String.valueOf(jsonMap.get("createdon"));
         this.statecode = String.valueOf(jsonMap.get("statecode"));
-        this.tc_transfertype = String.valueOf(jsonMap.get("tc_transfertype"));
+        this.tc_transfertype = String.valueOf(jsonMap.get("tc_transfertype@OData.Community.Display.V1.FormattedValue"));
         this.tc_transportcode = String.valueOf(jsonMap.get("tc_transportcode"));
         this.tc_order = String.valueOf(jsonMap.get("tc_order"));
         this._ownerid_value = String.valueOf(jsonMap.get("_ownerid_value"));
@@ -68,7 +73,7 @@ public class MsdTransport implements MsdService {
         this.tc_enddateandtime = String.valueOf(jsonMap.get("tc_enddateandtime"));
         this.versionnumber = String.valueOf(jsonMap.get("versionnumber"));
         this.tc_numberofparticipants = String.valueOf(jsonMap.get("tc_numberofparticipants"));
-        this._tc_departuregatewayid_value = String.valueOf(jsonMap.get("_tc_departuregatewayid_value"));
+        this._tc_departuregatewayid_value = String.valueOf(jsonMap.get("_tc_departuregatewayid_value@OData.Community.Display.V1.FormattedValue"));
         this.timezoneruleversionnumber = String.valueOf(jsonMap.get("timezoneruleversionnumber"));
         this.tc_flightnumber = String.valueOf(jsonMap.get("tc_flightnumber"));
         this._modifiedby_value = String.valueOf(jsonMap.get("_modifiedby_value"));
@@ -174,5 +179,36 @@ public class MsdTransport implements MsdService {
                 .add("_modifiedonbehalfby_value", _modifiedonbehalfby_value)
                 .add("tc_remark", tc_remark)
                 .toString();
+    }
+
+    public boolean equalsToNurvisOrder() {
+        //compare _owningbusinessunit_value;
+        //compare statecode;
+        //compare tc_transfertype;
+        return false;
+    }
+
+    public boolean assertMsdBookingMatchesOnTour(Service onTour) {
+        assertEquals(onTour.getOrigin(), this._tc_departuregatewayid_value);
+        assertEquals(onTour.getDestination(), this._tc_arrivalgatewayid_value);
+        assertEquals(onTour.getCode(), this.tc_transportcode);
+        assertEquals(String.valueOf(onTour.getNumberofunits()), this.tc_numberofparticipants);
+        assertEquals(onTour.getCarrier_code(), this.tc_carriercode);
+        assertEquals(onTour.getCarrier_flight_code(), this.tc_flightnumber);
+        assertEquals(onTour.getCarrier_code() + onTour.getCarrier_flight_code(), this.tc_transportcode);
+        assertEquals(this.tc_flightidentifier, onTour.getIdentifier());
+        assertEquals(LocalDate.parse(onTour.getBeginning_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_startdateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalTime.parse(onTour.getBeginning_time()),
+                LocalTime.parse(this.tc_startdateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getEnd_date()),
+                LocalDate.parse(this.tc_enddateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalTime.parse(onTour.getEnd_time()),
+                LocalTime.parse(this.tc_enddateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(TRANSFER_TYPES_MAP.get(onTour.getTransfer_type()), this.tc_transfertype);
+        assertEquals(STATE_MAP.get(onTour.getStatus()), this.statuscode);
+        assertMsdAndOnTourPaxAssignments(onTour.getPax_service(), getPaxList(this.tc_participants));
+
+        return false;
     }
 }

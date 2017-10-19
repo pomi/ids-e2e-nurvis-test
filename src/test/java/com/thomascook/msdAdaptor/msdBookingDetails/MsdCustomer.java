@@ -1,11 +1,21 @@
 package com.thomascook.msdAdaptor.msdBookingDetails;
 
 import com.google.common.base.MoreObjects;
+import com.thomascook.nurvisAdapter.request.ReservationCustomerTypeRequest;
+import com.thomascook.ontour.Service;
 
+import java.util.HashMap;
 import java.util.Map;
 
-public class MsdCustomer implements MsdService {
+import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
+public class MsdCustomer extends MsdService {
+
+    private static final Map LANGUAGES_MSD_TO_NURVIS = new HashMap<String, String>() {{
+        put("950000002", "H");
+    }};
     //region Fields
     private String customertypecode;
     private String tc_sourcesystemid;
@@ -235,8 +245,8 @@ public class MsdCustomer implements MsdService {
     private String address1_fax;
     private String onholdtime;
     private String address3_fax;
-    private String _slainvokedid_value;
     //endregion
+    private String _slainvokedid_value;
 
     public MsdCustomer(Map<String, Object> jsonMap) {
         setDetailsFromJsonMap(jsonMap);
@@ -250,7 +260,7 @@ public class MsdCustomer implements MsdService {
     private void setDetailsFromJsonMap(Map<String, Object> jsonMap) {
         this.customertypecode = String.valueOf(jsonMap.get("customertypecode"));
         this.tc_sourcesystemid = String.valueOf(jsonMap.get("tc_sourcesystemid"));
-        this.tc_salutation = String.valueOf(jsonMap.get("tc_salutation"));
+        this.tc_salutation = String.valueOf(jsonMap.get("tc_salutation@OData.Community.Display.V1.FormattedValue"));
         this.address2_addresstypecode = String.valueOf(jsonMap.get("address2_addresstypecode"));
         this.birthdate = String.valueOf(jsonMap.get("birthdate"));
         this.merged = String.valueOf(jsonMap.get("merged"));
@@ -712,5 +722,49 @@ public class MsdCustomer implements MsdService {
                 .add("address3_fax", address3_fax)
                 .add("_slainvokedid_value", _slainvokedid_value)
                 .toString();
+    }
+
+    @Override
+    boolean assertMsdBookingMatchesOnTour(Service onTourService) {
+        return false;
+    }
+
+    public boolean assertMsdBookingMatchesOnTour(ReservationCustomerTypeRequest request) {
+        if (null != request.getCFirstName()) {
+            assertThat(request.getCFirstName(), equalToIgnoringCase(this.firstname));
+        }
+        if (null != request.getCName()) {
+            assertThat(request.getCName(), equalToIgnoringCase(this.lastname));
+        }
+        if (null != request.getCTitle()) {
+            assertEquals(request.getCTitle(), this.tc_salutation);
+        }
+        if (null != request.getCPOCode()) {
+            assertThat(request.getCPOCode(), equalToIgnoringCase(this.tc_address1_postalcode));
+        }
+        if (null != request.getCLanguage()) {
+            assertEquals(request.getCLanguage(), LANGUAGES_MSD_TO_NURVIS.get(this.tc_language));
+        }
+        if (null != request.getCStreet()) {
+            assertThat(request.getCStreet(), equalToIgnoringCase(this.tc_address1_street));
+        }
+        if (null != request.getCHouseNr()) {
+            assertThat(request.getCHouseNr(), equalToIgnoringCase(this.tc_address1_housenumberorbuilding));
+        }
+        if (null != request.getCCity()) {
+            assertThat(request.getCCity(), equalToIgnoringCase(this.tc_address1_town));
+        }
+        if (null != request.getCTelNr()) {
+            assertThat(request.getCTelNr(), equalToIgnoringCase(this.telephone1));
+        }
+        if (null != request.getCMobile()) {
+            assertThat(request.getCMobile(), equalToIgnoringCase(this.mobilephone));
+        }
+        if (null != request.getCEMailUser() && null != request.getCEMailDomain()) {
+            assertThat(String.format("%s@%s", request.getCEMailUser(), request.getCEMailDomain()),
+                    equalToIgnoringCase(this.emailaddress1));
+        }
+
+        return true;
     }
 }

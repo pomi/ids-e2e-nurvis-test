@@ -8,13 +8,15 @@
       "de": ""
     },
     "nurvis": {
-      "be": "http://int-api.thomascook.com/nurvis-prod/prod/OT/NECB/NeckermannReisen",
-      "nl": "http://int-api.thomascook.com/nurvis-prod/prod/OT/NECN/NeckermannReisen",
+      "be": "http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECB/NeckermannReisen",
+      "nl": "http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen",
       "de": ""
     },
     "tosca": "http://api.thomascook.com/toscaOTADEV2",
     "msd": {
-      "baseUrl": "thomascookstaging.crm4.dynamics.com"
+      "baseUrl": "thomascookstaging.crm4.dynamics.com",
+      "fetchBookingTimeoutSec": 520,
+      "waitBetweenTiesSec": 10
     },
     "sfw": {
       "url": "https://uat-thomascook.cs81.force.com/service/services/apexrest/BookingCustomerData",
@@ -36,8 +38,8 @@
       "de": ""
     },
     "nurvis": {
-      "be": "http://int-api.thomascook.com/nurvis-prod/prod/OT/NECB/NeckermannReisen",
-      "nl": "http://int-api.thomascook.com/nurvis-prod/prod/OT/NECN/NeckermannReisen",
+      "be": "http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECB/NeckermannReisen",
+      "nl": "http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen",
       "de": ""
     },
     "tosca": "http://api.thomascook.com/toscaOTADEV2",

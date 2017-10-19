@@ -3,6 +3,8 @@ package com.thomascook.ids.e2e;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
+import org.junit.Rule;
+import org.junit.rules.ErrorCollector;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -17,4 +19,6 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE
 )
 public class RunCucumberTest {
+    @Rule
+    public static ErrorCollector ERROR_COLLECTOR = new ErrorCollector();
 }

@@ -1,10 +1,12 @@
 package com.thomascook.msdAdaptor.msdBookingDetails;
 
 import com.google.common.base.MoreObjects;
+import com.thomascook.ontour.Service;
+import org.junit.Assert;
 
 import java.util.Map;
 
-public class MsdTransfer {
+public class MsdTransfer extends MsdService {
 
     //region Fields
     private String _createdby_value;
@@ -40,7 +42,7 @@ public class MsdTransfer {
     //endregion
 
     public MsdTransfer(Map<String, Object> jsonMap) {
-        setDetailsFromJsonMap(jsonMap);
+        fillInDetailsFromJsonMap(jsonMap);
     }
 
     /**
@@ -48,37 +50,37 @@ public class MsdTransfer {
      *
      * @param jsonMap Json Map made basing on {@link com.jayway.restassured.response.Response}. {@code (new JSONObject(jsonObject)).toMap().get("value").get(i)}
      */
-    private void setDetailsFromJsonMap(Map<String, Object> jsonMap) {
-        this._createdby_value = String.valueOf(jsonMap.get("_createdby_value;"));
-        this._createdonbehalfby_value = String.valueOf(jsonMap.get("_createdonbehalfby_value;"));
-        this._modifiedby_value = String.valueOf(jsonMap.get("_modifiedby_value;"));
-        this._modifiedonbehalfby_value = String.valueOf(jsonMap.get("_modifiedonbehalfby_value;"));
-        this._ownerid_value = String.valueOf(jsonMap.get("_ownerid_value;"));
-        this._owningbusinessunit_value = String.valueOf(jsonMap.get("_owningbusinessunit_value;"));
-        this._owningteam_value = String.valueOf(jsonMap.get("_owningteam_value;"));
-        this._owninguser_value = String.valueOf(jsonMap.get("_owninguser_value;"));
-        this._tc_arrivalgatewayid_value = String.valueOf(jsonMap.get("_tc_arrivalgatewayid_value;"));
-        this._tc_bookingid_value = String.valueOf(jsonMap.get("_tc_bookingid_value;"));
-        this._tc_departuregatewayid_value = String.valueOf(jsonMap.get("_tc_departuregatewayid_value;"));
-        this.createdon = String.valueOf(jsonMap.get("createdon;"));
-        this.importsequencenumber = String.valueOf(jsonMap.get("importsequencenumber;"));
-        this.modifiedon = String.valueOf(jsonMap.get("modifiedon;"));
-        this.overriddencreatedon = String.valueOf(jsonMap.get("overriddencreatedon;"));
-        this.statecode = String.valueOf(jsonMap.get("statecode;"));
-        this.statuscode = String.valueOf(jsonMap.get("statuscode;"));
-        this.tc_bookingtransferid = String.valueOf(jsonMap.get("tc_bookingtransferid;"));
-        this.tc_category = String.valueOf(jsonMap.get("tc_category;"));
-        this.tc_enddateandtime = String.valueOf(jsonMap.get("tc_enddateandtime;"));
-        this.tc_name = String.valueOf(jsonMap.get("tc_name;"));
-        this.tc_order = String.valueOf(jsonMap.get("tc_order;"));
-        this.tc_participants = String.valueOf(jsonMap.get("tc_participants;"));
-        this.tc_remark = String.valueOf(jsonMap.get("tc_remark;"));
-        this.tc_startdateandtime = String.valueOf(jsonMap.get("tc_startdateandtime;"));
-        this.tc_transfercode = String.valueOf(jsonMap.get("tc_transfercode;"));
-        this.tc_transfertype = String.valueOf(jsonMap.get("tc_transfertype;"));
-        this.timezoneruleversionnumber = String.valueOf(jsonMap.get("timezoneruleversionnumber;"));
-        this.utcconversiontimezonecode = String.valueOf(jsonMap.get("utcconversiontimezonecode;"));
-        this.versionnumber = String.valueOf(jsonMap.get("versionnumber;"));
+    private void fillInDetailsFromJsonMap(Map<String, Object> jsonMap) {
+        this._createdby_value = String.valueOf(jsonMap.get("_createdby_value"));
+        this._createdonbehalfby_value = String.valueOf(jsonMap.get("_createdonbehalfby_value"));
+        this._modifiedby_value = String.valueOf(jsonMap.get("_modifiedby_value"));
+        this._modifiedonbehalfby_value = String.valueOf(jsonMap.get("_modifiedonbehalfby_value"));
+        this._ownerid_value = String.valueOf(jsonMap.get("_ownerid_value"));
+        this._owningbusinessunit_value = String.valueOf(jsonMap.get("_owningbusinessunit_value"));
+        this._owningteam_value = String.valueOf(jsonMap.get("_owningteam_value"));
+        this._owninguser_value = String.valueOf(jsonMap.get("_owninguser_value"));
+        this._tc_arrivalgatewayid_value = String.valueOf(jsonMap.get("_tc_arrivalgatewayid_value"));
+        this._tc_bookingid_value = String.valueOf(jsonMap.get("_tc_bookingid_value"));
+        this._tc_departuregatewayid_value = String.valueOf(jsonMap.get("_tc_departuregatewayid_value"));
+        this.createdon = String.valueOf(jsonMap.get("createdon"));
+        this.importsequencenumber = String.valueOf(jsonMap.get("importsequencenumber"));
+        this.modifiedon = String.valueOf(jsonMap.get("modifiedon"));
+        this.overriddencreatedon = String.valueOf(jsonMap.get("overriddencreatedon"));
+        this.statecode = String.valueOf(jsonMap.get("statecode"));
+        this.statuscode = String.valueOf(jsonMap.get("statuscode"));
+        this.tc_bookingtransferid = String.valueOf(jsonMap.get("tc_bookingtransferid"));
+        this.tc_category = String.valueOf(jsonMap.get("tc_category"));
+        this.tc_enddateandtime = String.valueOf(jsonMap.get("tc_enddateandtime"));
+        this.tc_name = String.valueOf(jsonMap.get("tc_name"));
+        this.tc_order = String.valueOf(jsonMap.get("tc_order"));
+        this.tc_participants = String.valueOf(jsonMap.get("tc_participants"));
+        this.tc_remark = String.valueOf(jsonMap.get("tc_remark"));
+        this.tc_startdateandtime = String.valueOf(jsonMap.get("tc_startdateandtime"));
+        this.tc_transfercode = String.valueOf(jsonMap.get("tc_transfercode"));
+        this.tc_transfertype = String.valueOf(jsonMap.get("tc_transfertype"));
+        this.timezoneruleversionnumber = String.valueOf(jsonMap.get("timezoneruleversionnumber"));
+        this.utcconversiontimezonecode = String.valueOf(jsonMap.get("utcconversiontimezonecode"));
+        this.versionnumber = String.valueOf(jsonMap.get("versionnumber"));
     }
 
     @Override
@@ -115,5 +117,35 @@ public class MsdTransfer {
                 .add("utcconversiontimezonecode", utcconversiontimezonecode)
                 .add("versionnumber", versionnumber)
                 .toString();
+    }
+
+//    @Override
+//    public boolean equalsToNurvisOrder() {
+//        if(this.createdon){}
+//        if(this.importsequencenumber){}
+//        if(this.modifiedon){}
+//        if(this.overriddencreatedon){}
+//        if(this.statecode){}
+//        if(this.statuscode){}
+//        if(this.tc_category){}
+//        if(this.tc_enddateandtime){}
+//        if(this.tc_name){}
+//        if(this.tc_order){}
+//        if(this.tc_participants){}
+//        if(this.tc_remark){}
+//        if(this.tc_startdateandtime){}
+//        if(this.tc_transfercode){}
+//        if(this.tc_transfertype){}
+//        if(this.timezoneruleversionnumber){}
+//        if(this.utcconversiontimezonecode){}
+//        if(this.versionnumber){}
+//    }
+
+    @Override
+    public boolean assertMsdBookingMatchesOnTour(Service onTour) {
+        Assert.assertEquals(STATE_MAP.get(onTour.getStatus()), this.statuscode);
+        assertMsdAndOnTourPaxAssignments(onTour.getPax_service(), getPaxList(this.tc_participants));
+
+        return true;
     }
 }

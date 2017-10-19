@@ -1,16 +1,28 @@
 package com.thomascook.msdAdaptor.msdBookingDetails;
 
 import com.google.common.base.MoreObjects;
+import com.thomascook.msdAdaptor.MsdSession;
+import com.thomascook.ontour.Booking;
+import com.thomascook.ontour.Booking_remark;
+import com.thomascook.ontour.Service;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
-public class MsdBookingGeneralDetails implements MsdService {
+import static org.junit.Assert.assertEquals;
+
+public class MsdBookingGeneralDetails extends MsdService {
 
     //region Fields
     private String tc_name;
     private String tc_departuredate;
     private String versionnumber;
+
     private String statecode;
+
     private String statuscode;
     private String tc_hassourcemarketcomplaint;
     private String tc_bookingdate;
@@ -85,8 +97,8 @@ public class MsdBookingGeneralDetails implements MsdService {
         this.tc_name = String.valueOf(jsonMap.get("tc_name"));
         this.tc_departuredate = String.valueOf(jsonMap.get("tc_departuredate"));
         this.versionnumber = String.valueOf(jsonMap.get("versionnumber"));
-        this.statecode = String.valueOf(jsonMap.get("statecode"));
-        this.statuscode = String.valueOf(jsonMap.get("statuscode"));
+        this.statecode = String.valueOf(jsonMap.get("statecode@OData.Community.Display.V1.FormattedValue"));
+        this.statuscode = String.valueOf(jsonMap.get("statuscode@OData.Community.Display.V1.FormattedValue"));
         this.tc_hassourcemarketcomplaint = String.valueOf(jsonMap.get("tc_hassourcemarketcomplaint"));
         this.tc_bookingdate = String.valueOf(jsonMap.get("tc_bookingdate"));
         this.createdon = String.valueOf(jsonMap.get("createdon"));
@@ -120,7 +132,7 @@ public class MsdBookingGeneralDetails implements MsdService {
         this.tc_participants = String.valueOf(jsonMap.get("tc_participants"));
         this._createdby_value = String.valueOf(jsonMap.get("_createdby_value"));
         this.tc_touroperatorversion = String.valueOf(jsonMap.get("tc_touroperatorversion"));
-        this._tc_destinationgatewayid_value = String.valueOf(jsonMap.get("_tc_destinationgatewayid_value"));
+        this._tc_destinationgatewayid_value = String.valueOf(jsonMap.get("_tc_destinationgatewayid_value@OData.Community.Display.V1.FormattedValue"));
         this.tc_ontourupdateddate = String.valueOf(jsonMap.get("tc_ontourupdateddate"));
         this.tc_shopchannel = String.valueOf(jsonMap.get("tc_shopchannel"));
         this.tc_agentshortname = String.valueOf(jsonMap.get("tc_agentshortname"));
@@ -214,5 +226,66 @@ public class MsdBookingGeneralDetails implements MsdService {
                 .add("_owninguser_value", _owninguser_value)
                 .add("_modifiedonbehalfby_value", _modifiedonbehalfby_value)
                 .toString();
+    }
+
+    public boolean equalsToNurvisOrder(Booking onTour) {
+        throw new NotImplementedException();
+    }
+
+    public boolean assertMsdBookingMatchesOnTour(Booking onTour) {
+        assertEquals(STATE_MAP.get(onTour.getStatus()), this.statecode);
+        assertEquals(LocalDate.parse(onTour.getBeginning_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_departuredate, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getEnd_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_returndate, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getDate(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.createdon, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getAmendment_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_ontourupdateddate, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getExt_amendment_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_touroperatorupdateddate, MSD_DATE_TIME_FORMATTER));
+        assertEquals(onTour.getDestination(), this._tc_destinationgatewayid_value);
+        assertEquals(onTour.getBrand(), MsdSession.get().getTcBrandNameByBrandGuid(this._tc_brandid_value));
+        assertEquals(onTour.getTo_code(), MsdSession.get().getTcToCodeByTourOperatorGiud(this._tc_touroperatorid_value));
+        assertEquals(String.valueOf(onTour.getPnr_version()), this.tc_ontourversion);
+        if (null != onTour.getBrochure_code()) {
+            assertEquals(onTour.getBrochure_code(), this.tc_brochurecode);
+        }
+        assertEquals(onTour.getBooking_remark(), getParsedRemarks(this.tc_remark));
+        assertEquals(parseOnTourPaxListToMsdPaxList(onTour.getPax()),
+                getPaxList(this.tc_participants, this.tc_participantremarks));
+
+        return true;
+    }
+
+    @Override
+    public boolean assertMsdBookingMatchesOnTour(Service onTourService) {
+        throw new NotImplementedException();
+    }
+
+    /**
+     * Parses remarks into {@link Booking_remark}s List.
+     *
+     * @param msdPaxRemark remarks from msD.
+     * @return Parsed Remarks.
+     */
+    private ArrayList<Booking_remark> getParsedRemarks(String msdPaxRemark) {
+        ArrayList<Booking_remark> remarkList = new ArrayList<>();
+        String[] remarkSeparatedByItem = msdPaxRemark.split(",\\r\\n");
+        if (remarkSeparatedByItem.length == 1) {
+            remarkSeparatedByItem = msdPaxRemark.split("\\n");
+        }
+
+        if (remarkSeparatedByItem.length == 1 && remarkSeparatedByItem[0].equals("null")) return null;
+
+        Arrays.stream(remarkSeparatedByItem).forEach(it -> {
+            String[] oneRemarkSeparatedByComma = it.split(",");
+            assert oneRemarkSeparatedByComma.length == 2 :
+                    String.format("Remark has unexpected quantity of properties. Expected 2, Actually - %s", oneRemarkSeparatedByComma.length);
+
+            remarkList.add(new Booking_remark(oneRemarkSeparatedByComma[0], oneRemarkSeparatedByComma[1]));
+        });
+
+        return remarkList;
     }
 }

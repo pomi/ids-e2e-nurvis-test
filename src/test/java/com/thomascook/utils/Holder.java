@@ -1,6 +1,10 @@
 package com.thomascook.utils;
 
+import com.thomascook.msdAdaptor.msdBookingDetails.MsdBookingDetails;
+import com.thomascook.nurvisAdapter.request.ReservationCustomerTypeRequest;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
+import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
+import com.thomascook.ontour.Shipment;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
 import com.thomascook.toscaExtrasAdapter.request.OTAPkgExtrasInfoRQ;
@@ -18,13 +22,16 @@ public class Holder {
     private static String placeholder;
     private static DataTable passengers;
     private static OTAPkgAvailRS toscaAvailabilityResponse;
-    private static OTAPkgAvailRQ toscaAvailabiltyRequest;
+    private static OTAPkgAvailRQ toscaAvailabilityRequest;
     private static OTAPkgExtrasInfoRQ toscaExtrasRequest;
     private static OTAPkgExtrasInfoRS toscaExtrasResponse;
     private static Map<String, Object> globalMap = new HashMap<>();
     private static String bookingNumber;
-    private static ReservationRequestTypeRequest bookingDetails = new ReservationRequestTypeRequest();
-
+    private static ReservationRequestTypeRequest bookingRequestDetails;
+    private static ReservationResponseTypeResponse bookingResponseDetails;
+    private static Shipment onTourShipment;
+    private static MsdBookingDetails msdBookingDetails;
+    private static ReservationCustomerTypeRequest customer;
 
     private Holder() {
     }
@@ -36,20 +43,56 @@ public class Holder {
         return instance;
     }
 
+    public static Map<String, Object> getProperties() {
+        return globalMap;
+    }
+
+    public ReservationCustomerTypeRequest getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(ReservationCustomerTypeRequest customer) {
+        Holder.customer = customer;
+    }
+
+    public MsdBookingDetails getMsdBookingDetails() {
+        return msdBookingDetails;
+    }
+
+    public void setMsdBookingDetails(MsdBookingDetails msdBookingDetails) {
+        Holder.msdBookingDetails = msdBookingDetails;
+    }
+
     public String getBookingNumber() {
         return bookingNumber;
     }
 
-    public ReservationRequestTypeRequest getBookingDetails() {
-        return bookingDetails;
-    }
-
-    public void setBookingDetails(ReservationRequestTypeRequest bookingDetails) {
-        Holder.bookingDetails = bookingDetails;
-    }
-
     public void setBookingNumber(String bookingNumber) {
         Holder.bookingNumber = bookingNumber;
+    }
+
+    public ReservationRequestTypeRequest getBookingRequestDetails() {
+        return bookingRequestDetails;
+    }
+
+    public void setBookingRequestDetails(ReservationRequestTypeRequest bookingDetails) {
+        Holder.bookingRequestDetails = bookingDetails;
+    }
+
+    public void setBookingResponseDetails(ReservationResponseTypeResponse bookingDetails) {
+        Holder.bookingResponseDetails = bookingDetails;
+    }
+
+    public ReservationResponseTypeResponse getBookingResponceDetails() {
+        return bookingResponseDetails;
+    }
+
+    public Shipment getOnTourShipment() {
+        return onTourShipment;
+    }
+
+    public void setOnTourShipment(Shipment shipment) {
+        Holder.onTourShipment = shipment;
     }
 
     public OTAPkgSearchRS getOtaPkgSearchRS() {
@@ -77,11 +120,11 @@ public class Holder {
     }
 
     public OTAPkgAvailRQ getToscaAvailabiltyRequest() {
-        return toscaAvailabiltyRequest;
+        return toscaAvailabilityRequest;
     }
 
     public void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
-        Holder.toscaAvailabiltyRequest = toscaAvailabiltyRequest;
+        Holder.toscaAvailabilityRequest = toscaAvailabiltyRequest;
     }
 
     public OTAPkgExtrasInfoRQ getToscaExtrasRequest() {
@@ -98,9 +141,5 @@ public class Holder {
 
     public void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
         Holder.toscaExtrasResponse = toscaExtrasResponse;
-    }
-
-    public static Map<String, Object> getProperties() {
-        return globalMap;
     }
 }

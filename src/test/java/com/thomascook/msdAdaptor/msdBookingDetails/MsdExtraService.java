@@ -1,10 +1,17 @@
 package com.thomascook.msdAdaptor.msdBookingDetails;
 
 import com.google.common.base.MoreObjects;
+import com.thomascook.ontour.Service;
+import org.hamcrest.CoreMatchers;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Map;
 
-public class MsdExtraService {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+public class MsdExtraService extends MsdService {
 
     //region Fields
     private String tc_enddateandtime;
@@ -103,5 +110,23 @@ public class MsdExtraService {
                 .add("_modifiedonbehalfby_value", _modifiedonbehalfby_value)
                 .add("_createdonbehalfby_value", _createdonbehalfby_value)
                 .toString();
+    }
+
+    @Override
+    public boolean assertMsdBookingMatchesOnTour(Service onTour) {
+        assertEquals(onTour.getCode(), this.tc_extraservicecode);
+        assertThat(this.tc_name, CoreMatchers.containsString(onTour.getName()));
+        assertEquals(LocalDate.parse(onTour.getBeginning_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_startdateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalTime.parse(onTour.getBeginning_time(), ONTOUR_TIME_FORMATTER),
+                LocalTime.parse(this.tc_startdateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalDate.parse(onTour.getEnd_date(), ONTOUR_DATE_FORMATTER),
+                LocalDate.parse(this.tc_enddateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(LocalTime.parse(onTour.getEnd_time(), ONTOUR_TIME_FORMATTER),
+                LocalTime.parse(this.tc_enddateandtime, MSD_DATE_TIME_FORMATTER));
+        assertEquals(STATE_MAP.get(onTour.getStatus()), this.statuscode);
+        assertMsdAndOnTourPaxAssignments(onTour.getPax_service(), getPaxList(this.tc_participants));
+
+        return false;
     }
 }

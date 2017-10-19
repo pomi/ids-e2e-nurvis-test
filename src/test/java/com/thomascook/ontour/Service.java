@@ -47,6 +47,13 @@ import java.util.List;
 })
 public class Service {
 
+    public class TypeId {
+        public static final String TRANSPORT = "FL";
+        public static final String ACCOMMODATION = "RM";
+        public static final String TRANSFER = "TR";
+        public static final String EXTRAS = "MI";
+    }
+
     private String code = "";
     private String type = "";
     private String name = "";

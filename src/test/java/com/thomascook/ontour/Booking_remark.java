@@ -2,9 +2,17 @@ package com.thomascook.ontour;
 
 import javax.xml.bind.annotation.XmlElement;
 
-class Booking_remark {
+public class Booking_remark {
     private String type;
     private String text;
+
+    public Booking_remark(String type, String text) {
+        this.type = type;
+        this.text = text;
+    }
+
+    public Booking_remark() {
+    }
 
     public String getType() {
         return type;

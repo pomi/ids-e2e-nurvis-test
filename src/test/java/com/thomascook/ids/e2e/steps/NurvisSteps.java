@@ -1,6 +1,7 @@
 package com.thomascook.ids.e2e.steps;
 
 import com.thomascook.ids.e2e.tests.CreateBookingNurvis;
+import com.thomascook.ids.e2e.tests.LackOfAvailableRoomsException;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.java8.En;
@@ -40,7 +41,8 @@ public class NurvisSteps implements En {
         });
 
         Given("^SOLR response has available packages$", () -> {
-            assertNotEquals(otaPkgSearchRS.getHotelOffers().getStartIndex(), otaPkgSearchRS.getHotelOffers().getEndIndex());
+            assertNotEquals("No available packages for this destinations",
+                    otaPkgSearchRS.getHotelOffers().getStartIndex(), otaPkgSearchRS.getHotelOffers().getEndIndex());
         });
 
         When("^NURVIS is requested for booking$", () -> {
@@ -49,7 +51,7 @@ public class NurvisSteps implements En {
                 assertNotNull(results);
                 nurvisRequest = (ReservationRequestTypeRequest) results.get("request");
                 nurvisInquiryResponse = (ReservationResponseTypeResponse) results.get("response");
-            } catch (JAXBException | IOException e) {
+            } catch (JAXBException | IOException | LackOfAvailableRoomsException e) {
                 e.printStackTrace();
             }
         });

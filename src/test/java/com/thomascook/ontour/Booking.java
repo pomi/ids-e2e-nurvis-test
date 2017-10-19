@@ -2,6 +2,7 @@ package com.thomascook.ontour;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Booking {
     private String status; // C 1
@@ -193,5 +194,17 @@ public class Booking {
     @XmlElement(name = "RECEIPT")
     public void setReceipt(List<Receipt> receipt) {
         this.receipt = receipt;
+    }
+
+    /**
+     * Returns a {@link List} of services of given onTour services type.
+     *
+     * @param serviceType Either FL, RM, TR ot MI.
+     * @return List of services of desired type.
+     */
+    public List getServicesOfGivenType(String serviceType) {
+        return this.getService().stream().filter(service ->
+                service.getType().toUpperCase().equals(serviceType))
+                .collect(Collectors.toList());
     }
 }
