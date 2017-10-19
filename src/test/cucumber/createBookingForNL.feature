@@ -1,4 +1,4 @@
-@NL
+@NL @Ignore
 Feature: Create Booking
 
   Scenario: Create booking

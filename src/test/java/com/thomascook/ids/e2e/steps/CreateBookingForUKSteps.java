@@ -58,6 +58,7 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgExtrasInfoRQ toscaExtrasRequest = CreateBookingUK.createToscaExtrasRequest(toscaAvailabilityRequest, toscaAvailabilityResponse, Holder.get().getPassengers());
                     String toscaExtrasRequestXML = CreateBookingUK.createToscaExtrasRequestXML(toscaExtrasRequest);
                     OTAPkgExtrasInfoRS toscaExtrasResponse = CreateBookingUK.getToscaExtrasResponse(toscaExtrasRequestXML, tosca);
+                    String toscaExtrasResponseXML = CreateBookingUK.createToscaExtrasResponseXML(toscaExtrasResponse);
 
                     if (toscaExtrasResponse.getSuccess() == null && toscaExtrasResponse.getErrors() != null)
                         continue;
@@ -65,22 +66,30 @@ public class CreateBookingForUKSteps implements En {
                     OTAPkgCostRQ toscaCostRequest = CreateBookingUK.createToscaCostRequest(toscaExtrasResponse, toscaExtrasRequest);
                     String toscaCostRequestXML = CreateBookingUK.createToscaCostRequestXML(toscaCostRequest);
                     OTAPkgCostRS toscaCostResponse = CreateBookingUK.getToscaCostResponse(toscaCostRequestXML, tosca);
+                    String toscaCostResponseXML = CreateBookingUK.createToscaCostResponseXML(toscaCostResponse);
 
                     if (toscaCostResponse.getSuccess() == null && toscaCostResponse.getErrors() != null)
                         continue;
 
-                    String toscaCostResponseXML = CreateBookingUK.createToscaCostResponseXML(toscaCostResponse);
                     OTAPkgBookRQ toscaBookRequest = CreateBookingUK.createToscaBookRequest(toscaCostRequest);
+                    Holder.get().setToscaBookingRequest(toscaBookRequest);
                     String toscaBookRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookRequest);
                     OTAPkgBookRS toscaBookResponse = CreateBookingUK.getToscaBookResponse(toscaBookRequestXML, tosca);
+                    Holder.get().setToscaBookingResponse(toscaBookResponse);
                     String toscaBookResponseXML = CreateBookingUK.createToscaBookResponseXML(toscaBookResponse);
+                    System.out.println(toscaBookResponseXML);
                     OTAPkgBookRQ toscaBookCommitRequest = CreateBookingUK.createToscaBookCommitRequest(toscaBookRequest, toscaBookResponse);
                     String toscaBookCommitRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookCommitRequest);
                     OTAPkgBookRS toscaBookCommitResponse = CreateBookingUK.getToscaBookResponse(toscaBookCommitRequestXML, tosca);
                     if (toscaBookCommitResponse.getSuccess() == null) continue;
+                    Holder.get().setHotelOffer(hotelOffer);
+                    Holder.get().setBookingReference(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
+                    if (toscaBookCommitResponse.getSuccess() == null) continue;
                     System.out.println(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
+                    break;
                 } catch (JAXBException | IOException | DatatypeConfigurationException e) {
                     e.printStackTrace();
+                    continue;
                 }
             }
 
@@ -101,29 +110,39 @@ public class CreateBookingForUKSteps implements En {
             CreateBookingUK.createToscaCostRequest(holder.getToscaExtrasResponse(), holder.getToscaExtrasRequest());*/
         });
 
-        When("^confirm package$", () -> {
-            // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
-        });
-
         Then("^booking is created$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assert true;
+            //throw new PendingException();
         });
 
         Given("^I have Tosca booking$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            assert true;
+            //throw new PendingException();
         });
 
         When("^I create XML for Webrio$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                //if(holder.getToscaBookingRequest() != null && holder.getToscaBookingResponse() != null && holder.getHotelOffer() != null && holder.getBookingReference() != null)
+                Holder.get().setRetailinterfaceXML(CreateBookingUK.createWebRioRequest(Holder.get().getToscaBookingRequest(),
+                        Holder.get().getToscaBookingResponse(), Holder.get().getHotelOffer(), Holder.get().getBookingReference()));
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
         });
 
         When("^send it to WebRio$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                String retailinterface = Config.get().getRetailInterface();
+                assert !retailinterface.isEmpty() : "retailinterface endpoint is not set";
+                Holder.get().setRetailDownloadResponse(CreateBookingUK.sendWebrioHandoff(Holder.get().getRetailinterfaceXML(), retailinterface));
+                System.out.println();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         Then("^WebRio answered without errors$", () -> {
@@ -133,7 +152,11 @@ public class CreateBookingForUKSteps implements En {
 
         When("^I create OnTour xml$", () -> {
             // Write code here that turns the phrase above into concrete actions
-            throw new PendingException();
+            try {
+                CreateBookingUK.createOnTourXML(Holder.get().getToscaBookingResponse(), Holder.get().getToscaBookingRequest(), Holder.get().getBookingReference());
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
         });
 
         When("^put it on OnTour sftp$", () -> {

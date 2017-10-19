@@ -1,8 +1,8 @@
-@Ignore
+@Tosca
 Feature: Create booking for UK market and put it on OnTour sftp
 
   Scenario: Create package holiday
-    Given I request packages in SOLR from LGW to Spain with passengers
+    Given I request packages in SOLR from LGW to Egypt with passengers
       | Room | Adults | Children | Infants |
       | 1    | 2      | 0        | 0       |
       | 2    | 2      | 2        | 1       |

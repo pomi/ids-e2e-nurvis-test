@@ -38,6 +38,7 @@ public class Config {
     private static String msdPassword;
     private static int fetchBookingTimeoutSec;
     private static int waitBetweenTiesSec;
+    private static String retailInterface;
 
     private static Config _config = null;
     //endregion
@@ -75,6 +76,8 @@ public class Config {
             sfw = environmentalConfig.getJSONObject("sfw");
             sfwUrl = sfw.getString("url");
             sfwRequestBody = sfw.getString("request");
+
+            retailInterface = environmentalConfig.getString("retailInterface");
 
             customerRetrieveTimeout = environmentalConfig.getLong("customerRetrieveTimeoutMin");
             msdBaseUrl = environmentalConfig.getJSONObject("msd").getString("baseUrl");
@@ -161,6 +164,10 @@ public class Config {
 
     public int getWaitBetweenTiesSec() {
         return waitBetweenTiesSec;
+    }
+
+    public String getRetailInterface() {
+        return retailInterface;
     }
     //endregion
 

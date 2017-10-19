@@ -7,9 +7,13 @@ import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import com.thomascook.ontour.Shipment;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
+import com.thomascook.toscaBookAdapter.request.OTAPkgBookRQ;
+import com.thomascook.toscaBookAdapter.response.OTAPkgBookRS;
 import com.thomascook.toscaExtrasAdapter.request.OTAPkgExtrasInfoRQ;
 import com.thomascook.toscaExtrasAdapter.response.OTAPkgExtrasInfoRS;
+import com.thomascook.wrAdapter.response.FullRetailDownloadResponse;
 import cucumber.api.DataTable;
+import org.opentravel.ota._2003._05.response.HotelOfferType;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
 
 import java.util.HashMap;
@@ -32,6 +36,12 @@ public class Holder {
     private static Shipment onTourShipment;
     private static MsdBookingDetails msdBookingDetails;
     private static ReservationCustomerTypeRequest customer;
+    private static OTAPkgBookRQ toscaBookRequest;
+    private static OTAPkgBookRS toscaBookResponse;
+    private static HotelOfferType hotelOffer;
+    private static String id;
+    private static String webRioRequest;
+    private static FullRetailDownloadResponse fullRetailDownloadResponse;
 
     private Holder() {
     }
@@ -141,5 +151,57 @@ public class Holder {
 
     public void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
         Holder.toscaExtrasResponse = toscaExtrasResponse;
+    }
+
+    public void setToscaBookingRequest(OTAPkgBookRQ toscaBookRequest) {
+        Holder.toscaBookRequest = toscaBookRequest;
+    }
+
+    public void setToscaBookingResponse(OTAPkgBookRS toscaBookResponse) {
+        Holder.toscaBookResponse = toscaBookResponse;
+    }
+
+    public void setHotelOffer(HotelOfferType hotelOffer) {
+        Holder.hotelOffer = hotelOffer;
+    }
+
+    public void setBookingReference(String id) {
+        Holder.id = id;
+    }
+
+    public String getPlaceholder() {
+        return placeholder;
+    }
+
+    public Map<String, Object> getGlobalMap() {
+        return globalMap;
+    }
+
+    public OTAPkgBookRQ getToscaBookingRequest() {
+        return toscaBookRequest;
+    }
+
+    public OTAPkgBookRS getToscaBookingResponse() {
+        return toscaBookResponse;
+    }
+
+    public HotelOfferType getHotelOffer() {
+        return hotelOffer;
+    }
+
+    public String getBookingReference() {
+        return id;
+    }
+
+    public void setRetailinterfaceXML(String webRioRequest) {
+        Holder.webRioRequest = webRioRequest;
+    }
+
+    public String getRetailinterfaceXML() {
+        return webRioRequest;
+    }
+
+    public void setRetailDownloadResponse(FullRetailDownloadResponse fullRetailDownloadResponse) {
+        Holder.fullRetailDownloadResponse = fullRetailDownloadResponse;
     }
 }
