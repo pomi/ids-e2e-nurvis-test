@@ -30,8 +30,8 @@ public class CreateBookingForUKSteps implements En {
             String solr = Config.get().getSolrUk();
             assert !solr.isEmpty() : "Solr endpoint is not set";
             try {
-                Holder.setPassengers(dataTable);
-                Holder.setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
+                Holder.get().setPassengers(dataTable);
+                Holder.get().setOtaPkgSearchRS(CreateBookingUK.getSOLRPackagesUK(solr, departureAirport, destination, dataTable));
                 assert !Holder.getOtaPkgSearchRS().getHotelOffers().getHotelOffer().isEmpty() : "Hotel offers list is empty";
             } catch (IOException | JAXBException | DatatypeConfigurationException e) {
                 e.printStackTrace();
@@ -72,18 +72,18 @@ public class CreateBookingForUKSteps implements En {
                         continue;
 
                     OTAPkgBookRQ toscaBookRequest = CreateBookingUK.createToscaBookRequest(toscaCostRequest);
-                    holder.setToscaBookingRequest(toscaBookRequest);
+                    Holder.get().setToscaBookingRequest(toscaBookRequest);
                     String toscaBookRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookRequest);
                     OTAPkgBookRS toscaBookResponse = CreateBookingUK.getToscaBookResponse(toscaBookRequestXML, tosca);
-                    holder.setToscaBookingResponse(toscaBookResponse);
+                    Holder.get().setToscaBookingResponse(toscaBookResponse);
                     String toscaBookResponseXML = CreateBookingUK.createToscaBookResponseXML(toscaBookResponse);
                     System.out.println(toscaBookResponseXML);
                     OTAPkgBookRQ toscaBookCommitRequest = CreateBookingUK.createToscaBookCommitRequest(toscaBookRequest, toscaBookResponse);
                     String toscaBookCommitRequestXML = CreateBookingUK.createToscaBookRequestXML(toscaBookCommitRequest);
                     OTAPkgBookRS toscaBookCommitResponse = CreateBookingUK.getToscaBookResponse(toscaBookCommitRequestXML, tosca);
                     if (toscaBookCommitResponse.getSuccess() == null) continue;
-                    holder.setHotelOffer(hotelOffer);
-                    holder.setBookingReference(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
+                    Holder.get().setHotelOffer(hotelOffer);
+                    Holder.get().setBookingReference(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
                     if (toscaBookCommitResponse.getSuccess() == null) continue;
                     System.out.println(toscaBookCommitResponse.getPackageReservation().getUniqueID().getID());
                     break;
@@ -126,7 +126,8 @@ public class CreateBookingForUKSteps implements En {
             // Write code here that turns the phrase above into concrete actions
             try {
                 //if(holder.getToscaBookingRequest() != null && holder.getToscaBookingResponse() != null && holder.getHotelOffer() != null && holder.getBookingReference() != null)
-                holder.setRetailinterfaceXML(CreateBookingUK.createWebRioRequest(holder.getToscaBookingRequest(), holder.getToscaBookingResponse(), holder.getHotelOffer(), holder.getBookingReference()));
+                Holder.get().setRetailinterfaceXML(CreateBookingUK.createWebRioRequest(Holder.get().getToscaBookingRequest(),
+                        Holder.get().getToscaBookingResponse(), Holder.get().getHotelOffer(), Holder.get().getBookingReference()));
             } catch (JAXBException e) {
                 e.printStackTrace();
             }
@@ -135,10 +136,9 @@ public class CreateBookingForUKSteps implements En {
         When("^send it to WebRio$", () -> {
             // Write code here that turns the phrase above into concrete actions
             try {
-                String retailinterface = "";
-                if (System.getProperty("env").equals("staging")) retailinterface = retailinterfaceStaging;
+                String retailinterface = Config.get().getRetailInterface();
                 assert !retailinterface.isEmpty() : "retailinterface endpoint is not set";
-                holder.setRetailDownloadResponse(CreateBookingUK.sendWebrioHandoff(holder.getRetailinterfaceXML(), retailinterface));
+                Holder.get().setRetailDownloadResponse(CreateBookingUK.sendWebrioHandoff(Holder.get().getRetailinterfaceXML(), retailinterface));
                 System.out.println();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -153,7 +153,7 @@ public class CreateBookingForUKSteps implements En {
         When("^I create OnTour xml$", () -> {
             // Write code here that turns the phrase above into concrete actions
             try {
-                CreateBookingUK.createOnTourXML(holder.getToscaBookingResponse(), holder.getToscaBookingRequest(), holder.getBookingReference());
+                CreateBookingUK.createOnTourXML(Holder.get().getToscaBookingResponse(), Holder.get().getToscaBookingRequest(), Holder.get().getBookingReference());
             } catch (JAXBException e) {
                 e.printStackTrace();
             }

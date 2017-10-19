@@ -13,6 +13,7 @@
       "de": ""
     },
     "tosca": "http://api.thomascook.com/toscaOTADEV2",
+    "retailInterface": "http://ppt.int-api.thomascook.com/rtlinterface-test/rest/interface/booking",
     "msd": {
       "baseUrl": "thomascookstaging.crm4.dynamics.com"
     },

@@ -48,15 +48,7 @@ import java.time.LocalDate;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import com.thomascook.toscaBookAdapter.request.UniqueIDType;
-import com.thomascook.toscaCostAdapter.request.SourceType;
-import com.thomascook.toscaCostAdapter.request.POSType;
-import com.thomascook.toscaCostAdapter.request.ObjectFactory;
+import java.util.*;
 
 public class CreateBookingUK {
 

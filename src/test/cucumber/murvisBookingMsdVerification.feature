@@ -1,5 +1,4 @@
-@Tosca
-@NL
+@NL @Ignore
 Feature: Nurvis booking for PMI destination should be available in msD
   As a user I want to see Nurvis bookings with PMI destination in msD
 

@@ -29,6 +29,7 @@ public class Config {
     private static String tosca;
     private static String msdLogin;
     private static String msdPassword;
+    private static String retailInterface;
 
     private static Config _config = null;
 
@@ -65,6 +66,8 @@ public class Config {
             sfw = environmentalConfig.getJSONObject("sfw");
             sfwUrl = sfw.getString("url");
             sfwRequestBody = sfw.getString("request");
+
+            retailInterface = environmentalConfig.getString("retailInterface");
 
             customerRetrieveTimeout = environmentalConfig.getLong("customerRetrieveTimeoutMin");
             msdBaseUrl = environmentalConfig.getJSONObject("msd").getString("baseUrl");
@@ -140,6 +143,10 @@ public class Config {
 
     public String getMsdPassword() {
         return msdPassword;
+    }
+
+    public String getRetailInterface() {
+        return retailInterface;
     }
 
     @Override
