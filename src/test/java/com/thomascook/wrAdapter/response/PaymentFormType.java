@@ -8,25 +8,20 @@
 
 package com.thomascook.wrAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
  * Ways of providing funds
- *                 and guarantees for travel by the individual.
- *             
- * 
+ * and guarantees for travel by the individual.
+ * <p>
+ * <p>
  * <p>Java class for PaymentFormType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PaymentFormType">
  *   &lt;complexContent>
@@ -47,15 +42,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentFormType", propOrder = {
-    "paymentCard"
+        "paymentCard"
 })
 @XmlSeeAlso({
-    PaymentDetailType.class
+        PaymentDetailType.class
 })
 public class PaymentFormType {
 
@@ -67,11 +60,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the paymentCard property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PaymentCardType }
-     *     
+     *
+     * @return possible object is
+     * {@link PaymentCardType }
      */
     public PaymentCardType getPaymentCard() {
         return paymentCard;
@@ -79,11 +70,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the paymentCard property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PaymentCardType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PaymentCardType }
      */
     public void setPaymentCard(PaymentCardType value) {
         this.paymentCard = value;
@@ -91,11 +80,9 @@ public class PaymentFormType {
 
     /**
      * Gets the value of the paymentTransactionTypeCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPaymentTransactionTypeCode() {
         return paymentTransactionTypeCode;
@@ -103,11 +90,9 @@ public class PaymentFormType {
 
     /**
      * Sets the value of the paymentTransactionTypeCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPaymentTransactionTypeCode(String value) {
         this.paymentTransactionTypeCode = value;

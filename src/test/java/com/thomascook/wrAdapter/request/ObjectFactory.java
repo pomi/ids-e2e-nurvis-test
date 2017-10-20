@@ -8,26 +8,25 @@
 
 package com.thomascook.wrAdapter.request;
 
-import java.math.BigInteger;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import java.math.BigInteger;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.wrAdapter.request package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.wrAdapter.request package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -38,14 +37,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.wrAdapter.request
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link PaxDetails }
-     * 
      */
     public PaxDetails createPaxDetails() {
         return new PaxDetails();
@@ -53,7 +50,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FullRetailDownload }
-     * 
      */
     public FullRetailDownload createFullRetailDownload() {
         return new FullRetailDownload();
@@ -61,7 +57,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType }
-     * 
      */
     public SourceType createSourceType() {
         return new SourceType();
@@ -69,7 +64,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentDetailType }
-     * 
      */
     public PaymentDetailType createPaymentDetailType() {
         return new PaymentDetailType();
@@ -77,7 +71,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Memos }
-     * 
      */
     public Memos createMemos() {
         return new Memos();
@@ -85,7 +78,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentCardType }
-     * 
      */
     public PaymentCardType createPaymentCardType() {
         return new PaymentCardType();
@@ -93,7 +85,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FullRetailDownload.PaymentDetails }
-     * 
      */
     public FullRetailDownload.PaymentDetails createFullRetailDownloadPaymentDetails() {
         return new FullRetailDownload.PaymentDetails();
@@ -101,7 +92,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContactPersonType }
-     * 
      */
     public ContactPersonType createContactPersonType() {
         return new ContactPersonType();
@@ -109,7 +99,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType }
-     * 
      */
     public DealType createDealType() {
         return new DealType();
@@ -117,7 +106,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest }
-     * 
      */
     public DealType.BookingWebRequest createDealTypeBookingWebRequest() {
         return new DealType.BookingWebRequest();
@@ -125,7 +113,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse createDealTypeBookingWebRequestBookingResponse() {
         return new DealType.BookingWebRequest.BookingResponse();
@@ -133,7 +120,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicy() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy();
@@ -141,7 +127,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotes() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes();
@@ -149,7 +134,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuote() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote();
@@ -157,7 +141,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetails() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails();
@@ -165,7 +148,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetail() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail();
@@ -173,7 +155,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetail() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail();
@@ -181,7 +162,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailEndorsements() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements();
@@ -189,7 +169,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday createDealTypeBookingWebRequestBookingResponseChosenPackageHoliday() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday();
@@ -197,7 +176,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodation() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation();
@@ -205,7 +183,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegment() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment();
@@ -213,7 +190,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Deposit }
-     * 
      */
     public Deposit createDeposit() {
         return new Deposit();
@@ -221,7 +197,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OtherDetails }
-     * 
      */
     public OtherDetails createOtherDetails() {
         return new OtherDetails();
@@ -229,7 +204,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LeadPax }
-     * 
      */
     public LeadPax createLeadPax() {
         return new LeadPax();
@@ -237,7 +211,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaxDetails.Pax }
-     * 
      */
     public PaxDetails.Pax createPaxDetailsPax() {
         return new PaxDetails.Pax();
@@ -245,7 +218,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaxBreakdown }
-     * 
      */
     public PaxBreakdown createPaxBreakdown() {
         return new PaxBreakdown();
@@ -253,7 +225,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Passenger }
-     * 
      */
     public Passenger createPassenger() {
         return new Passenger();
@@ -261,7 +232,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link POSType }
-     * 
      */
     public POSType createPOSType() {
         return new POSType();
@@ -269,7 +239,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentFormType }
-     * 
      */
     public PaymentFormType createPaymentFormType() {
         return new PaymentFormType();
@@ -277,7 +246,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonNameType }
-     * 
      */
     public PersonNameType createPersonNameType() {
         return new PersonNameType();
@@ -285,7 +253,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AddressType }
-     * 
      */
     public AddressType createAddressType() {
         return new AddressType();
@@ -293,7 +260,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UniqueIDType }
-     * 
      */
     public UniqueIDType createUniqueIDType() {
         return new UniqueIDType();
@@ -301,7 +267,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompanyNameType }
-     * 
      */
     public CompanyNameType createCompanyNameType() {
         return new CompanyNameType();
@@ -309,7 +274,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AddressInfoType }
-     * 
      */
     public AddressInfoType createAddressInfoType() {
         return new AddressInfoType();
@@ -317,7 +281,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.RequestorID }
-     * 
      */
     public SourceType.RequestorID createSourceTypeRequestorID() {
         return new SourceType.RequestorID();
@@ -325,7 +288,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.Position }
-     * 
      */
     public SourceType.Position createSourceTypePosition() {
         return new SourceType.Position();
@@ -333,7 +295,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.BookingChannel }
-     * 
      */
     public SourceType.BookingChannel createSourceTypeBookingChannel() {
         return new SourceType.BookingChannel();
@@ -341,7 +302,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentDetailType.PaymentAmount }
-     * 
      */
     public PaymentDetailType.PaymentAmount createPaymentDetailTypePaymentAmount() {
         return new PaymentDetailType.PaymentAmount();
@@ -349,7 +309,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Memos.Memo }
-     * 
      */
     public Memos.Memo createMemosMemo() {
         return new Memos.Memo();
@@ -357,7 +316,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentCardType.CardIssuerName }
-     * 
      */
     public PaymentCardType.CardIssuerName createPaymentCardTypeCardIssuerName() {
         return new PaymentCardType.CardIssuerName();
@@ -365,7 +323,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FullRetailDownload.PaymentDetails.PaymentDetail }
-     * 
      */
     public FullRetailDownload.PaymentDetails.PaymentDetail createFullRetailDownloadPaymentDetailsPaymentDetail() {
         return new FullRetailDownload.PaymentDetails.PaymentDetail();
@@ -373,7 +330,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContactPersonType.Telephone }
-     * 
      */
     public ContactPersonType.Telephone createContactPersonTypeTelephone() {
         return new ContactPersonType.Telephone();
@@ -381,7 +337,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.XMLFileDefinition }
-     * 
      */
     public DealType.BookingWebRequest.XMLFileDefinition createDealTypeBookingWebRequestXMLFileDefinition() {
         return new DealType.BookingWebRequest.XMLFileDefinition();
@@ -389,7 +344,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.AssociatedRequest }
-     * 
      */
     public DealType.BookingWebRequest.AssociatedRequest createDealTypeBookingWebRequestAssociatedRequest() {
         return new DealType.BookingWebRequest.AssociatedRequest();
@@ -397,7 +351,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.GeneralDetails }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.GeneralDetails createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyGeneralDetails() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.GeneralDetails();
@@ -405,7 +358,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Basic }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Basic createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailBasic() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Basic();
@@ -413,7 +365,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.ExtraAdditionalWeek }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.ExtraAdditionalWeek createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailExtraAdditionalWeek() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.ExtraAdditionalWeek();
@@ -421,7 +372,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Discount }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Discount createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailDiscount() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Discount();
@@ -429,7 +379,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.CanxCurtailment }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.CanxCurtailment createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailCanxCurtailment() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.CanxCurtailment();
@@ -437,7 +386,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements.Endorsement }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements.Endorsement createDealTypeBookingWebRequestBookingResponseChosenInsurancePolicyResponseQuotesQuotePolicyDetailsPolicyDetailCostingDetailEndorsementsEndorsement() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenInsurancePolicy.ResponseQuotes.Quote.PolicyDetails.PolicyDetail.CostingDetail.Endorsements.Endorsement();
@@ -445,7 +393,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Car }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Car createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayCar() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Car();
@@ -453,7 +400,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.OperatorInsurance }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.OperatorInsurance createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayOperatorInsurance() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.OperatorInsurance();
@@ -461,7 +407,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Miscellaneous }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Miscellaneous createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayMiscellaneous() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Miscellaneous();
@@ -469,7 +414,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.AtolCertificate }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.AtolCertificate createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAtolCertificate() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.AtolCertificate();
@@ -477,7 +421,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.ConsultationNotes }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.ConsultationNotes createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayConsultationNotes() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.ConsultationNotes();
@@ -485,7 +428,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Cost }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Cost createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayCost() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Cost();
@@ -493,7 +435,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.BookingInfo }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.BookingInfo createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayBookingInfo() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.BookingInfo();
@@ -501,7 +442,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodationAccommodationUnit() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit();
@@ -509,7 +449,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment.TicketInfo }
-     * 
      */
     public DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment.TicketInfo createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegmentTicketInfo() {
         return new DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment.TicketInfo();
@@ -517,7 +456,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "", name = "ConsultationRef", scope = DealType.BookingWebRequest.AssociatedRequest.class)
     public JAXBElement<BigInteger> createDealTypeBookingWebRequestAssociatedRequestConsultationRef(BigInteger value) {
@@ -526,7 +464,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "", name = "UrlPassed", scope = DealType.BookingWebRequest.AssociatedRequest.class)
     public JAXBElement<String> createDealTypeBookingWebRequestAssociatedRequestUrlPassed(String value) {
@@ -535,7 +472,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "", name = "SessionID", scope = DealType.BookingWebRequest.class)
     public JAXBElement<String> createDealTypeBookingWebRequestSessionID(String value) {

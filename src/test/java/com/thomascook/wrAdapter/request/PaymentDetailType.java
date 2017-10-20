@@ -8,25 +8,20 @@
 
 package com.thomascook.wrAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Details of payment.
- *             
- * 
+ * <p>
+ * <p>
  * <p>Java class for PaymentDetailType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PaymentDetailType">
  *   &lt;complexContent>
@@ -50,44 +45,39 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentDetailType", propOrder = {
-    "paymentAmount"
+        "paymentAmount"
 })
 @XmlSeeAlso({
-    com.thomascook.wrAdapter.request.FullRetailDownload.PaymentDetails.PaymentDetail.class
+        com.thomascook.wrAdapter.request.FullRetailDownload.PaymentDetails.PaymentDetail.class
 })
 public class PaymentDetailType
-    extends PaymentFormType
-{
+        extends PaymentFormType {
 
     @XmlElement(name = "PaymentAmount", required = true)
     protected List<PaymentAmount> paymentAmount;
 
     /**
      * Gets the value of the paymentAmount property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentAmount property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentAmount().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentAmount }
-     * 
-     * 
      */
     public List<PaymentAmount> getPaymentAmount() {
         if (paymentAmount == null) {
@@ -99,9 +89,9 @@ public class PaymentDetailType
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -115,8 +105,6 @@ public class PaymentDetailType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -137,11 +125,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the approvalCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getApprovalCode() {
             return approvalCode;
@@ -149,11 +135,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the approvalCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setApprovalCode(String value) {
             this.approvalCode = value;
@@ -161,11 +145,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the authenticationCAVV property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAuthenticationCAVV() {
             return authenticationCAVV;
@@ -173,11 +155,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the authenticationCAVV property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAuthenticationCAVV(String value) {
             this.authenticationCAVV = value;
@@ -185,11 +165,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the transactionID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTransactionID() {
             return transactionID;
@@ -197,11 +175,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the transactionID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTransactionID(String value) {
             this.transactionID = value;
@@ -209,11 +185,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the ccCharge property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getCCCharge() {
             return ccCharge;
@@ -221,11 +195,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the ccCharge property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setCCCharge(BigDecimal value) {
             this.ccCharge = value;
@@ -233,11 +205,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the amount property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getAmount() {
             return amount;
@@ -245,11 +215,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the amount property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -257,11 +225,9 @@ public class PaymentDetailType
 
         /**
          * Gets the value of the currencyCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -269,11 +235,9 @@ public class PaymentDetailType
 
         /**
          * Sets the value of the currencyCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;

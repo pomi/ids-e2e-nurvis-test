@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for CabinType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "CabinType")
 @XmlEnum
@@ -36,22 +35,18 @@ public enum CabinType {
 
     /**
      * First class compartment.
-     * 
      */
     @XmlEnumValue("First")
     FIRST("First"),
 
     /**
      * Business class compartment.
-     * 
      */
     @XmlEnumValue("Business")
     BUSINESS("Business"),
 
     /**
      * Economy (or sometimes referred to as Coach) class compartment.
-     *                     
-     * 
      */
     @XmlEnumValue("Economy")
     ECONOMY("Economy");
@@ -61,17 +56,17 @@ public enum CabinType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static CabinType fromValue(String v) {
-        for (CabinType c: CabinType.values()) {
+        for (CabinType c : CabinType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

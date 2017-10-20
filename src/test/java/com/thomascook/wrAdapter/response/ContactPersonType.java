@@ -8,27 +8,22 @@
 
 package com.thomascook.wrAdapter.response;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Name of an individual and
- *                 appropriate contact information. May be contact information for the
- *                 customer or someone affiliated with the customer.
- *             
- * 
+ * appropriate contact information. May be contact information for the
+ * customer or someone affiliated with the customer.
+ * <p>
+ * <p>
  * <p>Java class for ContactPersonType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ContactPersonType">
  *   &lt;complexContent>
@@ -58,16 +53,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ContactPersonType", propOrder = {
-    "personName",
-    "customerReference",
-    "telephone",
-    "address",
-    "email"
+        "personName",
+        "customerReference",
+        "telephone",
+        "address",
+        "email"
 })
 public class ContactPersonType {
 
@@ -97,11 +90,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the personName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link PersonNameType }
      */
     public PersonNameType getPersonName() {
         return personName;
@@ -109,11 +100,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the personName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PersonNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PersonNameType }
      */
     public void setPersonName(PersonNameType value) {
         this.personName = value;
@@ -121,11 +110,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the customerReference property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCustomerReference() {
         return customerReference;
@@ -133,11 +120,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the customerReference property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCustomerReference(String value) {
         this.customerReference = value;
@@ -145,25 +130,23 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the telephone property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Telephone }
-     * 
-     * 
      */
     public List<Telephone> getTelephone() {
         if (telephone == null) {
@@ -174,25 +157,23 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the address property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the address property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddress().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressInfoType }
-     * 
-     * 
      */
     public List<AddressInfoType> getAddress() {
         if (address == null) {
@@ -203,25 +184,23 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the email property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the email property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEmail().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getEmail() {
         if (email == null) {
@@ -232,11 +211,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the marketingOptIn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isMarketingOptIn() {
         if (marketingOptIn == null) {
@@ -248,11 +225,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the marketingOptIn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setMarketingOptIn(Boolean value) {
         this.marketingOptIn = value;
@@ -260,11 +235,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the emailOptIn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isEmailOptIn() {
         if (emailOptIn == null) {
@@ -276,11 +249,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the emailOptIn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setEmailOptIn(Boolean value) {
         this.emailOptIn = value;
@@ -288,11 +259,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the smsOptIn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isSMSOptIn() {
         if (smsOptIn == null) {
@@ -304,11 +273,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the smsOptIn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setSMSOptIn(Boolean value) {
         this.smsOptIn = value;
@@ -316,11 +283,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the lettersOptIn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isLettersOptIn() {
         if (lettersOptIn == null) {
@@ -332,11 +297,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the lettersOptIn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setLettersOptIn(Boolean value) {
         this.lettersOptIn = value;
@@ -344,11 +307,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the phoneOptIn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isPhoneOptIn() {
         if (phoneOptIn == null) {
@@ -360,11 +321,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the phoneOptIn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setPhoneOptIn(Boolean value) {
         this.phoneOptIn = value;
@@ -372,11 +331,9 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the dob property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDOB() {
         return dob;
@@ -384,11 +341,9 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the dob property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDOB(XMLGregorianCalendar value) {
         this.dob = value;
@@ -397,9 +352,9 @@ public class ContactPersonType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -409,8 +364,6 @@ public class ContactPersonType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -427,11 +380,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneTechType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneTechType() {
             return phoneTechType;
@@ -439,11 +390,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneTechType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneTechType(String value) {
             this.phoneTechType = value;
@@ -451,11 +400,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneUseType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneUseType() {
             return phoneUseType;
@@ -463,11 +410,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneUseType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneUseType(String value) {
             this.phoneUseType = value;
@@ -475,11 +420,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the phoneNumber property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getPhoneNumber() {
             return phoneNumber;
@@ -487,11 +430,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the phoneNumber property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setPhoneNumber(String value) {
             this.phoneNumber = value;
@@ -499,11 +440,9 @@ public class ContactPersonType {
 
         /**
          * Gets the value of the areaCityCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAreaCityCode() {
             return areaCityCode;
@@ -511,11 +450,9 @@ public class ContactPersonType {
 
         /**
          * Sets the value of the areaCityCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAreaCityCode(String value) {
             this.areaCityCode = value;

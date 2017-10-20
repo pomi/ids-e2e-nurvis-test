@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for MealType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -47,7 +47,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "MealType")
 @XmlEnum
@@ -56,154 +55,130 @@ public enum MealType {
 
     /**
      * AVML - Asian Veg
-     * 
      */
     AVML,
 
     /**
      * BBML - Baby/Infant Food
-     * 
      */
     BBML,
 
     /**
      * BLML - Bland Meal
-     * 
      */
     BLML,
 
     /**
      * CHML - Child Meal
-     * 
      */
     CHML,
 
     /**
      * DBML - Diabetic
-     * 
      */
     DBML,
 
     /**
      * FPML - Fruit Meal
-     * 
      */
     FPML,
 
     /**
      * GFML - Gluten Free
-     * 
      */
     GFML,
 
     /**
      * HFML - High Fiber
-     * 
      */
     HFML,
 
     /**
      * HNML - Hindu Meal
-     * 
      */
     HNML,
 
     /**
      * KSML - Kosher
-     * 
      */
     KSML,
 
     /**
      * LCML - Low Calorie
-     * 
      */
     LCML,
 
     /**
      * LFML - Low Cholesterol
-     * 
      */
     LFML,
 
     /**
      * LPML - Low Protein
-     * 
      */
     LPML,
 
     /**
      * LSML - Low Sodium/No Salt
-     * 
      */
     LSML,
 
     /**
      * MOML - Moslem
-     * 
      */
     MOML,
 
     /**
      * NLML - Non-Lactose
-     * 
      */
     NLML,
 
     /**
      * ORML - Oriental
-     * 
      */
     ORML,
 
     /**
      * PRML - Low Purin
-     * 
      */
     PRML,
 
     /**
      * RVML - Raw Vegetarian
-     * 
      */
     RVML,
 
     /**
      * SFML - Seafood
-     * 
      */
     SFML,
 
     /**
      * SPML - Special/Specify
-     * 
      */
     SPML,
 
     /**
      * VGML - Vegetarian/Non Dairy
-     * 
      */
     VGML,
 
     /**
      * VLML - Vegetarian/Milk/Eggs
-     * 
      */
     VLML,
 
     /**
      * Designates a regular meal.
-     * 
      */
     RGML;
 
-    public String value() {
-        return name();
-    }
-
     public static MealType fromValue(String v) {
         return valueOf(v);
+    }
+
+    public String value() {
+        return name();
     }
 
 }

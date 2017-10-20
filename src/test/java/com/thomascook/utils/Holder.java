@@ -153,22 +153,6 @@ public class Holder {
         Holder.toscaExtrasResponse = toscaExtrasResponse;
     }
 
-    public void setToscaBookingRequest(OTAPkgBookRQ toscaBookRequest) {
-        Holder.toscaBookRequest = toscaBookRequest;
-    }
-
-    public void setToscaBookingResponse(OTAPkgBookRS toscaBookResponse) {
-        Holder.toscaBookResponse = toscaBookResponse;
-    }
-
-    public void setHotelOffer(HotelOfferType hotelOffer) {
-        Holder.hotelOffer = hotelOffer;
-    }
-
-    public void setBookingReference(String id) {
-        Holder.id = id;
-    }
-
     public String getPlaceholder() {
         return placeholder;
     }
@@ -181,24 +165,40 @@ public class Holder {
         return toscaBookRequest;
     }
 
+    public void setToscaBookingRequest(OTAPkgBookRQ toscaBookRequest) {
+        Holder.toscaBookRequest = toscaBookRequest;
+    }
+
     public OTAPkgBookRS getToscaBookingResponse() {
         return toscaBookResponse;
+    }
+
+    public void setToscaBookingResponse(OTAPkgBookRS toscaBookResponse) {
+        Holder.toscaBookResponse = toscaBookResponse;
     }
 
     public HotelOfferType getHotelOffer() {
         return hotelOffer;
     }
 
+    public void setHotelOffer(HotelOfferType hotelOffer) {
+        Holder.hotelOffer = hotelOffer;
+    }
+
     public String getBookingReference() {
         return id;
     }
 
-    public void setRetailinterfaceXML(String webRioRequest) {
-        Holder.webRioRequest = webRioRequest;
+    public void setBookingReference(String id) {
+        Holder.id = id;
     }
 
     public String getRetailinterfaceXML() {
         return webRioRequest;
+    }
+
+    public void setRetailinterfaceXML(String webRioRequest) {
+        Holder.webRioRequest = webRioRequest;
     }
 
     public void setRetailDownloadResponse(FullRetailDownloadResponse fullRetailDownloadResponse) {

@@ -8,23 +8,23 @@
 
 package com.thomascook.wrAdapter.request;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * This provides name
- *                 information for a person.
- *             
- * 
+ * information for a person.
+ * <p>
+ * <p>
  * <p>Java class for PersonNameType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="PersonNameType">
  *   &lt;complexContent>
@@ -39,14 +39,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonNameType", propOrder = {
-    "namePrefix",
-    "givenName",
-    "surname"
+        "namePrefix",
+        "givenName",
+        "surname"
 })
 public class PersonNameType {
 
@@ -59,25 +57,23 @@ public class PersonNameType {
 
     /**
      * Gets the value of the namePrefix property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the namePrefix property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNamePrefix().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getNamePrefix() {
         if (namePrefix == null) {
@@ -88,25 +84,23 @@ public class PersonNameType {
 
     /**
      * Gets the value of the givenName property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the givenName property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGivenName().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getGivenName() {
         if (givenName == null) {
@@ -117,11 +111,9 @@ public class PersonNameType {
 
     /**
      * Gets the value of the surname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSurname() {
         return surname;
@@ -129,11 +121,9 @@ public class PersonNameType {
 
     /**
      * Sets the value of the surname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSurname(String value) {
         this.surname = value;

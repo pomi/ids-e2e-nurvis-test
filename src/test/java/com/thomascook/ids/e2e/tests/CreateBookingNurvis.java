@@ -300,7 +300,7 @@ public class CreateBookingNurvis {
         marshaller.marshal(request, sw);
 
         HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
+        HttpPost post = new HttpPost(Config.get().getNurvisNl());
         post.setEntity(new ByteArrayEntity(sw.toString().getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();

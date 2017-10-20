@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for TransferActionType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "TransferActionType")
 @XmlEnum
@@ -36,21 +35,18 @@ public enum TransferActionType {
 
     /**
      * Indicates transfer when in automatic mode.
-     * 
      */
     @XmlEnumValue("Automatic")
     AUTOMATIC("Automatic"),
 
     /**
      * Indicates transfer required in all modes.
-     * 
      */
     @XmlEnumValue("Mandatory")
     MANDATORY("Mandatory"),
 
     /**
      * Indicates transfer when in selectable mode.
-     * 
      */
     @XmlEnumValue("Selectable")
     SELECTABLE("Selectable");
@@ -60,17 +56,17 @@ public enum TransferActionType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static TransferActionType fromValue(String v) {
-        for (TransferActionType c: TransferActionType.values()) {
+        for (TransferActionType c : TransferActionType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

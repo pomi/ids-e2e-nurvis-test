@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for IncludeExcludeType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "IncludeExcludeType")
 @XmlEnum
@@ -41,14 +40,12 @@ public enum IncludeExcludeType {
 
     /**
      * The associated item is required.
-     * 
      */
     @XmlEnumValue("Required")
     REQUIRED("Required"),
 
     /**
      * The associated item is allowed.
-     * 
      */
     @XmlEnumValue("Allowed")
     ALLOWED("Allowed");
@@ -58,17 +55,17 @@ public enum IncludeExcludeType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static IncludeExcludeType fromValue(String v) {
-        for (IncludeExcludeType c: IncludeExcludeType.values()) {
+        for (IncludeExcludeType c : IncludeExcludeType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

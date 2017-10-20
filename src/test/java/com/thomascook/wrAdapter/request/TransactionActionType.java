@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for TransactionActionType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "TransactionActionType")
 @XmlEnum
@@ -58,17 +57,13 @@ public enum TransactionActionType {
     CANCEL("Cancel"),
 
     /**
-     * 
-     *                         Commit the transaction and override the end transaction edits.
-     *                     
-     * 
+     * Commit the transaction and override the end transaction edits.
      */
     @XmlEnumValue("CommitOverrideEdits")
     COMMIT_OVERRIDE_EDITS("CommitOverrideEdits"),
 
     /**
      * Perform a price verification.
-     * 
      */
     @XmlEnumValue("VerifyPrice")
     VERIFY_PRICE("VerifyPrice");
@@ -78,17 +73,17 @@ public enum TransactionActionType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static TransactionActionType fromValue(String v) {
-        for (TransactionActionType c: TransactionActionType.values()) {
+        for (TransactionActionType c : TransactionActionType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

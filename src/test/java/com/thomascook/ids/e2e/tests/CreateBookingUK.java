@@ -45,10 +45,17 @@ import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDate;
-import java.time.*;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+
+import com.thomascook.wrAdapter.request.CompanyNameType;
+import com.thomascook.toscaCostAdapter.request.SourceType;
+import com.thomascook.toscaCostAdapter.request.POSType;
+import com.thomascook.toscaBookAdapter.request.UniqueIDType;
+import com.thomascook.toscaCostAdapter.request.ObjectFactory;
 
 public class CreateBookingUK {
 
@@ -724,12 +731,12 @@ public class CreateBookingUK {
                         namePrefix = true;
                     }
                 }
-                if(extrasPkgPassengerListItem.getCode().equals("8")){
+                if (extrasPkgPassengerListItem.getCode().equals("8")) {
                     //miss or master
                     personNameType.getNamePrefix().add(returnRandomKidsSalutation());
                     passengerListItem.setBirthDate(generateBirthDate(true));
                 }
-                if(extrasPkgPassengerListItem.getCode().equals("7")){
+                if (extrasPkgPassengerListItem.getCode().equals("7")) {
                     personNameType.getNamePrefix().add(returnRandomKidsSalutation());
                     passengerListItem.setBirthDate(generateBirthDate(false));
                 }
@@ -751,10 +758,10 @@ public class CreateBookingUK {
         return toscaBookRequest;
     }
 
-    private static String returnRandomKidsSalutation(){
+    private static String returnRandomKidsSalutation() {
         String salutation = "";
         Random r = new Random();
-        if(r.nextInt(2) == 1){
+        if (r.nextInt(2) == 1) {
             salutation = "Miss";
         } else {
             salutation = "Master";
@@ -796,7 +803,7 @@ public class CreateBookingUK {
         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
         LocalDate biginningDate = LocalDate.parse(beginning_dateSTR, inputFormatter);
         int duration = Integer.parseInt(durationSTR.replace("P", "").replace("D", ""));
-        LocalDate endDate = biginningDate.plus(duration,ChronoUnit.DAYS);
+        LocalDate endDate = biginningDate.plus(duration, ChronoUnit.DAYS);
         booking.setBeginning_date(biginningDate.format(outputFormatter));
         booking.setEnd_date(endDate.format(outputFormatter));
         booking.setProduct_code("S17");
@@ -804,32 +811,32 @@ public class CreateBookingUK {
         booking.setBrand("TCU1");
         booking.setBrochure_code("TGS1");
         booking.setLatebooking("N");
-        booking.setDestination(toscaBookingResponse.getPackageReservation().getPackage().getTravelCode().substring(0,3));
+        booking.setDestination(toscaBookingResponse.getPackageReservation().getPackage().getTravelCode().substring(0, 3));
 
         List<Pax> paxes = new ArrayList<>();
-        for(com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem : toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()){
+        for (com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem : toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()) {
             Pax pax = new Pax();
             pax.setName(passengerListItem.getName().getGivenName().get(0));
             pax.setSurname(passengerListItem.getName().getSurname());
             LocalDate birthDate;
             DateTimeFormatter birthDateFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
-            if(Integer.parseInt(passengerListItem.getCode()) == 10){
+            if (Integer.parseInt(passengerListItem.getCode()) == 10) {
                 birthDate = LocalDate.now().minus(35, ChronoUnit.YEARS);
-                pax.setAge(Period.between(birthDate,LocalDate.now()).getYears());
+                pax.setAge(Period.between(birthDate, LocalDate.now()).getYears());
                 pax.setBirth_date(birthDate.format(birthDateFormatter));
-            }else{
+            } else {
                 birthDate = passengerListItem.getBirthDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
                 pax.setBirth_date(birthDate.format(birthDateFormatter));
-                pax.setAge(Period.between(birthDate,LocalDate.now()).getYears());
+                pax.setAge(Period.between(birthDate, LocalDate.now()).getYears());
             }
-            if(pax.getAge()<2){
+            if (pax.getAge() < 2) {
                 pax.setSex("I");
-            } else if(pax.getAge()>2 && pax.getAge()<16){
+            } else if (pax.getAge() > 2 && pax.getAge() < 16) {
                 pax.setSex("C");
-            }else{
-                if (passengerListItem.getGender().equals("Female")){
+            } else {
+                if (passengerListItem.getGender().equals("Female")) {
                     pax.setSex("F");
-                }else if(passengerListItem.getGender().equals("Male")){
+                } else if (passengerListItem.getGender().equals("Male")) {
                     pax.setSex("M");
                 }
             }
@@ -844,30 +851,30 @@ public class CreateBookingUK {
         List<Service> services = new ArrayList<>();
         booking.setService(services);
         int order = 1;
-        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
-            if(!(itineraryItemRequestType.getFlight()==null)) {
+        for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()) {
+            if (!(itineraryItemRequestType.getFlight() == null)) {
                 com.thomascook.toscaBookAdapter.response.PkgFlightSegmentType flightSegmentType = itineraryItemRequestType.getFlight();
                 Service service = new Service();
                 service.setCode(flightSegmentType.getOperatingAirline().getCode() + flightSegmentType.getOperatingAirline().getFlightNumber());
                 service.setType("FL");
                 service.setName(service.getCode());
                 service.setOrder(order++);
-                if(itineraryItemRequestType.getItinerarySequence().intValue()==1){
+                if (itineraryItemRequestType.getItinerarySequence().intValue() == 1) {
                     service.setTransfer_type("IN");
-                }else{
+                } else {
                     service.setTransfer_type("OUT");
                 }
                 service.setOrigin(flightSegmentType.getDepartureAirport().getLocationCode());
                 service.setDestination(flightSegmentType.getArrivalAirport().getLocationCode());
                 service.setCarrier_code(flightSegmentType.getOperatingAirline().getCode());
                 service.setCarrier_flight_code(flightSegmentType.getOperatingAirline().getFlightNumber());
-                service.setIdentifier(flightSegmentType.getOperatingAirline().getCode() + flightSegmentType.getOperatingAirline().getFlightNumber()+
-                        flightSegmentType.getDepartureAirport().getLocationCode()+flightSegmentType.getArrivalAirport().getLocationCode());
+                service.setIdentifier(flightSegmentType.getOperatingAirline().getCode() + flightSegmentType.getOperatingAirline().getFlightNumber() +
+                        flightSegmentType.getDepartureAirport().getLocationCode() + flightSegmentType.getArrivalAirport().getLocationCode());
                 service.setNumberofunits(booking.getPax().size());
 
                 List<Pax_service> pax_services = new ArrayList<>();
                 service.setPax_service(pax_services);
-                for(Pax pax : booking.getPax()){
+                for (Pax pax : booking.getPax()) {
                     Pax_service pax_service = new Pax_service();
                     List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
                     pax_service.setPax_service_assignment(pax_service_assignments);
@@ -879,11 +886,11 @@ public class CreateBookingUK {
                 booking.getService().add(service);
             }
         }
-        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
-            if(!(itineraryItemRequestType.getAccommodation()==null)){
+        for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()) {
+            if (!(itineraryItemRequestType.getAccommodation() == null)) {
                 com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation accommodation = itineraryItemRequestType.getAccommodation();
                 int roomProfileIndex = 1;
-                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : accommodation.getRoomProfiles().getRoomProfile()) {
+                for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : accommodation.getRoomProfiles().getRoomProfile()) {
                     Service service = new Service();
                     service.setCode(accommodation.getIdentity().getHotelCode());
                     service.setType("RM");
@@ -897,8 +904,8 @@ public class CreateBookingUK {
                     service.setEnd_date(end_Date.format(outputFormatter));
                     service.setEnd_time("0000");
                     service.setAccomodation(roomProfile.getRoomTypeCode());
-                    for(com.thomascook.toscaBookAdapter.response.MealPlanType mealPlanType: accommodation.getMealPlans().getMealPlan()){
-                        if(mealPlanType.getListOfRoomRPH().contains(String.valueOf(roomProfileIndex))){
+                    for (com.thomascook.toscaBookAdapter.response.MealPlanType mealPlanType : accommodation.getMealPlans().getMealPlan()) {
+                        if (mealPlanType.getListOfRoomRPH().contains(String.valueOf(roomProfileIndex))) {
                             service.setBoard(mealPlanType.getCode());
                         }
                     }
@@ -913,10 +920,10 @@ public class CreateBookingUK {
                     service.setPax_service(pax_services);
 
                     for (com.thomascook.toscaBookAdapter.request.ItineraryItemRequestType itineraryItemRequestTypePassengers : toscaBookingRequest.getPackageRequest().getItineraryItems().getItineraryItem()) {
-                        if(!(itineraryItemRequestTypePassengers.getAccommodation()==null)){
-                            for(com.thomascook.toscaBookAdapter.request.RoomProfileType roomProfileType : itineraryItemRequestTypePassengers.getAccommodation().getRoomProfiles().getRoomProfile()){
-                                if(roomProfileType.getRoomTypeCode().equals(roomProfile.getRoomTypeCode()) && roomProfileType.getPassengerRPHs().getListOfPassengerRPH().size()==roomProfile.getGuestCounts().getGuestCount().size()){
-                                    for(String serviceAssignment : roomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
+                        if (!(itineraryItemRequestTypePassengers.getAccommodation() == null)) {
+                            for (com.thomascook.toscaBookAdapter.request.RoomProfileType roomProfileType : itineraryItemRequestTypePassengers.getAccommodation().getRoomProfiles().getRoomProfile()) {
+                                if (roomProfileType.getRoomTypeCode().equals(roomProfile.getRoomTypeCode()) && roomProfileType.getPassengerRPHs().getListOfPassengerRPH().size() == roomProfile.getGuestCounts().getGuestCount().size()) {
+                                    for (String serviceAssignment : roomProfileType.getPassengerRPHs().getListOfPassengerRPH()) {
                                         Pax_service pax_service = new Pax_service();
                                         List<Pax_service_assignment> pax_service_assignments = new ArrayList<>();
                                         pax_service.setPax_service_assignment(pax_service_assignments);
@@ -951,15 +958,15 @@ public class CreateBookingUK {
         return sw.toString();
     }
 
-    private static String generateAZSequence(String string){
+    private static String generateAZSequence(String string) {
         String sequence = "";
-        if(string.equals("lastname")){
-            sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(6)+6);
+        if (string.equals("lastname")) {
+            sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(6) + 6);
         }
-        if(string.equals("firstname")){
-            sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(3)+6);
+        if (string.equals("firstname")) {
+            sequence = RandomStringUtils.randomAlphabetic(new Random().nextInt(3) + 6);
         }
-        if(string.equals("transactionId")){
+        if (string.equals("transactionId")) {
             sequence = RandomStringUtils.randomAlphabetic(29);
         }
         return sequence;
@@ -1037,7 +1044,7 @@ public class CreateBookingUK {
         com.thomascook.wrAdapter.request.POSType pos = factory.createPOSType();
         wrRequest.setPOS(pos);
         wrRequest.setTransactionIdentifier(generateAZSequence("transactionId"));
-        for(com.thomascook.toscaBookAdapter.request.SourceType sourceType :toscaBookingRequest.getPOS().getSource()){
+        for (com.thomascook.toscaBookAdapter.request.SourceType sourceType : toscaBookingRequest.getPOS().getSource()) {
             com.thomascook.wrAdapter.request.SourceType sourceTypeWR = factory.createSourceType();
             sourceTypeWR.setISOCountry(sourceType.getISOCountry());
             sourceTypeWR.setISOCurrency(sourceType.getISOCurrency());
@@ -1059,14 +1066,14 @@ public class CreateBookingUK {
         contactPersonType.setSMSOptIn(false);
         com.thomascook.wrAdapter.request.PersonNameType personNameType = factory.createPersonNameType();
         contactPersonType.setPersonName(personNameType);
-        for(String namePrefix : toscaBookingRequest.getContactDetail().getPersonName().getNamePrefix()){
+        for (String namePrefix : toscaBookingRequest.getContactDetail().getPersonName().getNamePrefix()) {
             personNameType.getNamePrefix().add(namePrefix);
         }
-        for(String givenName : toscaBookingRequest.getContactDetail().getPersonName().getGivenName()){
+        for (String givenName : toscaBookingRequest.getContactDetail().getPersonName().getGivenName()) {
             personNameType.getGivenName().add(givenName);
         }
         personNameType.setSurname(toscaBookingRequest.getContactDetail().getPersonName().getSurname());
-        for(com.thomascook.toscaBookAdapter.request.ContactPersonType.Telephone telephoneTosca : toscaBookingRequest.getContactDetail().getTelephone()){
+        for (com.thomascook.toscaBookAdapter.request.ContactPersonType.Telephone telephoneTosca : toscaBookingRequest.getContactDetail().getTelephone()) {
             com.thomascook.wrAdapter.request.ContactPersonType.Telephone telephone = factory.createContactPersonTypeTelephone();
             telephone.setAreaCityCode(telephoneTosca.getAreaCityCode());
             telephone.setPhoneNumber(telephoneTosca.getPhoneNumber());
@@ -1074,17 +1081,17 @@ public class CreateBookingUK {
             telephone.setPhoneUseType(telephoneTosca.getPhoneUseType());
             contactPersonType.getTelephone().add(telephone);
         }
-        for(com.thomascook.toscaBookAdapter.request.EmailType emailTypeTosca : toscaBookingRequest.getContactDetail().getEmail()){
+        for (com.thomascook.toscaBookAdapter.request.EmailType emailTypeTosca : toscaBookingRequest.getContactDetail().getEmail()) {
             contactPersonType.getEmail().add(emailTypeTosca.getValue());
         }
-        for(com.thomascook.toscaBookAdapter.request.AddressInfoType addressInfoTypeTosca : toscaBookingRequest.getContactDetail().getAddress()){
+        for (com.thomascook.toscaBookAdapter.request.AddressInfoType addressInfoTypeTosca : toscaBookingRequest.getContactDetail().getAddress()) {
             com.thomascook.wrAdapter.request.AddressInfoType addressInfoType = factory.createAddressInfoType();
             addressInfoType.setCityName(addressInfoTypeTosca.getCityName());
             addressInfoType.setPostalCode(addressInfoTypeTosca.getPostalCode());
-            for(com.thomascook.toscaBookAdapter.request.AddressType.BldgRoom bldgRoomTosca :addressInfoTypeTosca.getBldgRoom()){
+            for (com.thomascook.toscaBookAdapter.request.AddressType.BldgRoom bldgRoomTosca : addressInfoTypeTosca.getBldgRoom()) {
                 addressInfoType.getBldgRoom().add(bldgRoomTosca.getValue());
             }
-            for(String addressLine : addressInfoTypeTosca.getAddressLine()){
+            for (String addressLine : addressInfoTypeTosca.getAddressLine()) {
                 addressInfoType.getAddressLine().add(addressLine);
             }
             contactPersonType.getAddress().add(addressInfoType);
@@ -1100,7 +1107,7 @@ public class CreateBookingUK {
         LocalDate localDate = LocalDate.now();
         LocalDate future = localDate.plus(1, ChronoUnit.YEARS);
         int year = future.getYear();
-        paymentCardType.setExpireDate("02" + String.valueOf(year).substring(2,4));
+        paymentCardType.setExpireDate("02" + String.valueOf(year).substring(2, 4));
         paymentCardType.setCardHolderName("test test");
         paymentCardType.setAddress(wrRequest.getCustomerDetails().getAddress().get(0));
         com.thomascook.wrAdapter.request.PaymentDetailType.PaymentAmount paymentAmount = factory.createPaymentDetailTypePaymentAmount();
@@ -1120,7 +1127,7 @@ public class CreateBookingUK {
         xmlFileDefinition.setFileDescription("FileDescription");
         xmlFileDefinition.setFileSupplier("TCCOM");
         /*			<AssociatedRequest>
-				<BranchBudgetCtr>5300</BranchBudgetCtr>
+                <BranchBudgetCtr>5300</BranchBudgetCtr>
 				<AbtaNumber>J9375</AbtaNumber>
 			</AssociatedRequest>
 			*/
@@ -1134,8 +1141,8 @@ public class CreateBookingUK {
         bookingResponse.setChosenPackageHoliday(chosenPackageHoliday);
         //DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit accommodationUnit = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodationAccommodationUnit();
         //DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment travelSegment = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegment();
-        for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
-            if(!(itineraryItemRequestType.getFlight() == null)){
+        for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()) {
+            if (!(itineraryItemRequestType.getFlight() == null)) {
                 DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.TravelSegment travelSegment = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayTravelSegment();
                 XMLGregorianCalendar departureDateTime = itineraryItemRequestType.getFlight().getDepartureDateTime();
                 XMLGregorianCalendar arrivalDateTime = itineraryItemRequestType.getFlight().getArrivalDateTime();
@@ -1155,25 +1162,25 @@ public class CreateBookingUK {
                 travelSegment.setTransportMode("FC");
 
                 //travelSegment.setClazz();
-                if(travelSegment.getDeparturePoint().equals(hotelOffer.getFlights().getInboundFlight().getDepartureAirport().getLocationCode())){
+                if (travelSegment.getDeparturePoint().equals(hotelOffer.getFlights().getInboundFlight().getDepartureAirport().getLocationCode())) {
                     String clazz = "";
-                    if(hotelOffer.getFlights().getInboundFlight().getServiceClass().equals("Y")){
+                    if (hotelOffer.getFlights().getInboundFlight().getServiceClass().equals("Y")) {
                         travelSegment.setClazz("Economy");
-                    }else{
+                    } else {
                         travelSegment.setClazz("Business");
                     }
-                }else{
+                } else {
                     String clazz = "";
-                    if(hotelOffer.getFlights().getOutboundFlight().getServiceClass().equals("Y")){
+                    if (hotelOffer.getFlights().getOutboundFlight().getServiceClass().equals("Y")) {
                         travelSegment.setClazz("Economy");
-                    }else{
+                    } else {
                         travelSegment.setClazz("Business");
                     }
                 }
                 hotelOffer.getFlights().getInboundFlight().getServiceClass();
                 chosenPackageHoliday.getTravelSegment().add(travelSegment);
             }
-            if(!(itineraryItemRequestType.getAccommodation() == null)){
+            if (!(itineraryItemRequestType.getAccommodation() == null)) {
                 DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation accommodation = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodation();
                 //accommodation.setDeparturePoint();
                 accommodation.setAccommodationCode(itineraryItemRequestType.getAccommodation().getIdentity().getHotelCode());
@@ -1182,15 +1189,15 @@ public class CreateBookingUK {
                 accommodation.setResortName(itineraryItemRequestType.getAccommodation().getResortName());
                 accommodation.setStartDate(itineraryItemRequestType.getAccommodation().getDateRange().getStart().replace("-", ""));
                 accommodation.setEndDate(itineraryItemRequestType.getAccommodation().getDateRange().getEnd().replace("-", ""));
-                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : itineraryItemRequestType.getAccommodation().getRoomProfiles().getRoomProfile()){
+                for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType.Accommodation.RoomProfiles.RoomProfile roomProfile : itineraryItemRequestType.getAccommodation().getRoomProfiles().getRoomProfile()) {
                     DealType.BookingWebRequest.BookingResponse.ChosenPackageHoliday.Accommodation.AccommodationUnit accommodationUnit = factory.createDealTypeBookingWebRequestBookingResponseChosenPackageHolidayAccommodationAccommodationUnit();
                     accommodationUnit.setName(roomProfile.getDescription().split(",")[0]);
                     accommodationUnit.setNumRooms(BigInteger.valueOf(roomProfile.getQuantity()));
                     accommodation.getAccommodationUnit().add(accommodationUnit);
                 }
 
-                for(com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType1 :toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()){
-                    if(!(itineraryItemRequestType1.getAccommodation() == null)){
+                for (com.thomascook.toscaBookAdapter.response.ItineraryItemResponseType itineraryItemRequestType1 : toscaBookingResponse.getPackageReservation().getPackage().getItineraryItems().getItineraryItem()) {
+                    if (!(itineraryItemRequestType1.getAccommodation() == null)) {
                         accommodation.setBoardCode(itineraryItemRequestType1.getAccommodation().getMealPlans().getMealPlan().get(0).getCode());
                     }
                 }
@@ -1211,27 +1218,27 @@ public class CreateBookingUK {
         chosenPackageHoliday.getAtolCertificate().add(atolCertificate);
         String leadPassenger = "";
         boolean missOrMaster = true;
-        for(com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem :toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()){
+        for (com.thomascook.toscaBookAdapter.response.PkgPassengerListItem passengerListItem : toscaBookingResponse.getPackageReservation().getPassengerListItems().getPassengerListItem()) {
             Passenger passenger = factory.createPassenger();
-            if(leadPassenger.equals("")){
+            if (leadPassenger.equals("")) {
                 passenger.setLeadPassenger(true);
                 leadPassenger = "no";
             }
-            if(passengerListItem.getCode().equals("10")){
-                LocalDate dob = LocalDate.now().minus(30,ChronoUnit.YEARS);
+            if (passengerListItem.getCode().equals("10")) {
+                LocalDate dob = LocalDate.now().minus(30, ChronoUnit.YEARS);
                 DateTimeFormatter dtfDOB = DateTimeFormatter.ofPattern("yyyyMMdd");
                 passenger.setDOB(dtfDOB.format(dob));
-                if(passengerListItem.getName().getNamePrefix().get(0).equals("MR")){
+                if (passengerListItem.getName().getNamePrefix().get(0).equals("MR")) {
                     passenger.setTitle("Mr");
                 }
-                if (passengerListItem.getName().getNamePrefix().get(0).equals("MRS")){
+                if (passengerListItem.getName().getNamePrefix().get(0).equals("MRS")) {
                     passenger.setTitle("Mrs");
                 }
-            }else{
+            } else {
                 LocalDate dob = passengerListItem.getBirthDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
                 DateTimeFormatter dtfDOB = DateTimeFormatter.ofPattern("yyyyMMdd");
                 passenger.setDOB(dtfDOB.format(dob));
-                if(missOrMaster) {
+                if (missOrMaster) {
                     passenger.setTitle("Miss");
                     missOrMaster = !missOrMaster;
                 } else {
