@@ -8,22 +8,18 @@
 
 package com.thomascook.wrAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * This the standard
- *                     response message for all requests to the rtlinterface
- *                 
- * 
+ * response message for all requests to the rtlinterface
+ * <p>
+ * <p>
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -48,16 +44,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "status",
-    "code",
-    "retry",
-    "message",
-    "associatedRequest"
+        "status",
+        "code",
+        "retry",
+        "message",
+        "associatedRequest"
 })
 @XmlRootElement(name = "FullRetailDownloadResponse")
 public class FullRetailDownloadResponse {
@@ -75,11 +69,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Gets the value of the status property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStatus() {
         return status;
@@ -87,11 +79,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Sets the value of the status property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStatus(String value) {
         this.status = value;
@@ -99,11 +89,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCode() {
         return code;
@@ -111,11 +99,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCode(String value) {
         this.code = value;
@@ -123,11 +109,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Gets the value of the retry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRetry() {
         return retry;
@@ -135,11 +119,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Sets the value of the retry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRetry(String value) {
         this.retry = value;
@@ -147,11 +129,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Gets the value of the message property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMessage() {
         return message;
@@ -159,11 +139,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Sets the value of the message property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMessage(String value) {
         this.message = value;
@@ -171,11 +149,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Gets the value of the associatedRequest property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AssociatedRequest }
-     *     
+     *
+     * @return possible object is
+     * {@link AssociatedRequest }
      */
     public AssociatedRequest getAssociatedRequest() {
         return associatedRequest;
@@ -183,11 +159,9 @@ public class FullRetailDownloadResponse {
 
     /**
      * Sets the value of the associatedRequest property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AssociatedRequest }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AssociatedRequest }
      */
     public void setAssociatedRequest(AssociatedRequest value) {
         this.associatedRequest = value;
@@ -196,13 +170,13 @@ public class FullRetailDownloadResponse {
 
     /**
      * These are the
-     *                                 references for the associated download
-     *                             
-     * 
+     * references for the associated download
+     * <p>
+     * <p>
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -216,14 +190,12 @@ public class FullRetailDownloadResponse {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "consultationRef",
-        "branchBudgetCtr",
-        "customerRef"
+            "consultationRef",
+            "branchBudgetCtr",
+            "customerRef"
     })
     public static class AssociatedRequest {
 
@@ -236,11 +208,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Gets the value of the consultationRef property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getConsultationRef() {
             return consultationRef;
@@ -248,11 +218,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Sets the value of the consultationRef property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setConsultationRef(String value) {
             this.consultationRef = value;
@@ -260,11 +228,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Gets the value of the branchBudgetCtr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getBranchBudgetCtr() {
             return branchBudgetCtr;
@@ -272,11 +238,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Sets the value of the branchBudgetCtr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setBranchBudgetCtr(String value) {
             this.branchBudgetCtr = value;
@@ -284,11 +248,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Gets the value of the customerRef property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCustomerRef() {
             return customerRef;
@@ -296,11 +258,9 @@ public class FullRetailDownloadResponse {
 
         /**
          * Sets the value of the customerRef property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCustomerRef(String value) {
             this.customerRef = value;

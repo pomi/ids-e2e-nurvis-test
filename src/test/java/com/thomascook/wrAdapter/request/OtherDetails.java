@@ -8,20 +8,16 @@
 
 package com.thomascook.wrAdapter.request;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -41,20 +37,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "accommodationDescription",
-    "accommodationNumber",
-    "vehicleMake",
-    "vehicleModel",
-    "vehicleRegistration",
-    "vehicleHeight",
-    "vehicleLength",
-    "trailerHeight",
-    "trailerLength"
+        "accommodationDescription",
+        "accommodationNumber",
+        "vehicleMake",
+        "vehicleModel",
+        "vehicleRegistration",
+        "vehicleHeight",
+        "vehicleLength",
+        "trailerHeight",
+        "trailerLength"
 })
 @XmlRootElement(name = "OtherDetails")
 public class OtherDetails {
@@ -80,25 +74,23 @@ public class OtherDetails {
 
     /**
      * Gets the value of the accommodationDescription property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the accommodationDescription property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAccommodationDescription().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getAccommodationDescription() {
         if (accommodationDescription == null) {
@@ -109,25 +101,23 @@ public class OtherDetails {
 
     /**
      * Gets the value of the accommodationNumber property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the accommodationNumber property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAccommodationNumber().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getAccommodationNumber() {
         if (accommodationNumber == null) {
@@ -138,11 +128,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the vehicleMake property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicleMake() {
         return vehicleMake;
@@ -150,11 +138,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the vehicleMake property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicleMake(String value) {
         this.vehicleMake = value;
@@ -162,11 +148,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the vehicleModel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicleModel() {
         return vehicleModel;
@@ -174,11 +158,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the vehicleModel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicleModel(String value) {
         this.vehicleModel = value;
@@ -186,11 +168,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the vehicleRegistration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicleRegistration() {
         return vehicleRegistration;
@@ -198,11 +178,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the vehicleRegistration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicleRegistration(String value) {
         this.vehicleRegistration = value;
@@ -210,11 +188,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the vehicleHeight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicleHeight() {
         return vehicleHeight;
@@ -222,11 +198,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the vehicleHeight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicleHeight(String value) {
         this.vehicleHeight = value;
@@ -234,11 +208,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the vehicleLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVehicleLength() {
         return vehicleLength;
@@ -246,11 +218,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the vehicleLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVehicleLength(String value) {
         this.vehicleLength = value;
@@ -258,11 +228,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the trailerHeight property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTrailerHeight() {
         return trailerHeight;
@@ -270,11 +238,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the trailerHeight property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTrailerHeight(String value) {
         this.trailerHeight = value;
@@ -282,11 +248,9 @@ public class OtherDetails {
 
     /**
      * Gets the value of the trailerLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTrailerLength() {
         return trailerLength;
@@ -294,11 +258,9 @@ public class OtherDetails {
 
     /**
      * Sets the value of the trailerLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTrailerLength(String value) {
         this.trailerLength = value;

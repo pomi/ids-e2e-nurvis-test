@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for SeatType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "SeatType")
 @XmlEnum
@@ -51,17 +50,17 @@ public enum SeatType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static SeatType fromValue(String v) {
-        for (SeatType c: SeatType.values()) {
+        for (SeatType c : SeatType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

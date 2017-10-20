@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for FlightTypeType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "FlightTypeType")
 @XmlEnum
@@ -39,47 +38,38 @@ public enum FlightTypeType {
 
     /**
      * Indicates the flight does not make any scheduled stops between 2
-     *                         points.
-     *                     
-     * 
+     * points.
      */
     @XmlEnumValue("Nonstop")
     NONSTOP("Nonstop"),
 
     /**
      * Indicates the flight makes a scheduled stop(s) between 2 points.
-     *                     
-     * 
      */
     @XmlEnumValue("Direct")
     DIRECT("Direct"),
 
     /**
      * Indicates the flight will require a change of aircraft at a
-     *                         connecting point(s).
-     *                     
-     * 
+     * connecting point(s).
      */
     @XmlEnumValue("Connection")
     CONNECTION("Connection"),
 
     /**
      * A trip with only one connection.
-     * 
      */
     @XmlEnumValue("SingleConnection")
     SINGLE_CONNECTION("SingleConnection"),
 
     /**
      * A trip with only two connections.
-     * 
      */
     @XmlEnumValue("DoubleConnection")
     DOUBLE_CONNECTION("DoubleConnection"),
 
     /**
      * Indicates that the flight makes only one stop.
-     * 
      */
     @XmlEnumValue("OneStopOnly")
     ONE_STOP_ONLY("OneStopOnly");
@@ -89,17 +79,17 @@ public enum FlightTypeType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static FlightTypeType fromValue(String v) {
-        for (FlightTypeType c: FlightTypeType.values()) {
+        for (FlightTypeType c : FlightTypeType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

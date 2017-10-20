@@ -8,20 +8,15 @@
 
 package com.thomascook.wrAdapter.response;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -57,8 +52,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
@@ -83,11 +76,9 @@ public class Passenger {
 
     /**
      * Gets the value of the surname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSurname() {
         return surname;
@@ -95,11 +86,9 @@ public class Passenger {
 
     /**
      * Sets the value of the surname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSurname(String value) {
         this.surname = value;
@@ -107,11 +96,9 @@ public class Passenger {
 
     /**
      * Gets the value of the firstname property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFirstname() {
         return firstname;
@@ -119,11 +106,9 @@ public class Passenger {
 
     /**
      * Sets the value of the firstname property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFirstname(String value) {
         this.firstname = value;
@@ -131,11 +116,9 @@ public class Passenger {
 
     /**
      * Gets the value of the dob property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDOB() {
         return dob;
@@ -143,11 +126,9 @@ public class Passenger {
 
     /**
      * Sets the value of the dob property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDOB(String value) {
         this.dob = value;
@@ -155,11 +136,9 @@ public class Passenger {
 
     /**
      * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTitle() {
         return title;
@@ -167,11 +146,9 @@ public class Passenger {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTitle(String value) {
         this.title = value;
@@ -179,11 +156,9 @@ public class Passenger {
 
     /**
      * Gets the value of the age property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getAge() {
         return age;
@@ -191,11 +166,9 @@ public class Passenger {
 
     /**
      * Sets the value of the age property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setAge(BigInteger value) {
         this.age = value;
@@ -203,11 +176,9 @@ public class Passenger {
 
     /**
      * Gets the value of the leadPassenger property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isLeadPassenger() {
         return leadPassenger;
@@ -215,11 +186,9 @@ public class Passenger {
 
     /**
      * Sets the value of the leadPassenger property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setLeadPassenger(Boolean value) {
         this.leadPassenger = value;
@@ -227,11 +196,9 @@ public class Passenger {
 
     /**
      * Gets the value of the passportType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPassportType() {
         return passportType;
@@ -239,11 +206,9 @@ public class Passenger {
 
     /**
      * Sets the value of the passportType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPassportType(String value) {
         this.passportType = value;

@@ -10,6 +10,7 @@ import com.thomascook.nurvisAdapter.request.ReservationLegTypeRequest;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.*;
 import com.thomascook.ontour.*;
+import com.thomascook.utils.Holder;
 import com.thomascook.utils.Regions;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -23,6 +24,8 @@ import org.json.JSONObject;
 import org.opentravel.ota._2003._05.request.*;
 import org.opentravel.ota._2003._05.response.HotelOfferType;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -44,6 +47,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class CreateBookingNurvis {
+
+    private static final String ONTOUR_XMLS_FOLDER = "target/ontourXmls/";
+    private static Logger logger = LoggerFactory.getLogger(CreateBookingNurvis.class);
 
     private static String solr;
     private static String nurvis;
@@ -72,7 +78,7 @@ public class CreateBookingNurvis {
 
         FilterResultsType filterResultsType = factory.createFilterResultsType();
         filterResultsType.setStart(Integer.toString(0));
-        filterResultsType.setEnd(Integer.toString(9));
+        filterResultsType.setEnd(Integer.toString(29));
         otaPkgSearchRQ.setFilterResults(filterResultsType);
 
         PkgSearchCriteriaType pkgSearchCriteriaType = factory.createPkgSearchCriteriaType();
@@ -184,6 +190,8 @@ public class CreateBookingNurvis {
         request.getFab().getCustomer().setCEMailDomain("thomascook.nl");
         request.getFab().getCustomer().setCTitle("Mr");
 
+        Holder.get().setCustomer(request.getFab().getCustomer());
+
         //add booking data
         request.getFab().setSellAgent("NL4200");
         request.getFab().setTOCode("NVN");
@@ -280,6 +288,7 @@ public class CreateBookingNurvis {
         request.getFab().getFah().get(0).setMeal("AI");
         request.getFab().getFah().get(0).setAdults("2");
 
+        Holder.get().setBookingRequestDetails(request);
         return request;
     }
 
@@ -291,7 +300,7 @@ public class CreateBookingNurvis {
         marshaller.marshal(request, sw);
 
         HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
+        HttpPost post = new HttpPost(Config.get().getNurvisNl());
         post.setEntity(new ByteArrayEntity(sw.toString().getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
@@ -327,7 +336,7 @@ public class CreateBookingNurvis {
         marshaller.marshal(nurvisRequest, sw);
 
         HttpClient client = HttpClients.createDefault();
-        HttpPost post = new HttpPost("http://ppt.int-api.thomascook.com/nurvis-test/test/OT/NECN/NeckermannReisen");
+        HttpPost post = new HttpPost(Config.get().getNurvisNl());
         post.setEntity(new ByteArrayEntity(sw.toString().getBytes("UTF-8")));
         HttpResponse response = client.execute(post);
         HttpEntity entity = response.getEntity();
@@ -340,6 +349,8 @@ public class CreateBookingNurvis {
             }
         }
 
+        Holder.get().setBookingNumber(nurvisBooking.getBookingNumber());
+        Holder.get().setBookingResponseDetails(nurvisBooking);
         return nurvisBooking;
     }
 
@@ -502,11 +513,13 @@ public class CreateBookingNurvis {
         StringWriter sw = new StringWriter();
         marshaller.marshal(shipment, sw);
 
+        Holder.get().setOnTourShipment(shipment);
+
         return sw.toString();
     }
 
     //ReservationRequestTypeRequest
-    public static HashMap<String, Object> getValidPackage(OTAPkgSearchRS otaPkgSearchRS) throws JAXBException, IOException {
+    public static HashMap<String, Object> getValidPackage(OTAPkgSearchRS otaPkgSearchRS) throws LackOfAvailableRoomsException, IOException, JAXBException {
         //createNurvisRequest(otaPkgSearchRS.getHotelOffers().getHotelOffer().get(0));
         HashMap<String, Object> result = new HashMap<>();
         ReservationRequestTypeRequest request;
@@ -524,6 +537,11 @@ public class CreateBookingNurvis {
                 }
             }
         }
+
+        if (result.size() == 0)
+            throw new LackOfAvailableRoomsException(String.format("There is not available hotel rooms for this destination %s",
+                    otaPkgSearchRS.getHotelOffers().getHotelOffer().get(0).getDestinationCatalog()));
+
         return result;
     }
 
@@ -534,7 +552,8 @@ public class CreateBookingNurvis {
             String user = "ontour-stg";
             String host = "492565-srv29.eceit.net";
             int port = 22;
-            String privateKey = "C:\\Users\\omm\\WorkingFiles\\SFTP3.ppk";
+            String privateKey = System.getProperty("user.home") + "\\WorkingFiles\\SFTP3.ppk";
+//            String privateKey = "C:\\Users\\omm\\WorkingFiles\\SFTP3.ppk";
 
             jsch.addIdentity(privateKey);
             System.out.println("identity added ");
@@ -556,12 +575,6 @@ public class CreateBookingNurvis {
 
             ChannelSftp c = (ChannelSftp) channel;
 
-            LocalDate date = LocalDate.now();
-            LocalTime time = LocalTime.now();
-            //String fileName = "OBES_" + destinationAirport + "_" + date.getYear() + "_" + date.getMonth().getLong(ChronoField.MONTH_OF_YEAR) + "_" + date.getDayOfMonth() +
-            //        "_" + date.getDayOfMonth() + "_" + date.getMonth().getLong(ChronoField.MONTH_OF_YEAR) + "_" + date.getYear() + time.getHour() + "_" +
-            //        time.getMinute() + "_" + time.getSecond() + ".xml";
-
             DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_dd_MM_yyyy");
             LocalDate today = LocalDate.now();
             DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss");
@@ -569,15 +582,32 @@ public class CreateBookingNurvis {
 
             String fileName = "OBES_" + destinationAirport + "_" + today.format(dateFormatter) + now.format(timeFormatter) + ".xml";
 
-            File file = new File(fileName);
+            File directory = new File(ONTOUR_XMLS_FOLDER);
+            if (!directory.exists()) {
+                if (directory.mkdir()) {
+                    logger.info(directory.getName() + " folder was created");
+                } else {
+                    logger.warn(String.format("Failed to create %s directory!", directory.getName()));
+                }
+            }
+
+            String filePath = ONTOUR_XMLS_FOLDER + fileName;
+
+            File file = new File(filePath);
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(onTourXML);
             fileWriter.flush();
             fileWriter.close();
 
-            createZipFile(file, fileName);
+            if (!(new File(filePath).isFile())) {
+                throw new FileNotFoundException(filePath + " not found");
+            } else if (!(new File(filePath).length() > 0)) {
+                throw new IOException(filePath + " is empty");
+            }
 
-            c.put(String.valueOf(new File(fileName + ".zip")), "/ontour-stg/export");
+            createZipFile(filePath);
+
+            c.put(String.valueOf(new File(filePath + ".zip")), "/ontour-stg/export");
             c.exit();
             System.out.println("done");
 
@@ -586,23 +616,30 @@ public class CreateBookingNurvis {
         }
     }
 
-    private static void createZipFile(File onTourXML, String fileName) throws IOException {
+    private static void createZipFile(String filePath) throws IOException {
 
-        FileOutputStream fos = new FileOutputStream(fileName + ".zip");
+        String zipFilePath = filePath + ".zip";
+        FileOutputStream fos = new FileOutputStream(zipFilePath);
         ZipOutputStream zos = new ZipOutputStream(fos);
 
-        addToZipFile(onTourXML.getName(), zos);
+        addToZipFile(filePath, zos);
         zos.close();
         fos.close();
+
+        if (!(new File(zipFilePath).isFile())) {
+            throw new FileNotFoundException(zipFilePath + " not found");
+        } else if (!(new File(zipFilePath).length() > 0)) {
+            throw new IOException(zipFilePath + " is empty");
+        }
     }
 
-    private static void addToZipFile(String fileName, ZipOutputStream zos) throws IOException {
+    private static void addToZipFile(String filePath, ZipOutputStream zos) throws IOException {
 
-        System.out.println("Writing '" + fileName + "' to zip file");
+        System.out.println("Writing '" + filePath + "' to zip file");
 
-        File file = new File(fileName);
+        File file = new File(filePath);
         FileInputStream fis = new FileInputStream(file);
-        ZipEntry zipEntry = new ZipEntry(fileName);
+        ZipEntry zipEntry = new ZipEntry(file.getName());
         zos.putNextEntry(zipEntry);
 
         byte[] bytes = new byte[1024];
@@ -652,7 +689,7 @@ public class CreateBookingNurvis {
         customerRetrieveTimeout = Config.get().getCustomerRetrieveTimeout();
         sfwRequestBody = Config.get().getSfwRequestBody();
 
-        switch (region.toLowerCase()) {
+        switch (region.toUpperCase()) {
             case Regions.BE:
                 nurvis = Config.get().getNurvisBe();
                 solr = Config.get().getSolrBe();

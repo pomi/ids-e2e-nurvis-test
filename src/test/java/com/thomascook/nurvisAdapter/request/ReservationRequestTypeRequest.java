@@ -8,6 +8,8 @@
 
 package com.thomascook.nurvisAdapter.request;
 
+import com.google.common.base.Objects;
+
 import javax.xml.bind.annotation.*;
 
 
@@ -176,6 +178,37 @@ public class ReservationRequestTypeRequest {
     @XmlAttribute(name = "IComClient")
     private String iComClient;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ReservationRequestTypeRequest that = (ReservationRequestTypeRequest) o;
+        return Objects.equal(fab, that.fab) &&
+                Objects.equal(version, that.version) &&
+                Objects.equal(from, that.from) &&
+                Objects.equal(to, that.to) &&
+                Objects.equal(sTermId, that.sTermId) &&
+                Objects.equal(unit, that.unit) &&
+                Objects.equal(window, that.window) &&
+                Objects.equal(date, that.date) &&
+                Objects.equal(time, that.time) &&
+                Objects.equal(type, that.type) &&
+                Objects.equal(subType, that.subType) &&
+                Objects.equal(confirm, that.confirm) &&
+                Objects.equal(agent, that.agent) &&
+                Objects.equal(rSystem, that.rSystem) &&
+                Objects.equal(lang, that.lang) &&
+                Objects.equal(mode, that.mode) &&
+                Objects.equal(userCode, that.userCode) &&
+                Objects.equal(educBook, that.educBook) &&
+                Objects.equal(iComClient, that.iComClient);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(fab, version, from, to, sTermId, unit, window, date, time, type, subType, confirm, agent, rSystem, lang, mode, userCode, educBook, iComClient);
+    }
+
     /**
      * Gets the value of the fab property.
      *
@@ -191,6 +224,7 @@ public class ReservationRequestTypeRequest {
      *
      * @param value allowed object is
      *              {@link ReservationFabTypeRequest }
+
      */
     public void setFab(ReservationFabTypeRequest value) {
         this.fab = value;

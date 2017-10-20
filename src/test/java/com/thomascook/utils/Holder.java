@@ -1,5 +1,10 @@
 package com.thomascook.utils;
 
+import com.thomascook.msdAdaptor.msdBookingDetails.MsdBookingDetails;
+import com.thomascook.nurvisAdapter.request.ReservationCustomerTypeRequest;
+import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
+import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
+import com.thomascook.ontour.Shipment;
 import com.thomascook.toscaAdapter.request.OTAPkgAvailRQ;
 import com.thomascook.toscaAdapter.response.OTAPkgAvailRS;
 import com.thomascook.toscaBookAdapter.request.OTAPkgBookRQ;
@@ -21,10 +26,16 @@ public class Holder {
     private static String placeholder;
     private static DataTable passengers;
     private static OTAPkgAvailRS toscaAvailabilityResponse;
-    private static OTAPkgAvailRQ toscaAvailabiltyRequest;
+    private static OTAPkgAvailRQ toscaAvailabilityRequest;
     private static OTAPkgExtrasInfoRQ toscaExtrasRequest;
     private static OTAPkgExtrasInfoRS toscaExtrasResponse;
     private static Map<String, Object> globalMap = new HashMap<>();
+    private static String bookingNumber;
+    private static ReservationRequestTypeRequest bookingRequestDetails;
+    private static ReservationResponseTypeResponse bookingResponseDetails;
+    private static Shipment onTourShipment;
+    private static MsdBookingDetails msdBookingDetails;
+    private static ReservationCustomerTypeRequest customer;
     private static OTAPkgBookRQ toscaBookRequest;
     private static OTAPkgBookRS toscaBookResponse;
     private static HotelOfferType hotelOffer;
@@ -42,108 +53,152 @@ public class Holder {
         return instance;
     }
 
-    public static OTAPkgSearchRS getOtaPkgSearchRS() {
+    public static Map<String, Object> getProperties() {
+        return globalMap;
+    }
+
+    public ReservationCustomerTypeRequest getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(ReservationCustomerTypeRequest customer) {
+        Holder.customer = customer;
+    }
+
+    public MsdBookingDetails getMsdBookingDetails() {
+        return msdBookingDetails;
+    }
+
+    public void setMsdBookingDetails(MsdBookingDetails msdBookingDetails) {
+        Holder.msdBookingDetails = msdBookingDetails;
+    }
+
+    public String getBookingNumber() {
+        return bookingNumber;
+    }
+
+    public void setBookingNumber(String bookingNumber) {
+        Holder.bookingNumber = bookingNumber;
+    }
+
+    public ReservationRequestTypeRequest getBookingRequestDetails() {
+        return bookingRequestDetails;
+    }
+
+    public void setBookingRequestDetails(ReservationRequestTypeRequest bookingDetails) {
+        Holder.bookingRequestDetails = bookingDetails;
+    }
+
+    public void setBookingResponseDetails(ReservationResponseTypeResponse bookingDetails) {
+        Holder.bookingResponseDetails = bookingDetails;
+    }
+
+    public ReservationResponseTypeResponse getBookingResponceDetails() {
+        return bookingResponseDetails;
+    }
+
+    public Shipment getOnTourShipment() {
+        return onTourShipment;
+    }
+
+    public void setOnTourShipment(Shipment shipment) {
+        Holder.onTourShipment = shipment;
+    }
+
+    public OTAPkgSearchRS getOtaPkgSearchRS() {
         return otaPkgSearchRS;
     }
 
-    public static void setOtaPkgSearchRS(OTAPkgSearchRS otaPkgSearchRS) {
+    public void setOtaPkgSearchRS(OTAPkgSearchRS otaPkgSearchRS) {
         Holder.otaPkgSearchRS = otaPkgSearchRS;
     }
 
-    public static DataTable getPassengers() {
+    public DataTable getPassengers() {
         return passengers;
     }
 
-    public static void setPassengers(DataTable passengers) {
+    public void setPassengers(DataTable passengers) {
         Holder.passengers = passengers;
     }
 
-    public static OTAPkgAvailRS getToscaAvailabilityResponse() {
+    public OTAPkgAvailRS getToscaAvailabilityResponse() {
         return toscaAvailabilityResponse;
     }
 
-    public static void setToscaAvailabilityResponse(OTAPkgAvailRS toscaAvailabilityResponse) {
+    public void setToscaAvailabilityResponse(OTAPkgAvailRS toscaAvailabilityResponse) {
         Holder.toscaAvailabilityResponse = toscaAvailabilityResponse;
     }
 
-    public static OTAPkgAvailRQ getToscaAvailabiltyRequest() {
-        return toscaAvailabiltyRequest;
+    public OTAPkgAvailRQ getToscaAvailabiltyRequest() {
+        return toscaAvailabilityRequest;
     }
 
-    public static void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
-        Holder.toscaAvailabiltyRequest = toscaAvailabiltyRequest;
+    public void setToscaAvailabiltyRequest(OTAPkgAvailRQ toscaAvailabiltyRequest) {
+        Holder.toscaAvailabilityRequest = toscaAvailabiltyRequest;
     }
 
-    public static OTAPkgExtrasInfoRQ getToscaExtrasRequest() {
+    public OTAPkgExtrasInfoRQ getToscaExtrasRequest() {
         return toscaExtrasRequest;
     }
 
-    public static void setToscaExtrasRequest(OTAPkgExtrasInfoRQ toscaExtrasRequest) {
+    public void setToscaExtrasRequest(OTAPkgExtrasInfoRQ toscaExtrasRequest) {
         Holder.toscaExtrasRequest = toscaExtrasRequest;
     }
 
-    public static OTAPkgExtrasInfoRS getToscaExtrasResponse() {
+    public OTAPkgExtrasInfoRS getToscaExtrasResponse() {
         return toscaExtrasResponse;
     }
 
-    public static void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
+    public void setToscaExtrasResponse(OTAPkgExtrasInfoRS toscaExtrasResponse) {
         Holder.toscaExtrasResponse = toscaExtrasResponse;
     }
 
-    public static Map<String, Object> getProperties() {
+    public String getPlaceholder() {
+        return placeholder;
+    }
+
+    public Map<String, Object> getGlobalMap() {
         return globalMap;
+    }
+
+    public OTAPkgBookRQ getToscaBookingRequest() {
+        return toscaBookRequest;
     }
 
     public void setToscaBookingRequest(OTAPkgBookRQ toscaBookRequest) {
         Holder.toscaBookRequest = toscaBookRequest;
     }
 
+    public OTAPkgBookRS getToscaBookingResponse() {
+        return toscaBookResponse;
+    }
+
     public void setToscaBookingResponse(OTAPkgBookRS toscaBookResponse) {
         Holder.toscaBookResponse = toscaBookResponse;
+    }
+
+    public HotelOfferType getHotelOffer() {
+        return hotelOffer;
     }
 
     public void setHotelOffer(HotelOfferType hotelOffer) {
         Holder.hotelOffer = hotelOffer;
     }
 
+    public String getBookingReference() {
+        return id;
+    }
+
     public void setBookingReference(String id) {
         Holder.id = id;
     }
 
-    public static Holder getInstance() {
-        return instance;
-    }
-
-    public static String getPlaceholder() {
-        return placeholder;
-    }
-
-    public static Map<String, Object> getGlobalMap() {
-        return globalMap;
-    }
-
-    public static OTAPkgBookRQ getToscaBookingRequest() {
-        return toscaBookRequest;
-    }
-
-    public static OTAPkgBookRS getToscaBookingResponse() {
-        return toscaBookResponse;
-    }
-
-    public static HotelOfferType getHotelOffer() {
-        return hotelOffer;
-    }
-
-    public static String getBookingReference() {
-        return id;
+    public String getRetailinterfaceXML() {
+        return webRioRequest;
     }
 
     public void setRetailinterfaceXML(String webRioRequest) {
         Holder.webRioRequest = webRioRequest;
-    }
-
-    public static String getRetailinterfaceXML() {
-        return webRioRequest;
     }
 
     public void setRetailDownloadResponse(FullRetailDownloadResponse fullRetailDownloadResponse) {

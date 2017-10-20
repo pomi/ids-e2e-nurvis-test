@@ -12,18 +12,17 @@ import javax.xml.bind.annotation.XmlRegistry;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the com.thomascook.wrAdapter.response package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the com.thomascook.wrAdapter.response package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -31,14 +30,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.thomascook.wrAdapter.response
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link FullRetailDownloadResponse }
-     * 
      */
     public FullRetailDownloadResponse createFullRetailDownloadResponse() {
         return new FullRetailDownloadResponse();
@@ -46,7 +43,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaxDetails }
-     * 
      */
     public PaxDetails createPaxDetails() {
         return new PaxDetails();
@@ -54,7 +50,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContactPersonType }
-     * 
      */
     public ContactPersonType createContactPersonType() {
         return new ContactPersonType();
@@ -62,7 +57,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType }
-     * 
      */
     public SourceType createSourceType() {
         return new SourceType();
@@ -70,7 +64,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentDetailType }
-     * 
      */
     public PaymentDetailType createPaymentDetailType() {
         return new PaymentDetailType();
@@ -78,7 +71,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Memos }
-     * 
      */
     public Memos createMemos() {
         return new Memos();
@@ -86,7 +78,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentCardType }
-     * 
      */
     public PaymentCardType createPaymentCardType() {
         return new PaymentCardType();
@@ -94,7 +85,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Deposit }
-     * 
      */
     public Deposit createDeposit() {
         return new Deposit();
@@ -102,7 +92,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link FullRetailDownloadResponse.AssociatedRequest }
-     * 
      */
     public FullRetailDownloadResponse.AssociatedRequest createFullRetailDownloadResponseAssociatedRequest() {
         return new FullRetailDownloadResponse.AssociatedRequest();
@@ -110,7 +99,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link OtherDetails }
-     * 
      */
     public OtherDetails createOtherDetails() {
         return new OtherDetails();
@@ -118,7 +106,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LeadPax }
-     * 
      */
     public LeadPax createLeadPax() {
         return new LeadPax();
@@ -126,7 +113,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaxDetails.Pax }
-     * 
      */
     public PaxDetails.Pax createPaxDetailsPax() {
         return new PaxDetails.Pax();
@@ -134,7 +120,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaxBreakdown }
-     * 
      */
     public PaxBreakdown createPaxBreakdown() {
         return new PaxBreakdown();
@@ -142,7 +127,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Passenger }
-     * 
      */
     public Passenger createPassenger() {
         return new Passenger();
@@ -150,7 +134,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentFormType }
-     * 
      */
     public PaymentFormType createPaymentFormType() {
         return new PaymentFormType();
@@ -158,7 +141,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PersonNameType }
-     * 
      */
     public PersonNameType createPersonNameType() {
         return new PersonNameType();
@@ -166,7 +148,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AddressType }
-     * 
      */
     public AddressType createAddressType() {
         return new AddressType();
@@ -174,7 +155,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link UniqueIDType }
-     * 
      */
     public UniqueIDType createUniqueIDType() {
         return new UniqueIDType();
@@ -182,7 +162,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CompanyNameType }
-     * 
      */
     public CompanyNameType createCompanyNameType() {
         return new CompanyNameType();
@@ -190,7 +169,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link POSType }
-     * 
      */
     public POSType createPOSType() {
         return new POSType();
@@ -198,7 +176,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link AddressInfoType }
-     * 
      */
     public AddressInfoType createAddressInfoType() {
         return new AddressInfoType();
@@ -206,7 +183,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ContactPersonType.Telephone }
-     * 
      */
     public ContactPersonType.Telephone createContactPersonTypeTelephone() {
         return new ContactPersonType.Telephone();
@@ -214,7 +190,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.RequestorID }
-     * 
      */
     public SourceType.RequestorID createSourceTypeRequestorID() {
         return new SourceType.RequestorID();
@@ -222,7 +197,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.Position }
-     * 
      */
     public SourceType.Position createSourceTypePosition() {
         return new SourceType.Position();
@@ -230,7 +204,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SourceType.BookingChannel }
-     * 
      */
     public SourceType.BookingChannel createSourceTypeBookingChannel() {
         return new SourceType.BookingChannel();
@@ -238,7 +211,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentDetailType.PaymentAmount }
-     * 
      */
     public PaymentDetailType.PaymentAmount createPaymentDetailTypePaymentAmount() {
         return new PaymentDetailType.PaymentAmount();
@@ -246,7 +218,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link Memos.Memo }
-     * 
      */
     public Memos.Memo createMemosMemo() {
         return new Memos.Memo();
@@ -254,7 +225,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link PaymentCardType.CardIssuerName }
-     * 
      */
     public PaymentCardType.CardIssuerName createPaymentCardTypeCardIssuerName() {
         return new PaymentCardType.CardIssuerName();

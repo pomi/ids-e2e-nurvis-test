@@ -8,25 +8,20 @@
 
 package com.thomascook.wrAdapter.request;
 
-import java.math.BigDecimal;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.math.BigDecimal;
 
 
 /**
  * This element captures
- *                     all details relating to a deposit
- *                 
- * 
+ * all details relating to a deposit
+ * <p>
+ * <p>
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -39,8 +34,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
@@ -59,7 +52,6 @@ public class Deposit {
 
     /**
      * Gets the value of the lowDepositFlag property.
-     * 
      */
     public boolean isLowDepositFlag() {
         return lowDepositFlag;
@@ -67,7 +59,6 @@ public class Deposit {
 
     /**
      * Sets the value of the lowDepositFlag property.
-     * 
      */
     public void setLowDepositFlag(boolean value) {
         this.lowDepositFlag = value;
@@ -75,11 +66,9 @@ public class Deposit {
 
     /**
      * Gets the value of the lowDepositAmtPaid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getLowDepositAmtPaid() {
         return lowDepositAmtPaid;
@@ -87,11 +76,9 @@ public class Deposit {
 
     /**
      * Sets the value of the lowDepositAmtPaid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setLowDepositAmtPaid(BigDecimal value) {
         this.lowDepositAmtPaid = value;
@@ -99,11 +86,9 @@ public class Deposit {
 
     /**
      * Gets the value of the lowDepositDueDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getLowDepositDueDate() {
         return lowDepositDueDate;
@@ -111,11 +96,9 @@ public class Deposit {
 
     /**
      * Sets the value of the lowDepositDueDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setLowDepositDueDate(XMLGregorianCalendar value) {
         this.lowDepositDueDate = value;
@@ -123,11 +106,9 @@ public class Deposit {
 
     /**
      * Gets the value of the totalLowDepositAmt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getTotalLowDepositAmt() {
         return totalLowDepositAmt;
@@ -135,11 +116,9 @@ public class Deposit {
 
     /**
      * Sets the value of the totalLowDepositAmt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setTotalLowDepositAmt(BigDecimal value) {
         this.totalLowDepositAmt = value;

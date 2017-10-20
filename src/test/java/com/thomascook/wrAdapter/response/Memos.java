@@ -8,23 +8,18 @@
 
 package com.thomascook.wrAdapter.response;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * A list of memos to
- *                 update. Currently only support for one memo at a max.
- *             
- * 
+ * update. Currently only support for one memo at a max.
+ * <p>
+ * <p>
  * <p>Java class for Memos complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Memos">
  *   &lt;complexContent>
@@ -44,12 +39,10 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Memos", propOrder = {
-    "memo"
+        "memo"
 })
 public class Memos {
 
@@ -58,11 +51,9 @@ public class Memos {
 
     /**
      * Gets the value of the memo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Memo }
-     *     
+     *
+     * @return possible object is
+     * {@link Memo }
      */
     public Memo getMemo() {
         return memo;
@@ -70,11 +61,9 @@ public class Memos {
 
     /**
      * Sets the value of the memo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Memo }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Memo }
      */
     public void setMemo(Memo value) {
         this.memo = value;
@@ -83,9 +72,9 @@ public class Memos {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -95,12 +84,10 @@ public class Memos {
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "value"
+            "value"
     })
     public static class Memo {
 
@@ -111,11 +98,9 @@ public class Memos {
 
         /**
          * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getValue() {
             return value;
@@ -123,11 +108,9 @@ public class Memos {
 
         /**
          * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setValue(String value) {
             this.value = value;
@@ -135,11 +118,9 @@ public class Memos {
 
         /**
          * Gets the value of the memoReference property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getMemoReference() {
             return memoReference;
@@ -147,11 +128,9 @@ public class Memos {
 
         /**
          * Sets the value of the memoReference property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setMemoReference(String value) {
             this.memoReference = value;

@@ -8,22 +8,18 @@
 
 package com.thomascook.wrAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Provides information on
- *                 the source of a request.
- *             
- * 
+ * the source of a request.
+ * <p>
+ * <p>
  * <p>Java class for SourceType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SourceType">
  *   &lt;complexContent>
@@ -74,14 +70,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SourceType", propOrder = {
-    "requestorID",
-    "position",
-    "bookingChannel"
+        "requestorID",
+        "position",
+        "bookingChannel"
 })
 public class SourceType {
 
@@ -114,11 +108,9 @@ public class SourceType {
 
     /**
      * Gets the value of the requestorID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RequestorID }
-     *     
+     *
+     * @return possible object is
+     * {@link RequestorID }
      */
     public RequestorID getRequestorID() {
         return requestorID;
@@ -126,11 +118,9 @@ public class SourceType {
 
     /**
      * Sets the value of the requestorID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RequestorID }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RequestorID }
      */
     public void setRequestorID(RequestorID value) {
         this.requestorID = value;
@@ -138,11 +128,9 @@ public class SourceType {
 
     /**
      * Gets the value of the position property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Position }
-     *     
+     *
+     * @return possible object is
+     * {@link Position }
      */
     public Position getPosition() {
         return position;
@@ -150,11 +138,9 @@ public class SourceType {
 
     /**
      * Sets the value of the position property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Position }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Position }
      */
     public void setPosition(Position value) {
         this.position = value;
@@ -162,11 +148,9 @@ public class SourceType {
 
     /**
      * Gets the value of the bookingChannel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BookingChannel }
-     *     
+     *
+     * @return possible object is
+     * {@link BookingChannel }
      */
     public BookingChannel getBookingChannel() {
         return bookingChannel;
@@ -174,11 +158,9 @@ public class SourceType {
 
     /**
      * Sets the value of the bookingChannel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BookingChannel }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BookingChannel }
      */
     public void setBookingChannel(BookingChannel value) {
         this.bookingChannel = value;
@@ -186,11 +168,9 @@ public class SourceType {
 
     /**
      * Gets the value of the agentSine property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAgentSine() {
         return agentSine;
@@ -198,11 +178,9 @@ public class SourceType {
 
     /**
      * Sets the value of the agentSine property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAgentSine(String value) {
         this.agentSine = value;
@@ -210,11 +188,9 @@ public class SourceType {
 
     /**
      * Gets the value of the pseudoCityCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPseudoCityCode() {
         return pseudoCityCode;
@@ -222,11 +198,9 @@ public class SourceType {
 
     /**
      * Sets the value of the pseudoCityCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPseudoCityCode(String value) {
         this.pseudoCityCode = value;
@@ -234,11 +208,9 @@ public class SourceType {
 
     /**
      * Gets the value of the isoCountry property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getISOCountry() {
         return isoCountry;
@@ -246,11 +218,9 @@ public class SourceType {
 
     /**
      * Sets the value of the isoCountry property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setISOCountry(String value) {
         this.isoCountry = value;
@@ -258,11 +228,9 @@ public class SourceType {
 
     /**
      * Gets the value of the isoCurrency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getISOCurrency() {
         return isoCurrency;
@@ -270,11 +238,9 @@ public class SourceType {
 
     /**
      * Sets the value of the isoCurrency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setISOCurrency(String value) {
         this.isoCurrency = value;
@@ -282,11 +248,9 @@ public class SourceType {
 
     /**
      * Gets the value of the agentDutyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAgentDutyCode() {
         return agentDutyCode;
@@ -294,11 +258,9 @@ public class SourceType {
 
     /**
      * Sets the value of the agentDutyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAgentDutyCode(String value) {
         this.agentDutyCode = value;
@@ -306,11 +268,9 @@ public class SourceType {
 
     /**
      * Gets the value of the airlineVendorID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAirlineVendorID() {
         return airlineVendorID;
@@ -318,11 +278,9 @@ public class SourceType {
 
     /**
      * Sets the value of the airlineVendorID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAirlineVendorID(String value) {
         this.airlineVendorID = value;
@@ -330,11 +288,9 @@ public class SourceType {
 
     /**
      * Gets the value of the airportCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAirportCode() {
         return airportCode;
@@ -342,11 +298,9 @@ public class SourceType {
 
     /**
      * Sets the value of the airportCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAirportCode(String value) {
         this.airportCode = value;
@@ -354,11 +308,9 @@ public class SourceType {
 
     /**
      * Gets the value of the firstDepartPoint property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFirstDepartPoint() {
         return firstDepartPoint;
@@ -366,11 +318,9 @@ public class SourceType {
 
     /**
      * Sets the value of the firstDepartPoint property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFirstDepartPoint(String value) {
         this.firstDepartPoint = value;
@@ -378,11 +328,9 @@ public class SourceType {
 
     /**
      * Gets the value of the erspUserID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getERSPUserID() {
         return erspUserID;
@@ -390,11 +338,9 @@ public class SourceType {
 
     /**
      * Sets the value of the erspUserID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setERSPUserID(String value) {
         this.erspUserID = value;
@@ -402,11 +348,9 @@ public class SourceType {
 
     /**
      * Gets the value of the terminalID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTerminalID() {
         return terminalID;
@@ -414,11 +358,9 @@ public class SourceType {
 
     /**
      * Sets the value of the terminalID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTerminalID(String value) {
         this.terminalID = value;
@@ -427,9 +369,9 @@ public class SourceType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -442,12 +384,10 @@ public class SourceType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "companyName"
+            "companyName"
     })
     public static class BookingChannel {
 
@@ -460,11 +400,9 @@ public class SourceType {
 
         /**
          * Gets the value of the companyName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CompanyNameType }
-         *     
+         *
+         * @return possible object is
+         * {@link CompanyNameType }
          */
         public CompanyNameType getCompanyName() {
             return companyName;
@@ -472,11 +410,9 @@ public class SourceType {
 
         /**
          * Sets the value of the companyName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CompanyNameType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link CompanyNameType }
          */
         public void setCompanyName(CompanyNameType value) {
             this.companyName = value;
@@ -484,11 +420,9 @@ public class SourceType {
 
         /**
          * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getType() {
             return type;
@@ -496,11 +430,9 @@ public class SourceType {
 
         /**
          * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setType(String value) {
             this.type = value;
@@ -508,11 +440,9 @@ public class SourceType {
 
         /**
          * Gets the value of the primary property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
+         *
+         * @return possible object is
+         * {@link Boolean }
          */
         public Boolean isPrimary() {
             return primary;
@@ -520,11 +450,9 @@ public class SourceType {
 
         /**
          * Sets the value of the primary property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
          */
         public void setPrimary(Boolean value) {
             this.primary = value;
@@ -535,9 +463,9 @@ public class SourceType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -547,8 +475,6 @@ public class SourceType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -565,11 +491,9 @@ public class SourceType {
 
         /**
          * Gets the value of the latitude property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLatitude() {
             return latitude;
@@ -577,11 +501,9 @@ public class SourceType {
 
         /**
          * Sets the value of the latitude property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLatitude(String value) {
             this.latitude = value;
@@ -589,11 +511,9 @@ public class SourceType {
 
         /**
          * Gets the value of the longitude property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLongitude() {
             return longitude;
@@ -601,11 +521,9 @@ public class SourceType {
 
         /**
          * Sets the value of the longitude property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLongitude(String value) {
             this.longitude = value;
@@ -613,11 +531,9 @@ public class SourceType {
 
         /**
          * Gets the value of the altitude property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAltitude() {
             return altitude;
@@ -625,11 +541,9 @@ public class SourceType {
 
         /**
          * Sets the value of the altitude property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAltitude(String value) {
             this.altitude = value;
@@ -637,11 +551,9 @@ public class SourceType {
 
         /**
          * Gets the value of the altitudeUnitOfMeasureCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAltitudeUnitOfMeasureCode() {
             return altitudeUnitOfMeasureCode;
@@ -649,11 +561,9 @@ public class SourceType {
 
         /**
          * Sets the value of the altitudeUnitOfMeasureCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAltitudeUnitOfMeasureCode(String value) {
             this.altitudeUnitOfMeasureCode = value;
@@ -664,9 +574,9 @@ public class SourceType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -676,25 +586,20 @@ public class SourceType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
     public static class RequestorID
-        extends UniqueIDType
-    {
+            extends UniqueIDType {
 
         @XmlAttribute(name = "MessagePassword")
         protected String messagePassword;
 
         /**
          * Gets the value of the messagePassword property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getMessagePassword() {
             return messagePassword;
@@ -702,11 +607,9 @@ public class SourceType {
 
         /**
          * Sets the value of the messagePassword property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setMessagePassword(String value) {
             this.messagePassword = value;

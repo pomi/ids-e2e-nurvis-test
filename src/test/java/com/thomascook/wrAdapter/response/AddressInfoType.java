@@ -15,13 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about an
- *                 address that identifies a location for a specific purposes.
- *             
- * 
+ * address that identifies a location for a specific purposes.
+ * <p>
+ * <p>
  * <p>Java class for AddressInfoType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="AddressInfoType">
  *   &lt;complexContent>
@@ -30,14 +30,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressInfoType")
 public class AddressInfoType
-    extends AddressType
-{
+        extends AddressType {
 
 
 }

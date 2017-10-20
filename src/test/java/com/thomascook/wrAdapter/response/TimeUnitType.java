@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for TimeUnitType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "TimeUnitType")
 @XmlEnum
@@ -57,17 +56,17 @@ public enum TimeUnitType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static TimeUnitType fromValue(String v) {
-        for (TimeUnitType c: TimeUnitType.values()) {
+        for (TimeUnitType c : TimeUnitType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

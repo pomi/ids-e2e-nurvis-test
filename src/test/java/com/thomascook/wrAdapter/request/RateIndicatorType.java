@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for RateIndicatorType.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -39,7 +39,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "RateIndicatorType")
 @XmlEnum
@@ -52,9 +51,7 @@ public enum RateIndicatorType {
 
     /**
      * Availability is limited based on guest qualification criteria e.g.
-     *                         AAA member or Government Employee
-     *                     
-     * 
+     * AAA member or Government Employee
      */
     @XmlEnumValue("Exclusive")
     EXCLUSIVE("Exclusive"),
@@ -71,9 +68,7 @@ public enum RateIndicatorType {
 
     /**
      * Indicates an issue that precluded the ability to provide the
-     *                         information.
-     *                     
-     * 
+     * information.
      */
     @XmlEnumValue("UnableToProcess")
     UNABLE_TO_PROCESS("UnableToProcess"),
@@ -88,16 +83,13 @@ public enum RateIndicatorType {
 
     /**
      * Availability is limited based on distribution channel qualification
-     *                         criteria (e.g., Expedia or Sabre).
-     *                     
-     * 
+     * criteria (e.g., Expedia or Sabre).
      */
     @XmlEnumValue("Restricted")
     RESTRICTED("Restricted"),
 
     /**
      * The rate plan does not exist.
-     * 
      */
     @XmlEnumValue("DoesNotExist")
     DOES_NOT_EXIST("DoesNotExist");
@@ -107,17 +99,17 @@ public enum RateIndicatorType {
         value = v;
     }
 
-    public String value() {
-        return value;
-    }
-
     public static RateIndicatorType fromValue(String v) {
-        for (RateIndicatorType c: RateIndicatorType.values()) {
+        for (RateIndicatorType c : RateIndicatorType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    public String value() {
+        return value;
     }
 
 }

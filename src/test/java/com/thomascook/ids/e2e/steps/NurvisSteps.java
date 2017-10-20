@@ -1,10 +1,13 @@
 package com.thomascook.ids.e2e.steps;
 
 import com.thomascook.ids.e2e.tests.CreateBookingNurvis;
+import com.thomascook.ids.e2e.tests.LackOfAvailableRoomsException;
 import com.thomascook.nurvisAdapter.request.ReservationRequestTypeRequest;
 import com.thomascook.nurvisAdapter.response.ReservationResponseTypeResponse;
 import cucumber.api.java8.En;
 import org.opentravel.ota._2003._05.response.OTAPkgSearchRS;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -24,6 +27,8 @@ public class NurvisSteps implements En {
     private ReservationRequestTypeRequest nurvisRequest;
     private ReservationResponseTypeResponse nurvisInquiryResponse;
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(NurvisSteps.class);
+
     public NurvisSteps() {
 
         Given("^SOLR is requested for packages from (.*) airport to (.*) for (\\d+) adults$", (String fromAirport, String destination, Integer numberOfAdults) -> {
@@ -36,7 +41,8 @@ public class NurvisSteps implements En {
         });
 
         Given("^SOLR response has available packages$", () -> {
-            assertNotEquals(otaPkgSearchRS.getHotelOffers().getStartIndex(), otaPkgSearchRS.getHotelOffers().getEndIndex());
+            assertNotEquals("No available packages for this destinations",
+                    otaPkgSearchRS.getHotelOffers().getStartIndex(), otaPkgSearchRS.getHotelOffers().getEndIndex());
         });
 
         When("^NURVIS is requested for booking$", () -> {
@@ -45,7 +51,7 @@ public class NurvisSteps implements En {
                 assertNotNull(results);
                 nurvisRequest = (ReservationRequestTypeRequest) results.get("request");
                 nurvisInquiryResponse = (ReservationResponseTypeResponse) results.get("response");
-            } catch (JAXBException | IOException e) {
+            } catch (JAXBException | IOException | LackOfAvailableRoomsException e) {
                 e.printStackTrace();
             }
         });
@@ -55,7 +61,7 @@ public class NurvisSteps implements En {
                 nurvisBooking = createNurvisBooking(nurvisRequest, nurvisInquiryResponse);
                 assert (nurvisBooking.getFab().getWarning().get(0).getResultCode().equals("200"));
                 destinationAirport = nurvisBooking.getFab().getDestination();
-                System.out.println(nurvisBooking.getFab().getWarning().get(0).getText().split(" ")[1]);
+                LOGGER.info(nurvisBooking.getBookingNumber());
             } catch (JAXBException | IOException e) {
                 e.printStackTrace();
             }

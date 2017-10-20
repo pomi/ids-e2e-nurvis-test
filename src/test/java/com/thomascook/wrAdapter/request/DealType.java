@@ -8,30 +8,24 @@
 
 package com.thomascook.wrAdapter.request;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * The deal details needed
- *                 for a WebRIO POS Download
- *             
- * 
+ * for a WebRIO POS Download
+ * <p>
+ * <p>
  * <p>Java class for DealType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DealType">
  *   &lt;complexContent>
@@ -586,12 +580,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DealType", propOrder = {
-    "bookingWebRequest"
+        "bookingWebRequest"
 })
 public class DealType {
 
@@ -600,11 +592,9 @@ public class DealType {
 
     /**
      * Gets the value of the bookingWebRequest property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BookingWebRequest }
-     *     
+     *
+     * @return possible object is
+     * {@link BookingWebRequest }
      */
     public BookingWebRequest getBookingWebRequest() {
         return bookingWebRequest;
@@ -612,11 +602,9 @@ public class DealType {
 
     /**
      * Sets the value of the bookingWebRequest property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BookingWebRequest }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BookingWebRequest }
      */
     public void setBookingWebRequest(BookingWebRequest value) {
         this.bookingWebRequest = value;
@@ -625,9 +613,9 @@ public class DealType {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1172,15 +1160,13 @@ public class DealType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "xmlFileDefinition",
-        "sessionID",
-        "associatedRequest",
-        "bookingResponse"
+            "xmlFileDefinition",
+            "sessionID",
+            "associatedRequest",
+            "bookingResponse"
     })
     public static class BookingWebRequest {
 
@@ -1195,11 +1181,9 @@ public class DealType {
 
         /**
          * Gets the value of the xmlFileDefinition property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLFileDefinition }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLFileDefinition }
          */
         public XMLFileDefinition getXMLFileDefinition() {
             return xmlFileDefinition;
@@ -1207,11 +1191,9 @@ public class DealType {
 
         /**
          * Sets the value of the xmlFileDefinition property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLFileDefinition }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLFileDefinition }
          */
         public void setXMLFileDefinition(XMLFileDefinition value) {
             this.xmlFileDefinition = value;
@@ -1219,11 +1201,9 @@ public class DealType {
 
         /**
          * Gets the value of the sessionID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
+         * @return possible object is
+         * {@link JAXBElement }{@code <}{@link String }{@code >}
          */
         public JAXBElement<String> getSessionID() {
             return sessionID;
@@ -1231,11 +1211,9 @@ public class DealType {
 
         /**
          * Sets the value of the sessionID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
+         * @param value allowed object is
+         *              {@link JAXBElement }{@code <}{@link String }{@code >}
          */
         public void setSessionID(JAXBElement<String> value) {
             this.sessionID = value;
@@ -1243,11 +1221,9 @@ public class DealType {
 
         /**
          * Gets the value of the associatedRequest property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AssociatedRequest }
-         *     
+         *
+         * @return possible object is
+         * {@link AssociatedRequest }
          */
         public AssociatedRequest getAssociatedRequest() {
             return associatedRequest;
@@ -1255,11 +1231,9 @@ public class DealType {
 
         /**
          * Sets the value of the associatedRequest property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AssociatedRequest }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link AssociatedRequest }
          */
         public void setAssociatedRequest(AssociatedRequest value) {
             this.associatedRequest = value;
@@ -1267,11 +1241,9 @@ public class DealType {
 
         /**
          * Gets the value of the bookingResponse property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BookingResponse }
-         *     
+         *
+         * @return possible object is
+         * {@link BookingResponse }
          */
         public BookingResponse getBookingResponse() {
             return bookingResponse;
@@ -1279,11 +1251,9 @@ public class DealType {
 
         /**
          * Sets the value of the bookingResponse property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BookingResponse }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BookingResponse }
          */
         public void setBookingResponse(BookingResponse value) {
             this.bookingResponse = value;
@@ -1292,9 +1262,9 @@ public class DealType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1328,18 +1298,16 @@ public class DealType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "consultationRef",
-            "branchBudgetCtr",
-            "urlPassed",
-            "abtaNumber",
-            "gclCustomerID",
-            "gclMandateID",
-            "gclSubscriptionID"
+                "consultationRef",
+                "branchBudgetCtr",
+                "urlPassed",
+                "abtaNumber",
+                "gclCustomerID",
+                "gclMandateID",
+                "gclSubscriptionID"
         })
         public static class AssociatedRequest {
 
@@ -1360,11 +1328,9 @@ public class DealType {
 
             /**
              * Gets the value of the consultationRef property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-             *     
+             *
+             * @return possible object is
+             * {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
              */
             public JAXBElement<BigInteger> getConsultationRef() {
                 return consultationRef;
@@ -1372,11 +1338,9 @@ public class DealType {
 
             /**
              * Sets the value of the consultationRef property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-             *     
+             *
+             * @param value allowed object is
+             *              {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
              */
             public void setConsultationRef(JAXBElement<BigInteger> value) {
                 this.consultationRef = value;
@@ -1384,11 +1348,9 @@ public class DealType {
 
             /**
              * Gets the value of the branchBudgetCtr property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @return possible object is
+             * {@link BigInteger }
              */
             public BigInteger getBranchBudgetCtr() {
                 return branchBudgetCtr;
@@ -1396,11 +1358,9 @@ public class DealType {
 
             /**
              * Sets the value of the branchBudgetCtr property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigInteger }
              */
             public void setBranchBudgetCtr(BigInteger value) {
                 this.branchBudgetCtr = value;
@@ -1408,11 +1368,9 @@ public class DealType {
 
             /**
              * Gets the value of the urlPassed property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
+             *
+             * @return possible object is
+             * {@link JAXBElement }{@code <}{@link String }{@code >}
              */
             public JAXBElement<String> getUrlPassed() {
                 return urlPassed;
@@ -1420,11 +1378,9 @@ public class DealType {
 
             /**
              * Sets the value of the urlPassed property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
+             *
+             * @param value allowed object is
+             *              {@link JAXBElement }{@code <}{@link String }{@code >}
              */
             public void setUrlPassed(JAXBElement<String> value) {
                 this.urlPassed = value;
@@ -1432,11 +1388,9 @@ public class DealType {
 
             /**
              * Gets the value of the abtaNumber property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getAbtaNumber() {
                 return abtaNumber;
@@ -1444,11 +1398,9 @@ public class DealType {
 
             /**
              * Sets the value of the abtaNumber property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setAbtaNumber(String value) {
                 this.abtaNumber = value;
@@ -1456,11 +1408,9 @@ public class DealType {
 
             /**
              * Gets the value of the gclCustomerID property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getGCLCustomerID() {
                 return gclCustomerID;
@@ -1468,11 +1418,9 @@ public class DealType {
 
             /**
              * Sets the value of the gclCustomerID property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setGCLCustomerID(String value) {
                 this.gclCustomerID = value;
@@ -1480,11 +1428,9 @@ public class DealType {
 
             /**
              * Gets the value of the gclMandateID property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getGCLMandateID() {
                 return gclMandateID;
@@ -1492,11 +1438,9 @@ public class DealType {
 
             /**
              * Sets the value of the gclMandateID property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setGCLMandateID(String value) {
                 this.gclMandateID = value;
@@ -1504,11 +1448,9 @@ public class DealType {
 
             /**
              * Gets the value of the gclSubscriptionID property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getGCLSubscriptionID() {
                 return gclSubscriptionID;
@@ -1516,11 +1458,9 @@ public class DealType {
 
             /**
              * Sets the value of the gclSubscriptionID property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setGCLSubscriptionID(String value) {
                 this.gclSubscriptionID = value;
@@ -1531,9 +1471,9 @@ public class DealType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -2003,13 +1943,11 @@ public class DealType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "chosenPackageHoliday",
-            "chosenInsurancePolicy"
+                "chosenPackageHoliday",
+                "chosenInsurancePolicy"
         })
         public static class BookingResponse {
 
@@ -2020,11 +1958,9 @@ public class DealType {
 
             /**
              * Gets the value of the chosenPackageHoliday property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link ChosenPackageHoliday }
-             *     
+             *
+             * @return possible object is
+             * {@link ChosenPackageHoliday }
              */
             public ChosenPackageHoliday getChosenPackageHoliday() {
                 return chosenPackageHoliday;
@@ -2032,11 +1968,9 @@ public class DealType {
 
             /**
              * Sets the value of the chosenPackageHoliday property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link ChosenPackageHoliday }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link ChosenPackageHoliday }
              */
             public void setChosenPackageHoliday(ChosenPackageHoliday value) {
                 this.chosenPackageHoliday = value;
@@ -2044,11 +1978,9 @@ public class DealType {
 
             /**
              * Gets the value of the chosenInsurancePolicy property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link ChosenInsurancePolicy }
-             *     
+             *
+             * @return possible object is
+             * {@link ChosenInsurancePolicy }
              */
             public ChosenInsurancePolicy getChosenInsurancePolicy() {
                 return chosenInsurancePolicy;
@@ -2056,11 +1988,9 @@ public class DealType {
 
             /**
              * Sets the value of the chosenInsurancePolicy property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link ChosenInsurancePolicy }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link ChosenInsurancePolicy }
              */
             public void setChosenInsurancePolicy(ChosenInsurancePolicy value) {
                 this.chosenInsurancePolicy = value;
@@ -2069,13 +1999,13 @@ public class DealType {
 
             /**
              * NOT USED BY THE RETAIL INTERFACE AT THE
-             *                                                     MOMENT
-             *                                                 
-             * 
+             * MOMENT
+             * <p>
+             * <p>
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2263,13 +2193,11 @@ public class DealType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "generalDetails",
-                "responseQuotes"
+                    "generalDetails",
+                    "responseQuotes"
             })
             public static class ChosenInsurancePolicy {
 
@@ -2280,11 +2208,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the generalDetails property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link GeneralDetails }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link GeneralDetails }
                  */
                 public GeneralDetails getGeneralDetails() {
                     return generalDetails;
@@ -2292,11 +2218,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the generalDetails property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link GeneralDetails }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link GeneralDetails }
                  */
                 public void setGeneralDetails(GeneralDetails value) {
                     this.generalDetails = value;
@@ -2304,11 +2228,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the responseQuotes property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link ResponseQuotes }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link ResponseQuotes }
                  */
                 public ResponseQuotes getResponseQuotes() {
                     return responseQuotes;
@@ -2316,11 +2238,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the responseQuotes property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link ResponseQuotes }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link ResponseQuotes }
                  */
                 public void setResponseQuotes(ResponseQuotes value) {
                     this.responseQuotes = value;
@@ -2329,9 +2249,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -2344,13 +2264,11 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "type",
-                    "supplierCode"
+                        "type",
+                        "supplierCode"
                 })
                 public static class GeneralDetails {
 
@@ -2361,11 +2279,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the type property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getType() {
                         return type;
@@ -2373,11 +2289,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the type property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setType(String value) {
                         this.type = value;
@@ -2385,11 +2299,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the supplierCode property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getSupplierCode() {
                         return supplierCode;
@@ -2397,11 +2309,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the supplierCode property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setSupplierCode(String value) {
                         this.supplierCode = value;
@@ -2412,9 +2322,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -2580,12 +2490,10 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "quote"
+                        "quote"
                 })
                 public static class ResponseQuotes {
 
@@ -2594,25 +2502,23 @@ public class DealType {
 
                     /**
                      * Gets the value of the quote property.
-                     * 
+                     * <p>
                      * <p>
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
                      * This is why there is not a <CODE>set</CODE> method for the quote property.
-                     * 
+                     * <p>
                      * <p>
                      * For example, to add a new item, do as follows:
                      * <pre>
                      *    getQuote().add(newItem);
                      * </pre>
-                     * 
-                     * 
+                     * <p>
+                     * <p>
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link Quote }
-                     * 
-                     * 
                      */
                     public List<Quote> getQuote() {
                         if (quote == null) {
@@ -2624,9 +2530,9 @@ public class DealType {
 
                     /**
                      * <p>Java class for anonymous complex type.
-                     * 
+                     * <p>
                      * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
+                     * <p>
                      * <pre>
                      * &lt;complexType>
                      *   &lt;complexContent>
@@ -2782,13 +2688,11 @@ public class DealType {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
-                     * 
-                     * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "", propOrder = {
-                        "quoteID",
-                        "policyDetails"
+                            "quoteID",
+                            "policyDetails"
                     })
                     public static class Quote {
 
@@ -2799,11 +2703,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the quoteID property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getQuoteID() {
                             return quoteID;
@@ -2811,11 +2713,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the quoteID property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setQuoteID(String value) {
                             this.quoteID = value;
@@ -2823,11 +2723,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the policyDetails property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link PolicyDetails }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link PolicyDetails }
                          */
                         public PolicyDetails getPolicyDetails() {
                             return policyDetails;
@@ -2835,11 +2733,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the policyDetails property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link PolicyDetails }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link PolicyDetails }
                          */
                         public void setPolicyDetails(PolicyDetails value) {
                             this.policyDetails = value;
@@ -2848,9 +2744,9 @@ public class DealType {
 
                         /**
                          * <p>Java class for anonymous complex type.
-                         * 
+                         * <p>
                          * <p>The following schema fragment specifies the expected content contained within this class.
-                         * 
+                         * <p>
                          * <pre>
                          * &lt;complexType>
                          *   &lt;complexContent>
@@ -2995,12 +2891,10 @@ public class DealType {
                          *   &lt;/complexContent>
                          * &lt;/complexType>
                          * </pre>
-                         * 
-                         * 
                          */
                         @XmlAccessorType(XmlAccessType.FIELD)
                         @XmlType(name = "", propOrder = {
-                            "policyDetail"
+                                "policyDetail"
                         })
                         public static class PolicyDetails {
 
@@ -3009,25 +2903,23 @@ public class DealType {
 
                             /**
                              * Gets the value of the policyDetail property.
-                             * 
+                             * <p>
                              * <p>
                              * This accessor method returns a reference to the live list,
                              * not a snapshot. Therefore any modification you make to the
                              * returned list will be present inside the JAXB object.
                              * This is why there is not a <CODE>set</CODE> method for the policyDetail property.
-                             * 
+                             * <p>
                              * <p>
                              * For example, to add a new item, do as follows:
                              * <pre>
                              *    getPolicyDetail().add(newItem);
                              * </pre>
-                             * 
-                             * 
+                             * <p>
+                             * <p>
                              * <p>
                              * Objects of the following type(s) are allowed in the list
                              * {@link PolicyDetail }
-                             * 
-                             * 
                              */
                             public List<PolicyDetail> getPolicyDetail() {
                                 if (policyDetail == null) {
@@ -3039,9 +2931,9 @@ public class DealType {
 
                             /**
                              * <p>Java class for anonymous complex type.
-                             * 
+                             * <p>
                              * <p>The following schema fragment specifies the expected content contained within this class.
-                             * 
+                             * <p>
                              * <pre>
                              * &lt;complexType>
                              *   &lt;complexContent>
@@ -3176,30 +3068,28 @@ public class DealType {
                              *   &lt;/complexContent>
                              * &lt;/complexType>
                              * </pre>
-                             * 
-                             * 
                              */
                             @XmlAccessorType(XmlAccessType.FIELD)
                             @XmlType(name = "", propOrder = {
-                                "interfaceDealID",
-                                "policyID",
-                                "areaCode",
-                                "areaCodeName",
-                                "commencementDate",
-                                "currencyCode",
-                                "duration",
-                                "durationType",
-                                "noOfExtraWeeks",
-                                "expiryDate",
-                                "insuranceName",
-                                "issueDate",
-                                "policyNumber",
-                                "ipt",
-                                "policyStatus",
-                                "reasonCancellation",
-                                "paxBreakdown",
-                                "paxDetails",
-                                "costingDetail"
+                                    "interfaceDealID",
+                                    "policyID",
+                                    "areaCode",
+                                    "areaCodeName",
+                                    "commencementDate",
+                                    "currencyCode",
+                                    "duration",
+                                    "durationType",
+                                    "noOfExtraWeeks",
+                                    "expiryDate",
+                                    "insuranceName",
+                                    "issueDate",
+                                    "policyNumber",
+                                    "ipt",
+                                    "policyStatus",
+                                    "reasonCancellation",
+                                    "paxBreakdown",
+                                    "paxDetails",
+                                    "costingDetail"
                             })
                             public static class PolicyDetail {
 
@@ -3247,11 +3137,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the interfaceDealID property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link Integer }
                                  */
                                 public Integer getInterfaceDealID() {
                                     return interfaceDealID;
@@ -3259,11 +3147,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the interfaceDealID property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link Integer }
                                  */
                                 public void setInterfaceDealID(Integer value) {
                                     this.interfaceDealID = value;
@@ -3271,11 +3157,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the policyID property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getPolicyID() {
                                     return policyID;
@@ -3283,11 +3167,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the policyID property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setPolicyID(String value) {
                                     this.policyID = value;
@@ -3295,11 +3177,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the areaCode property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link Integer }
                                  */
                                 public Integer getAreaCode() {
                                     return areaCode;
@@ -3307,11 +3187,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the areaCode property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link Integer }
                                  */
                                 public void setAreaCode(Integer value) {
                                     this.areaCode = value;
@@ -3319,11 +3197,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the areaCodeName property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getAreaCodeName() {
                                     return areaCodeName;
@@ -3331,11 +3207,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the areaCodeName property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setAreaCodeName(String value) {
                                     this.areaCodeName = value;
@@ -3343,11 +3217,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the commencementDate property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link XMLGregorianCalendar }
                                  */
                                 public XMLGregorianCalendar getCommencementDate() {
                                     return commencementDate;
@@ -3355,11 +3227,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the commencementDate property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link XMLGregorianCalendar }
                                  */
                                 public void setCommencementDate(XMLGregorianCalendar value) {
                                     this.commencementDate = value;
@@ -3367,11 +3237,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the currencyCode property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getCurrencyCode() {
                                     return currencyCode;
@@ -3379,11 +3247,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the currencyCode property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setCurrencyCode(String value) {
                                     this.currencyCode = value;
@@ -3391,11 +3257,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the duration property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link Integer }
                                  */
                                 public Integer getDuration() {
                                     return duration;
@@ -3403,11 +3267,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the duration property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link Integer }
                                  */
                                 public void setDuration(Integer value) {
                                     this.duration = value;
@@ -3415,11 +3277,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the durationType property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getDurationType() {
                                     return durationType;
@@ -3427,11 +3287,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the durationType property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setDurationType(String value) {
                                     this.durationType = value;
@@ -3439,11 +3297,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the noOfExtraWeeks property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link Integer }
                                  */
                                 public Integer getNoOfExtraWeeks() {
                                     return noOfExtraWeeks;
@@ -3451,11 +3307,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the noOfExtraWeeks property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link Integer }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link Integer }
                                  */
                                 public void setNoOfExtraWeeks(Integer value) {
                                     this.noOfExtraWeeks = value;
@@ -3463,11 +3317,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the expiryDate property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link XMLGregorianCalendar }
                                  */
                                 public XMLGregorianCalendar getExpiryDate() {
                                     return expiryDate;
@@ -3475,11 +3327,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the expiryDate property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link XMLGregorianCalendar }
                                  */
                                 public void setExpiryDate(XMLGregorianCalendar value) {
                                     this.expiryDate = value;
@@ -3487,11 +3337,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the insuranceName property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getInsuranceName() {
                                     return insuranceName;
@@ -3499,11 +3347,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the insuranceName property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setInsuranceName(String value) {
                                     this.insuranceName = value;
@@ -3511,11 +3357,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the issueDate property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link XMLGregorianCalendar }
                                  */
                                 public XMLGregorianCalendar getIssueDate() {
                                     return issueDate;
@@ -3523,11 +3367,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the issueDate property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link XMLGregorianCalendar }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link XMLGregorianCalendar }
                                  */
                                 public void setIssueDate(XMLGregorianCalendar value) {
                                     this.issueDate = value;
@@ -3535,11 +3377,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the policyNumber property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getPolicyNumber() {
                                     return policyNumber;
@@ -3547,11 +3387,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the policyNumber property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setPolicyNumber(String value) {
                                     this.policyNumber = value;
@@ -3559,11 +3397,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the ipt property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link Float }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link Float }
                                  */
                                 public Float getIPT() {
                                     return ipt;
@@ -3571,11 +3407,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the ipt property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link Float }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link Float }
                                  */
                                 public void setIPT(Float value) {
                                     this.ipt = value;
@@ -3583,11 +3417,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the policyStatus property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getPolicyStatus() {
                                     return policyStatus;
@@ -3595,11 +3427,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the policyStatus property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setPolicyStatus(String value) {
                                     this.policyStatus = value;
@@ -3607,11 +3437,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the reasonCancellation property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link String }
                                  */
                                 public String getReasonCancellation() {
                                     return reasonCancellation;
@@ -3619,11 +3447,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the reasonCancellation property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link String }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link String }
                                  */
                                 public void setReasonCancellation(String value) {
                                     this.reasonCancellation = value;
@@ -3631,11 +3457,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the paxBreakdown property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link PaxBreakdown }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link PaxBreakdown }
                                  */
                                 public PaxBreakdown getPaxBreakdown() {
                                     return paxBreakdown;
@@ -3643,11 +3467,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the paxBreakdown property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link PaxBreakdown }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link PaxBreakdown }
                                  */
                                 public void setPaxBreakdown(PaxBreakdown value) {
                                     this.paxBreakdown = value;
@@ -3655,11 +3477,9 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the paxDetails property.
-                                 * 
-                                 * @return
-                                 *     possible object is
-                                 *     {@link PaxDetails }
-                                 *     
+                                 *
+                                 * @return possible object is
+                                 * {@link PaxDetails }
                                  */
                                 public PaxDetails getPaxDetails() {
                                     return paxDetails;
@@ -3667,11 +3487,9 @@ public class DealType {
 
                                 /**
                                  * Sets the value of the paxDetails property.
-                                 * 
-                                 * @param value
-                                 *     allowed object is
-                                 *     {@link PaxDetails }
-                                 *     
+                                 *
+                                 * @param value allowed object is
+                                 *              {@link PaxDetails }
                                  */
                                 public void setPaxDetails(PaxDetails value) {
                                     this.paxDetails = value;
@@ -3679,25 +3497,23 @@ public class DealType {
 
                                 /**
                                  * Gets the value of the costingDetail property.
-                                 * 
+                                 * <p>
                                  * <p>
                                  * This accessor method returns a reference to the live list,
                                  * not a snapshot. Therefore any modification you make to the
                                  * returned list will be present inside the JAXB object.
                                  * This is why there is not a <CODE>set</CODE> method for the costingDetail property.
-                                 * 
+                                 * <p>
                                  * <p>
                                  * For example, to add a new item, do as follows:
                                  * <pre>
                                  *    getCostingDetail().add(newItem);
                                  * </pre>
-                                 * 
-                                 * 
+                                 * <p>
+                                 * <p>
                                  * <p>
                                  * Objects of the following type(s) are allowed in the list
                                  * {@link CostingDetail }
-                                 * 
-                                 * 
                                  */
                                 public List<CostingDetail> getCostingDetail() {
                                     if (costingDetail == null) {
@@ -3709,9 +3525,9 @@ public class DealType {
 
                                 /**
                                  * <p>Java class for anonymous complex type.
-                                 * 
+                                 * <p>
                                  * <p>The following schema fragment specifies the expected content contained within this class.
-                                 * 
+                                 * <p>
                                  * <pre>
                                  * &lt;complexType>
                                  *   &lt;complexContent>
@@ -3818,16 +3634,14 @@ public class DealType {
                                  *   &lt;/complexContent>
                                  * &lt;/complexType>
                                  * </pre>
-                                 * 
-                                 * 
                                  */
                                 @XmlAccessorType(XmlAccessType.FIELD)
                                 @XmlType(name = "", propOrder = {
-                                    "basic",
-                                    "extraAdditionalWeek",
-                                    "discount",
-                                    "canxCurtailment",
-                                    "endorsements"
+                                        "basic",
+                                        "extraAdditionalWeek",
+                                        "discount",
+                                        "canxCurtailment",
+                                        "endorsements"
                                 })
                                 public static class CostingDetail {
 
@@ -3844,11 +3658,9 @@ public class DealType {
 
                                     /**
                                      * Gets the value of the basic property.
-                                     * 
-                                     * @return
-                                     *     possible object is
-                                     *     {@link Basic }
-                                     *     
+                                     *
+                                     * @return possible object is
+                                     * {@link Basic }
                                      */
                                     public Basic getBasic() {
                                         return basic;
@@ -3856,11 +3668,9 @@ public class DealType {
 
                                     /**
                                      * Sets the value of the basic property.
-                                     * 
-                                     * @param value
-                                     *     allowed object is
-                                     *     {@link Basic }
-                                     *     
+                                     *
+                                     * @param value allowed object is
+                                     *              {@link Basic }
                                      */
                                     public void setBasic(Basic value) {
                                         this.basic = value;
@@ -3868,11 +3678,9 @@ public class DealType {
 
                                     /**
                                      * Gets the value of the extraAdditionalWeek property.
-                                     * 
-                                     * @return
-                                     *     possible object is
-                                     *     {@link ExtraAdditionalWeek }
-                                     *     
+                                     *
+                                     * @return possible object is
+                                     * {@link ExtraAdditionalWeek }
                                      */
                                     public ExtraAdditionalWeek getExtraAdditionalWeek() {
                                         return extraAdditionalWeek;
@@ -3880,11 +3688,9 @@ public class DealType {
 
                                     /**
                                      * Sets the value of the extraAdditionalWeek property.
-                                     * 
-                                     * @param value
-                                     *     allowed object is
-                                     *     {@link ExtraAdditionalWeek }
-                                     *     
+                                     *
+                                     * @param value allowed object is
+                                     *              {@link ExtraAdditionalWeek }
                                      */
                                     public void setExtraAdditionalWeek(ExtraAdditionalWeek value) {
                                         this.extraAdditionalWeek = value;
@@ -3892,25 +3698,23 @@ public class DealType {
 
                                     /**
                                      * Gets the value of the discount property.
-                                     * 
+                                     * <p>
                                      * <p>
                                      * This accessor method returns a reference to the live list,
                                      * not a snapshot. Therefore any modification you make to the
                                      * returned list will be present inside the JAXB object.
                                      * This is why there is not a <CODE>set</CODE> method for the discount property.
-                                     * 
+                                     * <p>
                                      * <p>
                                      * For example, to add a new item, do as follows:
                                      * <pre>
                                      *    getDiscount().add(newItem);
                                      * </pre>
-                                     * 
-                                     * 
+                                     * <p>
+                                     * <p>
                                      * <p>
                                      * Objects of the following type(s) are allowed in the list
                                      * {@link Discount }
-                                     * 
-                                     * 
                                      */
                                     public List<Discount> getDiscount() {
                                         if (discount == null) {
@@ -3921,11 +3725,9 @@ public class DealType {
 
                                     /**
                                      * Gets the value of the canxCurtailment property.
-                                     * 
-                                     * @return
-                                     *     possible object is
-                                     *     {@link CanxCurtailment }
-                                     *     
+                                     *
+                                     * @return possible object is
+                                     * {@link CanxCurtailment }
                                      */
                                     public CanxCurtailment getCanxCurtailment() {
                                         return canxCurtailment;
@@ -3933,11 +3735,9 @@ public class DealType {
 
                                     /**
                                      * Sets the value of the canxCurtailment property.
-                                     * 
-                                     * @param value
-                                     *     allowed object is
-                                     *     {@link CanxCurtailment }
-                                     *     
+                                     *
+                                     * @param value allowed object is
+                                     *              {@link CanxCurtailment }
                                      */
                                     public void setCanxCurtailment(CanxCurtailment value) {
                                         this.canxCurtailment = value;
@@ -3945,11 +3745,9 @@ public class DealType {
 
                                     /**
                                      * Gets the value of the endorsements property.
-                                     * 
-                                     * @return
-                                     *     possible object is
-                                     *     {@link Endorsements }
-                                     *     
+                                     *
+                                     * @return possible object is
+                                     * {@link Endorsements }
                                      */
                                     public Endorsements getEndorsements() {
                                         return endorsements;
@@ -3957,11 +3755,9 @@ public class DealType {
 
                                     /**
                                      * Sets the value of the endorsements property.
-                                     * 
-                                     * @param value
-                                     *     allowed object is
-                                     *     {@link Endorsements }
-                                     *     
+                                     *
+                                     * @param value allowed object is
+                                     *              {@link Endorsements }
                                      */
                                     public void setEndorsements(Endorsements value) {
                                         this.endorsements = value;
@@ -3970,9 +3766,9 @@ public class DealType {
 
                                     /**
                                      * <p>Java class for anonymous complex type.
-                                     * 
+                                     * <p>
                                      * <p>The following schema fragment specifies the expected content contained within this class.
-                                     * 
+                                     * <p>
                                      * <pre>
                                      * &lt;complexType>
                                      *   &lt;complexContent>
@@ -3990,18 +3786,16 @@ public class DealType {
                                      *   &lt;/complexContent>
                                      * &lt;/complexType>
                                      * </pre>
-                                     * 
-                                     * 
                                      */
                                     @XmlAccessorType(XmlAccessType.FIELD)
                                     @XmlType(name = "", propOrder = {
-                                        "costCode",
-                                        "gross",
-                                        "net",
-                                        "units",
-                                        "type",
-                                        "duration",
-                                        "durationType"
+                                            "costCode",
+                                            "gross",
+                                            "net",
+                                            "units",
+                                            "type",
+                                            "duration",
+                                            "durationType"
                                     })
                                     public static class Basic {
 
@@ -4022,11 +3816,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the costCode property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getCostCode() {
                                             return costCode;
@@ -4034,11 +3826,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the costCode property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setCostCode(String value) {
                                             this.costCode = value;
@@ -4046,11 +3836,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the gross property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getGross() {
                                             return gross;
@@ -4058,11 +3846,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the gross property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setGross(Float value) {
                                             this.gross = value;
@@ -4070,11 +3856,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the net property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getNet() {
                                             return net;
@@ -4082,11 +3866,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the net property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setNet(Float value) {
                                             this.net = value;
@@ -4094,11 +3876,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the units property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getUnits() {
                                             return units;
@@ -4106,11 +3886,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the units property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setUnits(Integer value) {
                                             this.units = value;
@@ -4118,11 +3896,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the type property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getType() {
                                             return type;
@@ -4130,11 +3906,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the type property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setType(String value) {
                                             this.type = value;
@@ -4142,11 +3916,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the duration property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getDuration() {
                                             return duration;
@@ -4154,11 +3926,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the duration property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setDuration(Integer value) {
                                             this.duration = value;
@@ -4166,11 +3936,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the durationType property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getDurationType() {
                                             return durationType;
@@ -4178,11 +3946,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the durationType property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setDurationType(String value) {
                                             this.durationType = value;
@@ -4193,9 +3959,9 @@ public class DealType {
 
                                     /**
                                      * <p>Java class for anonymous complex type.
-                                     * 
+                                     * <p>
                                      * <p>The following schema fragment specifies the expected content contained within this class.
-                                     * 
+                                     * <p>
                                      * <pre>
                                      * &lt;complexType>
                                      *   &lt;complexContent>
@@ -4213,18 +3979,16 @@ public class DealType {
                                      *   &lt;/complexContent>
                                      * &lt;/complexType>
                                      * </pre>
-                                     * 
-                                     * 
                                      */
                                     @XmlAccessorType(XmlAccessType.FIELD)
                                     @XmlType(name = "", propOrder = {
-                                        "canxCurtailmentCode",
-                                        "gross",
-                                        "net",
-                                        "units",
-                                        "type",
-                                        "duration",
-                                        "durationType"
+                                            "canxCurtailmentCode",
+                                            "gross",
+                                            "net",
+                                            "units",
+                                            "type",
+                                            "duration",
+                                            "durationType"
                                     })
                                     public static class CanxCurtailment {
 
@@ -4245,11 +4009,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the canxCurtailmentCode property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getCanxCurtailmentCode() {
                                             return canxCurtailmentCode;
@@ -4257,11 +4019,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the canxCurtailmentCode property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setCanxCurtailmentCode(String value) {
                                             this.canxCurtailmentCode = value;
@@ -4269,11 +4029,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the gross property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getGross() {
                                             return gross;
@@ -4281,11 +4039,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the gross property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setGross(Float value) {
                                             this.gross = value;
@@ -4293,11 +4049,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the net property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getNet() {
                                             return net;
@@ -4305,11 +4059,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the net property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setNet(Float value) {
                                             this.net = value;
@@ -4317,11 +4069,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the units property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getUnits() {
                                             return units;
@@ -4329,11 +4079,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the units property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setUnits(Integer value) {
                                             this.units = value;
@@ -4341,11 +4089,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the type property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getType() {
                                             return type;
@@ -4353,11 +4099,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the type property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setType(String value) {
                                             this.type = value;
@@ -4365,11 +4109,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the duration property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getDuration() {
                                             return duration;
@@ -4377,11 +4119,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the duration property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setDuration(Integer value) {
                                             this.duration = value;
@@ -4389,11 +4129,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the durationType property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getDurationType() {
                                             return durationType;
@@ -4401,11 +4139,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the durationType property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setDurationType(String value) {
                                             this.durationType = value;
@@ -4416,9 +4152,9 @@ public class DealType {
 
                                     /**
                                      * <p>Java class for anonymous complex type.
-                                     * 
+                                     * <p>
                                      * <p>The following schema fragment specifies the expected content contained within this class.
-                                     * 
+                                     * <p>
                                      * <pre>
                                      * &lt;complexType>
                                      *   &lt;complexContent>
@@ -4436,18 +4172,16 @@ public class DealType {
                                      *   &lt;/complexContent>
                                      * &lt;/complexType>
                                      * </pre>
-                                     * 
-                                     * 
                                      */
                                     @XmlAccessorType(XmlAccessType.FIELD)
                                     @XmlType(name = "", propOrder = {
-                                        "discountCode",
-                                        "gross",
-                                        "net",
-                                        "units",
-                                        "type",
-                                        "duration",
-                                        "durationType"
+                                            "discountCode",
+                                            "gross",
+                                            "net",
+                                            "units",
+                                            "type",
+                                            "duration",
+                                            "durationType"
                                     })
                                     public static class Discount {
 
@@ -4468,11 +4202,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the discountCode property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getDiscountCode() {
                                             return discountCode;
@@ -4480,11 +4212,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the discountCode property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setDiscountCode(String value) {
                                             this.discountCode = value;
@@ -4492,11 +4222,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the gross property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getGross() {
                                             return gross;
@@ -4504,11 +4232,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the gross property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setGross(Float value) {
                                             this.gross = value;
@@ -4516,11 +4242,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the net property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getNet() {
                                             return net;
@@ -4528,11 +4252,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the net property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setNet(Float value) {
                                             this.net = value;
@@ -4540,11 +4262,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the units property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getUnits() {
                                             return units;
@@ -4552,11 +4272,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the units property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setUnits(Integer value) {
                                             this.units = value;
@@ -4564,11 +4282,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the type property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getType() {
                                             return type;
@@ -4576,11 +4292,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the type property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setType(String value) {
                                             this.type = value;
@@ -4588,11 +4302,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the duration property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getDuration() {
                                             return duration;
@@ -4600,11 +4312,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the duration property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setDuration(Integer value) {
                                             this.duration = value;
@@ -4612,11 +4322,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the durationType property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getDurationType() {
                                             return durationType;
@@ -4624,11 +4332,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the durationType property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setDurationType(String value) {
                                             this.durationType = value;
@@ -4639,9 +4345,9 @@ public class DealType {
 
                                     /**
                                      * <p>Java class for anonymous complex type.
-                                     * 
+                                     * <p>
                                      * <p>The following schema fragment specifies the expected content contained within this class.
-                                     * 
+                                     * <p>
                                      * <pre>
                                      * &lt;complexType>
                                      *   &lt;complexContent>
@@ -4670,12 +4376,10 @@ public class DealType {
                                      *   &lt;/complexContent>
                                      * &lt;/complexType>
                                      * </pre>
-                                     * 
-                                     * 
                                      */
                                     @XmlAccessorType(XmlAccessType.FIELD)
                                     @XmlType(name = "", propOrder = {
-                                        "endorsement"
+                                            "endorsement"
                                     })
                                     public static class Endorsements {
 
@@ -4684,25 +4388,23 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the endorsement property.
-                                         * 
+                                         * <p>
                                          * <p>
                                          * This accessor method returns a reference to the live list,
                                          * not a snapshot. Therefore any modification you make to the
                                          * returned list will be present inside the JAXB object.
                                          * This is why there is not a <CODE>set</CODE> method for the endorsement property.
-                                         * 
+                                         * <p>
                                          * <p>
                                          * For example, to add a new item, do as follows:
                                          * <pre>
                                          *    getEndorsement().add(newItem);
                                          * </pre>
-                                         * 
-                                         * 
+                                         * <p>
+                                         * <p>
                                          * <p>
                                          * Objects of the following type(s) are allowed in the list
                                          * {@link Endorsement }
-                                         * 
-                                         * 
                                          */
                                         public List<Endorsement> getEndorsement() {
                                             if (endorsement == null) {
@@ -4714,9 +4416,9 @@ public class DealType {
 
                                         /**
                                          * <p>Java class for anonymous complex type.
-                                         * 
+                                         * <p>
                                          * <p>The following schema fragment specifies the expected content contained within this class.
-                                         * 
+                                         * <p>
                                          * <pre>
                                          * &lt;complexType>
                                          *   &lt;complexContent>
@@ -4735,19 +4437,17 @@ public class DealType {
                                          *   &lt;/complexContent>
                                          * &lt;/complexType>
                                          * </pre>
-                                         * 
-                                         * 
                                          */
                                         @XmlAccessorType(XmlAccessType.FIELD)
                                         @XmlType(name = "", propOrder = {
-                                            "addOn",
-                                            "endorsementCode",
-                                            "gross",
-                                            "net",
-                                            "units",
-                                            "type",
-                                            "duration",
-                                            "durationType"
+                                                "addOn",
+                                                "endorsementCode",
+                                                "gross",
+                                                "net",
+                                                "units",
+                                                "type",
+                                                "duration",
+                                                "durationType"
                                         })
                                         public static class Endorsement {
 
@@ -4770,11 +4470,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the addOn property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link String }
                                              */
                                             public String getAddOn() {
                                                 return addOn;
@@ -4782,11 +4480,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the addOn property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link String }
                                              */
                                             public void setAddOn(String value) {
                                                 this.addOn = value;
@@ -4794,11 +4490,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the endorsementCode property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link String }
                                              */
                                             public String getEndorsementCode() {
                                                 return endorsementCode;
@@ -4806,11 +4500,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the endorsementCode property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link String }
                                              */
                                             public void setEndorsementCode(String value) {
                                                 this.endorsementCode = value;
@@ -4818,11 +4510,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the gross property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link Float }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link Float }
                                              */
                                             public Float getGross() {
                                                 return gross;
@@ -4830,11 +4520,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the gross property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link Float }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link Float }
                                              */
                                             public void setGross(Float value) {
                                                 this.gross = value;
@@ -4842,11 +4530,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the net property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link Float }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link Float }
                                              */
                                             public Float getNet() {
                                                 return net;
@@ -4854,11 +4540,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the net property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link Float }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link Float }
                                              */
                                             public void setNet(Float value) {
                                                 this.net = value;
@@ -4866,11 +4550,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the units property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link Integer }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link Integer }
                                              */
                                             public Integer getUnits() {
                                                 return units;
@@ -4878,11 +4560,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the units property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link Integer }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link Integer }
                                              */
                                             public void setUnits(Integer value) {
                                                 this.units = value;
@@ -4890,11 +4570,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the type property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link String }
                                              */
                                             public String getType() {
                                                 return type;
@@ -4902,11 +4580,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the type property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link String }
                                              */
                                             public void setType(String value) {
                                                 this.type = value;
@@ -4914,11 +4590,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the duration property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link Integer }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link Integer }
                                              */
                                             public Integer getDuration() {
                                                 return duration;
@@ -4926,11 +4600,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the duration property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link Integer }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link Integer }
                                              */
                                             public void setDuration(Integer value) {
                                                 this.duration = value;
@@ -4938,11 +4610,9 @@ public class DealType {
 
                                             /**
                                              * Gets the value of the durationType property.
-                                             * 
-                                             * @return
-                                             *     possible object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @return possible object is
+                                             * {@link String }
                                              */
                                             public String getDurationType() {
                                                 return durationType;
@@ -4950,11 +4620,9 @@ public class DealType {
 
                                             /**
                                              * Sets the value of the durationType property.
-                                             * 
-                                             * @param value
-                                             *     allowed object is
-                                             *     {@link String }
-                                             *     
+                                             *
+                                             * @param value allowed object is
+                                             *              {@link String }
                                              */
                                             public void setDurationType(String value) {
                                                 this.durationType = value;
@@ -4967,9 +4635,9 @@ public class DealType {
 
                                     /**
                                      * <p>Java class for anonymous complex type.
-                                     * 
+                                     * <p>
                                      * <p>The following schema fragment specifies the expected content contained within this class.
-                                     * 
+                                     * <p>
                                      * <pre>
                                      * &lt;complexType>
                                      *   &lt;complexContent>
@@ -4987,18 +4655,16 @@ public class DealType {
                                      *   &lt;/complexContent>
                                      * &lt;/complexType>
                                      * </pre>
-                                     * 
-                                     * 
                                      */
                                     @XmlAccessorType(XmlAccessType.FIELD)
                                     @XmlType(name = "", propOrder = {
-                                        "costCode",
-                                        "gross",
-                                        "net",
-                                        "units",
-                                        "type",
-                                        "duration",
-                                        "durationType"
+                                            "costCode",
+                                            "gross",
+                                            "net",
+                                            "units",
+                                            "type",
+                                            "duration",
+                                            "durationType"
                                     })
                                     public static class ExtraAdditionalWeek {
 
@@ -5019,11 +4685,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the costCode property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getCostCode() {
                                             return costCode;
@@ -5031,11 +4695,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the costCode property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setCostCode(String value) {
                                             this.costCode = value;
@@ -5043,11 +4705,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the gross property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getGross() {
                                             return gross;
@@ -5055,11 +4715,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the gross property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setGross(Float value) {
                                             this.gross = value;
@@ -5067,11 +4725,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the net property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Float }
                                          */
                                         public Float getNet() {
                                             return net;
@@ -5079,11 +4735,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the net property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Float }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Float }
                                          */
                                         public void setNet(Float value) {
                                             this.net = value;
@@ -5091,11 +4745,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the units property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getUnits() {
                                             return units;
@@ -5103,11 +4755,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the units property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setUnits(Integer value) {
                                             this.units = value;
@@ -5115,11 +4765,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the type property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getType() {
                                             return type;
@@ -5127,11 +4775,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the type property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setType(String value) {
                                             this.type = value;
@@ -5139,11 +4785,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the duration property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link Integer }
                                          */
                                         public Integer getDuration() {
                                             return duration;
@@ -5151,11 +4795,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the duration property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link Integer }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link Integer }
                                          */
                                         public void setDuration(Integer value) {
                                             this.duration = value;
@@ -5163,11 +4805,9 @@ public class DealType {
 
                                         /**
                                          * Gets the value of the durationType property.
-                                         * 
-                                         * @return
-                                         *     possible object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @return possible object is
+                                         * {@link String }
                                          */
                                         public String getDurationType() {
                                             return durationType;
@@ -5175,11 +4815,9 @@ public class DealType {
 
                                         /**
                                          * Sets the value of the durationType property.
-                                         * 
-                                         * @param value
-                                         *     allowed object is
-                                         *     {@link String }
-                                         *     
+                                         *
+                                         * @param value allowed object is
+                                         *              {@link String }
                                          */
                                         public void setDurationType(String value) {
                                             this.durationType = value;
@@ -5202,9 +4840,9 @@ public class DealType {
 
             /**
              * <p>Java class for anonymous complex type.
-             * 
+             * <p>
              * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
+             * <p>
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -5477,22 +5115,20 @@ public class DealType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "travelSegment",
-                "accommodation",
-                "car",
-                "operatorInsurance",
-                "miscellaneous",
-                "atolCertificate",
-                "consultationNotes",
-                "cost",
-                "passenger",
-                "bookingInfo",
-                "deposit"
+                    "travelSegment",
+                    "accommodation",
+                    "car",
+                    "operatorInsurance",
+                    "miscellaneous",
+                    "atolCertificate",
+                    "consultationNotes",
+                    "cost",
+                    "passenger",
+                    "bookingInfo",
+                    "deposit"
             })
             public static class ChosenPackageHoliday {
 
@@ -5531,25 +5167,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the travelSegment property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the travelSegment property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getTravelSegment().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link TravelSegment }
-                 * 
-                 * 
                  */
                 public List<TravelSegment> getTravelSegment() {
                     if (travelSegment == null) {
@@ -5560,25 +5194,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the accommodation property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the accommodation property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getAccommodation().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Accommodation }
-                 * 
-                 * 
                  */
                 public List<Accommodation> getAccommodation() {
                     if (accommodation == null) {
@@ -5589,25 +5221,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the car property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the car property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getCar().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Car }
-                 * 
-                 * 
                  */
                 public List<Car> getCar() {
                     if (car == null) {
@@ -5618,25 +5248,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the operatorInsurance property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the operatorInsurance property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getOperatorInsurance().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link OperatorInsurance }
-                 * 
-                 * 
                  */
                 public List<OperatorInsurance> getOperatorInsurance() {
                     if (operatorInsurance == null) {
@@ -5647,25 +5275,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the miscellaneous property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the miscellaneous property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getMiscellaneous().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Miscellaneous }
-                 * 
-                 * 
                  */
                 public List<Miscellaneous> getMiscellaneous() {
                     if (miscellaneous == null) {
@@ -5676,25 +5302,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the atolCertificate property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the atolCertificate property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getAtolCertificate().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link AtolCertificate }
-                 * 
-                 * 
                  */
                 public List<AtolCertificate> getAtolCertificate() {
                     if (atolCertificate == null) {
@@ -5705,25 +5329,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the consultationNotes property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the consultationNotes property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getConsultationNotes().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link ConsultationNotes }
-                 * 
-                 * 
                  */
                 public List<ConsultationNotes> getConsultationNotes() {
                     if (consultationNotes == null) {
@@ -5734,11 +5356,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the cost property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link Cost }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link Cost }
                  */
                 public Cost getCost() {
                     return cost;
@@ -5746,11 +5366,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the cost property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link Cost }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link Cost }
                  */
                 public void setCost(Cost value) {
                     this.cost = value;
@@ -5758,25 +5376,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the passenger property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the passenger property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getPassenger().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Passenger }
-                 * 
-                 * 
                  */
                 public List<Passenger> getPassenger() {
                     if (passenger == null) {
@@ -5787,11 +5403,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the bookingInfo property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link BookingInfo }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link BookingInfo }
                  */
                 public BookingInfo getBookingInfo() {
                     return bookingInfo;
@@ -5799,11 +5413,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the bookingInfo property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BookingInfo }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link BookingInfo }
                  */
                 public void setBookingInfo(BookingInfo value) {
                     this.bookingInfo = value;
@@ -5811,25 +5423,23 @@ public class DealType {
 
                 /**
                  * Gets the value of the deposit property.
-                 * 
+                 * <p>
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the deposit property.
-                 * 
+                 * <p>
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getDeposit().add(newItem);
                  * </pre>
-                 * 
-                 * 
+                 * <p>
+                 * <p>
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link Deposit }
-                 * 
-                 * 
                  */
                 public List<Deposit> getDeposit() {
                     if (deposit == null) {
@@ -5840,11 +5450,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the brochureCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getBrochureCode() {
                     return brochureCode;
@@ -5852,11 +5460,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the brochureCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setBrochureCode(String value) {
                     this.brochureCode = value;
@@ -5864,11 +5470,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the productCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getProductCode() {
                     return productCode;
@@ -5876,11 +5480,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the productCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setProductCode(String value) {
                     this.productCode = value;
@@ -5888,11 +5490,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the operatorCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getOperatorCode() {
                     return operatorCode;
@@ -5900,11 +5500,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the operatorCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setOperatorCode(String value) {
                     this.operatorCode = value;
@@ -5912,11 +5510,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the currentBookingStage property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getCurrentBookingStage() {
                     return currentBookingStage;
@@ -5924,11 +5520,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the currentBookingStage property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setCurrentBookingStage(String value) {
                     this.currentBookingStage = value;
@@ -5936,11 +5530,9 @@ public class DealType {
 
                 /**
                  * Gets the value of the productType property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @return possible object is
+                 * {@link String }
                  */
                 public String getProductType() {
                     return productType;
@@ -5948,11 +5540,9 @@ public class DealType {
 
                 /**
                  * Sets the value of the productType property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
+                 *
+                 * @param value allowed object is
+                 *              {@link String }
                  */
                 public void setProductType(String value) {
                     this.productType = value;
@@ -5961,14 +5551,14 @@ public class DealType {
 
                 /**
                  * Accomodation describes the
-                 *                                                                 hotel/resort/accomodation/cruise that has been booked as
-                 *                                                                 part of the package.
-                 *                                                             
-                 * 
+                 * hotel/resort/accomodation/cruise that has been booked as
+                 * part of the package.
+                 * <p>
+                 * <p>
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -6053,12 +5643,10 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "accommodationUnit"
+                        "accommodationUnit"
                 })
                 public static class Accommodation {
 
@@ -6092,25 +5680,23 @@ public class DealType {
 
                     /**
                      * Gets the value of the accommodationUnit property.
-                     * 
+                     * <p>
                      * <p>
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
                      * This is why there is not a <CODE>set</CODE> method for the accommodationUnit property.
-                     * 
+                     * <p>
                      * <p>
                      * For example, to add a new item, do as follows:
                      * <pre>
                      *    getAccommodationUnit().add(newItem);
                      * </pre>
-                     * 
-                     * 
+                     * <p>
+                     * <p>
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link AccommodationUnit }
-                     * 
-                     * 
                      */
                     public List<AccommodationUnit> getAccommodationUnit() {
                         if (accommodationUnit == null) {
@@ -6121,11 +5707,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the accommodationCode property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getAccommodationCode() {
                         return accommodationCode;
@@ -6133,11 +5717,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the accommodationCode property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setAccommodationCode(String value) {
                         this.accommodationCode = value;
@@ -6145,11 +5727,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the productName property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getProductName() {
                         return productName;
@@ -6157,11 +5737,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the productName property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setProductName(String value) {
                         this.productName = value;
@@ -6169,11 +5747,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the accommodationName property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getAccommodationName() {
                         return accommodationName;
@@ -6181,11 +5757,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the accommodationName property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setAccommodationName(String value) {
                         this.accommodationName = value;
@@ -6193,11 +5767,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the resortName property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getResortName() {
                         return resortName;
@@ -6205,11 +5777,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the resortName property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setResortName(String value) {
                         this.resortName = value;
@@ -6217,11 +5787,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the startDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getStartDate() {
                         return startDate;
@@ -6229,11 +5797,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the startDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setStartDate(String value) {
                         this.startDate = value;
@@ -6241,11 +5807,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the endDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getEndDate() {
                         return endDate;
@@ -6253,11 +5817,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the endDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setEndDate(String value) {
                         this.endDate = value;
@@ -6265,11 +5827,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the boardCode property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getBoardCode() {
                         return boardCode;
@@ -6277,11 +5837,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the boardCode property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setBoardCode(String value) {
                         this.boardCode = value;
@@ -6289,11 +5847,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the numNights property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigInteger }
                      */
                     public BigInteger getNumNights() {
                         return numNights;
@@ -6301,11 +5857,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the numNights property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigInteger }
                      */
                     public void setNumNights(BigInteger value) {
                         this.numNights = value;
@@ -6313,11 +5867,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the departurePoint property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDeparturePoint() {
                         return departurePoint;
@@ -6325,11 +5877,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the departurePoint property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDeparturePoint(String value) {
                         this.departurePoint = value;
@@ -6337,11 +5887,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the currencyCd property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getCurrencyCd() {
                         return currencyCd;
@@ -6349,11 +5897,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the currencyCd property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setCurrencyCd(String value) {
                         this.currencyCd = value;
@@ -6361,11 +5907,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the payType property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getPayType() {
                         return payType;
@@ -6373,11 +5917,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the payType property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setPayType(String value) {
                         this.payType = value;
@@ -6385,11 +5927,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the tourName property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getTourName() {
                         return tourName;
@@ -6397,11 +5937,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the tourName property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setTourName(String value) {
                         this.tourName = value;
@@ -6410,13 +5948,13 @@ public class DealType {
 
                     /**
                      * Describes a
-                     *                                                                             single unit of accomodation
-                     *                                                                         
-                     * 
+                     * single unit of accomodation
+                     * <p>
+                     * <p>
                      * <p>Java class for anonymous complex type.
-                     * 
+                     * <p>
                      * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
+                     * <p>
                      * <pre>
                      * &lt;complexType>
                      *   &lt;complexContent>
@@ -6431,12 +5969,10 @@ public class DealType {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
-                     * 
-                     * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "", propOrder = {
-                        "facility"
+                            "facility"
                     })
                     public static class AccommodationUnit {
 
@@ -6452,25 +5988,23 @@ public class DealType {
 
                         /**
                          * Gets the value of the facility property.
-                         * 
+                         * <p>
                          * <p>
                          * This accessor method returns a reference to the live list,
                          * not a snapshot. Therefore any modification you make to the
                          * returned list will be present inside the JAXB object.
                          * This is why there is not a <CODE>set</CODE> method for the facility property.
-                         * 
+                         * <p>
                          * <p>
                          * For example, to add a new item, do as follows:
                          * <pre>
                          *    getFacility().add(newItem);
                          * </pre>
-                         * 
-                         * 
+                         * <p>
+                         * <p>
                          * <p>
                          * Objects of the following type(s) are allowed in the list
                          * {@link String }
-                         * 
-                         * 
                          */
                         public List<String> getFacility() {
                             if (facility == null) {
@@ -6481,11 +6015,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the name property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getName() {
                             return name;
@@ -6493,11 +6025,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the name property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setName(String value) {
                             this.name = value;
@@ -6505,11 +6035,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the numRooms property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigInteger }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link BigInteger }
                          */
                         public BigInteger getNumRooms() {
                             if (numRooms == null) {
@@ -6521,11 +6049,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the numRooms property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigInteger }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link BigInteger }
                          */
                         public void setNumRooms(BigInteger value) {
                             this.numRooms = value;
@@ -6533,11 +6059,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the roomRates property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link BigDecimal }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link BigDecimal }
                          */
                         public BigDecimal getRoomRates() {
                             if (roomRates == null) {
@@ -6549,11 +6073,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the roomRates property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link BigDecimal }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link BigDecimal }
                          */
                         public void setRoomRates(BigDecimal value) {
                             this.roomRates = value;
@@ -6566,9 +6088,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -6578,8 +6100,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -6590,11 +6110,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the atolType property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getAtolType() {
                         return atolType;
@@ -6602,11 +6120,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the atolType property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setAtolType(String value) {
                         this.atolType = value;
@@ -6617,15 +6133,15 @@ public class DealType {
 
                 /**
                  * BookingInfo stores
-                 *                                                                 information relating to the overall booking as it
-                 *                                                                 pertains to the source booking system
-                 *                                                                 references
-                 *                                                             
-                 * 
+                 * information relating to the overall booking as it
+                 * pertains to the source booking system
+                 * references
+                 * <p>
+                 * <p>
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -6637,8 +6153,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -6653,11 +6167,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the bookingReference property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getBookingReference() {
                         return bookingReference;
@@ -6665,11 +6177,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the bookingReference property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setBookingReference(String value) {
                         this.bookingReference = value;
@@ -6677,11 +6187,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the bookingDateTime property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getBookingDateTime() {
                         return bookingDateTime;
@@ -6689,11 +6197,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the bookingDateTime property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setBookingDateTime(String value) {
                         this.bookingDateTime = value;
@@ -6701,11 +6207,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the quoteID property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getQuoteID() {
                         return quoteID;
@@ -6713,11 +6217,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the quoteID property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setQuoteID(String value) {
                         this.quoteID = value;
@@ -6728,9 +6230,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -6754,8 +6256,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -6783,11 +6283,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the startDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getStartDate() {
                         return startDate;
@@ -6795,11 +6293,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the startDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setStartDate(String value) {
                         this.startDate = value;
@@ -6807,11 +6303,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the startTime property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getStartTime() {
                         return startTime;
@@ -6819,11 +6313,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the startTime property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setStartTime(String value) {
                         this.startTime = value;
@@ -6831,11 +6323,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the endDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getEndDate() {
                         return endDate;
@@ -6843,11 +6333,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the endDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setEndDate(String value) {
                         this.endDate = value;
@@ -6855,11 +6343,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the endTime property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getEndTime() {
                         return endTime;
@@ -6867,11 +6353,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the endTime property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setEndTime(String value) {
                         this.endTime = value;
@@ -6879,11 +6363,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the pickUpPoint property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getPickUpPoint() {
                         return pickUpPoint;
@@ -6891,11 +6373,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the pickUpPoint property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setPickUpPoint(String value) {
                         this.pickUpPoint = value;
@@ -6903,11 +6383,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the dropOffPoint property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDropOffPoint() {
                         return dropOffPoint;
@@ -6915,11 +6393,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the dropOffPoint property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDropOffPoint(String value) {
                         this.dropOffPoint = value;
@@ -6927,11 +6403,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the duration property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigInteger }
                      */
                     public BigInteger getDuration() {
                         return duration;
@@ -6939,11 +6413,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the duration property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigInteger }
                      */
                     public void setDuration(BigInteger value) {
                         this.duration = value;
@@ -6951,11 +6423,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the vehicleClass property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getVehicleClass() {
                         return vehicleClass;
@@ -6963,11 +6433,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the vehicleClass property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setVehicleClass(String value) {
                         this.vehicleClass = value;
@@ -6975,11 +6443,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the payType property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getPayType() {
                         return payType;
@@ -6987,11 +6453,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the payType property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setPayType(String value) {
                         this.payType = value;
@@ -7002,9 +6466,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -7020,8 +6484,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -7032,11 +6494,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the description property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDescription() {
                         return description;
@@ -7044,11 +6504,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the description property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDescription(String value) {
                         this.description = value;
@@ -7059,13 +6517,13 @@ public class DealType {
 
                 /**
                  * The cost of the package,
-                 *                                                                 optional is an enquiry
-                 *                                                             
-                 * 
+                 * optional is an enquiry
+                 * <p>
+                 * <p>
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -7079,8 +6537,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -7099,11 +6555,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the totalOperatorCost property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigDecimal }
                      */
                     public BigDecimal getTotalOperatorCost() {
                         return totalOperatorCost;
@@ -7111,11 +6565,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the totalOperatorCost property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigDecimal }
                      */
                     public void setTotalOperatorCost(BigDecimal value) {
                         this.totalOperatorCost = value;
@@ -7123,11 +6575,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the depositRequiredAtBooking property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigDecimal }
                      */
                     public BigDecimal getDepositRequiredAtBooking() {
                         return depositRequiredAtBooking;
@@ -7135,11 +6585,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the depositRequiredAtBooking property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigDecimal }
                      */
                     public void setDepositRequiredAtBooking(BigDecimal value) {
                         this.depositRequiredAtBooking = value;
@@ -7147,11 +6595,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the currency property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getCurrency() {
                         if (currency == null) {
@@ -7163,11 +6609,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the currency property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setCurrency(String value) {
                         this.currency = value;
@@ -7175,11 +6619,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the promoVal property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigDecimal }
                      */
                     public BigDecimal getPromoVal() {
                         return promoVal;
@@ -7187,11 +6629,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the promoVal property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigDecimal }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigDecimal }
                      */
                     public void setPromoVal(BigDecimal value) {
                         this.promoVal = value;
@@ -7199,11 +6639,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the promoCode property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getPromoCode() {
                         return promoCode;
@@ -7211,11 +6649,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the promoCode property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setPromoCode(String value) {
                         this.promoCode = value;
@@ -7226,9 +6662,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -7239,8 +6675,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -7253,11 +6687,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the note property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getNote() {
                         return note;
@@ -7265,11 +6697,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the note property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setNote(String value) {
                         this.note = value;
@@ -7277,11 +6707,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the numberRequired property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigInteger }
                      */
                     public BigInteger getNumberRequired() {
                         return numberRequired;
@@ -7289,11 +6717,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the numberRequired property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigInteger }
                      */
                     public void setNumberRequired(BigInteger value) {
                         this.numberRequired = value;
@@ -7304,9 +6730,9 @@ public class DealType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -7318,8 +6744,6 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -7335,11 +6759,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the startDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getStartDate() {
                         return startDate;
@@ -7347,11 +6769,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the startDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setStartDate(String value) {
                         this.startDate = value;
@@ -7359,11 +6779,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the endDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getEndDate() {
                         return endDate;
@@ -7371,11 +6789,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the endDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setEndDate(String value) {
                         this.endDate = value;
@@ -7383,11 +6799,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the duration property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link BigInteger }
                      */
                     public BigInteger getDuration() {
                         return duration;
@@ -7395,11 +6809,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the duration property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link BigInteger }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link BigInteger }
                      */
                     public void setDuration(BigInteger value) {
                         this.duration = value;
@@ -7410,16 +6822,16 @@ public class DealType {
 
                 /**
                  * TravelSegment is used to
-                 *                                                                 describe a single instance of a travel leg. As a result
-                 *                                                                 this TravelSegment can
-                 *                                                                 occur multiple times and for different types i.e flight,
-                 *                                                                 train, rail, etc
-                 *                                                             
-                 * 
+                 * describe a single instance of a travel leg. As a result
+                 * this TravelSegment can
+                 * occur multiple times and for different types i.e flight,
+                 * train, rail, etc
+                 * <p>
+                 * <p>
                  * <p>Java class for anonymous complex type.
-                 * 
+                 * <p>
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 * 
+                 * <p>
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -7470,13 +6882,11 @@ public class DealType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 * 
-                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "ticketInfo",
-                    "otherDetails"
+                        "ticketInfo",
+                        "otherDetails"
                 })
                 public static class TravelSegment {
 
@@ -7507,11 +6917,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the ticketInfo property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link TicketInfo }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link TicketInfo }
                      */
                     public TicketInfo getTicketInfo() {
                         return ticketInfo;
@@ -7519,11 +6927,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the ticketInfo property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link TicketInfo }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link TicketInfo }
                      */
                     public void setTicketInfo(TicketInfo value) {
                         this.ticketInfo = value;
@@ -7531,27 +6937,25 @@ public class DealType {
 
                     /**
                      * NOT USED BY THE
-                     *                                                                         RETAIL INTERFACE AT THE MOMENT
-                     *                                                                     Gets the value of the otherDetails property.
-                     * 
+                     * RETAIL INTERFACE AT THE MOMENT
+                     * Gets the value of the otherDetails property.
+                     * <p>
                      * <p>
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
                      * This is why there is not a <CODE>set</CODE> method for the otherDetails property.
-                     * 
+                     * <p>
                      * <p>
                      * For example, to add a new item, do as follows:
                      * <pre>
                      *    getOtherDetails().add(newItem);
                      * </pre>
-                     * 
-                     * 
+                     * <p>
+                     * <p>
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link OtherDetails }
-                     * 
-                     * 
                      */
                     public List<OtherDetails> getOtherDetails() {
                         if (otherDetails == null) {
@@ -7562,11 +6966,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the departurePoint property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDeparturePoint() {
                         return departurePoint;
@@ -7574,11 +6976,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the departurePoint property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDeparturePoint(String value) {
                         this.departurePoint = value;
@@ -7586,11 +6986,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the arrivalPoint property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getArrivalPoint() {
                         return arrivalPoint;
@@ -7598,11 +6996,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the arrivalPoint property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setArrivalPoint(String value) {
                         this.arrivalPoint = value;
@@ -7610,11 +7006,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the departureDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDepartureDate() {
                         return departureDate;
@@ -7622,11 +7016,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the departureDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDepartureDate(String value) {
                         this.departureDate = value;
@@ -7634,11 +7026,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the transportMode property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getTransportMode() {
                         return transportMode;
@@ -7646,11 +7036,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the transportMode property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setTransportMode(String value) {
                         this.transportMode = value;
@@ -7658,11 +7046,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the departureTime property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getDepartureTime() {
                         return departureTime;
@@ -7670,11 +7056,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the departureTime property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setDepartureTime(String value) {
                         this.departureTime = value;
@@ -7682,11 +7066,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the arrivalDate property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getArrivalDate() {
                         return arrivalDate;
@@ -7694,11 +7076,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the arrivalDate property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setArrivalDate(String value) {
                         this.arrivalDate = value;
@@ -7706,11 +7086,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the arrivalTime property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getArrivalTime() {
                         return arrivalTime;
@@ -7718,11 +7096,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the arrivalTime property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setArrivalTime(String value) {
                         this.arrivalTime = value;
@@ -7730,11 +7106,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the clazz property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getClazz() {
                         return clazz;
@@ -7742,11 +7116,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the clazz property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setClazz(String value) {
                         this.clazz = value;
@@ -7754,11 +7126,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the flightNumber property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getFlightNumber() {
                         return flightNumber;
@@ -7766,11 +7136,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the flightNumber property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setFlightNumber(String value) {
                         this.flightNumber = value;
@@ -7778,11 +7146,9 @@ public class DealType {
 
                     /**
                      * Gets the value of the status property.
-                     * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @return possible object is
+                     * {@link String }
                      */
                     public String getStatus() {
                         return status;
@@ -7790,11 +7156,9 @@ public class DealType {
 
                     /**
                      * Sets the value of the status property.
-                     * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
+                     *
+                     * @param value allowed object is
+                     *              {@link String }
                      */
                     public void setStatus(String value) {
                         this.status = value;
@@ -7803,9 +7167,9 @@ public class DealType {
 
                     /**
                      * <p>Java class for anonymous complex type.
-                     * 
+                     * <p>
                      * <p>The following schema fragment specifies the expected content contained within this class.
-                     * 
+                     * <p>
                      * <pre>
                      * &lt;complexType>
                      *   &lt;complexContent>
@@ -7818,8 +7182,6 @@ public class DealType {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
-                     * 
-                     * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "")
@@ -7836,11 +7198,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the checkInDate property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getCheckInDate() {
                             return checkInDate;
@@ -7848,11 +7208,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the checkInDate property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setCheckInDate(String value) {
                             this.checkInDate = value;
@@ -7860,11 +7218,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the checkInTime property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getCheckInTime() {
                             return checkInTime;
@@ -7872,11 +7228,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the checkInTime property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setCheckInTime(String value) {
                             this.checkInTime = value;
@@ -7884,11 +7238,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the checkInDetails property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getCheckInDetails() {
                             return checkInDetails;
@@ -7896,11 +7248,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the checkInDetails property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setCheckInDetails(String value) {
                             this.checkInDetails = value;
@@ -7908,11 +7258,9 @@ public class DealType {
 
                         /**
                          * Gets the value of the terminalDetails property.
-                         * 
-                         * @return
-                         *     possible object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @return possible object is
+                         * {@link String }
                          */
                         public String getTerminalDetails() {
                             return terminalDetails;
@@ -7920,11 +7268,9 @@ public class DealType {
 
                         /**
                          * Sets the value of the terminalDetails property.
-                         * 
-                         * @param value
-                         *     allowed object is
-                         *     {@link String }
-                         *     
+                         *
+                         * @param value allowed object is
+                         *              {@link String }
                          */
                         public void setTerminalDetails(String value) {
                             this.terminalDetails = value;
@@ -7941,9 +7287,9 @@ public class DealType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -7975,14 +7321,12 @@ public class DealType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "fileCode",
-            "fileDescription",
-            "fileSupplier"
+                "fileCode",
+                "fileDescription",
+                "fileSupplier"
         })
         public static class XMLFileDefinition {
 
@@ -7995,11 +7339,9 @@ public class DealType {
 
             /**
              * Gets the value of the fileCode property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getFileCode() {
                 return fileCode;
@@ -8007,11 +7349,9 @@ public class DealType {
 
             /**
              * Sets the value of the fileCode property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setFileCode(String value) {
                 this.fileCode = value;
@@ -8019,11 +7359,9 @@ public class DealType {
 
             /**
              * Gets the value of the fileDescription property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getFileDescription() {
                 return fileDescription;
@@ -8031,11 +7369,9 @@ public class DealType {
 
             /**
              * Sets the value of the fileDescription property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setFileDescription(String value) {
                 this.fileDescription = value;
@@ -8043,11 +7379,9 @@ public class DealType {
 
             /**
              * Gets the value of the fileSupplier property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getFileSupplier() {
                 return fileSupplier;
@@ -8055,11 +7389,9 @@ public class DealType {
 
             /**
              * Sets the value of the fileSupplier property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setFileSupplier(String value) {
                 this.fileSupplier = value;

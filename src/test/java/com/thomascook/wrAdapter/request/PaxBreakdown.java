@@ -8,18 +8,14 @@
 
 package com.thomascook.wrAdapter.request;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -34,15 +30,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "infant",
-    "child",
-    "adult",
-    "senior"
+        "infant",
+        "child",
+        "adult",
+        "senior"
 })
 @XmlRootElement(name = "PaxBreakdown")
 public class PaxBreakdown {
@@ -58,11 +52,9 @@ public class PaxBreakdown {
 
     /**
      * Gets the value of the infant property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getInfant() {
         return infant;
@@ -70,11 +62,9 @@ public class PaxBreakdown {
 
     /**
      * Sets the value of the infant property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setInfant(Integer value) {
         this.infant = value;
@@ -82,11 +72,9 @@ public class PaxBreakdown {
 
     /**
      * Gets the value of the child property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getChild() {
         return child;
@@ -94,11 +82,9 @@ public class PaxBreakdown {
 
     /**
      * Sets the value of the child property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setChild(Integer value) {
         this.child = value;
@@ -106,11 +92,9 @@ public class PaxBreakdown {
 
     /**
      * Gets the value of the adult property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getAdult() {
         return adult;
@@ -118,11 +102,9 @@ public class PaxBreakdown {
 
     /**
      * Sets the value of the adult property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setAdult(Integer value) {
         this.adult = value;
@@ -130,11 +112,9 @@ public class PaxBreakdown {
 
     /**
      * Gets the value of the senior property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getSenior() {
         return senior;
@@ -142,11 +122,9 @@ public class PaxBreakdown {
 
     /**
      * Sets the value of the senior property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setSenior(Integer value) {
         this.senior = value;

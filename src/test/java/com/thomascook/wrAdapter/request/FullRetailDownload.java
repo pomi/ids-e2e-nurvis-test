@@ -8,27 +8,21 @@
 
 package com.thomascook.wrAdapter.request;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -65,15 +59,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "pos",
-    "dealDetails",
-    "customerDetails",
-    "paymentDetails"
+        "pos",
+        "dealDetails",
+        "customerDetails",
+        "paymentDetails"
 })
 @XmlRootElement(name = "FullRetailDownload")
 public class FullRetailDownload {
@@ -127,11 +119,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the pos property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link POSType }
-     *     
+     *
+     * @return possible object is
+     * {@link POSType }
      */
     public POSType getPOS() {
         return pos;
@@ -139,11 +129,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the pos property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link POSType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link POSType }
      */
     public void setPOS(POSType value) {
         this.pos = value;
@@ -151,11 +139,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the dealDetails property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DealType }
-     *     
+     *
+     * @return possible object is
+     * {@link DealType }
      */
     public DealType getDealDetails() {
         return dealDetails;
@@ -163,11 +149,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the dealDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DealType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DealType }
      */
     public void setDealDetails(DealType value) {
         this.dealDetails = value;
@@ -175,11 +159,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the customerDetails property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ContactPersonType }
-     *     
+     *
+     * @return possible object is
+     * {@link ContactPersonType }
      */
     public ContactPersonType getCustomerDetails() {
         return customerDetails;
@@ -187,11 +169,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the customerDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ContactPersonType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ContactPersonType }
      */
     public void setCustomerDetails(ContactPersonType value) {
         this.customerDetails = value;
@@ -199,11 +179,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the paymentDetails property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PaymentDetails }
-     *     
+     *
+     * @return possible object is
+     * {@link PaymentDetails }
      */
     public PaymentDetails getPaymentDetails() {
         return paymentDetails;
@@ -211,11 +189,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the paymentDetails property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PaymentDetails }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PaymentDetails }
      */
     public void setPaymentDetails(PaymentDetails value) {
         this.paymentDetails = value;
@@ -223,11 +199,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the actionType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TransactionActionType }
-     *     
+     *
+     * @return possible object is
+     * {@link TransactionActionType }
      */
     public TransactionActionType getActionType() {
         return actionType;
@@ -235,11 +209,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the actionType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TransactionActionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TransactionActionType }
      */
     public void setActionType(TransactionActionType value) {
         this.actionType = value;
@@ -247,11 +219,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the expectedGrossAmount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getExpectedGrossAmount() {
         return expectedGrossAmount;
@@ -259,11 +229,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the expectedGrossAmount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setExpectedGrossAmount(BigDecimal value) {
         this.expectedGrossAmount = value;
@@ -271,11 +239,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the requestedCurrency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRequestedCurrency() {
         return requestedCurrency;
@@ -283,11 +249,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the requestedCurrency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRequestedCurrency(String value) {
         this.requestedCurrency = value;
@@ -295,11 +259,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the reqRespVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getReqRespVersion() {
         return reqRespVersion;
@@ -307,11 +269,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the reqRespVersion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setReqRespVersion(String value) {
         this.reqRespVersion = value;
@@ -319,11 +279,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the echoToken property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEchoToken() {
         return echoToken;
@@ -331,11 +289,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the echoToken property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -343,11 +299,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the timeStamp property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -355,11 +309,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the timeStamp property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -367,11 +319,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the target property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTarget() {
         return target;
@@ -379,11 +329,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the target property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTarget(String value) {
         this.target = value;
@@ -391,11 +339,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getVersion() {
         return version;
@@ -403,11 +349,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -415,11 +359,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -427,11 +369,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -439,11 +379,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -451,11 +389,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -463,11 +399,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -475,11 +409,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -487,11 +419,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -499,11 +429,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -511,11 +439,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the correlationID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCorrelationID() {
         return correlationID;
@@ -523,11 +449,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the correlationID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCorrelationID(String value) {
         this.correlationID = value;
@@ -535,11 +459,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the primaryLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -547,11 +469,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the primaryLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -559,11 +479,9 @@ public class FullRetailDownload {
 
     /**
      * Gets the value of the altLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAltLangID() {
         return altLangID;
@@ -571,11 +489,9 @@ public class FullRetailDownload {
 
     /**
      * Sets the value of the altLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -584,9 +500,9 @@ public class FullRetailDownload {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -605,12 +521,10 @@ public class FullRetailDownload {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "paymentDetail"
+            "paymentDetail"
     })
     public static class PaymentDetails {
 
@@ -619,25 +533,23 @@ public class FullRetailDownload {
 
         /**
          * Gets the value of the paymentDetail property.
-         * 
+         * <p>
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the paymentDetail property.
-         * 
+         * <p>
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPaymentDetail().add(newItem);
          * </pre>
-         * 
-         * 
+         * <p>
+         * <p>
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PaymentDetail }
-         * 
-         * 
          */
         public List<PaymentDetail> getPaymentDetail() {
             if (paymentDetail == null) {
@@ -649,9 +561,9 @@ public class FullRetailDownload {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         * <p>
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         * <p>
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -660,14 +572,11 @@ public class FullRetailDownload {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
         public static class PaymentDetail
-            extends PaymentDetailType
-        {
+                extends PaymentDetailType {
 
 
         }

@@ -10,11 +10,18 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 public class Config {
+    //region Constants
     private static final String SYS_PROPERTY_ENV = "env";
     private static final String CONFIG_PROPERTIES_JSON_PATH = "src/test/resources/config_properties.json";
     private static final String DEFAULT_ENVIRONMENT = "staging";
     private static final File CREDENTIALS_CONFIG = new File("src/test/resources/credentials.properties");
+    private static final String NL = "nl";
+    private static final String BE = "be";
+    private static final String UK = "uk";
+    private static final String DE = "de";
+    //endregion
 
+    //region Fields
     private static String solrNl;
     private static String solrBe;
     private static String solrUk;
@@ -29,9 +36,12 @@ public class Config {
     private static String tosca;
     private static String msdLogin;
     private static String msdPassword;
+    private static int fetchBookingTimeoutSec;
+    private static int waitBetweenTiesSec;
     private static String retailInterface;
 
     private static Config _config = null;
+    //endregion
 
     private Config() {
         initConfig();
@@ -53,15 +63,15 @@ public class Config {
             environmentalConfig = (JSONObject) ((JSONObject) obj).get(System.getProperty(SYS_PROPERTY_ENV, DEFAULT_ENVIRONMENT));
 
             solr = environmentalConfig.getJSONObject("solr");
-            solrNl = solr.getString("nl");
-            solrBe = solr.getString("be");
-            solrUk = solr.getString("uk");
-            solrDe = solr.getString("de");
+            solrNl = solr.getString(NL);
+            solrBe = solr.getString(BE);
+            solrUk = solr.getString(UK);
+            solrDe = solr.getString(DE);
 
             nurvis = environmentalConfig.getJSONObject("nurvis");
-            nurvisBe = nurvis.getString("be");
-            nurvisNl = nurvis.getString("nl");
-            nurvisDe = nurvis.getString("de");
+            nurvisBe = nurvis.getString(BE);
+            nurvisNl = nurvis.getString(NL);
+            nurvisDe = nurvis.getString(DE);
 
             sfw = environmentalConfig.getJSONObject("sfw");
             sfwUrl = sfw.getString("url");
@@ -71,6 +81,8 @@ public class Config {
 
             customerRetrieveTimeout = environmentalConfig.getLong("customerRetrieveTimeoutMin");
             msdBaseUrl = environmentalConfig.getJSONObject("msd").getString("baseUrl");
+            fetchBookingTimeoutSec = environmentalConfig.getJSONObject("msd").getInt("fetchBookingTimeoutSec");
+            waitBetweenTiesSec = environmentalConfig.getJSONObject("msd").getInt("waitBetweenTiesSec");
             tosca = environmentalConfig.getString("tosca");
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,6 +101,7 @@ public class Config {
         }
     }
 
+    //region Properties
     public String getSolrNl() {
         return solrNl;
     }
@@ -145,9 +158,18 @@ public class Config {
         return msdPassword;
     }
 
+    public int getFetchBookingTimeoutSec() {
+        return fetchBookingTimeoutSec;
+    }
+
+    public int getWaitBetweenTiesSec() {
+        return waitBetweenTiesSec;
+    }
+
     public String getRetailInterface() {
         return retailInterface;
     }
+    //endregion
 
     @Override
     public String toString() {
