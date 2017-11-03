@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = {"@Tosca,~@Ignore"},
+        tags = {"@NL, ~@Ignore"},
         monochrome = true,
         features = "src/test/cucumber",
         format = {"pretty",

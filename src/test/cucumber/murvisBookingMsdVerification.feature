@@ -4,8 +4,11 @@ Feature: Nurvis booking for given destination should be available in msD
   As a user I want to see Nurvis bookings with PMI destination in msD
 
   Scenario: Order a booking in Nurvis and verify it in msD
-#    Given SOLR is requested for packages from AMS airport to Egypte for 1 adults
-    Given SOLR is requested for packages from AMS airport to Spanje for 1 adults
+    Given SOLR is requested for packages from AMS airport to Egypte for 1 adults
+      | Room | Adults | Children | Infants |
+      | 1    | 2      | 0        | 0       |
+      | 2    | 2      | 2        | 1       |
+#    Given SOLR is requested for packages from AMS airport to Spanje for 1 adults
 #    Given SOLR is requested for packages from AMS airport to Mexico for 1 adults
 #    Given SOLR is requested for packages from AMS airport to Portugal for 1 adults
 #    Given SOLR is requested for packages from AMS airport to Malta for 1 adults
